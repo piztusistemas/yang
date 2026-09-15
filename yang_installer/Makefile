@@ -52,28 +52,28 @@ copia-macos:
 	@echo "✅ Copia de distribución ao día: build/bin/$(BINARY)-macos.app"
 
 ## assets/logo.png: Copia o logo dende Yang
-## Depende de ../yang_blockly/logo.png (non abondaba con "assets/logo.png:"
+## Depende de ../yang/logo.png (non abondaba con "assets/logo.png:"
 ## sen prerequisito: unha vez existise o ficheiro, Make xa non volvía copialo
-## aínda que ../yang_blockly/logo.png cambiase despois).
-assets/logo.png: ../yang_blockly/logo.png
+## aínda que ../yang/logo.png cambiase despois).
+assets/logo.png: ../yang/logo.png
 	@mkdir -p assets
-	@cp ../yang_blockly/logo.png assets/logo.png
+	@cp ../yang/logo.png assets/logo.png
 
 ## build/appicon.png: icona da xanela/taskbar de Wails e logo do frontend
 ## (mesma orixe ca assets/logo.png, ver nota de enriba).
-build/appicon.png: ../yang_blockly/logo.png
+build/appicon.png: ../yang/logo.png
 	@mkdir -p build frontend/src/assets/images
-	@cp ../yang_blockly/logo.png build/appicon.png
-	@cp ../yang_blockly/logo.png frontend/src/assets/images/logo.png
+	@cp ../yang/logo.png build/appicon.png
+	@cp ../yang/logo.png frontend/src/assets/images/logo.png
 
 ## files: Compila Yang e xunta en files/ só o necesario en tempo de execución.
 ## Todo o demais (help/, codeini_default.ini, icona…) xa vai embebido no
-## propio binario "yang" (ver yang_blockly/main.go e yang_blockly/app.go,
-## go:embed). Fonte: ../yang_blockly (versión con editor Blockly; ../yang
+## propio binario "yang" (ver yang/main.go e yang/app.go,
+## go:embed). Fonte: ../yang (versión con editor Blockly; ../yang
 ## quedou como versión anterior, xa non se empaqueta aquí).
 ## Yang Blockly volveu a Wails v3 (ver historial deste ficheiro - pasara por
 ## v2 un tempo) - compílase con "task build" (CLI wails3/Taskfile, ver
-## yang_blockly/Taskfile.yml), non "wails build" (v2). EXTRA_TAGS=gtk3
+## yang/Taskfile.yml), non "wails build" (v2). EXTRA_TAGS=gtk3
 ## fai falla en Linux: é o tag que evita GTK4 (o predeterminado de Wails v3
 ## beta, que NON compila en Debian 12) forzando o backend GTK3/WebKit2GTK -
 ## SEN VERIFICAR NUNCA en Debian 12 real dende que se escribiu isto, proba
@@ -81,10 +81,10 @@ build/appicon.png: ../yang_blockly/logo.png
 files: check-go check-wails3
 	@rm -rf files
 	@mkdir -p files
-	@cd ../yang_blockly && task build EXTRA_TAGS=gtk3
-	@cp ../yang_blockly/build/bin/yang files/yang
-	@cp ../yang_blockly/logo.png files/logo.png
-	@cp ../yang_blockly/modulo.json files/modulo.json
+	@cd ../yang && task build EXTRA_TAGS=gtk3
+	@cp ../yang/build/bin/yang files/yang
+	@cp ../yang/logo.png files/logo.png
+	@cp ../yang/modulo.json files/modulo.json
 	@chmod +x files/yang
 	@echo "✅ yang compilado e ficheiros copiados a yang_installer/files/"
 
@@ -107,8 +107,8 @@ files: check-go check-wails3
 files-darwin: check-go check-wails3
 	@rm -rf files
 	@mkdir -p files
-	@cd ../yang_blockly && task package
-	@cp -R ../yang_blockly/build/bin/yang.app/Contents files/Contents
+	@cd ../yang && task package
+	@cp -R ../yang/build/bin/yang.app/Contents files/Contents
 	@chmod +x files/Contents/MacOS/yang
 	@echo "✅ Yang.app empaquetado e copiado a yang_installer/files/"
 
@@ -161,7 +161,7 @@ check-go:
 check-wails:
 	@which wails > /dev/null 2>&1 || (echo "❌ wails non está instalado. Executa: go install github.com/wailsapp/wails/v2/cmd/wails@latest" && exit 1)
 
-## check-wails3: para "files" (compila yang_blockly, que está en Wails v3).
+## check-wails3: para "files" (compila yang, que está en Wails v3).
 check-wails3:
 	@which wails3 > /dev/null 2>&1 || (echo "❌ wails3 non está instalado. Executa: go install github.com/wailsapp/wails/v3/cmd/wails3@latest" && exit 1)
 	@which task > /dev/null 2>&1 || (echo "❌ task non está instalado (require wails3 build). Ver https://taskfile.dev/installation/" && exit 1)

@@ -24,12 +24,12 @@ func TestBundleQueContenA(t *testing.T) {
 		},
 		{
 			nome:     "bundle de desenvolvemento (task run)",
-			exe:      "/Users/profe/yang_blockly/build/bin/yang.dev.app/Contents/MacOS/yang",
-			esperado: "/Users/profe/yang_blockly/build/bin/yang.dev.app",
+			exe:      "/Users/profe/yang/build/bin/yang.dev.app/Contents/MacOS/yang",
+			esperado: "/Users/profe/yang/build/bin/yang.dev.app",
 		},
 		{
 			nome:     "binario solto: non hai bundle que asinar",
-			exe:      "/Users/profe/yang_blockly/build/bin/yang",
+			exe:      "/Users/profe/yang/build/bin/yang",
 			esperado: "",
 		},
 		{
@@ -86,7 +86,7 @@ func TestComandoRelanzarUsaOpenNoBundle(t *testing.T) {
 // TestComandoRelanzarBinarioSolto: fóra dun bundle (execución dende un
 // terminal, `task build` sen empaquetar) hai que executar o binario tal cal.
 func TestComandoRelanzarBinarioSolto(t *testing.T) {
-	exe := "/Users/profe/yang_blockly/build/bin/yang"
+	exe := "/Users/profe/yang/build/bin/yang"
 	cmd := comandoRelanzar(exe)
 	if cmd.Path != exe {
 		t.Errorf("esperaba executar %q directamente, obtiven %q", exe, cmd.Path)

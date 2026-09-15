@@ -7,10 +7,10 @@
 
 # Binarios compilados e empaquetado
 **/build/bin/
-yang_blockly/build/debian+windows+macos/
-yang_blockly/build/debian+windows+macos_3/
-yang_blockly/matexe-wails
-yang_blockly/bin/
+yang/build/debian+windows+macos/
+yang/build/debian+windows+macos_3/
+yang/matexe-wails
+yang/bin/
 yang_installer/yang_installer
 yang_installer/files/
 yang_installer/assets/logo.png

@@ -33,7 +33,7 @@ import (
 
 // refrescarPathMacOS engade ao PATH deste proceso os directorios onde vive
 // Homebrew e as ferramentas instaladas por .pkg. Mesmo problema e mesma
-// solución ca en yang_blockly/pathrefresh_darwin.go (módulo Go á parte, sen
+// solución ca en yang/pathrefresh_darwin.go (módulo Go á parte, sen
 // import compartido posible, así que se duplica aquí - mesmo criterio xa
 // usado con comandoOculto e registrarGnuplotTexmfMiKTeX).
 //

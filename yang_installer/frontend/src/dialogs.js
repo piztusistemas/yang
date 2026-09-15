@@ -13,7 +13,7 @@
 // confirmación dicía "cancelar" sen chegar a preguntar. En Linux (WebKitGTK)
 // e Windows (WebView2) si funcionaba, porque eses motores amosan os seus
 // propios diálogos por defecto. Wails v3 ten o MESMO oco, e por iso o
-// aplicativo Yang leva o seu propio módulo equivalente (yang_blockly/
+// aplicativo Yang leva o seu propio módulo equivalente (yang/
 // frontend/src/dialogs.js) - se se arranxa nun, arránxase no outro.
 //
 // A API é asíncrona (devolve Promise) porque a resposta vén dun clic e non

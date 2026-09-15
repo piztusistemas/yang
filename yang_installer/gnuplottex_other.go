@@ -8,7 +8,7 @@ import "os/exec"
 // gnuplottex_windows.go. En macOS o equivalente (xerar gnuplot-lua-tikz.sty
 // con gnuplot, que nin MacTeX nin Homebrew traen) faino o propio Yang a
 // primeira vez que compila un PDF con <PLOT>, e tamén dende Opcións →
-// Instalar - ver yang_blockly/latexenv_darwin.go. En Linux non fai falla
+// Instalar - ver yang/latexenv_darwin.go. En Linux non fai falla
 // nada: o paquete "gnuplot" do sistema xa deixa o .sty baixo /usr/share/texmf.
 func registrarGnuplotTexmfMiKTeX(log func(string)) {}
 

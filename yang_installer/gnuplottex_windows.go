@@ -11,7 +11,7 @@ import (
 )
 
 // gnuplotTexmfWindows/registrarGnuplotTexmfMiKTeX: mesmo arranxo ca en
-// yang_blockly (latexenv_windows.go) - módulo Go á parte, sen import
+// yang (latexenv_windows.go) - módulo Go á parte, sen import
 // compartido posible, así que se duplica aquí (mesmo patrón xa usado para
 // outras utilidades pequenas específicas de Windows neste proxecto).
 //

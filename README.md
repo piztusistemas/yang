@@ -4,7 +4,7 @@ Xerador de exames de matemáticas (Maxima + LaTeX), con editor de exercicios por
 
 ## Módulos
 
-- [`yang_blockly/`](yang_blockly) — aplicativo principal Yang (editor de exames).
+- [`yang/`](yang) — aplicativo principal Yang (editor de exames).
 - [`yang_installer/`](yang_installer) — instalador de Yang para Debian/Ubuntu, Windows e macOS.
 
 ## Autor

@@ -3,7 +3,7 @@
     Compila Yang para Windows e empaqueta o instalador (yang_installer).
     Equivalente Windows do obxectivo "build"/"files" do Makefile (que é só
     bash/apt+wails v2, pensado para Linux): compila yang.exe (Wails v3, via
-    Taskfile - ver yang_blockly/Taskfile.yml) e mételo en files/ (o que
+    Taskfile - ver yang/Taskfile.yml) e mételo en files/ (o que
     install.go despois extrae a destDir vía go:embed), e por último
     "wails build" (CLI v2, este instalador segue en Wails v2) para xerar
     build\bin\yang-installer.exe. Ver Makefile para a versión Linux/make e
@@ -25,7 +25,7 @@ param(
 $ErrorActionPreference = "Stop"
 
 $installerDir = $PSScriptRoot
-$yangDir = (Resolve-Path (Join-Path $installerDir "..\yang_blockly")).Path
+$yangDir = (Resolve-Path (Join-Path $installerDir "..\yang")).Path
 
 function Require-Command {
     param([string]$Name, [string]$Hint)
@@ -42,7 +42,7 @@ Require-Command task  "Instala: winget install Task.Task (ou choco install go-ta
 Require-Command npm   "Instala Node.js: https://nodejs.org/"
 
 # ── Logo: mesma orixe ca assets/logo.png e build/appicon.png do Makefile ───
-Write-Host "==> Copiando logo dende yang_blockly..." -ForegroundColor Cyan
+Write-Host "==> Copiando logo dende yang..." -ForegroundColor Cyan
 $logoSrc = Join-Path $yangDir "logo.png"
 New-Item -ItemType Directory -Force -Path (Join-Path $installerDir "assets") | Out-Null
 New-Item -ItemType Directory -Force -Path (Join-Path $installerDir "build") | Out-Null
@@ -59,7 +59,7 @@ if (-not $SkipFiles) {
     Push-Location $yangDir
     try {
         task build
-        if ($LASTEXITCODE -ne 0) { throw "task build (yang_blockly) fallou" }
+        if ($LASTEXITCODE -ne 0) { throw "task build (yang) fallou" }
     } finally {
         Pop-Location
     }
