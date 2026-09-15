@@ -1,0 +1,462 @@
+﻿<html>
+	
+<head>
+	<title>Funciones y variables para simplificaci&oacute;n</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 3.9.1.648">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Maxima.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("Funcionesyvariablesparasimplific");
+			}
+		});
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>Funciones y variables para simplificaci&oacute;n</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Simplificacin.html">Simplificaci&oacute;n</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Simplificacin.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Simplificacin.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Grficos.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<div><a name="SIMPLIFICACI_00F3N"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_6.html#SEC29"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparasimplific.html#SEC31"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_6.html#SEC20"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_8.html#SEC32"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h1 class="rvps2"><span class="rvts0"><span class="rvts8">7. Simplificación</span></span></h1>
+<div><table border="0" cellpadding="1" cellspacing="0" style="border-width: 0px;">
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="Funcionesyvariablesparasimplific.html#SEC31">7.1 Funciones y variables para simplificación</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height: 6px;"/>
+<div><a name="SEC30"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparasimplific.html#SEC30"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_8.html#SEC32"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparasimplific.html#SEC30"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparasimplific.html#SEC30"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_8.html#SEC32"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">7.1 Funciones y variables para simplificación</span></span></h2>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="FUNCIONES-Y-VARIABLES-PARA-SIMPLIFICACI_00F3N"></a>
+<span class="rvts16">Variable del sistema:</span><span class="rvts6"> </span><span class="rvts17">askexp</span></li>
+<li class="rvps3"><span class="rvts6">Cuando se invoca a </span><span class="rvts9">asksign</span><span class="rvts6">, la expresión que se va a analizar es precisamente </span><span class="rvts9">askexp</span><span class="rvts6">.</span></li>
+<li><a name="SEC31"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">askinteger</span><span class="rvts18"> (expr, integer)</span></li>
+<li><a name="IDX196"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">askinteger</span><span class="rvts18"> (expr)</span></li>
+<li><a name="IDX197"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">askinteger</span><span class="rvts18"> (expr, even)</span></li>
+<li><a name="IDX198"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">askinteger</span><span class="rvts18"> (expr, odd)</span></li>
+<li class="rvps3"><span class="rvts6">La llamada </span><span class="rvts9">askinteger (</span><span class="rvts19">expr</span><span class="rvts9">, integer)</span><span class="rvts6"> intenta determinar a partir de la base de datos de </span><span class="rvts9">assume</span><span class="rvts6"> si </span><span class="rvts18">expr</span><span class="rvts6"> es un entero. La función </span><span class="rvts9">askinteger</span><span class="rvts6"> pide más información al usuario si no encuentra la respuesta, tratando de almacenar la nueva información en la base de datos si es posible. La llamada </span><span class="rvts9">askinteger (</span><span class="rvts19">expr</span><span class="rvts9">)</span><span class="rvts6"> equivale a </span><span class="rvts9">askinteger (</span><span class="rvts19">expr</span><span class="rvts9">, integer)</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La llamadas </span><span class="rvts9">askinteger (</span><span class="rvts19">expr</span><span class="rvts9">, even)</span><span class="rvts6"> ay </span><span class="rvts9">askinteger (</span><span class="rvts19">expr</span><span class="rvts9">, odd)</span><span class="rvts6"> intentan determinar si </span><span class="rvts18">expr</span><span class="rvts6"> es un entero par o impar, respectivamente.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX199"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">asksign</span><span class="rvts18"> (expr)</span></li>
+<li class="rvps3"><span class="rvts6">Primero intenta determinar si la expresión especificada es positiva, negativa o cero. Si no lo consigue, planteará al usuario preguntas que le ayuden a conpletar la deducción. Las respuestas del usuario son almacenadas en la base de datos durante el tiempo que dure este cálculo. El valor que al final devuelva </span><span class="rvts9">asksign</span><span class="rvts6"> será </span><span class="rvts9">pos</span><span class="rvts6">, </span><span class="rvts9">neg</span><span class="rvts6"> o </span><span class="rvts9">zero</span><span class="rvts6">.</span></li>
+<li><a name="IDX200"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">demoivre</span><span class="rvts18"> (expr)</span></li>
+<li><a name="IDX201"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">demoivre</span></li>
+<li class="rvps3"><span class="rvts6">La función </span><span class="rvts9">demoivre (expr)</span><span class="rvts6"> convierte una expresión sin modificar la variable global </span><span class="rvts9">demoivre</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Cuando </span><span class="rvts9">demoivre</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, los exponenciales complejos se convierten en expresiones equivalentes pero en términos de las funciones trigonométricas: </span><span class="rvts9">exp (a + b*%i)</span><span class="rvts6"> se reduce a </span><span class="rvts9">%e^a * (cos(b) + %i*sin(b))</span><span class="rvts6"> si </span><span class="rvts9">b</span><span class="rvts6"> no contiene a </span><span class="rvts9">%i</span><span class="rvts6">. Las expresiones </span><span class="rvts9">a</span><span class="rvts6"> y </span><span class="rvts9">b</span><span class="rvts6"> no se expanden.</span></p>
+<p class="rvps3"><span class="rvts6">El valor por defecto de </span><span class="rvts9">demoivre</span><span class="rvts6"> es </span><span class="rvts9">false</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">exponentialize</span><span class="rvts6"> convierte funciones trigonométricas e hiperbólicas a la forma exponencial, por lo que </span><span class="rvts9">demoivre</span><span class="rvts6"> y </span><span class="rvts9">exponentialize</span><span class="rvts6"> no pueden valer </span><span class="rvts9">true</span><span class="rvts6"> al mismo tiempo.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX202"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">domain</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">real</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">domain</span><span class="rvts6"> vale </span><span class="rvts9">complex</span><span class="rvts6">, </span><span class="rvts9">sqrt (x^2)</span><span class="rvts6"> permanecerá como </span><span class="rvts9">sqrt (x^2)</span><span class="rvts6"> en lugar de devolver </span><span class="rvts9">abs(x)</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX203"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">expand</span><span class="rvts18"> (expr)</span></li>
+<li><a name="IDX204"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">expand</span><span class="rvts18"> (expr, p, n)</span></li>
+<li class="rvps3"><span class="rvts6">Expande la expresión </span><span class="rvts18">expr</span><span class="rvts6">. Los productos de sumas y de sumas con exponentes se multiplican, los numeradores de las expresiones racionales que son sumas se separan en sus respectivos términos, y las multiplicaciones (tanto las que son conmutativas como las que no) se distribuyen sobre las sumas en todos los niveles de </span><span class="rvts18">expr</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">En el caso de los polinomios es más aconsejable utilizar </span><span class="rvts9">ratexpand</span><span class="rvts6">, que utiliza un algoritmo más eficiente.</span></p>
+<p class="rvps3"><span class="rvts6">Las variables </span><span class="rvts9">maxnegex</span><span class="rvts6"> y </span><span class="rvts9">maxposex</span><span class="rvts6"> controlan los máximos exponentes negativos y positivos que se van a expandir.</span></p>
+<p class="rvps3"><span class="rvts6">La llamada </span><span class="rvts9">expand (</span><span class="rvts19">expr</span><span class="rvts9">, </span><span class="rvts19">p</span><span class="rvts9">, </span><span class="rvts19">n</span><span class="rvts9">)</span><span class="rvts6"> expande </span><span class="rvts18">expr</span><span class="rvts6"> asignando a </span><span class="rvts9">maxposex</span><span class="rvts6"> el valor </span><span class="rvts18">p</span><span class="rvts6"> y a </span><span class="rvts9">maxnegex</span><span class="rvts6"> el </span><span class="rvts18">n</span><span class="rvts6">. Esto es útil para expandir sólo parte de la expresión.</span></p>
+<p class="rvps3"><span class="rvts6">La variable </span><span class="rvts9">expon</span><span class="rvts6"> guarda el mayor exponente negativo que será expandido automáticamente, independientemente de </span><span class="rvts9">expand</span><span class="rvts6">. Por ejemplo, si </span><span class="rvts9">expon</span><span class="rvts6"> vale 4 entonces </span><span class="rvts9">(x+1)^(-5)</span><span class="rvts6"> no se expandirá automáticamente.</span></p>
+<p class="rvps3"><span class="rvts6">La variable </span><span class="rvts9">expop</span><span class="rvts6"> guarda el mayor exponente positivo que será expandido automáticamente. Así, </span><span class="rvts9">(x+1)^3</span><span class="rvts6"> se expandirá automáticamente sólo si </span><span class="rvts9">expop</span><span class="rvts6"> es mayor o igual que 3. Si se quiere expandir </span><span class="rvts9">(x+1)^n</span><span class="rvts6">, siendo </span><span class="rvts9">n</span><span class="rvts6"> mayor que </span><span class="rvts9">expop</span><span class="rvts6">, entonces </span><span class="rvts9">expand ((x+1)^n)</span><span class="rvts6"> se desarrollará sólo si </span><span class="rvts9">maxposex</span><span class="rvts6"> no es menor que </span><span class="rvts9">n</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">La variable </span><span class="rvts9">expand</span><span class="rvts6"> utilizada con </span><span class="rvts9">ev</span><span class="rvts6"> provocará una expansión.</span></p>
+<p class="rvps3"><span class="rvts6">El fichero </span><span class="rvts9">`simplification/facexp.mac'</span><span class="rvts6"> contiene algunas funciones relacionadas con </span><span class="rvts9">expand</span><span class="rvts6"> (en concreto, </span><span class="rvts9">facsum</span><span class="rvts6">, </span><span class="rvts9">factorfacsum</span><span class="rvts6"> y </span><span class="rvts9">collectterms</span><span class="rvts6">, que se cargan automáticamente) y variables (</span><span class="rvts9">nextlayerfactor</span><span class="rvts6"> y </span><span class="rvts9">facsum_combine</span><span class="rvts6">) que permiten al usuario estructurar las expresiones controlando la expansión. En </span><span class="rvts9">`simplification/facexp.usg'</span><span class="rvts6"> se pueden encontrar breves descripciones de estas funciones. Se accederá a una demostración con la instrucción </span><span class="rvts9">demo("facexp")</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX205"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">expandwrt</span><span class="rvts18"> (expr, x_1, ..., x_n)</span></li>
+<li class="rvps3"><span class="rvts6">Expande la expresión </span><span class="rvts9">expr</span><span class="rvts6"> con respecto a las variables </span><span class="rvts18">x_1</span><span class="rvts6">, ..., </span><span class="rvts18">x_n</span><span class="rvts6">. Todos los productos que contengan a las variables aparecen explícitamente. El resultado que se obtenga no tendr'a productos de sumas de expresiones que contengan a las variables. Los argumentos </span><span class="rvts18">x_1</span><span class="rvts6">, ..., </span><span class="rvts18">x_n</span><span class="rvts6"> pueden ser variables, operadores o expresiones.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Por defecto, no se expanden los denominadores, pero esto puede cambiarse mediante el uso de la variable </span><span class="rvts9">expandwrt_denom</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Esta función se carga automáticamente de </span><span class="rvts9">`simplification/stopex.mac'</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX206"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">expandwrt_denom</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">false</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La variable </span><span class="rvts9">expandwrt_denom</span><span class="rvts6"> controla el tratamiento de las expresiones racinales por parte de </span><span class="rvts9">expandwrt</span><span class="rvts6">. Si vale </span><span class="rvts9">true</span><span class="rvts6">, se expandirán tanto el numerador como el denominador de la expresión respecto de los argumentos de </span><span class="rvts9">expandwrt</span><span class="rvts6">, pero si </span><span class="rvts9">expandwrt_denom</span><span class="rvts6"> vale </span><span class="rvts9">false</span><span class="rvts6">, sólo se expandirá el numerador.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX207"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">expandwrt_factored</span><span class="rvts18"> (expr, x_1, ..., x_n)</span></li>
+<li class="rvps3"><span class="rvts6">Es similar a </span><span class="rvts9">expandwrt</span><span class="rvts6">, pero trata a las expresiones que son productos de una forma algo diferente. La función </span><span class="rvts9">expandwrt_factored</span><span class="rvts6"> expande sólo aquellos factores de </span><span class="rvts9">expr</span><span class="rvts6"> que contienen a las variables </span><span class="rvts18">x_1</span><span class="rvts6">, ..., </span><span class="rvts18">x_n</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Esta función se carga automáticamente de </span><span class="rvts9">`simplification/stopex.mac'</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX208"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">expon</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: 0</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La variable </span><span class="rvts9">expon</span><span class="rvts6"> guarda el mayor exponente negativo que será expandido automáticamente, independientemente de </span><span class="rvts9">expand</span><span class="rvts6">. Por ejemplo, si </span><span class="rvts9">expon</span><span class="rvts6"> vale 4 entonces </span><span class="rvts9">(x+1)^(-5)</span><span class="rvts6"> no se expandirá automáticamente.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX209"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">exponentialize</span><span class="rvts18"> (expr)</span></li>
+<li><a name="IDX210"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">exponentialize</span></li>
+<li class="rvps3"><span class="rvts6">La función </span><span class="rvts9">exponentialize (expr)</span><span class="rvts6"> convierte las funciones trigonométricas e hiperbólicas de </span><span class="rvts18">expr</span><span class="rvts6"> a exponenciales, sin alterar la variable global </span><span class="rvts9">exponentialize</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Cuando la variable </span><span class="rvts9">exponentialize</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, todas las funciones trigonométricas e hiperbólicas se convierten a forma exponencial. El valor por defecto es </span><span class="rvts9">false</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">demoivre</span><span class="rvts6"> convierte funciones trigonométricas e hiperbólicas a la forma exponencial, por lo que </span><span class="rvts9">demoivre</span><span class="rvts6"> y </span><span class="rvts9">exponentialize</span><span class="rvts6"> no pueden valer </span><span class="rvts9">true</span><span class="rvts6"> al mismo tiempo.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX211"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">expop</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: 0</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La variable </span><span class="rvts9">expop</span><span class="rvts6"> guarda el mayor exponente positivo que será expandido automáticamente. Así, </span><span class="rvts9">(x+1)^3</span><span class="rvts6"> se expandirá automáticamente sólo si </span><span class="rvts9">expop</span><span class="rvts6"> es mayor o igual que 3. Si se quiere expandir </span><span class="rvts9">(x+1)^n</span><span class="rvts6">, siendo </span><span class="rvts9">n</span><span class="rvts6"> mayor que </span><span class="rvts9">expop</span><span class="rvts6">, entonces </span><span class="rvts9">expand ((x+1)^n)</span><span class="rvts6"> se desarrollará sólo si </span><span class="rvts9">maxposex</span><span class="rvts6"> no es menor que </span><span class="rvts9">n</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX212"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">factlim</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: -1</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La variable </span><span class="rvts9">factlim</span><span class="rvts6"> especifica el mayor factorial que será expandido automáticamente. Si su valor es -1, entonces se expandirán todos los enteros.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX213"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">intosum</span><span class="rvts18"> (expr)</span></li>
+<li class="rvps3"><span class="rvts6">Mueve los factores multiplicativos que están fuera de un sumatorio hacia dentro de éste. Si el índice aparece en la expresión exterior, entonce </span><span class="rvts9">intosum</span><span class="rvts6"> busca un índice razonable, lo mismo que hace con </span><span class="rvts9">sumcontract</span><span class="rvts6">. Se trata de la operación contraria a extraer factores comunes de los sumatorios.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">En algunos caos puede ser necesario hacer </span><span class="rvts9">scanmap (multthru, </span><span class="rvts19">expr</span><span class="rvts9">)</span><span class="rvts6"> antes que </span><span class="rvts9">intosum</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX214"></a>
+<span class="rvts16">Declaración:</span><span class="rvts6"> </span><span class="rvts17">lassociative</span></li>
+<li class="rvps3"><span class="rvts6">La instrucción </span><span class="rvts9">declare (g, lassociative)</span><span class="rvts6"> le indica al simplificador de Maxima que </span><span class="rvts9">g</span><span class="rvts6"> es asociativo por la izquierda. Por ejemplo, </span><span class="rvts9">g (g (a, b), g (c, d))</span><span class="rvts6">se reduce a </span><span class="rvts9">g (g (g (a, b), c), d)</span><span class="rvts6">.</span></li>
+<li><a name="IDX215"></a>
+<span class="rvts16">Declaración:</span><span class="rvts6"> </span><span class="rvts17">linear</span></li>
+<li class="rvps3"><span class="rvts6">Es una de las propiedades de operadores de Maxima. Si la función univariante </span><span class="rvts9">f</span><span class="rvts6"> se declara lineal, la expansión de </span><span class="rvts9">f(x + y)</span><span class="rvts6"> produce </span><span class="rvts9">f(x) + f(y)</span><span class="rvts6">, </span><span class="rvts9">f(a*x)</span><span class="rvts6"> produce </span><span class="rvts9">a*f(x)</span><span class="rvts6"> si </span><span class="rvts9">a</span><span class="rvts6"> es una constante. Si la función tiene dos o más argumentos, la linealidad se interpreta como la de </span><span class="rvts9">sum</span><span class="rvts6"> o </span><span class="rvts9">integrate</span><span class="rvts6">, esto es, </span><span class="rvts9">f (a*x + b, x)</span><span class="rvts6"> produce </span><span class="rvts9">a*f(x,x) + b*f(1,x)</span><span class="rvts6"> si </span><span class="rvts9">a</span><span class="rvts6"> y </span><span class="rvts9">b</span><span class="rvts6"> no contienen a </span><span class="rvts9">x</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts9">linear</span><span class="rvts6"> equivale a </span><span class="rvts9">additive</span><span class="rvts6"> y </span><span class="rvts9">outative</span><span class="rvts6">. Véase también </span><span class="rvts9">opproperties</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX216"></a>
+<span class="rvts16">Declaración:</span><span class="rvts6"> </span><span class="rvts17">mainvar</span></li>
+<li class="rvps3"><span class="rvts6">Se pueden declarar variables de tipo </span><span class="rvts9">mainvar</span><span class="rvts6">. El orden de los átomos es: números &lt; constantes (como </span><span class="rvts9">%e</span><span class="rvts6"> o </span><span class="rvts9">%pi</span><span class="rvts6">) &lt; escalares &lt; otras variables &lt; "mainvars". Por ejemplo, compárese </span><span class="rvts9">expand ((X+Y)^4)</span><span class="rvts6"> con </span><span class="rvts9">(declare (x, mainvar), expand ((x+y)^4))</span><span class="rvts6">. (Nota: Se debe tener cuidado si se quiere hacer uso de esta declaración. Por ejemplo, si se resta una expresión en la que </span><span class="rvts9">x</span><span class="rvts6"> ha sido declarada como </span><span class="rvts9">mainvar</span><span class="rvts6"> de otra en la que </span><span class="rvts9">x</span><span class="rvts6"> no es </span><span class="rvts9">mainvar</span><span class="rvts6">, puede ser necesario volver a simplificar, </span><span class="rvts9">ev (expr, simp)</span><span class="rvts6">, a fin de obtener cancelaciones. Además, si se guarda una expresión en la que </span><span class="rvts9">x</span><span class="rvts6"> es </span><span class="rvts9">mainvar</span><span class="rvts6">, quizás sea necesario guardar también </span><span class="rvts9">x</span><span class="rvts6">.)</span></li>
+<li><a name="IDX217"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">maxapplydepth</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: 10000</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La variable </span><span class="rvts9">maxapplydepth</span><span class="rvts6"> es la máxima profundidad a la que van a introducirse </span><span class="rvts9">apply1</span><span class="rvts6"> y </span><span class="rvts9">apply2</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX218"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">maxapplyheight</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: 10000</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La variable </span><span class="rvts9">maxapplyheight</span><span class="rvts6"> es la m2'axima altura a la que escalará </span><span class="rvts9">applyb1</span><span class="rvts6"> antes de detenerse.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX219"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">maxnegex</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: 1000</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La variable </span><span class="rvts9">maxnegex</span><span class="rvts6"> es el mayor exponente negativo que expandirá la función </span><span class="rvts9">expand</span><span class="rvts6">. Véase también </span><span class="rvts9">maxposex</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX220"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">maxposex</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: 1000</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La variable </span><span class="rvts9">maxposex</span><span class="rvts6"> es el mayor exponenteque expandirá la función </span><span class="rvts9">expand</span><span class="rvts6">. Véase también </span><span class="rvts9">maxnegex</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX221"></a>
+<span class="rvts16">Declaración:</span><span class="rvts6"> </span><span class="rvts17">multiplicative</span></li>
+<li class="rvps3"><span class="rvts6">La instrucción </span><span class="rvts9">declare (f, multiplicative)</span><span class="rvts6"> indica al simplificador de Maxima que </span><span class="rvts9">f</span><span class="rvts6"> is multiplicativa.</span></li>
+</ul>
+<ol style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Si </span><span class="rvts9">f</span><span class="rvts6"> es univariante, cada vez que el simplificador encuentre a </span><span class="rvts9">f</span><span class="rvts6"> aplicad a un producto, </span><span class="rvts9">f</span><span class="rvts6"> se distribuirá sobre ese producto. Por ejemplo, </span><span class="rvts9">f(x*y)</span><span class="rvts6"> se reduciría a </span><span class="rvts9">f(x)*f(y)</span><span class="rvts6">.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Si </span><span class="rvts9">f</span><span class="rvts6"> es una función de 2 o más argumentos, la multiplicabilidad se define como multiplicabilidad para el primer argumento de </span><span class="rvts9">f</span><span class="rvts6">, de modo que </span><span class="rvts9">f (g(x) * h(x), x)</span><span class="rvts6"> se reduciría a </span><span class="rvts9">f (g(x) ,x) * f (h(x), x)</span><span class="rvts6">.</span></li>
+</ol>
+<p class="rvps3"><span class="rvts6">Esta transformación no se realiza cuando </span><span class="rvts9">f</span><span class="rvts6"> se aplica a expresiones de la forma </span><span class="rvts9">product (x[i], i, m, n)</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX222"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">negdistrib</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">true</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">negdistrib</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, -1 se distribuye sobre una expresión. Por ejemplo, </span><span class="rvts9">-(x + y)</span><span class="rvts6"> se transforma en </span><span class="rvts9">- y - x</span><span class="rvts6">. Dándole el valor </span><span class="rvts9">false</span><span class="rvts6"> se mostrará </span><span class="rvts9">- (x + y)</span><span class="rvts6"> tal cual. Esto puede ser útil, pero también peligroso; al igual que el indicador </span><span class="rvts9">simp</span><span class="rvts6">, no conviene asignarle el valor </span><span class="rvts9">false</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX223"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">negsumdispflag</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">true</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">negsumdispflag</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, </span><span class="rvts9">x - y</span><span class="rvts6"> se muestra como </span><span class="rvts9">x - y</span><span class="rvts6"> en lugar de </span><span class="rvts9">- y + x</span><span class="rvts6">. Dándole el valor </span><span class="rvts9">false</span><span class="rvts6"> se realiza un análisis adicional para que no se representen de forma muy diferente dos expresiones similares. Una aplicación puede ser para que </span><span class="rvts9">a + %i*b</span><span class="rvts6"> y </span><span class="rvts9">a - %i*b</span><span class="rvts6"> se representen ambas de la misma manera.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX224"></a>
+<span class="rvts16">Símbolo especial:</span><span class="rvts6"> </span><span class="rvts17">noeval</span></li>
+<li class="rvps3"><span class="rvts6">El símbolo </span><span class="rvts9">noeval</span><span class="rvts6"> evita la fase de evaluación de </span><span class="rvts9">ev</span><span class="rvts6">. Es útil conjuntamente con otras variables globales y para poder volver a simplificar expresiones sin tener que evaluarlas otra vez.</span></li>
+<li><a name="IDX225"></a>
+<span class="rvts16">Declaración:</span><span class="rvts6"> </span><span class="rvts17">noun</span></li>
+<li class="rvps3"><span class="rvts6">El símbolo </span><span class="rvts9">noun</span><span class="rvts6"> es una de las opciones de la instrucción </span><span class="rvts9">declare</span><span class="rvts6">. Hace que una función se declare como "nombre", lo que significa que no se evaluará automáticamente.</span></li>
+<li><a name="IDX226"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">noundisp</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">false</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">noundisp</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, los nombres se muestran precedidos de un apóstrofo. Siempre debe valer </span><span class="rvts9">true</span><span class="rvts6"> cuando se quiera representar la definición de funciones.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX227"></a>
+<span class="rvts16">Símbolo especial:</span><span class="rvts6"> </span><span class="rvts17">nouns</span></li>
+<li class="rvps3"><span class="rvts6">El símbolo </span><span class="rvts9">nouns</span><span class="rvts6"> es una </span><span class="rvts9">evflag</span><span class="rvts6">, lo que significa que cuando se utilice como una opción de la instrucción </span><span class="rvts9">ev</span><span class="rvts6">, todas las formas nominales que aparezcan en una expresión las convierte en verbales, esto es, las evalúa. Véanse también </span><span class="rvts9">noun</span><span class="rvts6">, </span><span class="rvts9">nounify</span><span class="rvts6">, </span><span class="rvts9">verb</span><span class="rvts6"> y </span><span class="rvts9">verbify</span><span class="rvts6">.</span></li>
+<li><a name="IDX228"></a>
+<span class="rvts16">Símbolo especial:</span><span class="rvts6"> </span><span class="rvts17">numer</span></li>
+<li class="rvps3"><span class="rvts6">El símbolo </span><span class="rvts9">numer</span><span class="rvts6"> hace algunas funciones matemáticas con argumentos numéricos se evalúen como decimales de punto flotante. También hace que las variables de una expresión a las cuales se les ha asignado un número sean sustituidas por sus valores. Además, activa la variable </span><span class="rvts9">float</span><span class="rvts6">.</span></li>
+<li><a name="IDX229"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">numerval</span><span class="rvts18"> (x_1, expr_1, ..., var_n, expr_n)</span></li>
+<li class="rvps3"><span class="rvts6">Declara las variables </span><span class="rvts9">x_1</span><span class="rvts6">, ..., </span><span class="rvts18">x_n</span><span class="rvts6"> asignándoles los valores numéricos </span><span class="rvts9">expr_1</span><span class="rvts6">, ..., </span><span class="rvts9">expr_n</span><span class="rvts6">. El valor numérico se evalúa y sustituye a la variable en cualquier expresión en la que ésta aparezca si </span><span class="rvts9">numer</span><span class="rvts6"> toma el valor </span><span class="rvts9">true</span><span class="rvts6">. Véase también </span><span class="rvts9">ev</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Las expresiones </span><span class="rvts9">expr_1</span><span class="rvts6">, ..., </span><span class="rvts9">expr_n</span><span class="rvts6"> pueden ser expresiones no necesariamente numéricas.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX230"></a>
+<span class="rvts16">Variable del sistema:</span><span class="rvts6"> </span><span class="rvts17">opproperties</span></li>
+<li class="rvps3"><span class="rvts6">La variable </span><span class="rvts9">opproperties</span><span class="rvts6"> es la lista con las propiedades especiales de los operadores reconocidas por el simplificador de Maxima: </span><span class="rvts9">linear</span><span class="rvts6">, </span><span class="rvts9">additive</span><span class="rvts6">, </span><span class="rvts9">multiplicative</span><span class="rvts6">, </span><span class="rvts9">outative</span><span class="rvts6">, </span><span class="rvts9">evenfun</span><span class="rvts6">, </span><span class="rvts9">oddfun</span><span class="rvts6">, </span><span class="rvts9">commutative</span><span class="rvts6">, </span><span class="rvts9">symmetric</span><span class="rvts6">, </span><span class="rvts9">antisymmetric</span><span class="rvts6">, </span><span class="rvts9">nary</span><span class="rvts6">, </span><span class="rvts9">lassociative</span><span class="rvts6">, </span><span class="rvts9">rassociative</span><span class="rvts6">.</span></li>
+<li><a name="IDX231"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">opsubst</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">true</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">opsubst</span><span class="rvts6"> vale </span><span class="rvts9">false</span><span class="rvts6">, </span><span class="rvts9">subst</span><span class="rvts6"> no sustituye el operdor de una expresión, de manera que </span><span class="rvts9">(opsubst: false, subst (x^2, r, r+r[0]))</span><span class="rvts6"> trabajará correctamente.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX232"></a>
+<span class="rvts16">Declaración:</span><span class="rvts6"> </span><span class="rvts17">outative</span></li>
+<li class="rvps3"><span class="rvts6">La instrucción </span><span class="rvts9">declare (f, outative)</span><span class="rvts6"> le indica al simplificador de Maxima que los factores constantes del argumento de la función </span><span class="rvts9">f</span><span class="rvts6"> pueden ser extraídos.</span></li>
+</ul>
+<ol style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Si </span><span class="rvts9">f</span><span class="rvts6"> es univariante, cada vez que el simplificador se encuentra con </span><span class="rvts9">f</span><span class="rvts6"> aplicada a un producto, éste será particionado en factores que son constantes y factores que no lo son, siendo entonces los constantes extraídos de la función. Por ejemplo, </span><span class="rvts9">f(a*x)</span><span class="rvts6"> se reducirá a </span><span class="rvts9">a*f(x)</span><span class="rvts6"> siendo </span><span class="rvts9">a</span><span class="rvts6"> una constante. Las constantes no atómicas no serán extraídas.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Si </span><span class="rvts9">f</span><span class="rvts6"> es una función de 2 o más argumentos, esta propiedad se define como en </span><span class="rvts9">sum</span><span class="rvts6"> o </span><span class="rvts9">integrate</span><span class="rvts6">, esto es, </span><span class="rvts9">f (a*g(x), x)</span><span class="rvts6"> se reducirá a </span><span class="rvts9">a * f(g(x), x)</span><span class="rvts6"> si </span><span class="rvts9">a</span><span class="rvts6"> no contiene a </span><span class="rvts9">x</span><span class="rvts6">.</span></li>
+</ol>
+<p class="rvps3"><span class="rvts6">Las funciones </span><span class="rvts9">sum</span><span class="rvts6">, </span><span class="rvts9">integrate</span><span class="rvts6"> y </span><span class="rvts9">limit</span><span class="rvts6"> han sido todas declaradas con la propiedad </span><span class="rvts9">outative</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX233"></a>
+<span class="rvts16">Declaración:</span><span class="rvts6"> </span><span class="rvts17">posfun</span></li>
+<li class="rvps3"><span class="rvts6">La instrucción </span><span class="rvts9">declare (f, posfun)</span><span class="rvts6"> declara a </span><span class="rvts9">f</span><span class="rvts6"> como función positiva, de forma que </span><span class="rvts9">is (f(x) &gt; 0)</span><span class="rvts6"> devolverá </span><span class="rvts9">true</span><span class="rvts6">.</span></li>
+<li><a name="IDX234"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">radcan</span><span class="rvts18"> (expr)</span></li>
+<li class="rvps3"><span class="rvts6">Simplifica la expresión </span><span class="rvts18">expr</span><span class="rvts6">, que puede contener logaritmos, exponenciales y radicales, convirtiéndola a una forma canónica, lo que significa que todas las expresiones funcionalmente equivalentes se reducen a una forma única. Ciertas expresiones, sin embargo, son reducidas por </span><span class="rvts9">radcan</span><span class="rvts6"> a una forma regular, lo que significa que dos expresiones equivalentes no tienen necesariamente el mismo aspecto, pero su diferencia puede ser reducida por </span><span class="rvts9">radcan</span><span class="rvts6"> a cero.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Con algunas expresiones </span><span class="rvts9">radcan</span><span class="rvts6"> puede consunir mucho tiempo. Este es el coste por explorar ciertas relaciones entre las componentes de la expresión para simplificaciones basadas en factorizaciones y expansiones parciales de fracciones de exponentes.</span></p>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">%e_to_numlog</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, </span><span class="rvts9">%e^(r*log(expr))</span><span class="rvts6"> se reduce a </span><span class="rvts9">expr^r</span><span class="rvts6"> si </span><span class="rvts9">r</span><span class="rvts6"> es un número racional.</span></p>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">radexpand</span><span class="rvts6"> vale </span><span class="rvts9">false</span><span class="rvts6">, ciertas transformaciones se inhiben; </span><span class="rvts9">radcan (sqrt (1-x))</span><span class="rvts6"> se mantiene como </span><span class="rvts9">sqrt (1-x)</span><span class="rvts6"> y no se reduce a </span><span class="rvts9">%i sqrt (x-1)</span><span class="rvts6">, o </span><span class="rvts9">radcan (sqrt (x^2 - 2*x + 11))</span><span class="rvts6"> se mantiene como </span><span class="rvts9">sqrt (x^2 - 2*x + 1)</span><span class="rvts6"> sin reducirse a</span><span class="rvts9">x - 1</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">La instrucción </span><span class="rvts9">example (radcan)</span><span class="rvts6"> muestra algunos ejemplos.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX235"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">radexpand</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">true</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La variable </span><span class="rvts9">radexpand</span><span class="rvts6"> controla algunas simplificaciones de radicales.</span></p>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">radexpand</span><span class="rvts6"> vale </span><span class="rvts9">all</span><span class="rvts6">, las raíces </span><span class="rvts18">n</span><span class="rvts6">-ésimas de los factores de un producto que sean potencias de </span><span class="rvts18">n</span><span class="rvts6"> se extraen del símbolo radical. Por ejemplo, si </span><span class="rvts9">radexpand</span><span class="rvts6"> vale </span><span class="rvts9">all</span><span class="rvts6">, </span><span class="rvts9">sqrt (16*x^2)</span><span class="rvts6"> se reduce a </span><span class="rvts9">4*x</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Más concretamente, considérese </span><span class="rvts9">sqrt (x^2)</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Si </span><span class="rvts9">radexpand</span><span class="rvts6"> vale </span><span class="rvts9">all</span><span class="rvts6"> o se ha ejecutado </span><span class="rvts9">assume (x &gt; 0)</span><span class="rvts6">, </span><span class="rvts9">sqrt(x^2)</span><span class="rvts6"> se reduce a </span><span class="rvts9">x</span><span class="rvts6">.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Si </span><span class="rvts9">radexpand</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6"> y </span><span class="rvts9">domain</span><span class="rvts6"> es </span><span class="rvts9">real</span><span class="rvts6"> (su valor por defecto), </span><span class="rvts9">sqrt(x^2)</span><span class="rvts6"> se reduce a </span><span class="rvts9">abs(x)</span><span class="rvts6">.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Si </span><span class="rvts9">radexpand</span><span class="rvts6"> vale </span><span class="rvts9">false</span><span class="rvts6"> o </span><span class="rvts9">radexpand</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6"> y </span><span class="rvts9">domain</span><span class="rvts6"> es </span><span class="rvts9">complex</span><span class="rvts6">, </span><span class="rvts9">sqrt(x^2)</span><span class="rvts6"> no se simplifica.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Nótese que </span><span class="rvts9">domain</span><span class="rvts6"> sólo se tiene en cuenta si </span><span class="rvts9">radexpand</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX236"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">radsubstflag</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">false</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">radsubstflag</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6"> se permite a </span><span class="rvts9">ratsubst</span><span class="rvts6"> hacer la sustitución </span><span class="rvts9">u</span><span class="rvts6"> por </span><span class="rvts9">sqrt (x)</span><span class="rvts6"> in </span><span class="rvts9">x</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX237"></a>
+<span class="rvts16">Declaración:</span><span class="rvts6"> </span><span class="rvts17">rassociative</span></li>
+<li class="rvps3"><span class="rvts6">La instrucción </span><span class="rvts9">declare (g, rassociative)</span><span class="rvts6"> le indica al simplificador de Maxima que </span><span class="rvts9">g</span><span class="rvts6"> es asociativa por la derecha. Por ejemplo, </span><span class="rvts9">g(g(a, b), g(c, d))</span><span class="rvts6"> se reduce a </span><span class="rvts9">g(a, g(b, g(c, d)))</span><span class="rvts6">.</span></li>
+<li><a name="IDX238"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">scsimp</span><span class="rvts18"> (expr, rule_1, ..., rule_n)</span></li>
+<li class="rvps3"><span class="rvts6">Es el "Sequential Comparative Simplification" (método debido a Stoute). La función </span><span class="rvts9">scsimp</span><span class="rvts6"> intenta simplificar </span><span class="rvts18">expr</span><span class="rvts6"> de acuerdo con las reglas </span><span class="rvts18">rule_1</span><span class="rvts6">, ..., </span><span class="rvts18">rule_n</span><span class="rvts6">. Si se obtiene una expresión más pequeña, el proceso se repite. En caso contrario, después de que se hayan intentado todas las simplificaciones, devuelve la respuesta original.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La instrucción </span><span class="rvts9">example (scsimp)</span><span class="rvts6"> muestra algunos ejemplos.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX239"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">simpsum</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">false</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">simpsum</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, se simplifica el resultado de un sumatorio </span><span class="rvts9">sum</span><span class="rvts6">. Esta simplificación podrá producir en ocasiones una expresión compacta. Si </span><span class="rvts9">simpsum</span><span class="rvts6"> vale </span><span class="rvts9">false</span><span class="rvts6"> o si se utiliza la forma apostrofada </span><span class="rvts9">'sum</span><span class="rvts6">, el valor es una forma nominal que representa la notación sigma habitual en matemáticas.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX240"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">sumcontract</span><span class="rvts18"> (expr)</span></li>
+<li class="rvps3"><span class="rvts6">Combina todos los sumatorios de una suma cuyos límites inferiores y superiores difieren por constantes. El resultado es una expresión que contiene un sumatorio para conjunto de tales sumatorios. La función </span><span class="rvts9">sumcontract</span><span class="rvts6"> combina todos los sumatorios compatibles y utiliza uno de los índices de uno de los sumatorios si puede, si no formará un índice que sea razonable.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Puede ser necesario hacer </span><span class="rvts9">intosum (</span><span class="rvts19">expr</span><span class="rvts9">)</span><span class="rvts6"> antes que </span><span class="rvts9">sumcontract</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX241"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">sumexpand</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">false</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">sumexpand</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, productos de sumatorios y de sumatorios con exponentes se reducen a sumatorios anidados.</span></p>
+<p class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">cauchysum</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) sumexpand: true$</span><br/><span class="rvts9">(%i2) sum (f (i), i, 0, m) * sum (g (j), j, 0, n);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; m &nbsp; &nbsp; &nbsp;n</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;==== &nbsp; ====</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\ &nbsp; &nbsp; &nbsp;\</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&gt; &nbsp; &nbsp; &nbsp;&gt; &nbsp; &nbsp; f(i1) g(i2)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/ &nbsp; &nbsp; &nbsp;/</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;==== &nbsp; ====</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;i1 = 0 i2 = 0</span><br/><span class="rvts9">(%i3) sum (f (i), i, 0, m)^2;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; m &nbsp; &nbsp; &nbsp;m</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;==== &nbsp; ====</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\ &nbsp; &nbsp; &nbsp;\</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&gt; &nbsp; &nbsp; &nbsp;&gt; &nbsp; &nbsp; f(i3) f(i4)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/ &nbsp; &nbsp; &nbsp;/</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;==== &nbsp; ====</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;i3 = 0 i4 = 0</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX242"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">sumsplitfact</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">true</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">sumsplitfact</span><span class="rvts6"> vale </span><span class="rvts9">false</span><span class="rvts6">, </span><span class="rvts9">minfactorial</span><span class="rvts6"> se aplica después de </span><span class="rvts9">factcomb</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX243"></a>
+<span class="rvts16">Declaración:</span><span class="rvts6"> </span><span class="rvts17">symmetric</span></li>
+<li class="rvps3"><span class="rvts6">La instrucción </span><span class="rvts9">declare (h, symmetric)</span><span class="rvts6"> le indica al simplificador de Maxima que </span><span class="rvts9">h</span><span class="rvts6"> es una función simétrica. Por ejemplo, </span><span class="rvts9">h (x, z, y)</span><span class="rvts6"> se reduce a </span><span class="rvts9">h (x, y, z)</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">El nombre </span><span class="rvts9">commutative</span><span class="rvts6"> es sinónimo de </span><span class="rvts9">symmetric</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX244"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">unknown</span><span class="rvts18"> (expr)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve </span><span class="rvts9">true</span><span class="rvts6"> si y sólo si </span><span class="rvts18">expr</span><span class="rvts6"> contiene un operador o función no reconocido por el simplificador de Maxima.</span></li>
+<hr style="height: 6px;"/></li>
+</ul>
+<div><table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparasimplific.html#SEC30"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_8.html#SEC32"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps3"><span class="rvts10">This document was generated by </span><span class="rvts11">Robert Dodier</span><span class="rvts10"> on </span><span class="rvts11">agosto, 25 2007</span><span class="rvts10"> using </span><a class="rvts12" href="http://texi2html.cvshome.org/">texi2html 1.76</a><span class="rvts10">.</span></p>
+<p></p>
+<p class="rvps6"><span class="rvts13">Created with the Personal Edition of HelpNDoc: </span><a class="rvts14" href="http://www.helpndoc.com/create-epub-ebooks">Produce electronic books easily</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				http://maxima.sourceforge.net</div>
+		</div>
+	</body>
+	
+</html>
+

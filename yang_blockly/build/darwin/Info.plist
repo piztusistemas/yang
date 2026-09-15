@@ -1,0 +1,62 @@
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Info.plist do bundle Yang.app (macOS).
+
+  OLLO: este ficheiro estaba ata agora tal cal saíu da plantilla de Wails,
+  con marcas de plantilla Go sen substituír ({{.OutputFilename}},
+  {{.Info.ProductName}}...). A tarefa que crea o bundle (build/darwin/
+  Taskfile.yml → create:app:bundle) limítase a facerlle "cp" a este ficheiro,
+  sen renderizar nada, así que o .app resultante quedaba cun
+  CFBundleExecutable literal "{{.OutputFilename}}": macOS non atopaba o
+  binario e a aplicación non abría en absoluto. Agora vai cos valores reais,
+  igual que xa estaban os equivalentes de Windows (build/windows/info.json) e
+  Linux (build/linux/yang.desktop).
+
+  Os valores saen de build/config.yml. Se algún día se instala o CLI e se
+  executa `wails3 task common:update:build-assets`, ese comando VOLVERÍA
+  sobrescribir este ficheiro coa plantilla renderizada por Wails - hai que
+  revisar despois que siga poñendo o mesmo (en especial CFBundleIdentifier,
+  que Wails xera coma "com.wails.yang" en vez do identificador propio).
+-->
+<plist version="1.0">
+    <dict>
+        <key>CFBundlePackageType</key>
+        <string>APPL</string>
+        <key>CFBundleName</key>
+        <string>Yang</string>
+        <!-- Ten que coincidir co nome do binario que create:app:bundle copia
+             a Contents/MacOS (APP_NAME en Taskfile.yml). -->
+        <key>CFBundleExecutable</key>
+        <string>yang</string>
+        <!-- productIdentifier de build/config.yml. Non se usa o
+             "com.wails.yang" da plantilla: o identificador do bundle é o que
+             usa o sistema para asociar preferencias, permisos e entradas de
+             Launch Services, e debe ser un dominio propio e estable. -->
+        <key>CFBundleIdentifier</key>
+        <string>gal.omeu.piztu.yang</string>
+        <key>CFBundleVersion</key>
+        <string>26.9.1</string>
+        <key>CFBundleShortVersionString</key>
+        <string>26.9.1</string>
+        <key>CFBundleGetInfoString</key>
+        <string>Xerador de exames Yang</string>
+        <!-- create:app:bundle copia build/darwin/icons.icns a
+             Contents/Resources conservando o nome, así que aquí vai "icons",
+             non o "iconfile" da plantilla (que non existe e deixaría a app
+             coa icona xenérica). -->
+        <key>CFBundleIconFile</key>
+        <string>icons</string>
+        <!-- 12.0 e non 10.13: é o MACOSX_DEPLOYMENT_TARGET co que compila
+             build/darwin/Taskfile.yml (build:native). Declarar un mínimo máis
+             baixo do que se compila só serve para que a app falle nun equipo
+             onde o sistema xa lle dixera ao usuario que podía instalala. -->
+        <key>LSMinimumSystemVersion</key>
+        <string>12.0</string>
+        <key>NSHighResolutionCapable</key>
+        <string>true</string>
+        <key>LSApplicationCategoryType</key>
+        <string>public.app-category.education</string>
+        <key>NSHumanReadableCopyright</key>
+        <string>Copyright © Piztu</string>
+    </dict>
+</plist>

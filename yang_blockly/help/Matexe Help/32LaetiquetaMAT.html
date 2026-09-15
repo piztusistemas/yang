@@ -1,0 +1,107 @@
+﻿<html>
+	
+<head>
+	<title> 3.2. La etiqueta MAT</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 3.9.1.648">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "MATEXE.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("32LaetiquetaMAT");
+			}
+		});
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1> 3.2. La etiqueta MAT</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="AyudaMatexe.html">Ayuda Matexe</a> &rsaquo;&rsaquo; <a href="3EllenguajeMatexe.html"> 3. El lenguaje Matexe</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="3EllenguajeMatexe.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="31LaetiquetaEVAL.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="33LaetiquetaHIDE.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<h2 class="rvps8"><a name="_LA_ETIQUETA_MAT"></a>
+<img align="absbottom" width="24" height="24" alt="image" src="lib/image009.jpg"/><span class="rvts0"><span class="rvts13">&nbsp;3.2. La etiqueta MAT</span></span></h2>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps7"><span class="rvts13">Uso:</span></p>
+<p class="rvps7"><span class="rvts21">&lt;MAT&gt;</span><span class="rvts12"> Expresión simple en lenguaje Maxima </span><span class="rvts21">&lt;/MAT&gt;</span></p>
+<p class="rvps7"><span class="rvts21">&lt;MAT&gt;</span><span class="rvts12"> Variable: Expresión en lenguaje Maxima </span><span class="rvts21">&lt;/MAT&gt;</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps7"><span class="rvts12">No hay diferencias de uso con respecto a </span><span class="rvts21">&lt;EVAL&gt;</span><span class="rvts12">, las diferencias se aprecian en el resultado que producen.</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps7"><span class="rvts13">Ejemplos:</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps7"><span class="rvts21">&lt;MAT&gt;</span><span class="rvts12">integrate(x^2+x,x)</span><span class="rvts21"> &lt;/MAT&gt;</span><span class="rvts12"> devuelve como resultado visible</span></p>
+<p class="rvps1"><img align="absbottom" width="96" height="29" alt="image" src="lib/image010.gif"/></p>
+<p class="rvps7"><span class="rvts12">En una expresión </span><span class="rvts21">&lt;MAT&gt;</span><span class="rvts12">, la integral no se evalúa.</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps7"><span class="rvts21">&lt;MAT&gt;</span><span class="rvts12">z: 3/4+1/4</span><span class="rvts21">&lt;/MAT&gt;</span><span class="rvts12"> devuelve como resultado visible</span></p>
+<p class="rvps1"><img align="absbottom" width="54" height="33" alt="image" src="lib/image011.gif"/></p>
+<p><span class="rvts12">&nbsp;Se asigna la expresión sin evaluar a la variable z. No se calcula la suma. Se muestra indicada.</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps1"><img align="absbottom" width="339" height="314" alt="image" src="lib/image012.gif"/></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps7"><span class="rvts13">Atajo:</span><span class="rvts12"> CONTROL + M</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps7"><span class="rvts13">Información adicional:</span><span class="rvts12"> Al igual que en </span><span class="rvts21">&lt;EVAL&gt;</span><span class="rvts12"> sólo es posible incluir una expresión Maxima simple.</span></p>
+<p><a name="MAT"></a>
+<span class="rvts12">&nbsp;En ocasiones, se necesita mostrar una expresión algebraica, evaluando exclusivamente algunas partes de la misma. Para lograr esto, basta con utilizar la función ev cada una de las subexpresiones que se desee evaluar.</span></p>
+<p><span class="rvts12">&nbsp;</span></p>
+<p><span class="rvts12">&nbsp;Ejemplo:</span></p>
+<p><span class="rvts12">&nbsp;Si se quisiese mostrar la descomposición factorial de 100!, y se intentase utilizar una etiqueta EVA, no se conseguiría el resultado deseado.</span></p>
+<p class="rvps1"><span class="rvts12">&lt;EVAL&gt; factor(100!)&lt;/EVAL&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 3628800</span></p>
+<p><span class="rvts12">&nbsp;Debido a la evaluación extra que se realiza en el EVAL, se evaluaría la la descomposición y se obtendría el valor de 10! = 3628800</span></p>
+<p><span class="rvts12">&nbsp;</span></p>
+<p><span class="rvts12">&nbsp;Para obtener correctamente la descomposición en factores, es necesario calcular previamente 10! Y posteriormente descomponer, usando MAT:</span></p>
+<p class="rvps1"><span class="rvts12">&lt;MAT&gt;factor(ev(10!,simp))&lt;/MAT&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2</span><span class="rvts20">8</span><span class="rvts12">·3</span><span class="rvts20">4</span><span class="rvts12">·5</span><span class="rvts20">2</span><span class="rvts12">·7</span></p>
+<p class="rvps1"><span class="rvts12"><br/></span></p>
+<p></p>
+<p class="rvps5"><span class="rvts9">Created with the Personal Edition of HelpNDoc: </span><a class="rvts10" href="http://www.helpndoc.com/help-authoring-tool">Free help authoring environment</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Matexe v.2013: http://matexe.sourceforge.net</div>
+		</div>
+	</body>
+	
+</html>
+

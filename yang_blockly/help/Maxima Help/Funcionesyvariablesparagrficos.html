@@ -1,0 +1,567 @@
+﻿<html>
+	
+<head>
+	<title>Funciones y variables para gr&aacute;ficos</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 3.9.1.648">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Maxima.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("Funcionesyvariablesparagrficos");
+			}
+		});
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>Funciones y variables para gr&aacute;ficos</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Grficos.html">Gr&aacute;ficos</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Grficos.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Grficos.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Lecturayescritura.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<div><a name="GR_00E1FICOS"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_7.html#SEC31"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparagrficos.html#SEC33"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_7.html#SEC30"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_9.html#SEC34"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h1 class="rvps2"><span class="rvts0"><span class="rvts8">8. Gráficos</span></span></h1>
+<div><table border="0" cellpadding="1" cellspacing="0" style="border-width: 0px;">
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="Funcionesyvariablesparagrficos.html#SEC33">8.1 Funciones y variables para gráficos</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height: 6px;"/>
+<div><a name="SEC32"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparagrficos.html#SEC32"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_9.html#SEC34"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparagrficos.html#SEC32"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparagrficos.html#SEC32"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_9.html#SEC34"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">8.1 Funciones y variables para gráficos</span></span></h2>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="FUNCIONES-Y-VARIABLES-PARA-GR_00E1FICOS"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">contour_plot</span><span class="rvts18"> (expr, x_range, y_range, options, ...)</span></li>
+<li class="rvps3"><span class="rvts6">Dibuja las curvas de nivel </span><span class="rvts18">expr</span><span class="rvts6"> en el rectángulo </span><span class="rvts18">x_range</span><span class="rvts6"> por </span><span class="rvts18">y_range</span><span class="rvts6">. Cualesquiera otros argumentos adicionales se tratan como en </span><span class="rvts9">plot3d</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts9">contour_plot</span><span class="rvts6"> sólo trabaja cuando se utilizan </span><span class="rvts9">gnuplot</span><span class="rvts6"> o </span><span class="rvts9">gnuplot_pipes</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">implicit_plot</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) contour_plot (x^2 + y^2, [x, -4, 4], [y, -4, 4]);</span><br/><span class="rvts9">(%o1) </span><br/><span class="rvts9">(%i2) contour_plot (sin(y) * cos(x)^2, [x, -4, 4], [y, -4, 4]);</span><br/><span class="rvts9">(%o2) </span><br/><span class="rvts9">(%i3) F(x, y) := x^3 + y^2;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3 &nbsp; &nbsp;2</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;F(x, y) := x &nbsp;+ y</span><br/><span class="rvts9">(%i4) contour_plot (F, [u, -4, 4], [v, -4, 4]);</span><br/><span class="rvts9">(%o4) </span><br/><span class="rvts9">(%i5) contour_plot (F, [u, -4, 4], [v, -4, 4],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; [gnuplot_preamble, "set size ratio -1"]);</span><br/><span class="rvts9">(%o5) </span><br/><span class="rvts9">(%i6) set_plot_option ([gnuplot_preamble,</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"set cntrparam levels 12"])$</span><br/><span class="rvts9">(%i7) contour_plot (F, [u, -4, 4], [v, -4, 4]);</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC33"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">in_netmath</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">false</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">in_netmath</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, </span><span class="rvts9">plot3d</span><span class="rvts6"> imprime salida de OpenMath en la consola si </span><span class="rvts9">plot_format</span><span class="rvts6"> vale </span><span class="rvts9">openmath</span><span class="rvts6">, en caso contrario, </span><span class="rvts9">in_netmath</span><span class="rvts6"> (incluso si vale </span><span class="rvts9">true</span><span class="rvts6">) deja de tener efecto alguno.</span></p>
+<p class="rvps3"><span class="rvts6">La variable </span><span class="rvts9">in_netmath</span><span class="rvts6"> no afecta a </span><span class="rvts9">plot2d</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX247"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">plot2d</span><span class="rvts18"> (expr, x_range, ..., options, ...)</span></li>
+<li><a name="IDX248"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">plot2d</span><span class="rvts18"> ([expr_1, ..., expr_n], ..., options, ...)</span></li>
+<li><a name="IDX249"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">plot2d</span><span class="rvts18"> ([expr_1, ..., expr_n], x_range,..., options, ...)</span></li>
+<li class="rvps3"><span class="rvts6">Donde </span><span class="rvts18">expr</span><span class="rvts6">, </span><span class="rvts18">expr_1</span><span class="rvts6">, ..., </span><span class="rvts18">expr_n</span><span class="rvts6"> pueden ser expresiones, funciones u operadores de Maxima o Lisp, o una lista de cualquiera de las siguientes formas: </span><span class="rvts9">[discrete, [</span><span class="rvts19">x1</span><span class="rvts9">, ..., </span><span class="rvts19">xn</span><span class="rvts9">], [</span><span class="rvts19">y1</span><span class="rvts9">, ..., </span><span class="rvts19">yn</span><span class="rvts9">]]</span><span class="rvts6">, </span><span class="rvts9">[discrete, [[</span><span class="rvts19">x1</span><span class="rvts9">, </span><span class="rvts19">y1</span><span class="rvts9">], ..., [</span><span class="rvts19">xn</span><span class="rvts9">, ..., </span><span class="rvts19">yn</span><span class="rvts9">]]</span><span class="rvts6"> o </span><span class="rvts9">[parametric, </span><span class="rvts19">x_expr</span><span class="rvts9">, </span><span class="rvts19">y_expr</span><span class="rvts9">, </span><span class="rvts19">t_range</span><span class="rvts9">]</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Muestra un gráfico de una o más expresiones como función de una variable.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">plot2d</span><span class="rvts6"> representa gráficamente la expresión </span><span class="rvts18">expr</span><span class="rvts6"> o expresiones </span><span class="rvts9">[</span><span class="rvts19">name_1</span><span class="rvts9">, ..., </span><span class="rvts19">name_n</span><span class="rvts9">]</span><span class="rvts6">. Las expresiones que no sean de tipo paramétrico o discreto deben depender todas ellas de una única variable </span><span class="rvts18">var</span><span class="rvts6">, siendo obligatorio utilizar </span><span class="rvts18">x_range</span><span class="rvts6"> para nombrar la variable y darle sus valores mínimo y máximo usando la siguiente sintaxis: </span><span class="rvts9">[</span><span class="rvts19">variable</span><span class="rvts9">, </span><span class="rvts19">min</span><span class="rvts9">, </span><span class="rvts19">max</span><span class="rvts9">]</span><span class="rvts6">. El gráfico mostrará el eje horizontal acotado por los valores </span><span class="rvts18">min</span><span class="rvts6"> y </span><span class="rvts18">max</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">La expresión a ser representada puede ser dada en la forma discreta o paramétrica, esto es, como una lista que comienza con las palabras </span><span class="rvts9">discrete</span><span class="rvts6"> o </span><span class="rvts9">parametric</span><span class="rvts6">. La clave </span><span class="rvts18">discrete</span><span class="rvts6"> debe seguirse de dos listas de valores, ambas de igual longitud, conteniendo las coordenadas horizontales y verticales del conjunto de puntos; alternativamente, las coordenadas de cada punto pueden darse como listas de dos valores, todas ellas formando a su vez una lista. La clave </span><span class="rvts18">parametric</span><span class="rvts6"> debe seguirse de dos expresiones, </span><span class="rvts18">x_expr</span><span class="rvts6"> y </span><span class="rvts18">y_expr</span><span class="rvts6">, junto con un rango de la forma </span><span class="rvts9">[</span><span class="rvts19">var</span><span class="rvts9">, </span><span class="rvts19">min</span><span class="rvts9">, </span><span class="rvts19">max</span><span class="rvts9">]</span><span class="rvts6">; ambas expresiones deben depender únicamente de la variable cuyo nombre aparece en el rango. El gráfico mostrará los pares </span><span class="rvts9">[</span><span class="rvts19">x_expr</span><span class="rvts9">, </span><span class="rvts19">y_expr</span><span class="rvts9">]</span><span class="rvts6"> según </span><span class="rvts18">var</span><span class="rvts6"> varía de </span><span class="rvts18">min</span><span class="rvts6"> a </span><span class="rvts18">max</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">El rango del eje vertical no es necesario especificarlo. Es una más de las opciones de la función, siendo su sintaxis </span><span class="rvts9">[y, </span><span class="rvts19">min</span><span class="rvts9">, </span><span class="rvts19">max</span><span class="rvts9">]</span><span class="rvts6">, mostrando entonces la gráfica el rango completo, incluso si la función no alcanza estos valores. En caso de no especificarse el rango vertical en </span><span class="rvts9">set_plot_option</span><span class="rvts6">, se establecerá de forma automática como aquel rango en el que la función toma sus valores.</span></p>
+<p class="rvps3"><span class="rvts6">Cualesquiera otras opciones deben ser listas, comenzando con el nombre de la opción.</span></p>
+<p class="rvps3"><span class="rvts6">La opción </span><span class="rvts18">xlabel</span><span class="rvts6"> puede utilizarse para darle una etiqueta al eje horizontal; si no se usa esta opción, el eje horizontal será etiquetado con el nombre de la variable especificada en </span><span class="rvts18">x_range</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Del mismo modo se puede asignar una etiqueta al eje vertical con la opción </span><span class="rvts18">ylabel</span><span class="rvts6">. Si sólo hay una expresión a ser representada y no se ha hecho uso de la opción </span><span class="rvts18">ylabel</span><span class="rvts6">, el eje vertical será etiquetado con la expresión a ser representada, a menos que sea muy larga, o con el texto "discrete data", en caso de gráficos de puntos. Si la expresión es de tipo paramétrico, las dos expresiones que dan las coordenadas horizontal y vertical serán utilizadas para etiquetar ambos ejes.</span></p>
+<p class="rvps3"><span class="rvts6">Las opciones </span><span class="rvts9">[logx]</span><span class="rvts6"> y </span><span class="rvts9">[logy]</span><span class="rvts6"> no necesitan parámetros, permitiendo que los ejes horizontal y vertical se dibujen en la escala logarítmica.</span></p>
+<p class="rvps3"><span class="rvts6">Si hay varias expresiones para ser dibujadas, se mostrará una leyenda que identifique a cada una de ellas. Las etiquetas a utilizar pueden especificarse con la opción </span><span class="rvts18">legend</span><span class="rvts6">. Si no se utiliza esta opción, Maxima creará etiquetas a partir de las expresiones.</span></p>
+<p class="rvps3"><span class="rvts6">Por defecto, las funciones se dibujarán como un conjunto de segmentos lineales uniendo los puntos que bien se dan en formato </span><span class="rvts18">discrete</span><span class="rvts6">, o que se calculan automáticamente a partir de la expresión dada, de acuerdo con el tamaño muestral indicado por la opción </span><span class="rvts18">nticks</span><span class="rvts6">. Asimismo, la opción </span><span class="rvts18">style</span><span class="rvts6"> puede utilizarse para mostrar los puntos aislados, o éstos junto con los segmentos que los unen.</span></p>
+<p class="rvps3"><span class="rvts6">Hay varias opciones globales almacenadas en la lista </span><span class="rvts18">plot_options</span><span class="rvts6">, las cuales se pueden modificar con la función </span><span class="rvts9">set_plot_option</span><span class="rvts6">; cualquiera de estas opciones puede ignorarse con las opciones que se utilicen desde el comando </span><span class="rvts18">plot2d</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Las funciones a ser representadas pueden especificarse con el nombre de una función u operador de Maxima o de Lisp, con una expresión lambda de MAxima, o con una expresión válida de maxima. En caso de especificarse con un nombre o expresión lambda, la función debe ser tal que dependa de un solo argumento.</span></p>
+<p class="rvps3"><span class="rvts17">Ejemplos:</span></p>
+<p class="rvps3"><span class="rvts6">Gráficos de funciones ordinarias.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) plot2d (sin(x), [x, -5, 5])$</span><br/><span class="rvts9">(%i2) plot2d (sec(x), [x, -2, 2], [y, -20, 20], [nticks, 200])$</span></p>
+<p class="rvps10"><img align="absbottom" alt="figures/plotting2" src="lib/plotting26.gif"/></p>
+<p class="rvps10"><img align="absbottom" alt="figures/plotting3" src="lib/plotting34.gif"/></p>
+<p class="rvps3"><span class="rvts6">Especificación de funciones por su nombre.</span></p>
+<p class="rvps4"><span class="rvts9">(%i3) F(x) := x^2 $</span><br/><span class="rvts9">(%i4) :lisp (defun |$g| (x) (m* x x x))</span><br/><span class="rvts9">$g</span><br/><span class="rvts9">(%i5) H(x) := if x &lt; 0 then x^4 - 1 else 1 - x^5 $</span><br/><span class="rvts9">(%i6) plot2d (F, [u, -1, 1])$</span><br/><span class="rvts9">(%i7) plot2d ([F, G, H], [u, -1, 1], [y, -1.5, 1.5])$</span></p>
+<p class="rvps10"><img align="absbottom" alt="figures/plotting4" src="lib/plotting45.gif"/></p>
+<p class="rvps10"><img align="absbottom" alt="figures/plotting5" src="lib/plotting56.gif"/></p>
+<p class="rvps3"><span class="rvts6">Se puede representar una circunferencia como una función paramétrica de parámetro </span><span class="rvts18">t</span><span class="rvts6">. No es necesario especificar el rango del eje horizontal, pues el propio rango de </span><span class="rvts18">t</span><span class="rvts6"> determina el dominio. No obstante, ya que las longitudes de los ejes horizontal y vertical están en una proporción de 4 a 3, se utilizará la opción </span><span class="rvts18">xrange</span><span class="rvts6"> para conseguir la misma escala en ambos ejes:</span></p>
+<p class="rvps4"><span class="rvts9">(%i8) plot2d ([parametric, cos(t), sin(t), [t,-%pi,%pi],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [nticks,80]], [x, -4/3, 4/3])$</span></p>
+<p class="rvps10"><img align="absbottom" alt="figures/plotting6" src="lib/plotting67.gif"/></p>
+<p class="rvps3"><span class="rvts6">Si se repite el mismo gráfico con solo 8 puntos y se extiende el rango del parámetro para que dé dos vueltas, se tiene el dibujo de una estrella:</span></p>
+<p class="rvps4"><span class="rvts9">(%i9) plot2d ([parametric, cos(t), sin(t), [t, -%pi*2, %pi*2],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp;[nticks, 8]], [x, -2, 2], [y, -1.5, 1.5])$</span></p>
+<p class="rvps10"><img align="absbottom" alt="figures/plotting7" src="lib/plotting78.gif"/></p>
+<p class="rvps3"><span class="rvts6">Combinación del gráfico de un polinomio cúbico y de una circunferencia paramétrica:</span></p>
+<p class="rvps4"><span class="rvts9">(%i10) plot2d ([x^3+2, [parametric, cos(t), sin(t), [t, -5, 5],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp;[nticks, 80]]], [x, -3, 3])$</span></p>
+<p class="rvps10"><img align="absbottom" alt="figures/plotting8" src="lib/plotting89.gif"/></p>
+<p class="rvps3"><span class="rvts6">Ejemplo de gráfico logarítmico:</span></p>
+<p class="rvps4"><span class="rvts9">(%i11) plot2d (exp(3*s), [s, -2, 2], [logy])$</span></p>
+<p class="rvps10"><img align="absbottom" alt="figures/plotting9" src="lib/plotting910.gif"/></p>
+<p class="rvps3"><span class="rvts6">Ejemplos de gráficos de puntos, empezando por la definición de las coordenadas de cinco puntos en los dos formatos admisibles:</span></p>
+<p class="rvps4"><span class="rvts9">(%i12) xx:[10, 20, 30, 40, 50]$</span><br/><span class="rvts9">(%i13) yy:[.6, .9, 1.1, 1.3, 1.4]$</span><br/><span class="rvts9">(%i14) xy:[[10,.6], [20,.9], [30,1.1], [40,1.3], [50,1.4]]$</span></p>
+<p class="rvps3"><span class="rvts6">Representación de los puntos unidos por segmentos:</span></p>
+<p class="rvps4"><span class="rvts9">(%i15) plot2d([discrete,xx,yy])$</span></p>
+<p class="rvps10"><img align="absbottom" alt="figures/plotting10" src="lib/plotting1011.gif"/></p>
+<p class="rvps3"><span class="rvts6">Representación de los puntos aislados, ilustrando también la segunda forma de especificar las coordenadas:</span></p>
+<p class="rvps4"><span class="rvts9">(%i16) plot2d([discrete, xy], [style, points])$</span></p>
+<p class="rvps10"><img align="absbottom" alt="figures/plotting11" src="lib/plotting1112.gif"/></p>
+<p class="rvps3"><span class="rvts6">El gráfico de los puntos se puede mostrar conjuntamente con el de la función ter'ica que los predice:</span></p>
+<p class="rvps4"><span class="rvts9">(%i17) plot2d([[discrete,xy], 2*%pi*sqrt(l/980)], [l,0,50],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp;[style, [points,3,5], [lines,1,3]],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp;[legend,"experiment","theory"],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp;[xlabel,"pendulum's length (cm)"],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp;[ylabel,"period (s)"])$</span></p>
+<p class="rvps10"><img align="absbottom" alt="figures/plotting12" src="lib/plotting1213.gif"/></p>
+<p class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">plot_options</span><span class="rvts6">, que describe las opciones gráficas, junto con más ejemplos.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX250"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">xgraph_curves</span><span class="rvts18"> (list)</span></li>
+<li class="rvps3"><span class="rvts6">Dibuja el conjunto de puntos de la lista del argumento </span><span class="rvts18">list</span><span class="rvts6"> con el programa xgraph. Si el programa xgraph no está instalado, este comando producirá un error.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">El conjunto de puntos puede ser de la forma</span></p>
+<p class="rvps4"><span class="rvts9">[x0, y0, x1, y1, x2, y2, ...]</span></p>
+<p class="rvps3"><span class="rvts6">o</span></p>
+<p class="rvps4"><span class="rvts9">[[x0, y0], [x1, y1], ...]</span></p>
+<p class="rvps3"><span class="rvts6">Un conjunto de puntos también puede contener símbolos con etiquetas u otra información.</span></p>
+<p class="rvps4"><span class="rvts9">xgraph_curves ([pt_set1, pt_set2, pt_set3]);</span></p>
+<p class="rvps3"><span class="rvts6">dibuja los tres conjuntos de puntos como tres curvas.</span></p>
+<p class="rvps4"><span class="rvts9">pt_set: append (["NoLines: True", "LargePixels: true"],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[x0, y0, x1, y1, ...]);</span></p>
+<p class="rvps3"><span class="rvts6">construye el conjunto de puntos, declara que no haya segmentos rectilíneos entre ellos y que se utilicen píxeles grandes. Véase el manual de xgraph para más opciones.</span></p>
+<p class="rvps4"><span class="rvts9">pt_set: append ([concat ("\"", "x^2+y")], [x0, y0, x1, y1, ...]);</span></p>
+<p class="rvps3"><span class="rvts6">construye una etiqueta con el contenido "x^2+y" para este conjunto particular de puntos. Las comillas dobles </span><span class="rvts9">"</span><span class="rvts6"> al comienzo son las que le indican a xgraph que se trata de una etiqueta.</span></p>
+<p class="rvps4"><span class="rvts9">pt_set: append ([concat ("TitleText: Datos muestrales")], [x0, ...])$</span></p>
+<p class="rvps3"><span class="rvts6">establece el título principal del gráfico como "Datos muestrales" en lugar de "Maxima Plot".</span></p>
+<p class="rvps3"><span class="rvts6">Para hacer un gráfico de barras con columnas de 0.2 unidades de ancho y para dibujar dos diagramas diferentes de este tipo:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) xgraph_curves ([append (["BarGraph: true", "NoLines: true",</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;"BarWidth: .2"], create_list ([i - .2, i^2], i, 1, 3)),</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;append (["BarGraph: true", "NoLines: true", "BarWidth: .2"],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;create_list ([i + .2, .7*i^2], i, 1, 3))]);</span></p>
+<p class="rvps10"><img align="absbottom" alt="figures/plotting13" src="lib/plotting1314.gif"/></p>
+<p class="rvps3"><span class="rvts6">Se utiliza un fichero temporal </span><span class="rvts9">`xgraph-out'</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX251"></a>
+<span class="rvts16">Variable del sistema:</span><span class="rvts6"> </span><span class="rvts17">plot_options</span></li>
+<li class="rvps3"><span class="rvts6">Los elementos de esta lista establecen las opciones por defecto para los gráficos. Si una opción está presente en una llamada a </span><span class="rvts9">plot2d</span><span class="rvts6"> o a </span><span class="rvts9">plot3d</span><span class="rvts6">, este valor adquiere prevalencia sobre las opciones por defecto. En otro caso se utilizará el valor que tenga en </span><span class="rvts9">plot_options</span><span class="rvts6">. Las opciones por defecto se asignan mediante la función </span><span class="rvts9">set_plot_option</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Cada elemento de </span><span class="rvts9">plot_options</span><span class="rvts6"> es una lista de dos o más elementos, el primero de los cuales es el nombre de la opción, siendo los siguientes los valores de aquélla. En algunos casos el valor asignado es a su vez una lista, que puede contener varios elementos.</span></p>
+<p class="rvps3"><span class="rvts6">Las opciones gráficas que reconocen </span><span class="rvts9">plot2d</span><span class="rvts6"> y </span><span class="rvts9">plot3d</span><span class="rvts6"> son:</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Opción: </span><span class="rvts9">plot_format</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Determina qué programa gráfico se va a utilizar con </span><span class="rvts9">plot2d</span><span class="rvts6"> y </span><span class="rvts9">plot3d</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Valor: </span><span class="rvts9">gnuplot</span><span class="rvts6"> (es el valor por defecto en Windows) Gnuplot es el programa por defecto y el más avanzado. Requiere de una instalación externa de gnuplot.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Value: </span><span class="rvts9">gnuplot_pipes</span><span class="rvts6"> (es el valor por defecto en sistemas distintos de Windows) Es similar al formato </span><span class="rvts9">gnuplot</span><span class="rvts6">, excepto que la comunicación con Gnuplot se hace por medio de una tubería. Se debería utilizar para ver gráficos en pantalla; para guardar gráficos en srchivos, mejor utilizar el formato </span><span class="rvts9">gnuplot</span><span class="rvts6">.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Valor: </span><span class="rvts9">mgnuplot</span><span class="rvts6"> Mgnuplot es una interfaz para Gnuplot basada en Tk. Se incluye en la distribución de Maxima. Mgnuplot ofrece una interface gráfica de usuario rudimentaria para gnuplot, pero tiene algunas mejoras respecto de la interface propia de gnuplot. Mgnuplot requiere de una instalación externa de gnuplot y de Tcl/Tk.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Valor: </span><span class="rvts9">openmath</span><span class="rvts6"> Openmath es un programa gráfico escrito en Tcl/Tk. Este formato lo suministra el paquete Xmaxima, que se distribuye junto con Maxima; se deberá instalar Xmaxima si se quiere usar este formato. No sólo se puede utilizar Openmath desde Xmaxima, sino también desde cualquier otro interfaz gráfico para Maxima.</span></li>
+</ul>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Opción: </span><span class="rvts9">run_viewer</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Controla si el visor apropiado para la salida gráfica debe ejecutarse o no.</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Valor por defecto: </span><span class="rvts9">true</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Ejecuta el visor.</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Valor: </span><span class="rvts9">false</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">No ejecuta el visor.</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Opción: </span><span class="rvts9">y</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Rango vertical del gráfico.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">[y, - 3, 3]</span></p>
+<p class="rvps3"><span class="rvts6">Establece el rango vertical como [-3, 3].</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Opción: </span><span class="rvts9">plot_realpart</span><span class="rvts6"> Si </span><span class="rvts9">plot_realpart</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, se representará la parte real de un valor complejo </span><span class="rvts18">x</span><span class="rvts6">, lo cual equivale a representar </span><span class="rvts9">realpart(</span><span class="rvts19">x</span><span class="rvts9">)</span><span class="rvts6"> en lugar de </span><span class="rvts18">x</span><span class="rvts6">. Si vale </span><span class="rvts9">false</span><span class="rvts6">, sólo se representarán aquellos valores con parte imaginaria nula, ignorando así cualesquiera valores complejos.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">plot2d (log(x), [x, -5, 5], [plot_realpart, false]);</span><br/><span class="rvts9">plot2d (log(x), [x, -5, 5], [plot_realpart, true]);</span></p>
+<p class="rvps3"><span class="rvts6">El valor por defecto es </span><span class="rvts9">false</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Opción: </span><span class="rvts9">nticks</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">En </span><span class="rvts9">plot2d</span><span class="rvts6">, es el número inicial de puntos utilizados por el procedimiento adaptativo para la representación de funciones. También es el número de puntos a ser calculados en los gráficos paramétricos.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">[nticks, 20]</span></p>
+<p class="rvps3"><span class="rvts6">El valor por defecto para </span><span class="rvts9">nticks</span><span class="rvts6"> es 10.</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Opción: </span><span class="rvts9">adapt_depth</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Número máximo de particiones utilizado por el algoritmo adaptativo de representación gráfica.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">[adapt_depth, 5]</span></p>
+<p class="rvps3"><span class="rvts6">El valor por defecto para </span><span class="rvts9">adapt_depth</span><span class="rvts6"> es 10.</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Opción: </span><span class="rvts9">xlabel</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Etiqueta del eje horizontal en gráficos 2d.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">[xlabel, "Time in seconds"]</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Opción: </span><span class="rvts9">ylabel</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Etiqueta del eje vertical en gráficos 2d.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">[ylabel, "Temperature"]</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Opción: </span><span class="rvts9">logx</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Hace que el eje horizontal en los gráficos 2d se dibuje en la escala logarítmica. No necesita de parámetros adicionales.</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Opción: </span><span class="rvts9">logy</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Hace que el eje vertical en los gráficos 2d se dibuje en la escala logarítmica. No necesita de parámetros adicionales.</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Opción: </span><span class="rvts9">legend</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Etiquetas para las expresiones de los gráficos 2d. Si hay más expresiones que etiquetas, éstas se repetirán. Por defecto se pasarán los nombres de las expresiones o funciones, o las palabras </span><span class="rvts9">discrete1</span><span class="rvts6">, </span><span class="rvts9">discrete2</span><span class="rvts6">, ..., para gráficos de puntos.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">[legend, "Set 1", "Set 2", "Set 3"]</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Opción: </span><span class="rvts9">style</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Estilos a utilizar para las funciones o conjuntos de datos en gráficos 2d. A la palabra </span><span class="rvts9">style</span><span class="rvts6"> debe seguirle uno o más estilos. Si hay más funciones o conjuntos de datos que estilos, éstos se repetirán. Los estilos que se admiten son: </span><span class="rvts18">lines</span><span class="rvts6"> para segmentos lineales, </span><span class="rvts18">points</span><span class="rvts6"> para puntos aislados, </span><span class="rvts18">linespoints</span><span class="rvts6"> para segmentos y puntos, </span><span class="rvts18">dots</span><span class="rvts6"> para pequeños puntos aislados. Gnuplot también acepta el estilo </span><span class="rvts18">impulses</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Cada estilo puede ir encerrado en una lista con parámetros adicionales: </span><span class="rvts18">lines</span><span class="rvts6"> acepta uno o dos números: el ancho del segmento y un entero que identifica el color; </span><span class="rvts18">points</span><span class="rvts6"> acepta uno o dos parámetros, el primero es el radio de los puntos y el segundo un entero que en Gnuplot selecciona diferentes formas y colores para los puntos y que en Openmath cambia el color de éstos; </span><span class="rvts18">linesdots</span><span class="rvts6"> acepta hasta cuatro parámetros, los dos primeros son lo mismo que en </span><span class="rvts18">lines</span><span class="rvts6"> y los dos últimos son lo mismo que en </span><span class="rvts18">points</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">[style,[lines,2,3],[points,1,4]]</span></p>
+<p class="rvps3"><span class="rvts6">En Gnuplot, con este código se representaría la primera (tercera, quinta, etc.) expresión con segmentos azules de ancho 2, y la segunda (cuarta, sexta, etc.) expresión con cuadrados verdes de tama24no 1. En Openmath, la primera expresión se representaría con segmentos magenta de ancho 2, y la segunda con puntos naranja de radio 1. Nótese que </span><span class="rvts9">openmath_color(3)</span><span class="rvts6"> y </span><span class="rvts9">openmath_color(4)</span><span class="rvts6"> devuelven </span><span class="rvts9">magenta</span><span class="rvts6"> y </span><span class="rvts9">orange</span><span class="rvts6">, respectivamente.</span></p>
+<p class="rvps3"><span class="rvts6">El estilo por defecto es </span><span class="rvts18">lines</span><span class="rvts6"> de ancho 1 y diferentes colores.</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Opción: </span><span class="rvts9">grid</span><span class="rvts6"> Establece el número de puntos de la retícula a utilizar en las direcciones x e y en los gráficos de tres dimensiones.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">[grid, 50, 50]</span></p>
+<p class="rvps3"><span class="rvts6">establece la retícula en 50 por 50 puntos. El valor por defecto es 30 por 30.</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Opción: </span><span class="rvts9">transform_xy</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Permite que se realicen transformaciones en los gráficos de tres dimensiones.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">[transform_xy, false]</span></p>
+<p class="rvps3"><span class="rvts6">El valor por defecto de </span><span class="rvts9">transform_xy</span><span class="rvts6"> es </span><span class="rvts9">false</span><span class="rvts6">. Cuando vale </span><span class="rvts9">false</span><span class="rvts6">, da el resultado de</span></p>
+<p class="rvps4"><span class="rvts9">make_transform([x,y,z], f1(x,y,z), f2(x,y,z), f3(x,y,z))$</span></p>
+<p class="rvps3"><span class="rvts6">La transformación </span><span class="rvts9">polar_xy</span><span class="rvts6"> está definida en Maxima. Devuelve la misma transformación que</span></p>
+<p class="rvps4"><span class="rvts9">make_transform ([r, th, z], r*cos(th), r*sin(th), z)$</span></p>
+<p class="rvps3"><span class="rvts17">Opciones de Gnuplot:</span></p>
+<p class="rvps3"><span class="rvts6">Hay varias opciones gráficas que son específicas de gnuplot. Algunas de ellas son comandos propios de gnuplot que se especifican como cadenas alfanuméricas. Consúltese la documentación de Gnuplot para más detalles.</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Opción: </span><span class="rvts9">gnuplot_term</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Establece el terminal de salida para Gnuplot.</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Valor por defecto: </span><span class="rvts9">default</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Gnuplot muestra el gráfico en una ventana gráfica.</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Valor: </span><span class="rvts9">dumb</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Gnuplot muestra el gráfico en la consola de Maxima en estilo ASCII artístico.</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Valor: </span><span class="rvts9">ps</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Gnuplot genera código en lenguaje PostScript. Si a la opción </span><span class="rvts9">gnuplot_out_file</span><span class="rvts6"> se le da el valor </span><span class="rvts18">filename</span><span class="rvts6">, Gnuplot escribe el código PostScript en </span><span class="rvts18">filename</span><span class="rvts6">. En caso contrario, se guarda en el archivo </span><span class="rvts9">maxplot.ps</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Valor: Cualquier otro terminal admitido por Gnuplot.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Gnuplot puede generar gráficos en otros muchos formatos, tales como png, jpeg, svg etc. Para crear gráficos en cualquera de estos formatos, a la opción </span><span class="rvts9">gnuplot_term</span><span class="rvts6"> se le puede asignar cualquiera de los terminales admitidos por Gnuplot, bien por su nombre (símbolo) bien con la especificación completa del terminal (cadena). Por ejemplo, </span><span class="rvts9">[gnuplot_term,png]</span><span class="rvts6"> guarda el gráfico en formato PNG (Portable Network Graphics), mientras que </span><span class="rvts9">[gnuplot_term,"png size 1000,1000"]</span><span class="rvts6"> lo hace con dimensiones 1000x1000 píxeles. Si a la opción </span><span class="rvts9">gnuplot_out_file</span><span class="rvts6"> se le da el valor </span><span class="rvts18">filename</span><span class="rvts6">, Gnuplot escribe el código PostScript en </span><span class="rvts18">filename</span><span class="rvts6">. En caso contrario, se guarda en el archivo </span><span class="rvts9">maxplot.</span><span class="rvts19">term</span><span class="rvts6">, siendo </span><span class="rvts18">term</span><span class="rvts6"> el nombre del terminal.</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Opción: </span><span class="rvts9">gnuplot_out_file</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Guarda el gráfico generado por Gnuplot en un archivo.</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Valor por defecto: </span><span class="rvts9">false</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">No se especifica nombre de fichero.</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Valor: </span><span class="rvts18">filename</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Con </span><span class="rvts9">[gnuplot_out_file, "myplot.ps"]</span><span class="rvts6"> se envía código PostScript al archivo </span><span class="rvts9">myplot.ps</span><span class="rvts6"> cuando se utiliza conjuntamente con el terminal PostScript de Gnuplot.</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Opción: </span><span class="rvts9">gnuplot_pm3d</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Controla la utilización del modo PM3D, que tiene capacidades avanzadas para gráficos tridimensionales. PM3D sólo está disponible en versiones de Gnuplot posteriores a la 3.7. El valor por defecto de </span><span class="rvts9">gnuplot_pm3d</span><span class="rvts6"> es </span><span class="rvts9">false</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">[gnuplot_pm3d, true]</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Opción: </span><span class="rvts9">gnuplot_preamble</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Introduce instrucciones de gnuplot antes de que se haga el dibujo. Puede utilizarse cualquier comando válido de gnuplot. Si interesa introducir varios comandos se separarán con punto y coma. El ejemplo que se muestra produce un gráfico en escala logarítmica. El valor por defecto de </span><span class="rvts9">gnuplot_preamble</span><span class="rvts6"> es la cadena vacía </span><span class="rvts9">""</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">[gnuplot_preamble, "set log y"]</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Opción: </span><span class="rvts9">gnuplot_curve_titles</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Controla los títulos dados a la clave del gráfico. El valor por defecto es </span><span class="rvts9">[default]</span><span class="rvts6">, el cual establece automáticamente los títulos para cada curva representada. Si no es </span><span class="rvts9">[default]</span><span class="rvts6">, </span><span class="rvts9">gnuplot_curve_titles</span><span class="rvts6"> debe contener una lista de cadenas, cada una de las cuales es </span><span class="rvts9">"title '</span><span class="rvts19">title_string</span><span class="rvts9">'"</span><span class="rvts6">. (Para desactivar la clave del gráfico, añádase </span><span class="rvts9">"set nokey"</span><span class="rvts6"> a </span><span class="rvts9">gnuplot_preamble</span><span class="rvts6">.)</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">[gnuplot_curve_titles, ["title 'My first function'", "title 'My second function'"]]</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Opción: </span><span class="rvts9">gnuplot_curve_styles</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Es una lista de cadenas que controlan el aspecto de las curvas, como el color, el ancho, la discontinuidad, etc., y que deben enviarse al comando </span><span class="rvts9">plot</span><span class="rvts6"> de gnuplot. El valor por defecto es </span><span class="rvts9">["with lines 3", "with lines 1", "with lines 2", "with lines 5", "with lines 4", "with lines 6", "with lines 7"]</span><span class="rvts6">, que realiza un ciclo sobre un conjunto de colores diferentes. Consúltese la documentación de gnuplot sobre </span><span class="rvts9">plot</span><span class="rvts6"> para más información.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">[gnuplot_curve_styles, ["with lines 7", "with lines 2"]]</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Opción: </span><span class="rvts9">gnuplot_default_term_command</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Comando de gnuplot para establecer el tipo de terminal por defecto. El valor por defecto es </span><span class="rvts9">set term windows "Verdana" 15</span><span class="rvts6"> en sistemas Windows, y </span><span class="rvts9">set term x11 font "Helvetica,16"</span><span class="rvts6"> en sistemas X11.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">[gnuplot_default_term_command, "set term x11"]</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Opción: </span><span class="rvts9">gnuplot_dumb_term_command</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Comando de gnuplot para establecer el tipo de terminal para el terminal oculto. El valor por defecto es </span><span class="rvts9">"set term dumb 79 22"</span><span class="rvts6">, que da una salida de texto de 79 por 22 caracteres.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">[gnuplot_dumb_term_command, "set term dumb 132 50"]</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Opción: </span><span class="rvts9">gnuplot_ps_term_command</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Comando de gnuplot para establecer el tipo de terminal para el terminal PostScript. El valor por defecto es </span><span class="rvts9">"set size 1.5, 1.5;set term postscript eps enhanced color solid 24"</span><span class="rvts6">, que establece un tamaño de 1.5 veces el valor por defecto de gnuplot, junto con un tamaño de fuente de 24, entre otras cosas. Consúltese la documentación de gnuplot para más información sobre </span><span class="rvts9">set term postscript</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps3"><span class="rvts6">Todas las figuras de los ejemplos de la función </span><span class="rvts18">plot2d</span><span class="rvts6"> de este manual se obtuvieron a partir de archivos Postscript generados asignándole a </span><span class="rvts9">gnuplot_ps_term_command</span><span class="rvts6"> el valor</span></p>
+<p class="rvps4"><span class="rvts9">[gnuplot_ps_term_command,"set size 1.3, 1.3;\</span><br/><span class="rvts9"> set term postscript eps color solid lw 2.5 30"]</span></p>
+<p class="rvps3"><span class="rvts17">Ejemplos:</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Almacena un gráfico de </span><span class="rvts9">sin(x)</span><span class="rvts6"> en el fichero </span><span class="rvts9">sin.eps</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) plot2d (sin(x), [x, 0, 2*%pi], [gnuplot_term, ps],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[gnuplot_out_file, "sin.eps"])$</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Utiliza la opción y para saltarse las singularidades, así como la opción </span><span class="rvts9">gnuplot_preamble</span><span class="rvts6"> para colocar la clave en la parte inferior del dibujo.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i2) plot2d ([gamma(x), 1/gamma(x)], [x, -4.5, 5], [y, -10, 10],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [gnuplot_preamble, "set key bottom"])$</span></p>
+<p class="rvps10"><img align="absbottom" alt="figures/plotting14" src="lib/plotting1415.gif"/></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Utiliza un </span><span class="rvts9">gnuplot_preamble</span><span class="rvts6"> bastante complicado a fin de producir etiquetas en el eje x. (Nótese que la cadena de </span><span class="rvts9">gnuplot_preamble</span><span class="rvts6"> debe introducirse sin saltos de línea.)</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i3) my_preamble: "set xzeroaxis; set xtics ('-2pi' -6.283, \</span><br/><span class="rvts9">'-3pi/2' -4.712, '-pi' -3.1415, '-pi/2' -1.5708, '0' 0, \</span><br/><span class="rvts9">'pi/2' 1.5708, 'pi' 3.1415,'3pi/2' 4.712, '2pi' 6.283)"$</span><br/><span class="rvts9">(%i4) plot2d([cos(x), sin(x), tan(x), cot(x)],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; [x, -2*%pi, 2.1*%pi], [y, -2, 2],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; [gnuplot_preamble, my_preamble]);</span></p>
+<p class="rvps10"><img align="absbottom" alt="figures/plotting15" src="lib/plotting1516.gif"/></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Utiliza un </span><span class="rvts9">gnuplot_preamble</span><span class="rvts6"> bastante complicado a fin de producir etiquetas en el eje x, produciendo una salida PostScript que aprovecha el formateo avanzado de texto disponible en gnuplot. (Nótese que la cadena de </span><span class="rvts9">gnuplot_preamble</span><span class="rvts6"> debe introducirse sin saltos de línea.)</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i5) my_preamble: "set xzeroaxis; set xtics ('-2{/Symbol p}' \</span><br/><span class="rvts9">-6.283, '-3{/Symbol p}/2' -4.712, '-{/Symbol p}' -3.1415, \</span><br/><span class="rvts9">'-{/Symbol p}/2' -1.5708, '0' 0,'{/Symbol p}/2' 1.5708, \</span><br/><span class="rvts9">'{/Symbol p}' 3.1415,'3{/Symbol p}/2' 4.712, '2{/Symbol p}' \</span><br/><span class="rvts9">6.283)"$</span><br/><span class="rvts9">(%i6) plot2d ([cos(x), sin(x), tan(x)], [x, -2*%pi, 2*%pi],</span><br/><span class="rvts9"> &nbsp; &nbsp;[y, -2, 2], [gnuplot_preamble, my_preamble],</span><br/><span class="rvts9"> &nbsp; &nbsp;[gnuplot_term, ps], [gnuplot_out_file, "trig.eps"]);</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Un gráfico tridimensional utilizando el terminal pm3d de gnuplot.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i7) plot3d (atan (-x^2 + y^3/4), [x, -4, 4], [y, -4, 4],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp;[grid, 50, 50], [gnuplot_pm3d, true])$</span></p>
+<p class="rvps10"><img align="absbottom" alt="figures/plotting16" src="lib/plotting1617.gif"/></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Un gráfico tridimensional sin malla y con contornos proyectados sobre el plano inferior.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i8) my_preamble: "set pm3d at s;unset surface;set contour;\</span><br/><span class="rvts9">set cntrparam levels 20;unset key"$</span><br/><span class="rvts9">(%i9) plot3d(atan(-x^2 + y^3/4), [x, -4, 4], [y, -4, 4],</span><br/><span class="rvts9"> &nbsp; &nbsp;[grid, 50, 50], [gnuplot_pm3d, true],</span><br/><span class="rvts9"> &nbsp; &nbsp;[gnuplot_preamble, my_preamble])$</span></p>
+<p class="rvps10"><img align="absbottom" alt="figures/plotting17" src="lib/plotting1718.gif"/></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Un gráfico en el que el eje z sólo se representa por el color. (Nótese que la cadena de </span><span class="rvts9">gnuplot_preamble</span><span class="rvts6"> debe introducirse sin saltos de línea.)</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i10) plot3d (cos (-x^2 + y^3/4), [x, -4, 4], [y, -4, 4],</span><br/><span class="rvts9"> &nbsp; &nbsp;[gnuplot_preamble, "set view map; unset surface"],</span><br/><span class="rvts9"> &nbsp; &nbsp;[gnuplot_pm3d, true], [grid, 150, 150])$</span></p>
+<p class="rvps10"><img align="absbottom" alt="figures/plotting18" src="lib/plotting1819.gif"/></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX252"></a>
+<span class="rvts16">Function:</span><span class="rvts6"> </span><span class="rvts17">plot3d</span><span class="rvts18"> ([expr_1, expr_2, expr_3], x_range, y_range, ..., options, ...)</span></li>
+<li><a name="IDX253"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">plot3d</span><span class="rvts18"> (expr, x_range, y_range, ..., options, ...)</span></li>
+<li><a name="IDX254"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">plot3d</span><span class="rvts18"> (name, x_range, y_range, ..., options, ...)</span></li>
+<li><a name="IDX255"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">plot3d</span><span class="rvts18"> ([expr_1, expr_2, expr_3], x_rge, y_rge)</span></li>
+<li><a name="IDX256"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">plot3d</span><span class="rvts18"> ([name_1, name_2, name_3], x_range, y_range, ..., options, ...)</span></li>
+<li class="rvps3"><span class="rvts6">Representa gráficamente una o tres expresiones como funciones de dos variables.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) plot3d (2^(-u^2 + v^2), [u, -3, 3], [v, -2, 2]);</span></p>
+<p class="rvps10"><img align="absbottom" alt="figures/plotting19" src="lib/plotting1920.gif"/></p>
+<p class="rvps3"><span class="rvts6">dibuja </span><span class="rvts9">z = 2^(-u^2+v^2)</span><span class="rvts6"> con </span><span class="rvts9">u</span><span class="rvts6"> y </span><span class="rvts9">v</span><span class="rvts6"> variando en [-3,3] y [-2,2] respectivamente, y con </span><span class="rvts18">u</span><span class="rvts6"> sobre el eje x, y con </span><span class="rvts9">v</span><span class="rvts6"> sobre el eje y.</span></p>
+<p class="rvps3"><span class="rvts6">El mismo gráfico se puede dibujar usando openmath (si Xmaxima fué instalado):</span></p>
+<p class="rvps4"><span class="rvts9">(%i2) &nbsp;plot3d (2^(-u^2 + v^2), [u, -3, 3], [v, -2, 2],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [plot_format, openmath]);</span></p>
+<p class="rvps10"><img align="absbottom" alt="figures/plotting25" src="lib/plotting2526.gif"/></p>
+<p class="rvps3"><span class="rvts6">en este caso el ratón se puede usar para rotar el gráfico y ver la superficie desde diferentes lados.</span></p>
+<p class="rvps3"><span class="rvts6">Un ejemplo del tercer patrón de argumentos es</span></p>
+<p class="rvps4"><span class="rvts9">(%i3) plot3d ([cos(x)*(3 + y*cos(x/2)), sin(x)*(3 + y*cos(x/2)),</span><br/><span class="rvts9"> &nbsp; y*sin(x/2)], [x, -%pi, %pi], [y, -1, 1], ['grid, 50, 15]);</span></p>
+<p class="rvps10"><img align="absbottom" alt="figures/plotting20" src="lib/plotting2021.gif"/></p>
+<p class="rvps3"><span class="rvts6">que dibuja una banda de Moebius, parametrizada por las tres expresiones dadas como primer argumento a </span><span class="rvts9">plot3d</span><span class="rvts6">. Un argumento opcional </span><span class="rvts9">['grid, 50, 15]</span><span class="rvts6"> da el número de intervalos en las direcciones x e y, respectivamente.</span></p>
+<p class="rvps3"><span class="rvts6">Cuando la función a representar ha sido definida en Maxima mediante </span><span class="rvts9">:=</span><span class="rvts6"> o </span><span class="rvts9">define</span><span class="rvts6">, o en Lisp por DEFUN o DEFMFUN, entonces se podrá especificar por su nombre. Las funciones definidas a nivel de LISP por DEFMSPEC, las funciones de simplificación, junto con muchas otras funciones, no pueden especificarse directamente por su nombre.</span></p>
+<p class="rvps3"><span class="rvts6">Este ejemplo muestra un gráfico de la parte real de </span><span class="rvts9">z^1/3</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts9">(%i4) plot3d (r^.33*cos(th/3), [r, 0, 1], [th, 0, 6*%pi],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;['grid, 12, 80], ['transform_xy, polar_to_xy]);</span></p>
+<p class="rvps10"><img align="absbottom" alt="figures/plotting21" src="lib/plotting2122.gif"/></p>
+<p class="rvps3"><span class="rvts6">Otros ejemplos son la botella de Klein:</span></p>
+<p class="rvps4"><span class="rvts9">(%i5) expr_1: 5*cos(x)*(cos(x/2)*cos(y) + sin(x/2)*sin(2*y)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;+ 3.0) - 10.0$</span><br/><span class="rvts9">(%i6) expr_2: -5*sin(x)*(cos(x/2)*cos(y) + sin(x/2)*sin(2*y)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;+ 3.0)$</span><br/><span class="rvts9">(%i7) expr_3: 5*(-sin(x/2)*cos(y) + cos(x/2)*sin(2*y))$</span><br/><span class="rvts9">(%i8) plot3d ([expr_1, expr_2, expr_3], [x, -%pi, %pi],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[y, -%pi, %pi], ['grid, 40, 40]);</span></p>
+<p class="rvps10"><img align="absbottom" alt="figures/plotting22" src="lib/plotting2223.gif"/></p>
+<p class="rvps3"><span class="rvts6">y un toro:</span></p>
+<p class="rvps4"><span class="rvts9">(%i9) expr_1: cos(y)*(10.0+6*cos(x))$</span><br/><span class="rvts9">(%i10) expr_2: sin(y)*(10.0+6*cos(x))$</span><br/><span class="rvts9">(%i11) expr_3: -6*sin(x)$</span><br/><span class="rvts9">(%i12) plot3d ([expr_1, expr_2, expr_3], [x, 0, 2*%pi],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; [y, 0, 2*%pi], ['grid, 40, 40]);</span></p>
+<p class="rvps10"><img align="absbottom" alt="figures/plotting23" src="lib/plotting2324.gif"/></p>
+<p class="rvps3"><span class="rvts6">En ocasiones puede ser necesario definir una función para representarla. Todos los argumentos de </span><span class="rvts9">plot3d</span><span class="rvts6"> se evalúan, de manera que puede ser difícil escribir una expresión que haga lo que el usuario realmente quiere; en tales casos facilita las cosas definir previamente la función.</span></p>
+<p class="rvps4"><span class="rvts9">(%i13) M: matrix([1, 2, 3, 4], [1, 2, 3, 2], [1, 2, 3, 4],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; [1, 2, 3, 3])$</span><br/><span class="rvts9">(%i14) f(x, y) := float (M [?round(x), ?round(y)])$</span><br/><span class="rvts9">(%i15) plot3d (f, [x, 1, 4], [y, 1, 4], ['grid, 4, 4])$</span></p>
+<p class="rvps10"><img align="absbottom" alt="figures/plotting24" src="lib/plotting2425.gif"/></p>
+<p class="rvps3"><span class="rvts6">Véase </span><span class="rvts9">plot_options</span><span class="rvts6"> para más ejemplos.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX257"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">make_transform</span><span class="rvts18"> (vars, fx, fy, fz)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve una función apropiada para la función de transformación de </span><span class="rvts9">plot3d</span><span class="rvts6">. Debe usarse con la opción gráfica </span><span class="rvts9">transform_xy</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">make_transform ([r, th, z], r*cos(th), r*sin(th), z)$</span></p>
+<p class="rvps3"><span class="rvts6">es una transformación para pasar a coordenadas polares.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX258"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">set_plot_option</span><span class="rvts18"> (option)</span></li>
+<li class="rvps3"><span class="rvts6">Asigna un valor a una de las variables globales que controlan los gráficos. El argumento </span><span class="rvts18">option</span><span class="rvts6"> se especifica como una lista de dos o más elementos, en la que el primero es el nombre de una de las opciones de la lista </span><span class="rvts9">plot_options</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">set_plot_option</span><span class="rvts6"> evalúa sus argumentos y devuelve </span><span class="rvts9">plot_options</span><span class="rvts6"> tal como queda después de la actualización.</span></p>
+<p class="rvps3"><span class="rvts6">Véanse también </span><span class="rvts9">plot_options</span><span class="rvts6">, </span><span class="rvts9">plot2d</span><span class="rvts6"> y </span><span class="rvts9">plot3d</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps3"><span class="rvts6">Se modifican los valores de </span><span class="rvts9">grid</span><span class="rvts6"> y </span><span class="rvts9">x</span><span class="rvts6">. Si a un nombre de opción de </span><span class="rvts9">plot_options</span><span class="rvts6"> tiene ya un valor asignado, hacerlo preceder de un apóstrofo para evitar su evaluación.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) set_plot_option ([grid, 30, 40]);</span><br/><span class="rvts9">(%o1) [[x, - 1.755559702014E+305, 1.755559702014E+305], </span><br/><span class="rvts9">[y, - 1.755559702014E+305, 1.755559702014E+305], [t, - 3, 3], </span><br/><span class="rvts9">[grid, 30, 40], [transform_xy, false], [run_viewer, true], </span><br/><span class="rvts9">[plot_format, gnuplot], [gnuplot_term, default], </span><br/><span class="rvts9">[gnuplot_out_file, false], [nticks, 10], [adapt_depth, 10], </span><br/><span class="rvts9">[gnuplot_pm3d, false], [gnuplot_preamble, ], </span><br/><span class="rvts9">[gnuplot_curve_titles, [default]], </span><br/><span class="rvts9">[gnuplot_curve_styles, [with lines 3, with lines 1, </span><br/><span class="rvts9">with lines 2, with lines 5, with lines 4, with lines 6, </span><br/><span class="rvts9">with lines 7]], [gnuplot_default_term_command, ], </span><br/><span class="rvts9">[gnuplot_dumb_term_command, set term dumb 79 22], </span><br/><span class="rvts9">[gnuplot_ps_term_command, set size 1.5, 1.5;set term postscript #</span><br/><span class="rvts9">eps enhanced color solid 24]]</span><br/><span class="rvts9">(%i2) x: 42;</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;42</span><br/><span class="rvts9">(%i3) set_plot_option (['x, -100, 100]);</span><br/><span class="rvts9">(%o3) [[x, - 100.0, 100.0], [y, - 1.755559702014E+305, </span><br/><span class="rvts9">1.755559702014E+305], [t, - 3, 3], [grid, 30, 40], </span><br/><span class="rvts9">[transform_xy, false], [run_viewer, true], </span><br/><span class="rvts9">[plot_format, gnuplot], [gnuplot_term, default], </span><br/><span class="rvts9">[gnuplot_out_file, false], [nticks, 10], [adapt_depth, 10], </span><br/><span class="rvts9">[gnuplot_pm3d, false], [gnuplot_preamble, ], </span><br/><span class="rvts9">[gnuplot_curve_titles, [default]], </span><br/><span class="rvts9">[gnuplot_curve_styles, [with lines 3, with lines 1, </span><br/><span class="rvts9">with lines 2, with lines 5, with lines 4, with lines 6, </span><br/><span class="rvts9">with lines 7]], [gnuplot_default_term_command, ], </span><br/><span class="rvts9">[gnuplot_dumb_term_command, set term dumb 79 22], </span><br/><span class="rvts9">[gnuplot_ps_term_command, set size 1.5, 1.5;set term postscript #</span><br/><span class="rvts9">eps enhanced color solid 24]]</span></p>
+<p class="rvps3"><span class="rvts17">Funciones para trabajar con el formato gnuplot_pipes:</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX259"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">gnuplot_start</span><span class="rvts18"> ()</span></li>
+<li class="rvps3"><span class="rvts6">Inicializa una tubería hacia Gnuplot, con el fin de ser utilizada para utilizar el formato </span><span class="rvts9">gnuplot_pipes</span><span class="rvts6">. No es necesario inicializarla manualmente antes de hacer gráficos.</span></li>
+<li><a name="IDX260"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">gnuplot_close</span><span class="rvts18"> ()</span></li>
+<li class="rvps3"><span class="rvts6">Cierra la tubería hacia Gnuplot que haya sido utilizada para hacer gráficos.</span></li>
+<li><a name="IDX261"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">gnuplot_restart</span><span class="rvts18"> ()</span></li>
+<li class="rvps3"><span class="rvts6">Cierra la tubería hacia Gnuplot que haya sido utilizada para hacer gráficos e inicializa una nueva.</span></li>
+<li><a name="IDX262"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">gnuplot_replot</span><span class="rvts18"> ()</span></li>
+<li><a name="IDX263"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">gnuplot_replot</span><span class="rvts18"> (s)</span></li>
+<li class="rvps3"><span class="rvts6">Actualiza la ventana de Gnuplot. Si </span><span class="rvts9">gnuplot_replot</span><span class="rvts6"> es invocada con un comando de Gnuplot en la cadena </span><span class="rvts18">s</span><span class="rvts6">, entonces </span><span class="rvts18">s</span><span class="rvts6"> es enviada a Gnuplot antes de redibujar la ventana.</span></li>
+<li><a name="IDX264"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">gnuplot_reset</span><span class="rvts18"> ()</span></li>
+<li class="rvps3"><span class="rvts6">Resetea Gnuplot cuando se utiliza el formato </span><span class="rvts9">gnuplot_pipes</span><span class="rvts6">. Para actualizar la ventana de Gnuplot invóquese a </span><span class="rvts9">gnuplot_replot</span><span class="rvts6"> después de </span><span class="rvts9">gnuplot_reset</span><span class="rvts6">.</span></li>
+<hr style="height: 6px;"/></li>
+</ul>
+<div><table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparagrficos.html#SEC32"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_9.html#SEC34"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps3"><span class="rvts10">This document was generated by </span><span class="rvts11">Robert Dodier</span><span class="rvts10"> on </span><span class="rvts11">agosto, 25 2007</span><span class="rvts10"> using </span><a class="rvts12" href="http://texi2html.cvshome.org/">texi2html 1.76</a><span class="rvts10">.</span></p>
+<p></p>
+<p class="rvps6"><span class="rvts13">Created with the Personal Edition of HelpNDoc: </span><a class="rvts14" href="http://www.helpndoc.com/feature-tour">Easily create Web Help sites</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				http://maxima.sourceforge.net</div>
+		</div>
+	</body>
+	
+</html>
+

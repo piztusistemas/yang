@@ -1,0 +1,145 @@
+﻿<html>
+	
+<head>
+	<title>Introducci&oacute;n a Maxima</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 3.9.1.648">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Maxima.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("IntroduccinaMaxima");
+			}
+		});
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>Introducci&oacute;n a Maxima</h1>
+				
+				</div>
+			<div id="topic_header_nav">
+				<a href="Deteccineinformedefallos.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<div><a name="INTRODUCCI_00F3N-A-MAXIMA"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_2.html#SEC2"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[ &lt;&lt; ]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_2.html#SEC2"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h1 class="rvps2"><span class="rvts0"><span class="rvts8">1. Introducción a Maxima</span></span></h1>
+<p class="rvps3"><span class="rvts6">Se puede iniciar Maxima con el comando "maxima". Maxima desplegará alguna información importante acerca de la versión que se está usando y un prompt. Cada comando que vaya a ser ejecutado por Maxima debe terminar con un punto y coma. Para finalizar una sesión en Maxima se emplea el comando "quit();". A continuación se presenta un breve ejemplo de sesión:</span></p>
+<p class="rvps4"><span class="rvts9">[wfs@chromium]$ maxima</span><br/><span class="rvts9">Maxima 5.9.1 http://maxima.sourceforge.net</span><br/><span class="rvts9">Using Lisp CMU Common Lisp 19a</span><br/><span class="rvts9">Distributed under the GNU Public License. See the file COPYING.</span><br/><span class="rvts9">Dedicated to the memory of William Schelter.</span><br/><span class="rvts9">This is a development version of Maxima. The function bug_report()</span><br/><span class="rvts9">provides bug reporting information.</span><br/><span class="rvts9">(%i1) factor(10!);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;8 &nbsp;4 &nbsp;2</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp;3 &nbsp;5 &nbsp;7</span><br/><span class="rvts9">(%i2) expand ((x + y)^6);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; 6 &nbsp; &nbsp; &nbsp; &nbsp;5 &nbsp; &nbsp; &nbsp; 2 &nbsp;4 &nbsp; &nbsp; &nbsp; 3 &nbsp;3 &nbsp; &nbsp; &nbsp; 4 &nbsp;2 &nbsp; &nbsp; &nbsp;5 &nbsp; &nbsp; &nbsp;6</span><br/><span class="rvts9">(%o2) y &nbsp;+ 6 x y &nbsp;+ 15 x &nbsp;y &nbsp;+ 20 x &nbsp;y &nbsp;+ 15 x &nbsp;y &nbsp;+ 6 x &nbsp;y + x</span><br/><span class="rvts9">(%i3) factor (x^6 - 1);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; (x - 1) (x + 1) (x &nbsp;- x + 1) (x &nbsp;+ x + 1)</span><br/><span class="rvts9">(%i4) quit();</span><br/><span class="rvts9">[wfs@chromium]$</span></p>
+<p class="rvps3"><span class="rvts6">Maxima puede buscar en las páginas info. La instrucción </span><span class="rvts9">describe</span><span class="rvts6"> mostrará el comando o comandos que contengan una cierta cadena. La interrogación </span><span class="rvts9">?</span><span class="rvts6"> (búsqueda exacta) y la doble interrogación </span><span class="rvts9">??</span><span class="rvts6"> (búsqueda aproximada) son abreviaturas de la instrucción </span><span class="rvts9">describe</span><span class="rvts6">:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) ?? integ</span><br/><span class="rvts9"> 0: Functions and Variables for Elliptic Integrals</span><br/><span class="rvts9"> 1: Functions and Variables for Integration</span><br/><span class="rvts9"> 2: Introduction to Elliptic Functions and Integrals</span><br/><span class="rvts9"> 3: Introduction to Integration</span><br/><span class="rvts9"> 4: askinteger &nbsp;(Functions and Variables for Simplification)</span><br/><span class="rvts9"> 5: integerp &nbsp;(Functions and Variables for Miscellaneous Options)</span><br/><span class="rvts9"> 6: integer_partitions &nbsp;(Functions and Variables for Sets)</span><br/><span class="rvts9"> 7: integrate &nbsp;(Functions and Variables for Integration)</span><br/><span class="rvts9"> 8: integrate_use_rootsof &nbsp;(Functions and Variables for Integration)</span><br/><span class="rvts9"> 9: integration_constant_counter &nbsp;(Functions and Variables for</span><br/><span class="rvts9"> &nbsp; &nbsp;Integration)</span><br/><span class="rvts9"> 10: nonnegintegerp &nbsp;(Functions and Variables for linearalgebra)</span><br/><span class="rvts9">Enter space-separated numbers, `all' or `none': 5 4</span><br/><span class="rvts9"> -- Function: integerp (&lt;expr&gt;)</span><br/><span class="rvts9"> &nbsp; &nbsp; Returns `true' if &lt;expr&gt; is a literal numeric integer, otherwise</span><br/><span class="rvts9"> &nbsp; &nbsp; `false'.</span><br/><span class="rvts9"> &nbsp; &nbsp; `integerp' returns false if its argument is a symbol, even if the</span><br/><span class="rvts9"> &nbsp; &nbsp; argument is declared integer.</span><br/><span class="rvts9"> &nbsp; &nbsp; Examples:</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(%i1) integerp (0);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; true</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(%i2) integerp (1);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; true</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(%i3) integerp (-17);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; true</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(%i4) integerp (0.0);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; false</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(%i5) integerp (1.0);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; false</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(%i6) integerp (%pi);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(%o6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; false</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(%i7) integerp (n);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(%o7) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; false</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(%i8) declare (n, integer);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(%o8) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; done</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(%i9) integerp (n);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(%o9) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; false</span><br/><span class="rvts9"> -- Function: askinteger (&lt;expr&gt;, integer)</span><br/><span class="rvts9"> -- Function: askinteger (&lt;expr&gt;)</span><br/><span class="rvts9"> -- Function: askinteger (&lt;expr&gt;, even)</span><br/><span class="rvts9"> -- Function: askinteger (&lt;expr&gt;, odd)</span><br/><span class="rvts9"> &nbsp; &nbsp; `askinteger (&lt;expr&gt;, integer)' attempts to determine from the</span><br/><span class="rvts9"> &nbsp; &nbsp; `assume' database whether &lt;expr&gt; is an integer. &nbsp;`askinteger'</span><br/><span class="rvts9"> &nbsp; &nbsp; prompts the user if it cannot tell otherwise, and attempt to</span><br/><span class="rvts9"> &nbsp; &nbsp; install the information in the database if possible. &nbsp;`askinteger</span><br/><span class="rvts9"> &nbsp; &nbsp; (&lt;expr&gt;)' is equivalent to `askinteger (&lt;expr&gt;, integer)'.</span><br/><span class="rvts9"> &nbsp; &nbsp; `askinteger (&lt;expr&gt;, even)' and `askinteger (&lt;expr&gt;, odd)'</span><br/><span class="rvts9"> &nbsp; &nbsp; likewise attempt to determine if &lt;expr&gt; is an even integer or odd</span><br/><span class="rvts9"> &nbsp; &nbsp; integer, respectively.</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;true</span></p>
+<p class="rvps3"><span class="rvts6">Para usar un resultado de forma posterior, usted puede asignar dicho resultado a una variable o referirse a él por medio de la etiqueta asociada (%i* o %o*). Adicionalmente puede usar </span><span class="rvts9">%</span><span class="rvts6"> para referirse al último resultado obtenido.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) u: expand ((x + y)^6);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; 6 &nbsp; &nbsp; &nbsp; &nbsp;5 &nbsp; &nbsp; &nbsp; 2 &nbsp;4 &nbsp; &nbsp; &nbsp; 3 &nbsp;3 &nbsp; &nbsp; &nbsp; 4 &nbsp;2 &nbsp; &nbsp; &nbsp;5 &nbsp; &nbsp; &nbsp;6</span><br/><span class="rvts9">(%o1) y &nbsp;+ 6 x y &nbsp;+ 15 x &nbsp;y &nbsp;+ 20 x &nbsp;y &nbsp;+ 15 x &nbsp;y &nbsp;+ 6 x &nbsp;y + x</span><br/><span class="rvts9">(%i2) diff (u, x);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; 5 &nbsp; &nbsp; &nbsp; &nbsp; 4 &nbsp; &nbsp; &nbsp; 2 &nbsp;3 &nbsp; &nbsp; &nbsp; 3 &nbsp;2 &nbsp; &nbsp; &nbsp; 4 &nbsp; &nbsp; &nbsp; &nbsp;5</span><br/><span class="rvts9">(%o2) 6 y &nbsp;+ 30 x y &nbsp;+ 60 x &nbsp;y &nbsp;+ 60 x &nbsp;y &nbsp;+ 30 x &nbsp;y + 6 x</span><br/><span class="rvts9">(%i3) factor (%o2);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;5</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;6 (y + x)</span></p>
+<p class="rvps3"><span class="rvts6">Maxima manipula sin ningún problema números complejos y constantes numéricas:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) cos(%pi);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- 1</span><br/><span class="rvts9">(%i2) exp(%i*%pi);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- 1</span></p>
+<p class="rvps3"><span class="rvts6">Maxima puede hacer derivadas e integrales:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) u: expand ((x + y)^6);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; 6 &nbsp; &nbsp; &nbsp; &nbsp;5 &nbsp; &nbsp; &nbsp; 2 &nbsp;4 &nbsp; &nbsp; &nbsp; 3 &nbsp;3 &nbsp; &nbsp; &nbsp; 4 &nbsp;2 &nbsp; &nbsp; &nbsp;5 &nbsp; &nbsp; &nbsp;6</span><br/><span class="rvts9">(%o1) y &nbsp;+ 6 x y &nbsp;+ 15 x &nbsp;y &nbsp;+ 20 x &nbsp;y &nbsp;+ 15 x &nbsp;y &nbsp;+ 6 x &nbsp;y + x</span><br/><span class="rvts9">(%i2) diff (%, x);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; 5 &nbsp; &nbsp; &nbsp; &nbsp; 4 &nbsp; &nbsp; &nbsp; 2 &nbsp;3 &nbsp; &nbsp; &nbsp; 3 &nbsp;2 &nbsp; &nbsp; &nbsp; 4 &nbsp; &nbsp; &nbsp; &nbsp;5</span><br/><span class="rvts9">(%o2) 6 y &nbsp;+ 30 x y &nbsp;+ 60 x &nbsp;y &nbsp;+ 60 x &nbsp;y &nbsp;+ 30 x &nbsp;y + 6 x</span><br/><span class="rvts9">(%i3) integrate (1/(1 + x^3), x);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 x - 1</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;atan(-------)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; log(x &nbsp;- x + 1) &nbsp; &nbsp; &nbsp; &nbsp;sqrt(3) &nbsp; &nbsp;log(x + 1)</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp;- --------------- + ------------- + ----------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;6 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sqrt(3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3</span></p>
+<p class="rvps3"><span class="rvts6">Maxima puede resolver sistemas de ecuaciones lineales y cúbicas:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) linsolve ([3*x + 4*y = 7, 2*x + a*y = 13], [x, y]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;7 a - 52 &nbsp; &nbsp; &nbsp; &nbsp;25</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[x = --------, y = -------]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3 a - 8 &nbsp; &nbsp; &nbsp; 3 a - 8</span><br/><span class="rvts9">(%i2) solve (x^3 - 3*x^2 + 5*x = 15, x);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; [x = - sqrt(5) %i, x = sqrt(5) %i, x = 3]</span></p>
+<p class="rvps3"><span class="rvts6">Maxima puede resolver sistemas de ecuaciones no lineales. Tenga en cuenta que si usted no desea que el resultado sea impreso, puede finalizar el comando con </span><span class="rvts9">$</span><span class="rvts6"> en vez de </span><span class="rvts9">;</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) eq_1: x^2 + 3*x*y + y^2 = 0$</span><br/><span class="rvts9">(%i2) eq_2: 3*x + y = 1$</span><br/><span class="rvts9">(%i3) solve ([eq_1, eq_2]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3 sqrt(5) + 7 &nbsp; &nbsp; &nbsp;sqrt(5) + 3</span><br/><span class="rvts9">(%o3) [[y = - -------------, x = -----------], </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3 sqrt(5) - 7 &nbsp; &nbsp; &nbsp; &nbsp;sqrt(5) - 3</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[y = -------------, x = - -----------]]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span></p>
+<p class="rvps3"><span class="rvts6">Bajo un sistema X window, (es decir que poseea interfaz gráfica), Maxima puede generar gráficas de una o más funciones:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) eq_1: x^2 + 3*x*y + y^2 = 0$</span><br/><span class="rvts9">(%i2) eq_2: 3*x + y = 1$</span><br/><span class="rvts9">(%i3) solve ([eq_1, eq_2]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3 sqrt(5) + 7 &nbsp; &nbsp; &nbsp;sqrt(5) + 3</span><br/><span class="rvts9">(%o3) [[y = - -------------, x = -----------], </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3 sqrt(5) - 7 &nbsp; &nbsp; &nbsp; &nbsp;sqrt(5) - 3</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[y = -------------, x = - -----------]]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9">(%i4) kill(labels);</span><br/><span class="rvts9">(%o0) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; done</span><br/><span class="rvts9">(%i1) plot2d (sin(x)/x, [x, -20, 20]);</span><br/><span class="rvts9">(%o1) </span><br/><span class="rvts9">(%i2) plot2d ([atan(x), erf(x), tanh(x)], [x, -5, 5]);</span><br/><span class="rvts9">(%o2) </span><br/><span class="rvts9">(%i3) plot3d (sin(sqrt(x^2 + y^2))/sqrt(x^2 + y^2), [x, -12, 12],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[y, -12, 12]);</span><br/><span class="rvts9">(%o3) </span></p>
+<hr style="height: 6px;"/>
+<div><table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[ &lt;&lt; ]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_2.html#SEC2"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps3"><span class="rvts10">This document was generated by </span><span class="rvts11">Robert Dodier</span><span class="rvts10"> on </span><span class="rvts11">agosto, 25 2007</span><span class="rvts10"> using </span><a class="rvts12" href="http://texi2html.cvshome.org/">texi2html 1.76</a><span class="rvts10">.</span></p>
+<p></p>
+<p class="rvps6"><span class="rvts13">Created with the Personal Edition of HelpNDoc: </span><a class="rvts14" href="http://www.helpndoc.com/create-epub-ebooks">Free EPub producer</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				http://maxima.sourceforge.net</div>
+		</div>
+	</body>
+	
+</html>
+

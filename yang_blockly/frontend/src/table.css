@@ -1,0 +1,433 @@
+/* Interface de edición tipo folla de cálculo (table-editor.js), alternativa
+   a #editor / #blocksEditor dentro de .pane-editor. Reutiliza as variables
+   de style.css (Yang é light-only). */
+
+#tableEditor {
+    flex: 1;
+    min-height: 0;
+}
+#tableEditor.hidden { display: none; }
+
+.table-editor {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 0;
+    background: var(--panel-bg);
+}
+
+/* ---------- lapelas ---------- */
+.table-tabs {
+    display: flex;
+    gap: 2px;
+    padding: 0.5rem 0.7rem 0;
+    border-bottom: 1px solid var(--border-color);
+    flex-wrap: wrap;
+}
+.table-tab {
+    appearance: none;
+    border: 1px solid transparent;
+    border-bottom: none;
+    background: transparent;
+    color: var(--text-muted);
+    font: 600 0.82rem/1 var(--font-ui);
+    padding: 0.5rem 0.8rem;
+    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+    cursor: pointer;
+}
+.table-tab:hover { color: var(--text-dark); background: var(--btn-neutral-bg); }
+.table-tab--active {
+    color: var(--primary);
+    background: var(--panel-bg);
+    border-color: var(--border-color);
+    margin-bottom: -1px;
+}
+
+.table-legend {
+    padding: 0.45rem 0.9rem;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    background: var(--bg-main);
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* ---------- barra de ferramentas ---------- */
+.table-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 0.9rem;
+    border-bottom: 1px solid var(--border-color);
+}
+.table-tbtn {
+    appearance: none;
+    border: 1px solid var(--border-color);
+    background: var(--btn-neutral-bg);
+    color: var(--btn-neutral-text);
+    font: 600 0.8rem/1 var(--font-ui);
+    padding: 0.4rem 0.7rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+.table-tbtn:hover { background: var(--btn-neutral-bg-hover); }
+.table-toolbar__add {
+    background: var(--primary-soft);
+    border-color: var(--primary-soft-border);
+    color: var(--primary);
+}
+.table-toolbar__ai {
+    background: var(--ai-soft);
+    border-color: var(--ai-border);
+    color: var(--ai-1);
+}
+.table-toolbar__ai:hover { filter: brightness(1.03); }
+.table-toolbar__ai svg { width: 14px; height: 14px; }
+
+/* ---------- scroller + grella ---------- */
+.table-scroll {
+    flex: 1;
+    min-height: 0;
+    overflow: auto;
+    padding: 0.6rem 0.9rem 2rem;
+}
+.table-grid { display: table; width: 100%; border-collapse: collapse; }
+.table-row {
+    display: table-row;
+}
+.table-row--head .table-cell {
+    position: sticky;
+    top: 0;
+    background: var(--bg-main);
+    font: 700 0.72rem/1 var(--font-ui);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-faint);
+    border-bottom: 2px solid var(--border-strong);
+    z-index: 1;
+}
+.table-cell {
+    display: table-cell;
+    vertical-align: top;
+    padding: 0.55rem 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+.table-c-num {
+    width: 2.2rem;
+    text-align: center;
+    color: var(--text-faint);
+    font: 700 0.85rem/1.6 var(--font-mono);
+    cursor: grab;
+    user-select: none;
+}
+.table-c-enun { min-width: 12rem; }
+.table-c-vars { width: 20rem; }
+.table-c-resp, .table-c-sol { min-width: 9rem; }
+.table-c-acts { width: 6.4rem; white-space: nowrap; text-align: right; }
+
+.table-row--drag { opacity: 0.4; }
+.table-empty {
+    display: table-caption;
+    caption-side: bottom;
+    padding: 2rem 0.5rem;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+/* ---------- campos ---------- */
+.table-ta {
+    width: 100%;
+    /* A altura axústase ao contido por JS (autoGrow en table-editor.js) para
+       que se vexa todo o enunciado/código sen arrastrar. resize:none para
+       que un arrastre manual non pelexe con ese axuste. */
+    resize: none;
+    overflow-y: auto;
+    min-height: 2.2rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 0.4rem 0.5rem;
+    font: 0.85rem/1.4 var(--font-ui);
+    color: var(--text-dark);
+    background: #fff;
+}
+.table-ta:focus { outline: 2px solid var(--primary); border-color: var(--primary); }
+
+.table-tokens {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    margin-top: 4px;
+    align-items: center;
+}
+.table-tokens__lab { font-size: 0.68rem; color: var(--text-faint); }
+.table-token {
+    appearance: none;
+    border: 1px dashed var(--primary-soft-border);
+    background: var(--primary-soft);
+    color: var(--primary);
+    font: 600 0.7rem/1 var(--font-mono);
+    padding: 2px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.table-token:hover { background: var(--primary); color: #fff; }
+
+/* ---------- lista de variables ---------- */
+.table-varlist { display: flex; flex-direction: column; gap: 5px; }
+
+.table-var {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 5px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    background: #fff;
+}
+.table-var:focus-within { border-color: var(--primary-soft-border); background: var(--primary-soft); }
+
+/* Campos: mesma altura (26px), mesmo bordo, mesmo radio. */
+.table-var-nome,
+.table-var-modo,
+.table-var-gen,
+.table-var-in,
+.table-var-num {
+    height: 26px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background: #fff;
+    color: var(--text-dark);
+    padding: 0 6px;
+}
+.table-var-nome,
+.table-var-in,
+.table-var-num { font: 600 0.8rem/24px var(--font-mono); }
+.table-var-modo,
+.table-var-gen { font: 0.76rem/24px var(--font-ui); padding-right: 4px; }
+.table-var-nome:focus,
+.table-var-modo:focus,
+.table-var-gen:focus,
+.table-var-in:focus,
+.table-var-num:focus { outline: 2px solid var(--primary); outline-offset: -1px; border-color: var(--primary); }
+
+.table-var-nome { width: 4.5rem; }
+.table-var-modo { flex: 0 0 auto; }
+
+/* Zona de valor: ocupa o resto da fila. */
+.table-var-val {
+    display: flex;
+    flex: 1 1 8rem;
+    min-width: 8rem;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+.table-var-gen { flex: 0 0 auto; }
+.table-var-in--grow { flex: 1 1 5rem; min-width: 5rem; }
+.table-var-in--code { font-weight: 500; }
+
+/* "de … a … paso …" - etiquetas pequenas en vez de tres caixas cegas. */
+.table-var-rango { display: inline-flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.table-var-rango__seg { display: inline-flex; align-items: center; gap: 4px; }
+.table-var-rango__lab { font: 0.72rem/1 var(--font-ui); color: var(--text-faint); }
+.table-var-num { width: 2.9rem; text-align: center; }
+
+.table-var-add {
+    align-self: flex-start;
+    margin-top: 5px;
+    appearance: none;
+    border: 1px dashed var(--border-strong);
+    background: transparent;
+    color: var(--text-muted);
+    font: 600 0.74rem/1 var(--font-ui);
+    padding: 4px 9px;
+    border-radius: 999px;
+    cursor: pointer;
+}
+.table-var-add:hover { color: var(--primary); border-color: var(--primary); background: var(--primary-soft); }
+
+/* ---------- botóns mini de fila ---------- */
+.table-mini {
+    appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background: #fff;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0;
+    vertical-align: middle;
+}
+.table-mini:hover { background: var(--btn-neutral-bg-hover); color: var(--text-dark); }
+.table-mini.mini-danger:hover { background: var(--off); color: #fff; border-color: var(--off); }
+/* ✓ "Aplicar": recomputa só esa fila á dereita. Verde para distinguilo como
+   a acción de confirmar os cambios (mentres se edita non se recompila nada). */
+.table-mini.mini-ok { color: var(--on); border-color: var(--on); font-weight: 700; }
+.table-mini.mini-ok:hover { background: var(--on); color: #fff; border-color: var(--on); }
+/* ↻ IA: rexenerar a resolución paso a paso deste exercicio coa IA. */
+.table-mini.mini-ai { color: var(--ai-2, #7c3aed); border-color: var(--ai-2, #7c3aed); font-weight: 700; }
+.table-mini.mini-ai:hover { background: var(--ai-2, #7c3aed); color: #fff; border-color: var(--ai-2, #7c3aed); }
+.table-mini.table-mini--busy { opacity: 0.6; cursor: progress; }
+.table-mini--ai svg { width: 12px; height: 12px; vertical-align: -1px; }
+
+/* ---------- ver código ---------- */
+.table-code__bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.6rem;
+}
+.table-code__title { font-size: 0.8rem; color: var(--text-muted); }
+.table-code__bar-actions { display: flex; align-items: center; gap: 0.4rem; }
+.table-code__back, .table-code__search-btn {
+    appearance: none;
+    border: 1px solid var(--border-color);
+    background: var(--btn-neutral-bg);
+    border-radius: var(--radius-sm);
+    padding: 0.35rem 0.6rem;
+    font: 600 0.78rem/1 var(--font-ui);
+    cursor: pointer;
+}
+.table-code__back:hover, .table-code__search-btn:hover { background: var(--btn-neutral-bg-hover); }
+
+/* Barra de busca (Ctrl+F dentro de "Ver código", ver renderCodeView) -
+   oculta (search.hidden) ata que se abre. */
+.table-code__search {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-bottom: 0.6rem;
+}
+.table-code__search-input {
+    flex: 1;
+    min-width: 0;
+    background: var(--panel-bg);
+    color: var(--text-dark);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 0.35rem 0.55rem;
+    font: 0.82rem/1 var(--font-mono);
+}
+.table-code__search-input:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: -1px;
+    border-color: var(--primary);
+}
+.table-code__search-count {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    white-space: nowrap;
+    min-width: 4.5em;
+    text-align: center;
+}
+.table-code__search-nav, .table-code__search-close {
+    appearance: none;
+    border: 1px solid var(--border-color);
+    background: var(--btn-neutral-bg);
+    border-radius: var(--radius-sm);
+    padding: 0.3rem 0.5rem;
+    font: 600 0.78rem/1 var(--font-ui);
+    cursor: pointer;
+}
+.table-code__search-nav:hover, .table-code__search-close:hover { background: var(--btn-neutral-bg-hover); }
+
+/* Resaltado das coincidencias dentro do <ol> (fondo escuro, ver .table-code
+   máis abaixo) - a "activa" (onde se está a navegar con ▲/▼/Intro) leva o
+   cor primaria para distinguila do resto. */
+mark.table-code__match {
+    background: #f5c518;
+    color: #1a1a1a;
+    border-radius: 2px;
+    padding: 0 1px;
+}
+mark.table-code__match--actual {
+    background: var(--primary);
+    color: #fff;
+}
+.table-code {
+    margin: 0;
+    padding: 0.8rem;
+    background: var(--text-dark);
+    color: #e8e8ec;
+    border-radius: var(--radius-sm);
+    font: 0.8rem/1.5 var(--font-mono);
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+/* Numeración de liña (só cando .table-code é un <ol>, ver renderCodeView -
+   o <pre> do estado "sen exercicios" queda igual có de sempre). */
+ol.table-code {
+    list-style: decimal outside;
+    padding-left: 2.8rem;
+}
+ol.table-code li::marker { color: #8a8a94; }
+
+/* ---------- lapela Probas ---------- */
+.table-probes__bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.8rem;
+}
+.table-probes__seeds { font-size: 0.8rem; color: var(--text-muted); }
+.table-probes__seeds input {
+    width: 4rem;
+    margin-left: 0.3rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 3px 5px;
+}
+.table-probes__run {
+    appearance: none;
+    border: none;
+    background: var(--primary);
+    color: #fff;
+    font: 600 0.82rem/1 var(--font-ui);
+    padding: 0.45rem 0.9rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+}
+.table-probes__run:disabled { opacity: 0.5; cursor: default; }
+.table-probes__status { font-size: 0.8rem; color: var(--text-muted); }
+
+.table-probe-card {
+    border: 1px solid var(--border-color);
+    border-left-width: 4px;
+    border-radius: var(--radius-sm);
+    padding: 0.55rem 0.7rem;
+    margin-bottom: 0.5rem;
+}
+.table-probe-card.is-ok { border-left-color: var(--on); }
+.table-probe-card.is-warn { border-left-color: var(--amber); }
+.table-probe-card.is-bad { border-left-color: var(--off); }
+.table-probe-card__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+}
+.table-probe-card__n { font-weight: 700; color: var(--text-dark); }
+.table-probe-card__badge { font-size: 0.78rem; color: var(--text-muted); }
+
+.table-probe-diag {
+    width: 100%;
+    margin-top: 0.5rem;
+    border-collapse: collapse;
+    font-size: 0.75rem;
+}
+.table-probe-diag th, .table-probe-diag td {
+    text-align: left;
+    padding: 3px 6px;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+.table-probe-diag th { color: var(--text-faint); font-weight: 700; }
+.table-probe-diag code { font-family: var(--font-mono); word-break: break-all; }

@@ -1,0 +1,291 @@
+﻿<html>
+	
+<head>
+	<title>solve_rec</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 3.9.1.648">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Maxima.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("solve_rec");
+			}
+		});
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>solve_rec</h1>
+				
+				</div>
+			<div id="topic_header_nav">
+				<a href="Paquetesqdnst.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Introduccinasolve_rec.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<div><a name="SOLVE_005FREC"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_68.html#SEC261"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="solve_rec.html#SEC263"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_68.html#SEC252"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_70.html#SEC265"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h1 class="rvps2"><span class="rvts0"><span class="rvts8">69. solve_rec</span></span></h1>
+<div><table border="0" cellpadding="1" cellspacing="0" style="border-width: 0px;">
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="solve_rec.html#SEC263">69.1 Introducción a solve_rec</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="solve_rec.html#SEC264">69.2 Funciones y variables para solve_rec</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height: 6px;"/>
+<div><a name="SEC262"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="solve_rec.html#SEC262"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="solve_rec.html#SEC264"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="solve_rec.html#SEC262"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="solve_rec.html#SEC262"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_70.html#SEC265"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">69.1 Introducción a solve_rec</span></span></h2>
+<p class="rvps3"><span class="rvts6">El paquete </span><span class="rvts9">solve_rec</span><span class="rvts6"> resuelve expresiones recurrentes lineales con coeficientes polinomiales.</span></p>
+<p class="rvps3"><span class="rvts6">Ejecútese </span><span class="rvts9">demo(solve_rec);</span><span class="rvts6"> para ver una demostración sobre la utilización de este paquete.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load("solve_rec")$</span><br/><span class="rvts9">(%i2) solve_rec((n+4)*s[n+2] + s[n+1] - (n+1)*s[n], s[n]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;n</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; %k &nbsp;(2 n + 3) (- 1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;%k</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; s &nbsp;= -------------------- + ---------------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n &nbsp; &nbsp; (n + 1) (n + 2) &nbsp; &nbsp; &nbsp;(n + 1) (n + 2)</span></p>
+<hr style="height: 6px;"/>
+<div><a name="INTRODUCCI_00F3N-A-SOLVE_005FREC"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="solve_rec.html#SEC263"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_70.html#SEC265"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="solve_rec.html#SEC262"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="solve_rec.html#SEC262"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_70.html#SEC265"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><a name="SEC263"></a>
+<span class="rvts0"><span class="rvts15">69.2 Funciones y variables para solve_rec</span></span></h2>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="FUNCIONES-Y-VARIABLES-PARA-SOLVE_005FREC"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">reduce_order</span><span class="rvts18"> (rec, sol, var)</span></li>
+<li class="rvps3"><span class="rvts6">Reduce el orden de la expresión recurrente lineal </span><span class="rvts18">rec</span><span class="rvts6"> cuando se conoce una solución particular </span><span class="rvts18">sol</span><span class="rvts6">. La recurrencia reducida puede utilizarse para obterner más soluciones.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">(%i3) rec: x[n+2] = x[n+1] + x[n]/n;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x &nbsp; &nbsp; &nbsp;= x &nbsp; &nbsp; &nbsp;+ --</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n + 2 &nbsp; &nbsp;n + 1 &nbsp; n</span><br/><span class="rvts9">(%i4) solve_rec(rec, x[n]);</span><br/><span class="rvts9">WARNING: found some hypergeometrical solutions! </span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x &nbsp;= %k &nbsp;n</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;n &nbsp; &nbsp; 1</span><br/><span class="rvts9">(%i5) reduce_order(rec, n, x[n]);</span><br/><span class="rvts9">(%t5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x &nbsp;= n %z</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;n &nbsp; &nbsp; &nbsp; n</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n - 1</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ====</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; \</span><br/><span class="rvts9">(%t6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;%z &nbsp;= &nbsp;&gt; &nbsp; &nbsp; %u</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n &nbsp; / &nbsp; &nbsp; &nbsp; &nbsp;%j</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ====</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; %j = 0</span><br/><span class="rvts9">(%o6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (- n - 2) %u &nbsp; &nbsp; - %u</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;n + 1 &nbsp; &nbsp; n</span><br/><span class="rvts9">(%i6) solve_rec((n+2)*%u[n+1] + %u[n], %u[n]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;%k &nbsp;(- 1)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1</span><br/><span class="rvts9">(%o6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; %u &nbsp;= ----------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;n &nbsp; &nbsp;(n + 1)!</span></p>
+<p class="rvps3"><span class="rvts6">So the general solution is</span></p>
+<p class="rvps4"><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n - 1</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ==== &nbsp; &nbsp; &nbsp; &nbsp;n</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; \ &nbsp; &nbsp; &nbsp;(- 1)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; %k &nbsp;n &nbsp;&gt; &nbsp; &nbsp;-------- + %k &nbsp;n</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; / &nbsp; &nbsp; (n + 1)! &nbsp; &nbsp; 1</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ====</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n = 0</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC264"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">simplify_products</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">true</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">simplify_products</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, </span><span class="rvts9">solve_rec</span><span class="rvts6"> intentará simplificar los productos del resultado.</span></p>
+<p class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">solve_rec</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2055"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">simplify_sum</span><span class="rvts18"> (expr)</span></li>
+<li class="rvps3"><span class="rvts6">Intenta reducir todas las sumas que aparecen en </span><span class="rvts18">expr</span><span class="rvts6"> a una forma cerrada. La función </span><span class="rvts9">simplify_sum</span><span class="rvts6"> utiliza los algoritmos de Gosper y Zeilberger para reducir las sumas.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Para utilizar esta función cárguese previamente el paquete </span><span class="rvts9">simplify_sum</span><span class="rvts6"> ejecutando la instrucción </span><span class="rvts9">load(simplify_sum)</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load("simplify_sum")$</span><br/><span class="rvts9">(%i2) sum(binom(n+k,k)/2^k, k, 0, n) + </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;sum(binom(2*n, 2*k), k, 0, n);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; n &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;n</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp;==== &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ====</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp;\ &nbsp; &nbsp; &nbsp;binomial(n + k, k) &nbsp; &nbsp;\</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp;&gt; &nbsp; &nbsp; ------------------ + &nbsp; &gt; &nbsp; &nbsp;binomial(2 n, 2 k)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp;/ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; k &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp;==== &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ====</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp;k = 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;k = 0</span><br/><span class="rvts9">(%i3) simplify_sum(%);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4 &nbsp; &nbsp; n</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -- + 2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2056"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">solve_rec</span><span class="rvts18"> (eqn, var, [init])</span></li>
+<li class="rvps3"><span class="rvts6">Obtiene las soluciones hipergeométricas de la expresión recurrente </span><span class="rvts18">eqn</span><span class="rvts6"> con coeficientes lineales en la variable </span><span class="rvts18">var</span><span class="rvts6">. Los argumentos opcionales </span><span class="rvts18">init</span><span class="rvts6"> son condiciones iniciales.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">solve_rec</span><span class="rvts6"> puede resolver expresiones recurrentes con coeficientes constantes, encuentra soluciones hipergeométricas de expresiones recurrentes lineales homogéneas con coeficientes polinomiales, obtiene soluciones racionales de expresiones recurrentes lineales con coeficientes lineales y resuelve también expresiones recurrentes de Ricatti.</span></p>
+<p class="rvps3"><span class="rvts6">Nótese que el tiempo de ejecución del algoritmo para encontrar soluciones hipergeométricas es exponencial respecto del grado del coeficiente principal.</span></p>
+<p class="rvps3"><span class="rvts6">Para hacer uso de esta función ejecútese previamente </span><span class="rvts9">load(solve_rec);</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo de recurrencia lineal con coeficientes constantes:</span></p>
+<p class="rvps4"><span class="rvts9">(%i2) solve_rec(a[n]=a[n-1]+a[n-2]+n/2^n, a[n]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;n &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;n</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (sqrt(5) - 1) &nbsp;%k &nbsp;(- 1)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n</span><br/><span class="rvts9">(%o2) a &nbsp;= ------------------------- - ----</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; n &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;n</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;5 2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;n</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (sqrt(5) + 1) &nbsp;%k</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp;2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; + ------------------ - ----</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;n &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;n</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;5 2</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo de recurrencia lineal con coeficientes polinomiales:</span></p>
+<p class="rvps4"><span class="rvts9">(%i7) 2*x*(x+1)*y[x] - (x^2+3*x-2)*y[x+1] + (x-1)*y[x+2];</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9">(%o7) (x - 1) y &nbsp; &nbsp; &nbsp;- (x &nbsp;+ 3 x - 2) y &nbsp; &nbsp; &nbsp;+ 2 x (x + 1) y</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x + 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x + 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x</span><br/><span class="rvts9">(%i8) solve_rec(%, y[x], y[1]=1, y[3]=3);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3 2 &nbsp; &nbsp;x!</span><br/><span class="rvts9">(%o9) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; y &nbsp;= ---- - --</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x &nbsp; &nbsp;4 &nbsp; &nbsp; 2</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo de recurrencia de Ricatti:</span></p>
+<p class="rvps4"><span class="rvts9">(%i2) x*y[x+1]*y[x] - y[x+1]/(x+2) + y[x]/(x-1) = 0;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;y &nbsp; &nbsp; &nbsp; &nbsp; y</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x + 1 &nbsp; &nbsp; x</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; x y &nbsp;y &nbsp; &nbsp; &nbsp;- ------ + ----- = 0</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x &nbsp;x + 1 &nbsp; x + 2 &nbsp; &nbsp;x - 1</span><br/><span class="rvts9">(%i3) solve_rec(%, y[x], y[3]=5)$</span><br/><span class="rvts9">(%i4) ratsimp(minfactorial(factcomb(%)));</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 30 x &nbsp;- 30 x</span><br/><span class="rvts9">(%o4) y &nbsp;= - -------------------------------------------------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; x &nbsp; &nbsp; &nbsp; &nbsp;6 &nbsp; &nbsp; &nbsp;5 &nbsp; &nbsp; &nbsp; 4 &nbsp; &nbsp; &nbsp; 3 &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 5 x &nbsp;- 3 x &nbsp;- 25 x &nbsp;+ 15 x &nbsp;+ 20 x &nbsp;- 12 x - 1584</span></p>
+<p class="rvps3"><span class="rvts6">Véanse también </span><span class="rvts9">solve_rec_rat</span><span class="rvts6">, </span><span class="rvts9">simplify_products</span><span class="rvts6"> y </span><span class="rvts9">product_use_gamma</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2057"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">solve_rec_rat</span><span class="rvts18"> (eqn, var, [init])</span></li>
+<li class="rvps3"><span class="rvts6">Calcula las soluciones racionales de las expresiones recurrentes lineales. Véase </span><span class="rvts9">solve_rec</span><span class="rvts6"> para la descripción de sus argumentos.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Para hacer uso de esta función ejecútese previamente </span><span class="rvts9">load(solve_rec);</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) (x+4)*a[x+3] + (x+3)*a[x+2] - x*a[x+1] + (x^2-1)*a[x];</span><br/><span class="rvts9">(%o1) &nbsp;(x + 4) a &nbsp; &nbsp; &nbsp;+ (x + 3) a &nbsp; &nbsp; &nbsp;- x a</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x + 3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x + 2 &nbsp; &nbsp; &nbsp;x + 1</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; + (x &nbsp;- 1) a</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x</span><br/><span class="rvts9">(%i2) solve_rec_rat(% = (x+2)/(x+1), a[x]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp;a &nbsp;= ---------------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x &nbsp; (x - 1) (x + 1)</span></p>
+<p class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">solve_rec</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2058"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">product_use_gamma</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto:</span><span class="rvts9">true</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">product_use_gamma</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, </span><span class="rvts9">solve_rec</span><span class="rvts6"> introduce la función gamma en la expresión del resultado cuando se simplifican productos.</span></p>
+<p class="rvps3"><span class="rvts6">Véanse también </span><span class="rvts9">simplify_products</span><span class="rvts6"> y </span><span class="rvts9">solve_rec</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2059"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">summand_to_rec</span><span class="rvts18"> (summand, k, n)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve la expresión recurrente que satisface la suma</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9"> &nbsp; &nbsp;inf</span><br/><span class="rvts9"> &nbsp; &nbsp;====</span><br/><span class="rvts9"> &nbsp; &nbsp;\</span><br/><span class="rvts9"> &nbsp; &nbsp; &gt; &nbsp; &nbsp; sumando</span><br/><span class="rvts9"> &nbsp; &nbsp;/</span><br/><span class="rvts9"> &nbsp; &nbsp;====</span><br/><span class="rvts9"> &nbsp;k = minf</span></p>
+<p class="rvps3"><span class="rvts6">donde el sumando es hipergeométrico en </span><span class="rvts18">k</span><span class="rvts6"> y </span><span class="rvts18">n</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Para hacer uso de esta función deben cargarse previamente los paquetes </span><span class="rvts9">zeilberger</span><span class="rvts6"> y </span><span class="rvts9">solve_rec</span><span class="rvts6"> mediante la ejecución de las sentencias </span><span class="rvts9">load(solve_rec)</span><span class="rvts6"> y </span><span class="rvts9">load(zeilberger)</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts9">(%i17) load("zeilberger")$</span><br/><span class="rvts9">(%i18) summand: binom(3*k+1,k)*binom(3*(n-k),n-k)/(3*k+1)$</span><br/><span class="rvts9">(%i19) summand_to_rec(summand, k, n);</span><br/><span class="rvts9">Dependent equations eliminated: &nbsp;(3 2)</span><br/><span class="rvts9">(%o19) - 4 (n + 2) (2 n + 3) (2 n + 5) sm</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n + 2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9"> + 12 (2 n + 3) (9 n &nbsp;+ 27 n + 22) sm</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n + 1</span><br/><span class="rvts9"> - 81 (n + 1) (3 n + 2) (3 n + 4) sm</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;n</span><br/><span class="rvts9">(%i21) sum(''summand, k, 0, n), n=0;</span><br/><span class="rvts9">(%o21) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</span><br/><span class="rvts9">(%i22) sum(''summand, k, 0, n), n=1;</span><br/><span class="rvts9">(%o22) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4</span><br/><span class="rvts9">(%i23) product_use_gamma: false$</span><br/><span class="rvts9">(%i24) solve_rec(%o19, sm[n], sm[0]=1, sm[1]=4);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;n - 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n - 1</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/===\ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /===\</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ! ! &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ! ! &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;n</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ( ! ! &nbsp; (3 %j + 2)) ( ! ! &nbsp; (3 %j + 4)) 3</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ! ! &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ! !</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;%j = 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;%j = 0</span><br/><span class="rvts9">(%o24) sm &nbsp;= ------------------------------------------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; n &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;n - 1</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/===\</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ! ! &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;n</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ( ! ! &nbsp; (2 %j + 3)) 2 &nbsp;n!</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ! !</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;%j = 0</span></p>
+<hr style="height: 6px;"/>
+<div><table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="solve_rec.html#SEC262"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_70.html#SEC265"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps3"><span class="rvts10">This document was generated by </span><span class="rvts11">Robert Dodier</span><span class="rvts10"> on </span><span class="rvts11">agosto, 25 2007</span><span class="rvts10"> using </span><a class="rvts12" href="http://texi2html.cvshome.org/">texi2html 1.76</a><span class="rvts10">.</span></p>
+<p></p>
+<p class="rvps6"><span class="rvts13">Created with the Personal Edition of HelpNDoc: </span><a class="rvts14" href="http://www.helpndoc.com">Easy EPub and documentation editor</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				http://maxima.sourceforge.net</div>
+		</div>
+	</body>
+	
+</html>
+

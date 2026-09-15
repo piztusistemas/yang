@@ -1,0 +1,24 @@
+# Dependencias e builds de frontend (Node/Vite/Wails)
+**/node_modules/
+**/frontend/dist/
+**/frontend/wailsjs/
+**/frontend/bindings/
+**/*.tsbuildinfo
+
+# Binarios compilados e empaquetado
+**/build/bin/
+yang_blockly/build/debian+windows+macos/
+yang_blockly/build/debian+windows+macos_3/
+yang_blockly/matexe-wails
+yang_blockly/bin/
+yang_installer/yang_installer
+yang_installer/files/
+yang_installer/assets/logo.png
+yang_installer/build/appicon.png
+yang_installer/frontend/src/assets/images/logo.png
+
+# Ferramentas de build (Taskfile/wails3)
+**/.task/
+
+# Sistema operativo
+**/.DS_Store

@@ -1,0 +1,699 @@
+﻿<html>
+	
+<head>
+	<title>Variables opcionales</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 3.9.1.648">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Maxima.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("Variablesopcionales");
+			}
+		});
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>Variables opcionales</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="grobner.html">grobner</a> &rsaquo;&rsaquo; <a href="Funcionesyvariablesparagrobner.html">Funciones y variables para grobner</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Funcionesyvariablesparagrobner.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Funcionesyvariablesparagrobner.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Operadoressimples.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<div><a name="GROBNER"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_52.html#SEC199"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Variablesopcionales.html#SEC201"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_52.html#SEC198"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_54.html#SEC209"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h1 class="rvps2"><span class="rvts0"><span class="rvts8">53. grobner</span></span></h1>
+<div><table border="0" cellpadding="1" cellspacing="0" style="border-width: 0px;">
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="Variablesopcionales.html#SEC201">53.1 Introducción a grobner</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="Variablesopcionales.html#SEC204">53.2 Funciones y variables para grobner</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height: 6px;"/>
+<div><a name="SEC200"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Variablesopcionales.html#SEC200"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Variablesopcionales.html#SEC202"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Variablesopcionales.html#SEC200"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Variablesopcionales.html#SEC200"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_54.html#SEC209"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">53.1 Introducción a grobner</span></span></h2>
+<p class="rvps3"><span class="rvts9">grobner</span><span class="rvts6"> es un paquete para operar con bases de Groebner en Maxima.</span></p>
+<p class="rvps3"><span class="rvts6">Se puede encontrar un tutorial sobre </span><span class="rvts18">Bases de Groebner</span><span class="rvts6"> en</span></p>
+<p class="rvps3"><a class="rvts7" href="http://www.geocities.com/CapeCanaveral/Hall/3131/">http://www.geocities.com/CapeCanaveral/Hall/3131/</a></p>
+<p class="rvps3"><span class="rvts6">Para hacer uso de las funciones de este paquete es necesario cargar previamente el archivo </span><span class="rvts9">`grobner.lisp'</span><span class="rvts6">:</span></p>
+<p class="rvps4"><span class="rvts9">load(grobner);</span></p>
+<p class="rvps3"><span class="rvts6">Es posible ejecutar una demostración haciendo</span></p>
+<p class="rvps4"><span class="rvts9">demo("grobner.demo");</span></p>
+<p class="rvps3"><span class="rvts6">o</span></p>
+<p class="rvps4"><span class="rvts9">batch("grobner.demo")</span></p>
+<p class="rvps3"><span class="rvts6">Algunos de los cálculos de la demostración pueden llevar tiempo, razón por la cual sus resultados se han guardado en el archivo </span><span class="rvts9">`grobner-demo.output'</span><span class="rvts6">, que se encuentra en el mismo directorio que el archivo de demostración.</span></p>
+<hr style="height: 6px;"/>
+<div><a name="INTRODUCCI_00F3N-A-GROBNER"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Variablesopcionales.html#SEC201"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Variablesopcionales.html#SEC203"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Variablesopcionales.html#SEC200"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Variablesopcionales.html#SEC201"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_54.html#SEC209"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="rvps11"><span class="rvts0"><span class="rvts21">53.1.1 Notas sobre el paquete grobner</span></span></h3>
+<p class="rvps3"><span class="rvts6">El autor del paquete es</span></p>
+<p class="rvps3"><span class="rvts6">Marek Rychlik</span></p>
+<p class="rvps3"><a class="rvts7" href="http://alamos.math.arizona.edu">http://alamos.math.arizona.edu</a></p>
+<p class="rvps3"><span class="rvts6">habiendo sido distribuido el 24-05-2002 bajo los términos de la General Public License (GPL) (ver archivo </span><span class="rvts9">`grobner.lisp'</span><span class="rvts6">). Esta documentación ha sido extraída de los archivos</span></p>
+<p class="rvps3"><span class="rvts9">`README'</span><span class="rvts6">, </span><span class="rvts9">`grobner.lisp'</span><span class="rvts6">, </span><span class="rvts9">`grobner.demo'</span><span class="rvts6"> y </span><span class="rvts9">`grobner-demo.output'</span></p>
+<p class="rvps3"><span class="rvts6">por Günter Nowak. Las sugerencias para mejorar la documentación se pueden hacer en la lista de correos de </span><span class="rvts18">maxima</span><span class="rvts6">, </span><a class="rvts7" href="mailto:maxima@math.utexas.edu">maxima@math.utexas.edu</a><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">El código está algo anticuado. Las implementaciones modernas utilizan el algoritmo </span><span class="rvts18">F4</span><span class="rvts6">, más rápido, descrito en</span></p>
+<div><table border="0" cellpadding="1" cellspacing="2" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts10">A new efficient algorithm for computing Gröbner bases (F4) </span><br/><span class="rvts10">Jean-Charles Faugère</span><br/><span class="rvts10">LIP6/CNRS Université Paris VI </span><br/><span class="rvts10">January 20, 1999</span></p>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height: 6px;"/>
+<div><a name="SEC201"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Variablesopcionales.html#SEC202"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Variablesopcionales.html#SEC204"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Variablesopcionales.html#SEC200"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Variablesopcionales.html#SEC201"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_54.html#SEC209"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="rvps11"><span class="rvts0"><span class="rvts21">53.1.2 Implementaciones de órdenes admisibles de monomios</span></span></h3>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">lex</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">lexicográfico puro; orden por defecto para la comparación de monomios.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">grlex</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">grado total, con empates resueltos por el orden lexicográfico.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">grevlex</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">grado total, con empates resueltos por el orden lexicográfico inverso.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">invlex</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">orden lexicográfico inverso.</span></p>
+<hr style="height: 6px;"/>
+<div><a name="SEC202"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Variablesopcionales.html#SEC203"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Variablesopcionales.html#SEC205"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Variablesopcionales.html#SEC200"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Variablesopcionales.html#SEC200"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_54.html#SEC209"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">53.2 Funciones y variables para grobner</span></span></h2>
+<hr style="height: 6px;"/>
+<div><a name="SEC203"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Variablesopcionales.html#SEC204"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Variablesopcionales.html#SEC206"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Variablesopcionales.html#SEC200"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Variablesopcionales.html#SEC204"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_54.html#SEC209"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="rvps11"><span class="rvts0"><span class="rvts21">53.2.1 Variables opcionales</span></span></h3>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="FUNCIONES-Y-VARIABLES-PARA-GROBNER"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">poly_monomial_order</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">lex</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Controla qué orden de monomios utiliza en los cálculos con polinomios y bases de Groebner. Si no se le asigna valor alguno, se utilizará </span><span class="rvts9">lex</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC204"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">poly_coefficient_ring</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">expression_ring</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Indica el anillo de coeficientes de los polinomios que se va a utilizar en los cálculos. Si no se le asigna ningún valor, se utilizará el anillo de expresiones propio de </span><span class="rvts18">maxima</span><span class="rvts6">. A esta variable se le puede asignar el valor </span><span class="rvts9">ring_of_integers</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC205"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">poly_primary_elimination_order</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">false</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Nombre del orden por defecto para las variables eliminadas en las funciones basadas en eliminaciones. Si no se le asigna ningún valor, se utilizará </span><span class="rvts9">lex</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1835"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">poly_secondary_elimination_order</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">false</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Nombre del orden por defecto para las variables almacenadas en funciones basadas en eliminaciones. Si no se le asigna ningún valor, se utilizará </span><span class="rvts9">lex</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1836"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">poly_elimination_order</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">false</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Nombre del orden de eliminación por defecto utilizado en los cálculos de eliminación. Si se le asigna un valor, ignorará los guardados en </span><span class="rvts9">poly_primary_elimination_order</span><span class="rvts6"> y </span><span class="rvts9">poly_secondary_elimination_order</span><span class="rvts6">. El usuario se asegurará que este es un orden válido de eliminación.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1837"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">poly_return_term_list</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">false</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si vale </span><span class="rvts9">true</span><span class="rvts6">, todas las funciones de este paquete devolverán los polinomios como una lista de términos en el orden activo de monomios, en lugar de una expresión ordinaria de </span><span class="rvts18">maxima</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1838"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">poly_grobner_debug</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">false</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si vale </span><span class="rvts9">true</span><span class="rvts6">, genera una salida de seguimiento y depuración.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1839"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">poly_grobner_algorithm</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">buchberger</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Valores posibles:</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li><span class="rvts9">buchberger</span></li>
+<li><span class="rvts9">parallel_buchberger</span></li>
+<li><span class="rvts9">gebauer_moeller</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Es el nombre del algoritmo utilizado para encontrar las bases de Groebner.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1840"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">poly_top_reduction_only</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">false</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si no vale </span><span class="rvts9">false</span><span class="rvts6">, siempre que sea posible el algoritmo de división se detendrá tras la primera reducción.</span></p>
+<hr style="height: 6px;"/>
+<div><a name="IDX1841"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Variablesopcionales.html#SEC205"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Variablesopcionales.html#SEC207"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Variablesopcionales.html#SEC200"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Variablesopcionales.html#SEC204"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_54.html#SEC209"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="rvps11"><span class="rvts0"><span class="rvts21">53.2.2 Operadores simples</span></span></h3>
+<p class="rvps3"><span class="rvts9">poly_add</span><span class="rvts6">, </span><span class="rvts9">poly_subtract</span><span class="rvts6">, </span><span class="rvts9">poly_multiply</span><span class="rvts6"> y </span><span class="rvts9">poly_expt</span><span class="rvts6"> son los operadores aritméticos para polinomios. Se ejecutan utilizando la representación interna, pero los resultados se devuelven en forma de expresión ordinaria de </span><span class="rvts18">maxima</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1842"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">poly_add</span><span class="rvts18"> (poly1, poly2, varlist)</span></li>
+<li class="rvps3"><span class="rvts6">Suma los polinomios </span><span class="rvts18">poly1</span><span class="rvts6"> y </span><span class="rvts18">poly2</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) poly_add(z+x^2*y,x-z,[x,y,z]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x &nbsp;y + x</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1843"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">poly_subtract</span><span class="rvts18"> (poly1, poly2, varlist)</span></li>
+<li class="rvps3"><span class="rvts6">Resta el polinomio </span><span class="rvts18">poly2</span><span class="rvts6"> de </span><span class="rvts18">poly1</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) poly_subtract(z+x^2*y,x-z,[x,y,z]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 z + x &nbsp;y - x</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC206"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">poly_multiply</span><span class="rvts18"> (poly1, poly2, varlist)</span></li>
+<li class="rvps3"><span class="rvts6">Multiplica </span><span class="rvts18">poly1</span><span class="rvts6"> por </span><span class="rvts18">poly2</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i2) poly_multiply(z+x^2*y,x-z,[x,y,z])-(z+x^2*y)*(x-z),expand;</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1844"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">poly_s_polynomial</span><span class="rvts18"> (poly1, poly2, varlist)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve el </span><span class="rvts18">polinomio syzygy</span><span class="rvts6"> (</span><span class="rvts18">S-polinomio</span><span class="rvts6">) de dos polinomios </span><span class="rvts18">poly1</span><span class="rvts6"> y </span><span class="rvts18">poly2</span><span class="rvts6">.</span></li>
+<li><a name="IDX1845"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">poly_primitive_part</span><span class="rvts18"> (poly1, varlist)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve el polinomio </span><span class="rvts18">poly</span><span class="rvts6"> dividido por el MCD de sus coeficientes.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) poly_primitive_part(35*y+21*x,[x,y]);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;5 y + 3 x</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1846"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">poly_normalize</span><span class="rvts18"> (poly, varlist)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve el polinomio </span><span class="rvts18">poly</span><span class="rvts6"> dividido por el coeficiente principal. Da por supuesto que la división es posible, lo cual puede no ser siempre cierto en anillos que no son campos.</span></li>
+<hr style="height: 6px;"/></li>
+</ul>
+<div><a name="IDX1847"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Variablesopcionales.html#SEC206"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Variablesopcionales.html#SEC208"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Variablesopcionales.html#SEC200"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Variablesopcionales.html#SEC204"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_54.html#SEC209"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="rvps11"><span class="rvts0"><span class="rvts21">53.2.3 Otras funciones</span></span></h3>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1848"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">poly_expand</span><span class="rvts18"> (poly, varlist)</span></li>
+<li class="rvps3"><span class="rvts6">Esta función expande los polinomios. Equivale a </span><span class="rvts9">expand(poly)</span><span class="rvts6"> si </span><span class="rvts18">poly</span><span class="rvts6"> es un polinomio. Si la representación no es compatible con un polinomio de variables </span><span class="rvts18">varlist</span><span class="rvts6">, devuelve un error.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) poly_expand((x-y)*(y+x),[x,y]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp;2</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x &nbsp;- y</span><br/><span class="rvts9">(%i2) poly_expand((y+x)^2,[x,y]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;y &nbsp;+ 2 x y + x</span><br/><span class="rvts9">(%i3) poly_expand((y+x)^5,[x,y]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;5 &nbsp; &nbsp; &nbsp;4 &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp;3 &nbsp; &nbsp; &nbsp; 3 &nbsp;2 &nbsp; &nbsp; &nbsp;4 &nbsp; &nbsp; &nbsp;5</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;y &nbsp;+ 5 x y &nbsp;+ 10 x &nbsp;y &nbsp;+ 10 x &nbsp;y &nbsp;+ 5 x &nbsp;y + x</span><br/><span class="rvts9">(%i4) poly_expand(-1-x*exp(y)+x^2/sqrt(y),[x]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;y &nbsp; &nbsp; &nbsp;x</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - x %e &nbsp;+ ------- - 1</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sqrt(y)</span><br/><span class="rvts9">(%i5) poly_expand(-1-sin(x)^2+sin(x),[sin(x)]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- sin (x) + sin(x) - 1</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1849"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">poly_expt</span><span class="rvts18"> (poly, number, varlist)</span></li>
+<li class="rvps3"><span class="rvts6">Eleva el polinomio </span><span class="rvts18">poly</span><span class="rvts6"> a la potencia </span><span class="rvts18">number</span><span class="rvts6">, siendo este un entero positivo. Si </span><span class="rvts18">number</span><span class="rvts6"> no es un número entero positivo, devolverá un error.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) poly_expt(x-y,3,[x,y])-(x-y)^3,expand;</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC207"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">poly_content</span><span class="rvts18"> (poly. varlist)</span></li>
+<li class="rvps3"><span class="rvts9">poly_content</span><span class="rvts6"> calcula el MCD de los coeficientes.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) poly_content(35*y+21*x,[x,y]);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;7</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1850"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">poly_pseudo_divide</span><span class="rvts18"> (poly, polylist, varlist)</span></li>
+<li class="rvps3"><span class="rvts6">Realiza la seudo-división del polinomio </span><span class="rvts18">poly</span><span class="rvts6"> por la lista de </span><span class="rvts18">n</span><span class="rvts6"> polinomios de </span><span class="rvts18">polylist</span><span class="rvts6">. Devuelve varios resultados. El primer resultado es una lista de cocientes </span><span class="rvts18">a</span><span class="rvts6">. El segundo resultado es el resto </span><span class="rvts18">r</span><span class="rvts6">. El tercer resultado es un coeficiente escalar </span><span class="rvts18">c</span><span class="rvts6">, tal que </span><span class="rvts18">c*poly</span><span class="rvts6"> puede dividirse por </span><span class="rvts18">polylist</span><span class="rvts6"> dentro del anillo de coeficientes, el cual no es necesariamente un campo. Por último, el cuarto resultado es un entero que guarda el recuento de reducciones realizadas. El objeto resultante satisface la ecuación:</span></li>
+</ul>
+<p class="rvps3"><span class="rvts18">c*poly=sum(a[i]*polylist[i],i=1...n)+r</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1851"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">poly_exact_divide</span><span class="rvts18"> (poly1, poly2, varlist)</span></li>
+<li class="rvps3"><span class="rvts6">Divide el polinomio </span><span class="rvts18">poly1</span><span class="rvts6"> por otro polinomio </span><span class="rvts18">poly2</span><span class="rvts6">. Da por supuesto que es posible la división de resto nulo. Devuelve el cociente.</span></li>
+<li><a name="IDX1852"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">poly_normal_form</span><span class="rvts18"> (poly, polylist, varlist)</span></li>
+<li class="rvps3"><span class="rvts9">poly_normal_form</span><span class="rvts6"> encuentra la forma normal de un polinomio </span><span class="rvts18">poly</span><span class="rvts6"> respecto de un conjunto de polinomios </span><span class="rvts18">polylist</span><span class="rvts6">.</span></li>
+<li><a name="IDX1853"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">poly_buchberger_criterion</span><span class="rvts18"> (polylist, varlist)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve </span><span class="rvts9">true</span><span class="rvts6"> si </span><span class="rvts18">polylist</span><span class="rvts6"> es una base de Groebner respecto del orden de términos activo, utilizando el criterio de Buchberger: para cualesquiera polinomios </span><span class="rvts18">h1</span><span class="rvts6"> y </span><span class="rvts18">h2</span><span class="rvts6"> de </span><span class="rvts18">polylist</span><span class="rvts6"> el S-polinomio </span><span class="rvts18">S(h1,h2)</span><span class="rvts6"> se reduce a 0 </span><span class="rvts18">modulo</span><span class="rvts6"> </span><span class="rvts18">polylist</span><span class="rvts6">.</span></li>
+<li><a name="IDX1854"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">poly_buchberger</span><span class="rvts18"> (polylist_fl varlist)</span></li>
+<li class="rvps3"><span class="rvts9">poly_buchberger</span><span class="rvts6"> ejecuta el algoritmo de Buchberger sobre una lista de polinomios y devuelve la base de Groebner resultante.</span></li>
+<hr style="height: 6px;"/></li>
+</ul>
+<div><a name="IDX1855"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Variablesopcionales.html#SEC207"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_54.html#SEC209"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Variablesopcionales.html#SEC200"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Variablesopcionales.html#SEC204"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_54.html#SEC209"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="rvps11"><span class="rvts0"><span class="rvts21">53.2.4 Postprocesamiento estándar de bases de Groebner</span></span></h3>
+<p class="rvps3"><span class="rvts6">El </span><span class="rvts18">k-ésimo ideal de eliminación</span><span class="rvts6"> </span><span class="rvts18">I_k</span><span class="rvts6"> de un ideal </span><span class="rvts18">I</span><span class="rvts6"> sobre </span><span class="rvts18">K[ x[1],...,x[n] ]</span><span class="rvts6"> es el ideal </span><span class="rvts18">intersect(I, K[ x[k+1],...,x[n] ])</span><span class="rvts6">.</span><br/><span class="rvts6">El </span><span class="rvts18">ideal</span><span class="rvts6"> </span><span class="rvts18">I:J</span><span class="rvts6"> es el ideal </span><span class="rvts18">{h|para todo w en J: w*h pertence a I}</span><span class="rvts6">.</span><br/><span class="rvts6">El ideal </span><span class="rvts18">I:p^inf</span><span class="rvts6"> es el ideal </span><span class="rvts18">{h| existe un n en N: p^n*h pertence a I}</span><span class="rvts6">.</span><br/><span class="rvts6">El ideal </span><span class="rvts18">I:J^inf</span><span class="rvts6"> es el ideal </span><span class="rvts18">{h| existe un n en N y un p en J: p^n*h pertence a I}</span><span class="rvts6">.</span><br/><span class="rvts6">El </span><span class="rvts18">ideal radical</span><span class="rvts6"> </span><span class="rvts18">sqrt(I)</span><span class="rvts6"> es el ideal </span><span class="rvts18">{h| existe un n en N : h^n pertence a I }</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1856"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">poly_reduction</span><span class="rvts18"> (polylist, varlist)</span></li>
+<li class="rvps3"><span class="rvts9">poly_reduction</span><span class="rvts6"> reduce una lista de polinomios </span><span class="rvts18">polylist</span><span class="rvts6"> de manera que cada polinomio se reduce completamente respecto de los otros polinomios.</span></li>
+<li><a name="IDX1857"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">poly_minimization</span><span class="rvts18"> (polylist, varlist)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve una sublista de la lista de polinomios </span><span class="rvts18">polylist</span><span class="rvts6"> con el mismo ideal de monomios que </span><span class="rvts18">polylist</span><span class="rvts6">, pero mínimo, esto es, ningún monomio principal de los polinomios de la sublista divide a los monomios principales de los demás polinomios.</span></li>
+<li><a name="SEC208"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">poly_normalize_list</span><span class="rvts18"> (polylist, varlist)</span></li>
+<li class="rvps3"><span class="rvts9">poly_normalize_list</span><span class="rvts6"> aplica </span><span class="rvts9">poly_normalize</span><span class="rvts6"> a cada polinomio de la lista. Esto significa que divide cada polinomio de </span><span class="rvts18">polylist</span><span class="rvts6"> por su coeficiente principal.</span></li>
+<li><a name="IDX1858"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">poly_grobner</span><span class="rvts18"> (polylist, varlist)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve la base de Groebner del ideal asociado a los polinomios de </span><span class="rvts18">polylist</span><span class="rvts6">. El resultado depende de las variables globales.</span></li>
+<li><a name="IDX1859"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">poly_reduced_grobner</span><span class="rvts18"> (polylist, varlist)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve la base de Groebner reducida del ideal asociado a los polinomios de </span><span class="rvts18">polylist</span><span class="rvts6">. El resultado depende de las variables globales.</span></li>
+<li><a name="IDX1860"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">poly_depends_p</span><span class="rvts18"> (poly, var, varlist)</span></li>
+<li class="rvps3"><span class="rvts9">poly_depends</span><span class="rvts6"> comprueba si el polinomio depende de la variable </span><span class="rvts18">var</span><span class="rvts6">.</span></li>
+<li><a name="IDX1861"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">poly_elimination_ideal</span><span class="rvts18"> (polylist, n, varlist)</span></li>
+<li class="rvps3"><span class="rvts9">poly_elimination_ideal</span><span class="rvts6"> devuelve la base de Groebner del </span><span class="rvts18">n</span><span class="rvts6">-ésimo ideal de eliminación de un ideal especificado como una lista de polinomios generadores (no necesariamente una base de Groebner).</span></li>
+<li><a name="IDX1862"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">poly_colon_ideal</span><span class="rvts18"> (polylist1, polylist2, varlist)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve la base de Groebner reducida del ideal</span></li>
+</ul>
+<p class="rvps3"><span class="rvts18">I(polylist1):I(polylist2)</span></p>
+<p class="rvps3"><span class="rvts6">siendo </span><span class="rvts18">polylist1</span><span class="rvts6"> y </span><span class="rvts18">polylist2</span><span class="rvts6"> dos listas de polinomios.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1863"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">poly_ideal_intersection</span><span class="rvts18"> (polylist1, polylist2, varlist)</span></li>
+<li class="rvps3"><span class="rvts9">poly_ideal_intersection</span><span class="rvts6"> devuelve la intersección de dos ideales.</span></li>
+<li><a name="IDX1864"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">poly_lcm</span><span class="rvts18"> (poly1, poly2, varlist)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve el MCM de </span><span class="rvts18">poly1</span><span class="rvts6"> y </span><span class="rvts18">poly2</span><span class="rvts6">.</span></li>
+<li><a name="IDX1865"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">poly_gcd</span><span class="rvts18"> (poly1, poly2, varlist)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve el MCD de </span><span class="rvts18">poly1</span><span class="rvts6"> y </span><span class="rvts18">poly2</span><span class="rvts6">.</span></li>
+<li><a name="IDX1866"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">poly_grobner_equal</span><span class="rvts18"> (polylist1, polylist2, varlist)</span></li>
+<li class="rvps3"><span class="rvts9">poly_grobner_equal</span><span class="rvts6"> comprueba si dos bases de Groebner generan el mismo ideal. Devuelve </span><span class="rvts9">true</span><span class="rvts6"> si dos listas de polinomios </span><span class="rvts18">polylist1</span><span class="rvts6"> y </span><span class="rvts18">polylist2</span><span class="rvts6">, supuestas bases de Groebner, generan el mismo ideal, o </span><span class="rvts9">false</span><span class="rvts6"> en caso contrario. Eso equivale a comprobar si cada polinomio de la primera base se reduce a 0 módulo la segunda base y viceversa. Nótese que en el ejemplo que sigue la primera lista no es una base de Groebner, por lo que el resultado es </span><span class="rvts9">false</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) poly_grobner_equal([y+x,x-y],[x,y],[x,y]);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; false</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1867"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">poly_grobner_subsetp</span><span class="rvts18"> (polylist1, polylist2, varlist)</span></li>
+<li class="rvps3"><span class="rvts9">poly_grobner_subsetp</span><span class="rvts6"> comprueba si el ideal generado por </span><span class="rvts18">polylist1</span><span class="rvts6"> está contenido en el ideal generado por </span><span class="rvts18">polylist2</span><span class="rvts6">. Para que esta comprobación tenga éxito, </span><span class="rvts18">polylist2</span><span class="rvts6"> debe ser una base de Groebner.</span></li>
+<li><a name="IDX1868"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">poly_grobner_member</span><span class="rvts18"> (poly, polylist, varlist)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve </span><span class="rvts9">true</span><span class="rvts6"> si el polinomio </span><span class="rvts18">poly</span><span class="rvts6"> pertenece al ideal generado por la lista de polinomios </span><span class="rvts18">polylist</span><span class="rvts6">, la cual se supone una base de Groebner. Devolverá </span><span class="rvts9">false</span><span class="rvts6"> en caso contrario.</span></li>
+<li><a name="IDX1869"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">poly_ideal_saturation1</span><span class="rvts18"> (polylist, poly, varlist)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve la base de Groebner reducida de la saturación del ideal</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">I(polylist):poly^inf</span></p>
+<p class="rvps3"><span class="rvts6">Desde un punto de vista geométrico, sobre un campo algebraicamente cerrado, este es el conjunto de polinomios del ideal generado por </span><span class="rvts18">polylist</span><span class="rvts6"> que no se anulan sobre la variedad de </span><span class="rvts18">poly</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1870"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">poly_ideal_saturation</span><span class="rvts18"> (polylist1, polylist2, varlist)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve la base de Groebner reducida de la saturación del ideal</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">I(polylist1):I(polylist2)^inf</span></p>
+<p class="rvps3"><span class="rvts6">Desde un punto de vista geométrico, sobre un campo algebraicamente cerrado, este es el conjunto de polinomios del ideal generado por </span><span class="rvts18">polylist1</span><span class="rvts6"> que no se anulan sobre la variedad de </span><span class="rvts18">polylist2</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1871"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">poly_ideal_polysaturation1</span><span class="rvts18"> (polylist1, polylist2, varlist)</span></li>
+<li class="rvps3"><span class="rvts18">polylist2</span><span class="rvts6"> es una lista de n poliomios </span><span class="rvts9">[poly1,...,polyn]</span><span class="rvts6">. Devuelve la base de Groebner reducida del ideal</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">I(polylist):poly1^inf:...:polyn^inf</span></p>
+<p class="rvps3"><span class="rvts6">obtenida a partir de una secuencia de saturaciones sucesivas de los polinomios de la lista </span><span class="rvts18">polylist2</span><span class="rvts6"> del ideal generado por la lista de polinomios </span><span class="rvts18">polylist1</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1872"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">poly_ideal_polysaturation</span><span class="rvts18"> (polylist, polylistlist, varlist)</span></li>
+<li class="rvps3"><span class="rvts18">polylistlist</span><span class="rvts6"> es una lista de n listas de polinomios </span><span class="rvts9">[polylist1,...,polylistn]</span><span class="rvts6">. Devuelve la base de Groebner reducida de la saturación del ideal</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">I(polylist):I(polylist_1)^inf:...:I(polylist_n)^inf</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1873"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">poly_saturation_extension</span><span class="rvts18"> (poly, polylist, varlist1, varlist2)</span></li>
+<li class="rvps3"><span class="rvts9">poly_saturation_extension</span><span class="rvts6"> ejecuta el truco de Rabinowitz.</span></li>
+<li><a name="IDX1874"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">poly_polysaturation_extension</span><span class="rvts18"> (poly, polylist, varlist1, varlist2)</span></li>
+<hr style="height: 6px;"/></li>
+</ul>
+<div><table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Variablesopcionales.html#SEC200"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_54.html#SEC209"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps3"><span class="rvts10">This document was generated by </span><span class="rvts11">Robert Dodier</span><span class="rvts10"> on </span><span class="rvts11">agosto, 25 2007</span><span class="rvts10"> using </span><a class="rvts12" href="http://texi2html.cvshome.org/">texi2html 1.76</a><span class="rvts10">.</span></p>
+<p></p>
+<p class="rvps6"><span class="rvts13">Created with the Personal Edition of HelpNDoc: </span><a class="rvts14" href="http://www.helpndoc.com">Easy EPub and documentation editor</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				http://maxima.sourceforge.net</div>
+		</div>
+	</body>
+	
+</html>
+

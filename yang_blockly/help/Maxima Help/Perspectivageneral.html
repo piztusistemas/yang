@@ -1,0 +1,804 @@
+﻿<html>
+	
+<head>
+	<title>Perspectiva general</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 3.9.1.648">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Maxima.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("Perspectivageneral");
+			}
+		});
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>Perspectiva general</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Integracin.html">Integraci&oacute;n</a> &rsaquo;&rsaquo; <a href="IntroduccinaQUADPACK.html">Introducci&oacute;n a QUADPACK</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="IntroduccinaQUADPACK.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="IntroduccinaQUADPACK.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="FuncionesyvariablesparaQUADPACK.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<div><a name="INTEGRACI_00F3N"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_19.html#SEC62"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Perspectivageneral.html#SEC64"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_19.html#SEC61"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_21.html#SEC69"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h1 class="rvps2"><span class="rvts0"><span class="rvts8">20. Integración</span></span></h1>
+<div><table border="0" cellpadding="1" cellspacing="0" style="border-width: 0px;">
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="Perspectivageneral.html#SEC64">20.1 Introducción a la integración</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="Perspectivageneral.html#SEC65">20.2 Funciones y variables para integración</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="Perspectivageneral.html#SEC66">20.3 Introducción a QUADPACK</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="Perspectivageneral.html#SEC68">20.4 Funciones y variables para QUADPACK</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height: 6px;"/>
+<div><a name="SEC63"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Perspectivageneral.html#SEC63"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Perspectivageneral.html#SEC65"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Perspectivageneral.html#SEC63"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Perspectivageneral.html#SEC63"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_21.html#SEC69"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><a name="INTRODUCCI_00F3N-A-LA-INTEGRACI_00F3N"></a>
+<span class="rvts0"><span class="rvts15">20.1 Introducción a la integración</span></span></h2>
+<p class="rvps3"><span class="rvts6">Maxima tiene varias rutinas para calcular integrales. La función </span><span class="rvts9">integrate</span><span class="rvts6"> hace uso de la mayor parte de ellas. También está el paquete </span><span class="rvts9">antid</span><span class="rvts6">, que opera con funciones no especificadas y sus derivadas. Para usos numéricos se dispone de la batería de integradores adaptativos de </span><span class="rvts9">QUADPACK</span><span class="rvts6">, como </span><span class="rvts9">quad_qag</span><span class="rvts6">, </span><span class="rvts9">quad_qags</span><span class="rvts6">, etc., que se describen en la sección </span><span class="rvts9">QUADPACK</span><span class="rvts6">. También se trabajan funciones hipergeométricas, véase </span><span class="rvts9">specint</span><span class="rvts6"> para más detalles. En términos generales, Maxima sólo opera con funciones que son integrables en términos de funciones elementales, como las racionales, trigonométricas, logarítmicas, exponenciales, radicales, etc., y unas pocas extensiones de éstas, como la función de error o los dilogaritmos. No opera con integrales en términos de funciones desconocidas, como </span><span class="rvts9">g(x)</span><span class="rvts6"> o </span><span class="rvts9">h(x)</span><span class="rvts6">.</span></p>
+<hr style="height: 6px;"/>
+<div><a name="SEC64"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Perspectivageneral.html#SEC64"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Perspectivageneral.html#SEC66"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Perspectivageneral.html#SEC63"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Perspectivageneral.html#SEC63"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_21.html#SEC69"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">20.2 Funciones y variables para integración</span></span></h2>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="FUNCIONES-Y-VARIABLES-PARA-INTEGRACI_00F3N"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">changevar</span><span class="rvts18"> (expr, f(x,y), y, x)</span></li>
+<li class="rvps3"><span class="rvts6">Hace el cambio de variable dado por </span><span class="rvts19">f(x,y)</span><span class="rvts9"> = 0</span><span class="rvts6"> en todas las integrales que aparecen en </span><span class="rvts18">expr</span><span class="rvts6"> con la integración respecto de </span><span class="rvts18">x</span><span class="rvts6">. La nueva variable será </span><span class="rvts18">y</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) assume(a &gt; 0)$</span><br/><span class="rvts9">(%i2) 'integrate (%e**sqrt(a*y), y, 0, 4);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp;sqrt(a) sqrt(y)</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;I &nbsp;%e &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;dy</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0</span><br/><span class="rvts9">(%i3) changevar (%, y-z^2/a, z, y);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;abs(z)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 I &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;z %e &nbsp; &nbsp; &nbsp; dz</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- 2 sqrt(a)</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- ----------------------------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;a</span></p>
+<p class="rvps3"><span class="rvts6">Si una expresión contiene formas nominales, como aquélla en la que aparece </span><span class="rvts9">'integrate</span><span class="rvts6"> en el ejemplo, podrá ser evaluada por </span><span class="rvts9">ev</span><span class="rvts6"> si se utiliza el término </span><span class="rvts9">nouns</span><span class="rvts6">. Por ejemplo, la expresión devuelta por </span><span class="rvts9">changevar</span><span class="rvts6"> se puede evaluar haciendo </span><span class="rvts9">ev (%o3, nouns)</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">changevar</span><span class="rvts6"> también se puede utilizar para cambiar los índices de una suma o producto. Sin embargo, debe tenerse en cuenta que cuando se realiza un cambio en una suma o producto, el mismo debe expresarse en términos de sumas, como </span><span class="rvts9">i = j+ ...</span><span class="rvts6">, no como una función de mayor grado.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">(%i4) sum (a[i]*x^(i-2), i, 0, inf);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; inf</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ====</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; \ &nbsp; &nbsp; &nbsp; &nbsp; i - 2</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &gt; &nbsp; &nbsp;a &nbsp;x</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; / &nbsp; &nbsp; &nbsp;i</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ====</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; i = 0</span><br/><span class="rvts9">(%i5) changevar (%, i-2-n, n, i);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;inf</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;====</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&gt; &nbsp; &nbsp; &nbsp;a &nbsp; &nbsp; &nbsp;x</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/ &nbsp; &nbsp; &nbsp; &nbsp;n + 2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;====</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;n = - 2</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC65"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">dblint</span><span class="rvts18"> (f, r, s, a, b)</span></li>
+<li class="rvps3"><span class="rvts6">Es una rutina para integrales dobles escrita en lenguaje Maxima y posteriormente traducida y compilada a código máquina. La instrucción </span><span class="rvts9">load (dblint)</span><span class="rvts6"> carga esta función. Utiliza el método de Simpson en las dos direcciones </span><span class="rvts9">x</span><span class="rvts6"> e </span><span class="rvts9">y</span><span class="rvts6"> para calcular</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">/b /s(x)</span><br/><span class="rvts9">| &nbsp;|</span><br/><span class="rvts9">| &nbsp;| &nbsp; &nbsp;f(x,y) dy dx</span><br/><span class="rvts9">| &nbsp;|</span><br/><span class="rvts9">/a /r(x)</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts18">f</span><span class="rvts6"> debe ser una función traducida o compilada de dos variables, a la vez que </span><span class="rvts18">r</span><span class="rvts6"> y </span><span class="rvts18">s</span><span class="rvts6"> deben ser cada una de ellas una función traducida o compilada de una variable, mientras que </span><span class="rvts18">a</span><span class="rvts6"> y </span><span class="rvts18">b</span><span class="rvts6"> deben ser números en coma flotante. La rutina tiene dos variables globales que determinan el número de divisiones de los intervalos </span><span class="rvts9">x</span><span class="rvts6"> e </span><span class="rvts9">y</span><span class="rvts6">: </span><span class="rvts9">dblint_x</span><span class="rvts6"> y </span><span class="rvts9">dblint_y</span><span class="rvts6">, ambos con un valor por defecto de 10, pero que pueden cambiarse de forma independiente a otros valores enteros (hay </span><span class="rvts9">2*dblint_x+1</span><span class="rvts6"> puntos a calcular en la dirección </span><span class="rvts9">x</span><span class="rvts6"> y </span><span class="rvts9">2*dblint_y+1</span><span class="rvts6"> en la dirección </span><span class="rvts9">y</span><span class="rvts6">). La rutina subdivide el eje X y luego para cada valor de X calcula primero </span><span class="rvts19">r</span><span class="rvts9">(x)</span><span class="rvts6"> y </span><span class="rvts19">s</span><span class="rvts9">(x)</span><span class="rvts6">; entonces se subdivide el eje Y entre </span><span class="rvts19">r</span><span class="rvts9">(x)</span><span class="rvts6"> y </span><span class="rvts19">s</span><span class="rvts9">(x)</span><span class="rvts6">, evaluándose la integral a lo largo del eje Y aplicando la regla de Simpson; a continuación, se evalúa la integral a lo largo del eje X utilizando también la regla de Simpson tomando como valores de función las integrales sobre Y. Este procedimiento puede ser numéricamente inestable por múltiples motivos, pero es razonablemente rápido: evítese su uso con funciones con grandes oscilaciones o que tengan singularidades. Las integrales del eje Y dependen de la proximidad de los límites </span><span class="rvts19">r</span><span class="rvts9">(x)</span><span class="rvts6"> y </span><span class="rvts19">s</span><span class="rvts9">(x)</span><span class="rvts6">, de manera que si la distancia </span><span class="rvts19">s</span><span class="rvts9">(x) - </span><span class="rvts19">r</span><span class="rvts9">(x)</span><span class="rvts6"> varía rápidamente con X, puede dar lugar errores importantes debido a truncamientos de diferente amplitud en las integrales de Y. Se puede aumentar </span><span class="rvts9">dblint_x</span><span class="rvts6"> y </span><span class="rvts9">dblint_y</span><span class="rvts6"> al objeto de mejorar el recubrimiento de la región de integración, pero a costa del tiempo de cómputo. Es necesario que las funciones </span><span class="rvts18">f</span><span class="rvts6">, </span><span class="rvts18">r</span><span class="rvts6"> y </span><span class="rvts18">s</span><span class="rvts6"> estén traducidas o compiladas antes de utilizar </span><span class="rvts9">dblint</span><span class="rvts6">, lo cual redundará en una mejora del tiempo de ejecución de varios órdenes de magnitud respecto de la ejecución de código interpretado.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX615"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">defint</span><span class="rvts18"> (expr, x, a, b)</span></li>
+<li class="rvps3"><span class="rvts6">Intenta calcular una integral definida. La función </span><span class="rvts9">defint</span><span class="rvts6"> es invocada por </span><span class="rvts9">integrate</span><span class="rvts6"> cuando se especifican los límites de integración, por ejemplo </span><span class="rvts9">integrate (</span><span class="rvts19">expr</span><span class="rvts9">, </span><span class="rvts19">x</span><span class="rvts9">, </span><span class="rvts19">a</span><span class="rvts9">, </span><span class="rvts19">b</span><span class="rvts9">)</span><span class="rvts6">. Así, desde el punto de vista del usuario, es suficiente con utilizar </span><span class="rvts9">integrate</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">defint</span><span class="rvts6"> devuelve una expresión simbólica, bien sea el resultado calculado o la forma nominal. Véase </span><span class="rvts9">quad_qag</span><span class="rvts6"> y sus funciones relacionadas para aproximaciones numéricas de integrales definidas.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX616"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">erf</span><span class="rvts18"> (x)</span></li>
+<li class="rvps3"><span class="rvts6">Es la función de error, cuya derivada es </span><span class="rvts9">2*exp(-x^2)/sqrt(%pi)</span><span class="rvts6">.</span></li>
+<li><a name="IDX617"></a>
+<span class="rvts16">Variable optativa:</span><span class="rvts6"> </span><span class="rvts17">erfflag</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">true</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">erfflag</span><span class="rvts6"> vale </span><span class="rvts9">false</span><span class="rvts6">, la función </span><span class="rvts9">risch</span><span class="rvts6"> no introduce la función </span><span class="rvts9">erf</span><span class="rvts6"> en el resultado si no había ninguna en el integrando.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX618"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">ilt</span><span class="rvts18"> (expr, t, s)</span></li>
+<li class="rvps3"><span class="rvts6">Calcula la transformada inversa de Laplace de </span><span class="rvts18">expr</span><span class="rvts6"> con respecto de </span><span class="rvts18">t</span><span class="rvts6"> y parámetro </span><span class="rvts18">s</span><span class="rvts6">. El argumento </span><span class="rvts18">expr</span><span class="rvts6"> debe ser una fracción de polinomios cuyo denominador tenga sólo factores lineales y cuadráticos. Utilizando las funciones </span><span class="rvts9">laplace</span><span class="rvts6"> y </span><span class="rvts9">ilt</span><span class="rvts6">, junto con las funciones </span><span class="rvts9">solve</span><span class="rvts6"> o </span><span class="rvts9">linsolve</span><span class="rvts6">, el usuario podrá resolver ciertas ecuaciones integrales.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) 'integrate (sinh(a*x)*f(t-x), x, 0, t) + b*f(t) = t**2;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;t</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp;I &nbsp;f(t - x) sinh(a x) dx + b f(t) = t</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0</span><br/><span class="rvts9">(%i2) laplace (%, t, s);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a laplace(f(t), t, s) &nbsp; 2</span><br/><span class="rvts9">(%o2) &nbsp;b laplace(f(t), t, s) + --------------------- = --</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;s &nbsp;- a &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; s</span><br/><span class="rvts9">(%i3) linsolve ([%], ['laplace(f(t), t, s)]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 s &nbsp;- 2 a</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; [laplace(f(t), t, s) = --------------------]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;5 &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; 3</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; b s &nbsp;+ (a - a &nbsp;b) s</span><br/><span class="rvts9">(%i4) ilt (rhs (first (%)), s, t);</span><br/><span class="rvts9">Is &nbsp;a b (a b - 1) &nbsp;positive, negative, or zero?</span><br/><span class="rvts9">pos;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sqrt(a b (a b - 1)) t</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp;2 cosh(---------------------) &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; b &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a t</span><br/><span class="rvts9">(%o4) - ----------------------------- + -------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3 &nbsp;2 &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a b - 1</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a &nbsp;b &nbsp;- 2 a &nbsp;b + a</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; + ------------------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3 &nbsp;2 &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a &nbsp;b &nbsp;- 2 a &nbsp;b + a</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX619"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">integrate</span><span class="rvts18"> (expr, x)</span></li>
+<li><a name="IDX620"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">integrate</span><span class="rvts18"> (expr, x, a, b)</span></li>
+<li class="rvps3"><span class="rvts6">Calcula simbólicamente la integral de </span><span class="rvts18">expr</span><span class="rvts6"> respecto de </span><span class="rvts18">x</span><span class="rvts6">. La llamada </span><span class="rvts9">integrate (</span><span class="rvts19">expr</span><span class="rvts9">, </span><span class="rvts19">x</span><span class="rvts9">)</span><span class="rvts6"> resuelve una integral indefinida, mientras que </span><span class="rvts9">integrate (</span><span class="rvts19">expr</span><span class="rvts9">, </span><span class="rvts19">x</span><span class="rvts9">, </span><span class="rvts19">a</span><span class="rvts9">, </span><span class="rvts19">b</span><span class="rvts9">)</span><span class="rvts6"> resuelve una integral definida con límites de integración </span><span class="rvts18">a</span><span class="rvts6"> y </span><span class="rvts18">b</span><span class="rvts6">. Los límites no pueden contener a </span><span class="rvts18">x</span><span class="rvts6">. El argumento </span><span class="rvts18">a</span><span class="rvts6"> no necesita ser menor que </span><span class="rvts18">b</span><span class="rvts6">. Si </span><span class="rvts18">b</span><span class="rvts6"> es igual a </span><span class="rvts18">a</span><span class="rvts6">, </span><span class="rvts9">integrate</span><span class="rvts6"> devuelve cero.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Véase </span><span class="rvts9">quad_qag</span><span class="rvts6"> y funciones relacionadas para la aproximación numérica de integrales definidas. Véase </span><span class="rvts9">residue</span><span class="rvts6"> para el cálculo de residuos (integración compleja). Véase </span><span class="rvts9">antid</span><span class="rvts6"> para un método alternativo de resolución de integrales indefinidas.</span></p>
+<p class="rvps3"><span class="rvts6">Se obtendrá una integral (es decir, una expresión sin </span><span class="rvts9">integrate</span><span class="rvts6">) si </span><span class="rvts9">integrate</span><span class="rvts6"> tiene éxito en el cálculo. En otro caso, la respuesta es la forma nominal de la integral (esto es, el operador </span><span class="rvts9">'integrate</span><span class="rvts6"> precedido de apóstrofo) o una expresión que contiene una o más formas nominales. La forma nominal de </span><span class="rvts9">integrate</span><span class="rvts6"> se muestra con un símbolo integral.</span></p>
+<p class="rvps3"><span class="rvts6">En ciertos casos es útil proporcionar una forma nominal 'a mano', haciendo preceder </span><span class="rvts9">integrate</span><span class="rvts6"> con una comilla simple o apóstrofo, como en </span><span class="rvts9">'integrate (</span><span class="rvts19">expr</span><span class="rvts9">, </span><span class="rvts19">x</span><span class="rvts9">)</span><span class="rvts6">. Por ejemplo, la integral puede depender de algunos parámetros que todavía no han sido calculados. La forma nominal puede aplicarse después a sus argumentos haciendo </span><span class="rvts9">ev (</span><span class="rvts19">i</span><span class="rvts9">, nouns)</span><span class="rvts6"> donde </span><span class="rvts18">i</span><span class="rvts6"> es la forma nominal de interés.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">integrate</span><span class="rvts6"> trata de manera diferente las integrales definidas de las indefinidas, empleando una batería de heurísticas especial para cada caso. Casos especiales de integrales definidas incluyen las que tienen límites de integración iguales a cero o a infinito (</span><span class="rvts9">inf</span><span class="rvts6"> o </span><span class="rvts9">minf</span><span class="rvts6">), funciones trigonométricas con límites de integración igual a cero y </span><span class="rvts9">%pi</span><span class="rvts6"> o </span><span class="rvts9">2 %pi</span><span class="rvts6">, funciones racionales, integrales relacionadas con las funciones </span><span class="rvts9">beta</span><span class="rvts6"> y </span><span class="rvts9">psi</span><span class="rvts6"> y algunas integrales logarítmicas y trigonométricas. El tratamiento de funciones racionales puede incluir el cálculo de residuos. Si no se reconoce ninguno de los casos especiales, se intenta resolver la integral idefinida y evaluarla en los límites de integración. Esto incluye tomar límites cuando alguno de los extremos del intervalo de integración se acerca a más infinito o a menos infinito; véase también </span><span class="rvts9">ldefint</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Casos especiales de integrales indefinidas incluyen a las funciones trigonométricas, exponenciales, logarítmicas y racionales. La función </span><span class="rvts9">integrate</span><span class="rvts6"> también hace uso de una pequeña tabla de integrales elementales.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">integrate</span><span class="rvts6"> puede llevar a cabo cambios de variable si el integrando es de la forma </span><span class="rvts9">f(g(x)) * diff(g(x), x)</span><span class="rvts6">, entonces </span><span class="rvts9">integrate</span><span class="rvts6"> trata de encontrar una subexpresión de </span><span class="rvts9">g(x)</span><span class="rvts6"> tal que la derivada de </span><span class="rvts9">g(x)</span><span class="rvts6"> divida el integrando. Esta búsqueda puede hacer uso de las derivadas establecidas con la función </span><span class="rvts9">gradef</span><span class="rvts6">. Véanse también </span><span class="rvts9">changevar</span><span class="rvts6"> y </span><span class="rvts9">antid</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Si ninguna de las heurísticas descritas resuelve la integral indefinida, se ejecuta el algoritmo de Risch. La variable </span><span class="rvts9">risch</span><span class="rvts6"> puede utilizarse como una </span><span class="rvts9">evflag</span><span class="rvts6">, en una llamada a </span><span class="rvts9">ev</span><span class="rvts6"> o en la línea de comandos por ejemplo, </span><span class="rvts9">ev (integrate (</span><span class="rvts19">expr</span><span class="rvts9">, </span><span class="rvts19">x</span><span class="rvts9">), risch)</span><span class="rvts6"> o </span><span class="rvts9">integrate (</span><span class="rvts19">expr</span><span class="rvts9">, </span><span class="rvts19">x</span><span class="rvts9">), risch</span><span class="rvts6">. Si </span><span class="rvts9">risch</span><span class="rvts6"> está presenta, </span><span class="rvts9">integrate</span><span class="rvts6"> llama a la función </span><span class="rvts9">risch</span><span class="rvts6"> sin intentar primero las heurísticas. Véase también </span><span class="rvts9">risch</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">integrate</span><span class="rvts6"> opera únicamente con relaciones funcionales que se representen explícitamente con la notación </span><span class="rvts9">f(x)</span><span class="rvts6">, sin considerar las dependencias implícitas establecidas mediante la función </span><span class="rvts9">depends</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Es posible que </span><span class="rvts9">integrate</span><span class="rvts6"> necesite conocer alguna propiedad de alguno de los parámetros presentes en el integrando, en cuyo caso </span><span class="rvts9">integrate</span><span class="rvts6"> consultará en primer lugar la base de datos creada con </span><span class="rvts9">assume</span><span class="rvts6">, y si la variable de interés no se encuentra ahí, </span><span class="rvts9">integrate</span><span class="rvts6"> le preguntará al usuario. Dependiendo de la pregunta, posibles respuestas son: </span><span class="rvts9">yes;</span><span class="rvts6">, </span><span class="rvts9">no;</span><span class="rvts6">, </span><span class="rvts9">pos;</span><span class="rvts6">, </span><span class="rvts9">zero;</span><span class="rvts6"> o </span><span class="rvts9">neg;</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Por defecto, </span><span class="rvts9">integrate</span><span class="rvts6"> no se considera lineal. Véanse </span><span class="rvts9">declare</span><span class="rvts6"> y </span><span class="rvts9">linear</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">integrate</span><span class="rvts6"> intentará la integración por partes sólo en casos especiales.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Integrales elementales indefinidas y definidas.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) integrate (sin(x)^3, x);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;cos (x)</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ------- - cos(x)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3</span><br/><span class="rvts9">(%i2) integrate (x/ sqrt (b^2 - x^2), x);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp;2</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- sqrt(b &nbsp;- x )</span><br/><span class="rvts9">(%i3) integrate (cos(x)^2 * exp(x), x, 0, %pi);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; %pi</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3 %e &nbsp; &nbsp; &nbsp;3</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;------- - -</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;5 &nbsp; &nbsp; &nbsp;5</span><br/><span class="rvts9">(%i4) integrate (x^2 * exp(-x^2), x, minf, inf);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;sqrt(%pi)</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ---------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Utilización de </span><span class="rvts9">assume</span><span class="rvts6"> e interacción.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) assume (a &gt; 1)$</span><br/><span class="rvts9">(%i2) integrate (x**a/(x+1)**(5/2), x, 0, inf);</span><br/><span class="rvts9"> &nbsp; &nbsp;2 a + 2</span><br/><span class="rvts9">Is &nbsp;------- &nbsp;an integer?</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; 5</span><br/><span class="rvts9">no;</span><br/><span class="rvts9">Is &nbsp;2 a - 3 &nbsp;positive, negative, or zero?</span><br/><span class="rvts9">neg;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;beta(a + 1, - - a)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Cambio de variable. En este ejemplo hay dos cambios de variable: uno utilizando una derivada establecida con </span><span class="rvts9">gradef</span><span class="rvts6"> y otra utilizando la derivada </span><span class="rvts9">diff(r(x))</span><span class="rvts6"> de una función no especificada </span><span class="rvts9">r(x)</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i3) gradef (q(x), sin(x**2));</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; q(x)</span><br/><span class="rvts9">(%i4) diff (log (q (r (x))), x);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;d &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (-- (r(x))) sin(r (x))</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;dx</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;----------------------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;q(r(x))</span><br/><span class="rvts9">(%i5) integrate (%, x);</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; log(q(r(x)))</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">El valor devuelto contiene la forma nominal </span><span class="rvts9">'integrate</span><span class="rvts6">. En este ejemplo, Maxima puede extraer un factor del denominador de una función racional, pero no puede factorizar el resto. La función </span><span class="rvts9">grind</span><span class="rvts6"> muestra la forma nominal </span><span class="rvts9">'integrate</span><span class="rvts6"> del resultado. Véase también </span><span class="rvts9">integrate_use_rootsof</span><span class="rvts6"> para más información sobre integrales de funciones racionales.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) expand ((x-4) * (x^3+2*x+1));</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4 &nbsp; &nbsp; &nbsp;3 &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x &nbsp;- 4 x &nbsp;+ 2 x &nbsp;- 7 x - 4</span><br/><span class="rvts9">(%i2) integrate (1/%, x);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/ &nbsp;2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ x &nbsp;+ 4 x + 18</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;I ------------- dx</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;] &nbsp;3</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; log(x - 4) &nbsp; / x &nbsp;+ 2 x + 1</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;---------- - ------------------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 73 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 73</span><br/><span class="rvts9">(%i3) grind (%);</span><br/><span class="rvts9">log(x-4)/73-('integrate((x^2+4*x+18)/(x^3+2*x+1),x))/73$</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Definición de una función mediante una integral. El cuerpo de una función no se evalúa cuando ésta se define, de manera que el cuerpo de </span><span class="rvts9">f_1</span><span class="rvts6"> en este ejemplo contiene la forma nominal de </span><span class="rvts9">integrate</span><span class="rvts6">. El operador comilla-comilla </span><span class="rvts9">''</span><span class="rvts6"> hace que se evalúe la integral y su resultado será el que defina a la función </span><span class="rvts9">f_2</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) f_1 (a) := integrate (x^3, x, 1, a);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; f_1(a) := integrate(x , x, 1, a)</span><br/><span class="rvts9">(%i2) ev (f_1 (7), nouns);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;600</span><br/><span class="rvts9">(%i3) /* Note parentheses around integrate(...) here */</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;f_2 (a) := ''(integrate (x^3, x, 1, a));</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;a &nbsp; &nbsp;1</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; f_2(a) := -- - -</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4 &nbsp; &nbsp;4</span><br/><span class="rvts9">(%i4) f_2 (7);</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;600</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX621"></a>
+<span class="rvts16">Variable del sistema:</span><span class="rvts6"> </span><span class="rvts17">integration_constant_counter</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: 0</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La variable </span><span class="rvts9">integration_constant_counter</span><span class="rvts6"> es un contador que se actualiza cada vez que se introduce una constante de integración en una expresión como resultado de una integración indefinida.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX622"></a>
+<span class="rvts16">Variable optativa:</span><span class="rvts6"> </span><span class="rvts17">integrate_use_rootsof</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">false</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">integrate_use_rootsof</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6"> y el denominador de una función racional no se puede factorizar, </span><span class="rvts9">integrate</span><span class="rvts6"> devuelve la integral como una suma respecto de las raíces desconocidas del denominador.</span></p>
+<p class="rvps3"><span class="rvts6">Por ejemplo, dándole a </span><span class="rvts9">integrate_use_rootsof</span><span class="rvts6"> el valor </span><span class="rvts9">false</span><span class="rvts6">, </span><span class="rvts9">integrate</span><span class="rvts6"> devuelve la integral no resuelta de la función racional en forma nominal:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) integrate_use_rootsof: false$</span><br/><span class="rvts9">(%i2) integrate (1/(1+x+x^5), x);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp;/ &nbsp;2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp;[ x &nbsp;- 4 x + 5</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp;I ------------ dx &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 x + 1</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp;] &nbsp;3 &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;5 atan(-------)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp;/ x &nbsp;- x &nbsp;+ 1 &nbsp; &nbsp; &nbsp; log(x &nbsp;+ x + 1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;sqrt(3)</span><br/><span class="rvts9">(%o2) &nbsp; ----------------- - --------------- + ---------------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;7 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 14 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 7 sqrt(3)</span></p>
+<p class="rvps3"><span class="rvts6">Si ahora se le da a la variable el valor </span><span class="rvts9">true</span><span class="rvts6">, la parte no resuelta de la integral se expresa como una suma cuyos sumandos dependen de las raíces del denominador de la función racional:</span></p>
+<p class="rvps4"><span class="rvts9">(%i3) integrate_use_rootsof: true$</span><br/><span class="rvts9">(%i4) integrate (1/(1+x+x^5), x);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;==== &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;\ &nbsp; &nbsp; &nbsp; (%r4 &nbsp;- 4 %r4 + 5) log(x - %r4)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &gt; &nbsp; &nbsp; &nbsp;-------------------------------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;/ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;==== &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3 %r4 &nbsp;- 2 %r4</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3 &nbsp; &nbsp;2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;%r4 in rootsof(x &nbsp;- x &nbsp;+ 1)</span><br/><span class="rvts9">(%o4) ----------------------------------------------------------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 7</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 x + 1</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;5 atan(-------)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;log(x &nbsp;+ x + 1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;sqrt(3)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- --------------- + ---------------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;14 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 7 sqrt(3)</span></p>
+<p class="rvps3"><span class="rvts6">Alternativamente, el usuario puede calcular las raíces del denominador separadamente y luego representar el integrando en función de dichas raíces, como por ejemplo </span><span class="rvts9">1/((x - a)*(x - b)*(x - c))</span><span class="rvts6"> o </span><span class="rvts9">1/((x^2 - (a+b)*x + a*b)*(x - c))</span><span class="rvts6"> si el denominador es un polinomio de tercer grado. En algunos casos, esto ayudará a Maxima mejorar sus resultados.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX623"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">ldefint</span><span class="rvts18"> (expr, x, a, b)</span></li>
+<li class="rvps3"><span class="rvts6">Calcula la integral definida de </span><span class="rvts18">expr</span><span class="rvts6"> utilizando </span><span class="rvts9">limit</span><span class="rvts6"> tras el cálculo de la integral indefinida de </span><span class="rvts18">expr</span><span class="rvts6"> respecto a </span><span class="rvts18">x</span><span class="rvts6"> en los extremos de integración </span><span class="rvts18">b</span><span class="rvts6"> y </span><span class="rvts18">a</span><span class="rvts6">. Si no consigue calcular la integral definida, </span><span class="rvts9">ldefint</span><span class="rvts6"> devuelve una expresión con los límites en forma nominal.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">integrate</span><span class="rvts6"> no llama a </span><span class="rvts9">ldefint</span><span class="rvts6">, de modo que la ejecución de </span><span class="rvts9">ldefint (</span><span class="rvts19">expr</span><span class="rvts9">, </span><span class="rvts19">x</span><span class="rvts9">, </span><span class="rvts19">a</span><span class="rvts9">, </span><span class="rvts19">b</span><span class="rvts9">)</span><span class="rvts6"> puede dar un resultado diferente que </span><span class="rvts9">integrate (</span><span class="rvts19">expr</span><span class="rvts9">, </span><span class="rvts19">x</span><span class="rvts9">, </span><span class="rvts19">a</span><span class="rvts9">, </span><span class="rvts19">b</span><span class="rvts9">)</span><span class="rvts6">. La función </span><span class="rvts9">ldefint</span><span class="rvts6"> siempre utiliza el mismo método para calcular la integral definida, mientras que </span><span class="rvts9">integrate</span><span class="rvts6"> puede hacer uso de varias heurísticas y reconocer así casos especiales.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX624"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">residue</span><span class="rvts18"> (expr, z, z_0)</span></li>
+<li class="rvps3"><span class="rvts6">Calcula el residuo en el plano complejo de la expresión </span><span class="rvts18">expr</span><span class="rvts6"> cuando la variable </span><span class="rvts18">z</span><span class="rvts6"> toma el valor </span><span class="rvts18">z_0</span><span class="rvts6">. El residuo es el coeficiente de </span><span class="rvts9">(</span><span class="rvts19">z</span><span class="rvts9"> - </span><span class="rvts19">z_0</span><span class="rvts9">)^(-1)</span><span class="rvts6"> en el desarrollo de Laurent de </span><span class="rvts18">expr</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) residue (s/(s**2+a**2), s, a*%i);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9">(%i2) residue (sin(a*x)/x**4, x, 0);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;a</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - --</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;6</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX625"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">risch</span><span class="rvts18"> (expr, x)</span></li>
+<li class="rvps3"><span class="rvts6">Integra </span><span class="rvts18">expr</span><span class="rvts6"> respecto de </span><span class="rvts18">x</span><span class="rvts6"> utilizando el caso trascendental del algoritmo de Risch. El caso algebraico del algoritmo de Risch no se ha implementado. Este método trata los casos de exponenciales y logaritmos anidados que no resuelve el procedimiento principal de </span><span class="rvts9">integrate</span><span class="rvts6">. La función </span><span class="rvts9">integrate</span><span class="rvts6"> llamará automáticamente a </span><span class="rvts9">risch</span><span class="rvts6"> si se presentan estos casos.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si la variable </span><span class="rvts9">erfflag</span><span class="rvts6"> vale </span><span class="rvts9">false</span><span class="rvts6">, evita que </span><span class="rvts9">risch</span><span class="rvts6"> introduzca la función </span><span class="rvts9">erf</span><span class="rvts6"> en la respuesta si ésta no estaba presente previamente en el integrando.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) risch (x^2*erf(x), x);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- x</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp;%pi x &nbsp;erf(x) + (sqrt(%pi) x &nbsp;+ sqrt(%pi)) %e</span><br/><span class="rvts9">(%o1) &nbsp; -------------------------------------------------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3 %pi</span><br/><span class="rvts9">(%i2) diff(%, x), ratsimp;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x &nbsp;erf(x)</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX626"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">tldefint</span><span class="rvts18"> (expr, x, a, b)</span></li>
+<li class="rvps3"><span class="rvts6">Equivale a </span><span class="rvts9">ldefint</span><span class="rvts6"> cuando </span><span class="rvts9">tlimswitch</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">.</span></li>
+<hr style="height: 6px;"/></li>
+</ul>
+<div><a name="IDX627"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Perspectivageneral.html#SEC65"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Perspectivageneral.html#SEC67"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Perspectivageneral.html#SEC63"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Perspectivageneral.html#SEC63"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_21.html#SEC69"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">20.3 Introducción a QUADPACK</span></span></h2>
+<p class="rvps3"><a name="IDX628"></a>
+<span class="rvts6">QUADPACK es un conjunto de funciones para el cálculo numérico de integrales definidas de una variable. Se creó a partir de un trabajo conjunto de R. Piessens </span><a class="rvts7" href="maxima_fot.html#FOOT1">(1)</a><span class="rvts6">, E. de Doncker </span><a class="rvts7" href="maxima_fot.html#FOOT2">(2)</a><span class="rvts6">, C. Ueberhuber </span><a class="rvts7" href="maxima_fot.html#FOOT3">(3)</a><span class="rvts6">, and D. Kahaner </span><a class="rvts7" href="maxima_fot.html#FOOT4">(4)</a><span class="rvts6">.</span></p>
+<p class="rvps3"><a name="INTRODUCCI_00F3N-A-QUADPACK"></a>
+<span class="rvts6">La librería QUADPACK incluida en Maxima es una traducción automática (mediante el programa </span><span class="rvts9">f2cl</span><span class="rvts6">) del código fuente Fortran de QUADPACK tal como se encuentra en la SLATEC Common Mathematical Library,Versión 4.1 </span><a class="rvts7" href="maxima_fot.html#FOOT5">(5)</a><span class="rvts6">. La librería SLATEC está fechada en julio de 1993, pero las funciones QUADPACK fueron escritas algunos años antes. Hay otra versión de QUADPACK en Netlib </span><a class="rvts7" href="maxima_fot.html#FOOT6">(6)</a><span class="rvts6">, pero no está claro hasta qué punto difiere de la que forma parte de la librería SLATEC.</span></p>
+<p class="rvps3"><span class="rvts6">Las funciones QUADPACK incluidas en Maxima son todas automáticas, en el sentido de que estas funciones intentan calcular sus resultados con una exactitud especificada, requiriendo un número indeterminado de evaluaciones de funciones. La traducción a Lisp que Maxima hace de QUADPACK incluye también algunas funciones que no son automáticas, pero que no son accesibles desde el nivel de Maxima.</span></p>
+<p class="rvps3"><a name="SEC66"></a>
+<span class="rvts6">Se puede encontrar más información sobre QUADPACK en el libro </span><a class="rvts7" href="maxima_fot.html#FOOT7">(7)</a><span class="rvts6">.</span></p>
+<hr style="height: 6px;"/>
+<div><a name="DOCF1"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Perspectivageneral.html#SEC66"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Perspectivageneral.html#SEC68"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Perspectivageneral.html#SEC63"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Perspectivageneral.html#SEC66"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_21.html#SEC69"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="rvps11"><span class="rvts0"><span class="rvts21">20.3.1 Perspectiva general</span></span></h3>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><span class="rvts9">quad_qag</span></li>
+<li class="rvps3"><span class="rvts6">Integración de una función general en un intervalo finito. La función </span><span class="rvts9">quad_qag</span><span class="rvts6"> implementa un integrador global adaptativo simple utilizando una estrategia de Aind (Piessens, 1973). Se puede escoger entre seis pares de fórmulas de cuadratura de Gauss-Kronrod para la regla de evaluación. Las reglas de rango superior son útiles en los casos en los que los integrandos tienen un alto grado de oscilación.</span></li>
+<li><span class="rvts9">quad_qags</span></li>
+<li class="rvps3"><span class="rvts6">Integración de una función general en un intervalo finito. La función </span><span class="rvts9">quad_qags</span><span class="rvts6"> implementa la subdivisión de intervalos global adaptativa con extrapolación (de Doncker, 1978) mediante el algoritmo Epsilon (Wynn, 1956).</span></li>
+<li><span class="rvts9">quad_qagi</span></li>
+<li class="rvps3"><span class="rvts6">Integración de una función general en un intervalo infinito o semi-infinito. El intervalo se proyecta sobre un intervalo finito y luego se aplica la misma estrategia que en </span><span class="rvts9">quad_qags</span><span class="rvts6">.</span></li>
+<li><span class="rvts9">quad_qawo</span></li>
+<li class="rvps3"><span class="rvts6">Integración de </span><span class="rvts18">cos(omega x) f(x)</span><span class="rvts6"> o </span><span class="rvts18">sin(omega x) f(x)</span><span class="rvts6"> en un intervalo finito, siendo </span><span class="rvts18">omega</span><span class="rvts6"> una constante. La regla de evaluación se basa en la técnica modificada de Clenshaw-Curtis. La función </span><span class="rvts9">quad_qawo</span><span class="rvts6"> aplica la subdivisión adaptativa con extrapolación, de forma similar a </span><span class="rvts9">quad_qags</span><span class="rvts6">.</span></li>
+<li><span class="rvts9">quad_qawf</span></li>
+<li class="rvps3"><span class="rvts6">Calcula la transformada seno o coseno de Fourier en un intervalo semi-infinito. Se aplica el mismo método que en </span><span class="rvts9">quad_qawo</span><span class="rvts6"> a sucesivos intervalos finitos, acelerando la convergencia mediante el algoritmo Epsilon (Wynn, 1956).</span></li>
+<li><span class="rvts9">quad_qaws</span></li>
+<li class="rvps3"><span class="rvts6">Integración de </span><span class="rvts18">w(x) f(x)</span><span class="rvts6"> en un intervalo finito </span><span class="rvts18">[a, b]</span><span class="rvts6">, siendo </span><span class="rvts18">w</span><span class="rvts6"> una función de la forma </span><span class="rvts18">(x - a)^alpha (b - x)^beta v(x)</span><span class="rvts6">, con </span><span class="rvts18">v(x)</span><span class="rvts6"> igual a 1, a </span><span class="rvts18">log(x - a)</span><span class="rvts6">, a </span><span class="rvts18">log(b - x)</span><span class="rvts6"> o a </span><span class="rvts18">log(x - a) log(b - x)</span><span class="rvts6"> y con </span><span class="rvts18">alpha &gt; -1</span><span class="rvts6">, y </span><span class="rvts18">beta &gt; -1</span><span class="rvts6">. Se aplica una estrategia de subdivisión adaptativa global, con integración de Clenshaw-Curtis modificada en los subintervalos que contienen a </span><span class="rvts18">a</span><span class="rvts6"> y a </span><span class="rvts18">b</span><span class="rvts6">.</span></li>
+<li><span class="rvts9">quad_qawc</span></li>
+<li class="rvps3"><span class="rvts6">Calcula el valor principal de Cauchy de </span><span class="rvts18">f(x)/(x - c)</span><span class="rvts6"> en un intervalo finito </span><span class="rvts18">(a, b)</span><span class="rvts6"> para una </span><span class="rvts18">c</span><span class="rvts6"> dada. La estrategia es global adaptativa, utilizando la integración de Clenshaw-Curtis modificada en los subintervalos que contienen a </span><span class="rvts18">x = c</span><span class="rvts6">.</span></li>
+<hr style="height: 6px;"/></li>
+</ul>
+<div><a name="DOCF2"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Perspectivageneral.html#SEC67"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_21.html#SEC69"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Perspectivageneral.html#SEC63"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Perspectivageneral.html#SEC63"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_21.html#SEC69"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">20.4 Funciones y variables para QUADPACK</span></span></h2>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="DOCF3"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">quad_qag</span><span class="rvts18"> (f(x), x, a, b, key, epsrel, limit)</span></li>
+<li><a name="DOCF4"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">quad_qag</span><span class="rvts18"> (f, x, a, b, key, epsrel, limit)</span></li>
+<li class="rvps3"><span class="rvts6">Integración de una función general en un intervalo finito. La función </span><span class="rvts9">quad_qag</span><span class="rvts6"> implementa un integrador global adaptativo simple utilizando una estrategia de Aind (Piessens, 1973). Se puede escoger entre seis pares de fórmulas de cuadratura de Gauss-Kronrod para la regla de evaluación. Las reglas de rango superior son útiles en los casos en los que los integrandos tienen un alto grado de oscilación.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">quad_qag</span><span class="rvts6"> calcula numéricamente la integral</span></p>
+<p class="rvps3"><span class="rvts18">integrate (f(x), x, a, b)</span></p>
+<p class="rvps3"><span class="rvts6">utilizando un integrador adaptativo simple.</span></p>
+<p class="rvps3"><span class="rvts6">La función a integrar es </span><span class="rvts18">f(x)</span><span class="rvts6">, con variable independiente </span><span class="rvts18">x</span><span class="rvts6">, siendo el intervalo de integración el comprendido entre </span><span class="rvts18">a</span><span class="rvts6"> y </span><span class="rvts18">b</span><span class="rvts6">. El argumento </span><span class="rvts18">key</span><span class="rvts6"> indica el integrador a utilizar y debe ser un número entero entre 1 y 6, ambos inclusive. El valor de </span><span class="rvts18">key</span><span class="rvts6"> selecciona el orden de la regla de integración de Gauss-Kronrod. Las reglas de rango superior son útiles en los casos en los que los integrandos tienen un alto grado de oscilación.</span></p>
+<p class="rvps3"><span class="rvts6">El integrando se puede especificar con el nombre de una función u operador de Maxima o de Lisp, como una expresión lambda o como una expresión general de Maxima.</span></p>
+<p class="rvps3"><span class="rvts6">La integración numérica se hace de forma adaptativa particionando la región de integración en subintervalos hasta conseguir la precisión requerida.</span></p>
+<p class="rvps3"><span class="rvts6">Los argumentos opcionales </span><span class="rvts18">epsrel</span><span class="rvts6"> y </span><span class="rvts18">limit</span><span class="rvts6"> son el error relativo y el número máximo de subintervalos, respectivamente. La variable </span><span class="rvts18">epsrel</span><span class="rvts6"> tiene por defecto el valor 1e-8 y </span><span class="rvts18">limit</span><span class="rvts6"> el de 200.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">quad_qag</span><span class="rvts6"> devuelve una lista de cuatro elementos:</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li><span class="rvts6">la aproximación a la integral,</span></li>
+<li><span class="rvts6">el error absoluto estimado de la aproximación,</span></li>
+<li><span class="rvts6">el número de evaluaciones del integrando,</span></li>
+<li><span class="rvts6">un código de error.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">El código de error (el cuarto elemento del resultado) puede tener los siguientes valores:</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li><span class="rvts9">0</span></li>
+<li class="rvps3"><span class="rvts6">si no ha habido problemas;</span></li>
+<li><span class="rvts9">1</span></li>
+<li class="rvps3"><span class="rvts6">si se utilizaron demasiados intervalos;</span></li>
+<li><span class="rvts9">2</span></li>
+<li class="rvps3"><span class="rvts6">si se encontró un número excesivo de errores de redondeo;</span></li>
+<li><span class="rvts9">3</span></li>
+<li class="rvps3"><span class="rvts6">si el integrando ha tenido un comportamiento extraño frente a la integración;</span></li>
+<li><span class="rvts9">6</span></li>
+<li class="rvps3"><span class="rvts6">si los argumentos de entrada no son válidos.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) quad_qag (x^(1/2)*log(1/x), x, 0, 1, 3);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp;[.4444444444492108, 3.1700968502883E-9, 961, 0]</span><br/><span class="rvts9">(%i2) integrate (x^(1/2)*log(1/x), x, 0, 1);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;9</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="DOCF5"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">quad_qags</span><span class="rvts18"> (f(x), x, a, b, epsrel, limit)</span></li>
+<li><a name="DOCF6"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">quad_qags</span><span class="rvts18"> (f, x, a, b, epsrel, limit)</span></li>
+<li class="rvps3"><span class="rvts6">Integración de una función general en un intervalo finito. La función </span><span class="rvts9">quad_qags</span><span class="rvts6"> implementa la subdivisión de intervalos global adaptativa con extrapolación (de Doncker, 1978) mediante el algoritmo Epsilon (Wynn, 1956).</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">quad_qags</span><span class="rvts6"> calcula la integral</span></p>
+<p class="rvps3"><span class="rvts18">integrate (f(x), x, a, b)</span></p>
+<p class="rvps3"><span class="rvts6">La función a integrar es </span><span class="rvts18">f(x)</span><span class="rvts6">, de variable independiente </span><span class="rvts18">x</span><span class="rvts6">, siendo el intervalo de integración el comprendido entre </span><span class="rvts18">a</span><span class="rvts6"> y </span><span class="rvts18">b</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">El integrando se puede especificar con el nombre de una función u operador de Maxima o de Lisp, como una expresión lambda o como una expresión general de Maxima.</span></p>
+<p class="rvps3"><span class="rvts6">Los argumentos opcionales </span><span class="rvts18">epsrel</span><span class="rvts6"> y </span><span class="rvts18">limit</span><span class="rvts6"> son el error relativo y el número máximo de subintervalos, respectivamente. La variable </span><span class="rvts18">epsrel</span><span class="rvts6"> tiene por defecto el valor 1e-8 y </span><span class="rvts18">limit</span><span class="rvts6"> el de 200.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">quad_qags</span><span class="rvts6"> devuelve una lista de cuatro elementos:</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li><span class="rvts6">la aproximación a la integral,</span></li>
+<li><span class="rvts6">el error absoluto estimado de la aproximación,</span></li>
+<li><span class="rvts6">el número de evaluaciones del integrando,</span></li>
+<li><span class="rvts6">un código de error.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">El código de error (el cuarto elemento del resultado) puede tener los siguientes valores:</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li><span class="rvts9">0</span></li>
+<li class="rvps3"><span class="rvts6">si no ha habido problemas;</span></li>
+<li><span class="rvts9">1</span></li>
+<li class="rvps3"><span class="rvts6">si se utilizaron demasiados intervalos;</span></li>
+<li><span class="rvts9">2</span></li>
+<li class="rvps3"><span class="rvts6">si se encontró un número excesivo de errores de redondeo;</span></li>
+<li><span class="rvts9">3</span></li>
+<li class="rvps3"><span class="rvts6">si el integrando ha tenido un comportamiento extraño frente a la integración;</span></li>
+<li><span class="rvts9">4</span></li>
+<li class="rvps3"><span class="rvts6">fallo de convergencia;</span></li>
+<li><span class="rvts9">5</span></li>
+<li class="rvps3"><span class="rvts6">la integral es probablemente divergente o de convergencia lenta;</span></li>
+<li><span class="rvts9">6</span></li>
+<li class="rvps3"><span class="rvts6">si los argumentos de entrada no son válidos.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) quad_qags (x^(1/2)*log(1/x), x, 0 ,1);</span><br/><span class="rvts9">(%o1) &nbsp; [.4444444444444448, 1.11022302462516E-15, 315, 0]</span></p>
+<p class="rvps3"><span class="rvts6">Nótese que </span><span class="rvts9">quad_qags</span><span class="rvts6"> es más precisa y eficiente que </span><span class="rvts9">quad_qag</span><span class="rvts6"> para este integrando.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="DOCF7"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">quad_qagi</span><span class="rvts18"> (f(x), x, a, inftype, epsrel, limit)</span></li>
+<li><a name="SEC67"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">quad_qagi</span><span class="rvts18"> (f, x, a, inftype, epsrel, limit)</span></li>
+<li class="rvps3"><span class="rvts6">Integración de una función general en un intervalo infinito o semi-infinito. El intervalo se proyecta sobre un intervalo finito y luego se aplica la misma estrategia que en </span><span class="rvts9">quad_qags</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">quad_qagi</span><span class="rvts6"> calcula cualquiera las siguientes integrales:</span></p>
+<p class="rvps3"><span class="rvts18">integrate (f(x), x, a, inf)</span></p>
+<p class="rvps3"><span class="rvts18">integrate (f(x), x, minf, a)</span></p>
+<p class="rvps3"><span class="rvts18">integrate (f(x), x, minf, inf)</span></p>
+<p class="rvps3"><span class="rvts6">utilizando la rutina QAGI de Quadpack QAGI. La función a integrar es </span><span class="rvts18">f(x)</span><span class="rvts6">, con variable independiente </span><span class="rvts18">x</span><span class="rvts6">, siendo el intervalo de integración de rango infinito.</span></p>
+<p class="rvps3"><span class="rvts6">El integrando se puede especificar con el nombre de una función u operador de Maxima o de Lisp, como una expresión lambda o como una expresión general de Maxima.</span></p>
+<p class="rvps3"><span class="rvts6">El argumento </span><span class="rvts18">inftype</span><span class="rvts6"> determina el intervalo de integración como sigue:</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li><span class="rvts9">inf</span></li>
+<li class="rvps3"><span class="rvts6">El intervalo es desde </span><span class="rvts18">a</span><span class="rvts6"> hasta más infinito.</span></li>
+<li><span class="rvts9">minf</span></li>
+<li class="rvps3"><span class="rvts6">El intervalo es desde menos infinito hasta </span><span class="rvts18">a</span><span class="rvts6">.</span></li>
+<li><span class="rvts9">both</span></li>
+<li class="rvps3"><span class="rvts6">El intervalo es toda la recta real.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Los argumentos opcionales </span><span class="rvts18">epsrel</span><span class="rvts6"> y </span><span class="rvts18">limit</span><span class="rvts6"> son el error relativo y el número máximo de subintervalos, respectivamente. La variable </span><span class="rvts18">epsrel</span><span class="rvts6"> tiene por defecto el valor 1e-8 y </span><span class="rvts18">limit</span><span class="rvts6"> el de 200.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">quad_qagi</span><span class="rvts6"> devuelve una lista de cuatro elementos:</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li><span class="rvts6">la aproximación a la integral,</span></li>
+<li><span class="rvts6">el error absoluto estimado de la aproximación,</span></li>
+<li><span class="rvts6">el número de evaluaciones del integrando,</span></li>
+<li><span class="rvts6">un código de error.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">El código de error (el cuarto elemento del resultado) puede tener los siguientes valores:</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li><span class="rvts9">0</span></li>
+<li class="rvps3"><span class="rvts6">si no ha habido problemas;</span></li>
+<li><span class="rvts9">1</span></li>
+<li class="rvps3"><span class="rvts6">si se utilizaron demasiados intervalos;</span></li>
+<li><span class="rvts9">2</span></li>
+<li class="rvps3"><span class="rvts6">si se encontró un número excesivo de errores de redondeo;</span></li>
+<li><span class="rvts9">3</span></li>
+<li class="rvps3"><span class="rvts6">si el integrando ha tenido un comportamiento extraño frente a la integración;</span></li>
+<li><span class="rvts9">4</span></li>
+<li class="rvps3"><span class="rvts6">fallo de convergencia;</span></li>
+<li><span class="rvts9">5</span></li>
+<li class="rvps3"><span class="rvts6">la integral es probablemente divergente o de convergencia lenta;</span></li>
+<li><span class="rvts9">6</span></li>
+<li class="rvps3"><span class="rvts6">si los argumentos de entrada no son válidos.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) quad_qagi (x^2*exp(-4*x), x, 0, inf);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp;[0.03125, 2.95916102995002E-11, 105, 0]</span><br/><span class="rvts9">(%i2) integrate (x^2*exp(-4*x), x, 0, inf);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;--</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 32</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="FUNCIONES-Y-VARIABLES-PARA-QUADPACK"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">quad_qawc</span><span class="rvts18"> (f(x), x, c, a, b, epsrel, limit)</span></li>
+<li><a name="SEC68"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">quad_qawc</span><span class="rvts18"> (f, x, c, a, b, epsrel, limit)</span></li>
+<li class="rvps3"><span class="rvts6">Calcula el valor principal de Cauchy de </span><span class="rvts18">f(x)/(x - c)</span><span class="rvts6"> en un intervalo finito </span><span class="rvts18">(a, b)</span><span class="rvts6"> para una </span><span class="rvts18">c</span><span class="rvts6"> dada. La estrategia es global adaptativa, utilizando la integración de Clenshaw-Curtis modificada en los subintervalos que contienen a </span><span class="rvts18">x = c</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">quad_qawc</span><span class="rvts6"> calcula el valor principal de Cauchy de</span></p>
+<p class="rvps3"><span class="rvts18">integrate (f(x)/(x - c), x, a, b)</span></p>
+<p class="rvps3"><span class="rvts6">utilizando la rutina QAWC de Quadpack. La función a integrar es </span><span class="rvts19">f(x)</span><span class="rvts9">/(</span><span class="rvts19">x</span><span class="rvts9"> - </span><span class="rvts19">c</span><span class="rvts9">)</span><span class="rvts6">, con variable independiente </span><span class="rvts18">x</span><span class="rvts6">, siendo el intervalo de integración el comprendido entre </span><span class="rvts18">a</span><span class="rvts6"> y </span><span class="rvts18">b</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">El integrando se puede especificar con el nombre de una función u operador de Maxima o de Lisp, como una expresión lambda o como una expresión general de Maxima.</span></p>
+<p class="rvps3"><span class="rvts6">Los argumentos opcionales </span><span class="rvts18">epsrel</span><span class="rvts6"> y </span><span class="rvts18">limit</span><span class="rvts6"> son el error relativo y el número máximo de subintervalos, respectivamente. La variable </span><span class="rvts18">epsrel</span><span class="rvts6"> tiene por defecto el valor 1e-8 y </span><span class="rvts18">limit</span><span class="rvts6"> el de 200.</span></p>
+<p class="rvps3"><span class="rvts9">quad_qawc</span><span class="rvts6"> returns a list of four elements:</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li><span class="rvts6">la aproximación a la integral,</span></li>
+<li><span class="rvts6">el error absoluto estimado de la aproximación,</span></li>
+<li><span class="rvts6">el número de evaluaciones del integrando,</span></li>
+<li><span class="rvts6">un código de error.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">El código de error (el cuarto elemento del resultado) puede tener los siguientes valores:</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li><span class="rvts9">0</span></li>
+<li class="rvps3"><span class="rvts6">si no ha habido problemas;</span></li>
+<li><span class="rvts9">1</span></li>
+<li class="rvps3"><span class="rvts6">si se utilizaron demasiados intervalos;</span></li>
+<li><span class="rvts9">2</span></li>
+<li class="rvps3"><span class="rvts6">si se encontró un número excesivo de errores de redondeo;</span></li>
+<li><span class="rvts9">3</span></li>
+<li class="rvps3"><span class="rvts6">si el integrando ha tenido un comportamiento extraño frente a la integración;</span></li>
+<li><span class="rvts9">6</span></li>
+<li class="rvps3"><span class="rvts6">si los argumentos de entrada no son válidos.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) quad_qawc (2^(-5)*((x-1)^2+4^(-5))^(-1), x, 2, 0, 5);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp;[- 3.130120337415925, 1.306830140249558E-8, 495, 0]</span><br/><span class="rvts9">(%i2) integrate (2^(-alpha)*(((x-1)^2 + 4^(-alpha))*(x-2))^(-1),</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x, 0, 5);</span><br/><span class="rvts9">Principal Value</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; alpha</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp;alpha &nbsp; &nbsp; &nbsp; 9 4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 9</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; 4 &nbsp; &nbsp; &nbsp;log(------------- + -------------)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alpha &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; alpha</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;64 4 &nbsp; &nbsp; &nbsp;+ 4 &nbsp; 64 4 &nbsp; &nbsp; &nbsp;+ 4</span><br/><span class="rvts9">(%o2) (-----------------------------------------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alpha</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 4 &nbsp; &nbsp; &nbsp;+ 2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; 3 alpha &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3 alpha</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; ------- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alpha/2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alpha/2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;2 4 &nbsp; &nbsp; &nbsp; &nbsp;atan(4 4 &nbsp; &nbsp; &nbsp; ) &nbsp; 2 4 &nbsp; &nbsp; &nbsp; &nbsp;atan(4 &nbsp; &nbsp; &nbsp; ) &nbsp; alpha</span><br/><span class="rvts9"> &nbsp; &nbsp;- --------------------------- - -------------------------)/2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alpha &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alpha</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 4 &nbsp; &nbsp; &nbsp;+ 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 4 &nbsp; &nbsp; &nbsp;+ 2</span><br/><span class="rvts9">(%i3) ev (%, alpha=5, numer);</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- 3.130120337415917</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX629"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">quad_qawf</span><span class="rvts18"> (f(x), x, a, omega, trig, epsabs, limit, maxp1, limlst)</span></li>
+<li><a name="IDX630"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">quad_qawf</span><span class="rvts18"> (f, x, a, omega, trig, epsabs, limit, maxp1, limlst)</span></li>
+<li class="rvps3"><span class="rvts6">Calcula la transformada seno o coseno de Fourier en un intervalo semi-infinito. Se aplica el mismo método que en </span><span class="rvts9">quad_qawo</span><span class="rvts6"> a sucesivos intervalos finitos, acelerando la convergencia mediante el algoritmo Epsilon (Wynn, 1956).</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">quad_qawf</span><span class="rvts6"> calcula la integral</span></p>
+<p class="rvps3"><span class="rvts18">integrate (f(x)*w(x), x, a, inf)</span></p>
+<p class="rvps3"><span class="rvts6">La función peso </span><span class="rvts18">w</span><span class="rvts6"> se selecciona mediante </span><span class="rvts18">trig</span><span class="rvts6">:</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li><span class="rvts9">cos</span></li>
+<li class="rvps3"><span class="rvts18">w(x) = cos (omega x)</span></li>
+<li><span class="rvts9">sin</span></li>
+<li class="rvps3"><span class="rvts18">w(x) = sin (omega x)</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">El integrando se puede especificar con el nombre de una función u operador de Maxima o de Lisp, como una expresión lambda o como una expresión general de Maxima</span></p>
+<p class="rvps3"><span class="rvts6">Los argumentos opcionales son:</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li><span class="rvts18">epsabs</span></li>
+<li class="rvps3"><span class="rvts6">El error absoluto deseado para la aproximación. El valor por defecto es 1d-10.</span></li>
+<li><span class="rvts18">limit</span></li>
+<li class="rvps3"><span class="rvts6">Tamaño del arreglo interno de trabajo. (</span><span class="rvts18">limit</span><span class="rvts6"> - </span><span class="rvts18">limlst</span><span class="rvts6">)/2 es el número máximo de subintervalos para la partición. El valor por defecto es 200.</span></li>
+<li><span class="rvts18">maxp1</span></li>
+<li class="rvps3"><span class="rvts6">Número máximo de momentos de Chebyshev. Debe ser mayor que 0. El valor por defecto es 100.</span></li>
+<li><span class="rvts18">limlst</span></li>
+<li class="rvps3"><span class="rvts6">Cota superior del número de ciclos. Debe ser mayor o igual que 3. El valor por defecto es 10.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Los argumentos opcionales </span><span class="rvts18">epsrel</span><span class="rvts6"> y </span><span class="rvts18">limit</span><span class="rvts6"> son el error relativo y el número máximo de subintervalos, respectivamente. La variable </span><span class="rvts18">epsrel</span><span class="rvts6"> tiene por defecto el valor 1e-8 y </span><span class="rvts18">limit</span><span class="rvts6"> el de 200.</span></p>
+<p class="rvps3"><span class="rvts9">quad_qawf</span><span class="rvts6"> returns a list of four elements:</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li><span class="rvts6">la aproximación a la integral,</span></li>
+<li><span class="rvts6">el error absoluto estimado de la aproximación,</span></li>
+<li><span class="rvts6">el número de evaluaciones del integrando,</span></li>
+<li><span class="rvts6">un código de error.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">El código de error (el cuarto elemento del resultado) puede tener los siguientes valores:</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li><span class="rvts9">0</span></li>
+<li class="rvps3"><span class="rvts6">si no ha habido problemas;</span></li>
+<li><span class="rvts9">1</span></li>
+<li class="rvps3"><span class="rvts6">si se utilizaron demasiados intervalos;</span></li>
+<li><span class="rvts9">2</span></li>
+<li class="rvps3"><span class="rvts6">si se encontró un número excesivo de errores de redondeo;</span></li>
+<li><span class="rvts9">3</span></li>
+<li class="rvps3"><span class="rvts6">si el integrando ha tenido un comportamiento extraño frente a la integración;</span></li>
+<li><span class="rvts9">6</span></li>
+<li class="rvps3"><span class="rvts6">si los argumentos de entrada no son válidos.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) quad_qawf (exp(-x^2), x, 0, 1, 'cos);</span><br/><span class="rvts9">(%o1) &nbsp; [.6901942235215714, 2.84846300257552E-11, 215, 0]</span><br/><span class="rvts9">(%i2) integrate (exp(-x^2)*cos(x), x, 0, inf);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- 1/4</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;%e &nbsp; &nbsp; &nbsp;sqrt(%pi)</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -----------------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9">(%i3) ev (%, numer);</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .6901942235215714</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX631"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">quad_qawo</span><span class="rvts18"> (f(x), x, a, b, omega, trig, epsabs, limit, maxp1, limlst)</span></li>
+<li><a name="IDX632"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">quad_qawo</span><span class="rvts18"> (f, x, a, b, omega, trig, epsabs, limit, maxp1, limlst)</span></li>
+<li class="rvps3"><span class="rvts6">Integración de </span><span class="rvts18">cos(omega x) f(x)</span><span class="rvts6"> o </span><span class="rvts18">sin(omega x) f(x)</span><span class="rvts6"> en un intervalo finito, siendo </span><span class="rvts18">omega</span><span class="rvts6"> una constante. La regla de evaluación se basa en la técnica modificada de Clenshaw-Curtis. La función </span><span class="rvts9">quad_qawo</span><span class="rvts6"> aplica la subdivisión adaptativa con extrapolación, de forma similar a </span><span class="rvts9">quad_qags</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">quad_qawo</span><span class="rvts6"> realiza la integración utilizando la rutina QAWO de Quadpack:</span></p>
+<p class="rvps3"><span class="rvts18">integrate (f(x)*w(x), x, a, b)</span></p>
+<p class="rvps3"><span class="rvts6">La función peso </span><span class="rvts18">w</span><span class="rvts6"> se selecciona mediante </span><span class="rvts18">trig</span><span class="rvts6">:</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li><span class="rvts9">cos</span></li>
+<li class="rvps3"><span class="rvts18">w(x) = cos (omega x)</span></li>
+<li><span class="rvts9">sin</span></li>
+<li class="rvps3"><span class="rvts18">w(x) = sin (omega x)</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">El integrando se puede especificar con el nombre de una función u operador de Maxima o de Lisp, como una expresión lambda o como una expresión general de Maxima</span></p>
+<p class="rvps3"><span class="rvts6">Los argumentos opcionales son:</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li><span class="rvts18">epsabs</span></li>
+<li class="rvps3"><span class="rvts6">El error absoluto deseado para la aproximación. El valor por defecto es 1d-10.</span></li>
+<li><span class="rvts18">limit</span></li>
+<li class="rvps3"><span class="rvts6">Tamaño del arreglo interno de trabajo. (</span><span class="rvts18">limit</span><span class="rvts6"> - </span><span class="rvts18">limlst</span><span class="rvts6">)/2 es el número máximo de subintervalos para la partición. El valor por defecto es 200.</span></li>
+<li><span class="rvts18">maxp1</span></li>
+<li class="rvps3"><span class="rvts6">Número máximo de momentos de Chebyshev. Debe ser mayor que 0. El valor por defecto es 100.</span></li>
+<li><span class="rvts18">limlst</span></li>
+<li class="rvps3"><span class="rvts6">Cota superior del número de ciclos. Debe ser mayor o igual que 3. El valor por defecto es 10.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Los argumentos opcionales </span><span class="rvts18">epsrel</span><span class="rvts6"> y </span><span class="rvts18">limit</span><span class="rvts6"> son el error relativo y el número máximo de subintervalos, respectivamente. La variable </span><span class="rvts18">epsrel</span><span class="rvts6"> tiene por defecto el valor 1e-8 y </span><span class="rvts18">limit</span><span class="rvts6"> el de 200.</span></p>
+<p class="rvps3"><span class="rvts9">quad_qawo</span><span class="rvts6"> returns a list of four elements:</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li><span class="rvts6">la aproximación a la integral,</span></li>
+<li><span class="rvts6">el error absoluto estimado de la aproximación,</span></li>
+<li><span class="rvts6">el número de evaluaciones del integrando,</span></li>
+<li><span class="rvts6">un código de error.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">El código de error (el cuarto elemento del resultado) puede tener los siguientes valores:</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li><span class="rvts9">0</span></li>
+<li class="rvps3"><span class="rvts6">si no ha habido problemas;</span></li>
+<li><span class="rvts9">1</span></li>
+<li class="rvps3"><span class="rvts6">si se utilizaron demasiados intervalos;</span></li>
+<li><span class="rvts9">2</span></li>
+<li class="rvps3"><span class="rvts6">si se encontró un número excesivo de errores de redondeo;</span></li>
+<li><span class="rvts9">3</span></li>
+<li class="rvps3"><span class="rvts6">si el integrando ha tenido un comportamiento extraño frente a la integración;</span></li>
+<li><span class="rvts9">6</span></li>
+<li class="rvps3"><span class="rvts6">si los argumentos de entrada no son válidos.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) quad_qawo (x^(-1/2)*exp(-2^(-2)*x), x, 1d-8, 20*2^2, 1, cos);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; [1.376043389877692, 4.72710759424899E-11, 765, 0]</span><br/><span class="rvts9">(%i2) rectform (integrate (x^(-1/2)*exp(-2^(-alpha)*x) * cos(x),</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x, 0, inf));</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; alpha/2 - 1/2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 alpha</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp;sqrt(%pi) 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;sqrt(sqrt(2 &nbsp; &nbsp; &nbsp; &nbsp;+ 1) + 1)</span><br/><span class="rvts9">(%o2) &nbsp; -----------------------------------------------------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 alpha</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sqrt(2 &nbsp; &nbsp; &nbsp; &nbsp;+ 1)</span><br/><span class="rvts9">(%i3) ev (%, alpha=2, numer);</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.376043390090716</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX633"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">quad_qaws</span><span class="rvts18"> (f(x), x, a, b, alfa, beta, wfun, epsabs, limit)</span></li>
+<li><a name="IDX634"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">quad_qaws</span><span class="rvts18"> (f, x, a, b, alfa, beta, wfun, epsabs, limit)</span></li>
+<li class="rvps3"><span class="rvts6">Integración de </span><span class="rvts18">w(x) f(x)</span><span class="rvts6"> en un intervalo finito </span><span class="rvts18">[a, b]</span><span class="rvts6">, siendo </span><span class="rvts18">w</span><span class="rvts6"> una función de la forma </span><span class="rvts18">(x - a)^alpha (b - x)^beta v(x)</span><span class="rvts6">, con </span><span class="rvts18">v(x)</span><span class="rvts6"> igual a 1, a </span><span class="rvts18">log(x - a)</span><span class="rvts6">, a </span><span class="rvts18">log(b - x)</span><span class="rvts6"> o a </span><span class="rvts18">log(x - a) log(b - x)</span><span class="rvts6"> y con </span><span class="rvts18">alpha &gt; -1</span><span class="rvts6">, y </span><span class="rvts18">beta &gt; -1</span><span class="rvts6">. Se aplica una estrategia de subdivisión adaptativa global, con integración de Clenshaw-Curtis modificada en los subintervalos que contienen a </span><span class="rvts18">a</span><span class="rvts6"> y a </span><span class="rvts18">b</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">quad_qaws</span><span class="rvts6"> realiza la integración utizando la rutina QAWS de Quadpack:</span></p>
+<p class="rvps3"><span class="rvts18">integrate (f(x)*w(x), x, a, b)</span></p>
+<p class="rvps3"><span class="rvts6">La función peso </span><span class="rvts18">w</span><span class="rvts6"> se selecciona mediante </span><span class="rvts18">wfun</span><span class="rvts6">:</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li><span class="rvts9">1</span></li>
+<li class="rvps3"><span class="rvts18">w(x) = (x - a)^alfa (b - x)^beta</span></li>
+<li><span class="rvts9">2</span></li>
+<li class="rvps3"><span class="rvts18">w(x) = (x - a)^alfa (b - x)^beta log(x - a)</span></li>
+<li><span class="rvts9">3</span></li>
+<li class="rvps3"><span class="rvts18">w(x) = (x - a)^alfa (b - x)^beta log(b - x)</span></li>
+<li><span class="rvts9">4</span></li>
+<li class="rvps3"><span class="rvts18">w(x) = (x - a)^alfa (b - x)^beta log(x - a) log(b - x)</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">El integrando se puede especificar con el nombre de una función u operador de Maxima o de Lisp, como una expresión lambda o como una expresión general de Maxima</span></p>
+<p class="rvps3"><span class="rvts6">Los argumentos opcionales son:</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li><span class="rvts18">epsabs</span></li>
+<li class="rvps3"><span class="rvts6">El error absoluto deseado para la aproximación. El valor por defecto es 1d-10.</span></li>
+<li><span class="rvts18">limit</span></li>
+<li class="rvps3"><span class="rvts6">Tamaño del arreglo interno de trabajo. (</span><span class="rvts18">limit</span><span class="rvts6"> - </span><span class="rvts18">limlst</span><span class="rvts6">)/2 es el número máximo de subintervalos para la partición. El valor por defecto es 200.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Los argumentos opcionales </span><span class="rvts18">epsrel</span><span class="rvts6"> y </span><span class="rvts18">limit</span><span class="rvts6"> son el error relativo y el número máximo de subintervalos, respectivamente. La variable </span><span class="rvts18">epsrel</span><span class="rvts6"> tiene por defecto el valor 1e-8 y </span><span class="rvts18">limit</span><span class="rvts6"> el de 200.</span></p>
+<p class="rvps3"><span class="rvts9">quad_qaws</span><span class="rvts6"> returns a list of four elements:</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li><span class="rvts6">la aproximación a la integral,</span></li>
+<li><span class="rvts6">el error absoluto estimado de la aproximación,</span></li>
+<li><span class="rvts6">el número de evaluaciones del integrando,</span></li>
+<li><span class="rvts6">un código de error.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">El código de error (el cuarto elemento del resultado) puede tener los siguientes valores:</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li><span class="rvts9">0</span></li>
+<li class="rvps3"><span class="rvts6">si no ha habido problemas;</span></li>
+<li><span class="rvts9">1</span></li>
+<li class="rvps3"><span class="rvts6">si se utilizaron demasiados intervalos;</span></li>
+<li><span class="rvts9">2</span></li>
+<li class="rvps3"><span class="rvts6">si se encontró un número excesivo de errores de redondeo;</span></li>
+<li><span class="rvts9">3</span></li>
+<li class="rvps3"><span class="rvts6">si el integrando ha tenido un comportamiento extraño frente a la integración;</span></li>
+<li><span class="rvts9">6</span></li>
+<li class="rvps3"><span class="rvts6">si los argumentos de entrada no son válidos.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) quad_qaws (1/(x+1+2^(-4)), x, -1, 1, -0.5, -0.5, 1);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; [8.750097361672832, 1.24321522715422E-10, 170, 0]</span><br/><span class="rvts9">(%i2) integrate ((1-x*x)^(-1/2)/(x+1+2^(-alpha)), x, -1, 1);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; alpha</span><br/><span class="rvts9">Is &nbsp;4 2 &nbsp; &nbsp; &nbsp;- 1 &nbsp;positive, negative, or zero?</span><br/><span class="rvts9">pos;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alpha &nbsp; &nbsp; &nbsp; &nbsp; alpha</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 %pi 2 &nbsp; &nbsp; &nbsp;sqrt(2 2 &nbsp; &nbsp; &nbsp;+ 1)</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-------------------------------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; alpha</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4 2 &nbsp; &nbsp; &nbsp;+ 2</span><br/><span class="rvts9">(%i3) ev (%, alpha=4, numer);</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 8.750097361672829</span></p>
+<hr style="height: 6px;"/>
+<div><table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Perspectivageneral.html#SEC63"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_21.html#SEC69"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps3"><span class="rvts10">This document was generated by </span><span class="rvts11">Robert Dodier</span><span class="rvts10"> on </span><span class="rvts11">agosto, 25 2007</span><span class="rvts10"> using </span><a class="rvts12" href="http://texi2html.cvshome.org/">texi2html 1.76</a><span class="rvts10">.</span></p>
+<p></p>
+<p class="rvps6"><span class="rvts13">Created with the Personal Edition of HelpNDoc: </span><a class="rvts14" href="http://www.helpndoc.com/help-authoring-tool">Free help authoring environment</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				http://maxima.sourceforge.net</div>
+		</div>
+	</body>
+	
+</html>
+

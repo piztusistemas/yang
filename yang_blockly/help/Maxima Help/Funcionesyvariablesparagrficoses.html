@@ -1,0 +1,824 @@
+﻿<html>
+	
+<head>
+	<title>Funciones y variables para gr&aacute;ficos estad&iacute;sticos</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 3.9.1.648">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Maxima.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("Funcionesyvariablesparagrficoses");
+			}
+		});
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>Funciones y variables para gr&aacute;ficos estad&iacute;sticos</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="descriptive.html">descriptive</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="descriptive.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Funcionesyvariablesdevaloresdes1.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="diag.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<div><a name="DESCRIPTIVE"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_44.html#SEC173"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparagrficoses.html#SEC175"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_44.html#SEC168"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_46.html#SEC180"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h1 class="rvps2"><span class="rvts0"><span class="rvts8">45. descriptive</span></span></h1>
+<div><table border="0" cellpadding="1" cellspacing="0" style="border-width: 0px;">
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="Funcionesyvariablesparagrficoses.html#SEC175">45.1 Introducción a descriptive</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="Funcionesyvariablesparagrficoses.html#SEC176">45.2 Funciones y variables para el tratamiento de datos</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="Funcionesyvariablesparagrficoses.html#SEC177">45.3 Funciones y variables de valores descriptivos</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="Funcionesyvariablesparagrficoses.html#SEC178">45.4 Funciones y variables de valores descriptivos multivariantes</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="Funcionesyvariablesparagrficoses.html#SEC179">45.5 Funciones y variables para gráficos estadísticos</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height: 6px;"/>
+<div><a name="SEC174"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparagrficoses.html#SEC174"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparagrficoses.html#SEC176"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparagrficoses.html#SEC174"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparagrficoses.html#SEC174"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_46.html#SEC180"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">45.1 Introducción a descriptive</span></span></h2>
+<p class="rvps3"><span class="rvts6">El paquete </span><span class="rvts9">descriptive</span><span class="rvts6"> contiene funciones para realizar cl'culos y gráficos estadísticos descriptivos. Junto con el código fuente se distribuyen tres conjuntos de datos: </span><span class="rvts9">pidigits.data</span><span class="rvts6">, </span><span class="rvts9">wind.data</span><span class="rvts6"> y </span><span class="rvts9">biomed.data</span><span class="rvts6">, los cuales también se pueden descargar desde el sitio web </span><span class="rvts9">www.biomates.net</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Cualquier manual de estadística se puede utilizar como referencia al paquete </span><span class="rvts9">descriptive</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Para comentarios, fallos y sugerencias, por favor contactar con </span><span class="rvts18">'mario AT edu DOT xunta DOT es'</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Aquí un sencillo ejemplo sobre cómo operan las funciones de </span><span class="rvts9">descriptive</span><span class="rvts6">, dependiendo de la naturaleza de sus argumentos, listas o matrices,</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) /* muestra univariate */ &nbsp; mean ([a, b, c]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;c + b + a</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ---------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3</span><br/><span class="rvts9">(%i3) matrix ([a, b], [c, d], [e, f]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ a &nbsp;b ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ c &nbsp;d ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ e &nbsp;f ]</span><br/><span class="rvts9">(%i4) /* muestra multivariante */ mean (%);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;e + c + a &nbsp;f + d + b</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[---------, ---------]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3</span></p>
+<p class="rvps3"><span class="rvts6">Nótese que en las muestras multivariantes la media se calcula para cada columna.</span></p>
+<p class="rvps3"><span class="rvts6">En caso de varias muestras de diferente tamaño, la función </span><span class="rvts9">map</span><span class="rvts6"> de Maxima puede utilizarse para obtener los resultados deseados para cada muestra,</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) map (mean, [[a, b, c], [d, e]]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;c + b + a &nbsp;e + d</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[---------, -----]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3 &nbsp; &nbsp; &nbsp; &nbsp;2</span></p>
+<p class="rvps3"><span class="rvts6">En este caso, dos muestras de tamaños 3 y 2 han sido almacenadas en una lista.</span></p>
+<p class="rvps3"><span class="rvts6">Muestras univariantes deben guardarse en listas como en</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) s1 : [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5];</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]</span></p>
+<p class="rvps3"><span class="rvts6">y muestras multivariantes en matrices como las del siguiente ejemplo</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) s2 : matrix ([13.17, 9.29], [14.71, 16.88], [18.50, 16.88],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [10.58, 6.63], [13.33, 13.25], [13.21, &nbsp;8.12]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 13.17 &nbsp;9.29 &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 14.71 &nbsp;16.88 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 18.5 &nbsp; 16.88 ]</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 10.58 &nbsp;6.63 &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 13.33 &nbsp;13.25 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 13.21 &nbsp;8.12 &nbsp;]</span></p>
+<p class="rvps3"><span class="rvts6">En este caso, el número de columnas es igual al de la dimensión de la variable aleatoria y el número de filas coincide con el tamaño muestral.</span></p>
+<p class="rvps3"><span class="rvts6">Los datos pueden suministrarse manualmente, pero las muestras grandes se suelen almacenar en ficheros de texto. Por ejemplo, el fichero </span><span class="rvts9">pidigits.data</span><span class="rvts6"> contiene los 100 primeros dígitos del número </span><span class="rvts9">%pi</span><span class="rvts6">:</span></p>
+<p class="rvps4"><span class="rvts9"> &nbsp; &nbsp; &nbsp;3</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;1</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;4</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;1</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;5</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;9</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;6</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;5</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;3 ...</span></p>
+<p class="rvps3"><span class="rvts6">A fin de leer estos dígitos desde Maxima,</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (numericalio)$</span><br/><span class="rvts9">(%i2) s1 : read_list (file_search ("pidigits.data"))$</span><br/><span class="rvts9">(%i3) length (s1);</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;100</span></p>
+<p class="rvps3"><span class="rvts6">Por otro lado, el archivo </span><span class="rvts9">wind.data</span><span class="rvts6"> contiene los promedios diarios de la velocidad del viento en cinco estaciones meteorológicas en Irlanda (esta muestra es parte de un conjunto de datos correspondientes a 12 estaciones meteorológicas. El fichero original se puede descargar libremente del 'StatLib Data Repository' y se analiza en Haslett, J., Raftery, A. E. (1989) </span><span class="rvts18">Space-time Modelling with Long-memory Dependence: Assessing Ireland's Wind Power Resource, with Discussion</span><span class="rvts6">. Applied Statistics 38, 1-50). Así se leen los datos:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (numericalio)$</span><br/><span class="rvts9">(%i2) s2 : read_matrix (file_search ("wind.data"))$</span><br/><span class="rvts9">(%i3) length (s2);</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;100</span><br/><span class="rvts9">(%i4) s2 [%]; /* ultimo registro */</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[3.58, 6.0, 4.58, 7.62, 11.25]</span></p>
+<p class="rvps3"><span class="rvts6">Algunas muestras contienen datos no numéricos. Como ejemplo, el archivo </span><span class="rvts9">biomed.data</span><span class="rvts6"> (el cual es parte de otro mayor descargado también del 'StatLib Data Repository') contiene cuatro mediciones sanguíneas tomadas a dos grupos de pacientes, </span><span class="rvts9">A</span><span class="rvts6"> y </span><span class="rvts9">B</span><span class="rvts6">, de diferentes edades,</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (numericalio)$</span><br/><span class="rvts9">(%i2) s3 : read_matrix (file_search ("biomed.data"))$</span><br/><span class="rvts9">(%i3) length (s3);</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;100</span><br/><span class="rvts9">(%i4) s3 [1]; /* primer registro */</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[A, 30, 167.0, 89.0, 25.6, 364]</span></p>
+<p class="rvps3"><span class="rvts6">El primer individuo pertenece al grupo </span><span class="rvts9">A</span><span class="rvts6">, tiene 30 años de edad y sus medidas sanguíneas fueron 167.0, 89.0, 25.6 y 364.</span></p>
+<p class="rvps3"><span class="rvts6">Debe tenerse cuidado cuando se trabaje con datos categóricos. En el siguiente ejemplo, se asigna al símbolo </span><span class="rvts9">a</span><span class="rvts6"> cierto valor en algún momento previo y luego se toma una muestra con el valor categórico </span><span class="rvts9">a</span><span class="rvts6">,</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) a : 1$</span><br/><span class="rvts9">(%i2) matrix ([a, 3], [b, 5]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 1 &nbsp;3 ]</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ b &nbsp;5 ]</span></p>
+<hr style="height: 6px;"/>
+<div><a name="INTRODUCCI_00F3N-A-DESCRIPTIVE"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparagrficoses.html#SEC175"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparagrficoses.html#SEC177"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparagrficoses.html#SEC174"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparagrficoses.html#SEC174"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_46.html#SEC180"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">45.2 Funciones y variables para el tratamiento de datos</span></span></h2>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC175"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">continuous_freq</span><span class="rvts18"> (list)</span></li>
+<li><a name="FUNCIONES-Y-VARIABLES-PARA-EL-TRATAMIENTO-DE-DATOS"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">continuous_freq</span><span class="rvts18"> (list, m)</span></li>
+<li class="rvps3"><span class="rvts6">El argumento de </span><span class="rvts9">continuous_freq</span><span class="rvts6"> debe ser una lista de números, los cuales serán luego agrupados en intervalos y hecho el recuento de cuántos hay en cada grupo. Opcionalmente, la función </span><span class="rvts9">continuous_freq</span><span class="rvts6"> admite un segundo argumento para indicar el número de clases a considerar, siendo 10 su valor por defecto.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) load (numericalio)$</span><br/><span class="rvts9">(%i2) load (descriptive)$</span><br/><span class="rvts9">(%i3) s1 : read_list (file_search ("pidigits.data"))$</span><br/><span class="rvts9">(%i4) continuous_freq (s1, 5);</span><br/><span class="rvts9">(%o4) [[0, 1.8, 3.6, 5.4, 7.2, 9.0], [16, 24, 18, 17, 25]]</span></p>
+<p class="rvps3"><span class="rvts6">La primera lista contiene los extremos de los intervalos y la segunda los resultados de los recuentos: hay 16 dígitos dentro del intervalo </span><span class="rvts9">[0, 1.8]</span><span class="rvts6">, esto es ceros y unos, 24 dígitos en </span><span class="rvts9">(1.8, 3.6]</span><span class="rvts6">, es decir doses y treses, y así sucesivamente.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC176"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">discrete_freq</span><span class="rvts18"> (list)</span></li>
+<li class="rvps3"><span class="rvts6">Calcula las frecuencias absolutas en muestras discretas, tanto numéricas como categóricas. Su único argumento debe ser una lista.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) s1 : read_list (file_search ("pidigits.data"))$</span><br/><span class="rvts9">(%i4) discrete_freq (s1);</span><br/><span class="rvts9">(%o4) [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9], </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [8, 8, 12, 12, 10, 8, 9, 8, 12, 13]]</span></p>
+<p class="rvps3"><span class="rvts6">La primera lista son los valores de la muestra y la segunda sus frecuencias absolutas. Las instrucciones </span><span class="rvts9">? col</span><span class="rvts6"> y </span><span class="rvts9">? transpose</span><span class="rvts6"> pueden ayudar a comprender la última entrada.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1401"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">subsample</span><span class="rvts18"> (data_matrix, logical_expression)</span></li>
+<li><a name="IDX1402"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">subsample</span><span class="rvts18"> (data_matrix, logical_expression, col_num, col_num, ...)</span></li>
+<li class="rvps3"><span class="rvts6">Esta es una variante de la función </span><span class="rvts9">submatrix</span><span class="rvts6"> de Maxima. El primer argumento es una matriz de datos, el segundo es una expresión lógica no evaluada y el resto de argumentos opcionales son los números de las columnas a tomar en consideración,</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) s2 : read_matrix (file_search ("wind.data"))$</span><br/><span class="rvts9">(%i4) subsample (s2, '(%c[1] &gt; 18));</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 19.38 &nbsp;15.37 &nbsp;15.12 &nbsp;23.09 &nbsp;25.25 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 18.29 &nbsp;18.66 &nbsp;19.08 &nbsp;26.08 &nbsp;27.63 ]</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 20.25 &nbsp;21.46 &nbsp;19.95 &nbsp;27.71 &nbsp;23.38 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 18.79 &nbsp;18.96 &nbsp;14.46 &nbsp;26.38 &nbsp;21.84 ]</span></p>
+<p class="rvps3"><span class="rvts6">Estos son los registros multivariantes en los que la velocidad del viento en la primera estación meteorológica fue menor que 18. Véase cómo en la expresión lógica no evaluada a la </span><span class="rvts18">i</span><span class="rvts6">-ésima componente se la referencia como </span><span class="rvts9">%c[i]</span><span class="rvts6">. El símbolo </span><span class="rvts9">%c[i]</span><span class="rvts6"> es utilizado dentro de la función </span><span class="rvts9">subsample</span><span class="rvts6">, por lo que si se utiliza también como variable categórica, Maxima puede dar resultados imprevistos. En el siguiente ejemplo, se solicitan únicamente la primera, segunda y quinta componentes de aquellos registros con velocidades del viento mayores o iguales que 16 nudos en la estación número 1 y menores que 25 nudos en la estación número 4,</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) s2 : read_matrix (file_search ("wind.data"))$</span><br/><span class="rvts9">(%i4) subsample (s2, '(%c[1] &gt;= 16 and %c[4] &lt; 25), 1, 2, 5);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 19.38 &nbsp;15.37 &nbsp;25.25 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 17.33 &nbsp;14.67 &nbsp;19.58 ]</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 16.92 &nbsp;13.21 &nbsp;21.21 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 17.25 &nbsp;18.46 &nbsp;23.87 ]</span></p>
+<p class="rvps3"><span class="rvts6">He aquí un ejemplo con las variables categóricas de </span><span class="rvts9">biomed.data</span><span class="rvts6">. Se piden los registros correspondientes a aquellos pacientes del grupo </span><span class="rvts9">B</span><span class="rvts6"> mayores de 38 anños,</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) s3 : read_matrix (file_search ("biomed.data"))$</span><br/><span class="rvts9">(%i4) subsample (s3, '(%c[1] = B and %c[2] &gt; 38));</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ B &nbsp;39 &nbsp;28.0 &nbsp;102.3 &nbsp;17.1 &nbsp;146 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ B &nbsp;39 &nbsp;21.0 &nbsp;92.4 &nbsp; 10.3 &nbsp;197 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ B &nbsp;39 &nbsp;23.0 &nbsp;111.5 &nbsp;10.0 &nbsp;133 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ B &nbsp;39 &nbsp;26.0 &nbsp;92.6 &nbsp; 12.3 &nbsp;196 ]</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ B &nbsp;39 &nbsp;25.0 &nbsp;98.7 &nbsp; 10.0 &nbsp;174 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ B &nbsp;39 &nbsp;21.0 &nbsp;93.2 &nbsp; 5.9 &nbsp; 181 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ B &nbsp;39 &nbsp;18.0 &nbsp;95.0 &nbsp; 11.3 &nbsp;66 &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ B &nbsp;39 &nbsp;39.0 &nbsp;88.5 &nbsp; 7.6 &nbsp; 168 ]</span></p>
+<p class="rvps3"><span class="rvts6">Es probable que el análisis estadístico requiera únicamente de las medidas sanguíneas,</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) s3 : read_matrix (file_search ("biomed.data"))$</span><br/><span class="rvts9">(%i4) subsample (s3, '(%c[1] = B and %c[2] &gt; 38), 3, 4, 5, 6);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 28.0 &nbsp;102.3 &nbsp;17.1 &nbsp;146 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 21.0 &nbsp;92.4 &nbsp; 10.3 &nbsp;197 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 23.0 &nbsp;111.5 &nbsp;10.0 &nbsp;133 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 26.0 &nbsp;92.6 &nbsp; 12.3 &nbsp;196 ]</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 25.0 &nbsp;98.7 &nbsp; 10.0 &nbsp;174 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 21.0 &nbsp;93.2 &nbsp; 5.9 &nbsp; 181 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 18.0 &nbsp;95.0 &nbsp; 11.3 &nbsp;66 &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 39.0 &nbsp;88.5 &nbsp; 7.6 &nbsp; 168 ]</span></p>
+<p class="rvps3"><span class="rvts6">Esta es la media multivariante de </span><span class="rvts9">s3</span><span class="rvts6">,</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) s3 : read_matrix (file_search ("biomed.data"))$</span><br/><span class="rvts9">(%i4) mean (s3);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; 65 B + 35 A &nbsp;317 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;6 NA + 8145.0</span><br/><span class="rvts9">(%o4) [-----------, ---, 87.178, -------------, 18.123, </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 100 &nbsp; &nbsp; &nbsp;10 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;100</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3 NA + 19587</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;------------]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;100</span></p>
+<p class="rvps3"><span class="rvts6">Aquí la primera componente carece de significado, ya que tanto </span><span class="rvts9">A</span><span class="rvts6"> como </span><span class="rvts9">B</span><span class="rvts6"> son categóricas, la segunda componente es la edad media de los individuos en forma racional, al tiempo que los valores cuarto y quinto muestran cierto comportamiento extraño; lo cual se debe a que el símbolo </span><span class="rvts9">NA</span><span class="rvts6"> se utiliza para indicar datos </span><span class="rvts18">no disponibles</span><span class="rvts6">, por lo que ambas medias no tienen sentido. Una posible solución puede ser extraer de la matriz aquellas filas con símbolos </span><span class="rvts9">NA</span><span class="rvts6">, lo que acarrearía cierta pérdida de información,</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) s3 : read_matrix (file_search ("biomed.data"))$</span><br/><span class="rvts9">(%i4) mean (subsample (s3, '(%c[4] # NA and %c[6] # NA), 3, 4, 5, 6));</span><br/><span class="rvts9">(%o4) [79.4923076923077, 86.2032967032967, 16.93186813186813, </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2514</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;----]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 13</span></p>
+<hr style="height: 6px;"/>
+<div><a name="IDX1403"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparagrficoses.html#SEC176"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparagrficoses.html#SEC178"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparagrficoses.html#SEC174"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparagrficoses.html#SEC174"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_46.html#SEC180"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">45.3 Funciones y variables de valores descriptivos</span></span></h2>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1404"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">mean</span><span class="rvts18"> (list)</span></li>
+<li><a name="IDX1405"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">mean</span><span class="rvts18"> (matrix)</span></li>
+<li class="rvps3"><span class="rvts6">Es la media muestral, definida como</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ====</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; _ &nbsp; 1 &nbsp; \</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x = - &nbsp; &nbsp;&gt; &nbsp; &nbsp;x</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n &nbsp; / &nbsp; &nbsp; &nbsp;i</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ====</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; i = 1</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) s1 : read_list (file_search ("pidigits.data"))$</span><br/><span class="rvts9">(%i4) mean (s1);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 471</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;---</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 100</span><br/><span class="rvts9">(%i5) %, numer;</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4.71</span><br/><span class="rvts9">(%i6) s2 : read_matrix (file_search ("wind.data"))$</span><br/><span class="rvts9">(%i7) mean (s2);</span><br/><span class="rvts9">(%o7) &nbsp; &nbsp; [9.9485, 10.1607, 10.8685, 15.7166, 14.8441]</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="FUNCIONES-Y-VARIABLES-DE-VALORES-DESCRIPTIVOS"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">var</span><span class="rvts18"> (list)</span></li>
+<li><a name="SEC177"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">var</span><span class="rvts18"> (matrix)</span></li>
+<li class="rvps3"><span class="rvts6">Es la varianza muestral, definida como</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ====</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; 1 &nbsp; \ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_ 2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;s &nbsp;= - &nbsp; &nbsp;&gt; &nbsp; &nbsp;(x - x)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n &nbsp; / &nbsp; &nbsp; &nbsp; i</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ====</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; i = 1</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) s1 : read_list (file_search ("pidigits.data"))$</span><br/><span class="rvts9">(%i4) var (s1), numer;</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 8.425899999999999</span></p>
+<p class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">var1</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1406"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">var1</span><span class="rvts18"> (list)</span></li>
+<li><a name="IDX1407"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">var1</span><span class="rvts18"> (matrix)</span></li>
+<li class="rvps3"><span class="rvts6">Es la cuasivarianza muestral, definida como</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ====</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1 &nbsp; \ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_ 2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;--- &nbsp; &gt; &nbsp; &nbsp;(x - x)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;n-1 &nbsp;/ &nbsp; &nbsp; &nbsp; i</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ====</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; i = 1</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) s1 : read_list (file_search ("pidigits.data"))$</span><br/><span class="rvts9">(%i4) var1 (s1), numer;</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;8.5110101010101</span><br/><span class="rvts9">(%i5) s2 : read_matrix (file_search ("wind.data"))$</span><br/><span class="rvts9">(%i6) var1 (s2);</span><br/><span class="rvts9">(%o6) [17.39586540404041, 15.13912778787879, 15.63204924242424, </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;32.50152569696971, 24.66977392929294]</span></p>
+<p class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">var</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1408"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">std</span><span class="rvts18"> (list)</span></li>
+<li><a name="IDX1409"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">std</span><span class="rvts18"> (matrix)</span></li>
+<li class="rvps3"><span class="rvts6">Es la desviación típica muestral, raíz cuadrada de </span><span class="rvts9">var</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) s1 : read_list (file_search ("pidigits.data"))$</span><br/><span class="rvts9">(%i4) std (s1), numer;</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2.902740084816414</span><br/><span class="rvts9">(%i5) s2 : read_matrix (file_search ("wind.data"))$</span><br/><span class="rvts9">(%i6) std (s2);</span><br/><span class="rvts9">(%o6) [4.149928523480858, 3.871399812729241, 3.933920277534866, </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;5.672434260526957, 4.941970881136392]</span></p>
+<p class="rvps3"><span class="rvts6">Véanse también </span><span class="rvts9">var</span><span class="rvts6"> y </span><span class="rvts9">std1</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1410"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">std1</span><span class="rvts18"> (list)</span></li>
+<li><a name="IDX1411"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">std1</span><span class="rvts18"> (matrix)</span></li>
+<li class="rvps3"><span class="rvts6">Es la cuasidesviación típica muestral, raíz cuadrada de </span><span class="rvts9">var1</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) s1 : read_list (file_search ("pidigits.data"))$</span><br/><span class="rvts9">(%i4) std1 (s1), numer;</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2.917363553109228</span><br/><span class="rvts9">(%i5) s2 : read_matrix (file_search ("wind.data"))$</span><br/><span class="rvts9">(%i6) std1 (s2);</span><br/><span class="rvts9">(%o6) [4.17083509672109, 3.89090320978032, 3.953738641137555, </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;5.701010936401517, 4.966867617451963]</span></p>
+<p class="rvps3"><span class="rvts6">Véanse también </span><span class="rvts9">var1</span><span class="rvts6"> y </span><span class="rvts9">std</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1412"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">noncentral_moment</span><span class="rvts18"> (list, k)</span></li>
+<li><a name="IDX1413"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">noncentral_moment</span><span class="rvts18"> (matrix, k)</span></li>
+<li class="rvps3"><span class="rvts6">Es el momento no central de orden </span><span class="rvts18">k</span><span class="rvts6">, definido como</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ====</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1 &nbsp; \ &nbsp; &nbsp; &nbsp;k</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp; &nbsp;&gt; &nbsp; &nbsp;x</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n &nbsp; / &nbsp; &nbsp; &nbsp;i</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ====</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; i = 1</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) s1 : read_list (file_search ("pidigits.data"))$</span><br/><span class="rvts9">(%i4) noncentral_moment (s1, 1), numer; /* la media */</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4.71</span><br/><span class="rvts9">(%i6) s2 : read_matrix (file_search ("wind.data"))$</span><br/><span class="rvts9">(%i7) noncentral_moment (s2, 5);</span><br/><span class="rvts9">(%o7) [319793.8724761506, 320532.1923892463, 391249.5621381556, </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2502278.205988911, 1691881.797742255]</span></p>
+<p class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">central_moment</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1414"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">central_moment</span><span class="rvts18"> (list, k)</span></li>
+<li><a name="IDX1415"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">central_moment</span><span class="rvts18"> (matrix, k)</span></li>
+<li class="rvps3"><span class="rvts6">Es el momento central de orden </span><span class="rvts18">k</span><span class="rvts6">, definido como</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;n</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;====</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1 &nbsp; \ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_ k</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- &nbsp; &nbsp;&gt; &nbsp; &nbsp;(x - x)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;n &nbsp; / &nbsp; &nbsp; &nbsp; i</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;====</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;i = 1</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) s1 : read_list (file_search ("pidigits.data"))$</span><br/><span class="rvts9">(%i4) central_moment (s1, 2), numer; /* la varianza */</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 8.425899999999999</span><br/><span class="rvts9">(%i6) s2 : read_matrix (file_search ("wind.data"))$</span><br/><span class="rvts9">(%i7) central_moment (s2, 3);</span><br/><span class="rvts9">(%o7) [11.29584771375004, 16.97988248298583, 5.626661952750102, </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 37.5986572057918, 25.85981904394192]</span></p>
+<p class="rvps3"><span class="rvts6">Véanse también </span><span class="rvts9">central_moment</span><span class="rvts6"> y </span><span class="rvts9">mean</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1416"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">cv</span><span class="rvts18"> (list)</span></li>
+<li><a name="IDX1417"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">cv</span><span class="rvts18"> (matrix)</span></li>
+<li class="rvps3"><span class="rvts6">Es el coeficiente de variación, o cociente entre la desviación típica muestral (</span><span class="rvts9">std</span><span class="rvts6">) y la media (</span><span class="rvts9">mean</span><span class="rvts6">),</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) s1 : read_list (file_search ("pidigits.data"))$</span><br/><span class="rvts9">(%i4) cv (s1), numer;</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .6193977819764815</span><br/><span class="rvts9">(%i5) s2 : read_matrix (file_search ("wind.data"))$</span><br/><span class="rvts9">(%i6) cv (s2);</span><br/><span class="rvts9">(%o6) [.4192426091090204, .3829365309260502, 0.363779605385983, </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.3627381836021478, .3346021393989506]</span></p>
+<p class="rvps3"><span class="rvts6">Véanse también </span><span class="rvts9">std</span><span class="rvts6"> y </span><span class="rvts9">mean</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1418"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">mini</span><span class="rvts18"> (list)</span></li>
+<li><a name="IDX1419"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">mini</span><span class="rvts18"> (matrix)</span></li>
+<li class="rvps3"><span class="rvts6">Es el valor mínimo de la muestra </span><span class="rvts18">list</span><span class="rvts6">,</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) s1 : read_list (file_search ("pidigits.data"))$</span><br/><span class="rvts9">(%i4) mini (s1);</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0</span><br/><span class="rvts9">(%i5) s2 : read_matrix (file_search ("wind.data"))$</span><br/><span class="rvts9">(%i6) mini (s2);</span><br/><span class="rvts9">(%o6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [0.58, 0.5, 2.67, 5.25, 5.17]</span></p>
+<p class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">maxi</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1420"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">maxi</span><span class="rvts18"> (list)</span></li>
+<li><a name="IDX1421"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">maxi</span><span class="rvts18"> (matrix)</span></li>
+<li class="rvps3"><span class="rvts6">Es el valor máximo de la muestra </span><span class="rvts18">list</span><span class="rvts6">,</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) s1 : read_list (file_search ("pidigits.data"))$</span><br/><span class="rvts9">(%i4) maxi (s1);</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 9</span><br/><span class="rvts9">(%i5) s2 : read_matrix (file_search ("wind.data"))$</span><br/><span class="rvts9">(%i6) maxi (s2);</span><br/><span class="rvts9">(%o6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[20.25, 21.46, 20.04, 29.63, 27.63]</span></p>
+<p class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">mini</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1422"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">range</span><span class="rvts18"> (list)</span></li>
+<li><a name="IDX1423"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">range</span><span class="rvts18"> (matrix)</span></li>
+<li class="rvps3"><span class="rvts6">Es la diferencia entre los valores extremos.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) s1 : read_list (file_search ("pidigits.data"))$</span><br/><span class="rvts9">(%i4) range (s1);</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 9</span><br/><span class="rvts9">(%i5) s2 : read_matrix (file_search ("wind.data"))$</span><br/><span class="rvts9">(%i6) range (s2);</span><br/><span class="rvts9">(%o6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[19.67, 20.96, 17.37, 24.38, 22.46]</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1424"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">quantile</span><span class="rvts18"> (list, p)</span></li>
+<li><a name="IDX1425"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">quantile</span><span class="rvts18"> (matrix, p)</span></li>
+<li class="rvps3"><span class="rvts6">Es el </span><span class="rvts18">p</span><span class="rvts6">-cuantil, siendo </span><span class="rvts18">p</span><span class="rvts6"> un número del intervalo </span><span class="rvts18">[0, 1]</span><span class="rvts6">, de la muestra </span><span class="rvts18">list</span><span class="rvts6">. Aunque existen varias definiciones para el cuantil muestral (Hyndman, R. J., Fan, Y. (1996) </span><span class="rvts18">Sample quantiles in statistical packages</span><span class="rvts6">. American Statistician, 50, 361-365), la programada en el paquete </span><span class="rvts9">descriptive</span><span class="rvts6"> es la basada en la interpolación lineal.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) s1 : read_list (file_search ("pidigits.data"))$</span><br/><span class="rvts9">(%i4) /* 1er and 3er cuartiles */</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[quantile (s1, 1/4), quantile (s1, 3/4)], numer;</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[2.0, 7.25]</span><br/><span class="rvts9">(%i5) s2 : read_matrix (file_search ("wind.data"))$</span><br/><span class="rvts9">(%i6) quantile (s2, 1/4);</span><br/><span class="rvts9">(%o6) &nbsp; &nbsp;[7.2575, 7.477500000000001, 7.82, 11.28, 11.48]</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1426"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">median</span><span class="rvts18"> (list)</span></li>
+<li><a name="IDX1427"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">median</span><span class="rvts18"> (matrix)</span></li>
+<li class="rvps3"><span class="rvts6">Una vez ordenada una muestra, si el tamaño muestral es impar la mediana es el valor central, en caso contrario será la media de los dos valores centrales.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) s1 : read_list (file_search ("pidigits.data"))$</span><br/><span class="rvts9">(%i4) median (s1);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;9</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9">(%i5) s2 : read_matrix (file_search ("wind.data"))$</span><br/><span class="rvts9">(%i6) median (s2);</span><br/><span class="rvts9">(%o6) &nbsp; &nbsp; &nbsp; &nbsp; [10.06, 9.855, 10.73, 15.48, 14.105]</span></p>
+<p class="rvps3"><span class="rvts6">La mediana es el cuantil 1/2.</span></p>
+<p class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">quantile</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1428"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">qrange</span><span class="rvts18"> (list)</span></li>
+<li><a name="IDX1429"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">qrange</span><span class="rvts18"> (matrix)</span></li>
+<li class="rvps3"><span class="rvts6">El rango intercuartílico es la diferencia entre el tercer y primer cuartil, </span><span class="rvts9">quantile(</span><span class="rvts19">list</span><span class="rvts9">,3/4) - quantile(</span><span class="rvts19">list</span><span class="rvts9">,1/4)</span><span class="rvts6">,</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) s1 : read_list (file_search ("pidigits.data"))$</span><br/><span class="rvts9">(%i4) qrange (s1);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 21</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;--</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4</span><br/><span class="rvts9">(%i5) s2 : read_matrix (file_search ("wind.data"))$</span><br/><span class="rvts9">(%i6) qrange (s2);</span><br/><span class="rvts9">(%o6) [5.385, 5.572499999999998, 6.0225, 8.729999999999999, </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 6.650000000000002]</span></p>
+<p class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">quantile</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1430"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">mean_deviation</span><span class="rvts18"> (list)</span></li>
+<li><a name="IDX1431"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">mean_deviation</span><span class="rvts18"> (matrix)</span></li>
+<li class="rvps3"><span class="rvts6">Es la desviación media, definida como</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ====</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1 &nbsp; \ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp; &nbsp;&gt; &nbsp; &nbsp;|x - x|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n &nbsp; / &nbsp; &nbsp; &nbsp; i</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ====</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; i = 1</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) s1 : read_list (file_search ("pidigits.data"))$</span><br/><span class="rvts9">(%i4) mean_deviation (s1);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 51</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;--</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 20</span><br/><span class="rvts9">(%i5) s2 : read_matrix (file_search ("wind.data"))$</span><br/><span class="rvts9">(%i6) mean_deviation (s2);</span><br/><span class="rvts9">(%o6) [3.287959999999999, 3.075342, 3.23907, 4.715664000000001, </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4.028546000000002]</span></p>
+<p class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">mean</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1432"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">median_deviation</span><span class="rvts18"> (list)</span></li>
+<li><a name="IDX1433"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">median_deviation</span><span class="rvts18"> (matrix)</span></li>
+<li class="rvps3"><span class="rvts6">Es la desviación mediana, definida como</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ====</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1 &nbsp; \</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp; &nbsp;&gt; &nbsp; &nbsp;|x - med|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n &nbsp; / &nbsp; &nbsp; &nbsp; i</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ====</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; i = 1</span></p>
+<p class="rvps3"><span class="rvts6">siendo </span><span class="rvts9">med</span><span class="rvts6"> la mediana de </span><span class="rvts18">list</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) s1 : read_list (file_search ("pidigits.data"))$</span><br/><span class="rvts9">(%i4) median_deviation (s1);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;5</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9">(%i5) s2 : read_matrix (file_search ("wind.data"))$</span><br/><span class="rvts9">(%i6) median_deviation (s2);</span><br/><span class="rvts9">(%o6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [2.75, 2.755, 3.08, 4.315, 3.31]</span></p>
+<p class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">mean</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1434"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">harmonic_mean</span><span class="rvts18"> (list)</span></li>
+<li><a name="IDX1435"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">harmonic_mean</span><span class="rvts18"> (matrix)</span></li>
+<li class="rvps3"><span class="rvts6">Es la media armónica, definida como</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;n</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;n</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ====</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; \ &nbsp; &nbsp; 1</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&gt; &nbsp; &nbsp;--</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; / &nbsp; &nbsp; x</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ==== &nbsp; i</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; i = 1</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) y : [5, 7, 2, 5, 9, 5, 6, 4, 9, 2, 4, 2, 5]$</span><br/><span class="rvts9">(%i4) harmonic_mean (y), numer;</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3.901858027632205</span><br/><span class="rvts9">(%i5) s2 : read_matrix (file_search ("wind.data"))$</span><br/><span class="rvts9">(%i6) harmonic_mean (s2);</span><br/><span class="rvts9">(%o6) [6.948015590052786, 7.391967752360356, 9.055658197151745, </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;13.44199028193692, 13.01439145898509]</span></p>
+<p class="rvps3"><span class="rvts6">Véanse también </span><span class="rvts9">mean</span><span class="rvts6"> y </span><span class="rvts9">geometric_mean</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1436"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">geometric_mean</span><span class="rvts18"> (list)</span></li>
+<li><a name="IDX1437"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">geometric_mean</span><span class="rvts18"> (matrix)</span></li>
+<li class="rvps3"><span class="rvts6">Es la media geométrica, definida como</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; / &nbsp;n &nbsp; &nbsp; &nbsp;\ 1/n</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | /===\ &nbsp; |</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp;! ! &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp;! ! &nbsp;x |</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp;! ! &nbsp; i|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | i = 1 &nbsp; |</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; \ &nbsp; &nbsp; &nbsp; &nbsp; /</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) y : [5, 7, 2, 5, 9, 5, 6, 4, 9, 2, 4, 2, 5]$</span><br/><span class="rvts9">(%i4) geometric_mean (y), numer;</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4.454845412337012</span><br/><span class="rvts9">(%i5) s2 : read_matrix (file_search ("wind.data"))$</span><br/><span class="rvts9">(%i6) geometric_mean (s2);</span><br/><span class="rvts9">(%o6) [8.82476274347979, 9.22652604739361, 10.0442675714889, </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;14.61274126349021, 13.96184163444275]</span></p>
+<p class="rvps3"><span class="rvts6">Véanse también </span><span class="rvts9">mean</span><span class="rvts6"> y </span><span class="rvts9">harmonic_mean</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1438"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">kurtosis</span><span class="rvts18"> (list)</span></li>
+<li><a name="IDX1439"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">kurtosis</span><span class="rvts18"> (matrix)</span></li>
+<li class="rvps3"><span class="rvts6">Es el coeficiente de curtosis, definido como</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;n</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;====</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1 &nbsp; &nbsp; \ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_ 4</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ---- &nbsp; &nbsp;&gt; &nbsp; &nbsp;(x - x) &nbsp;- 3</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4 &nbsp; / &nbsp; &nbsp; &nbsp; i</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n s &nbsp; &nbsp;====</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;i = 1</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) s1 : read_list (file_search ("pidigits.data"))$</span><br/><span class="rvts9">(%i4) kurtosis (s1), numer;</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- 1.273247946514421</span><br/><span class="rvts9">(%i5) s2 : read_matrix (file_search ("wind.data"))$</span><br/><span class="rvts9">(%i6) kurtosis (s2);</span><br/><span class="rvts9">(%o6) [- .2715445622195385, 0.119998784429451, </span><br/><span class="rvts9"> &nbsp; - .4275233490482866, - .6405361979019522, - .4952382132352935]</span></p>
+<p class="rvps3"><span class="rvts6">Véanse también </span><span class="rvts9">mean</span><span class="rvts6">, </span><span class="rvts9">var</span><span class="rvts6"> y </span><span class="rvts9">skewness</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1440"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">skewness</span><span class="rvts18"> (list)</span></li>
+<li><a name="IDX1441"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">skewness</span><span class="rvts18"> (matrix)</span></li>
+<li class="rvps3"><span class="rvts6">Es el coeficiente de asimetría, definido como</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;n</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;====</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1 &nbsp; &nbsp; \ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_ 3</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ---- &nbsp; &nbsp;&gt; &nbsp; &nbsp;(x - x)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3 &nbsp; / &nbsp; &nbsp; &nbsp; i</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n s &nbsp; &nbsp;====</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;i = 1</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) s1 : read_list (file_search ("pidigits.data"))$</span><br/><span class="rvts9">(%i4) skewness (s1), numer;</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.009196180476450306</span><br/><span class="rvts9">(%i5) s2 : read_matrix (file_search ("wind.data"))$</span><br/><span class="rvts9">(%i6) skewness (s2);</span><br/><span class="rvts9">(%o6) [.1580509020000979, .2926379232061854, .09242174416107717, </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.2059984348148687, .2142520248890832]</span></p>
+<p class="rvps3"><span class="rvts6">Véanse también </span><span class="rvts9">mean</span><span class="rvts6">, </span><span class="rvts9">var</span><span class="rvts6"> y </span><span class="rvts9">kurtosis</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1442"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">pearson_skewness</span><span class="rvts18"> (list)</span></li>
+<li><a name="IDX1443"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">pearson_skewness</span><span class="rvts18"> (matrix)</span></li>
+<li class="rvps3"><span class="rvts6">Es el coeficiente de asimetría de Pearson, definido como</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3 (x - med)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -----------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;s</span></p>
+<p class="rvps3"><span class="rvts6">siendo </span><span class="rvts18">med</span><span class="rvts6"> la mediana de </span><span class="rvts18">list</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) s1 : read_list (file_search ("pidigits.data"))$</span><br/><span class="rvts9">(%i4) pearson_skewness (s1), numer;</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .2159484029093895</span><br/><span class="rvts9">(%i5) s2 : read_matrix (file_search ("wind.data"))$</span><br/><span class="rvts9">(%i6) pearson_skewness (s2);</span><br/><span class="rvts9">(%o6) [- .08019976629211892, .2357036272952649, </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; .1050904062491204, .1245042340592368, .4464181795804519]</span></p>
+<p class="rvps3"><span class="rvts6">Véanse también </span><span class="rvts9">mean</span><span class="rvts6">, </span><span class="rvts9">var</span><span class="rvts6"> y </span><span class="rvts9">median</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1444"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">quartile_skewness</span><span class="rvts18"> (list)</span></li>
+<li><a name="IDX1445"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">quartile_skewness</span><span class="rvts18"> (matrix)</span></li>
+<li class="rvps3"><span class="rvts6">Es el coeficiente de asimetría cuartílico, definido como</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; c &nbsp; &nbsp;- 2 c &nbsp; &nbsp;+ c</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3/4 &nbsp; &nbsp; &nbsp;1/2 &nbsp; &nbsp;1/4</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------------------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; c &nbsp; &nbsp;- c</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3/4 &nbsp; &nbsp;1/4</span></p>
+<p class="rvps3"><span class="rvts6">siendo </span><span class="rvts18">c_p</span><span class="rvts6"> el </span><span class="rvts18">p</span><span class="rvts6">-cuantil de la muestra </span><span class="rvts18">list</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) s1 : read_list (file_search ("pidigits.data"))$</span><br/><span class="rvts9">(%i4) quartile_skewness (s1), numer;</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.04761904761904762</span><br/><span class="rvts9">(%i5) s2 : read_matrix (file_search ("wind.data"))$</span><br/><span class="rvts9">(%i6) quartile_skewness (s2);</span><br/><span class="rvts9">(%o6) [- 0.0408542246982353, .1467025572005382, </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; 0.0336239103362392, .03780068728522298, 0.210526315789474]</span></p>
+<p class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">quantile</span><span class="rvts6">.</span></p>
+<hr style="height: 6px;"/>
+<div><a name="IDX1446"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparagrficoses.html#SEC177"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparagrficoses.html#SEC179"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparagrficoses.html#SEC174"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparagrficoses.html#SEC174"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_46.html#SEC180"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">45.4 Funciones y variables de valores descriptivos multivariantes</span></span></h2>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1447"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">cov</span><span class="rvts18"> (matrix)</span></li>
+<li class="rvps3"><span class="rvts6">Es la matriz de covarianzas de una muestra multivariante, definida como</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;n</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ====</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1 &nbsp;\ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; _ &nbsp; &nbsp; &nbsp; &nbsp;_</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;S = - &nbsp; &gt; &nbsp; &nbsp;(X &nbsp;- X) (X &nbsp;- X)'</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;n &nbsp;/ &nbsp; &nbsp; &nbsp; j &nbsp; &nbsp; &nbsp; &nbsp;j</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ====</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; j = 1</span></p>
+<p class="rvps3"><span class="rvts6">siendo </span><span class="rvts18">X_j</span><span class="rvts6"> la </span><span class="rvts18">j</span><span class="rvts6">-ésima fila de la matriz muestral.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) s2 : read_matrix (file_search ("wind.data"))$</span><br/><span class="rvts9">(%i4) fpprintprec : 7$ &nbsp;/* cambia precision */</span><br/><span class="rvts9">(%i5) cov (s2);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ 17.22191 &nbsp;13.61811 &nbsp;14.37217 &nbsp;19.39624 &nbsp;15.42162 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ 13.61811 &nbsp;14.98774 &nbsp;13.30448 &nbsp;15.15834 &nbsp;14.9711 &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9">(%o5) [ 14.37217 &nbsp;13.30448 &nbsp;15.47573 &nbsp;17.32544 &nbsp;16.18171 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ 19.39624 &nbsp;15.15834 &nbsp;17.32544 &nbsp;32.17651 &nbsp;20.44685 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ 15.42162 &nbsp;14.9711 &nbsp; 16.18171 &nbsp;20.44685 &nbsp;24.42308 ]</span></p>
+<p class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">cov1</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1448"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">cov1</span><span class="rvts18"> (matrix)</span></li>
+<li class="rvps3"><span class="rvts6">Es la matriz de cuasivarianzas de una muestra multivariante, definida como</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;n</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ====</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; 1 &nbsp; \ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; _ &nbsp; &nbsp; &nbsp; &nbsp;_</span><br/><span class="rvts9"> &nbsp; S &nbsp;= --- &nbsp; &gt; &nbsp; &nbsp;(X &nbsp;- X) (X &nbsp;- X)'</span><br/><span class="rvts9"> &nbsp; &nbsp;1 &nbsp; n-1 &nbsp;/ &nbsp; &nbsp; &nbsp; j &nbsp; &nbsp; &nbsp; &nbsp;j</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ====</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; j = 1</span></p>
+<p class="rvps3"><span class="rvts6">siendo </span><span class="rvts18">X_j</span><span class="rvts6"> la </span><span class="rvts18">j</span><span class="rvts6">-ésima fila de la matriz muestral.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) s2 : read_matrix (file_search ("wind.data"))$</span><br/><span class="rvts9">(%i4) fpprintprec : 7$ /* cambia precision */</span><br/><span class="rvts9">(%i5) cov1 (s2);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ 17.39587 &nbsp;13.75567 &nbsp;14.51734 &nbsp;19.59216 &nbsp;15.5774 &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ 13.75567 &nbsp;15.13913 &nbsp;13.43887 &nbsp;15.31145 &nbsp;15.12232 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9">(%o5) [ 14.51734 &nbsp;13.43887 &nbsp;15.63205 &nbsp;17.50044 &nbsp;16.34516 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ 19.59216 &nbsp;15.31145 &nbsp;17.50044 &nbsp;32.50153 &nbsp;20.65338 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ 15.5774 &nbsp; 15.12232 &nbsp;16.34516 &nbsp;20.65338 &nbsp;24.66977 ]</span></p>
+<p class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">cov</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1449"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">global_variances</span><span class="rvts18"> (matrix)</span></li>
+<li><a name="FUNCIONES-Y-VARIABLES-DE-VALORES-DESCRIPTIVOS-MULTIVARIANTES"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">global_variances</span><span class="rvts18"> (matrix, logical_value)</span></li>
+<li class="rvps3"><span class="rvts6">La función </span><span class="rvts9">global_variances</span><span class="rvts6"> devuelve una lista de medidas globales de variabilidad:</span></li>
+</ul>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">varianza total</span><span class="rvts6">: </span><span class="rvts9">trace(S_1)</span><span class="rvts6">,</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">varianza media</span><span class="rvts6">: </span><span class="rvts9">trace(S_1)/p</span><span class="rvts6">,</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">varianza generalizada</span><span class="rvts6">: </span><span class="rvts9">determinant(S_1)</span><span class="rvts6">,</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">desviación típica generalizada</span><span class="rvts6">: </span><span class="rvts9">sqrt(determinant(S_1))</span><span class="rvts6">,</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">varianza efectiva</span><span class="rvts6"> </span><span class="rvts9">determinant(S_1)^(1/p)</span><span class="rvts6">, (definida en: Peña, D. (2002) </span><span class="rvts18">Análisis de datos multivariantes</span><span class="rvts6">; McGraw-Hill, Madrid.)</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">desviación típica efectiva</span><span class="rvts6">: </span><span class="rvts9">determinant(S_1)^(1/(2*p))</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">donde </span><span class="rvts18">p</span><span class="rvts6"> es la dimensión de la variable aleatoria multivariante y </span><span class="rvts18">S_1</span><span class="rvts6"> la matriz de covarianzas devuelta por la función </span><span class="rvts9">cov1</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) s2 : read_matrix (file_search ("wind.data"))$</span><br/><span class="rvts9">(%i4) global_variances (s2);</span><br/><span class="rvts9">(%o4) [105.338342060606, 21.06766841212119, 12874.34690469686, </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; 113.4651792608502, 6.636590811800794, 2.576158149609762]</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">global_variances</span><span class="rvts6"> tiene un argumento lógico opcional: </span><span class="rvts9">global_variances(x,true)</span><span class="rvts6"> indica a Maxima que </span><span class="rvts9">x</span><span class="rvts6"> es la matriz de datos, calculando entonces lo mismo que </span><span class="rvts9">global_variances(x)</span><span class="rvts6">. Por otro lado, </span><span class="rvts9">global_variances(x,false)</span><span class="rvts6"> significa que </span><span class="rvts9">x</span><span class="rvts6"> no es la matriz de datos, sino la de covarianzas, evitando así recalcularla,</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) s2 : read_matrix (file_search ("wind.data"))$</span><br/><span class="rvts9">(%i4) s : cov1 (s2)$</span><br/><span class="rvts9">(%i5) global_variances (s, false);</span><br/><span class="rvts9">(%o5) [105.338342060606, 21.06766841212119, 12874.34690469686, </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; 113.4651792608502, 6.636590811800794, 2.576158149609762]</span></p>
+<p class="rvps3"><span class="rvts6">Véanse también </span><span class="rvts9">cov</span><span class="rvts6"> y </span><span class="rvts9">cov1</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC178"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">cor</span><span class="rvts18"> (matrix)</span></li>
+<li><a name="IDX1450"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">cor</span><span class="rvts18"> (matrix, logical_value)</span></li>
+<li class="rvps3"><span class="rvts6">Es la matriz de correlaciones de la muestra multivariante.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) fpprintprec: 7$</span><br/><span class="rvts9">(%i4) s2 : read_matrix (file_search ("wind.data"))$</span><br/><span class="rvts9">(%i5) cor (s2);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ &nbsp; 1.0 &nbsp; &nbsp; .8476339 &nbsp;.8803515 &nbsp;.8239624 &nbsp;.7519506 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ .8476339 &nbsp; &nbsp;1.0 &nbsp; &nbsp; .8735834 &nbsp;.6902622 &nbsp;0.782502 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9">(%o5) [ .8803515 &nbsp;.8735834 &nbsp; &nbsp;1.0 &nbsp; &nbsp; .7764065 &nbsp;.8323358 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ .8239624 &nbsp;.6902622 &nbsp;.7764065 &nbsp; &nbsp;1.0 &nbsp; &nbsp; .7293848 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ .7519506 &nbsp;0.782502 &nbsp;.8323358 &nbsp;.7293848 &nbsp; &nbsp;1.0 &nbsp; &nbsp;]</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">cor</span><span class="rvts6"> tiene un argumento lógico opcional: </span><span class="rvts9">cor(x,true)</span><span class="rvts6"> indica a Maxima que </span><span class="rvts9">x</span><span class="rvts6"> es la matriz de datos, calculando entonces lo mismo que </span><span class="rvts9">cor(x)</span><span class="rvts6">. Por otro lado, </span><span class="rvts9">cor(x,false)</span><span class="rvts6"> significa que </span><span class="rvts9">x</span><span class="rvts6"> no es la matriz de datos, sino la de covarianzas, evitando así recalcularla,</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) fpprintprec: 7$</span><br/><span class="rvts9">(%i4) s2 : read_matrix (file_search ("wind.data"))$</span><br/><span class="rvts9">(%i5) s : cov1 (s2)$</span><br/><span class="rvts9">(%i6) cor (s, false); /* mas rapido */</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ &nbsp; 1.0 &nbsp; &nbsp; .8476339 &nbsp;.8803515 &nbsp;.8239624 &nbsp;.7519506 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ .8476339 &nbsp; &nbsp;1.0 &nbsp; &nbsp; .8735834 &nbsp;.6902622 &nbsp;0.782502 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9">(%o6) [ .8803515 &nbsp;.8735834 &nbsp; &nbsp;1.0 &nbsp; &nbsp; .7764065 &nbsp;.8323358 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ .8239624 &nbsp;.6902622 &nbsp;.7764065 &nbsp; &nbsp;1.0 &nbsp; &nbsp; .7293848 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ .7519506 &nbsp;0.782502 &nbsp;.8323358 &nbsp;.7293848 &nbsp; &nbsp;1.0 &nbsp; &nbsp;]</span></p>
+<p class="rvps3"><span class="rvts6">Véanse también </span><span class="rvts9">cov</span><span class="rvts6"> y </span><span class="rvts9">cov1</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1451"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">list_correlations</span><span class="rvts18"> (matrix)</span></li>
+<li><a name="IDX1452"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">list_correlations</span><span class="rvts18"> (matrix, logical_value)</span></li>
+<li class="rvps3"><span class="rvts6">La función </span><span class="rvts9">list_correlations</span><span class="rvts6"> devuelve una lista con medidas de correlación:</span></li>
+</ul>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">matriz de precisión</span><span class="rvts6">: es la inversa de la matriz de covarianzas </span><span class="rvts18">S_1</span><span class="rvts6">,</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9"> &nbsp; &nbsp; &nbsp; -1 &nbsp; &nbsp; ij</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;S &nbsp; = (s &nbsp;) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp; &nbsp; i,j = 1,2,...,p</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">vector de correlación múltiple</span><span class="rvts6">: </span><span class="rvts18">(R_1^2, R_2^2, ..., R_p^2)</span><span class="rvts6">, donde</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9"> &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;R &nbsp;= 1 - -------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; i &nbsp; &nbsp; &nbsp; &nbsp;ii</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; s &nbsp; s</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ii</span></p>
+<p class="rvps3"><span class="rvts6">es un indicador de la bondad de ajuste del modelo de regresión lineal multivariante de </span><span class="rvts18">X_i</span><span class="rvts6"> cuando el resto de variables se utilizan como regresores.</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">matriz de correlaciones parciales</span><span class="rvts6">: en la que el elemento </span><span class="rvts18">(i, j)</span><span class="rvts6"> es</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ij</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;s</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;r &nbsp; &nbsp; &nbsp; &nbsp;= - ------------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; ij.rest &nbsp; &nbsp; / ii &nbsp;jj\ 1/2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |s &nbsp; s &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; \ &nbsp; &nbsp; &nbsp; /</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) s2 : read_matrix (file_search ("wind.data"))$</span><br/><span class="rvts9">(%i4) z : list_correlations (s2)$</span><br/><span class="rvts9">(%i5) fpprintprec : 5$ /* cambia precision */</span><br/><span class="rvts9">(%i6) z[1]; &nbsp;/* matriz de precision */</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ &nbsp;.38486 &nbsp; - .13856 &nbsp; - .15626 &nbsp; - .10239 &nbsp; &nbsp;.031179 &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ - .13856 &nbsp; .34107 &nbsp; &nbsp;- .15233 &nbsp; &nbsp;.038447 &nbsp; - .052842 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9">(%o6) [ - .15626 &nbsp;- .15233 &nbsp; &nbsp;.47296 &nbsp; &nbsp;- .024816 &nbsp;- .10054 &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ - .10239 &nbsp; .038447 &nbsp; - .024816 &nbsp; .10937 &nbsp; &nbsp;- .034033 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ .031179 &nbsp; - .052842 &nbsp;- .10054 &nbsp; - .034033 &nbsp; .14834 &nbsp; ]</span><br/><span class="rvts9">(%i7) z[2]; &nbsp;/* vector de correlacion multiple */</span><br/><span class="rvts9">(%o7) &nbsp; &nbsp; &nbsp; [.85063, .80634, .86474, .71867, .72675]</span><br/><span class="rvts9">(%i8) z[3]; &nbsp;/* matriz de correlaciones parciales */</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; [ &nbsp;- 1.0 &nbsp; &nbsp; .38244 &nbsp; .36627 &nbsp; .49908 &nbsp; - .13049 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; [ &nbsp;.38244 &nbsp; &nbsp;- 1.0 &nbsp; &nbsp;.37927 &nbsp;- .19907 &nbsp; .23492 &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9">(%o8) &nbsp;[ &nbsp;.36627 &nbsp; &nbsp;.37927 &nbsp; - 1.0 &nbsp; &nbsp;.10911 &nbsp; &nbsp;.37956 &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; [ &nbsp;.49908 &nbsp; - .19907 &nbsp;.10911 &nbsp; - 1.0 &nbsp; &nbsp; .26719 &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; [ - .13049 &nbsp; .23492 &nbsp; .37956 &nbsp; .26719 &nbsp; &nbsp;- 1.0 &nbsp; ]</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">list_correlations</span><span class="rvts6"> tiene un argumento lógico opcional: </span><span class="rvts9">list_correlations(x,true)</span><span class="rvts6"> indica a Maxima que </span><span class="rvts9">x</span><span class="rvts6"> es la matriz de datos, calculando entonces lo mismo que </span><span class="rvts9">list_correlations(x)</span><span class="rvts6">. Por otro lado, </span><span class="rvts9">list_correlations(x,false)</span><span class="rvts6"> significa que </span><span class="rvts9">x</span><span class="rvts6"> no es la matriz de datos, sino la de covarianzas, evitando así recalcularla.</span></p>
+<p class="rvps3"><span class="rvts6">Véanse también </span><span class="rvts9">cov</span><span class="rvts6"> y </span><span class="rvts9">cov1</span><span class="rvts6">.</span></p>
+<hr style="height: 6px;"/>
+<div><a name="IDX1453"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparagrficoses.html#SEC178"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_46.html#SEC180"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparagrficoses.html#SEC174"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparagrficoses.html#SEC174"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_46.html#SEC180"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">45.5 Funciones y variables para gráficos estadísticos</span></span></h2>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1454"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">dataplot</span><span class="rvts18"> (list)</span></li>
+<li><a name="IDX1455"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">dataplot</span><span class="rvts18"> (list, option_1, option_2, ...)</span></li>
+<li><a name="IDX1456"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">dataplot</span><span class="rvts18"> (matrix)</span></li>
+<li><a name="IDX1457"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">dataplot</span><span class="rvts18"> (matrix, option_1, option_2, ...)</span></li>
+<li class="rvps3"><span class="rvts6">La función </span><span class="rvts9">dataplot</span><span class="rvts6"> permite la visualización directa de datos muestrales, tanto univariantes (</span><span class="rvts18">list</span><span class="rvts6">) como multivariantes (</span><span class="rvts18">matrix</span><span class="rvts6">). Asignando valores a las siguientes opciones (</span><span class="rvts18">options</span><span class="rvts6">) se pueden controlar ciertos aspectos del gráfico:</span></li>
+</ul>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'outputdev</span><span class="rvts6">, </span><span class="rvts9">"x"</span><span class="rvts6"> por defecto, indica el dispositivo de salida; valores aceptados son </span><span class="rvts9">"x"</span><span class="rvts6">, </span><span class="rvts9">"eps"</span><span class="rvts6"> y </span><span class="rvts9">"png"</span><span class="rvts6">, para la pantalla, y los formatos de ficheros postscript y png, respectivamente.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'maintitle</span><span class="rvts6">, </span><span class="rvts9">""</span><span class="rvts6"> por defecto, es el título principal entre comillas dobles.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'axisnames</span><span class="rvts6">, </span><span class="rvts9">["x","y","z"]</span><span class="rvts6"> por defecto, es una lista con nombres para los ejes </span><span class="rvts9">x</span><span class="rvts6">, </span><span class="rvts9">y</span><span class="rvts6"> y </span><span class="rvts9">z</span><span class="rvts6">.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'joined</span><span class="rvts6">, </span><span class="rvts9">false</span><span class="rvts6"> por defecto, un valor lógico que indica si los puntos en 2D deben unirse por segmentos o no.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'picturescales</span><span class="rvts6">, </span><span class="rvts9">[1.0, 1.0]</span><span class="rvts6"> por defecto, factores de escala para el tamaño del gráfico.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'threedim</span><span class="rvts6">, </span><span class="rvts9">true</span><span class="rvts6"> por defecto, indica a Maxima si debe dibujar una matriz de tres columnas como un diagrama tridimensional o como un diagrama de dispersión multivariante. Véanse ejemplos más abajo.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'axisrot</span><span class="rvts6">, </span><span class="rvts9">[60, 30]</span><span class="rvts6"> por defecto, cambia el punto de vista cuando </span><span class="rvts9">'threedim</span><span class="rvts6"> toma el valor </span><span class="rvts9">true</span><span class="rvts6"> y los datos se suministran en una matriz de tres columnas. El primer número es el ángulo de rotación del eje </span><span class="rvts18">x</span><span class="rvts6">, siendo el segundo el ángulo de rotación del eje </span><span class="rvts18">z</span><span class="rvts6">, ambos medidos en grados sexagesimales.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'nclasses</span><span class="rvts6">, </span><span class="rvts9">10</span><span class="rvts6"> por defecto, es el número de clases a considerar en los histogramas de la diagonal de los diagramas de dispersión multivariantes.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'pointstyle</span><span class="rvts6">, </span><span class="rvts9">1</span><span class="rvts6"> por defecto, es un entero que indica cómo dibujar los puntos muestrales.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Por ejemplo, con el siguiente código se realiza un gráfico con los veinte primeros dígitos del número </span><span class="rvts9">%pi</span><span class="rvts6"> y el resultado se guarda en un fichero en formato eps.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) s1 : read_list (file_search ("pidigits.data"))$</span><br/><span class="rvts9">(%i4) dataplot (makelist (s1[k], k, 1, 20), 'pointstyle = 3)$</span></p>
+<p class="rvps3"><span class="rvts6">Nótese que las muestras univariantes se representan como series temporales. En el siguiente ejemplo se utilizan más datos y con diferentes opciones,</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) s1 : read_list (file_search ("pidigits.data"))$</span><br/><span class="rvts9">(%i4) dataplot (makelist (s1[k], k, 1, 50),</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'maintitle = "First pi digits",</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'axisnames = ["digit order", "digit value"],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'pointstyle = 2,</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'joined = true)$</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">dataplot</span><span class="rvts6"> puede utilizarse para representar puntos del plano. El siguiente ejemplo es un diagrama de dispersión de los pares formados con las velocidades del viento correspondientes a las estaciones meteorológicas uno y cinco,</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) s2 : read_matrix (file_search ("wind.data"))$</span><br/><span class="rvts9">(%i4) dataplot (submatrix (s2, 2, 3, 4), 'pointstyle = 2,</span><br/><span class="rvts9"> 'maintitle = "Pairs of wind speeds measured in knots",</span><br/><span class="rvts9"> 'axisnames = ["Wind speed in A", "Wind speed in E"])$</span></p>
+<p class="rvps3"><span class="rvts6">Si los puntos están almacenados en una matriz de dos columnas, </span><span class="rvts9">dataplot</span><span class="rvts6"> los puede dibujar directamente, pero si están guardados como una lista de pares deben transformarse previamente a una matriz, tal como se hace en el siguiente ejemplo.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) x : [[-1, 2], [5, 7], [5, -3], [-6, -9], [-4, 6]]$</span><br/><span class="rvts9">(%i3) dataplot (apply ('matrix, x), 'maintitle = "Points",</span><br/><span class="rvts9"> 'joined = true, 'axisnames = ["", ""], 'picturescales = [0.5, 1.0])$</span></p>
+<p class="rvps3"><span class="rvts6">Puntos del espacio tridimensional pueden verse como proyecciones sobre un plano. Es este ejemplo se piden gráficos de las velocidades del viento correspondientes a tres estaciones meteorológicas, primero una representación tridimensional y luego como diagrama de dispersión multivariante.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) s2 : read_matrix (file_search ("wind.data"))$</span><br/><span class="rvts9">(%i4) /* grafico 3D */</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;dataplot (</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; submatrix (s2, 4, 5),</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; 'pointstyle = 2,</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; 'maintitle = "Pairs of wind speeds measured in knots",</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; 'axisnames = ["Station A", "Station B", "Station C"])$</span><br/><span class="rvts9">(%i5) /* Dispersion multivariante */</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;dataplot (submatrix (s2, 4, 5),</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;'nclasses = 6,</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;'threedim = false)$</span></p>
+<p class="rvps3"><span class="rvts6">Nótese que en este último ejemplo, el número de clases de los histogramas de la diagonal se ajusta a 6, y que a la opción </span><span class="rvts9">'threedim</span><span class="rvts6"> se le da el valor </span><span class="rvts9">false</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Para más de tres dimensiones sólo son posibles los diagramas de dispersión multivariantes, como en</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) s2 : read_matrix (file_search ("wind.data"))$</span><br/><span class="rvts9">(%i4) dataplot (s2)$</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="FUNCIONES-Y-VARIABLES-PARA-GR_00E1FICOS-ESTAD_00EDSTICOS"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">histogram</span><span class="rvts18"> (list)</span></li>
+<li><a name="SEC179"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">histogram</span><span class="rvts18"> (list, option_1, option_2, ...)</span></li>
+<li><a name="IDX1458"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">histogram</span><span class="rvts18"> (one_column_matrix)</span></li>
+<li><a name="IDX1459"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">histogram</span><span class="rvts18"> (one_column_matrix, option_1, option_2, ...)</span></li>
+<li class="rvps3"><span class="rvts6">Dibuja un histograma. Los datos muestrales deben suministrarse como una lista de números o como una matriz columna. Asignando valores a las siguientes opciones (</span><span class="rvts18">options</span><span class="rvts6">) se pueden controlar ciertos aspectos del gráfico:</span></li>
+</ul>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'outputdev</span><span class="rvts6">, </span><span class="rvts9">"x"</span><span class="rvts6"> por defecto, indica el dispositivo de salida; valores aceptados son </span><span class="rvts9">"x"</span><span class="rvts6">, </span><span class="rvts9">"eps"</span><span class="rvts6"> y </span><span class="rvts9">"png"</span><span class="rvts6">, para la pantalla, y los formatos de ficheros postscript y png, respectivamente.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'maintitle</span><span class="rvts6">, </span><span class="rvts9">""</span><span class="rvts6"> por defecto, es el título principal entre comillas dobles.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'axisnames</span><span class="rvts6">, </span><span class="rvts9">["x", "Fr."]</span><span class="rvts6"> por defecto, es una lista con nombres para los ejes </span><span class="rvts9">x</span><span class="rvts6"> e </span><span class="rvts9">y</span><span class="rvts6">.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'picturescales</span><span class="rvts6">, </span><span class="rvts9">[1.0, 1.0]</span><span class="rvts6"> por defecto, factores de escala para el tamaño del gráfico.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'nclasses</span><span class="rvts6">, </span><span class="rvts9">10</span><span class="rvts6"> por defecto, es el número de intervalos de clase.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'relbarwidth</span><span class="rvts6">, </span><span class="rvts9">0.9</span><span class="rvts6"> por defecto, es un número decimal entre 0 y 1 para controlar el ancho de las barras.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'barcolor</span><span class="rvts6">, </span><span class="rvts9">1</span><span class="rvts6"> por defecto, es un entero que indica el color de las barras.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'colorintensity</span><span class="rvts6">, </span><span class="rvts9">1</span><span class="rvts6"> por defecto, es un número decimal entre 0 y 1 para establecer la intensidad del color.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">En los siguientes dos ejemplos se solicitan sendos histogramas para los 100 primeros dígitos del número </span><span class="rvts18">pi</span><span class="rvts6"> y para las velocidades del viento en la estación meteorológica número 3.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) s1 : read_list (file_search ("pidigits.data"))$</span><br/><span class="rvts9">(%i4) histogram (s1, </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'maintitle = "pi digits", </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'axisnames = ["", "Absolute frequency"],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'relbarwidth = 0.2, </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'barcolor = 3, </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'colorintensity = 0.6)$</span><br/><span class="rvts9">(%i5) s2 : read_matrix (file_search ("wind.data"))$</span><br/><span class="rvts9">(%i6) histogram (col (s2, 3), 'colorintensity = 0.3)$</span></p>
+<p class="rvps3"><span class="rvts6">Nótese que en el primer caso, </span><span class="rvts9">s1</span><span class="rvts6"> es una lista y que en el segundo </span><span class="rvts9">col(s2,3)</span><span class="rvts6"> es una matriz.</span></p>
+<p class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">barsplot</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1460"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">barsplot</span><span class="rvts18"> (list)</span></li>
+<li><a name="IDX1461"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">barsplot</span><span class="rvts18"> (list, option_1, option_2, ...)</span></li>
+<li><a name="IDX1462"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">barsplot</span><span class="rvts18"> (one_column_matrix)</span></li>
+<li><a name="IDX1463"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">barsplot</span><span class="rvts18"> (one_column_matrix, option_1, option_2, ...)</span></li>
+<li class="rvps3"><span class="rvts6">Similar a </span><span class="rvts9">histogram</span><span class="rvts6"> pero para muestras discretas, numéricas o categóricas. Estas son las variables,</span></li>
+</ul>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'outputdev</span><span class="rvts6">, </span><span class="rvts9">"x"</span><span class="rvts6"> por defecto, indica el dispositivo de salida; valores aceptados son </span><span class="rvts9">"x"</span><span class="rvts6">, </span><span class="rvts9">"eps"</span><span class="rvts6"> y </span><span class="rvts9">"png"</span><span class="rvts6">, para la pantalla, y los formatos de ficheros postscript y png, respectivamente.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'maintitle</span><span class="rvts6">, </span><span class="rvts9">""</span><span class="rvts6"> por defecto, es el título principal entre comillas dobles.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'axisnames</span><span class="rvts6">, </span><span class="rvts9">["x", "Fr."]</span><span class="rvts6"> por defecto, es una lista con nombres para los ejes </span><span class="rvts9">x</span><span class="rvts6"> e </span><span class="rvts9">y</span><span class="rvts6">.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'picturescales</span><span class="rvts6">, </span><span class="rvts9">[1.0, 1.0]</span><span class="rvts6"> por defecto, factores de escala para el tamaño del gráfico.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'relbarwidth</span><span class="rvts6">, </span><span class="rvts9">0.9</span><span class="rvts6"> por defecto, es un número decimal entre 0 y 1 para controlar el ancho de las barras.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'barcolor</span><span class="rvts6">, </span><span class="rvts9">1</span><span class="rvts6"> por defecto, es un entero que indica el color de las barras.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'colorintensity</span><span class="rvts6">, </span><span class="rvts9">1</span><span class="rvts6"> por defecto, es un número decimal entre 0 y 1 para establecer la intensidad del color.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">En este ejemplo se representa el gráfico de barras correspondiente a los grupos </span><span class="rvts9">A</span><span class="rvts6"> y </span><span class="rvts9">B</span><span class="rvts6"> de los pacientes de la muestra </span><span class="rvts9">s3</span><span class="rvts6">,</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) s3 : read_matrix (file_search ("biomed.data"))$</span><br/><span class="rvts9">(%i4) barsplot (col (s3, 1), 'maintitle = "Groups of patients",</span><br/><span class="rvts9"> 'axisnames = ["Group", "# of individuals"], 'colorintensity = 0.2)$</span></p>
+<p class="rvps3"><span class="rvts6">La primera columna de la muestra </span><span class="rvts9">s3</span><span class="rvts6"> almacena los valores categóricos </span><span class="rvts9">A</span><span class="rvts6"> y </span><span class="rvts9">B</span><span class="rvts6">, llamados también factores. Por otro lado, los números enteros positivos en la segunda columna son las edades en años, que es una variable discreta, por lo que podemos representar las frecuencias absolutas de estos valores,</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) s3 : read_matrix (file_search ("biomed.data"))$</span><br/><span class="rvts9">(%i4) barsplot (col (s3, 2), 'maintitle = "Ages",</span><br/><span class="rvts9"> 'axisnames = ["Years", "# of individuals"], 'colorintensity = 0.2,</span><br/><span class="rvts9"> 'relbarwidth = 0.6)$</span></p>
+<p class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">histogram</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1464"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">boxplot</span><span class="rvts18"> (data)</span></li>
+<li><a name="IDX1465"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">boxplot</span><span class="rvts18"> (data, option_1, option_2, ...)</span></li>
+<li class="rvps3"><span class="rvts6">Dibuja diagramas de cajas. El argumento </span><span class="rvts18">data</span><span class="rvts6"> puede ser una lista, lo cual no es de gram interés puesto que estos gráficos se utilizan fundamentalmente para comparar varias muestras, o una matriz, de manera que es posible comparar dos o más componentes de una variable estadística multivariante. También se permite que </span><span class="rvts18">data</span><span class="rvts6"> sea una lista de muestras con tamaños muestrales diferentes; de hecho esta es la única función del paquete </span><span class="rvts9">descriptive</span><span class="rvts6"> que admite este tipo de estructura. Véase ejemplo más abajo. Estas son las opciones válidas:</span></li>
+</ul>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'outputdev</span><span class="rvts6">, </span><span class="rvts9">"x"</span><span class="rvts6"> por defecto, indica el dispositivo de salida; valores aceptados son </span><span class="rvts9">"x"</span><span class="rvts6">, </span><span class="rvts9">"eps"</span><span class="rvts6"> y </span><span class="rvts9">"png"</span><span class="rvts6">, para la pantalla, y los formatos de ficheros postscript y png, respectivamente.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'maintitle</span><span class="rvts6">, </span><span class="rvts9">""</span><span class="rvts6"> por defecto, es el título principal entre comillas dobles.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'axisnames</span><span class="rvts6">, </span><span class="rvts9">["sample", "y"]</span><span class="rvts6"> por defecto, es una lista con nombres para los ejes </span><span class="rvts9">x</span><span class="rvts6"> e </span><span class="rvts9">y</span><span class="rvts6">.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'picturescales</span><span class="rvts6">, </span><span class="rvts9">[1.0, 1.0]</span><span class="rvts6"> por defecto, factores de escala para el tamaño del gráfico.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (descriptive)$</span><br/><span class="rvts9">(%i2) load (numericalio)$</span><br/><span class="rvts9">(%i3) s2 : read_matrix (file_search ("wind.data"))$</span><br/><span class="rvts9">(%i4) boxplot (s2, 'maintitle = "Windspeed in knots",</span><br/><span class="rvts9"> 'axisnames = ["Seasons", ""])$</span><br/><span class="rvts9">(%i5) A :</span><br/><span class="rvts9"> [[6, 4, 6, 2, 4, 8, 6, 4, 6, 4, 3, 2],</span><br/><span class="rvts9"> &nbsp;[8, 10, 7, 9, 12, 8, 10],</span><br/><span class="rvts9"> &nbsp;[16, 13, 17, 12, 11, 18, 13, 18, 14, 12]]$</span><br/><span class="rvts9">(%i6) boxplot (A)$</span></p>
+<hr style="height: 6px;"/>
+<div><table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparagrficoses.html#SEC174"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_46.html#SEC180"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps3"><span class="rvts10">This document was generated by </span><span class="rvts11">Robert Dodier</span><span class="rvts10"> on </span><span class="rvts11">agosto, 25 2007</span><span class="rvts10"> using </span><a class="rvts12" href="http://texi2html.cvshome.org/">texi2html 1.76</a><span class="rvts10">.</span></p>
+<p></p>
+<p class="rvps6"><span class="rvts13">Created with the Personal Edition of HelpNDoc: </span><a class="rvts14" href="http://www.helpndoc.com/feature-tour">Easily create EBooks</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				http://maxima.sourceforge.net</div>
+		</div>
+	</body>
+	
+</html>
+

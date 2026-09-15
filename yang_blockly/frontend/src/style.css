@@ -1,0 +1,1564 @@
+/* Escala de deseño propia de Yang (SaaS moderno) — deixou de estar
+   sincronizada á man coa de Piztu/Tao/installer a propósito: redeseño
+   pedido especificamente para Yang (aprobado sobre o canvas "Yang SaaS
+   Redesign"), non para o resto da suite. oklch() require WebKitGTK
+   moderno - confirmado en produción (2.50.6), sen problema. */
+:root {
+    color-scheme: light;
+    --bg-main: oklch(97.3% 0.004 264);
+    --panel-bg: oklch(100% 0 0);
+    --header-bg: oklch(100% 0 0);
+    --border-color: oklch(91% 0.006 264);
+    --border-strong: oklch(85% 0.008 264);
+    --text-dark: oklch(23% 0.02 264);
+    --text-muted: oklch(52% 0.018 264);
+    --text-faint: oklch(68% 0.014 264);
+
+    --btn-neutral-bg: oklch(96.8% 0.006 264);
+    --btn-neutral-bg-hover: oklch(90.5% 0.007 264);
+    --btn-neutral-text: oklch(38% 0.018 264);
+
+    --primary: oklch(56% 0.19 276);
+    --primary-hover: oklch(50% 0.2 276);
+    --primary-soft: oklch(94.5% 0.03 276);
+    --primary-soft-border: oklch(86% 0.06 276);
+    --on: #10b981;
+    --off: #dc2626;
+    --send: #0ea5e9;
+
+    /* Distintivo de "Intelixencia artificial" (botóns Exercicio/Exame con
+       IA) - degradado violeta->ciano, para diferencialos claramente das
+       accións normais (ver blocks.css, .blocks-toolbar__ai). */
+    --ai-1: oklch(64% 0.19 302);
+    --ai-2: oklch(70% 0.15 218);
+    --ai-soft: oklch(95.5% 0.025 300);
+    --ai-border: oklch(85% 0.06 300);
+
+    --amber: oklch(72% 0.15 70);
+    --amber-soft: oklch(95% 0.045 75);
+    --amber-soft-border: oklch(85% 0.09 75);
+
+    /* Fondos suaves dos bloques de Opcións (.options-block--*, style.css
+       "Opcións: grid de bloques") - mesma fórmula ca --primary-soft/--ai-soft
+       de enriba (L~95%, chroma baixo), só cambiando o matiz (hue) para
+       diferenciar cada bloque a golpe de vista. */
+    --teal-soft: oklch(95% 0.035 200);
+    --teal-soft-border: oklch(85% 0.07 200);
+    --success-soft: oklch(95% 0.035 155);
+    --success-soft-border: oklch(85% 0.08 155);
+
+    /* Azul, non violeta coma en piztu/frontend/src/app.css — desviación
+       intencional da sincronía de cores de arriba: pedido explicitamente
+       así para o botón "i" de Yang cando hai actualización. */
+    --actualizacion: #2563eb;
+    --actualizacion-hover: #1d4ed8;
+
+    --radius-lg: 16px;
+    --radius: 10px;
+    --radius-sm: 7px;
+
+    --shadow-sm: 0 1px 2px oklch(20% 0.02 264 / .07);
+    --shadow-md: 0 6px 20px oklch(20% 0.02 264 / .09), 0 1px 3px oklch(20% 0.02 264 / .06);
+    --shadow-lg: 0 16px 48px oklch(20% 0.02 264 / .16), 0 3px 10px oklch(20% 0.02 264 / .08);
+
+    --font-ui: "Plus Jakarta Sans", -apple-system, "Segoe UI", sans-serif;
+    --font-mono: "JetBrains Mono", "Fira Code", monospace;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #app {
+    height: 100%;
+    margin: 0;
+    font-family: var(--font-ui);
+    background: var(--bg-main);
+    color: var(--text-dark);
+    /* Evita que a PÁXINA enteira poida chegar a ter scroll propio - só os
+       contedores internos que o declaran (#log-output, a paleta de
+       bloques, etc.) deben desprazarse. Sen isto, un scrollbar de páxina
+       (WebKitGTK) queda pegado ao bordo dereito da xanela, xusto onde
+       vive #btn-toggle-log (o "+" do panel de rexistro), e rouba clics. */
+    overflow: hidden;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    /* isolation:isolate obriga a que TODO #app (barra de ferramentas,
+       editor de Código en CodeMirror, editor de Bloques/Blockly, panel de
+       rexistro...) quede contido nunha soa franxa de apilamento propia.
+       Sen isto, observouse en WebKitGTK (o webview de Linux) que calquera
+       zona con desprazamento propio (a barra de CodeMirror, o lenzo de
+       Blockly...) pode promoverse á súa propia capa de composición e
+       pintarse por riba doutro contido con z-index maior engadido despois,
+       coma as ventás .overlay/.modal (ver style.css, "Overlays / modals") -
+       que se crean e engádense a <body> DESPOIS de #app (ensureOverlay en
+       blocks-ai-library-modals.js/blocks-exercises-panel.js/blocks-
+       modal.js), así que quedan garantidas por riba en canto #app está
+       illado coma unha soa unidade. Non se observou este problema en
+       Chrome/Firefox, pero a regra non lles afecta alí.
+       Position/z-index explícitos reforzan o contexto de apilamento (por
+       se algún navegador só o crea con isolation cando tamén hai unha
+       posición fóra de "static"). */
+    position: relative;
+    z-index: 0;
+    isolation: isolate;
+}
+
+/* ---------- Toolbar (mesmo aspecto ca .navbar de Piztu) ---------- */
+
+#toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    background: var(--header-bg);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+    position: relative;
+    z-index: 1;
+}
+
+#brand {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin-right: 0.3rem;
+}
+
+/* Tile arredondada tras a mascota - mesmo tratamento cás iconas de
+   categoría do Blockly (blocks.css), para que a marca lea coma parte do
+   mesmo sistema visual. */
+#brandLogo {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+    padding: 4px;
+    border-radius: var(--radius-sm);
+    background: var(--primary-soft);
+    border: 1px solid var(--primary-soft-border);
+}
+
+#brandName {
+    font-weight: 800;
+    font-size: 1.05rem;
+    letter-spacing: -0.01em;
+    color: var(--text-dark);
+    white-space: nowrap;
+}
+
+.sep {
+    width: 1px;
+    height: 1.6rem;
+    background: var(--border-color);
+    margin: 0 0.2rem;
+    flex: none;
+}
+
+/* Groups cluster related actions in a single rounded chip, instead of every
+   button being its own separate box - reads as one control, not a grid. */
+.toolbar-group {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    background: var(--btn-neutral-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 3px;
+}
+
+.toolbar-group-run {
+    gap: 0.6rem;
+    padding: 3px 0.5rem 3px 0.7rem;
+}
+
+#toolbar button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font: inherit;
+    font-size: 0.83rem;
+    font-weight: 600;
+    color: var(--btn-neutral-text);
+    background: transparent;
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 0.42rem 0.7rem;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease, transform 0.05s ease;
+}
+
+#toolbar button svg {
+    width: 15px;
+    height: 15px;
+    flex: none;
+    color: var(--text-muted);
+    transition: color 0.15s ease;
+}
+
+.toolbar-group button:hover { background: var(--btn-neutral-bg-hover); }
+.toolbar-group button:hover svg { color: var(--text-dark); }
+#toolbar button:active { transform: scale(0.96); }
+
+.btn-ghost {
+    border: 1px solid var(--border-color);
+    background: var(--btn-neutral-bg);
+}
+.btn-ghost:hover { background: var(--btn-neutral-bg-hover); }
+
+/* Único botón con cor propia: acción primaria "Xerar", coma en Tao/Piztu
+   só o crítico/primario leva cor. */
+.btn-primary {
+    background: var(--primary);
+    color: #fff;
+    font-weight: 650;
+    padding: 0.48rem 0.95rem;
+}
+.btn-primary svg { color: #fff; }
+.btn-primary:hover { filter: brightness(1.08); }
+.btn-primary:disabled { opacity: 0.55; cursor: default; filter: none; }
+
+#toolbar label {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    white-space: nowrap;
+}
+#toolbar input[type="number"] {
+    width: 3.6rem;
+    background: var(--panel-bg);
+    color: var(--text-dark);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 0.3rem 0.4rem;
+    font: inherit;
+    font-size: 0.83rem;
+}
+/* A semente pode chegar a 6 díxitos (Math.random()*100000 en main.js) e
+   de máis se se escribe á man - o ancho xeral abondaba para as iteracións
+   (máx. 2 díxitos) pero cortaba a semente. Selector "#toolbar #seed" (non
+   só "#seed") porque precisa máis especificidade CSS ca regra de enriba
+   (#toolbar input[type="number"]) para gañarlle - un "#seed" a soas
+   nunca chegaba a aplicarse. */
+#toolbar #seed {
+    width: 5rem;
+}
+#toolbar input[type="number"]:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: -1px;
+    border-color: var(--primary);
+}
+
+/* Badge neutro (non semántico: setStatus() móstrase aquí calquera mensaxe
+   solta - ruta de ficheiro, "Xerando...", un erro... - así que non se
+   colorea coma "gardado/sen gardar", só se eleva o peso visual). */
+#status {
+    margin-left: auto;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    background: var(--btn-neutral-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    padding: 0.32rem 0.75rem;
+}
+#status:empty { display: none; }
+
+/* Botón "Abrir" que aparece ao carón de #status xusto despois de xerar un
+   PDF/tex/md/docx/odt (ver setStatusGardado, main.js) - abre ese ficheiro
+   coa aplicación por defecto do sistema (AbrirFicheiro, abrirficheiro.go)
+   para non ter que ir buscalo á man no explorador. Cor propia (fronte ao
+   badge neutro de #status) para que se vexa que é un botón, non parte da
+   mensaxe. .hidden (style.css) tápao o resto do tempo. */
+#btnAbrirGardado {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #fff;
+    background: var(--primary);
+    border: none;
+    border-radius: 999px;
+    padding: 0.32rem 0.75rem;
+    margin-left: 0.4rem;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+#btnAbrirGardado:hover { background: var(--primary-hover); }
+
+/* ---------- Panes ---------- */
+
+#panes {
+    flex: 1;
+    display: flex;
+    min-height: 0;
+    background: var(--bg-main);
+}
+
+.pane {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+}
+
+.pane-editor {
+    width: 45%;
+    min-width: 220px;
+}
+
+/* ---------- Explorador de cartafoles/ficheiros (ver explorer.js) ----------
+   Panel fixo á esquerda de .pane-editor dentro de #panes (flex row) -
+   #panes.hidden queda con só .pane-editor/.pane-preview visibles coma
+   antes, sen tocar o splitter arrastrable entre eses dous. Mesmo aspecto cá
+   antiga paleta lateral do editor de bloques (.blocks-palette, blocks.css):
+   fondo --btn-neutral-bg, bordo dereito. */
+#explorerSidebar {
+    flex: none;
+    width: 240px;
+    min-width: 160px;
+    max-width: 40vw;
+    overflow-y: auto;
+    background: var(--btn-neutral-bg);
+    border-right: 1px solid var(--border-color);
+    font-size: 0.82rem;
+}
+#explorerSidebar.hidden { display: none; }
+
+.explorer-empty {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0.6rem;
+}
+.explorer-empty__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font: inherit;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #fff;
+    background: var(--primary);
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 0.45rem 0.8rem;
+    cursor: pointer;
+}
+.explorer-empty__btn svg { width: 14px; height: 14px; flex: none; }
+.explorer-empty__btn:hover { filter: brightness(1.08); }
+
+.explorer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.4rem;
+    padding: 0.5rem 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    background: var(--btn-neutral-bg);
+    z-index: 1;
+}
+.explorer-header__name {
+    font-weight: 700;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-muted);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.explorer-header__actions {
+    display: flex;
+    gap: 0.1rem;
+    flex-shrink: 0;
+}
+
+.explorer-status {
+    margin: 0;
+    padding: 0.4rem 0.6rem;
+    font-size: 0.75rem;
+    color: var(--off);
+    background: #fef2f2;
+    border-bottom: 1px solid var(--border-color);
+    word-break: break-word;
+}
+/* explorer-status--info: confirmación de "⬆️ Subir ficheiro" (ver
+   promptUpload, explorer.js) - mesma barra ca un erro, pero en ton neutro
+   (tinguido de --primary) en vez de vermello, para non ler coma un fallo. */
+.explorer-status--info {
+    color: var(--primary);
+    background: #eef2ff;
+}
+
+.explorer-tree {
+    padding: 0.2rem 0;
+}
+
+.explorer-row {
+    display: flex;
+    align-items: center;
+    gap: 0.15rem;
+    padding: 0.28rem 0.5rem 0.28rem calc(0.5rem + var(--depth, 0) * 0.9rem);
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+}
+.explorer-row:hover { background: var(--btn-neutral-bg-hover); }
+.explorer-row:focus-visible { outline: 2px solid var(--primary); outline-offset: -2px; }
+
+.explorer-row--file { cursor: default; }
+.explorer-row--matex { cursor: pointer; font-weight: 700; color: var(--primary); }
+
+.explorer-row__chevron {
+    width: 0.9rem;
+    flex-shrink: 0;
+    color: var(--text-faint);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.explorer-row__chevron svg { width: 11px; height: 11px; }
+.explorer-row__icon {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    color: var(--text-muted);
+}
+.explorer-row__icon svg { width: 14px; height: 14px; }
+.explorer-row--matex .explorer-row__icon { color: var(--primary); }
+.explorer-row__label {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.explorer-row__actions {
+    display: none;
+    flex-shrink: 0;
+    gap: 0.1rem;
+}
+.explorer-row:hover .explorer-row__actions,
+.explorer-row:focus-within .explorer-row__actions { display: flex; }
+
+.explorer-row__action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    line-height: 1;
+    padding: 0.2rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+}
+.explorer-row__action svg { width: 12px; height: 12px; }
+.explorer-row__action:hover { background: var(--panel-bg); color: var(--text-dark); }
+
+/* Divisor arrastrable entre código e resultado (ver paneSplitter en
+   main.js) - substitúe o antigo border-right fixo de .pane-editor por algo
+   que se poida agarrar. A franxa arrastrable real (6px) é máis ancha có
+   trazo visible (1px, ::after) para que non haxa que apuntar ao píxel
+   exacto co rato. */
+#paneSplitter {
+    flex: none;
+    width: 6px;
+    margin: 0 -3px;
+    position: relative;
+    z-index: 1;
+    cursor: col-resize;
+}
+#paneSplitter::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: var(--border-color);
+}
+#paneSplitter:hover::after,
+#paneSplitter.dragging::after {
+    left: calc(50% - 1px);
+    width: 3px;
+    background: var(--primary);
+}
+
+/* Creado/eliminado dinamicamente mentres se arrastra o divisor (ver
+   crearDragOverlay en main.js) - tapa TODO, incluído o <iframe> da vista
+   previa, para que os mousemove sigan chegando ao documento principal
+   durante todo o arrastre en vez de "perderse" en canto o rato pasa por
+   riba dese iframe (documento á parte, eventos illados). */
+.pane-splitter-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    cursor: col-resize;
+}
+
+.pane-preview {
+    flex: 1;
+    min-width: 220px;
+}
+
+/* Modo dúas xanelas (Opcións → Modo de traballo): substitúe .pane-preview
+   na xanela EDITOR cando o resultado vive noutra xanela - ver
+   activarModoDobreEditor en main.js. Mensaxe simple centrada, non unha
+   cabeceira de botóns coma .pane-header-preview. */
+.pane-preview-placeholder {
+    flex: 1;
+}
+
+/* Aviso "resultado noutra xanela" + botón Reabrir - só un dos posibles
+   contidos de .pane-preview-placeholder (ver placeholderAviso en main.js).
+   O outro é o propio #editor, movido aquí en só lectura cando se traballa
+   en bloques (mostrarCodigoDeFondo) - por iso xa non é .pane-preview-
+   placeholder quen centra, senón este wrapper. */
+.placeholder-aviso {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.pane-header {
+    flex: none;
+    padding: 0.45rem 0.9rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--text-muted);
+    background: var(--btn-neutral-bg);
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Cabeceira da previsualización: en vez do texto "Previsualización", aloxa
+   as accións que antes vivían na toolbar principal (Imprimir/PDF/TeX/MD/
+   DOCX/ODT) - deixaban a toolbar sen sitio para o botón "Reiniciar Maxima".
+   Texto normal (non maiúsculas), xa que agora o contido son botóns, non
+   unha etiqueta de sección. */
+.pane-header-preview {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    text-transform: none;
+    letter-spacing: normal;
+    /* Arrastrar esta barra move a propia xanela nativa (mecanismo estándar
+       de Wails, --wails-draggable/no-drag - sen JS ningún da nosa parte).
+       En modo xanela única move a xanela de Yang enteira (normal, coma
+       calquera app); en modo dúas xanelas (ver xanelaresultado.go) é o
+       único xeito de mover a xanela de resultado polo escritorio/a outro
+       monitor agarrando dende dentro, xa que non ten editor nin máis
+       "chrome" propio - a barra de botóns fai de asa. Os botóns de dentro
+       precisan no-drag explícito, senón un clic neles arrincaría un
+       arrastre no canto de premelos. */
+    --wails-draggable: drag;
+}
+
+.pane-header-preview button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font: inherit;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--btn-neutral-text);
+    background: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 0.3rem 0.55rem;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease, transform 0.05s ease;
+    --wails-draggable: no-drag;
+}
+.pane-header-preview button svg {
+    width: 14px;
+    height: 14px;
+    flex: none;
+    color: var(--text-muted);
+    transition: color 0.15s ease;
+}
+.pane-header-preview button:hover { background: var(--btn-neutral-bg-hover); }
+.pane-header-preview button:hover svg { color: var(--text-dark); }
+.pane-header-preview button:active { transform: scale(0.96); }
+
+/* PDF é a acción de exportación principal (o resto son secundarias) -
+   único botón con cor propia na barra, mesmo criterio ca .btn-primary da
+   toolbar superior. */
+.pane-header-preview #btnPDF {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary-hover);
+    box-shadow: var(--shadow-sm);
+}
+.pane-header-preview #btnPDF svg { color: #fff; }
+.pane-header-preview #btnPDF:hover { background: var(--primary-hover); }
+
+/* Acoplar/Desacoplar: só a icona (coma un botón de minimizar/maximizar/
+   pechar de xanela), sen o texto ao carón - o título (data-i18n-title) xa
+   fai de tooltip. O texto segue existindo no DOM (sr-only) para lectores
+   de pantalla e para que o i18n non perda onde escribir a tradución. */
+.btn-icon-only {
+    gap: 0;
+    padding: 0.3rem;
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Pégaos ao bordo dereito da barra, coma os controis de xanela do SO -
+   só un dos dous está visible á vez (o outro leva .hidden), pero como non
+   sabemos cal, márcase en ambos os dous. */
+.btn-align-right {
+    margin-left: auto;
+}
+
+/* Barra de etiquetas Matexe (enriba do editor de texto): mesma acción cós
+   atallos Ctrl+M/E/H/P/T de editor.js, pero visible - só ten sentido en
+   modo texto, switchMode (main.js) agóchaa en modo bloques. */
+.matexe-tag-bar {
+    flex: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    padding: 0.4rem 0.9rem;
+    background: var(--btn-neutral-bg);
+    border-bottom: 1px solid var(--border-color);
+}
+.matexe-tag-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font: inherit;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    background: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+}
+.matexe-tag-btn svg { width: 13px; height: 13px; flex: none; }
+.matexe-tag-btn:hover { background: var(--btn-neutral-bg-hover); }
+/* Asistente de IA: primeiro botón da barra (antes de MAT), cor propia para
+   distinguilo do resto (insire etiquetas) - abre unha conversa, non insire
+   nada por si só. */
+.matexe-tag-btn--assistant {
+    border-color: var(--primary);
+    color: var(--primary);
+    font-weight: 700;
+}
+.matexe-tag-btn--assistant:hover { background: var(--primary); color: #fff; }
+.matexe-tag-btn:focus-visible { outline: 2px solid var(--primary); outline-offset: 1px; }
+
+/* Excepción deliberada (coma o panel de log/SSH de Piztu, ver DESIGN.md):
+   o corpo do editor de código mantense escuro (tema oneDark de CodeMirror,
+   ver editor.js) - é o agardado nun editor de código, non forma parte da
+   escala de grises clara do resto da interface. */
+#editor {
+    flex: 1;
+    overflow: hidden;
+    min-height: 0;
+}
+
+.pane-preview {
+    background: var(--btn-neutral-bg);
+}
+
+/* "Folla" flotante: o iframe en si non se pode estilar por dentro (é un
+   documento á parte), pero o CONTEDOR (o propio elemento <iframe>) si -
+   sombra + radio + marxe arredor para que lea coma unha páxina de papel
+   sobre fondo sunken, non un rectángulo pegado ao bordo. */
+#preview {
+    flex: 1;
+    border: none;
+    background: #fff;
+    margin: 20px;
+    border-radius: 4px;
+    box-shadow: var(--shadow-lg);
+}
+
+#warnings {
+    max-height: 6rem;
+    overflow-y: auto;
+    background: #fffbeb;
+    color: #92400e;
+    border-top: 1px solid #fde68a;
+    font-size: 0.8rem;
+    padding: 0;
+    display: none;
+}
+#warnings.visible { display: block; padding: 0.4rem 0.8rem; }
+#warnings div { padding: 0.1rem 0; }
+
+/* ---------- "🐛 Informar deste erro" (ver bug-report.js) ---------- */
+
+.warnings-bugreport-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-top: 0.3rem;
+    font: inherit;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #92400e;
+    background: #fff;
+    border: 1px solid #fde68a;
+    border-radius: var(--radius-sm);
+    padding: 0.25rem 0.55rem;
+    cursor: pointer;
+}
+.warnings-bugreport-btn svg { width: 13px; height: 13px; flex: none; }
+.warnings-bugreport-btn:hover { background: #fef3c7; }
+.warnings-bugreport-btn:focus-visible { outline: 2px solid var(--primary); outline-offset: 1px; }
+.warnings-bugreport-btn:disabled { cursor: progress; }
+.warnings-bugreport-btn.is-busy {
+    color: #b45309;
+    background: #fffbeb;
+    animation: warnings-busy-pulse 1.1s ease-in-out infinite;
+}
+@keyframes warnings-busy-pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.55; } }
+
+.bugreport-textarea {
+    width: 100%;
+    min-height: 40vh;
+    font-family: "Cascadia Code", "Fira Mono", monospace;
+    font-size: 0.82rem;
+    background: var(--panel-bg);
+    color: var(--text-dark);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 0.6rem;
+    margin: 0.4rem 0;
+}
+
+/* ---------- Panel de rexistro (idéntico ao #log-panel de Piztu, ver
+   DESIGN.md - excepción deliberada de fondo/texto escuros, coma o #editor
+   de CodeMirror enriba: é o agardado nun terminal, non forma parte da
+   escala de grises clara do resto da interface). En Yang arrinca
+   .collapsed (ver index.html) porque aquí só é axuda de depuración da
+   xeración de documentos, non protagonista coma en Piztu. */
+#log-panel {
+    flex-shrink: 0;
+    height: 200px;
+    background: #000;
+    border-top: 2px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    transition: height 0.15s ease;
+}
+#log-panel.collapsed { height: 28px; }
+#log-panel.collapsed #log-output { display: none; }
+
+.log-header {
+    flex-shrink: 0;
+    height: 28px;
+    background: var(--btn-neutral-bg);
+    border-bottom: 1px solid var(--border-color);
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+.log-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    /* Un pouco separado do bordo dereito (en vez de pegado, coma
+       xustify-content: space-between o deixaría) - se algunha vez volve
+       aparecer un scrollbar pegado ao bordo, non tapa os botóns. */
+    margin-right: 4px;
+}
+#btn-clear-log,
+#btn-toggle-log {
+    width: 22px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 3px;
+    background: var(--btn-neutral-bg-hover);
+    color: var(--btn-neutral-text);
+    font-weight: 700;
+    cursor: pointer;
+}
+#btn-clear-log svg { width: 12px; height: 12px; }
+#btn-clear-log:hover,
+#btn-toggle-log:hover { filter: brightness(0.95); }
+
+#log-output {
+    flex: 1;
+    overflow-y: auto;
+    padding: 4px 10px;
+    color: #48bb78;
+    font-family: "Cascadia Code", "Fira Mono", monospace;
+    font-size: 11.5px;
+    line-height: 1.5;
+}
+#log-output div { white-space: pre-wrap; word-break: break-all; }
+
+/* ---------- Overlays / modals ---------- */
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+/* Panel flotante SEN fondo escuro (ex.: "Axustes do texto"): arrastrable
+   pola cabeceira, non bloquea a interacción co resto da app, para poder
+   apartalo e ver a previsualización mentres se afinan os valores. */
+.floating-panel {
+    position: fixed;
+    top: 88px;
+    right: 32px;
+    width: min(320px, 92vw);
+    z-index: 40;
+    background: var(--panel-bg);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+}
+.floating-panel.hidden { display: none; }
+.floating-panel__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.55rem 0.75rem 0.55rem 1rem;
+    background: var(--btn-neutral-bg);
+    border-bottom: 1px solid var(--border-color);
+    font: 700 0.82rem/1 var(--font-ui);
+    color: var(--text-dark);
+    cursor: grab;
+    user-select: none;
+}
+.floating-panel__head:active { cursor: grabbing; }
+.floating-panel__close {
+    appearance: none;
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1;
+    padding: 3px 5px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.floating-panel__close:hover { background: var(--btn-neutral-bg-hover); color: var(--text-dark); }
+.floating-panel__body {
+    padding: 0.9rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.floating-panel__body .modal-label { margin: 0; }
+.floating-panel__body .modal-actions { margin-top: 0.2rem; }
+.modal {
+    background: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 1.2rem 1.4rem;
+    width: min(560px, 90vw);
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: var(--shadow-lg);
+}
+.modal h2 { margin: 0 0 1rem; font-size: 1.1rem; color: var(--text-dark); }
+
+.modal-label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+/* Fila "casa de verificación + texto", ex. optDecimal - a diferenza do
+   .modal-label normal (texto enriba, campo debaixo a 100% de ancho), aquí
+   van os dous en liña e a casa non se estira. */
+.modal-label-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+/* Interruptor en vez de casa de verificación de sistema - só CSS, o
+   <input type="checkbox"> segue a ser o mesmo elemento (JS/main.js non
+   cambia nada, segue lendo .checked coma sempre). */
+.modal-label-checkbox input[type="checkbox"] {
+    appearance: none;
+    width: auto;
+    margin: 0;
+    flex-shrink: 0;
+    width: 36px;
+    height: 21px;
+    border-radius: 999px;
+    background: var(--border-strong);
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+.modal-label-checkbox input[type="checkbox"]::after {
+    content: "";
+    position: absolute;
+    top: 2.5px;
+    left: 2.5px;
+    width: 16px;
+    height: 16px;
+    border-radius: 999px;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    transition: left 0.15s ease;
+}
+.modal-label-checkbox input[type="checkbox"]:checked { background: var(--primary); }
+.modal-label-checkbox input[type="checkbox"]:checked::after { left: 17px; }
+.modal-label-checkbox input[type="checkbox"]:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+.modal-label textarea,
+.modal-label input[type="text"],
+.modal-label input[type="password"],
+.modal-label input[type="number"] {
+    width: 100%;
+    margin-top: 0.35rem;
+    background: var(--panel-bg);
+    color: var(--text-dark);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 0.4rem 0.55rem;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+}
+.modal-label select {
+    width: 100%;
+    margin-top: 0.35rem;
+    background: var(--panel-bg);
+    color: var(--text-dark);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 0.4rem 0.55rem;
+    font-family: var(--font-ui);
+    font-size: 0.85rem;
+}
+.modal-label textarea:focus,
+.modal-label input[type="text"]:focus,
+.modal-label input[type="password"]:focus,
+.modal-label input[type="number"]:focus,
+.modal-label select:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: -1px;
+    border-color: var(--primary);
+}
+.modal-label textarea { resize: vertical; }
+.row { display: flex; gap: 0.4rem; }
+.row input { flex: 1; }
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+.modal-actions button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: var(--btn-neutral-bg);
+    color: var(--btn-neutral-text);
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 0.42rem 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+.modal-actions button svg { width: 14px; height: 14px; flex: none; }
+.modal-actions button:hover { background: var(--btn-neutral-bg-hover); }
+.modal-actions button.primary {
+    background: var(--primary);
+    color: #fff;
+}
+.modal-actions button.primary:hover { filter: brightness(1.08); }
+
+.modal pre {
+    background: var(--btn-neutral-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 0.5rem 0.7rem;
+    overflow-x: auto;
+    font-size: 0.85rem;
+    color: var(--text-dark);
+}
+.modal p { font-size: 0.85rem; color: var(--text-dark); margin: 0.6rem 0 0.2rem; }
+.modal a { color: var(--primary); }
+
+/* Opcións: antes era unha soa columna moi longa (~30 campos seguidos);
+   agora vai en bloques temáticos, cada un coa súa cor de fondo suave, en
+   grid de 3 columnas (índice ordenado en index.html: Editor e interface /
+   Maxima e cálculo / Robustez e execución na primeira fila, Formatos de
+   exportación / Asistente de IA na segunda). .options-block--ia ocupa 2
+   columnas porque leva máis campos ca .options-block--export. */
+.modal--options { width: min(980px, 95vw); }
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    align-items: start;
+}
+.options-block {
+    border-radius: var(--radius);
+    border: 1px solid transparent;
+    padding: 0.9rem 1rem 0.1rem;
+}
+.options-block h3 {
+    margin: 0 0 0.85rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--text-muted);
+}
+.options-block--editor { background: var(--primary-soft); border-color: var(--primary-soft-border); }
+.options-block--maxima { background: var(--teal-soft); border-color: var(--teal-soft-border); }
+.options-block--robustez { background: var(--amber-soft); border-color: var(--amber-soft-border); }
+.options-block--export { background: var(--success-soft); border-color: var(--success-soft-border); }
+.options-block--ia { background: var(--ai-soft); border-color: var(--ai-border); grid-column: span 2; }
+
+@media (max-width: 760px) {
+    .options-grid { grid-template-columns: 1fr; }
+    .options-block--ia { grid-column: span 1; }
+}
+
+/* Reparto individualizado (docs/api-tao.md §11.5) - ver index.html #repartoLista. */
+.reparto-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    max-height: 45vh;
+    overflow-y: auto;
+    margin: 0.5rem 0;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 0.3rem;
+}
+.reparto-fila {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.3rem 0.4rem;
+    border-radius: var(--radius-sm);
+}
+.reparto-fila:not(.reparto-excluido):hover { background: var(--btn-neutral-bg); }
+.reparto-fila.reparto-excluido { opacity: 0.5; }
+.reparto-fila.reparto-fallado { background: color-mix(in srgb, red 12%, transparent); }
+.reparto-nome { flex: 1; font-size: 0.9rem; color: var(--text-dark); }
+.reparto-fila button {
+    background: var(--btn-neutral-bg);
+    color: var(--btn-neutral-text);
+    border: none;
+    border-radius: var(--radius-sm);
+    width: 1.6rem;
+    height: 1.6rem;
+    cursor: pointer;
+    line-height: 1;
+}
+.reparto-fila button:hover { background: var(--btn-neutral-bg-hover); }
+.reparto-fila button:disabled { opacity: 0.4; cursor: default; }
+.reparto-aviso { color: #b45309; }
+
+/* Aviso "editando tarefa individual de X" (ver alumnoIndividual en main.js) -
+   badge chamativo a carón de "Gardar para X", para non confundilo coa
+   tarefa xeral mentres se edita. */
+.aviso-alumno-individual {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.35rem 0.6rem;
+    margin-right: 0.4rem;
+    border-radius: var(--radius-sm);
+    background: color-mix(in srgb, #b45309 15%, transparent);
+    color: #b45309;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+/* ---------- Asistente de IA integrado (icona 🤖, ver assistant.js) ----------
+   Cadro de chat: cabeceira arrastrable + historial + caixa de mensaxe. Alto
+   fixo (non "medra e medra" coma un textarea) para que a conversa quede
+   sempre nun tamaño manexable, con scroll propio no historial. */
+.modal--assistant {
+    width: min(480px, 92vw);
+    height: min(600px, 82vh);
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    overflow: hidden;
+}
+.assistant-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.9rem 1rem 0.6rem;
+    flex: none;
+}
+.assistant-head h2 { margin: 0; }
+.assistant-close {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.2rem 0.4rem;
+    border-radius: var(--radius-sm);
+}
+.assistant-close:hover { background: var(--btn-neutral-bg-hover); color: var(--text-dark); }
+.assistant-reorg {
+    flex: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem 0.7rem;
+    border-bottom: 1px solid var(--border, #e2e2e2);
+}
+.assistant-reorg.hidden { display: none; }
+.assistant-reorg__run { align-self: flex-start; }
+.assistant-reorg__cfg {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem 0.9rem;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+.assistant-reorg__num { display: inline-flex; align-items: center; gap: 0.35rem; }
+.assistant-reorg__num input { width: 3.4rem; }
+.assistant-reorg__adapt { display: inline-flex; align-items: center; gap: 0.3rem; cursor: pointer; }
+.assistant-log {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+.assistant-msg {
+    font-size: 0.85rem;
+    line-height: 1.45;
+    padding: 0.55rem 0.75rem;
+    border-radius: var(--radius);
+    white-space: pre-wrap;
+    max-width: 92%;
+}
+.assistant-msg--user {
+    align-self: flex-end;
+    background: var(--primary);
+    color: #fff;
+}
+.assistant-msg--assistant {
+    align-self: flex-start;
+    background: var(--btn-neutral-bg);
+    color: var(--text-dark);
+    border: 1px solid var(--border-color);
+}
+.assistant-msg--error {
+    align-self: flex-start;
+    background: rgba(220, 38, 38, 0.1);
+    color: var(--off);
+    border: 1px solid var(--off);
+}
+.assistant-apply {
+    margin-top: 0.4rem;
+    font: inherit;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #fff;
+    background: var(--on);
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 0.35rem 0.6rem;
+    cursor: pointer;
+}
+.assistant-apply:hover { filter: brightness(1.08); }
+.assistant-apply:disabled { opacity: 0.6; cursor: default; filter: none; }
+.assistant-form {
+    flex: none;
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.7rem 1rem 1rem;
+    border-top: 1px solid var(--border-color);
+}
+.assistant-form textarea {
+    flex: 1;
+    resize: none;
+    background: var(--panel-bg);
+    color: var(--text-dark);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 0.4rem 0.6rem;
+    font: inherit;
+    font-size: 0.85rem;
+}
+.assistant-form textarea:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: -1px;
+    border-color: var(--primary);
+}
+.assistant-form button {
+    align-self: flex-end;
+}
+
+/* Botón "i" cando hai actualización de Yang dispoñible (ver
+   pintarActualizacionYang, main.js) — mesmo mecanismo có botón "i" de
+   Piztu, fondo azul en vez de violeta. Selector "#toolbar button.…" (non
+   só ".btn-actualizacion-dispo") a propósito: "#toolbar button" (arriba)
+   leva un ID e gañaría por especificidade a unha regra que só fose de
+   clase, deixando o fondo sempre transparente. */
+#toolbar button.btn-actualizacion-dispo { background: var(--actualizacion); color: #fff; }
+#toolbar button.btn-actualizacion-dispo:hover { background: var(--actualizacion-hover); }
+.actualizacion-aviso { color: var(--actualizacion); font-weight: 600; }
+.actualizacion-btn {
+    display: block;
+    width: 100%;
+    margin: 0.4rem 0 0.8rem;
+    background: var(--actualizacion);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 0.5rem 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+.actualizacion-btn:hover { background: var(--actualizacion-hover); }
+.actualizacion-btn:disabled { opacity: 0.6; cursor: default; }
+
+/* ---------- Sobre Yang ---------- */
+
+.sobre-corpo { text-align: center; }
+.sobre-logo { width: 72px; height: 72px; object-fit: contain; margin-bottom: 0.4rem; }
+.sobre-corpo .modal-hint { font-size: 0.78rem; color: var(--text-muted); }
+.sobre-licenza { font-weight: 600; margin-top: 0.8rem !important; }
+
+/* ---------- Banner (aviso Maxima ausente, mesmo estilo ca .aviso do instalador) ---------- */
+
+.banner {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.5rem 0.8rem;
+    background: #fffbeb;
+    color: #92400e;
+    border-bottom: 1px solid #fde68a;
+    font-size: 0.85rem;
+}
+.banner button {
+    background: var(--panel-bg);
+    color: var(--text-dark);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 0.3rem 0.6rem;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: background-color 0.15s ease;
+}
+.banner button:hover { background: var(--btn-neutral-bg-hover); }
+.banner button.ghost { background: transparent; border-color: transparent; color: #92400e; opacity: 0.85; }
+.banner button.ghost:hover { opacity: 1; text-decoration: underline; }
+#btnInstallMaxima { margin-left: auto; }
+
+/* ---------- Utilidade "hidden" xenérica ---------- */
+/* Antes había regras combinadas soltas coma ".overlay.hidden",
+   ".banner.hidden"... que só cubrían os elementos que alguén se lembrara de
+   engadir explicitamente. Calquera outro elemento (ex. #sobreActualizacion,
+   #btnActualizarYang) que recibise a clase "hidden" via JS sen ter unha
+   combinación propia quedaba coa clase posta pero SEGUÍA VISIBLE — foi o
+   caso real do botón "Actualizar" baleiro (fondo azul cheo, sen texto)
+   cando non había actualización dispoñible. Unha soa regra xenérica, ao
+   final do ficheiro para gañar calquera empate de especificidade con
+   ".algo { display: ... }" doutras clases, evita que volva pasar.
+   !important por seguridade extra: "hidden" ten que gañar sempre. */
+.hidden { display: none !important; }
+
+/* Diálogos propios de confirmar/preguntar/avisar (src/dialogs.js) - fan o
+   papel de window.confirm/prompt/alert, que en macOS non amosan nada
+   (WKWebView sen os paneis de JavaScript no uiDelegate de Wails; ver a
+   cabeceira de dialogs.js). z-index por riba de todo, incluídos os widgets
+   de Blockly (99999), para que se poidan amosar tamén enriba doutra modal
+   xa aberta. */
+.overlay--dialog { z-index: 100000; }
+.modal--dialog { width: min(420px, 88vw); }
+.modal--dialog .dialog-message {
+    margin: 0 0 1rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--text-dark);
+    white-space: pre-wrap;
+}
+.modal--dialog .modal-label { margin-bottom: 1rem; }
+
+/* ---------- Plantillas de documento (src/plantillas.js) ---------- */
+/* A biblioteca e o editor reutilizan .overlay/.modal/.modal-label/
+   .modal-actions de enriba; aquí só van as pezas propias. O editor é máis
+   ancho ca unha modal normal porque leva dous bloques de código á vez
+   (LaTeX e Markdown) e a vista previa das páxinas. */
+
+.modal--plantillas { width: min(720px, 92vw); }
+.modal--plantilla-editor { width: min(900px, 95vw); }
+
+/* Selector da barra de ferramentas: mesmo aspecto cós campos Semente/
+   Iteracións (toolbar-group-run), pero con tope de ancho para que un nome
+   de plantilla longo non empurre o botón Xerar fóra da vista. */
+#plantillaWrap select {
+    max-width: 170px;
+    background: var(--panel-bg);
+    color: var(--text-dark);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 0.25rem 0.4rem;
+    font: inherit;
+}
+
+/* O selector de plantilla vive agora na cabeceira do resultado, á esquerda
+   de "Imprimir" (ver index.html / .pane-header-preview). Alí non hai o
+   contexto da toolbar, así que hai que darlle o aspecto a man - e marcalo
+   no-drag, xa que esa barra é a asa para mover a xanela de resultado. */
+.pane-header-preview #plantillaWrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--btn-neutral-text);
+    --wails-draggable: no-drag;
+}
+.pane-header-preview #plantillaWrap select {
+    max-width: 150px;
+}
+.pane-header-preview #btnPlantillas {
+    margin-right: 0.4rem;
+}
+
+.plantillas-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 0.6rem 0;
+}
+
+/* Aviso de importar/exportar, xusto baixo a barra da biblioteca. */
+.plantillas-toolbar-estado:empty { display: none; }
+.plantillas-toolbar-estado {
+    margin: -0.2rem 0 0.4rem;
+    word-break: break-word;
+}
+
+.plantillas-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+.plantilla-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    background: var(--btn-neutral-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 0.55rem 0.7rem;
+}
+.plantilla-card--activa { border-color: var(--primary); }
+.plantilla-card__info { min-width: 0; }
+.plantilla-card__nome {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+.plantilla-card__desc {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    margin-top: 0.15rem;
+}
+.plantilla-card__badge {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    background: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    padding: 0.05rem 0.45rem;
+}
+.plantilla-card__badge--activa {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+.plantilla-card__accions {
+    display: flex;
+    gap: 0.35rem;
+    flex-shrink: 0;
+}
+.plantilla-card__accions button { font-size: 0.8rem; }
+
+/* Bloque plegable do asistente de IA dentro do editor. */
+.plantilla-ia {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 0.5rem 0.7rem;
+    margin-bottom: 1rem;
+    background: var(--btn-neutral-bg);
+}
+.plantilla-ia summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+.plantilla-ia > *:not(summary) { margin-top: 0.7rem; }
+.plantilla-ia__accions { display: flex; justify-content: flex-end; }
+
+.plantilla-seccion {
+    margin: 1.2rem 0 0.4rem;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+}
+
+/* Os textareas de código non herdan a altura enorme de .modal--wide: aquí
+   conviven dous (LaTeX e Markdown) e a lista de variables. */
+.plantilla-codigo {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.82rem;
+    line-height: 1.45;
+}
+
+.plantilla-axuda {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    line-height: 1.5;
+    margin: 0.2rem 0 0.8rem;
+}
+.plantilla-axuda code {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    background: var(--btn-neutral-bg);
+    border-radius: 4px;
+    padding: 0.05rem 0.25rem;
+}
+
+.plantilla-vars { display: flex; flex-direction: column; gap: 0.35rem; }
+.plantilla-var {
+    display: flex;
+    gap: 0.35rem;
+    align-items: center;
+}
+.plantilla-var input {
+    flex: 1;
+    min-width: 0;
+    background: var(--panel-bg);
+    color: var(--text-dark);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 0.3rem 0.45rem;
+    font: inherit;
+    font-size: 0.85rem;
+}
+.plantilla-var__nome {
+    flex: 0 0 30%;
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    text-transform: uppercase;
+}
+.plantilla-var button { font-size: 0.78rem; }
+
+.plantilla-imaxes { display: flex; flex-direction: column; gap: 0.35rem; }
+.plantilla-imaxe {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+.plantilla-imaxe code {
+    flex: 1;
+    min-width: 0;
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.8rem;
+    color: var(--text-dark);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.plantilla-imaxe button { font-size: 0.78rem; }
+
+/* Vista previa: as páxinas que devolve PrevisualizarPlantilla, en columna e
+   con scroll propio para non empurrar os botóns fóra da modal. */
+.plantilla-previa {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-height: 40vh;
+    overflow-y: auto;
+}
+.plantilla-previa__paxina {
+    width: 100%;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+}
+
+/* Os campos url/select do editor de plantillas non estaban cubertos polas
+   regras de .modal-label (pensadas para text/password/number/textarea). */
+.modal-label input[type="url"],
+.modal-label select {
+    width: 100%;
+    margin-top: 0.35rem;
+    background: var(--panel-bg);
+    color: var(--text-dark);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 0.4rem 0.55rem;
+    font: inherit;
+}
+
+/* Botón destrutivo (eliminar plantilla/variable/imaxe). */
+.modal button.danger { color: oklch(55% 0.19 25); }
+.modal button.danger:hover { background: oklch(95% 0.03 25); }
+
+/* Fila do panel de avisos que ofrece instalar un paquete de LaTeX que falta
+   (ver ofrecerInstalarPaqueteLatex en main.js / paquetelatex.go). Reutiliza
+   o botón de "Informar deste erro" para non estrear outro estilo. */
+.warnings-paquete {
+    margin-top: 0.4rem;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}

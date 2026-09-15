@@ -1,0 +1,847 @@
+/* Editor de bloques (estilo Snap!/Scratch) - vive dentro de .pane-editor,
+   como alternativa a #editor (CodeMirror). Reutiliza as variables de
+   style.css (--primary, --border-color, --radius, --text-dark,
+   --text-muted); Yang é light-only por deseño (style.css:6), así que non
+   hai bloque de tema escuro aquí. */
+
+/* Alternar #editor <-> #blocksEditor. Selector id+clase para gañarlle en
+   especificidade a #editor / .blocks-root sen depender da orde na folla. */
+#editor.hidden,
+#blocksEditor.hidden {
+    display: none;
+}
+
+/* ---------- Paleta Blockly (categorías Texto/Cálculos/Matemáticas/
+   Imaxes) ----------
+   .blocklyToolboxCategoryLabel é a clase propia de Blockly (confirmada en
+   node_modules/blockly/blockly_compressed.js, Blockly 13) para o texto de
+   cada categoría do toolbox - a franxa de cor (colour, ver
+   blockly/toolbox.js) vén doutro elemento xa dimensionado por Blockly, non
+   se toca aquí. Prefixo #blocksEditor (non a clase soa): a folla de estilo
+   de Blockly inxéctase en tempo de execución (Blockly.inject(), dentro de
+   blocks-editor.js) - DESPOIS do <link> deste ficheiro no <head> - así que
+   sen máis especificidade ca clase soa, a regra de Blockly (que fixa
+   font-size vía "font: 16px sans-serif") gañaría por chegar despois.
+   Reducir a letra é o que estreita a columna: Blockly calcula o ancho da
+   paleta medindo o texto de verdade (non hai "width" de CSS fiable que
+   sobrepoñer), así que canto máis pequena a letra, máis estreita queda. */
+#blocksEditor .blocklyToolboxCategoryLabel {
+    font-family: var(--font-ui);
+    font-size: 0.66rem;
+    font-weight: 700;
+}
+
+/* ---------- Lenzo ---------- */
+
+#blocksEditor {
+    flex: 1;
+    min-height: 0;
+}
+
+.blocks-root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 0;
+}
+
+/* Corpo: paleta fixa á esquerda + lenzo de exercicios ocupando o resto. */
+.blocks-body {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.blocks-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.6rem 0.9rem;
+    border-bottom: 1px solid var(--border-color);
+    background: var(--btn-neutral-bg);
+}
+
+.blocks-toolbar__add {
+    font: inherit;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #fff;
+    background: var(--primary);
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 0.45rem 0.8rem;
+    cursor: pointer;
+}
+.blocks-toolbar__add:hover { filter: brightness(1.08); }
+.blocks-toolbar__add:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+
+/* "Sen exercicios"/"Exercicio N de M": pill tinguida en vez de fondo
+   sólido - é un CONTADOR/selector (abre a ventá "Exercicios"), non unha
+   acción destrutiva ou primaria de páxina. */
+.blocks-toolbar__exercises {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font: inherit;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--primary);
+    background: var(--primary-soft);
+    border: 1px solid var(--primary-soft-border);
+    border-radius: 999px;
+    padding: 0.42rem 0.9rem;
+    cursor: pointer;
+}
+.blocks-toolbar__exercises svg { width: 13px; height: 13px; flex: none; }
+.blocks-toolbar__exercises:hover { filter: brightness(0.98); }
+.blocks-toolbar__exercises:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+
+/* Botóns de IA ("Exercicio con IA"/"Exame completo con IA"): distintivo
+   propio (degradado violeta->ciano, ver --ai-1/--ai-2 en style.css) para
+   diferencialos claramente das accións normais - "isto é IA xerativa". */
+.blocks-toolbar__ai {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font: inherit;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--ai-1);
+    background: var(--ai-soft);
+    border: 1px solid var(--ai-border);
+    border-radius: 999px;
+    padding: 0.42rem 0.9rem;
+    cursor: pointer;
+}
+.blocks-toolbar__ai svg { width: 13px; height: 13px; flex: none; }
+.blocks-toolbar__ai:hover { filter: brightness(0.98); }
+.blocks-toolbar__ai:focus-visible { outline: 2px solid var(--ai-1); outline-offset: 2px; }
+
+/* "⤢ Ampliar"/"⤡ Repregar" (resultado desacoplado, ver blocks-editor.js) -
+   mesmo aspecto ca .blocks-toolbar__ai, pero empurrado á dereita da barra
+   (margin-left:auto fixado en JS) - é unha acción de VISTA, non de
+   contido, así que queda á parte do resto de botóns. */
+.blocks-toolbar__fullwidth {
+    font: inherit;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    background: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 0.45rem 0.8rem;
+    cursor: pointer;
+}
+.blocks-toolbar__fullwidth:hover { background: var(--btn-neutral-bg-hover); }
+.blocks-toolbar__fullwidth:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+
+.blocks-canvas {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0.8rem 0.9rem;
+    background: var(--bg-main);
+}
+
+.blocks-empty {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+/* ---------- "Ver código" (menú contextual do lenzo / de "🗂️ Exercicios") ----------
+   Substitúe workspaceDiv (.blocks-canvas) mentres está aberta - ver
+   blocks-editor.js, buildCodeView/exitCodeView. */
+.blocks-code-view {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.blocks-code-view__toolbar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 0.9rem;
+    border-bottom: 1px solid var(--border-color);
+    background: var(--btn-neutral-bg);
+}
+
+.blocks-code-view__title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-right: auto;
+}
+
+.blocks-code-view__assistant,
+.blocks-code-view__back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font: inherit;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    background: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 0.45rem 0.8rem;
+    cursor: pointer;
+}
+.blocks-code-view__assistant svg,
+.blocks-code-view__back svg { width: 13px; height: 13px; flex: none; }
+.blocks-code-view__assistant:hover,
+.blocks-code-view__back:hover { background: var(--btn-neutral-bg-hover); }
+.blocks-code-view__assistant:focus-visible,
+.blocks-code-view__back:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+
+.blocks-code-view__editor {
+    flex: 1;
+    min-height: 0;
+}
+
+/* ---------- Mini menú contextual xenérico (ex. botón dereito sobre
+   "🗂️ Exercicios") - ver showSimpleMenu, blocks-editor.js ---------- */
+.blocks-simple-menu {
+    position: fixed;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    background: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+    padding: 0.3rem;
+    min-width: 10rem;
+}
+
+.blocks-simple-menu__item {
+    font: inherit;
+    font-size: 0.85rem;
+    text-align: left;
+    color: var(--text-dark);
+    background: none;
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 0.45rem 0.7rem;
+    cursor: pointer;
+}
+.blocks-simple-menu__item:hover,
+.blocks-simple-menu__item:focus-visible {
+    background: var(--btn-neutral-bg-hover);
+    outline: none;
+}
+
+/* ---------- Paleta lateral (instrucións agrupadas por temática) ---------- */
+
+.blocks-palette {
+    width: 180px;
+    flex: 0 0 auto;
+    overflow-y: auto;
+    padding: 0.8rem 0.6rem;
+    border-right: 1px solid var(--border-color);
+    background: var(--btn-neutral-bg);
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.palette-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.palette-group__title {
+    margin: 0 0.1rem;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-muted);
+}
+
+.palette-block {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    border-left: 3px solid var(--element-color, var(--primary));
+    border-radius: var(--radius-sm);
+    padding: 0.4rem 0.5rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    cursor: grab;
+    user-select: none;
+}
+.palette-block:active { cursor: grabbing; }
+.palette-block:hover { background: var(--btn-neutral-bg-hover); }
+.palette-block:focus-visible { outline: 2px solid var(--primary); outline-offset: 1px; }
+
+.palette-block--text        { --element-color: #3b6ea5; }
+.palette-block--variables   { --element-color: #b3611f; }
+.palette-block--formula     { --element-color: #2f8f5b; }
+.palette-block--image-plot  { --element-color: #c17d1f; }
+.palette-block--image-tikz  { --element-color: #7454a8; }
+.palette-block--image-upload{ --element-color: #0e7490; }
+
+/* Botón icona xenérico (accións de bloque/anaco). */
+.icon-btn {
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    line-height: 1;
+    padding: 0.25rem 0.4rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+}
+.icon-btn:hover { background: var(--btn-neutral-bg-hover); color: var(--text-dark); }
+.icon-btn:focus-visible { outline: 2px solid var(--primary); outline-offset: 1px; }
+
+/* ---------- Indicador de onde cae un bloque arrastrado ---------- */
+
+.drop-indicator {
+    height: 3px;
+    margin: 0 0 0.6rem;
+    border-radius: 2px;
+    background: var(--primary);
+}
+
+/* ---------- Bloque = exercicio ---------- */
+
+.exercise-card {
+    position: relative;
+    background: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--primary);
+    border-radius: var(--radius);
+    margin-bottom: 0.6rem;
+}
+.exercise-card--dragging {
+    opacity: 0.45;
+}
+
+.exercise-card__head {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 0.65rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.exercise-card__handle {
+    cursor: grab;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    padding: 0.1rem 0.2rem;
+}
+.exercise-card__handle:active { cursor: grabbing; }
+
+.exercise-card__chevron {
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    width: 0.9rem;
+}
+
+.exercise-card__title {
+    flex: 1;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.exercise-card__actions {
+    display: flex;
+    gap: 0.1rem;
+}
+
+.exercise-card__summary {
+    margin: 0 0.65rem 0.6rem 1.9rem;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.exercise-card__panel {
+    padding: 0 0.65rem 0.6rem 1.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* ---------- Anacos dentro do panel despregado ---------- */
+
+.element-row {
+    background: var(--btn-neutral-bg);
+    border: 1px solid var(--border-color);
+    border-left: 3px solid var(--element-color, var(--primary));
+    border-radius: var(--radius-sm);
+    padding: 0.4rem 0.5rem 0.5rem;
+}
+
+.element-row--text        { --element-color: #3b6ea5; }
+.element-row--variables   { --element-color: #b3611f; }
+.element-row--formula     { --element-color: #2f8f5b; }
+.element-row--image-plot  { --element-color: #c17d1f; }
+.element-row--image-tikz  { --element-color: #7454a8; }
+.element-row--image-upload{ --element-color: #0e7490; }
+
+/* Fila compacta e clicable: premela abre a ventá modal de contido. */
+.element-row {
+    cursor: pointer;
+}
+.element-row:hover { background: var(--btn-neutral-bg-hover); }
+.element-row:focus-visible { outline: 2px solid var(--primary); outline-offset: -1px; }
+
+.element-row__head {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--element-color, var(--primary));
+    margin-bottom: 0.2rem;
+}
+.element-row__label { flex: 1; }
+.element-row__actions {
+    display: flex;
+    gap: 0.1rem;
+}
+
+.element-row__summary {
+    margin: 0;
+    font-size: 0.82rem;
+    color: var(--text-dark);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.exercise-card__hint {
+    margin: 0.2rem 0 0;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+/* ---------- Anaco "imaxe subida" (dentro do modal) ---------- */
+
+.image-upload-row {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+.image-upload-row__status {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+.image-upload-row__btn {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    background: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 0.3rem 0.6rem;
+    cursor: pointer;
+}
+.image-upload-row__btn:hover { background: var(--btn-neutral-bg-hover); }
+
+/* ---------- Ventá modal máis ampla para os anacos con textarea ----------
+   Aplícase a calquera anaco con textarea (Enunciado, Variable/cálculo,
+   fórmula, gráfico, TikZ) - todos precisan sitio de abondo para traballar
+   cómodamente, non só o Enunciado. Só "Imaxe" (image-upload) queda co
+   .modal normal (style.css), porque non leva textarea - ver
+   openElementModal en blocks.js. */
+.modal--wide { width: min(900px, 95vw); }
+.modal--wide .modal-label textarea { min-height: 50vh; }
+
+/* ---------- Modais de xeración con IA ("Exercicio con IA" / "Exame completo
+   con IA") ----------
+   Comparten .modal--wide (ancho) e engaden:
+   - textarea alto pero acoutado (a modal ten máis contido ca a de un anaco
+     solto: número, casa "Indefinido", fila de PDF, axuda);
+   - cabeceira nunha liña co título + "i" (axuda) + "X" (pechar). */
+.modal--ai-generate .modal-label textarea {
+    min-height: 26vh;
+    max-height: 42vh;
+}
+
+.modal-header--ai {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.modal-header--ai .modal-header__title { flex: 1 1 auto; }
+
+.modal-info-toggle,
+.modal-detach,
+.modal-close {
+    flex: none;
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0.2rem 0.4rem;
+    border-radius: var(--radius-sm);
+}
+.modal-info-toggle:hover,
+.modal-detach:hover,
+.modal-close:hover { background: var(--btn-neutral-bg-hover); color: var(--text-dark); }
+
+/* Xerador con IA nunha xanela á parte (?xerador=…, ver xanelaxeradoria.go):
+   a modal ocupa a xanela enteira, así que o overlay non debe escurecer nada
+   nin centrar cun oco arredor. */
+body.modo-xerador-ia .overlay {
+    background: var(--panel-bg);
+    align-items: stretch;
+    justify-content: stretch;
+    padding: 0;
+}
+body.modo-xerador-ia .overlay .modal {
+    width: 100%;
+    max-width: none;
+    max-height: 100vh;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Caixa cos textos explicativos que amosa/agocha a "i" - agochada por
+   defecto (atributo [hidden]). */
+.modal-info {
+    margin: 0.2rem 0 0.7rem;
+    padding: 0.5rem 0.7rem;
+    border-left: 3px solid var(--border-color);
+    background: var(--btn-neutral-bg);
+    border-radius: var(--radius-sm);
+}
+.modal-info p { font-size: 0.82rem; color: var(--text-dark); margin: 0.35rem 0; }
+.modal-info p:first-child { margin-top: 0; }
+.modal-info p:last-child { margin-bottom: 0; }
+
+/* ---------- Modal arrastrable (ver makeDraggable en blocks.js) ----------
+   Aplícase ao <h2> do modal de contido (openElementModal): premer e
+   arrastrar o título move o cadro para poder apartalo de contido que tape
+   por detrás. user-select:none evita seleccionar texto do título ao
+   arrastrar. */
+.modal-drag-handle { cursor: move; user-select: none; }
+
+/* ---------- Barra de etiquetas Matexe dentro do modal (só Enunciado) ----------
+   Mesmas clases .matexe-tag-bar/.matexe-tag-btn ca #matexeTagBar (modo
+   Código, style.css) - --inline axusta o bordo/marxe para flotar dentro
+   dunha tarxeta de modal en vez de pegada ao bordo da ventá. */
+.matexe-tag-bar--inline {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    margin-bottom: 0.6rem;
+}
+
+/* ---------- Inserir imaxe dentro do Enunciado (con ancho/alto) ---------- */
+
+.image-insert-row {
+    margin-top: 0.6rem;
+    padding-top: 0.5rem;
+    border-top: 1px dashed var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+.image-insert-row__status {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+.image-insert-row__size {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+.image-insert-row__size label {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    gap: 0.2rem;
+}
+.image-insert-row__size input {
+    width: 5.5rem;
+    background: var(--panel-bg);
+    color: var(--text-dark);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 0.3rem;
+    font-size: 0.85rem;
+}
+
+/* ---------- Asistente de IA (botón ✨ no modal de contido) ---------- */
+
+.ai-row {
+    margin-top: 0.6rem;
+    padding-top: 0.5rem;
+    border-top: 1px dashed var(--border-color);
+}
+
+.ai-row__toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font: inherit;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--ai-1);
+    background: var(--ai-soft);
+    border: 1px solid var(--ai-border);
+    border-radius: var(--radius-sm);
+    padding: 0.35rem 0.6rem;
+    cursor: pointer;
+}
+.ai-row__toggle svg { width: 13px; height: 13px; flex: none; }
+.ai-row__toggle:hover { filter: brightness(0.98); }
+
+/* ---------- Abrir o asistente de IA (chat, ver assistant.js) ---------- */
+
+.assistant-open-row { margin-top: 0.5rem; }
+.assistant-open-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font: inherit;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--primary);
+    background: var(--panel-bg);
+    border: 1px solid var(--primary);
+    border-radius: var(--radius-sm);
+    padding: 0.35rem 0.6rem;
+    cursor: pointer;
+}
+.assistant-open-btn svg { width: 13px; height: 13px; flex: none; }
+.assistant-open-btn:hover { background: var(--primary); color: #fff; }
+
+.ai-row__form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 0.4rem;
+}
+.ai-row__form.hidden { display: none; }
+
+.ai-row__input {
+    flex: 1;
+    min-width: 12rem;
+    font: inherit;
+    font-size: 0.82rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    background: var(--panel-bg);
+    color: var(--text-dark);
+    padding: 0.35rem 0.5rem;
+}
+.ai-row__input:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: -1px;
+    border-color: var(--primary);
+}
+
+.ai-row__generate {
+    font: inherit;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #fff;
+    background: var(--primary);
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 0.35rem 0.7rem;
+    cursor: pointer;
+}
+.ai-row__generate:hover { filter: brightness(1.08); }
+.ai-row__generate:disabled { opacity: 0.6; cursor: default; }
+
+.ai-row__status {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    flex-basis: 100%;
+    /* white-space:pre-wrap: un erro coma "a IA devolveu algo que non se
+       puido interpretar..." (app.go, formatoInesperadoErr) leva parágrafos
+       propios (\n\n) - o valor por defecto normal colapsaría todo nunha
+       soa liña seguida, perdendo a separación entre a suxestión e o
+       adianto da resposta da IA. pre-wrap conserva eses saltos SEN deixar
+       de quebrar liña normalmente en texto longo (a diferenza de "pre" a
+       secas, que desbordaría a caixa). */
+    white-space: pre-wrap;
+}
+
+/* ---------- Ventá "🗂️ Exercicios" (cadro de obxectos, estilo Scratch) ----------
+   Un exercicio = un "obxecto" independente (mesma idea cós sprites de
+   Scratch): unha grella de caixas cadradas, dobre clic para abrir a
+   caixa no lenzo de bloques (ver blocks-exercises-panel.js/
+   blocks-editor.js). */
+
+.modal--exercises { width: min(640px, 92vw); }
+
+.exercises-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
+    gap: 0.6rem;
+    max-height: 55vh;
+    overflow-y: auto;
+    padding: 0.2rem;
+    margin-bottom: 0.4rem;
+}
+
+.exercise-tile {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.15rem;
+    aspect-ratio: 1 / 1;
+    background: var(--panel-bg);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius);
+    cursor: pointer;
+    user-select: none;
+}
+.exercise-tile:hover { background: var(--btn-neutral-bg-hover); }
+.exercise-tile:focus-visible { outline: 2px solid var(--primary); outline-offset: 1px; }
+.exercise-tile--active { border-color: var(--primary); box-shadow: 0 0 0 1px var(--primary) inset; }
+.exercise-tile--dragging { opacity: 0.4; }
+
+.exercise-tile__num {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+.exercise-tile__label {
+    font-size: 0.68rem;
+    color: var(--text-muted);
+}
+
+.exercise-tile__actions {
+    position: absolute;
+    top: 0.15rem;
+    right: 0.15rem;
+    display: flex;
+    gap: 0.1rem;
+}
+.exercise-tile__action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: var(--panel-bg);
+    color: var(--text-muted);
+    line-height: 1;
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 999px;
+    cursor: pointer;
+}
+.exercise-tile__action svg { width: 11px; height: 11px; }
+.exercise-tile__action:hover { background: var(--btn-neutral-bg-hover); color: var(--text-dark); }
+
+.exercise-tile--add {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    border-style: dashed;
+}
+.exercise-tile--add:hover { color: var(--primary); border-color: var(--primary); }
+
+.exercises-panel__empty,
+.exercises-panel__hint {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+/* ---------- Modal "📚 Biblioteca" ---------- */
+
+.modal--library { width: min(640px, 92vw); }
+
+.library-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-height: 55vh;
+    overflow-y: auto;
+    margin-bottom: 0.5rem;
+}
+
+.library-list__empty,
+.library-list__loading {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    padding: 0.5rem 0;
+}
+
+.library-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    background: var(--btn-neutral-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 0.5rem 0.7rem;
+}
+
+.library-item__info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 0;
+}
+.library-item__ico { font-size: 1rem; }
+.library-item__nome {
+    color: var(--text-dark);
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.library-item__tipo {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    background: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    padding: 0.1rem 0.5rem;
+    flex-shrink: 0;
+}
+
+.library-item__actions {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    flex-shrink: 0;
+}
+.library-item__actions button.primary {
+    font: inherit;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #fff;
+    background: var(--primary);
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 0.35rem 0.7rem;
+    cursor: pointer;
+}
+.library-item__actions button.primary:hover { filter: brightness(1.08); }

@@ -1,0 +1,994 @@
+﻿<html>
+	
+<head>
+	<title>n-arios</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 3.9.1.648">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Maxima.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("narios");
+			}
+		});
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>n-arios</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Operadores.html">Operadores</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Operadores.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Operadores.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="nofijos.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<div><a name="OPERADORES"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_4.html#SEC11"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="narios.html#SEC13"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_4.html#SEC9"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_6.html#SEC20"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h1 class="rvps2"><span class="rvts0"><span class="rvts8">5. Operadores</span></span></h1>
+<div><table border="0" cellpadding="1" cellspacing="0" style="border-width: 0px;">
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="narios.html#SEC13">5.1 n-arios</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="narios.html#SEC14">5.2 no-fijos</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="narios.html#SEC15">5.3 postfijos</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="narios.html#SEC16">5.4 prefijos</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="narios.html#SEC17">5.5 Operadores aritméticos</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="narios.html#SEC18">5.6 Operadores relacionales</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="narios.html#SEC19">5.7 Operadores generales</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height: 6px;"/>
+<div><a name="SEC12"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="narios.html#SEC12"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="narios.html#SEC14"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="narios.html#SEC12"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="narios.html#SEC12"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_6.html#SEC20"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><a name="N_002DARIOS"></a>
+<span class="rvts0"><span class="rvts15">5.1 n-arios</span></span></h2>
+<p class="rvps3"><span class="rvts6">Un operador de tipo </span><span class="rvts9">nary</span><span class="rvts6">(</span><span class="rvts9">n</span><span class="rvts6">-ario, en Maxima nary) es usado para denotar una función cuyo número de argumentos es arbitrario; los argumentos se separa por el símbolo del operador, como en A+B o A+B+C. La función </span><span class="rvts9">nary("x")</span><span class="rvts6"> es una extensión de la función </span><span class="rvts9">syntax</span><span class="rvts6"> para declarar a x como un operador </span><span class="rvts9">n</span><span class="rvts6">-ario. Las funciones pueden ser declaradas para ser </span><span class="rvts9">nary</span><span class="rvts6">. Si se hace </span><span class="rvts9">declare(J,nary);</span><span class="rvts6">, se esta diciendo al simplificador que haga la reducción de </span><span class="rvts9">j(j(a,b),j(c,d))</span><span class="rvts6"> a </span><span class="rvts9">j(a, b, c, d)</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">syntax</span><span class="rvts6">.</span></p>
+<hr style="height: 6px;"/>
+<div><a name="SEC13"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="narios.html#SEC13"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="narios.html#SEC15"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="narios.html#SEC12"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="narios.html#SEC12"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_6.html#SEC20"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><a name="NO_002DFIJOS"></a>
+<span class="rvts0"><span class="rvts15">5.2 no-fijos</span></span></h2>
+<p class="rvps3"><span class="rvts6">Los operadores de tipo </span><span class="rvts9">nofix</span><span class="rvts6"> (no-fijos, en Maxima nofix) son usados para denotar funciones que no reciben argumentos. La mera presencia de tal operador en un comando causará que la correspondiente función sea evaluada. Por ejemplo, cuando se escribe "exit;" para salir de una interrupción de Maxima, "exit" se está comportando de forma similar a un operador no-fijo (</span><span class="rvts9">nofix</span><span class="rvts6">). La función </span><span class="rvts9">nofix("x")</span><span class="rvts6"> es una extensión de la función syntax la cual declara a x como un operador </span><span class="rvts9">nofix</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">syntax</span><span class="rvts6">.</span></p>
+<hr style="height: 6px;"/>
+<div><a name="SEC14"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="narios.html#SEC14"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="narios.html#SEC16"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="narios.html#SEC12"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="narios.html#SEC12"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_6.html#SEC20"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">5.3 postfijos</span></span></h2>
+<p class="rvps3"><span class="rvts6">Un operador de tipo </span><span class="rvts9">postfix</span><span class="rvts6"> (postfijo), al contrario de los de tipo </span><span class="rvts9">prefix</span><span class="rvts6">, denota funciones de un solo argumento, pero en este caso el argumento precede inmediatamente la ocurrencia del operador en la cadena de entrada, como en </span><span class="rvts9">3!</span><span class="rvts6">. La función </span><span class="rvts9">postfix("x")</span><span class="rvts6"> es una extensión de la función syntax para declarar a x como un operador </span><span class="rvts9">postfix</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">syntax</span><span class="rvts6">.</span></p>
+<hr style="height: 6px;"/>
+<div><a name="POSTFIJOS"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="narios.html#SEC15"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="narios.html#SEC17"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="narios.html#SEC12"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="narios.html#SEC12"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_6.html#SEC20"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">5.4 prefijos</span></span></h2>
+<p class="rvps3"><span class="rvts6">Un operador de tipo </span><span class="rvts9">prefix</span><span class="rvts6"> (prefijo, en Maxima prefix) indica una función de un (1) argumento, dicho argumento viene inmediatamente después de una ocurrencia del operador. La función </span><span class="rvts9">prefix("x")</span><span class="rvts6"> es una extensión de la función syntax para declarar a x como un operador de </span><span class="rvts9">prefix</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">syntax</span><span class="rvts6">.</span></p>
+<hr style="height: 6px;"/>
+<div><a name="SEC15"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="narios.html#SEC16"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="narios.html#SEC18"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="narios.html#SEC12"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="narios.html#SEC12"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_6.html#SEC20"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">5.5 Operadores aritméticos</span></span></h2>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="PREFIJOS"></a>
+<span class="rvts16">Operador:</span><span class="rvts6"> </span><span class="rvts17">+</span></li>
+<li><a name="SEC16"></a>
+<span class="rvts16">Operador:</span><span class="rvts6"> </span><span class="rvts17">-</span></li>
+<li><a name="OPERADORES-ARITM_00E9TICOS"></a>
+<span class="rvts16">Operador:</span><span class="rvts6"> </span><span class="rvts17">*</span></li>
+<li><a name="SEC17"></a>
+<span class="rvts16">Operador:</span><span class="rvts6"> </span><span class="rvts17">/</span></li>
+<li><a name="IDX56"></a>
+<span class="rvts16">Operador:</span><span class="rvts6"> </span><span class="rvts17">^</span></li>
+<li class="rvps3"><span class="rvts6">Los símbolos </span><span class="rvts9">+</span><span class="rvts6"> </span><span class="rvts9">*</span><span class="rvts6"> </span><span class="rvts9">/</span><span class="rvts6"> y </span><span class="rvts9">^</span><span class="rvts6"> representan la suma, resta, multiplicación, división y exponenciación, respectivamente. Los nombres de estos operadores son </span><span class="rvts9">"+"</span><span class="rvts6"> </span><span class="rvts9">"*"</span><span class="rvts6"> </span><span class="rvts9">"//"</span><span class="rvts6"> y </span><span class="rvts9">"^"</span><span class="rvts6">, que pueden aparecer allá donde se requiera el nombre de una función u operador.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Los símbolos </span><span class="rvts9">+</span><span class="rvts6"> y </span><span class="rvts9">-</span><span class="rvts6"> representan el positivo y negativo unario, siendo los nombres de estos operadores </span><span class="rvts9">"+"</span><span class="rvts6"> y </span><span class="rvts9">"-"</span><span class="rvts6">, respectivamente.</span></p>
+<p class="rvps3"><span class="rvts6">En Maxima, la resta </span><span class="rvts9">a - b</span><span class="rvts6"> se representa como la suma </span><span class="rvts9">a + (- b)</span><span class="rvts6">. Expresiones tales como </span><span class="rvts9">a + (- b)</span><span class="rvts6"> se muestran como restas. Maxima reconoce </span><span class="rvts9">"-"</span><span class="rvts6"> tan solo como el operador de negación unaria, no como el nombre del operador de resta binaria.</span></p>
+<p class="rvps3"><span class="rvts6">La división </span><span class="rvts9">a / b</span><span class="rvts6"> se representa en maxima como la multiplicación </span><span class="rvts9">a * b^(- 1)</span><span class="rvts6">. Expresiones tales como </span><span class="rvts9">a * b^(- 1)</span><span class="rvts6"> se muestran como divisiones. Maxima reconoce </span><span class="rvts9">"//"</span><span class="rvts6"> como el nombre del operador de división.</span></p>
+<p class="rvps3"><span class="rvts6">La suma y la multiplicación son operadores conmutativos n-arios. La división y la exponenciación son operadores no conmutativos binarios.</span></p>
+<p class="rvps3"><span class="rvts6">Maxima ordena los operandos de los operadores conmutativos para formar lo que se conoce como representación canónica. A efectos de almacenamiento interno, la ordenación viene determinada por </span><span class="rvts9">orderlessp</span><span class="rvts6">. A efectos de presentación de las expresiones, la ordenación de la suma la determina </span><span class="rvts9">ordergreatp</span><span class="rvts6">, y en el caso de la multiplicación, la ordenación coincide con la del almacenamiento interno.</span></p>
+<p class="rvps3"><span class="rvts6">Los cálculos aritméticos se realizan con números literales (enteros, racionales, decimales ordinarios y decimales grandes). Excepto en el caso de la exponenciación, todas las operaciones aritméticas con números dan lugar a resultados en forma de números. La exponenciación da como resultado un número si alguno de los operandos es decimal ordinario o grande (</span><span class="rvts18">bigfloat</span><span class="rvts6">), o si el resultado es un entero o racional; en caso contrario, la exponenciación puede expresarse como una raíz cuadrada (</span><span class="rvts9">sqrt</span><span class="rvts6">), como otra potencia, o simplemente no sufre cambios.</span></p>
+<p class="rvps3"><span class="rvts6">Se produce contagio de los decimales en coma flotante en los cálculos aritméticos: si algún operando es un número decimal grande (</span><span class="rvts18">bigfloat</span><span class="rvts6">), el resultado será también un número decimal grande; no habiendo decimales grandes, pero sí ordinarios, el resultado srá también un decimal ordinario; de no haber operandos decimales, el resultado será un número racional o entero.</span></p>
+<p class="rvps3"><span class="rvts6">Los cálculos aritméticos son simplificaciones, no evaluaciones, por lo que se realizan en expresiones comentadas.</span></p>
+<p class="rvps3"><span class="rvts6">Las operaciones aritméticas se aplican elemento a elemento en el caso de las listas cuando la variable global </span><span class="rvts9">listarith</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">; pero en el caso de las matrices, siempre se aplican elemento a elemento. Cuando un operando es una lista o matriz y otro operando lo es de otro tipo cualquiera, éste se combina con cada uno de los elementos de la lista o matriz.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps3"><span class="rvts6">La suma y la multiplicación son operadores conmutativos n-arios. Maxima ordena los operandos para formar lo que se conoce como representación canónica. Los nombres de estos operadores son </span><span class="rvts9">"+"</span><span class="rvts6"> y </span><span class="rvts9">"-"</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) c + g + d + a + b + e + f;</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; g + f + e + d + c + b + a</span><br/><span class="rvts9">(%i2) [op (%), args (%)];</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[+, [g, f, e, d, c, b, a]]</span><br/><span class="rvts9">(%i3) c * g * d * a * b * e * f;</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a b c d e f g</span><br/><span class="rvts9">(%i4) [op (%), args (%)];</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[*, [a, b, c, d, e, f, g]]</span><br/><span class="rvts9">(%i5) apply ("+", [a, 8, x, 2, 9, x, x, a]);</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3 x + 2 a + 19</span><br/><span class="rvts9">(%i6) apply ("*", [a, 8, x, 2, 9, x, x, a]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp;3</span><br/><span class="rvts9">(%o6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 144 a &nbsp;x</span></p>
+<p class="rvps3"><span class="rvts6">La división y la exponenciación son operadores no conmutativos binarios. Los nombres de estos operadores son </span><span class="rvts9">"//"</span><span class="rvts6"> y </span><span class="rvts9">"^"</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) [a / b, a ^ b];</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;a &nbsp; b</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[-, a ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;b</span><br/><span class="rvts9">(%i2) [map (op, %), map (args, %)];</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[[//, ^], [[a, b], [a, b]]]</span><br/><span class="rvts9">(%i3) [apply ("//", [a, b]), apply ("^", [a, b])];</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;a &nbsp; b</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[-, a ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;b</span></p>
+<p class="rvps3"><span class="rvts6">La resta y la división se representan internamente en términos de la suma y multiplicación, respectivamente.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) [inpart (a - b, 0), inpart (a - b, 1), inpart (a - b, 2)];</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[+, a, - b]</span><br/><span class="rvts9">(%i2) [inpart (a / b, 0), inpart (a / b, 1), inpart (a / b, 2)];</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [*, a, -]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; b</span></p>
+<p class="rvps3"><span class="rvts6">Los cálculos se realizan con números literales. Se produce el contagio de los números decimales.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) 17 + b - (1/2)*29 + 11^(2/4);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 5</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; b + sqrt(11) + -</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9">(%i2) [17 + 29, 17 + 29.0, 17 + 29b0];</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [46, 46.0, 4.6b1]</span></p>
+<p class="rvps3"><span class="rvts6">Los cálculos aritméticos son una simplificación, no una evaluación.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) simp : false;</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; false</span><br/><span class="rvts9">(%i2) '(17 + 29*11/7 - 5^3);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;29 11 &nbsp; &nbsp;3</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;17 + ----- - 5</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;7</span><br/><span class="rvts9">(%i3) simp : true;</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; true</span><br/><span class="rvts9">(%i4) '(17 + 29*11/7 - 5^3);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;437</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - ---</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 7</span></p>
+<p class="rvps3"><span class="rvts6">Los cálculos aritméticos se realizan elemento a elemento en las listas (según sea el valor de </span><span class="rvts9">listarith</span><span class="rvts6">) y matrices.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) matrix ([a, x], [h, u]) - matrix ([1, 2], [3, 4]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ a - 1 &nbsp;x - 2 ]</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ h - 3 &nbsp;u - 4 ]</span><br/><span class="rvts9">(%i2) 5 * matrix ([a, x], [h, u]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 5 a &nbsp;5 x ]</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 5 h &nbsp;5 u ]</span><br/><span class="rvts9">(%i3) listarith : false;</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; false</span><br/><span class="rvts9">(%i4) [a, c, m, t] / [1, 7, 2, 9];</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[a, c, m, t]</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ------------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[1, 7, 2, 9]</span><br/><span class="rvts9">(%i5) [a, c, m, t] ^ x;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [a, c, m, t]</span><br/><span class="rvts9">(%i6) listarith : true;</span><br/><span class="rvts9">(%o6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; true</span><br/><span class="rvts9">(%i7) [a, c, m, t] / [1, 7, 2, 9];</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;c &nbsp;m &nbsp;t</span><br/><span class="rvts9">(%o7) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [a, -, -, -]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;7 &nbsp;2 &nbsp;9</span><br/><span class="rvts9">(%i8) [a, c, m, t] ^ x;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x &nbsp; x &nbsp; x &nbsp; x</span><br/><span class="rvts9">(%o8) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [a , c , m , t ]</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX57"></a>
+<span class="rvts16">Operador:</span><span class="rvts6"> </span><span class="rvts17">**</span></li>
+<li class="rvps3"><span class="rvts6">Operador de exponenciación. Maxima identifica </span><span class="rvts9">**</span><span class="rvts6"> con el operador </span><span class="rvts9">^</span><span class="rvts6"> en la entrada de expresiones, pero se representa como </span><span class="rvts9">^</span><span class="rvts6"> en las salidas no formateadas (</span><span class="rvts9">display2d=false</span><span class="rvts6">), o colocando un superíndice en la salida formateada (</span><span class="rvts9">display2d=true</span><span class="rvts6">).</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">fortran</span><span class="rvts6"> representa el operador de exponenciación con </span><span class="rvts9">**</span><span class="rvts6">, tanto si se ha introducido como </span><span class="rvts9">**</span><span class="rvts6"> o como </span><span class="rvts9">^</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) is (a**b = a^b);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; true</span><br/><span class="rvts9">(%i2) x**y + x^z;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;z &nbsp; &nbsp;y</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x &nbsp;+ x</span><br/><span class="rvts9">(%i3) string (x**y + x^z);</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x^z+x^y</span><br/><span class="rvts9">(%i4) fortran (x**y + x^z);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;x**z+x**y</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; done</span></p>
+<hr style="height: 6px;"/>
+<div><a name="IDX58"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="narios.html#SEC17"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="narios.html#SEC19"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="narios.html#SEC12"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="narios.html#SEC12"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_6.html#SEC20"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">5.6 Operadores relacionales</span></span></h2>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX59"></a>
+<span class="rvts16">Operator:</span><span class="rvts6"> </span><span class="rvts17">&lt;</span></li>
+<li><a name="IDX60"></a>
+<span class="rvts16">Operator:</span><span class="rvts6"> </span><span class="rvts17">&lt;=</span></li>
+<li><a name="IDX61"></a>
+<span class="rvts16">Operator:</span><span class="rvts6"> </span><span class="rvts17">&gt;=</span></li>
+<li><a name="OPERADORES-RELACIONALES"></a>
+<span class="rvts16">Operator:</span><span class="rvts6"> </span><span class="rvts17">&gt;</span></li>
+<hr style="height: 6px;"/></li>
+</ul>
+<div><a name="SEC18"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="narios.html#SEC18"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_6.html#SEC20"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="narios.html#SEC12"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="narios.html#SEC12"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_6.html#SEC20"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">5.7 Operadores generales</span></span></h2>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX62"></a>
+<span class="rvts16">Operator:</span><span class="rvts6"> </span><span class="rvts17">^^</span></li>
+<li class="rvps3"><span class="rvts6">Operador de exponenciación no conmutativa. Se trata del operador de exponenciación correspondiente a la multiplicación no conmutativa </span><span class="rvts9">.</span><span class="rvts6">, del mismo modo que el operador de exponenciación ordinario </span><span class="rvts9">^</span><span class="rvts6"> se corresponde con la multiplicación conmutativa </span><span class="rvts9">*</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La exponenciación no conmutativa se representa como </span><span class="rvts9">^^</span><span class="rvts6"> en las salidas no formateadas (</span><span class="rvts9">display2d=false</span><span class="rvts6">), o colocando un superíndice entre ángulos (</span><span class="rvts9">&lt; &gt;</span><span class="rvts6">) en la salida formateada (</span><span class="rvts9">display2d=true</span><span class="rvts6">).</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) a . a . b . b . b + a * a * a * b * b;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3 &nbsp;2 &nbsp; &nbsp;&lt;2&gt; &nbsp; &nbsp;&lt;3&gt;</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;a &nbsp;b &nbsp;+ a &nbsp; &nbsp;. b</span><br/><span class="rvts9">(%i2) string (a . a . b . b . b + a * a * a * b * b);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;a^3*b^2+a^^2 . b^^3</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX63"></a>
+<span class="rvts16">Operador:</span><span class="rvts6"> </span><span class="rvts17">!</span></li>
+<li class="rvps3"><span class="rvts6">El operador factorial. Para cualquier número complejo </span><span class="rvts9">x</span><span class="rvts6"> (incluyendo enteros, racionales y números reales) excepto para enteros negativos, </span><span class="rvts9">x!</span><span class="rvts6"> se define como </span><span class="rvts9">gamma(x+1)</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Para un entero </span><span class="rvts9">x</span><span class="rvts6">, </span><span class="rvts9">x!</span><span class="rvts6"> simplifica el producto de los enteros desde 1 hasta </span><span class="rvts9">x</span><span class="rvts6">. </span><span class="rvts9">0!</span><span class="rvts6"> simplifica a 1. Para a un número de punto flotante </span><span class="rvts9">x</span><span class="rvts6">, </span><span class="rvts9">x!</span><span class="rvts6"> calcula al valor de </span><span class="rvts9">gamma(x+1)</span><span class="rvts6">. Para </span><span class="rvts9">x</span><span class="rvts6"> igual a </span><span class="rvts9">n/2</span><span class="rvts6"> donde </span><span class="rvts9">n</span><span class="rvts6"> es un entero impar, </span><span class="rvts9">x!</span><span class="rvts6"> simplifica a un factor racional por </span><span class="rvts9">sqrt(%pi)</span><span class="rvts6"> (donde </span><span class="rvts9">gamma(1/2)</span><span class="rvts6">) es igual a </span><span class="rvts9">sqrt(%pi)</span><span class="rvts6">). Si </span><span class="rvts9">x</span><span class="rvts6"> es cualquier otra cosa, </span><span class="rvts9">x!</span><span class="rvts6"> no se simplifica.</span></p>
+<p class="rvps3"><span class="rvts6">Las variables </span><span class="rvts9">factlim</span><span class="rvts6">, </span><span class="rvts9">minfactorial</span><span class="rvts6"> y </span><span class="rvts9">factcomb</span><span class="rvts6"> controlan la simplificación de expresiones que contienen factoriales.</span></p>
+<p class="rvps3"><span class="rvts6">Las funciones </span><span class="rvts9">gamma</span><span class="rvts6">, </span><span class="rvts9">bffac</span><span class="rvts6"> y </span><span class="rvts9">cbffac</span><span class="rvts6"> son variaciones de la función gamma. </span><span class="rvts9">makegamma</span><span class="rvts6"> substituye a </span><span class="rvts9">gamma</span><span class="rvts6"> para factoriales y funciones relacionadas.</span></p>
+<p class="rvps3"><span class="rvts6">Funciones relacionadas: </span><span class="rvts9">binomial</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">El factorial de un entero, semi-entero o de punto flotante es simplificado a menos que el operando sea mayor que </span><span class="rvts9">factlim</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) factlim : 10;</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;10</span><br/><span class="rvts9">(%i2) [0!, (7/2)!, 4.77!, 8!, 20!];</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;105 sqrt(%pi)</span><br/><span class="rvts9">(%o2) &nbsp; [1, -------------, 81.44668037931199, 40320, 20!]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 16</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">El factorial de un número complejo, constante conocida (por ejemplo </span><span class="rvts9">%e</span><span class="rvts6">) o una expresión general no es simplificado.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Sin embargo puede ser posible simplificar el factorial después de evaluar el operando.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) [(%i + 1)!, %pi!, %e!, (cos(1) + sin(1))!];</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp;[(%i + 1)!, %pi!, %e!, (sin(1) + cos(1))!]</span><br/><span class="rvts9">(%i2) ev (%, numer, %enumer);</span><br/><span class="rvts9">(%o2) [(%i + 1)!, 7.188082728976037, 4.260820476357, </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.227580202486819]</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">El factorial de un símbolo no se simplifica.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) kill (foo);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; done</span><br/><span class="rvts9">(%i2) foo!;</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; foo!</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Los factoriales son simplificados, no evaluados. Así </span><span class="rvts9">x!</span><span class="rvts6"> puede ser reemplazado en una expresión precedida por el operador comilla.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) '([0!, (7/2)!, 4.77!, 8!, 20!]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;105 sqrt(%pi)</span><br/><span class="rvts9">(%o1) [1, -------------, 81.44668037931199, 40320, </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 16</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2432902008176640000]</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX64"></a>
+<span class="rvts16">Operador:</span><span class="rvts6"> </span><span class="rvts17">!!</span></li>
+<li class="rvps3"><span class="rvts6">El operador doble factorial.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Para un número entero, de punto flotante o racional </span><span class="rvts9">n</span><span class="rvts6">, </span><span class="rvts9">n!!</span><span class="rvts6"> se evaluará como el producto de </span><span class="rvts9">n (n-2) (n-4) (n-6) ... (n - 2 (k-1))</span><span class="rvts6"> donde </span><span class="rvts9">k</span><span class="rvts6"> es igual a </span><span class="rvts9">entier(n/2)</span><span class="rvts6">, que es, el mayor entero menor o igual a </span><span class="rvts9">n/2</span><span class="rvts6">. Note que esta definición no coincide con otras definciones publicadas para argumentos, los cuales no son enteros.</span></p>
+<p class="rvps3"><span class="rvts6">Para un entero par (o impar) </span><span class="rvts9">n</span><span class="rvts6">, </span><span class="rvts9">n!</span><span class="rvts6"> se evalua el producto de todos los enteros pares (o impares) consecutivos desde 2 (o 1) por </span><span class="rvts9">n</span><span class="rvts6"> inclusive.</span></p>
+<p class="rvps3"><span class="rvts6">Para un argumento </span><span class="rvts9">n</span><span class="rvts6"> el cual no es un número entero, punto flotante o racional, </span><span class="rvts9">n!!</span><span class="rvts6"> produce una forma de nombre </span><span class="rvts9">genfact (n, n/2, 2)</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX65"></a>
+<span class="rvts16">Operador:</span><span class="rvts6"> </span><span class="rvts17">#</span></li>
+<li class="rvps3"><span class="rvts6">Representa la negación de la igualdad sintáctica </span><span class="rvts9">=</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Nótese que debido a las reglas de evaluación de expresiones de tipo predicado (en concreto debido a que </span><span class="rvts9">not </span><span class="rvts19">expr</span><span class="rvts6"> obliga a la evaluación previa de </span><span class="rvts18">expr</span><span class="rvts6">), </span><span class="rvts9">not </span><span class="rvts19">a</span><span class="rvts9"> = </span><span class="rvts19">b</span><span class="rvts6"> equivale a </span><span class="rvts9">is(</span><span class="rvts19">a</span><span class="rvts9"> # </span><span class="rvts19">b</span><span class="rvts9">)</span><span class="rvts6">, pero no a </span><span class="rvts19">a</span><span class="rvts9"> # </span><span class="rvts19">b</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) a = b;</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a = b</span><br/><span class="rvts9">(%i2) is (a = b);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; false</span><br/><span class="rvts9">(%i3) a # b;</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a # b</span><br/><span class="rvts9">(%i4) not a = b;</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; true</span><br/><span class="rvts9">(%i5) is (a # b);</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; true</span><br/><span class="rvts9">(%i6) is (not a = b);</span><br/><span class="rvts9">(%o6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; true</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="OPERADORES-GENERALES"></a>
+<span class="rvts16">Operador:</span><span class="rvts6"> </span><span class="rvts17">.</span></li>
+<li class="rvps3"><span class="rvts6">El operador punto, para multiplicación de matrices (no-conmutativo). Cuando "." se usa de esta forma, se dejarán espacios a ambos lados de éste, como en </span><span class="rvts9">A . B</span><span class="rvts6">. Así se evita que se confunda con el punto decimal de los números.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Véanse: </span><span class="rvts9">dot</span><span class="rvts6">, </span><span class="rvts9">dot0nscsimp</span><span class="rvts6">, </span><span class="rvts9">dot0simp</span><span class="rvts6">, </span><span class="rvts9">dot1simp</span><span class="rvts6">, </span><span class="rvts9">dotassoc</span><span class="rvts6">, </span><span class="rvts9">dotconstrules</span><span class="rvts6">, </span><span class="rvts9">dotdistrib</span><span class="rvts6">, </span><span class="rvts9">dotexptsimp</span><span class="rvts6">, </span><span class="rvts9">dotident</span><span class="rvts6"> y </span><span class="rvts9">dotscrules</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC19"></a>
+<span class="rvts16">Operador:</span><span class="rvts6"> </span><span class="rvts17">:</span></li>
+<li class="rvps3"><span class="rvts6">El operador de asignación. Por ejemplo, </span><span class="rvts9">A:3</span><span class="rvts6"> se asigna a la variable </span><span class="rvts18">A</span><span class="rvts6"> el valor de 3.</span></li>
+<li><a name="IDX66"></a>
+<span class="rvts16">Operador:</span><span class="rvts6"> </span><span class="rvts17">::</span></li>
+<li class="rvps3"><span class="rvts6">Operador de asignación. :: asigna el valor de una expresión en su derecha a el valor de la cantidad en su izquierda, la cual debe evaluarse a una variable de tipo atómica o una variable subindicada.</span></li>
+<li><a name="IDX67"></a>
+<span class="rvts16">Operador:</span><span class="rvts6"> </span><span class="rvts17">::=</span></li>
+<li class="rvps3"><span class="rvts6">El operador de definición de macros </span><span class="rvts9">::=</span><span class="rvts6"> define una función (llamada macro por razones históricas) que no evalúa sus argumentos, siendo la expresión que retorna (llamada "macroexpansión") evaluada dentro del contexto desde el cual se ha invocado la macro. En cualquier otro sentido, una función macro es igual que una función ordinaria.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts9">macroexpand</span><span class="rvts6"> devuelve la expresión que a su vez fue devuelta por una macro (sin evaluar la expresión); </span><span class="rvts9">macroexpand (foo (x))</span><span class="rvts6"> seguida de </span><span class="rvts9">''%</span><span class="rvts6"> es equivalente a </span><span class="rvts9">foo (x)</span><span class="rvts6"> si </span><span class="rvts9">foo</span><span class="rvts6"> es una función macro.</span></p>
+<p class="rvps3"><span class="rvts9">::=</span><span class="rvts6"> coloca el nombre de la nueva función macro en la lista global </span><span class="rvts9">macros</span><span class="rvts6">. Por otro lado, las funciones </span><span class="rvts9">kill</span><span class="rvts6">, </span><span class="rvts9">remove</span><span class="rvts6"> y </span><span class="rvts9">remfunction</span><span class="rvts6"> borran las definiciones de las funciones macro y eliminan sus nombres de la lista </span><span class="rvts9">macros</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Las funciones </span><span class="rvts9">fundef</span><span class="rvts6"> y </span><span class="rvts9">dispfun</span><span class="rvts6"> devuelven la definición de una función macro y le asignan una etiqueta, respectivamente.</span></p>
+<p class="rvps3"><span class="rvts6">Las funciones macro normalmente contienen expresiones </span><span class="rvts9">buildq</span><span class="rvts6"> y </span><span class="rvts9">splice</span><span class="rvts6"> para construir una expresión, que luego será evaluada.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps3"><span class="rvts6">Una función macro no evalúa sus argumentos, por lo que el mensaje (1) muestra </span><span class="rvts9">y - z</span><span class="rvts6">, no el valor de </span><span class="rvts9">y - z</span><span class="rvts6">. La macroexpansión (es decir, la expresión no evaluada </span><span class="rvts9">'(print ("(2) x is equal to", x))</span><span class="rvts6">) se evalúa en el contexto desde el cual se produjo la llamada a la macro, imprimiendo el mensaje (2).</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) x: %pi;</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;%pi</span><br/><span class="rvts9">(%i2) y: 1234;</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1234</span><br/><span class="rvts9">(%i3) z: 1729 * w;</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1729 w</span><br/><span class="rvts9">(%i4) printq1 (x) ::=</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; block (print ("(1) x is equal to", x),</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; '(print ("(2) x is equal to", x)));</span><br/><span class="rvts9">(%o4) printq1(x) ::= block(print("(1) x is equal to", x), </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;'(print("(2) x is equal to", x)))</span><br/><span class="rvts9">(%i5) printq1 (y - z);</span><br/><span class="rvts9">(1) x is equal to y - z </span><br/><span class="rvts9">(2) x is equal to %pi </span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;%pi</span></p>
+<p class="rvps3"><span class="rvts6">Una función ordinaria evalúa sus argumentos, por lo que el mensaje (1) muestra el valor de </span><span class="rvts9">y - z</span><span class="rvts6">. El valor de retorno no se evalúa, por lo que el mensaje (2) no se imprime hasta la evaluación explícita </span><span class="rvts9">''%</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) x: %pi;</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;%pi</span><br/><span class="rvts9">(%i2) y: 1234;</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1234</span><br/><span class="rvts9">(%i3) z: 1729 * w;</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1729 w</span><br/><span class="rvts9">(%i4) printe1 (x) :=</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; block (print ("(1) x is equal to", x),</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; '(print ("(2) x is equal to", x)));</span><br/><span class="rvts9">(%o4) printe1(x) := block(print("(1) x is equal to", x), </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;'(print("(2) x is equal to", x)))</span><br/><span class="rvts9">(%i5) printe1 (y - z);</span><br/><span class="rvts9">(1) x is equal to 1234 - 1729 w </span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print((2) x is equal to, x)</span><br/><span class="rvts9">(%i6) ''%;</span><br/><span class="rvts9">(2) x is equal to %pi </span><br/><span class="rvts9">(%o6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;%pi</span></p>
+<p class="rvps3"><span class="rvts9">macroexpand</span><span class="rvts6"> devuelve la macroexpansión; </span><span class="rvts9">macroexpand (foo (x))</span><span class="rvts6"> seguida de </span><span class="rvts9">''%</span><span class="rvts6"> es equivalente a </span><span class="rvts9">foo (x)</span><span class="rvts6"> si </span><span class="rvts9">foo</span><span class="rvts6"> es una función macro.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) x: %pi;</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;%pi</span><br/><span class="rvts9">(%i2) y: 1234;</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1234</span><br/><span class="rvts9">(%i3) z: 1729 * w;</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1729 w</span><br/><span class="rvts9">(%i4) g (x) ::= buildq ([x], print ("x is equal to", x));</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp;g(x) ::= buildq([x], print("x is equal to", x))</span><br/><span class="rvts9">(%i5) macroexpand (g (y - z));</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print(x is equal to, y - z)</span><br/><span class="rvts9">(%i6) ''%;</span><br/><span class="rvts9">x is equal to 1234 - 1729 w </span><br/><span class="rvts9">(%o6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1234 - 1729 w</span><br/><span class="rvts9">(%i7) g (y - z);</span><br/><span class="rvts9">x is equal to 1234 - 1729 w </span><br/><span class="rvts9">(%o7) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1234 - 1729 w</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX68"></a>
+<span class="rvts16">Operador:</span><span class="rvts6"> </span><span class="rvts17">:=</span></li>
+<li class="rvps3"><span class="rvts6">El operador de definición de funciones. La expresión </span><span class="rvts19">f</span><span class="rvts9">(</span><span class="rvts19">x_1</span><span class="rvts9">, ..., </span><span class="rvts19">x_n</span><span class="rvts9">) := </span><span class="rvts19">expr</span><span class="rvts6"> define una función de nombre </span><span class="rvts18">f</span><span class="rvts6"> con argumentos </span><span class="rvts18">x_1</span><span class="rvts6">, ..., </span><span class="rvts18">x_n</span><span class="rvts6"> y cuerpo </span><span class="rvts18">expr</span><span class="rvts6">. El operador </span><span class="rvts9">:=</span><span class="rvts6"> no evalúa el cuerpo de la función (a menos que se indique lo contrario mediante el operador comilla-comilla </span><span class="rvts9">''</span><span class="rvts6">). La función así definida puede ser una función ordinaria de Maxima (con argumentos encerrados entre paréntesis) o una función array (con argumentos encerrados entre corchetes).</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Cuando el último o único argumento </span><span class="rvts18">x_n</span><span class="rvts6"> es una lista de un solo elemento, la función definida por </span><span class="rvts9">:=</span><span class="rvts6"> acepta un número variable de argumentos. Los valores de los argumentos se asignan uno a uno a los argumentos formales </span><span class="rvts18">x_1</span><span class="rvts6">, ..., </span><span class="rvts18">x_(n - 1)</span><span class="rvts6">, y cualesquiera otros valores de argumentos, si existen, se asignan a </span><span class="rvts18">x_n</span><span class="rvts6"> en forma de lista.</span></p>
+<p class="rvps3"><span class="rvts6">Todas las definiciones de funciones aparecen en el mismo espacio de nombres; definiendo una función </span><span class="rvts9">f</span><span class="rvts6"> dentro de otra función </span><span class="rvts9">g</span><span class="rvts6"> no limita el alcance de </span><span class="rvts9">f</span><span class="rvts6"> a </span><span class="rvts9">g</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Si un argumento formal </span><span class="rvts18">x_k</span><span class="rvts6"> es un símbolo afectado por el operador comilla (expresión nominal), la función definida por </span><span class="rvts9">:=</span><span class="rvts6"> no evalúa el correspondiente valor de argumento. En cualquier otro caso, los argumentos que se pasan son evaluados.</span></p>
+<p class="rvps3"><span class="rvts6">Véanse también </span><span class="rvts9">define</span><span class="rvts6"> y </span><span class="rvts9">::=</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps3"><span class="rvts9">:=</span><span class="rvts6"> no evalúa el cuerpo de la función (a menos que se indique lo contrario mediante el operador comilla-comilla </span><span class="rvts9">''</span><span class="rvts6">).</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) expr : cos(y) - sin(x);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;cos(y) - sin(x)</span><br/><span class="rvts9">(%i2) F1 (x, y) := expr;</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; F1(x, y) := expr</span><br/><span class="rvts9">(%i3) F1 (a, b);</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;cos(y) - sin(x)</span><br/><span class="rvts9">(%i4) F2 (x, y) := ''expr;</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;F2(x, y) := cos(y) - sin(x)</span><br/><span class="rvts9">(%i5) F2 (a, b);</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;cos(b) - sin(a)</span></p>
+<p class="rvps3"><span class="rvts6">La función así definida puede ser una función ordinaria de Maxima o una función array.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) G1 (x, y) := x.y - y.x;</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; G1(x, y) := x . y - y . x</span><br/><span class="rvts9">(%i2) G2 [x, y] := x.y - y.x;</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;G2 &nbsp; &nbsp; := x . y - y . x</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x, y</span></p>
+<p class="rvps3"><span class="rvts6">Cuando el último o único argumento </span><span class="rvts18">x_n</span><span class="rvts6"> es una lista de un solo elemento, la función definida por </span><span class="rvts9">:=</span><span class="rvts6"> acepta un número variable de argumentos.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) H ([L]) := apply ("+", L);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;H([L]) := apply("+", L)</span><br/><span class="rvts9">(%i2) H (a, b, c);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; c + b + a</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX69"></a>
+<span class="rvts16">Operador:</span><span class="rvts6"> </span><span class="rvts17">=</span></li>
+<li class="rvps3"><span class="rvts6">Operador de ecuación.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La expresión </span><span class="rvts19">a</span><span class="rvts9"> = </span><span class="rvts19">b</span><span class="rvts6"> representa una ecuación sin evaluar, la cual puede verificarse o no. Las ecuaciones sin evaluar pueden aparecer como argumentos de </span><span class="rvts9">solve</span><span class="rvts6">, </span><span class="rvts9">algsys</span><span class="rvts6"> y de algunas otras funciones.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">is</span><span class="rvts6"> evalúa el operador </span><span class="rvts9">=</span><span class="rvts6"> a un resultado booleano; </span><span class="rvts9">is(</span><span class="rvts19">a</span><span class="rvts9"> = </span><span class="rvts19">b</span><span class="rvts9">)</span><span class="rvts6"> asigna un valor de verdad a </span><span class="rvts19">a</span><span class="rvts9"> = </span><span class="rvts19">b</span><span class="rvts6">, siendo </span><span class="rvts9">true</span><span class="rvts6"> si </span><span class="rvts18">a</span><span class="rvts6"> y </span><span class="rvts18">b</span><span class="rvts6"> son idénticos, lo cual acontece si ambos </span><span class="rvts18">a</span><span class="rvts6"> y </span><span class="rvts18">b</span><span class="rvts6"> son átomos idénticos, o si no siendo átomos, sus operadores y argumentos respectivos son idénticos; en caso contrario, </span><span class="rvts9">is(</span><span class="rvts19">a</span><span class="rvts9"> = </span><span class="rvts19">b</span><span class="rvts9">)</span><span class="rvts6"> devuelve el valor </span><span class="rvts9">false</span><span class="rvts6">. Nunca se devuelve el valor </span><span class="rvts9">unknown</span><span class="rvts6">. Cuando </span><span class="rvts9">is(</span><span class="rvts19">a</span><span class="rvts9"> = </span><span class="rvts19">b</span><span class="rvts9">)</span><span class="rvts6"> toma el valor </span><span class="rvts9">true</span><span class="rvts6">, se dice que </span><span class="rvts18">a</span><span class="rvts6"> y </span><span class="rvts18">b</span><span class="rvts6"> son sintácticamente iguales, no expresiones equivalentes, para las cuales </span><span class="rvts9">is(equal(</span><span class="rvts19">a</span><span class="rvts9">, </span><span class="rvts19">b</span><span class="rvts9">))</span><span class="rvts6"> devuelve </span><span class="rvts9">true</span><span class="rvts6">. Las expresiones pueden ser equivalentes, pero no sintácticamente iguales.</span></p>
+<p class="rvps3"><span class="rvts6">La negación de </span><span class="rvts9">=</span><span class="rvts6"> se representa por </span><span class="rvts9">#</span><span class="rvts6">. Como en el caso de </span><span class="rvts9">=</span><span class="rvts6">, la expresión </span><span class="rvts19">a</span><span class="rvts9"> # </span><span class="rvts19">b</span><span class="rvts6"> no está evaluada; sin embargo, </span><span class="rvts9">is(</span><span class="rvts19">a</span><span class="rvts9"> # </span><span class="rvts19">b</span><span class="rvts9">)</span><span class="rvts6"> evalúa </span><span class="rvts19">a</span><span class="rvts9"> # </span><span class="rvts19">b</span><span class="rvts6"> a </span><span class="rvts9">true</span><span class="rvts6"> o </span><span class="rvts9">false</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Además de </span><span class="rvts9">is</span><span class="rvts6">, hay otros operadores que evalúan </span><span class="rvts9">=</span><span class="rvts6"> y </span><span class="rvts9">#</span><span class="rvts6"> a </span><span class="rvts9">true</span><span class="rvts6"> o </span><span class="rvts9">false</span><span class="rvts6">; a saber, </span><span class="rvts9">if</span><span class="rvts6">, </span><span class="rvts9">and</span><span class="rvts6">, </span><span class="rvts9">or</span><span class="rvts6"> y </span><span class="rvts9">not</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Nótese que debido a las reglas de evaluación de expresiones de tipo predicado (en concreto debido a que </span><span class="rvts9">not </span><span class="rvts19">expr</span><span class="rvts6"> obliga a la evaluación previa de </span><span class="rvts18">expr</span><span class="rvts6">), </span><span class="rvts9">not </span><span class="rvts19">a</span><span class="rvts9"> = </span><span class="rvts19">b</span><span class="rvts6"> equivale a </span><span class="rvts9">is(</span><span class="rvts19">a</span><span class="rvts9"> # </span><span class="rvts19">b</span><span class="rvts9">)</span><span class="rvts6">, pero no a </span><span class="rvts19">a</span><span class="rvts9"> # </span><span class="rvts19">b</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Las funciones </span><span class="rvts9">rhs</span><span class="rvts6"> y </span><span class="rvts9">lhs</span><span class="rvts6"> devuelven los miembros derecho e izquierdo, respectivamente, de una ecuación o inecuación.</span></p>
+<p class="rvps3"><span class="rvts6">Véanse también </span><span class="rvts9">equal</span><span class="rvts6"> y </span><span class="rvts9">notequal</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps3"><span class="rvts6">La expresión </span><span class="rvts19">a</span><span class="rvts9"> = </span><span class="rvts19">b</span><span class="rvts6"> representa una ecuación sin evaluar, la cual puede verificarse o no.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) eq_1 : a * x - 5 * y = 17;</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;a x - 5 y = 17</span><br/><span class="rvts9">(%i2) eq_2 : b * x + 3 * y = 29;</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3 y + b x = 29</span><br/><span class="rvts9">(%i3) solve ([eq_1, eq_2], [x, y]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;196 &nbsp; &nbsp; &nbsp; &nbsp; 29 a - 17 b</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[[x = ---------, y = -----------]]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 5 b + 3 a &nbsp; &nbsp; &nbsp; 5 b + 3 a</span><br/><span class="rvts9">(%i4) subst (%, [eq_1, eq_2]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; 196 a &nbsp; &nbsp; 5 (29 a - 17 b)</span><br/><span class="rvts9">(%o4) [--------- - --------------- = 17, </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; 5 b + 3 a &nbsp; &nbsp; &nbsp;5 b + 3 a</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;196 b &nbsp; &nbsp; 3 (29 a - 17 b)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;--------- + --------------- = 29]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;5 b + 3 a &nbsp; &nbsp; &nbsp;5 b + 3 a</span><br/><span class="rvts9">(%i5) ratsimp (%);</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[17 = 17, 29 = 29]</span></p>
+<p class="rvps3"><span class="rvts9">is(</span><span class="rvts19">a</span><span class="rvts9"> = </span><span class="rvts19">b</span><span class="rvts9">)</span><span class="rvts6"> evalúa </span><span class="rvts19">a</span><span class="rvts9"> = </span><span class="rvts19">b</span><span class="rvts6"> a </span><span class="rvts9">true</span><span class="rvts6"> si </span><span class="rvts18">a</span><span class="rvts6"> y </span><span class="rvts18">b</span><span class="rvts6"> son sintácticamente iguales (es decir, idénticas). Las expresiones pueden ser equivalentes, pero no sintácticamente iguales.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) a : (x + 1) * (x - 1);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(x - 1) (x + 1)</span><br/><span class="rvts9">(%i2) b : x^2 - 1;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x &nbsp;- 1</span><br/><span class="rvts9">(%i3) [is (a = b), is (a # b)];</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [false, true]</span><br/><span class="rvts9">(%i4) [is (equal (a, b)), is (notequal (a, b))];</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [true, false]</span></p>
+<p class="rvps3"><span class="rvts6">Algunos operadores evalúan </span><span class="rvts9">=</span><span class="rvts6"> y </span><span class="rvts9">#</span><span class="rvts6"> a </span><span class="rvts9">true</span><span class="rvts6"> o </span><span class="rvts9">false</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) if expand ((x + y)^2) = x^2 + 2 * x * y + y^2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp;then FOO else BAR;</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;FOO</span><br/><span class="rvts9">(%i2) eq_3 : 2 * x = 3 * x;</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 x = 3 x</span><br/><span class="rvts9">(%i3) eq_4 : exp (2) = %e^2;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp; 2</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; %e &nbsp;= %e</span><br/><span class="rvts9">(%i4) [eq_3 and eq_4, eq_3 or eq_4, not eq_3];</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[false, true, true]</span></p>
+<p class="rvps3"><span class="rvts6">Debido a que </span><span class="rvts9">not </span><span class="rvts19">expr</span><span class="rvts6"> obliga a la evaluación previa de </span><span class="rvts18">expr</span><span class="rvts6">, </span><span class="rvts9">not </span><span class="rvts19">a</span><span class="rvts9"> = </span><span class="rvts19">b</span><span class="rvts6"> equivale a </span><span class="rvts9">is(</span><span class="rvts19">a</span><span class="rvts9"> # </span><span class="rvts19">b</span><span class="rvts9">)</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) [2 * x # 3 * x, not (2 * x = 3 * x)];</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [2 x # 3 x, true]</span><br/><span class="rvts9">(%i2) is (2 * x # 3 * x);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; true</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX70"></a>
+<span class="rvts16">Operador:</span><span class="rvts6"> </span><span class="rvts17">and</span></li>
+<li class="rvps3"><span class="rvts6">Operador de conjunción lógica. El operador </span><span class="rvts9">and</span><span class="rvts6"> es un operador infijo </span><span class="rvts9">n</span><span class="rvts6">-ario; sus operandos son expresiones booleanas y su resultado es un valor lógico.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">El operador </span><span class="rvts9">and</span><span class="rvts6"> impone la evaluación (igual que </span><span class="rvts9">is</span><span class="rvts6">) de uno o más operandos, y puede forzar la evaluación de todos los operandos.</span></p>
+<p class="rvps3"><span class="rvts6">Los operandos se evalúan en el orden en el que aparecen; sólo evalúa tantos operandos como sean necesarios para determinar el resultado. Si algún operando vale </span><span class="rvts9">false</span><span class="rvts6">, el resultado es </span><span class="rvts9">false</span><span class="rvts6"> y ya no se evalúan más operandos.</span></p>
+<p class="rvps3"><span class="rvts6">La variable global </span><span class="rvts9">prederror</span><span class="rvts6"> controla el comportamiento de </span><span class="rvts9">and</span><span class="rvts6"> cuando la evaluación de un operando no da como resultado </span><span class="rvts9">true</span><span class="rvts6"> o </span><span class="rvts9">false</span><span class="rvts6">; </span><span class="rvts9">and</span><span class="rvts6"> imprime un mensaje de error cuando </span><span class="rvts9">prederror</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">. Cuando los operandos devuelven un valor diferente a </span><span class="rvts9">true</span><span class="rvts6"> o </span><span class="rvts9">false</span><span class="rvts6"> al ser evaluados, el resultado es una expresión booleana.</span></p>
+<p class="rvps3"><span class="rvts6">El operador </span><span class="rvts9">and</span><span class="rvts6"> no es conmutativo: </span><span class="rvts9">a and b</span><span class="rvts6"> puede no ser igual a </span><span class="rvts9">b and a</span><span class="rvts6"> debido al tratamiento de operandos indeterminados.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX71"></a>
+<span class="rvts16">Operador:</span><span class="rvts6"> </span><span class="rvts17">or</span></li>
+<li class="rvps3"><span class="rvts6">Operador de disyunción lógica. El operador </span><span class="rvts9">or</span><span class="rvts6"> es un operador infijo </span><span class="rvts9">n</span><span class="rvts6">-ario; sus operandos son expresiones booleanas y su resultado es un valor lógico.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">El operador </span><span class="rvts9">or</span><span class="rvts6"> impone la evaluación (igual que </span><span class="rvts9">is</span><span class="rvts6">) de uno o más operandos, y puede forzar la evaluación de todos los operandos.</span></p>
+<p class="rvps3"><span class="rvts6">Los operandos se evalúan en el orden en el que aparecen; </span><span class="rvts9">or</span><span class="rvts6"> sólo evalúa tantos operandos como sean necesarios para determinar el resultado. Si un operando vale </span><span class="rvts9">true</span><span class="rvts6">, el resultado es </span><span class="rvts9">true</span><span class="rvts6"> y ya no se evalúan más operandos.</span></p>
+<p class="rvps3"><span class="rvts6">La variable global </span><span class="rvts9">prederror</span><span class="rvts6"> controla el comportamiento de </span><span class="rvts9">or</span><span class="rvts6"> cuando la evaluación de un operando no da como resultado </span><span class="rvts9">true</span><span class="rvts6"> o </span><span class="rvts9">false</span><span class="rvts6">; </span><span class="rvts9">or</span><span class="rvts6"> imprime un mensaje de error cuando </span><span class="rvts9">prederror</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">. Cuando los operandos devuelven un valor diferente a </span><span class="rvts9">true</span><span class="rvts6"> o </span><span class="rvts9">false</span><span class="rvts6"> al ser evaluados, el resultado es una expresión booleana.</span></p>
+<p class="rvps3"><span class="rvts6">El operador </span><span class="rvts9">or</span><span class="rvts6"> no es conmutativo: </span><span class="rvts9">a or b</span><span class="rvts6"> puede no ser igual a </span><span class="rvts9">b or a</span><span class="rvts6"> debido al tratamiento de operandos indeterminados.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX72"></a>
+<span class="rvts16">Operador:</span><span class="rvts6"> </span><span class="rvts17">not</span></li>
+<li class="rvps3"><span class="rvts6">Operador de negación lógica. El operador </span><span class="rvts9">not</span><span class="rvts6"> es un operador prefijo; su operando es una expresión booleana y su resultado es un valor lógico.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">El operador </span><span class="rvts9">not</span><span class="rvts6"> impone la evaluación (igual que </span><span class="rvts9">is</span><span class="rvts6">) de su operando.</span></p>
+<p class="rvps3"><span class="rvts6">La variable global </span><span class="rvts9">prederror</span><span class="rvts6"> controla el comportamiento de </span><span class="rvts9">not</span><span class="rvts6"> cuando la evaluación de su operando no da como resultado </span><span class="rvts9">true</span><span class="rvts6"> o </span><span class="rvts9">false</span><span class="rvts6">; </span><span class="rvts9">not</span><span class="rvts6"> imprime un mensaje de error cuando </span><span class="rvts9">prederror</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">. Cuando los operandos devuelven un valor diferente a </span><span class="rvts9">true</span><span class="rvts6"> o </span><span class="rvts9">false</span><span class="rvts6"> al ser evaluados, el resultado es una expresión booleana.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX73"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">abs</span><span class="rvts18"> (expr)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve el valor absoluto de </span><span class="rvts18">expr</span><span class="rvts6">. Si la expresión es compleja, retorna el módulo de </span><span class="rvts18">expr</span><span class="rvts6">.</span></li>
+<li><a name="IDX74"></a>
+<span class="rvts16">Clave:</span><span class="rvts6"> </span><span class="rvts17">additive</span></li>
+<li class="rvps3"><span class="rvts6">Si </span><span class="rvts9">declare(f,additive)</span><span class="rvts6"> ha sido ejecutado, entonces:</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">(1) Si </span><span class="rvts9">f</span><span class="rvts6"> es univariado, cada vez que el simplificador encuentre </span><span class="rvts9">f</span><span class="rvts6"> aplicada a una suma, </span><span class="rvts9">f</span><span class="rvts6"> será distribuida bajo esta suma. Por ejemplo, </span><span class="rvts9">f(x+y)</span><span class="rvts6"> se simplificará a </span><span class="rvts9">f(x)+f(y)</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">(2) Si </span><span class="rvts9">f</span><span class="rvts6"> es una función de 2 o más argumentos, aditivamente es definida como aditiva en el primer argumento de </span><span class="rvts9">f</span><span class="rvts6">, como en el caso de </span><span class="rvts9">sum</span><span class="rvts6"> o </span><span class="rvts9">integrate</span><span class="rvts6">. Por ejemplo, </span><span class="rvts9">f(h(x)+g(x),x)</span><span class="rvts6"> se simplificará a </span><span class="rvts9">f(h(x),x)+f(g(x),x)</span><span class="rvts6">. Esta simplificación no ocurre cuando </span><span class="rvts9">f</span><span class="rvts6"> se aplica a expresiones de la forma </span><span class="rvts9">sum(x[i],i,lower-limit,upper-limit)</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX75"></a>
+<span class="rvts16">Clave:</span><span class="rvts6"> </span><span class="rvts17">allbut</span></li>
+<li class="rvps3"><span class="rvts6">Opera con los comandos </span><span class="rvts9">part</span><span class="rvts6"> (como </span><span class="rvts9">part</span><span class="rvts6">, </span><span class="rvts9">inpart</span><span class="rvts6">, </span><span class="rvts9">substpart</span><span class="rvts6">, </span><span class="rvts9">substinpart</span><span class="rvts6">, </span><span class="rvts9">dpart</span><span class="rvts6"> y </span><span class="rvts9">lpart</span><span class="rvts6">). Por ejemplo:</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) expr : e + d + c + b + a;</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; e + d + c + b + a</span><br/><span class="rvts9">(%i2) part (expr, [2, 5]);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; d + a</span></p>
+<p class="rvps3"><span class="rvts6">mientras que:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) expr : e + d + c + b + a;</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; e + d + c + b + a</span><br/><span class="rvts9">(%i2) part (expr, allbut (2, 5));</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; e + c + b</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">kill</span><span class="rvts6"> también reconoce a </span><span class="rvts9">allbut</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) [aa : 11, bb : 22, cc : 33, dd : 44, ee : 55];</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [11, 22, 33, 44, 55]</span><br/><span class="rvts9">(%i2) kill (allbut (cc, dd));</span><br/><span class="rvts9">(%o0) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; done</span><br/><span class="rvts9">(%i1) [aa, bb, cc, dd];</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [aa, bb, 33, 44]</span></p>
+<p class="rvps3"><span class="rvts6">La sentencia </span><span class="rvts9">kill(allbut(</span><span class="rvts19">a_1</span><span class="rvts9">, </span><span class="rvts19">a_2</span><span class="rvts9">, ...))</span><span class="rvts6"> tiene el mismo efecto que </span><span class="rvts9">kill(all)</span><span class="rvts6">, excepto que no elimina los símbolos </span><span class="rvts18">a_1</span><span class="rvts6">, </span><span class="rvts18">a_2</span><span class="rvts6">, ... .</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX76"></a>
+<span class="rvts16">Declaración:</span><span class="rvts6"> </span><span class="rvts17">antisymmetric</span></li>
+<li class="rvps3"><span class="rvts6">Si </span><span class="rvts9">declare(h,antisymmetric)</span><span class="rvts6"> es ejecutado, esto dice al simplificador que </span><span class="rvts9">h</span><span class="rvts6"> es antisimétrico. E.g. </span><span class="rvts9">h(x,z,y)</span><span class="rvts6"> será simplificado a </span><span class="rvts9">-h(x,y,z)</span><span class="rvts6">. Que es, el producto de (-1)^n por el resultado dado por </span><span class="rvts9">symmetric</span><span class="rvts6"> o </span><span class="rvts9">commutative</span><span class="rvts6">, donde n es el número de intercambios necesarios de dos argumentos para convertirle a esta forma.</span></li>
+<li><a name="IDX77"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">cabs</span><span class="rvts18"> (expr)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve el valor absoluto complejo (módulo complejo) de </span><span class="rvts18">expr</span><span class="rvts6">.</span></li>
+<li><a name="IDX78"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">ceiling</span><span class="rvts18"> (x)</span></li>
+<li class="rvps3"><span class="rvts6">Si </span><span class="rvts18">x</span><span class="rvts6"> es un número real, devuelve el menor entero mayor o igual que </span><span class="rvts18">x</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts18">x</span><span class="rvts6"> es una expresión constante (por ejemplo, </span><span class="rvts9">10 * %pi</span><span class="rvts6">), </span><span class="rvts9">ceiling</span><span class="rvts6"> evalúa </span><span class="rvts18">x</span><span class="rvts6"> haciendo uso de números grandes en coma flotante (big floats), aplicando a continuación </span><span class="rvts9">ceiling</span><span class="rvts6"> al número decimal obtenido. Puesto que </span><span class="rvts9">ceiling</span><span class="rvts6"> hace evaluaciones en coma flotante, es posible, pero improbable, que esta función devuelva un valor erróneo para entradas constantes. Para evitar estos errores, la evaluación en punto flotante se lleva a cabo utilizando tres valores para </span><span class="rvts9">fpprec</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Para argumentos no constantes, </span><span class="rvts9">ceiling</span><span class="rvts6"> intenta devolver un valor simplificado. Aquí se presentan algunos ejemplos sobre las simplificaciones que </span><span class="rvts9">ceiling</span><span class="rvts6"> es capaz de hacer:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) ceiling (ceiling (x));</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ceiling(x)</span><br/><span class="rvts9">(%i2) ceiling (floor (x));</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; floor(x)</span><br/><span class="rvts9">(%i3) declare (n, integer)$</span><br/><span class="rvts9">(%i4) [ceiling (n), ceiling (abs (n)), ceiling (max (n, 6))];</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[n, abs(n), max(n, 6)]</span><br/><span class="rvts9">(%i5) assume (x &gt; 0, x &lt; 1)$</span><br/><span class="rvts9">(%i6) ceiling (x);</span><br/><span class="rvts9">(%o6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</span><br/><span class="rvts9">(%i7) tex (ceiling (a));</span><br/><span class="rvts9">$$\left \lceil a \right \rceil$$</span><br/><span class="rvts9">(%o7) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;false</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">ceiling</span><span class="rvts6"> no se extiende automáticamente a los elementos de listas y matrices. Por último, para todos los argumentos que tengan una forma compleja, </span><span class="rvts9">ceiling</span><span class="rvts6"> devuelve una forma nominal.</span></p>
+<p class="rvps3"><span class="rvts6">Si el rango de una función es subconjunto de los números enteros, entonces puede ser declarada como </span><span class="rvts9">integervalued</span><span class="rvts6">. Tanto </span><span class="rvts9">ceiling</span><span class="rvts6"> como </span><span class="rvts9">floor</span><span class="rvts6"> son funciones que hacen uso de esta información; por ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) declare (f, integervalued)$</span><br/><span class="rvts9">(%i2) floor (f(x));</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; f(x)</span><br/><span class="rvts9">(%i3) ceiling (f(x) - 1);</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; f(x) - 1</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX79"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">charfun</span><span class="rvts18"> (p)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve 0 cuando el predicado </span><span class="rvts18">p</span><span class="rvts6"> toma el valor </span><span class="rvts9">false</span><span class="rvts6">, y devuelve 1 cuando vale </span><span class="rvts9">true</span><span class="rvts6">. Si el predicado toma un valor diferente de </span><span class="rvts9">true</span><span class="rvts6"> y </span><span class="rvts9">false</span><span class="rvts6"> (desconocido), entonces devuelve una forma nominal.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) charfun(x&lt;1);</span><br/><span class="rvts9">(%o1) charfun(x&lt;1)</span><br/><span class="rvts9">(%i2) subst(x=-1,%);</span><br/><span class="rvts9">(%o2) 1</span><br/><span class="rvts9">(%i3) e : charfun('"and"(-1 &lt; x, x &lt; 1))$</span><br/><span class="rvts9">(%i4) [subst(x=-1,e), subst(x=0,e), subst(x=1,e)];</span><br/><span class="rvts9">(%o4) [0,1,0]</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX80"></a>
+<span class="rvts16">Declaración:</span><span class="rvts6"> </span><span class="rvts17">commutative</span></li>
+<li class="rvps3"><span class="rvts6">Si </span><span class="rvts9">declare(h,commutative)</span><span class="rvts6"> es ejecutado, le dice al simplificador que </span><span class="rvts9">h</span><span class="rvts6"> es una función conmutaiva. Por ejemplo, </span><span class="rvts9">h(x,z,y)</span><span class="rvts6"> se simplificará a </span><span class="rvts9">h(x,y,z)</span><span class="rvts6">. Esto es lo mismo que </span><span class="rvts9">symmetric</span><span class="rvts6">.</span></li>
+<li><a name="IDX81"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">compare</span><span class="rvts18"> (x, y)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve un operador de comparación </span><span class="rvts18">op</span><span class="rvts6"> (</span><span class="rvts9">&lt;</span><span class="rvts6">, </span><span class="rvts9">&lt;=</span><span class="rvts6">, </span><span class="rvts9">&gt;</span><span class="rvts6">, </span><span class="rvts9">&gt;=</span><span class="rvts6">, </span><span class="rvts9">=</span><span class="rvts6"> o </span><span class="rvts9">#</span><span class="rvts6">) de manera que </span><span class="rvts9">is (</span><span class="rvts19">x</span><span class="rvts9"> </span><span class="rvts19">op</span><span class="rvts9"> </span><span class="rvts19">y</span><span class="rvts9">)</span><span class="rvts6"> tome el valor </span><span class="rvts9">true</span><span class="rvts6">; cuando tanto </span><span class="rvts18">x</span><span class="rvts6"> como </span><span class="rvts18">y</span><span class="rvts6"> dependan de </span><span class="rvts9">%i</span><span class="rvts6"> y </span><span class="rvts19">x</span><span class="rvts9"> # </span><span class="rvts19">y</span><span class="rvts6">, devuelve </span><span class="rvts9">notcomparable</span><span class="rvts6">; cuando no exista tal operador o Maxima sea incapaz de determinarlo, devolverá </span><span class="rvts9">unknown</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) compare(1,2);</span><br/><span class="rvts9">(%o1) &lt;</span><br/><span class="rvts9">(%i2) compare(1,x);</span><br/><span class="rvts9">(%o2) unknown</span><br/><span class="rvts9">(%i3) compare(%i,%i);</span><br/><span class="rvts9">(%o3) =</span><br/><span class="rvts9">(%i4) compare(%i,%i+1);</span><br/><span class="rvts9">(%o4) notcomparable</span><br/><span class="rvts9">(%i5) compare(1/x,0);</span><br/><span class="rvts9">(%o5) #</span><br/><span class="rvts9">(%i6) compare(x,abs(x));</span><br/><span class="rvts9">(%o6) &lt;=</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">compare</span><span class="rvts6"> no intenta determinar si los dominios reales de sus argumentos son conjuntos no vacíos; así,</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) compare(acos(x^2+1), acos(x^2+1) + 1);</span><br/><span class="rvts9">(%o1) &lt;</span></p>
+<p class="rvps3"><span class="rvts6">Aquí, el dominio real de </span><span class="rvts9">acos (x^2 + 1)</span><span class="rvts6"> es el conjunto vacío.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX82"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">entier</span><span class="rvts18"> (x)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve el mayor entero menor o igual a </span><span class="rvts18">x</span><span class="rvts6">, siendo </span><span class="rvts18">x</span><span class="rvts6"> numérico. La función </span><span class="rvts9">fix</span><span class="rvts6"> (como en </span><span class="rvts9">fixnum</span><span class="rvts6">) es un sinónimo, de modo que </span><span class="rvts9">fix(</span><span class="rvts19">x</span><span class="rvts9">)</span><span class="rvts6"> hace justamente lo mismo.</span></li>
+<li><a name="IDX83"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">equal</span><span class="rvts18"> (a, b)</span></li>
+<li class="rvps3"><span class="rvts6">Representa la equivalencia, esto es, la igualdad de los valores.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Por sí misma, </span><span class="rvts9">equal</span><span class="rvts6"> no evalúa ni simplifica. La función </span><span class="rvts9">is</span><span class="rvts6"> intenta evaluar </span><span class="rvts9">equal</span><span class="rvts6"> a un resultado booleano. La instrucción </span><span class="rvts9">is(equal(</span><span class="rvts19">a</span><span class="rvts9">, </span><span class="rvts19">b</span><span class="rvts9">))</span><span class="rvts6"> devuelve </span><span class="rvts9">true</span><span class="rvts6"> (o </span><span class="rvts9">false</span><span class="rvts6">) si y sólo si </span><span class="rvts18">a</span><span class="rvts6"> y </span><span class="rvts18">b</span><span class="rvts6"> son iguales (o no iguales) para todos los posibles valores de sus variables, tal como lo determina </span><span class="rvts9">ratsimp(</span><span class="rvts19">a</span><span class="rvts9"> - </span><span class="rvts19">b</span><span class="rvts9">)</span><span class="rvts6">; si </span><span class="rvts9">ratsimp</span><span class="rvts6"> devuelve 0, las dos expresiones se consideran equivalentes. Dos expresiones pueden ser equivalentes sin ser sintácticamente iguales (es decir, idénticas).</span></p>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">is</span><span class="rvts6"> no consigue reducir </span><span class="rvts9">equal</span><span class="rvts6"> a </span><span class="rvts9">true</span><span class="rvts6"> o </span><span class="rvts9">false</span><span class="rvts6">, el resultado está controlado por la variable global </span><span class="rvts9">prederror</span><span class="rvts6">. Si </span><span class="rvts9">prederror</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, </span><span class="rvts9">is</span><span class="rvts6"> emite un mensaje de error; en caso contrario, </span><span class="rvts9">is</span><span class="rvts6"> devuelve </span><span class="rvts9">unknown</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Además de </span><span class="rvts9">is</span><span class="rvts6">, otros operadores evalúan </span><span class="rvts9">equal</span><span class="rvts6"> y </span><span class="rvts9">notequal</span><span class="rvts6"> a </span><span class="rvts9">true</span><span class="rvts6"> o </span><span class="rvts9">false</span><span class="rvts6">; a saber, </span><span class="rvts9">if</span><span class="rvts6">, </span><span class="rvts9">and</span><span class="rvts6">, </span><span class="rvts9">or</span><span class="rvts6"> y </span><span class="rvts9">not</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">La negación de </span><span class="rvts9">equal</span><span class="rvts6"> es </span><span class="rvts9">notequal</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps3"><span class="rvts6">Por sí misma, </span><span class="rvts9">equal</span><span class="rvts6"> no evalúa ni simplifica.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) equal (x^2 - 1, (x + 1) * (x - 1));</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;equal(x &nbsp;- 1, (x - 1) (x + 1))</span><br/><span class="rvts9">(%i2) equal (x, x + 1);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;equal(x, x + 1)</span><br/><span class="rvts9">(%i3) equal (x, y);</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;equal(x, y)</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">is</span><span class="rvts6"> intenta evaluar </span><span class="rvts9">equal</span><span class="rvts6"> a un resultado booleano. La instrucción </span><span class="rvts9">is(equal(</span><span class="rvts19">a</span><span class="rvts9">, </span><span class="rvts19">b</span><span class="rvts9">))</span><span class="rvts6"> devuelve </span><span class="rvts9">true</span><span class="rvts6"> si </span><span class="rvts9">ratsimp(</span><span class="rvts19">a</span><span class="rvts9"> - </span><span class="rvts19">b</span><span class="rvts9">)</span><span class="rvts6"> devuelve 0. Dos expresiones pueden ser equivalentes sin ser sintácticamente iguales (es decir, idénticas).</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) ratsimp (x^2 - 1 - (x + 1) * (x - 1));</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0</span><br/><span class="rvts9">(%i2) is (equal (x^2 - 1, (x + 1) * (x - 1)));</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; true</span><br/><span class="rvts9">(%i3) is (x^2 - 1 = (x + 1) * (x - 1));</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; false</span><br/><span class="rvts9">(%i4) ratsimp (x - (x + 1));</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- 1</span><br/><span class="rvts9">(%i5) is (equal (x, x + 1));</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; false</span><br/><span class="rvts9">(%i6) is (x = x + 1);</span><br/><span class="rvts9">(%o6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; false</span><br/><span class="rvts9">(%i7) ratsimp (x - y);</span><br/><span class="rvts9">(%o7) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x - y</span><br/><span class="rvts9">(%i8) is (equal (x, y));</span><br/><span class="rvts9">(%o8) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;unknown</span><br/><span class="rvts9">(%i9) is (x = y);</span><br/><span class="rvts9">(%o9) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; false</span></p>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">is</span><span class="rvts6"> no consigue reducir </span><span class="rvts9">equal</span><span class="rvts6"> a </span><span class="rvts9">true</span><span class="rvts6"> o </span><span class="rvts9">false</span><span class="rvts6">, el resultado está controlado por la variable global </span><span class="rvts9">prederror</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) [aa : x^2 + 2*x + 1, bb : x^2 - 2*x - 1];</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [x &nbsp;+ 2 x + 1, x &nbsp;- 2 x - 1]</span><br/><span class="rvts9">(%i2) ratsimp (aa - bb);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4 x + 2</span><br/><span class="rvts9">(%i3) prederror : true;</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; true</span><br/><span class="rvts9">(%i4) is (equal (aa, bb));</span><br/><span class="rvts9">Maxima was unable to evaluate the predicate:</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9">equal(x &nbsp;+ 2 x + 1, x &nbsp;- 2 x - 1)</span><br/><span class="rvts9"> -- an error. &nbsp;Quitting. &nbsp;To debug this try debugmode(true);</span><br/><span class="rvts9">(%i5) prederror : false;</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; false</span><br/><span class="rvts9">(%i6) is (equal (aa, bb));</span><br/><span class="rvts9">(%o6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;unknown</span></p>
+<p class="rvps3"><span class="rvts6">Otros operadores evalúan </span><span class="rvts9">equal</span><span class="rvts6"> y </span><span class="rvts9">notequal</span><span class="rvts6"> a </span><span class="rvts9">true</span><span class="rvts6"> o </span><span class="rvts9">false</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) if equal (y, y - 1) then FOO else BAR;</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;BAR</span><br/><span class="rvts9">(%i2) eq_1 : equal (x, x + 1);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;equal(x, x + 1)</span><br/><span class="rvts9">(%i3) eq_2 : equal (y^2 + 2*y + 1, (y + 1)^2);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; equal(y &nbsp;+ 2 y + 1, (y + 1) )</span><br/><span class="rvts9">(%i4) [eq_1 and eq_2, eq_1 or eq_2, not eq_1];</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[false, true, true]</span></p>
+<p class="rvps3"><span class="rvts6">Debido a que </span><span class="rvts9">not </span><span class="rvts19">expr</span><span class="rvts6"> obliga a la evaluación previa de </span><span class="rvts18">expr</span><span class="rvts6">, </span><span class="rvts9">not equal(</span><span class="rvts19">a</span><span class="rvts9">, </span><span class="rvts19">b</span><span class="rvts9">)</span><span class="rvts6"> equivale a </span><span class="rvts9">is(notequal(</span><span class="rvts19">a</span><span class="rvts9">, </span><span class="rvts19">b</span><span class="rvts9">))</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) [notequal (2*z, 2*z - 1), not equal (2*z, 2*z - 1)];</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[notequal(2 z, 2 z - 1), true]</span><br/><span class="rvts9">(%i2) is (notequal (2*z, 2*z - 1));</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; true</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX84"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">floor</span><span class="rvts18"> (x)</span></li>
+<li class="rvps3"><span class="rvts6">Si </span><span class="rvts18">x</span><span class="rvts6"> es un número real, devuelve el mayor entero menor o igual que </span><span class="rvts18">x</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts18">x</span><span class="rvts6"> es una expresión constante (por ejemplo, </span><span class="rvts9">10 * %pi</span><span class="rvts6">), </span><span class="rvts9">floor</span><span class="rvts6"> evalúa </span><span class="rvts18">x</span><span class="rvts6"> haciendo uso de números grandes en coma flotante (big floats), aplicando a continuación </span><span class="rvts9">floor</span><span class="rvts6"> al número decimal obtenido. Puesto que </span><span class="rvts9">floor</span><span class="rvts6"> hace evaluaciones en coma flotante, es posible, pero improbable, que esta función devuelva un valor erróneo para entradas constantes. Para evitar estos errores, la evaluación en punto flotante se lleva a cabo utilizando tres valores para </span><span class="rvts9">fpprec</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Para argumentos no constantes, </span><span class="rvts9">floor</span><span class="rvts6"> intenta devolver un valor simplificado. Aquí se presentan algunos ejemplos sobre las simplificaciones que </span><span class="rvts9">floor</span><span class="rvts6"> es capaz de hacer:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) floor (ceiling (x));</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ceiling(x)</span><br/><span class="rvts9">(%i2) floor (floor (x));</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; floor(x)</span><br/><span class="rvts9">(%i3) declare (n, integer)$</span><br/><span class="rvts9">(%i4) [floor (n), floor (abs (n)), floor (min (n, 6))];</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[n, abs(n), min(n, 6)]</span><br/><span class="rvts9">(%i5) assume (x &gt; 0, x &lt; 1)$</span><br/><span class="rvts9">(%i6) floor (x);</span><br/><span class="rvts9">(%o6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0</span><br/><span class="rvts9">(%i7) tex (floor (a));</span><br/><span class="rvts9">$$\left \lfloor a \right \rfloor$$</span><br/><span class="rvts9">(%o7) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; false</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">floor</span><span class="rvts6"> no se extiende automáticamente a los elementos de listas y matrices. Por último, para todos los argumentos que tengan una forma compleja, </span><span class="rvts9">floor</span><span class="rvts6"> devuelve una forma nominal.</span></p>
+<p class="rvps3"><span class="rvts6">Si el rango de una función es subconjunto de los números enteros, entonces puede ser declarada como </span><span class="rvts9">integervalued</span><span class="rvts6">. Tanto </span><span class="rvts9">ceiling</span><span class="rvts6"> como </span><span class="rvts9">floor</span><span class="rvts6"> son funciones que hacen uso de esta información; por ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) declare (f, integervalued)$</span><br/><span class="rvts9">(%i2) floor (f(x));</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; f(x)</span><br/><span class="rvts9">(%i3) ceiling (f(x) - 1);</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; f(x) - 1</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX85"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">notequal</span><span class="rvts18"> (a, b)</span></li>
+<li class="rvps3"><span class="rvts6">Representa la negación de </span><span class="rvts9">equal (</span><span class="rvts19">a</span><span class="rvts9">, </span><span class="rvts19">b</span><span class="rvts9">)</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) equal (a, b);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;equal(a, b)</span><br/><span class="rvts9">(%i2) maybe (equal (a, b));</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;unknown</span><br/><span class="rvts9">(%i3) notequal (a, b);</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;notequal(a, b)</span><br/><span class="rvts9">(%i4) not equal (a, b);</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;notequal(a, b)</span><br/><span class="rvts9">(%i5) maybe (notequal (a, b));</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;unknown</span><br/><span class="rvts9">(%i6) assume (a &gt; b);</span><br/><span class="rvts9">(%o6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[a &gt; b]</span><br/><span class="rvts9">(%i7) equal (a, b);</span><br/><span class="rvts9">(%o7) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;equal(a, b)</span><br/><span class="rvts9">(%i8) maybe (equal (a, b));</span><br/><span class="rvts9">(%o8) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; false</span><br/><span class="rvts9">(%i9) notequal (a, b);</span><br/><span class="rvts9">(%o9) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;notequal(a, b)</span><br/><span class="rvts9">(%i10) maybe (notequal (a, b));</span><br/><span class="rvts9">(%o10) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;true</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX86"></a>
+<span class="rvts16">Operador:</span><span class="rvts6"> </span><span class="rvts17">eval</span></li>
+<li class="rvps3"><span class="rvts6">El operador </span><span class="rvts9">eval</span><span class="rvts6"> realiza una evaluación extra de una expresión </span><span class="rvts18">expr</span><span class="rvts6">. Véase </span><span class="rvts9">ev</span><span class="rvts6">.</span></li>
+<li><a name="IDX87"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">evenp</span><span class="rvts18"> (expr)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve </span><span class="rvts9">true</span><span class="rvts6"> si </span><span class="rvts18">expr</span><span class="rvts6"> es un entero par y </span><span class="rvts9">false</span><span class="rvts6"> en cualquier otro caso.</span></li>
+<li><a name="IDX88"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">fix</span><span class="rvts18"> (x)</span></li>
+<li class="rvps3"><span class="rvts6">Es un sinónimo de </span><span class="rvts9">entier (</span><span class="rvts19">x</span><span class="rvts9">)</span><span class="rvts6">.</span></li>
+<li><a name="IDX89"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">fullmap</span><span class="rvts18"> (f, expr_1, ...)</span></li>
+<li class="rvps3"><span class="rvts6">Similar a </span><span class="rvts9">map</span><span class="rvts6">, pero conservará el mapeado descendente de todas las subexpresiones hasta que los operadores principales ya no sean los mismos.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">fullmap</span><span class="rvts6"> es utilizada por el simplificador de Maxima en algunas transformaciones matriciales, por lo que Maxima generará en algunas ocasiones mensajes de error relacionados con </span><span class="rvts9">fullmap</span><span class="rvts6"> aunque el usuario no haya invocado explícitamente esta función.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) a + b * c;</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;b c + a</span><br/><span class="rvts9">(%i2) fullmap (g, %);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; g(b) g(c) + g(a)</span><br/><span class="rvts9">(%i3) map (g, %th(2));</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; g(b c) + g(a)</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX90"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">fullmapl</span><span class="rvts18"> (f, list_1, ...)</span></li>
+<li class="rvps3"><span class="rvts6">Similar a </span><span class="rvts9">fullmap</span><span class="rvts6">, pero </span><span class="rvts9">fullmapl</span><span class="rvts6"> sólo hace mapeo sobre listas y matrices.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) fullmapl ("+", [3, [4, 5]], [[a, 1], [0, -1.5]]);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[[a + 3, 4], [4, 3.5]]</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX91"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">is</span><span class="rvts18"> (expr)</span></li>
+<li class="rvps3"><span class="rvts6">Intenta determinar si el predicado </span><span class="rvts18">expr</span><span class="rvts6"> se puede deducir de los hechos almacenados en la base de datos gestionada por </span><span class="rvts9">assume</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si el predicado se reduce a </span><span class="rvts9">true</span><span class="rvts6"> o </span><span class="rvts9">false</span><span class="rvts6">, </span><span class="rvts9">is</span><span class="rvts6"> devuelve </span><span class="rvts9">true</span><span class="rvts6"> o </span><span class="rvts9">false</span><span class="rvts6">, respectivamente. En otro caso, el valor devuelto está controlado por la variable global </span><span class="rvts9">prederror</span><span class="rvts6">. Si </span><span class="rvts9">prederror</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, </span><span class="rvts9">is</span><span class="rvts6"> emite un mensaje de error; en caso contrario, </span><span class="rvts9">is</span><span class="rvts6"> devuelve </span><span class="rvts9">unknown</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">La instrucción </span><span class="rvts9">ev(</span><span class="rvts19">expr</span><span class="rvts9">, pred)</span><span class="rvts6"> (que puede escribirse como </span><span class="rvts19">expr</span><span class="rvts9">, pred</span><span class="rvts6"> en el modo interactivo) equivale a </span><span class="rvts9">is(</span><span class="rvts19">expr</span><span class="rvts9">)</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Véanse también </span><span class="rvts9">assume</span><span class="rvts6">, </span><span class="rvts9">facts</span><span class="rvts6"> y </span><span class="rvts9">maybe</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps3"><span class="rvts9">is</span><span class="rvts6"> evalúa los predicados,</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) %pi &gt; %e;</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; %pi &gt; %e</span><br/><span class="rvts9">(%i2) is (%pi &gt; %e);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; true</span></p>
+<p class="rvps3"><span class="rvts9">is</span><span class="rvts6"> intenta evaluar predicados a partir del conocimiento almacenado en la base de datos de </span><span class="rvts9">assume</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) assume (a &gt; b);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[a &gt; b]</span><br/><span class="rvts9">(%i2) assume (b &gt; c);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[b &gt; c]</span><br/><span class="rvts9">(%i3) is (a &lt; b);</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; false</span><br/><span class="rvts9">(%i4) is (a &gt; c);</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; true</span><br/><span class="rvts9">(%i5) is (equal (a, c));</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; false</span></p>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">is</span><span class="rvts6"> no puede evaluar el valor lógico del predicado a partir de la base de datos gestionada por </span><span class="rvts9">assume</span><span class="rvts6">, la variable global </span><span class="rvts9">prederror</span><span class="rvts6"> controla el comportamiento de </span><span class="rvts9">is</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) assume (a &gt; b);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[a &gt; b]</span><br/><span class="rvts9">(%i2) prederror: true$</span><br/><span class="rvts9">(%i3) is (a &gt; 0);</span><br/><span class="rvts9">Maxima was unable to evaluate the predicate:</span><br/><span class="rvts9">a &gt; 0</span><br/><span class="rvts9"> -- an error. &nbsp;Quitting. &nbsp;To debug this try debugmode(true);</span><br/><span class="rvts9">(%i4) prederror: false$</span><br/><span class="rvts9">(%i5) is (a &gt; 0);</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;unknown</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX92"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">maybe</span><span class="rvts18"> (expr)</span></li>
+<li class="rvps3"><span class="rvts6">Intenta determinar si el predicado </span><span class="rvts18">expr</span><span class="rvts6"> se puede deducir de los hechos almacenados en la base de datos gestionada por </span><span class="rvts9">assume</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si el predicado se reduce a </span><span class="rvts9">true</span><span class="rvts6"> o </span><span class="rvts9">false</span><span class="rvts6">, </span><span class="rvts9">maybe</span><span class="rvts6"> devuelve </span><span class="rvts9">true</span><span class="rvts6"> o </span><span class="rvts9">false</span><span class="rvts6">, respectivamente. En otro caso, </span><span class="rvts9">maybe</span><span class="rvts6"> devuelve </span><span class="rvts9">unknown</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">maybe</span><span class="rvts6"> es funcionalmente equivalente a </span><span class="rvts9">is</span><span class="rvts6"> con </span><span class="rvts9">prederror: false</span><span class="rvts6">, pero el resultado se calcula sin asignar valor alguno a </span><span class="rvts9">prederror</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Véanse también </span><span class="rvts9">assume</span><span class="rvts6">, </span><span class="rvts9">facts</span><span class="rvts6"> y </span><span class="rvts9">is</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) maybe (x &gt; 0);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;unknown</span><br/><span class="rvts9">(%i2) assume (x &gt; 1);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[x &gt; 1]</span><br/><span class="rvts9">(%i3) maybe (x &gt; 0);</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; true</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX93"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">isqrt</span><span class="rvts18"> (x)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve la "raíz cuadrada entera" del valor absoluto de </span><span class="rvts18">x</span><span class="rvts6">, el cual debe ser un entero.</span></li>
+<li><a name="IDX94"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">lmax</span><span class="rvts18"> (L)</span></li>
+<li class="rvps3"><span class="rvts6">Si </span><span class="rvts18">L</span><span class="rvts6"> es una lista o conjunto, devuelve </span><span class="rvts9">apply ('max, args (</span><span class="rvts19">L</span><span class="rvts9">))</span><span class="rvts6">. Si </span><span class="rvts18">L</span><span class="rvts6"> no es una lista o conjunto, envía un mensaje de error.</span></li>
+<li><a name="IDX95"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">lmin</span><span class="rvts18"> (L)</span></li>
+<li class="rvps3"><span class="rvts6">Si </span><span class="rvts18">L</span><span class="rvts6"> es una lista o conjunto, devuelve </span><span class="rvts9">apply ('min, args (</span><span class="rvts19">L</span><span class="rvts9">))</span><span class="rvts6">. Si </span><span class="rvts18">L</span><span class="rvts6"> no es una lista o conjunto, envía un mensaje de error.</span></li>
+<li><a name="IDX96"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">max</span><span class="rvts18"> (x_1, ..., x_n)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve un valor simplificado de la mayor de las expresiones desde </span><span class="rvts18">x_1</span><span class="rvts6"> hasta </span><span class="rvts18">x_n</span><span class="rvts6">. Si </span><span class="rvts9">get (trylevel, maxmin)</span><span class="rvts6"> es 2 o más, </span><span class="rvts9">max</span><span class="rvts6"> aplica la simplificación </span><span class="rvts9">max (e, -e) --&gt; |e|</span><span class="rvts6">. Si </span><span class="rvts9">get (trylevel, maxmin)</span><span class="rvts6"> es 3 o más, </span><span class="rvts18">max</span><span class="rvts6"> intenta eliminar las expresiones que estén entre otros dos de los argumentos dados; por ejemplo, </span><span class="rvts9">max (x, 2*x, 3*x) --&gt; max (x, 3*x)</span><span class="rvts6">. Para asignar el valor 2 a </span><span class="rvts9">trylevel</span><span class="rvts6"> se puede hacer </span><span class="rvts9">put (trylevel, 2, maxmin)</span><span class="rvts6">.</span></li>
+<li><a name="IDX97"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">min</span><span class="rvts18"> (x_1, ..., x_n)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve un valor simplificado de la menor de las expresiones desde </span><span class="rvts18">x_1</span><span class="rvts6"> hasta </span><span class="rvts18">x_n</span><span class="rvts6">. Si </span><span class="rvts9">get (trylevel, maxmin)</span><span class="rvts6"> es 2 o más, </span><span class="rvts9">min</span><span class="rvts6"> aplica la simplificación </span><span class="rvts9">min (e, -e) --&gt; |e|</span><span class="rvts6">. Si </span><span class="rvts9">get (trylevel, maxmin)</span><span class="rvts6"> es 3 o más, </span><span class="rvts18">min</span><span class="rvts6"> intenta eliminar las expresiones que estén entre otros dos de los argumentos dados; por ejemplo, </span><span class="rvts9">min (x, 2*x, 3*x) --&gt; min (x, 3*x)</span><span class="rvts6">. Para asignar el valor 2 a </span><span class="rvts9">trylevel</span><span class="rvts6"> se puede hacer </span><span class="rvts9">put (trylevel, 2, maxmin)</span><span class="rvts6">.</span></li>
+<li><a name="IDX98"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">polymod</span><span class="rvts18"> (p)</span></li>
+<li><a name="IDX99"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">polymod</span><span class="rvts18"> (p, m)</span></li>
+<li class="rvps3"><span class="rvts6">Convierte el polinomio </span><span class="rvts18">p</span><span class="rvts6"> a una representación modular respecto del módulo actual, que es el valor almacenado en la variable </span><span class="rvts9">modulus</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La llamada </span><span class="rvts9">polymod (</span><span class="rvts19">p</span><span class="rvts9">, </span><span class="rvts19">m</span><span class="rvts9">)</span><span class="rvts6"> especifica un módulo </span><span class="rvts18">m</span><span class="rvts6"> para ser utilizado en lugar de valor almacenado en </span><span class="rvts9">modulus</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Véase </span><span class="rvts9">modulus</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX100"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">mod</span><span class="rvts18"> (x, y)</span></li>
+<li class="rvps3"><span class="rvts6">Si </span><span class="rvts18">x</span><span class="rvts6"> e </span><span class="rvts18">y</span><span class="rvts6"> son números reales e </span><span class="rvts18">y</span><span class="rvts6"> es distinto de cero, devuelve </span><span class="rvts19">x</span><span class="rvts9"> - </span><span class="rvts19">y</span><span class="rvts9"> * floor(</span><span class="rvts19">x</span><span class="rvts9"> / </span><span class="rvts19">y</span><span class="rvts9">)</span><span class="rvts6">. Para todos los reales </span><span class="rvts18">x</span><span class="rvts6">, se tiene </span><span class="rvts9">mod (</span><span class="rvts19">x</span><span class="rvts9">, 0) = </span><span class="rvts19">x</span><span class="rvts6">. Para información sobre la definición de </span><span class="rvts9">mod (</span><span class="rvts19">x</span><span class="rvts9">, 0) = </span><span class="rvts19">x</span><span class="rvts6">, véase la sección 3.4 de "Concrete Mathematics", by Graham, Knuth, and Patashnik. La función </span><span class="rvts9">mod (</span><span class="rvts19">x</span><span class="rvts9">, 1)</span><span class="rvts6"> es de diente de sierra con periodo unidad y con </span><span class="rvts9">mod (1, 1) = 0</span><span class="rvts6"> y </span><span class="rvts9">mod (0, 1) = 0</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Para encontrar el argumento principal (un número del intervalo </span><span class="rvts9">(-%pi, %pi]</span><span class="rvts6">) de un número complejo, hágase uso de la función </span><span class="rvts19">x</span><span class="rvts9"> |-&gt; %pi - mod (%pi - </span><span class="rvts19">x</span><span class="rvts9">, 2*%pi)</span><span class="rvts6">, donde </span><span class="rvts18">x</span><span class="rvts6"> es un argumento.</span></p>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts18">x</span><span class="rvts6"> e </span><span class="rvts18">y</span><span class="rvts6"> son expresiones constantes (por ejemplo, </span><span class="rvts9">10 * %pi</span><span class="rvts6">), </span><span class="rvts9">mod</span><span class="rvts6"> utiliza el mismo esquema de evaluación basado en números grandes en coma flotante (big floats) que </span><span class="rvts9">floor</span><span class="rvts6"> y </span><span class="rvts9">ceiling</span><span class="rvts6">. También es posible, pero improbable, que </span><span class="rvts9">mod</span><span class="rvts6"> pueda retornar un valor erróneo en tales casos.</span></p>
+<p class="rvps3"><span class="rvts6">Para argumentos no numéricos </span><span class="rvts18">x</span><span class="rvts6"> o </span><span class="rvts18">y</span><span class="rvts6">, </span><span class="rvts9">mod</span><span class="rvts6"> aplica algunas reglas de simplificación:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) mod (x, 0);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x</span><br/><span class="rvts9">(%i2) mod (a*x, a*y);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;a mod(x, y)</span><br/><span class="rvts9">(%i3) mod (0, x);</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX101"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">oddp</span><span class="rvts18"> (expr)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve </span><span class="rvts9">true</span><span class="rvts6"> si </span><span class="rvts18">expr</span><span class="rvts6"> es un entero impar y </span><span class="rvts9">false</span><span class="rvts6"> en caso contrario.</span></li>
+<li><a name="IDX102"></a>
+<span class="rvts16">Operador:</span><span class="rvts6"> </span><span class="rvts17">pred</span></li>
+<li class="rvps3"><span class="rvts6">El operador </span><span class="rvts9">pred</span><span class="rvts6"> realiza una evaluación extra de un predicado (expresión cuya evaluación debe dar </span><span class="rvts9">true</span><span class="rvts6"> o </span><span class="rvts9">false</span><span class="rvts6">). Véase </span><span class="rvts9">ev</span><span class="rvts6">.</span></li>
+<li><a name="IDX103"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">make_random_state</span><span class="rvts18"> (n)</span></li>
+<li><a name="IDX104"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">make_random_state</span><span class="rvts18"> (s)</span></li>
+<li><a name="IDX105"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">make_random_state</span><span class="rvts18"> (true)</span></li>
+<li><a name="IDX106"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">make_random_state</span><span class="rvts18"> (false)</span></li>
+<li class="rvps3"><span class="rvts6">Un objeto de estado aleatorio representa el estado del generador de números aleatorios. El estado consiste en 627 cadenas binarias de 32 bits.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La llamada </span><span class="rvts9">make_random_state (</span><span class="rvts19">n</span><span class="rvts9">)</span><span class="rvts6"> devuelve un nuevo objeto de estado aleatorio creado a partir de una semilla entera igual a </span><span class="rvts18">n</span><span class="rvts6"> módulo 2^32. El argumento </span><span class="rvts18">n</span><span class="rvts6"> puede ser negativo.</span></p>
+<p class="rvps3"><span class="rvts6">La llamada </span><span class="rvts9">make_random_state (</span><span class="rvts19">s</span><span class="rvts9">)</span><span class="rvts6"> devuelve una copia del estado aleatorio </span><span class="rvts18">s</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">La llamada </span><span class="rvts9">make_random_state (true)</span><span class="rvts6"> devuelve un nuevo objeto de estado aleatorio, cuya semilla se genera a partir de la hora actual del reloj del sistema como semilla.</span></p>
+<p class="rvps3"><span class="rvts6">La llamada </span><span class="rvts9">make_random_state (false)</span><span class="rvts6"> devuelve una copia del estado actual del generador de números aleatorios.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX107"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">set_random_state</span><span class="rvts18"> (s)</span></li>
+<li class="rvps3"><span class="rvts6">Establece </span><span class="rvts18">s</span><span class="rvts6"> como estado del generador de números aleatorios.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">set_random_state</span><span class="rvts6"> devuelve </span><span class="rvts9">done</span><span class="rvts6"> en todo caso.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX108"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">random</span><span class="rvts18"> (x)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve un número seudoaleatorio. Si </span><span class="rvts18">x</span><span class="rvts6"> es un entero, </span><span class="rvts9">random (</span><span class="rvts19">x</span><span class="rvts9">)</span><span class="rvts6"> devuelve un entero entre 0 y </span><span class="rvts19">x</span><span class="rvts9"> - 1</span><span class="rvts6">, ambos inclusive. Si </span><span class="rvts18">x</span><span class="rvts6"> es un decimal en punto flotante, </span><span class="rvts9">random (</span><span class="rvts19">x</span><span class="rvts9">)</span><span class="rvts6"> devuelve un decimal no negativo en punto flotante menor que </span><span class="rvts18">x</span><span class="rvts6">. La función </span><span class="rvts9">random</span><span class="rvts6"> emite un mensaje de error si </span><span class="rvts18">x</span><span class="rvts6"> no es ni entero ni de punto flotante, o si </span><span class="rvts18">x</span><span class="rvts6"> no es positivo.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Las funciones </span><span class="rvts9">make_random_state</span><span class="rvts6"> y </span><span class="rvts9">set_random_state</span><span class="rvts6"> permiten controlar el estado del generador de números aleatorios.</span></p>
+<p class="rvps3"><span class="rvts6">El generador de números aleatorios de Maxima implementa el algoritmo de Mersenne twister MT 19937.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) s1: make_random_state (654321)$</span><br/><span class="rvts9">(%i2) set_random_state (s1);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; done</span><br/><span class="rvts9">(%i3) random (1000);</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;768</span><br/><span class="rvts9">(%i4) random (9573684);</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;7657880</span><br/><span class="rvts9">(%i5) random (2^75);</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;11804491615036831636390</span><br/><span class="rvts9">(%i6) s2: make_random_state (false)$</span><br/><span class="rvts9">(%i7) random (1.0);</span><br/><span class="rvts9">(%o7) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .2310127244107132</span><br/><span class="rvts9">(%i8) random (10.0);</span><br/><span class="rvts9">(%o8) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4.394553645870825</span><br/><span class="rvts9">(%i9) random (100.0);</span><br/><span class="rvts9">(%o9) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 32.28666704056853</span><br/><span class="rvts9">(%i10) set_random_state (s2);</span><br/><span class="rvts9">(%o10) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;done</span><br/><span class="rvts9">(%i11) random (1.0);</span><br/><span class="rvts9">(%o11) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.2310127244107132</span><br/><span class="rvts9">(%i12) random (10.0);</span><br/><span class="rvts9">(%o12) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4.394553645870825</span><br/><span class="rvts9">(%i13) random (100.0);</span><br/><span class="rvts9">(%o13) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;32.28666704056853</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX109"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">rationalize</span><span class="rvts18"> (expr)</span></li>
+<li class="rvps3"><span class="rvts6">Convierte todos los números en coma flotante de doble precisión y grandes (big float) presentes en una expresión </span><span class="rvts18">expr</span><span class="rvts6"> de Maxima a sus formas racionales exactas equivalentes. Si el usuario no está familiarizado con la representación binaria de números en coma flotante, le puede extrañar que </span><span class="rvts9">rationalize (0.1)</span><span class="rvts6"> no sea igual que 1/10. Este comportamiento no es único de Maxima, ya que el número 1/10 en su forma binaria es periódico y no exacto.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) rationalize (0.5);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9">(%i2) rationalize (0.1);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;--</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 10</span><br/><span class="rvts9">(%i3) fpprec : 5$</span><br/><span class="rvts9">(%i4) rationalize (0.1b0);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 209715</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2097152</span><br/><span class="rvts9">(%i5) fpprec : 20$</span><br/><span class="rvts9">(%i6) rationalize (0.1b0);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 236118324143482260685</span><br/><span class="rvts9">(%o6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;----------------------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2361183241434822606848</span><br/><span class="rvts9">(%i7) rationalize (sin (0.1*x + 5.6));</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x &nbsp; &nbsp;28</span><br/><span class="rvts9">(%o7) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sin(-- + --)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;10 &nbsp; 5</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo de uso:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) unitfrac(r) := block([uf : [], q],</span><br/><span class="rvts9"> &nbsp; &nbsp;if not(ratnump(r)) then</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;error("The input to 'unitfrac' must be a rational number"),</span><br/><span class="rvts9"> &nbsp; &nbsp;while r # 0 do (</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp;uf : cons(q : 1/ceiling(1/r), uf),</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp;r : r - q),</span><br/><span class="rvts9"> &nbsp; &nbsp;reverse(uf)); </span><br/><span class="rvts9">(%o1) unitfrac(r) := block([uf : [], q], </span><br/><span class="rvts9">if not ratnump(r) then </span><br/><span class="rvts9"> &nbsp;error("The input to 'unitfrac' must be a rational number"),</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</span><br/><span class="rvts9">while r # 0 do (uf : cons(q : ----------, uf), r : r - q), </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ceiling(-)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; r</span><br/><span class="rvts9">reverse(uf))</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1 &nbsp;1 &nbsp;1</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[-, -, --]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp;3 &nbsp;15</span><br/><span class="rvts9">(%i3) unitfrac (9/10);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 9</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;--</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 10</span><br/><span class="rvts9">(%i4) apply ("+", %);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [- 1, --]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;10</span><br/><span class="rvts9">(%i5) unitfrac (-9/10);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;9</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - --</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;10</span><br/><span class="rvts9">(%i6) apply ("+", %);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1 &nbsp;1 &nbsp;1 &nbsp;1 &nbsp; &nbsp;1</span><br/><span class="rvts9">(%o6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[-, -, -, --, ----]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp;3 &nbsp;8 &nbsp;69 &nbsp;6808</span><br/><span class="rvts9">(%i7) unitfrac (36/37);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 36</span><br/><span class="rvts9">(%o7) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;--</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 37</span><br/><span class="rvts9">(%i8) apply ("+", %);</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX110"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">sign</span><span class="rvts18"> (expr)</span></li>
+<li class="rvps3"><span class="rvts6">Intenta determinar el signo de </span><span class="rvts18">expr</span><span class="rvts6"> en base a los hechos almacenados en la base de datos. Devuelve una de las siguientes respuestas: </span><span class="rvts9">pos</span><span class="rvts6"> (positivo), </span><span class="rvts9">neg</span><span class="rvts6"> (negativo), </span><span class="rvts9">zero</span><span class="rvts6"> (cero), </span><span class="rvts9">pz</span><span class="rvts6"> (positivo o cero), </span><span class="rvts9">nz</span><span class="rvts6"> (negativo o cero), </span><span class="rvts9">pn</span><span class="rvts6"> (positivo o negativo), o </span><span class="rvts9">pnz</span><span class="rvts6"> (positivo, negativo o cero, lo que significa que el signo es desconocido).</span></li>
+<li><a name="IDX111"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">signum</span><span class="rvts18"> (x)</span></li>
+<li class="rvps3"><span class="rvts6">Para </span><span class="rvts18">x</span><span class="rvts6"> numérico, devuelve 0 si </span><span class="rvts18">x</span><span class="rvts6"> es 0, en caso contrario devuelve -1 o +1, según que </span><span class="rvts18">x</span><span class="rvts6"> sea menor o mayor que 0, respectivamente.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts18">x</span><span class="rvts6"> no es numérico, entonces se devuelve una forma simplificada equivalente. Por ejemplo, </span><span class="rvts9">signum(-x)</span><span class="rvts6"> devuelve </span><span class="rvts9">-signum(x)</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX112"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">sort</span><span class="rvts18"> (L, P)</span></li>
+<li><a name="IDX113"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">sort</span><span class="rvts18"> (L)</span></li>
+<li class="rvps3"><span class="rvts6">Ordena la lista </span><span class="rvts18">L</span><span class="rvts6"> de acuerdo con el predicado </span><span class="rvts9">P</span><span class="rvts6"> de dos argumentos, de tal manera que </span><span class="rvts19">P</span><span class="rvts9"> (</span><span class="rvts19">L</span><span class="rvts9">[k], </span><span class="rvts19">L</span><span class="rvts9">[k + 1])</span><span class="rvts6"> es </span><span class="rvts9">true</span><span class="rvts6"> (verdadero) para cualesquiera dos elementos sucesivos. El predicado se puede especificar como nombre de una función o de un operador infijo binario, o como una expresión </span><span class="rvts9">lambda</span><span class="rvts6">. Si se especifica con el nombre de un operador, este nombre debe encerrarse con "comillas dobles".</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La lista ordenada se devuelve como un objeto nuevo, de manera que el argumento </span><span class="rvts18">L</span><span class="rvts6"> no se ve alterado. A fin de construir el valor de retorno, </span><span class="rvts9">sort</span><span class="rvts6"> hace una copia previa de los elementos de </span><span class="rvts18">L</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Si el predicado </span><span class="rvts18">P</span><span class="rvts6"> no ordena totalmente los elementos de </span><span class="rvts18">L</span><span class="rvts6">, entonces </span><span class="rvts9">sort</span><span class="rvts6"> puede seguir ejecutándose hasta el final sin emitir errores, pero el resultado no es predecible. La función muestra un mensaje de error en caso de que el predicado devuelva algo diferente de </span><span class="rvts9">true</span><span class="rvts6"> o </span><span class="rvts9">false</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">La llamada </span><span class="rvts9">sort (</span><span class="rvts19">L</span><span class="rvts9">)</span><span class="rvts6"> equivale a </span><span class="rvts9">sort (</span><span class="rvts19">L</span><span class="rvts9">, orderlessp)</span><span class="rvts6">; esto es, el orden por defecto es el ascendente, tal como queda definido por </span><span class="rvts9">orderlessp</span><span class="rvts6">. Todos los átomos y expresiones de Maxima son comparables para </span><span class="rvts9">orderlessp</span><span class="rvts6">, aunque existen ejemplos aislados de expresiones para las cuales </span><span class="rvts9">orderlessp</span><span class="rvts6"> deja de ser transitivo; se trata de un fallo de Maxima.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) sort ([11, -17, 29b0, 7.55, 3, -5/2, b + a, 9 * c, 19 - 3 * x]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 5</span><br/><span class="rvts9">(%o1) [- 17, - -, 3, 7.55, 11, 2.9b1, b + a, 9 c, 19 - 3 x]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9">(%i2) sort ([11, -17, 29b0, 7.55, 3, -5/2, b + a, 9 * c, 19 - 3 * x],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ordergreatp);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 5</span><br/><span class="rvts9">(%o2) [19 - 3 x, 9 c, b + a, 2.9b1, 11, 7.55, 3, - -, - 17]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9">(%i3) sort ([%pi, 3, 4, %e, %gamma]);</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[3, 4, %e, %gamma, %pi]</span><br/><span class="rvts9">(%i4) sort ([%pi, 3, 4, %e, %gamma], "&lt;");</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[%gamma, %e, 3, %pi, 4]</span><br/><span class="rvts9">(%i5) my_list : [[aa, hh, uu], [ee, cc], [zz, xx, mm, cc], [%pi, %e]];</span><br/><span class="rvts9">(%o5) [[aa, hh, uu], [ee, cc], [zz, xx, mm, cc], [%pi, %e]]</span><br/><span class="rvts9">(%i6) sort (my_list);</span><br/><span class="rvts9">(%o6) [[%pi, %e], [aa, hh, uu], [ee, cc], [zz, xx, mm, cc]]</span><br/><span class="rvts9">(%i7) sort (my_list, lambda ([a, b], </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; orderlessp (reverse (a), reverse (b))));</span><br/><span class="rvts9">(%o7) [[%pi, %e], [ee, cc], [zz, xx, mm, cc], [aa, hh, uu]]</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX114"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">sqrt</span><span class="rvts18"> (x)</span></li>
+<li class="rvps3"><span class="rvts6">Raíz cuadrada de </span><span class="rvts18">x</span><span class="rvts6">. Se representa internamente por </span><span class="rvts19">x</span><span class="rvts9">^(1/2)</span><span class="rvts6">. Véase también </span><span class="rvts9">rootscontract</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si la variable </span><span class="rvts9">radexpand</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6"> hará que las raíces </span><span class="rvts9">n</span><span class="rvts6">-ésimas de los factores de un producto que sean potencias de </span><span class="rvts9">n</span><span class="rvts6"> sean extraídas del radical; por ejemplo, </span><span class="rvts9">sqrt(16*x^2)</span><span class="rvts6"> se convertirá en </span><span class="rvts9">4*x</span><span class="rvts6"> sólo si </span><span class="rvts9">radexpand</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX115"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">sqrtdispflag</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">true</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">sqrtdispflag</span><span class="rvts6"> vale </span><span class="rvts9">false</span><span class="rvts6">, hará que </span><span class="rvts9">sqrt</span><span class="rvts6"> se muestre con el exponente 1/2.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX116"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">sublis</span><span class="rvts18"> (list, expr)</span></li>
+<li class="rvps3"><span class="rvts6">Realiza sustituciones múltiples en paralelo en una expresión.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La variable </span><span class="rvts9">sublis_apply_lambda</span><span class="rvts6"> controla la simplificación después de </span><span class="rvts9">sublis</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) sublis ([a=b, b=a], sin(a) + cos(b));</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;sin(b) + cos(a)</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX117"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">sublist</span><span class="rvts18"> (list, p)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve la lista de elementos de </span><span class="rvts18">list</span><span class="rvts6"> para los cuales el predicado </span><span class="rvts9">p</span><span class="rvts6"> retorna </span><span class="rvts9">true</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) L: [1, 2, 3, 4, 5, 6];</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[1, 2, 3, 4, 5, 6]</span><br/><span class="rvts9">(%i2) sublist (L, evenp);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [2, 4, 6]</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX118"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">sublis_apply_lambda</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">true</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Controla si los </span><span class="rvts9">lambda</span><span class="rvts6"> sustituidos son aplicados en la simplificación después de invocar a </span><span class="rvts9">sublis</span><span class="rvts6">, o si se tiene que hacer un </span><span class="rvts9">ev</span><span class="rvts6"> para hacerlo. Si </span><span class="rvts9">sublis_apply_lambda</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, significa que se ejecute la aplicación.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX119"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">subst</span><span class="rvts18"> (a, b, c)</span></li>
+<li class="rvps3"><span class="rvts6">Sustituye </span><span class="rvts18">a</span><span class="rvts6"> por </span><span class="rvts18">b</span><span class="rvts6"> en </span><span class="rvts18">c</span><span class="rvts6">. El argumento </span><span class="rvts18">b</span><span class="rvts6"> debe ser un átomo o una subexpresión completa de </span><span class="rvts18">c</span><span class="rvts6">. Por ejemplo, </span><span class="rvts9">x+y+z</span><span class="rvts6"> es una subexpresión completa de </span><span class="rvts9">2*(x+y+z)/w</span><span class="rvts6"> mientras que </span><span class="rvts9">x+y</span><span class="rvts6"> no lo es. Cuando </span><span class="rvts18">b</span><span class="rvts6"> no cumple esta característica, se puede utilizar en algunos casos </span><span class="rvts9">substpart</span><span class="rvts6"> o </span><span class="rvts9">ratsubst</span><span class="rvts6"> (ver más abajo). Alternativamente, si </span><span class="rvts18">b</span><span class="rvts6"> no es de la forma </span><span class="rvts9">e/f</span><span class="rvts6"> entonces se puede usar </span><span class="rvts9">subst (a*f, e, c)</span><span class="rvts6">, pero si </span><span class="rvts18">b</span><span class="rvts6"> es de la forma </span><span class="rvts9">e^(1/f)</span><span class="rvts6"> se debe usar </span><span class="rvts9">subst (a^f, e, c)</span><span class="rvts6">. La instrucción </span><span class="rvts9">subst</span><span class="rvts6"> también reconoce </span><span class="rvts9">x^y</span><span class="rvts6"> en </span><span class="rvts9">x^-y</span><span class="rvts6">, de manera que </span><span class="rvts9">subst (a, sqrt(x), 1/sqrt(x))</span><span class="rvts6"> da </span><span class="rvts9">1/a</span><span class="rvts6">. Los argumentos </span><span class="rvts18">a</span><span class="rvts6"> y </span><span class="rvts18">b</span><span class="rvts6"> también pueden ser operadores de una expresión acotados por comillas dobles </span><span class="rvts9">"</span><span class="rvts6"> o nombres de funciones. Si se quiere sustituir la variable independiente en expresiones con derivadas se debe utilizar la función </span><span class="rvts9">at</span><span class="rvts6"> (ver más abajo).</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">subst</span><span class="rvts6"> es sinónimo de </span><span class="rvts9">substitute</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">La llamada </span><span class="rvts9">subst (</span><span class="rvts19">eq_1</span><span class="rvts9">, </span><span class="rvts19">expr</span><span class="rvts9">)</span><span class="rvts6"> o </span><span class="rvts9">subst ([</span><span class="rvts19">eq_1</span><span class="rvts9">, ..., </span><span class="rvts19">eq_k</span><span class="rvts9">], </span><span class="rvts19">expr</span><span class="rvts9">)</span><span class="rvts6"> están permitidas. Las </span><span class="rvts18">eq_i</span><span class="rvts6"> son ecuaciones que indican las sustituciones a realizar. Para cada ecuación, el miembro derecho será sustituida por la expresión del miembro izquierdo en </span><span class="rvts18">expr</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Si la variable </span><span class="rvts9">exptsubst</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6"> se permiten ciertas sustituciones de exponentes; por ejemplo, sustituir </span><span class="rvts9">y</span><span class="rvts6"> por </span><span class="rvts9">%e^x</span><span class="rvts6"> en </span><span class="rvts9">%e^(a*x)</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">opsubst</span><span class="rvts6"> vale </span><span class="rvts9">false</span><span class="rvts6">, </span><span class="rvts9">subst</span><span class="rvts6"> no intentará sustituir un operador de una expresión. Por ejemplo, </span><span class="rvts9">(opsubst: false, subst (x^2, r, r+r[0]))</span><span class="rvts6"> trabajará sin problemas.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) subst (a, x+y, x + (x+y)^2 + y);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;y + x + a</span><br/><span class="rvts9">(%i2) subst (-%i, %i, a + b*%i);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a - %i b</span></p>
+<p class="rvps3"><span class="rvts6">Para más ejemplos, ejecútese </span><span class="rvts9">example (subst)</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX120"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">substinpart</span><span class="rvts18"> (x, expr, n_1, ..., n_k)</span></li>
+<li class="rvps3"><span class="rvts6">Es similar a </span><span class="rvts9">substpart</span><span class="rvts6">, pero </span><span class="rvts9">substinpart</span><span class="rvts6"> trabaja con la representación interna de </span><span class="rvts18">expr</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) x . 'diff (f(x), x, 2);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; d</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x . (--- (f(x)))</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; dx</span><br/><span class="rvts9">(%i2) substinpart (d^2, %, 2);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x . d</span><br/><span class="rvts9">(%i3) substinpart (f1, f[1](x + 1), 0);</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; f1(x + 1)</span></p>
+<p class="rvps3"><span class="rvts6">Si el último argumento de la función </span><span class="rvts9">part</span><span class="rvts6"> es una lista de índices, entonces se toman varias subexpresiones, cada una de las cuales en correspondencia con un índice de la lista. Así,</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) part (x+y+z, [1, 3]);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; z + x</span></p>
+<p class="rvps3"><span class="rvts9">piece</span><span class="rvts6"> guarda el valor de la última expresión seleccionada cada vez que se utiliza la función </span><span class="rvts9">part</span><span class="rvts6">. Esta asignación se se hace durante la ejecución de la función, con lo que puede ser referenciada en la propia función tal como se muestra más abajo. Si </span><span class="rvts9">partswitch</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6"> entonces se devuelve </span><span class="rvts9">end</span><span class="rvts6"> cuando la parte seleccionada de una expresión no existe, en caso contrario se muestra un mensaje de error.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) expr: 27*y^3 + 54*x*y^2 + 36*x^2*y + y + 8*x^3 + x + 1;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3 &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; 27 y &nbsp;+ 54 x y &nbsp;+ 36 x &nbsp;y + y + 8 x &nbsp;+ x + 1</span><br/><span class="rvts9">(%i2) part (expr, 2, [1, 3]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 54 y</span><br/><span class="rvts9">(%i3) sqrt (piece/54);</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;abs(y)</span><br/><span class="rvts9">(%i4) substpart (factor (piece), expr, [1, 2, 3, 5]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (3 y + 2 x) &nbsp;+ y + x + 1</span><br/><span class="rvts9">(%i5) expr: 1/x + y/x - 1/z;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1 &nbsp; y &nbsp; 1</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- - + - + -</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; z &nbsp; x &nbsp; x</span><br/><span class="rvts9">(%i6) substpart (xthru (piece), expr, [2, 3]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;y + 1 &nbsp; 1</span><br/><span class="rvts9">(%o6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ----- - -</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x &nbsp; &nbsp; z</span></p>
+<p class="rvps3"><span class="rvts6">Además, darle a la opción </span><span class="rvts9">inflag</span><span class="rvts6"> el valor </span><span class="rvts9">true</span><span class="rvts6"> y llamar a </span><span class="rvts9">part</span><span class="rvts6"> o a </span><span class="rvts9">substpart</span><span class="rvts6"> es lo mismo que llamar a </span><span class="rvts9">inpart</span><span class="rvts6"> o a </span><span class="rvts9">substinpart</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX121"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">substpart</span><span class="rvts18"> (x, expr, n_1, ..., n_k)</span></li>
+<li class="rvps3"><span class="rvts6">Sustituye </span><span class="rvts18">x</span><span class="rvts6"> por la subexpresión determinada por el resto de argumentos, según el esquema de </span><span class="rvts9">part</span><span class="rvts6">. Devuelve el nuevo valor de </span><span class="rvts18">expr</span><span class="rvts6">. El argumento </span><span class="rvts18">x</span><span class="rvts6"> puede ser un operador a ser sustituido por un operador de </span><span class="rvts18">expr</span><span class="rvts6">. En algunos casos </span><span class="rvts18">x</span><span class="rvts6"> necesita estar acotado por comillas dobles </span><span class="rvts9">"</span><span class="rvts6">, como en </span><span class="rvts9">substpart ("+", a*b, 0)</span><span class="rvts6"> para que retorne </span><span class="rvts9">b + a</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) 1/(x^2 + 2);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x &nbsp;+ 2</span><br/><span class="rvts9">(%i2) substpart (3/2, %, 2, 1, 2);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3/2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x &nbsp; &nbsp;+ 2</span><br/><span class="rvts9">(%i3) a*x + f (b, y);</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a x + f(b, y)</span><br/><span class="rvts9">(%i4) substpart ("+", %, 1, 0);</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x + f(b, y) + a</span></p>
+<p class="rvps3"><span class="rvts6">Además, darle a la opción </span><span class="rvts9">inflag</span><span class="rvts6"> el valor </span><span class="rvts9">true</span><span class="rvts6"> y llamar a </span><span class="rvts9">part</span><span class="rvts6"> o a </span><span class="rvts9">substpart</span><span class="rvts6"> es lo mismo que llamar a </span><span class="rvts9">inpart</span><span class="rvts6"> o a </span><span class="rvts9">substinpart</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX122"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">subvarp</span><span class="rvts18"> (expr)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve </span><span class="rvts9">true</span><span class="rvts6"> si </span><span class="rvts18">expr</span><span class="rvts6"> es una variable subindicada, como </span><span class="rvts9">a[i]</span><span class="rvts6">.</span></li>
+<li><a name="IDX123"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">symbolp</span><span class="rvts18"> (expr)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve </span><span class="rvts9">true</span><span class="rvts6"> si </span><span class="rvts18">expr</span><span class="rvts6"> es un símbolo y </span><span class="rvts9">false</span><span class="rvts6"> en caso contrario. La llamada </span><span class="rvts9">symbolp(x)</span><span class="rvts6"> equivale al predicado </span><span class="rvts9">atom(x) and not numberp(x)</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">Identifiers</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX124"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">unorder</span><span class="rvts18"> ()</span></li>
+<li class="rvps3"><span class="rvts6">Desactiva las asociaciones creadas por la última utilización de los comandos de ordenación </span><span class="rvts9">ordergreat</span><span class="rvts6"> y </span><span class="rvts9">orderless</span><span class="rvts6">, los cuales no pueden ser utilizados más de una vez sin invocar a </span><span class="rvts9">unorder</span><span class="rvts6">. Véase también </span><span class="rvts9">ordergreat</span><span class="rvts6"> y </span><span class="rvts9">orderless</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) unorder();</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[]</span><br/><span class="rvts9">(%i2) b*x + a^2;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; b x + a</span><br/><span class="rvts9">(%i3) ordergreat (a);</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; done</span><br/><span class="rvts9">(%i4) b*x + a^2;</span><br/><span class="rvts9"> %th(1) - %th(3);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a &nbsp;+ b x</span><br/><span class="rvts9">(%i5) unorder();</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp;2</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;a &nbsp;- a</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX125"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">vectorpotential</span><span class="rvts18"> (givencurl)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve el vector potencial de un vector rotacional en el sistema de coordenadas actual. </span><span class="rvts9">potentialzeroloc</span><span class="rvts6"> tiene un rol similar al de </span><span class="rvts9">potential</span><span class="rvts6">, pero el orden del miembro izquierdo de las ecuaciones debe ser una permutación cíclica de las coordenadas.</span></li>
+<li><a name="IDX126"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">xthru</span><span class="rvts18"> (expr)</span></li>
+<li class="rvps3"><span class="rvts6">Combina todos los términos de </span><span class="rvts18">expr</span><span class="rvts6"> (la cual debe ser una suma) sobre un común denominador sin expandir productos ni sumas elevadas a exponentes al modo que lo hace </span><span class="rvts9">ratsimp</span><span class="rvts6">. La función </span><span class="rvts9">xthru</span><span class="rvts6"> cancela factores comunes en el numerador y denominador de expresiones racionales, pero sólo si los factores son explícitos.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">En ocasiones puede ser útil el uso de </span><span class="rvts9">xthru</span><span class="rvts6"> antes de la llamada a </span><span class="rvts9">ratsimp</span><span class="rvts6"> a fin de cancelar factores explícitos del máximo común divisor del numerador y denominador y así simplificar la expresión a la que se va a aplicar </span><span class="rvts9">ratsimp</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) ((x+2)^20 - 2*y)/(x+y)^20 + (x+y)^(-19) - x/(x+y)^20;</span><br/><span class="rvts9"> xthru (%);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;20</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp; (x + 2) &nbsp; - 2 y &nbsp; &nbsp; &nbsp; x</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp;--------- + --------------- - ---------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;19 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 20 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 20</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (y + x) &nbsp; &nbsp; &nbsp; &nbsp;(y + x) &nbsp; &nbsp; &nbsp; &nbsp;(y + x)</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX127"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">zeroequiv</span><span class="rvts18"> (expr, v)</span></li>
+<li class="rvps3"><span class="rvts6">Analiza si la expresión </span><span class="rvts18">expr</span><span class="rvts6"> de variable </span><span class="rvts18">v</span><span class="rvts6"> equivale a cero, devolviendo </span><span class="rvts9">true</span><span class="rvts6">, </span><span class="rvts9">false</span><span class="rvts6"> o </span><span class="rvts9">dontknow</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">zeroequiv</span><span class="rvts6"> tiene estas restricciones:</span></p>
+<ol style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">No utilizar funciones que Maxima no sepa derivar y evaluar.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Si la expresión tiene polos en la recta real, pueden aparecer errores en el resultado, aunque es poco probable.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Si la expresión contiene funciones que no son soluciones de ecuaciones diferenciales ordinarias de primer orden (como las funciones de Bessel) pueden presentarse resultados incorrectos.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">El algoritmo utiliza evaluaciones en puntos aleatoriamente seleccionados. Esto conlleva un riesgo,aunque el algoritmo intenta minimizar el error.</span></li>
+</ol>
+<p class="rvps3"><span class="rvts6">Por ejemplo, </span><span class="rvts9">zeroequiv (sin(2*x) - 2*sin(x)*cos(x), x)</span><span class="rvts6"> devuelve </span><span class="rvts9">true</span><span class="rvts6"> y </span><span class="rvts9">zeroequiv (%e^x + x, x)</span><span class="rvts6"> devuelve </span><span class="rvts9">false</span><span class="rvts6">. Por otro lado </span><span class="rvts9">zeroequiv (log(a*b) - log(a) - log(b), a)</span><span class="rvts6"> devuelve </span><span class="rvts9">dontknow</span><span class="rvts6"> debido a la presencia del parámetro </span><span class="rvts9">b</span><span class="rvts6">.</span></p>
+<hr style="height: 6px;"/>
+<div><table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="narios.html#SEC12"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_6.html#SEC20"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps3"><span class="rvts10">This document was generated by </span><span class="rvts11">Robert Dodier</span><span class="rvts10"> on </span><span class="rvts11">agosto, 25 2007</span><span class="rvts10"> using </span><a class="rvts12" href="http://texi2html.cvshome.org/">texi2html 1.76</a><span class="rvts10">.</span></p>
+<p></p>
+<p class="rvps6"><span class="rvts13">Created with the Personal Edition of HelpNDoc: </span><a class="rvts14" href="http://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Produce Kindle eBooks easily</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				http://maxima.sourceforge.net</div>
+		</div>
+	</body>
+	
+</html>
+

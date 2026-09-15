@@ -1,0 +1,359 @@
+﻿<html>
+	
+<head>
+	<title>Funciones y variables para dynamics</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 3.9.1.648">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Maxima.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("Funcionesyvariablesparadynamics");
+			}
+		});
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>Funciones y variables para dynamics</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="dynamics.html">dynamics</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="dynamics.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Introduccinadynamics.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="eval_string.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<div><a name="DYNAMICS"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_48.html#SEC190"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparadynamics.html#SEC192"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_48.html#SEC186"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_50.html#SEC194"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h1 class="rvps2"><span class="rvts0"><span class="rvts8">49. dynamics</span></span></h1>
+<div><table border="0" cellpadding="1" cellspacing="0" style="border-width: 0px;">
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="Funcionesyvariablesparadynamics.html#SEC192">49.1 Introducción a dynamics</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="Funcionesyvariablesparadynamics.html#SEC193">49.2 Funciones y variables para dynamics</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height: 6px;"/>
+<div><a name="SEC191"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparadynamics.html#SEC191"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparadynamics.html#SEC193"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparadynamics.html#SEC191"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparadynamics.html#SEC191"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_50.html#SEC194"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">49.1 Introducción a dynamics</span></span></h2>
+<p class="rvps3"><span class="rvts6">El paquete adicional </span><span class="rvts9">dynamics</span><span class="rvts6"> incluye varias funciones para crear diversas representaciones gráficas de sistemas dinámicos y fractales, y además una implementación del método numérico de Runge-Kutta de cuarto orden, para resolver sistemas de ecuaciones diferenciales.</span></p>
+<p class="rvps3"><span class="rvts6">Para usar las funciones en este paquete será necesario primero que todo cargarlo con </span><span class="rvts9">load("dynamics")</span><span class="rvts6">, y las funciones que crean gráficas necesitan que Xmaxima esté instalado.</span></p>
+<hr style="height: 6px;"/>
+<div><a name="INTRODUCCI_00F3N-A-DYNAMICS"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparadynamics.html#SEC192"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_50.html#SEC194"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparadynamics.html#SEC191"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparadynamics.html#SEC191"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_50.html#SEC194"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">49.2 Funciones y variables para dynamics</span></span></h2>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC192"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">chaosgame</span><span class="rvts18"> (</span><span class="rvts19">[[</span><span class="rvts18">x1, y1</span><span class="rvts19">]</span><span class="rvts18">...</span><span class="rvts19">[</span><span class="rvts18">xm, ym</span><span class="rvts19">]]</span><span class="rvts18">, </span><span class="rvts19">[</span><span class="rvts18">x0, y0</span><span class="rvts19">]</span><span class="rvts18">, b, n, ...opciones...);</span></li>
+<li class="rvps3"><span class="rvts6">Usa el método llamado juego del caos, para producir fractales: se dibuja un punto inicial (</span><span class="rvts18">x0</span><span class="rvts6">, </span><span class="rvts18">y0</span><span class="rvts6">) y luego se elije aleatoriamente uno de los </span><span class="rvts18">m</span><span class="rvts6"> puntos </span><span class="rvts9">[</span><span class="rvts18">x1</span><span class="rvts6">, </span><span class="rvts18">y1</span><span class="rvts9">]</span><span class="rvts6">...</span><span class="rvts9">[</span><span class="rvts18">xm</span><span class="rvts6">, </span><span class="rvts18">ym</span><span class="rvts9">]</span><span class="rvts6">. Después se dibuja un nuevo punto que estará en el segmento entre el último punto dibujado y el punto que se acabó de elegir aleatoriamente, a una distancia del punto elegido que será </span><span class="rvts18">b</span><span class="rvts6"> veces la longitud del segmento. El proceso se repite </span><span class="rvts18">n</span><span class="rvts6"> veces.</span></li>
+<li><a name="FUNCIONES-Y-VARIABLES-PARA-DYNAMICS"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">evolution</span><span class="rvts18"> (F, y0, n,...opciones...);</span></li>
+<li class="rvps3"><span class="rvts6">Dibuja </span><span class="rvts18">n+1</span><span class="rvts6"> puntos en una gráfica bidimensional (serie de tiempo), en que las coordenadas horizontales de los puntos son los números enteros 0, 1, 2, ..., </span><span class="rvts18">n</span><span class="rvts6">, y las coordenadas verticales son los valores </span><span class="rvts18">y(n)</span><span class="rvts6"> correspondientes, obtenidos a partir de la relación de recurrencia</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp;y(n+1) = F(y(n))</span></p>
+<p class="rvps3"><span class="rvts6">Con valor inicial </span><span class="rvts18">y(0)</span><span class="rvts6"> igual a </span><span class="rvts18">y0</span><span class="rvts6">. </span><span class="rvts18">F</span><span class="rvts6"> deberá ser una expresión que dependa únicamente de la variable </span><span class="rvts18">y</span><span class="rvts6"> (y no de </span><span class="rvts18">n</span><span class="rvts6">), </span><span class="rvts18">y0</span><span class="rvts6"> deberá ser un número real y </span><span class="rvts18">n</span><span class="rvts6"> un número entero positivo.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC193"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">evolution2d</span><span class="rvts18"> (</span><span class="rvts19">[</span><span class="rvts18">F, G</span><span class="rvts19">]</span><span class="rvts18">, </span><span class="rvts19">[</span><span class="rvts18">x0, y0</span><span class="rvts19">]</span><span class="rvts18">, n, ...opciones...);</span></li>
+<li class="rvps3"><span class="rvts6">Muestra, en una gráfica bidimensional, los primeros </span><span class="rvts18">n+1</span><span class="rvts6"> puntos de la sucesión definida a partir del sistema dinámico discreto con relaciones de recurrencia:</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp;x(n+1) = F(x(n), y(n)) &nbsp; &nbsp;y(n+1) = G(x(n), y(n))</span></p>
+<p class="rvps3"><span class="rvts6">Con valores iniciales </span><span class="rvts18">x0</span><span class="rvts6"> y </span><span class="rvts18">y0</span><span class="rvts6">. </span><span class="rvts18">F</span><span class="rvts6"> y </span><span class="rvts18">G</span><span class="rvts6"> deben ser dos expresiones que dependan únicamente de </span><span class="rvts18">x</span><span class="rvts6"> y </span><span class="rvts18">y</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1819"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">ifs</span><span class="rvts18"> (</span><span class="rvts19">[</span><span class="rvts18">r1,...,rm</span><span class="rvts19">]</span><span class="rvts18">,</span><span class="rvts19">[</span><span class="rvts18">A1,...,Am</span><span class="rvts19">]</span><span class="rvts18">, </span><span class="rvts19">[[</span><span class="rvts18">x1,y1</span><span class="rvts19">]</span><span class="rvts18">...</span><span class="rvts19">[</span><span class="rvts18">xm, ym</span><span class="rvts19">]]</span><span class="rvts18">, </span><span class="rvts19">[</span><span class="rvts18">x0,y0</span><span class="rvts19">]</span><span class="rvts18">, n, ...opciones...);</span></li>
+<li class="rvps3"><span class="rvts6">Usa el método del Sistema de Funciones Iteradas (IFS, en inglés Iterated Function System). Ese método es semejante al método descrito en la función </span><span class="rvts9">chaosgame</span><span class="rvts6">, pero en vez de aproximar el último punto al punto elegido aleatoriamente, las dos coordenadas del último punto se multiplican por una matriz 2 por 2 </span><span class="rvts18">Ai</span><span class="rvts6"> correspondiente al punto que fue elegido aleatoriamente.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La selección aleatoria de uno de los </span><span class="rvts18">m</span><span class="rvts6"> puntos atractivos puede ser realizada con una función de probabilidad no uniforme, definida con los pesos </span><span class="rvts18">r1</span><span class="rvts6">,...,</span><span class="rvts18">rm</span><span class="rvts6">. Esos pesos deben ser dados en forma acumulada; por ejemplo, si se quieren 3 puntos con probabilidades 0.2, 0.5 y 0.3, los pesos </span><span class="rvts18">r1</span><span class="rvts6">, </span><span class="rvts18">r2</span><span class="rvts6"> y </span><span class="rvts18">r3</span><span class="rvts6"> podrían ser 2, 7 y 10, o cualquier otro grupo de números que tengan la misma proporción.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1820"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">julia</span><span class="rvts18"> (x, y, ...opciones...)</span></li>
+<li class="rvps3"><span class="rvts6">Crea un fichero gráfico con la representación del conjunto de Julia del número complejo (</span><span class="rvts18">x</span><span class="rvts6"> + i </span><span class="rvts18">y</span><span class="rvts6">). Los parámetros </span><span class="rvts18">x</span><span class="rvts6"> y </span><span class="rvts18">y</span><span class="rvts6"> deben ser reales. El fichero se crea en el directório actual o en el directório del usuario, usando el formato gráfico XPM. El programa puede demorar varios segundos a ser ejecutado y cuando termina imprime un mensaje con el nombre del fichero creado.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Se asignan diferentes colores a los puntos que no pertenecen al conjunto de Julia, de acuerdo con el número de iteraciones que demore la secuencia, comenzando en ese punto, a salir fuera del círculo de convergencia con radio 2. El número máximo de iteraciones se define con la opción </span><span class="rvts18">levels</span><span class="rvts6">; después de ejecutadas ese número de iteraciones, si la secuencia aun está dentro del círculo de convergencia, el punto será coloreado con el color definido por la opción </span><span class="rvts18">color</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Todos los colores usados para los puntos que no pertenecen al conjunto de Julia tendrán los mismos valores de saturación (</span><span class="rvts18">saturation</span><span class="rvts6">) y valor (</span><span class="rvts18">value</span><span class="rvts6">), pero con diferentes ángulos de tonalidad, distribuidos uniformemente en el intervalo entre </span><span class="rvts18">hue</span><span class="rvts6"> y (</span><span class="rvts18">hue</span><span class="rvts6"> + </span><span class="rvts18">huerange</span><span class="rvts6">).</span></p>
+<p class="rvps3"><span class="rvts6">Se puede dar a la función una secuencia de opciones. La lista de posibles opciones aparece en una sección más al frente.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1821"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">mandelbrot</span><span class="rvts18"> (options)</span></li>
+<li class="rvps3"><span class="rvts6">Crea un fichero gráfico con la representación del conjunto de Mandelbrot. El fichero se crea en el directório actual o en el directório del usuario, usando el formato gráfico XPM. El programa puede demorar varios segundos a ser ejecutado y cuando termina imprime un mensaje con el nombre del fichero creado.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Se asignan diferentes colores a los puntos que no pertenecen al conjunto de Mandelbrot, de acuerdo con el número de iteraciones que demore la secuencia generada por ese punto a salir fuera del círculo de convergencia con radio 2. El número máximo de iteraciones se define con la opción </span><span class="rvts18">levels</span><span class="rvts6">; después de ejecutadas ese número de iteraciones, si la secuencia aun está dentro del círculo de convergencia, el punto será coloreado con el color definido por la opción </span><span class="rvts18">color</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Todos los colores usados para los puntos que no pertenecen al conjunto de Mandelbrot tendrán los mismos valores de saturación (</span><span class="rvts18">saturation</span><span class="rvts6">) y valor (</span><span class="rvts18">value</span><span class="rvts6">), pero con diferentes ángulos de tonalidad, distribuidos uniformemente en el intervalo entre </span><span class="rvts18">hue</span><span class="rvts6"> y (</span><span class="rvts18">hue</span><span class="rvts6"> + </span><span class="rvts18">huerange</span><span class="rvts6">).</span></p>
+<p class="rvps3"><span class="rvts6">Se puede dar a la función una secuencia de opciones. La lista de posibles opciones aparece en una sección más al frente.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1822"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">orbits</span><span class="rvts18"> (F, y0, n1, n2, [x, x0, xf, xstep], ...opciones...);</span></li>
+<li class="rvps3"><span class="rvts6">Dibuja el diagrama de órbitas de una familia de sistemas dinámicos discretos unidimensionales, con un parámetro </span><span class="rvts18">x</span><span class="rvts6">; ese tipo de diagrama se usa para mostrar las bifurcaciones de un sistema discreto unidimensional.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts18">F(y)</span><span class="rvts6"> define una secuencia que comienza con un valor inicial </span><span class="rvts18">y0</span><span class="rvts6">, igual que en el caso de la función </span><span class="rvts9">evolution</span><span class="rvts6">, pero en este caso la función también dependerá del parámetro </span><span class="rvts18">x</span><span class="rvts6">, el cual tomará valores comprendidos en el intervalo de </span><span class="rvts18">x0</span><span class="rvts6"> a </span><span class="rvts18">xf</span><span class="rvts6">, con incrementos </span><span class="rvts18">xstep</span><span class="rvts6">. Cada valor usado para el parámetro </span><span class="rvts18">x</span><span class="rvts6"> se muestra en el eje horizontal. En el eje vertical se mostrarán </span><span class="rvts18">n2</span><span class="rvts6"> valores de la sucesión </span><span class="rvts18">y(n1+1)</span><span class="rvts6">,..., </span><span class="rvts18">y(n1+n2+1)</span><span class="rvts6">, obtenidos después de dejarla evolucionar durante </span><span class="rvts18">n1</span><span class="rvts6"> iteraciones iniciales.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1823"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">rk</span><span class="rvts18"> (EDO, var, inicial, dominio)</span></li>
+<li><a name="IDX1824"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">rk</span><span class="rvts18"> ([EDO1,...,EDOm], [v1,...,vm], [inic1,...,inicm], dominio)</span></li>
+<li class="rvps3"><span class="rvts6">La primera forma se usa para resolver numéricamente una ecuación diferencial ordinaria de primer orden (EDO), y la segunda forma resuelve numéricamente un sistema de </span><span class="rvts18">m</span><span class="rvts6"> de esas ecuaciones, usando el método de Runge-Kutta de cuarto orden. </span><span class="rvts18">var</span><span class="rvts6"> representa la variable dependiente. EDO debe ser una expresión que dependa únicamente de las variables independiente y dependente, y define la derivada de la variable dependiente en función de la variable independiente.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La variable independiente se representa con </span><span class="rvts18">dominio</span><span class="rvts6">, que debe ser una lista con cuatro elementos, como por ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">[t, 0, 10, 0.1]</span></p>
+<p class="rvps3"><span class="rvts6">el primer elemento de la lista identifica la variable independiente, el segundo y tercer elementos son los valores inicial y final para esa variable, y el último elemento da el valor de los incrementos que deberán ser usados dentro de ese intervalo.</span></p>
+<p class="rvps3"><span class="rvts6">Si se van a resolver </span><span class="rvts18">m</span><span class="rvts6"> ecuaciones, deberá haber </span><span class="rvts18">m</span><span class="rvts6"> variables dependientes </span><span class="rvts18">v1</span><span class="rvts6">, </span><span class="rvts18">v2</span><span class="rvts6">, ..., </span><span class="rvts18">vm</span><span class="rvts6">. Los valores iniciales para esas variables serán </span><span class="rvts18">inic1</span><span class="rvts6">, </span><span class="rvts18">inic2</span><span class="rvts6">, ..., </span><span class="rvts18">inicm</span><span class="rvts6">. Continuará existiendo apenas una variable independiente definida por la lista </span><span class="rvts18">domain</span><span class="rvts6">, como en el caso anterior. </span><span class="rvts18">EDO1</span><span class="rvts6">, ..., </span><span class="rvts18">EDOm</span><span class="rvts6"> son las expresiones que definen las derivadas de cada una de las variables dependientes en función de la variable independiente. Las únicas variables que pueden aparecer en cada una de esas expresiones son la variable independiente y cualquiera de las variables dependientes. Es importante que las derivadas </span><span class="rvts18">EDO1</span><span class="rvts6">, ..., </span><span class="rvts18">EDOm</span><span class="rvts6"> sean colocadas en la lista en el mismo orden en que fueron agrupadas las variables dependientes; por ejemplo, el tercer elemento de la lista será interpretado como la derivada de la tercera variable dependiente.</span></p>
+<p class="rvps3"><span class="rvts6">El programa intenta integrar las ecuaciones desde el valor inicial de la variable independiente, hasta el valor final, usando incrementos fijos. Si en algún paso una de las variables dependientes toma un valor absoluto muy grande, la integración será suspendida en ese punto. El resultado será una lista con un número de elementos igual al número de iteraciones realizadas. Cada elemento en la lista de resultados es también una lista con </span><span class="rvts18">m</span><span class="rvts6">+1 elementos: el valor de la variable independiente, seguido de los valores de las variables dependientes correspondientes a ese punto.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1825"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">staircase</span><span class="rvts18"> (F, y0, n, ...opciones...);</span></li>
+<li class="rvps3"><span class="rvts6">Dibuja un diagrama de escalera (o diagrama de red) para la sucesión definida por la ecuación de recurrencia</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp;y(n+1) = F(y(n))</span></p>
+<p class="rvps3"><span class="rvts6">La interpretación y valores permitidos de los parámetros de entrada es la misma que para la función </span><span class="rvts9">evolution</span><span class="rvts6">. Un diagrama de escalera consiste en una gráfica de la función </span><span class="rvts18">F(y)</span><span class="rvts6">, junto con la recta </span><span class="rvts18">G(y)</span><span class="rvts6"> </span><span class="rvts9">=</span><span class="rvts6"> </span><span class="rvts18">y</span><span class="rvts6">. Se comienza por dibujar un segmento vertical desde el punto (</span><span class="rvts18">y0</span><span class="rvts6">, </span><span class="rvts18">y0</span><span class="rvts6">) en la recta, hasta el punto de intersección con la función </span><span class="rvts18">F</span><span class="rvts6">. En seguida, desde ese punto se dibuja un segmento horizontal hasta el punto de intersección con la recta, (</span><span class="rvts18">y1</span><span class="rvts6">, </span><span class="rvts18">y1</span><span class="rvts6">); el procedimiento se repite </span><span class="rvts18">n</span><span class="rvts6"> veces hasta alcanzar el punto (</span><span class="rvts18">yn</span><span class="rvts6">, </span><span class="rvts18">yn</span><span class="rvts6">).</span></p>
+<p class="rvps3"><span class="rvts17">Opciones</span></p>
+<p class="rvps3"><span class="rvts6">Cada opción es una lista con dos o más elementos. El primer elemento en la lista es el nombre de la opción y el resto consiste en los argumentos para esa opción.</span></p>
+<p class="rvps3"><span class="rvts6">Las opciones aceptadas por las funciones evolution, evolution2, staircase, orbits, ifs y chaosgame son las siguientes:</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">domain</span><span class="rvts6"> especifica los valores mínimo y máximo de la variable independiente para la gráfica de la función </span><span class="rvts18">F</span><span class="rvts6"> representada por </span><span class="rvts9">staircase</span><span class="rvts6">.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">pointsize</span><span class="rvts6"> define el radio de cada punto dibujado, en unidades de puntos. El valor por omisión es 1.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">xaxislabel</span><span class="rvts6"> es la etiqueta que se escribirá en el eje horizontal.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">xcenter</span><span class="rvts6"> es la coordenada x del punto que deberá aparecer en el centro de la gráfica. Esta opción no es usada por la función </span><span class="rvts9">orbits</span><span class="rvts6">.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">xradius</span><span class="rvts6"> es mitad de la longitud del intervalo de valores de x que será representado. Esta opción no es usada por la función </span><span class="rvts9">orbits</span><span class="rvts6">.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">yaxislabel</span><span class="rvts6"> es la etiqueta que se escribirá en el eje vertical.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">ycenter</span><span class="rvts6"> es la coordenada y del punto que deberá aparecer en el centro de la gráfica.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">yradius</span><span class="rvts6"> es mitad de la longitud del intervalo de valores de y que será representado.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Las opciones aceptadas por los programas julia y mandelbrot son las siguientes:</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">size</span><span class="rvts6"> acepta uno o dos argumentos. Si se da solo un argumento, el ancho y la altura del fichero gráfico creado serán iguales a ese valor en pixels. Si se dan dos argumentos, esos dos valores serán usados para el ancho y la altura. El valor por omisión es 400 pixels tanto para el ancho como para la altura. Si los dos valores no son iguales, el conjunto aparecerá distorcionado.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">levels</span><span class="rvts6"> define el número máximo de iteraciones, que es también el número de colores usado para los puntos que no pertenecem al conjunto. El valor por omisión es 12; valores mayores implican tiempos de procesamiento más elevados.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">huerange</span><span class="rvts6"> define el intervalo de ángulos usados para la tonalidad de los puntos que no pertenecen al conjunto. El valor por omisión es 360, que hace que los colores usados abarcarán todo el rango de tonalidades. Valores mayores que 360 implican repetición de algunos valores de la tonalidad, y pueden usarse valores negativos para que el ángulo de tonalidad sea menor a medida que el número de iteraciones aumente.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">hue</span><span class="rvts6"> define la tonalidad, en grados, del primer color usado para representar los puntos que no pertenecen al conjunto. Su valor por omisión es 300 grados, que corresponde al color magenta; el color correspondiente para otros valores estandar es rojo 0, naranja 45, amarillo 60, verde 120, cian 180 y azul 240. Consulte también la opción </span><span class="rvts18">huerange</span><span class="rvts6">.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">saturation</span><span class="rvts6"> define el nivel de saturación que será usado para los colores de los puntos que no pertenecen al conjunto. Debe ser un valor entre 0 y 1. El valor por omisión es 0.46.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">value</span><span class="rvts6"> define el valor de los colores usados para puntos que no pertenezcan al conjunto. Debe estar comprendido entre 0 y 1; cuanto mayor sea, mas brilhantes serán los colores. Su valor por omisión es 0.96.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">color</span><span class="rvts6"> debe ir seguido de tres parámetros que definen la tonalidad, saturación y valor del color que será usado para los puntos del conjunto. El valor por omisión es 0 para los tres parámetros, que corresponde al negro. Consulte las explicación sobre el rango de valores aceptados en la explicación de las opciones </span><span class="rvts18">hue</span><span class="rvts6">, </span><span class="rvts18">saturation</span><span class="rvts6"> y </span><span class="rvts18">value</span><span class="rvts6">.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">center</span><span class="rvts6"> deberá tener dos parámetros reales que dan las coordenadas, en el plano complejo, del punto en el centro de la región representada. El valor por omisión es 0 para las dos coordenadas (el origen).</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">radius</span><span class="rvts6"> es el radio de el mayor círculo que cabe dentro de la región quadrada que será representada. El valor por omisión es 2.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">filename</span><span class="rvts6"> da el nombre del fichero donde se guardará la gráfica producida. A ese nombre se le acrecentará la terminación .xpm. Si el fichero ya existe, será substituido por el fichero producido por la función. El valor por omisión es julia para el conjunto de Julia y mandelbrot para el conjunto de Mandelbrot.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts17">Ejemplos</span></p>
+<p class="rvps3"><span class="rvts6">Representación gráfica y diagrama de escalera de la secuencia: 2, cos(2), cos(cos(2)),...</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load("dynamics")$</span><br/><span class="rvts9">(%i2) evolution(cos(y), 2, 11, [yaxislabel, "y"], [xaxislabel,"n"]);</span><br/><span class="rvts9">(%i3) staircase(cos(y), 1, 11, [domain, 0, 1.2]);</span></p>
+<p class="rvps10"><img align="absbottom" alt="figures/dynamics1" src="lib/dynamics13.gif"/></p>
+<p class="rvps10"><img align="absbottom" alt="figures/dynamics2" src="lib/dynamics24.gif"/></p>
+<p class="rvps3"><span class="rvts6">Si su procesador es lento, tendrá que reducir el número de iteraciones usado en los ejemplos siguientes. Y el valor de </span><span class="rvts18">pointsize</span><span class="rvts6"> que da mejores resultados depende del monitor y de la resolución que use. Tendrá que experimentar con diferentes valores.</span></p>
+<p class="rvps3"><span class="rvts6">Diagrama de órbitas para el mapa cuadrático</span></p>
+<p class="rvps4"><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp;y(n+1) = x + y(n)^2</span></p>
+<p class="rvps4"><span class="rvts9">(%i4) orbits(y^2+x, 0, 50, 200, [x, -2, 0.25, 0.01], [pointsize, 0.9]);</span></p>
+<p class="rvps10"><img align="absbottom" alt="figures/dynamics3" src="lib/dynamics35.gif"/></p>
+<p class="rvps3"><span class="rvts6">Para ampliar la región alrededor de la bifurcación en la parte de abajo, cerca de x </span><span class="rvts9">=</span><span class="rvts6"> -1.25, use el comando:</span></p>
+<p class="rvps4"><span class="rvts9">(%i5) orbits(x+y^2, 0, 100, 400, [x,-1,-1.53,-0.001], [pointsize,0.9],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ycenter,-1.2], [yradius,0.4]);</span></p>
+<p class="rvps10"><img align="absbottom" alt="figures/dynamics4" src="lib/dynamics46.gif"/></p>
+<p class="rvps3"><span class="rvts6">Evolución de un sistema en dos dimensiones, que conduce a un fractal:</span></p>
+<p class="rvps4"><span class="rvts9">(%i6) f: 0.6*x*(1+2*x)+0.8*y*(x-1)-y^2-0.9$</span><br/><span class="rvts9">(%i7) g: 0.1*x*(1-6*x+4*y)+0.1*y*(1+9*y)-0.4$</span><br/><span class="rvts9">(%i8) evolution2d([f,g],[-0.5,0],50000,[pointsize,0.7]);</span></p>
+<p class="rvps10"><img align="absbottom" alt="figures/dynamics5" src="lib/dynamics57.gif"/></p>
+<p class="rvps3"><span class="rvts6">Y una ampliación de una pequeña región en el fractal:</span></p>
+<p class="rvps4"><span class="rvts9">(%i9) evolution2d([f,g],[-0.5,0],300000,[pointsize,0.7], [xcenter,-0.7],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ycenter,-0.3],[xradius,0.1],[yradius,0.1]);</span></p>
+<p class="rvps10"><img align="absbottom" alt="figures/dynamics6" src="lib/dynamics68.gif"/></p>
+<p class="rvps3"><span class="rvts6">Una gráfica del triangulo de Sierpinsky, obtenida con el juego del caos:</span></p>
+<p class="rvps4"><span class="rvts9">(%i9) chaosgame([[0, 0], [1, 0], [0.5, sqrt(3)/2]], [0.1, 0.1], 1/2,</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 30000, [pointsize,0.7]);</span></p>
+<p class="rvps10"><img align="absbottom" alt="figures/dynamics7" src="lib/dynamics79.gif"/></p>
+<p class="rvps3"><span class="rvts6">El helecho de Barnsley, obtenido con el Sistema de Funciones Iteradas:</span></p>
+<p class="rvps4"><span class="rvts9">(%i10) a1: matrix([0.85,0.04],[-0.04,0.85])$</span><br/><span class="rvts9">(%i11) a2: matrix([0.2,-0.26],[0.23,0.22])$</span><br/><span class="rvts9">(%i12) a3: matrix([-0.15,0.28],[0.26,0.24])$</span><br/><span class="rvts9">(%i13) a4: matrix([0,0],[0,0.16])$</span><br/><span class="rvts9">(%i14) p1: [0,1.6]$</span><br/><span class="rvts9">(%i15) p2: [0,1.6]$</span><br/><span class="rvts9">(%i16) p3: [0,0.44]$</span><br/><span class="rvts9">(%i17) p4: [0,0]$</span><br/><span class="rvts9">(%i18) w: [85,92,99,100]$</span><br/><span class="rvts9">(%i19) ifs(w,[a1,a2,a3,a4],[p1,p2,p3,p4],[5,0],50000,[pointsize,0.9]);</span></p>
+<p class="rvps10"><img align="absbottom" alt="figures/dynamics8" src="lib/dynamics810.gif"/></p>
+<p class="rvps3"><span class="rvts6">Para crear un fichero llamado </span><span class="rvts18">dinamica9.xpm</span><span class="rvts6"> con la representación gráfica del conjunto de Mandelbrot, con 12 colores, use el comando:</span></p>
+<p class="rvps4"><span class="rvts9">mandelbrot([filename,"dinamica9"])$</span></p>
+<p class="rvps10"><img align="absbottom" alt="figures/dynamics9" src="lib/dynamics911.gif"/></p>
+<p class="rvps3"><span class="rvts6">y el conjunto de Julia del número (-0.55 + i 0.6) puede ser obtenido con:</span></p>
+<p class="rvps4"><span class="rvts9">julia(-0.55, 0.6, [levels, 36], [center, 0, 0.6], [radius, 0.3],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[hue, 240], [huerange, -180], [filename, "dinamica10"])$</span></p>
+<p class="rvps3"><span class="rvts6">la gráfica se guardará en el fichero </span><span class="rvts18">dinamica10.xpm</span><span class="rvts6"> y mostrará la región desde -0.3 hasta 0.3 en la dirección x, y desde 0.3 hasta 0.9 en la dirección y. Serán usados 36 colores, comenzando con azul e terminando con amarillo.</span></p>
+<p class="rvps10"><img align="absbottom" alt="figures/dynamics10" src="lib/dynamics1012.gif"/></p>
+<p class="rvps3"><span class="rvts6">Para resolver numéricamente la ecuación diferencial</span></p>
+<p class="rvps4"><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;dx/dt = t - x^2</span></p>
+<p class="rvps3"><span class="rvts6">Con valor inicial x(t=0) = 1, en el intervalo de t desde 0 hasta 8, y con incrementos de 0.1, se usa:</span></p>
+<p class="rvps4"><span class="rvts9">(%i20) resultados: rk(t-x^2,x,1,[t,0,8,0.1])$</span></p>
+<p class="rvps3"><span class="rvts6">los resultados quedarán guardados en la lista resultados.</span></p>
+<p class="rvps3"><span class="rvts6">Para resolver numéricamente el sistema:</span></p>
+<p class="rvps4"><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp;dx/dt = 4-x^2-4*y^2 &nbsp; &nbsp; dy/dt = y^2-x^2+1</span></p>
+<p class="rvps3"><span class="rvts6">para t entre 0 y 4, con valores iniciales -1.25 y 0.75 para (x, y) en t=0:</span></p>
+<p class="rvps4"><span class="rvts9">(%i21) sol: rk([4-x^2-4*y^2,y^2-x^2+1],[x,y],[-1.25,0.75],[t,0,4,0.02])$</span></p>
+<hr style="height: 6px;"/>
+<div><table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparadynamics.html#SEC191"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_50.html#SEC194"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps3"><span class="rvts10">This document was generated by </span><span class="rvts11">Robert Dodier</span><span class="rvts10"> on </span><span class="rvts11">agosto, 25 2007</span><span class="rvts10"> using </span><a class="rvts12" href="http://texi2html.cvshome.org/">texi2html 1.76</a><span class="rvts10">.</span></p>
+<p></p>
+<p class="rvps6"><span class="rvts13">Created with the Personal Edition of HelpNDoc: </span><a class="rvts14" href="http://www.helpndoc.com/feature-tour">Easily create CHM Help documents</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				http://maxima.sourceforge.net</div>
+		</div>
+	</body>
+	
+</html>
+

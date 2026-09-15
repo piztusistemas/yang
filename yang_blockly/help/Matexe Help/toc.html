@@ -1,0 +1,507 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+	<title>MATEXE- Table of Contents</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 3.9.1.648">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/silver-theme/jquery-ui-1.8.12.custom.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/dynatree/chm/ui.dynatree.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+    <link type="text/css" rel="stylesheet" media="all" href="css/toc.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#tabs .ui-widget-header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/jquery.dynatree.min.js"></script>
+	<script type="text/javascript" src="js/hndjsse.js"></script>
+
+<script type="text/javascript" src="js/searchdata.js"></script>
+
+
+	<script type="text/javascript">
+	
+		var bSearchDataLoaded = true;
+		var sHelpIdToActivate = '';
+	
+		$(document).ready(function()
+		{
+			var sAnchorName = '';
+			try { sAnchorName = top.location.href.substring(top.location.href.lastIndexOf("#") + 1, top.location.href.length); }
+			catch(err) { sAnchorName = ''; }
+			var nSelectedTab = 0;
+			if (sAnchorName == '_index') nSelectedTab = 1
+			else if (sAnchorName == '_search') nSelectedTab = 2;			
+			$("#tabs").tabs({
+				selected: nSelectedTab,
+				select: function(event, ui) { HideKwPopup(); }
+			});
+			
+			// Toc
+			if ($("#tab-toc").length) {
+				$("#tab-toc").dynatree({
+					clickFolderMode: 1,
+					debugLevel: 0,
+					imagePath: 'css/dynatree/chm/',
+					onActivate: function(node){
+						if ($("#tab-keywords").length && $("#tab-keywords").dynatree && $("#tab-keywords").dynatree("getTree") && $("#tab-keywords").dynatree("getTree").activateKey)
+							$("#tab-keywords").dynatree("getTree").activateKey(null);
+						if(node.data.href && node.data.href != '#'){
+							window.open(node.data.href, node.data.target);
+						}
+					}
+				});
+				// Expand all nodes if required
+				$("#tab-toc").dynatree("getRoot").visit(function(node){
+						node.expand(true);
+					});
+				// Select the active help id
+				if (sHelpIdToActivate != '') $("#tab-toc").dynatree("getTree").activateKey(sHelpIdToActivate);
+			}
+			
+			// Keywords
+			
+			if ($("#tab-keywords").length) {
+				$("#tab-keywords").dynatree({
+					clickFolderMode: 1,
+					debugLevel: 0,
+					imagePath: 'css/dynatree/chm/',
+					onClick: function(node, event){
+						HideKwPopup();
+						if (node.data && node.data.click)
+						{
+							var aRefList = null;
+							eval('aRefList=' + node.data.click);
+							if (ShowKwPopup(node.li, aRefList))
+							{
+								if ($("#tab-toc") && $("#tab-toc").dynatree && $("#tab-toc").dynatree("getTree") && $("#tab-toc").dynatree("getTree").activateKey)
+									$("#tab-toc").dynatree("getTree").activateKey(null);
+								if(node.data.href && node.data.href != '#'){
+									window.open(node.data.href, node.data.target);
+								}
+							}
+						}
+					}
+				});
+				// Expand all nodes if required
+				$("#tab-keywords").dynatree("getRoot").visit(function(node){
+						node.expand(true);
+					});
+				}
+			
+			// Load search data
+			$.getScript("js/searchdata.js",	function() {
+				bSearchDataLoaded = true;
+			});
+		});
+		
+		$('body').click(function() {
+			HideKwPopup();
+		});
+		
+		function SelectTocItem(sHelpId)
+		{
+			if ($("#tab-toc").length && $("#tab-toc").dynatree && $("#tab-toc").dynatree("getTree") && $("#tab-toc").dynatree("getTree").getNodeByKey) {
+				$("#tab-toc").dynatree("getTree").getNodeByKey(sHelpId).activateSilently();
+			}
+			else {
+				sHelpIdToActivate = sHelpId;
+			}
+		}
+		
+		function HideKwPopup()
+		{
+			if($("#popupMenu")) $("#popupMenu").remove();
+		}
+		
+		function ShowKwPopup(oSender, aLinks)
+		{
+			HideKwPopup();
+			if (!aLinks || !aLinks.length || aLinks.length == 0) return false
+			else if (aLinks.length == 1) return true
+			else
+			{
+				var oParentDiv = document.createElement("DIV");
+				oParentDiv.id = "popupMenu";
+				var oLink = null;
+				// Close button
+				oLink = document.createElement("SPAN");
+				oLink.className = "close-button";
+				oLink.innerHTML = "X";
+				oLink.href = "#";
+				oLink.onclick = HideKwPopup;
+				oParentDiv.appendChild(oLink);
+				// Items
+				for (var nCnt=0; nCnt<aLinks.length; nCnt++)
+				{
+					oLink = document.createElement("A");
+					oLink.innerHTML = aLinks[nCnt][0];
+					oLink.href = aLinks[nCnt][1];
+					oLink.target = "FrameMain";
+					oLink.onclick = HideKwPopup;
+					oParentDiv.appendChild(oLink);
+				}
+				document.body.appendChild(oParentDiv);
+				var pos = $(oSender).offset(); 
+				var height = $(oSender).height();
+				$(oParentDiv).css({
+					"left": (pos.left+20) + "px",
+					"top": (pos.top + height + 5) + "px"
+				});
+				$(oParentDiv).show();
+				return false;
+			}
+		}
+		
+		function PerformSearch()
+		{
+			sValue = $("#search_value").val();
+			$("#search_results").html('Searching...');
+			var oSearchEngine = new HndJsSe;
+			oSearchEngine.ParseInput(sValue);			
+			oSearchEngine.PerformSearch();
+			if (!oSearchEngine.aResults || !oSearchEngine.aResults.length)
+			{
+				$("#search_results").html('No results found.');
+			}
+			else
+			{
+				$("#search_results").html('<div id="search_results_content"></div>');
+				var oUl = $("#search_results_content").append("<ul id='lr'></ul>").find("ul");
+				for (var nCnt = 0; nCnt < oSearchEngine.aResults.length; nCnt++)
+				{
+					if (oSearchEngine.aResults[nCnt] < aTl.length)
+					{
+						oUl.append("<li><a href='" + aTl[oSearchEngine.aResults[nCnt]][0] + "?search=" + escape(sValue) + "' target='FrameMain'>" + unescape(aTl[oSearchEngine.aResults[nCnt]][1]) + "</a></li>");
+					}
+				}
+				// Tree
+				$("#search_results_content").dynatree({
+					clickFolderMode: 1,
+					debugLevel: 0,
+					imagePath: 'css/dynatree/chm/',
+					onActivate: function(node){
+						if ($("#search_results_content") && $("#search_results_content").dynatree && $("#search_results_content").dynatree("getTree") && $("#search_results_content").dynatree("getTree").activateKey)
+							$("#search_results_content").dynatree("getTree").activateKey(null);
+						if(node.data.href && node.data.href != '#'){
+							window.open(node.data.href, node.data.target);
+						}
+					}
+				});
+			}
+		}
+	</script>
+
+
+<script>
+/****************************** ACTUALIZADO GERMAN **************************/
+
+function getUrlVars(url) {
+//getUrlVars()["id"];
+    var vars = {};
+    var parts = url.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+
+
+function buscar(){
+var url;
+
+//Obtiene window.parent.location. Esto es necesario en Chrome modo local.
+//Se debe incluir en index.html:
+//  localStorage.window_location_chrome = window.location;
+if(typeof(Storage)!=="undefined")
+  {
+  url = localStorage.window_location_chrome;
+} else {
+  url= window.parent.location; 
+}
+
+//alert(getUrlVars(url)["search"]);
+
+var var_search = '';
+var_search=getUrlVars(url)["search"];
+if (var_search !== undefined) {
+	$("#search_value").val(var_search);
+
+	PerformSearch();
+
+	$("#tabs").tabs({
+		selected: 2,
+		select: function(event, ui) { HideKwPopup(); }
+	});
+	$("#search_results_content").dynatree("getTree").getRoot().getChildren()[0].activate();
+}
+}
+
+/****************************** ACTUALIZADO GERMAN **************************/
+
+</script>
+
+
+</head>
+
+
+<body onload='buscar();'>
+
+	<div id="tabs">
+		<ul>
+			<li><a href="#tab-toc">Contents</a></li>
+			<li><a href="#tab-keywords">Index</a></li>
+			<li><a href="#tab-search">Search</a></li>
+			</ul>
+		<div id="tab-toc">
+			<ul id="toc" class="">
+
+				<li class="folder" id="AyudaMatexe" data="">
+							<a
+							href="AyudaMatexe.html"
+							target="FrameMain">
+								Ayuda Matexe</a>
+
+				<ul><li class="" id="1Introducin" data="icon: '1.png'">
+							<a
+							href="1Introducin.html"
+							target="FrameMain">
+								 1. Introduci&oacute;n</a>
+
+				</li><li class="folder" id="2Instalacin" data="">
+							<a
+							href="2Instalacin.html"
+							target="FrameMain">
+								 2. Instalaci&oacute;n</a>
+
+				<ul><li class="" id="ProblemasconlainstalacindeMatexe" data="">
+							<a
+							href="ProblemasconlainstalacindeMatexe.html"
+							target="FrameMain">
+								Problemas con la instalaci&oacute;n de Matexe</a>
+
+				</li></ul></li><li class="folder" id="3EllenguajeMatexe" data="">
+							<a
+							href="3EllenguajeMatexe.html"
+							target="FrameMain">
+								 3. El lenguaje Matexe</a>
+
+				<ul><li class="" id="31LaetiquetaEVAL" data="">
+							<a
+							href="31LaetiquetaEVAL.html"
+							target="FrameMain">
+								 3.1. La etiqueta EVAL</a>
+
+				</li><li class="" id="32LaetiquetaMAT" data="">
+							<a
+							href="32LaetiquetaMAT.html"
+							target="FrameMain">
+								 3.2. La etiqueta MAT</a>
+
+				</li><li class="" id="33LaetiquetaHIDE" data="">
+							<a
+							href="33LaetiquetaHIDE.html"
+							target="FrameMain">
+								 3.3. La etiqueta HIDE</a>
+
+				</li><li class="" id="34LaetiquetaPLOT" data="">
+							<a
+							href="34LaetiquetaPLOT.html"
+							target="FrameMain">
+								 3.4. La etiqueta PLOT</a>
+
+				</li><li class="" id="35LaetiquetaTEX" data="">
+							<a
+							href="35LaetiquetaTEX.html"
+							target="FrameMain">
+								 3.5. La etiqueta TEX</a>
+
+				</li><li class="" id="36LaetiquetaFILE" data="">
+							<a
+							href="36LaetiquetaFILE.html"
+							target="FrameMain">
+								 3.6. La etiqueta FILE</a>
+
+				</li></ul></li><li class="" id="4Diseodedocumentos" data="icon: '1.png'">
+							<a
+							href="4Diseodedocumentos.html"
+							target="FrameMain">
+								 4. Dise&ntilde;o de documentos</a>
+
+				</li><li class="folder" id="5Interfazdeusuario" data="">
+							<a
+							href="5Interfazdeusuario.html"
+							target="FrameMain">
+								 5. Interfaz de usuario</a>
+
+				<ul><li class="" id="51Cuadrodedilogodeopciones" data="">
+							<a
+							href="51Cuadrodedilogodeopciones.html"
+							target="FrameMain">
+								 5.1 Cuadro de di&aacute;logo de opciones</a>
+
+				</li><li class="" id="52Mensdelprograma" data="">
+							<a
+							href="52Mensdelprograma.html"
+							target="FrameMain">
+								 5.2 Men&uacute;s del programa</a>
+
+				</li><li class="" id="53Atajosdeteclado" data="">
+							<a
+							href="53Atajosdeteclado.html"
+							target="FrameMain">
+								 5.3 Atajos de teclado</a>
+
+				</li></ul></li><li class="folder" id="6ComponentesdeMatexe" data="">
+							<a
+							href="6ComponentesdeMatexe.html"
+							target="FrameMain">
+								 6. Componentes de Matexe</a>
+
+				<ul><li class="" id="61DiseointernodelprogramaMatexe" data="icon: '1.png'">
+							<a
+							href="61DiseointernodelprogramaMatexe.html"
+							target="FrameMain">
+								 6.1. Dise&ntilde;o interno del programa Matexe</a>
+
+				</li><li class="folder" id="62Maxima" data="">
+							<a
+							href="62Maxima.html"
+							target="FrameMain">
+								 6.2. Maxima</a>
+
+				<ul><li class="" id="621ReferenciarpidaMaxima" data="">
+							<a
+							href="621ReferenciarpidaMaxima.html"
+							target="FrameMain">
+								 6.2.1 Referencia r&aacute;pida Maxima</a>
+
+				</li><li class="" id="622MsinformacinMaxima" data="">
+							<a
+							href="622MsinformacinMaxima.html"
+							target="FrameMain">
+								 6.2.2. M&aacute;s informaci&oacute;n Maxima</a>
+
+				</li></ul></li><li class="" id="63jsMath" data="icon: '1.png'">
+							<a
+							href="63jsMath.html"
+							target="FrameMain">
+								 6.3. jsMath</a>
+
+				</li></ul></li><li class="folder" id="7Ejemplos" data="">
+							<a
+							href="7Ejemplos.html"
+							target="FrameMain">
+								 7. Ejemplos</a>
+
+				<ul><li class="" id="Undocumentosencillo" data="">
+							<a
+							href="Undocumentosencillo.html"
+							target="FrameMain">
+								Un documento sencillo</a>
+
+				</li><li class="" id="Documentoconvaloresgeneradosalea" data="">
+							<a
+							href="Documentoconvaloresgeneradosalea.html"
+							target="FrameMain">
+								Documento con valores generados aleatoriamente</a>
+
+				</li><li class="" id="Simplificacindeexpresionesalgebr" data="">
+							<a
+							href="Simplificacindeexpresionesalgebr.html"
+							target="FrameMain">
+								Simplificaci&oacute;n de expresiones algebraicas</a>
+
+				</li><li class="" id="Aproximacindevaloresdecimalesyre" data="">
+							<a
+							href="Aproximacindevaloresdecimalesyre.html"
+							target="FrameMain">
+								Aproximaci&oacute;n de valores decimales y redondeo.</a>
+
+				</li><li class="" id="Reordenartodosloselementosdeunal" data="">
+							<a
+							href="Reordenartodosloselementosdeunal.html"
+							target="FrameMain">
+								Reordenar todos los elementos de una lista al azar</a>
+
+				</li><li class="" id="Generargrficosdefunciones" data="">
+							<a
+							href="Generargrficosdefunciones.html"
+							target="FrameMain">
+								Generar gr&aacute;ficos de funciones</a>
+
+				</li><li class="" id="Generargrficosvectoriales" data="">
+							<a
+							href="Generargrficosvectoriales.html"
+							target="FrameMain">
+								Generar gr&aacute;ficos vectoriales</a>
+
+				</li><li class="" id="Incluirimgenesexternas" data="">
+							<a
+							href="Incluirimgenesexternas.html"
+							target="FrameMain">
+								Incluir im&aacute;genes externas</a>
+
+				</li><li class="" id="Basesdedatosdeejercicios" data="">
+							<a
+							href="Basesdedatosdeejercicios.html"
+							target="FrameMain">
+								Bases de datos de ejercicios</a>
+
+				</li></ul></li><li class="" id="8ReferenciarpidaHTML" data="icon: '1.png'">
+							<a
+							href="8ReferenciarpidaHTML.html"
+							target="FrameMain">
+								 8. Referencia r&aacute;pida HTML</a>
+
+				</li><li class="" id="9ReferenciarpidaLaTeX" data="icon: '1.png'">
+							<a
+							href="9ReferenciarpidaLaTeX.html"
+							target="FrameMain">
+								 9. Referencia r&aacute;pida LaTeX</a>
+
+				</li><li class="" id="Aplicaciones" data="icon: '1.png'">
+							<a
+							href="Aplicaciones.html"
+							target="FrameMain">
+								Aplicaciones</a>
+
+				</li></ul></li><li class="" id="Mxima" data="icon: '0.png'">
+							<a
+							href="Mxima.html"
+							target="FrameMain">
+								M&aacute;xima</a>
+
+				</li></ul>
+		</div>
+		
+		<div id="tab-keywords">
+			<ul id="keywords">
+
+				</ul>
+		</div>
+		
+		<div id="tab-search">
+			<form onsubmit="PerformSearch(); return false;">
+				<label for="search_value">Search:</label>
+				<input id="search_value" name="search_value"></input>
+				<input type="submit" value="Search"/>
+			</form>
+			<div id="search_results"></div>
+		</div>
+		
+		</div>
+    
+</body>
+
+</html>
+

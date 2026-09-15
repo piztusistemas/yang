@@ -1,0 +1,296 @@
+﻿<html>
+	
+<head>
+	<title>Introducci&oacute;n a lbfgs</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 3.9.1.648">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Maxima.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("Introduccinalbfgs");
+			}
+		});
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>Introducci&oacute;n a lbfgs</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="lbfgs.html">lbfgs</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="lbfgs.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="lbfgs.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Funcionesyvariablesparalbfgs.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<div><a name="LBFGS"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_55.html#SEC213"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Introduccinalbfgs.html#SEC215"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_55.html#SEC211"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_57.html#SEC217"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h1 class="rvps2"><span class="rvts0"><span class="rvts8">56. lbfgs</span></span></h1>
+<div><table border="0" cellpadding="1" cellspacing="0" style="border-width: 0px;">
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="Introduccinalbfgs.html#SEC215">56.1 Introducción a lbfgs</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="Introduccinalbfgs.html#SEC216">56.2 Funciones y variables para lbfgs</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height: 6px;"/>
+<div><a name="SEC214"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Introduccinalbfgs.html#SEC214"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Introduccinalbfgs.html#SEC216"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Introduccinalbfgs.html#SEC214"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Introduccinalbfgs.html#SEC214"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_57.html#SEC217"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">56.1 Introducción a lbfgs</span></span></h2>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">lbfgs</span><span class="rvts6"> implementa el llamado algoritmo L-BFGS [1] para resolver problemas de minimización sin restricciones mediante una técnica </span><span class="rvts18">cuasi-Newton con memoria limitada</span><span class="rvts6"> (BFGS). El término memoria limitada procede del hecho de que se almacena una aproximación de rango bajo de la inversa de la matriz hessiana, en lugar de la matriz completa. El programa fue originalmente escrito en Fortran [2] por Jorge Nocedal, incorporando algunas funciones escritas originalmente por Jorge J. Moré y David J. Thuente, traducidas posteriormente a Lisp automáticamente con el programa </span><span class="rvts9">f2cl</span><span class="rvts6">. El paquete </span><span class="rvts9">lbfgs</span><span class="rvts6"> contiene el código traducido, junto con una función interfaz que para controlar ciertos detalles.</span></p>
+<p class="rvps3"><span class="rvts6">Referencias:</span></p>
+<p class="rvps3"><span class="rvts6">[1] D. Liu and J. Nocedal. "On the limited memory BFGS method for large scale optimization". </span><span class="rvts18">Mathematical Programming B</span><span class="rvts6"> 45:503-528 (1989)</span></p>
+<p class="rvps3"><span class="rvts6">[2] </span><a class="rvts7" href="http://netlib.org/opt/lbfgs_um.shar">http://netlib.org/opt/lbfgs_um.shar</a></p>
+<hr style="height: 6px;"/>
+<div><a name="INTRODUCCI_00F3N-A-LBFGS"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Introduccinalbfgs.html#SEC215"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_57.html#SEC217"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Introduccinalbfgs.html#SEC214"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Introduccinalbfgs.html#SEC214"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_57.html#SEC217"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">56.2 Funciones y variables para lbfgs</span></span></h2>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC215"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">lbfgs</span><span class="rvts18"> (FOM, X, X0, epsilon, iprint)</span></li>
+<li class="rvps3"><span class="rvts6">Encuentra una solución aproximada para el problema de minimización sin restricciones de la función objetivo </span><span class="rvts18">FOM</span><span class="rvts6"> para la lista de variables </span><span class="rvts18">X</span><span class="rvts6">, partiendo de los estimadores iniciales </span><span class="rvts18">X0</span><span class="rvts6">, de tal manera que </span><span class="rvts18">norm grad FOM &lt; epsilon max(1, norm X)</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">El algoritmo utilizado es una técnica </span><span class="rvts18">cuasi-Newton con memoria limitada</span><span class="rvts6"> (BFGS) [1]. El término </span><span class="rvts18">memoria limitada</span><span class="rvts6"> procede del hecho de que se almacena una aproximación de rango bajo de la inversa de la matriz hessiana, en lugar de la matriz completa. Cada iteración del algoritmo es una búsqueda a lo largo de una recta, cuya dirección se calcula a partir de la matriz inversa aproximada del hessiano. La función objetivo decrece siempre tras cada búsqueda exitosa a lo largo de la recta; además, casi siempre decrece también el módulo del gradiente de la función.</span></p>
+<p class="rvps3"><span class="rvts6">El argumento </span><span class="rvts18">iprint</span><span class="rvts6"> controla los mensajes de progreso que envía la función </span><span class="rvts9">lbfgs</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li><span class="rvts9">iprint[1]</span></li>
+<li class="rvps3"><span class="rvts19">iprint</span><span class="rvts9">[1]</span><span class="rvts6"> controla la frecuencia con la que se emiten los mensajes.</span></li>
+<li><span class="rvts9">iprint[1] &lt; 0</span></li>
+<li class="rvps3"><span class="rvts6">No se envían mensajes.</span></li>
+<li><span class="rvts9">iprint[1] = 0</span></li>
+<li class="rvps3"><span class="rvts6">Mensajes únicamente en la primera y última iteraciones.</span></li>
+<li><span class="rvts9">iprint[1] &gt; 0</span></li>
+<li class="rvps3"><span class="rvts6">Imprime un mensaje cada </span><span class="rvts19">iprint</span><span class="rvts9">[1]</span><span class="rvts6"> iteraciones.</span></li>
+<li><span class="rvts9">iprint[2]</span></li>
+<li class="rvps3"><span class="rvts19">iprint</span><span class="rvts9">[2]</span><span class="rvts6"> controla la cantidad de información contenida en los mensajes.</span></li>
+<li><span class="rvts9">iprint[2] = 0</span></li>
+<li class="rvps3"><span class="rvts6">Imprime contador de iteraciones, número de evaluaciones de </span><span class="rvts18">FOM</span><span class="rvts6">, valor de </span><span class="rvts18">FOM</span><span class="rvts6">, módulo del gradiente de </span><span class="rvts18">FOM</span><span class="rvts6"> y amplitud del paso.</span></li>
+<li><span class="rvts9">iprint[2] = 1</span></li>
+<li class="rvps3"><span class="rvts6">Igual que </span><span class="rvts19">iprint</span><span class="rvts9">[2] = 0</span><span class="rvts6">, incluyendo </span><span class="rvts18">X0</span><span class="rvts6"> y el gradiente de </span><span class="rvts18">FOM</span><span class="rvts6"> evaluado en </span><span class="rvts18">X0</span><span class="rvts6">.</span></li>
+<li><span class="rvts9">iprint[2] = 2</span></li>
+<li class="rvps3"><span class="rvts6">Igual que </span><span class="rvts19">iprint</span><span class="rvts9">[2] = 1</span><span class="rvts6">, incluyendo los valores de </span><span class="rvts18">X</span><span class="rvts6"> en cada iteración.</span></li>
+<li><span class="rvts9">iprint[2] = 3</span></li>
+<li class="rvps3"><span class="rvts6">Igual que </span><span class="rvts19">iprint</span><span class="rvts9">[2] = 2</span><span class="rvts6">, incluyendo el gradiente de </span><span class="rvts18">FOM</span><span class="rvts6"> en cada iteración.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Las columnas devueltas por </span><span class="rvts9">lbfgs</span><span class="rvts6"> son las siguientes:</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li><span class="rvts9">I</span></li>
+<li class="rvps3"><span class="rvts6">Número de iteraciones. Se incremente tras cada búsqueda a lo largo de una recta.</span></li>
+<li><span class="rvts9">NFN</span></li>
+<li class="rvps3"><span class="rvts6">Número de evaluaciones de la función objetivo.</span></li>
+<li><span class="rvts9">FUNC</span></li>
+<li class="rvps3"><span class="rvts6">Valor de la función objetivo al final de cada iteración.</span></li>
+<li><span class="rvts9">GNORM</span></li>
+<li class="rvps3"><span class="rvts6">Módulo del gradiente de la función objetivo al final de cada iteración.</span></li>
+<li><span class="rvts9">STEPLENGTH</span></li>
+<li class="rvps3"><span class="rvts6">Un parámetro interno del algoritmo de búsqueda.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Para más información sobre el algoritmo se puede acudir a los comentarios en el código original en Fortran [2].</span></p>
+<p class="rvps3"><span class="rvts6">Véanse también </span><span class="rvts9">lbfgs_nfeval_max</span><span class="rvts6"> y </span><span class="rvts9">lbfgs_ncorrections</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Referencias:</span></p>
+<p class="rvps3"><span class="rvts6">[1] D. Liu and J. Nocedal. "On the limited memory BFGS method for large scale optimization". </span><span class="rvts18">Mathematical Programming B</span><span class="rvts6"> 45:503-528 (1989)</span></p>
+<p class="rvps3"><span class="rvts6">[2] </span><a class="rvts7" href="http://netlib.org/opt/lbfgs_um.shar">http://netlib.org/opt/lbfgs_um.shar</a></p>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps3"><span class="rvts6">La misma función objetivo utilizada por FGCOMPUTE en el programa sdrive.f del paquete LBFGS de Netlib. Nótese que las variables en cuestión están subindicadas. La función objetivo tiene un mínimo exacto igual a cero en </span><span class="rvts18">u[k] = 1</span><span class="rvts6">, para </span><span class="rvts18">k = 1, ..., 8</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (lbfgs);</span><br/><span class="rvts9">(%o1) &nbsp; /usr/share/maxima/5.10.0cvs/share/lbfgs/lbfgs.mac</span><br/><span class="rvts9">(%i2) t1[j] := 1 - u[j];</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; t1 &nbsp;:= 1 - u</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;j &nbsp; &nbsp; &nbsp; &nbsp; j</span><br/><span class="rvts9">(%i3) t2[j] := 10*(u[j + 1] - u[j]^2);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;t2 &nbsp;:= 10 (u &nbsp; &nbsp; &nbsp;- u )</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; j &nbsp; &nbsp; &nbsp; &nbsp; j + 1 &nbsp; &nbsp;j</span><br/><span class="rvts9">(%i4) n : 8;</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 8</span><br/><span class="rvts9">(%i5) FOM : sum (t1[2*j - 1]^2 + t2[2*j - 1]^2, j, 1, n/2);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9">(%o5) 100 (u &nbsp;- u ) &nbsp;+ (1 - u ) &nbsp;+ 100 (u &nbsp;- u ) &nbsp;+ (1 - u )</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;8 &nbsp; &nbsp;7 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 7 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 6 &nbsp; &nbsp;5 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 5</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp;+ 100 (u &nbsp;- u ) &nbsp;+ (1 - u ) &nbsp;+ 100 (u &nbsp;- u ) &nbsp;+ (1 - u )</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4 &nbsp; &nbsp;3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</span><br/><span class="rvts9">(%i6) lbfgs (FOM, '[u[1],u[2],u[3],u[4],u[5],u[6],u[7],u[8]],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; [-1.2, 1, -1.2, 1, -1.2, 1, -1.2, 1], 1e-3, [1, 0]);</span><br/><span class="rvts9">*************************************************</span><br/><span class="rvts9"> &nbsp;N= &nbsp; &nbsp;8 &nbsp; NUMBER OF CORRECTIONS=25</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; INITIAL VALUES</span><br/><span class="rvts9"> F= &nbsp;9.680000000000000D+01 &nbsp; GNORM= &nbsp;4.657353755084532D+02</span><br/><span class="rvts9">*************************************************</span></p>
+<p class="rvps4"><span class="rvts9"> I NFN &nbsp; FUNC &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;GNORM &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; STEPLENGTH</span><br/><span class="rvts9"> 1 &nbsp; 3 &nbsp; 1.651479526340304D+01 &nbsp; 4.324359291335977D+00 &nbsp; 7.926153934390631D-04</span><br/><span class="rvts9"> 2 &nbsp; 4 &nbsp; 1.650209316638371D+01 &nbsp; 3.575788161060007D+00 &nbsp; 1.000000000000000D+00</span><br/><span class="rvts9"> 3 &nbsp; 5 &nbsp; 1.645461701312851D+01 &nbsp; 6.230869903601577D+00 &nbsp; 1.000000000000000D+00 </span><br/><span class="rvts9"> 4 &nbsp; 6 &nbsp; 1.636867301275588D+01 &nbsp; 1.177589920974980D+01 &nbsp; 1.000000000000000D+00</span><br/><span class="rvts9"> 5 &nbsp; 7 &nbsp; 1.612153014409201D+01 &nbsp; 2.292797147151288D+01 &nbsp; 1.000000000000000D+00</span><br/><span class="rvts9"> 6 &nbsp; 8 &nbsp; 1.569118407390628D+01 &nbsp; 3.687447158775571D+01 &nbsp; 1.000000000000000D+00</span><br/><span class="rvts9"> 7 &nbsp; 9 &nbsp; 1.510361958398942D+01 &nbsp; 4.501931728123680D+01 &nbsp; 1.000000000000000D+00</span><br/><span class="rvts9"> 8 &nbsp;10 &nbsp; 1.391077875774294D+01 &nbsp; 4.526061463810632D+01 &nbsp; 1.000000000000000D+00</span><br/><span class="rvts9"> 9 &nbsp;11 &nbsp; 1.165625686278198D+01 &nbsp; 2.748348965356917D+01 &nbsp; 1.000000000000000D+00</span><br/><span class="rvts9">10 &nbsp;12 &nbsp; 9.859422687859137D+00 &nbsp; 2.111494974231644D+01 &nbsp; 1.000000000000000D+00</span><br/><span class="rvts9">11 &nbsp;13 &nbsp; 7.815442521732281D+00 &nbsp; 6.110762325766556D+00 &nbsp; 1.000000000000000D+00</span><br/><span class="rvts9">12 &nbsp;15 &nbsp; 7.346380905773160D+00 &nbsp; 2.165281166714631D+01 &nbsp; 1.285316401779533D-01</span><br/><span class="rvts9">13 &nbsp;16 &nbsp; 6.330460634066370D+00 &nbsp; 1.401220851762050D+01 &nbsp; 1.000000000000000D+00</span><br/><span class="rvts9">14 &nbsp;17 &nbsp; 5.238763939851439D+00 &nbsp; 1.702473787613255D+01 &nbsp; 1.000000000000000D+00</span><br/><span class="rvts9">15 &nbsp;18 &nbsp; 3.754016790406701D+00 &nbsp; 7.981845727704576D+00 &nbsp; 1.000000000000000D+00</span><br/><span class="rvts9">16 &nbsp;20 &nbsp; 3.001238402309352D+00 &nbsp; 3.925482944716691D+00 &nbsp; 2.333129631296807D-01</span><br/><span class="rvts9">17 &nbsp;22 &nbsp; 2.794390709718290D+00 &nbsp; 8.243329982546473D+00 &nbsp; 2.503577283782332D-01</span><br/><span class="rvts9">18 &nbsp;23 &nbsp; 2.563783562918759D+00 &nbsp; 1.035413426521790D+01 &nbsp; 1.000000000000000D+00</span><br/><span class="rvts9">19 &nbsp;24 &nbsp; 2.019429976377856D+00 &nbsp; 1.065187312346769D+01 &nbsp; 1.000000000000000D+00</span><br/><span class="rvts9">20 &nbsp;25 &nbsp; 1.428003167670903D+00 &nbsp; 2.475962450826961D+00 &nbsp; 1.000000000000000D+00</span><br/><span class="rvts9">21 &nbsp;27 &nbsp; 1.197874264861340D+00 &nbsp; 8.441707983493810D+00 &nbsp; 4.303451060808756D-01</span><br/><span class="rvts9">22 &nbsp;28 &nbsp; 9.023848941942773D-01 &nbsp; 1.113189216635162D+01 &nbsp; 1.000000000000000D+00</span><br/><span class="rvts9">23 &nbsp;29 &nbsp; 5.508226405863770D-01 &nbsp; 2.380830600326308D+00 &nbsp; 1.000000000000000D+00</span><br/><span class="rvts9">24 &nbsp;31 &nbsp; 3.902893258815567D-01 &nbsp; 5.625595816584421D+00 &nbsp; 4.834988416524465D-01</span><br/><span class="rvts9">25 &nbsp;32 &nbsp; 3.207542206990315D-01 &nbsp; 1.149444645416472D+01 &nbsp; 1.000000000000000D+00</span><br/><span class="rvts9">26 &nbsp;33 &nbsp; 1.874468266362791D-01 &nbsp; 3.632482152880997D+00 &nbsp; 1.000000000000000D+00</span><br/><span class="rvts9">27 &nbsp;34 &nbsp; 9.575763380706598D-02 &nbsp; 4.816497446154354D+00 &nbsp; 1.000000000000000D+00</span><br/><span class="rvts9">28 &nbsp;35 &nbsp; 4.085145107543406D-02 &nbsp; 2.087009350166495D+00 &nbsp; 1.000000000000000D+00</span><br/><span class="rvts9">29 &nbsp;36 &nbsp; 1.931106001379290D-02 &nbsp; 3.886818608498966D+00 &nbsp; 1.000000000000000D+00</span><br/><span class="rvts9">30 &nbsp;37 &nbsp; 6.894000721499670D-03 &nbsp; 3.198505796342214D+00 &nbsp; 1.000000000000000D+00</span><br/><span class="rvts9">31 &nbsp;38 &nbsp; 1.443296033051864D-03 &nbsp; 1.590265471025043D+00 &nbsp; 1.000000000000000D+00</span><br/><span class="rvts9">32 &nbsp;39 &nbsp; 1.571766603154336D-04 &nbsp; 3.098257063980634D-01 &nbsp; 1.000000000000000D+00</span><br/><span class="rvts9">33 &nbsp;40 &nbsp; 1.288011776581970D-05 &nbsp; 1.207784183577257D-02 &nbsp; 1.000000000000000D+00</span><br/><span class="rvts9">34 &nbsp;41 &nbsp; 1.806140173752971D-06 &nbsp; 4.587890233385193D-02 &nbsp; 1.000000000000000D+00</span><br/><span class="rvts9">35 &nbsp;42 &nbsp; 1.769004645459358D-07 &nbsp; 1.790537375052208D-02 &nbsp; 1.000000000000000D+00</span><br/><span class="rvts9">36 &nbsp;43 &nbsp; 3.312164100763217D-10 &nbsp; 6.782068426119681D-04 &nbsp; 1.000000000000000D+00</span></p>
+<p class="rvps4"><span class="rvts9"> THE MINIMIZATION TERMINATED WITHOUT DETECTING ERRORS.</span><br/><span class="rvts9"> IFLAG = 0</span><br/><span class="rvts9">(%o6) [u &nbsp;= 1.000005339815974, u &nbsp;= 1.000009942839805, </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9">u &nbsp;= 1.000005339815974, u &nbsp;= 1.000009942839805, </span><br/><span class="rvts9"> 3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4</span><br/><span class="rvts9">u &nbsp;= 1.000005339815974, u &nbsp;= 1.000009942839805, </span><br/><span class="rvts9"> 5 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 6</span><br/><span class="rvts9">u &nbsp;= 1.000005339815974, u &nbsp;= 1.000009942839805]</span><br/><span class="rvts9"> 7 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 8</span></p>
+<p class="rvps3"><span class="rvts6">Un problema de regresión. La función objetivo es el cuadrado medio de la diferencia entre la predicción </span><span class="rvts18">F(X[i])</span><span class="rvts6"> y el valor observado </span><span class="rvts18">Y[i]</span><span class="rvts6">. La función </span><span class="rvts18">F</span><span class="rvts6"> es monótona y acotada (llamada en ocasiones "sigmoidal"). En este ejemplo, </span><span class="rvts9">lbfgs</span><span class="rvts6"> calcula valores aproximados para los parámetros de </span><span class="rvts18">F</span><span class="rvts6"> y </span><span class="rvts9">plot2d</span><span class="rvts6"> hace una representación gráfica comparativa de </span><span class="rvts18">F</span><span class="rvts6"> junto con los datos observados.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (lbfgs);</span><br/><span class="rvts9">(%o1) &nbsp; /usr/share/maxima/5.10.0cvs/share/lbfgs/lbfgs.mac</span><br/><span class="rvts9">(%i2) FOM : '((1/length(X))*sum((F(X[i]) - Y[i])^2, i, 1,</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;length(X)));</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sum((F(X ) - Y ) , i, 1, length(X))</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; i &nbsp; &nbsp; i</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-----------------------------------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;length(X)</span><br/><span class="rvts9">(%i3) X : [1, 2, 3, 4, 5];</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[1, 2, 3, 4, 5]</span><br/><span class="rvts9">(%i4) Y : [0, 0.5, 1, 1.25, 1.5];</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[0, 0.5, 1, 1.25, 1.5]</span><br/><span class="rvts9">(%i5) F(x) := A/(1 + exp(-B*(x - C)));</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; A</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;F(x) := ----------------------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1 + exp((- B) (x - C))</span><br/><span class="rvts9">(%i6) ''FOM;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;A &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;A &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9">(%o6) ((----------------- - 1.5) &nbsp;+ (----------------- - 1.25)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- B (5 - C) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- B (4 - C)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp;%e &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+ 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;%e &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+ 1</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;A &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;A &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9"> + (----------------- - 1) &nbsp;+ (----------------- - 0.5)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;- B (3 - C) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- B (2 - C)</span><br/><span class="rvts9"> &nbsp; &nbsp;%e &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+ 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;%e &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+ 1</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;A</span><br/><span class="rvts9"> + --------------------)/5</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;- B (1 - C) &nbsp; &nbsp; 2</span><br/><span class="rvts9"> &nbsp; (%e &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+ 1)</span><br/><span class="rvts9">(%i7) estimates : lbfgs (FOM, '[A, B, C], [1, 1, 1], 1e-4, [1, 0]);</span><br/><span class="rvts9">*************************************************</span><br/><span class="rvts9"> &nbsp;N= &nbsp; &nbsp;3 &nbsp; NUMBER OF CORRECTIONS=25</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; INITIAL VALUES</span><br/><span class="rvts9"> F= &nbsp;1.348738534246918D-01 &nbsp; GNORM= &nbsp;2.000215531936760D-01</span><br/><span class="rvts9">*************************************************</span></p>
+<p class="rvps4"><span class="rvts9">I &nbsp;NFN &nbsp;FUNC &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;GNORM &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; STEPLENGTH</span><br/><span class="rvts9">1 &nbsp; &nbsp;3 &nbsp;1.177820636622582D-01 &nbsp; 9.893138394953992D-02 &nbsp; 8.554435968992371D-01 &nbsp;</span><br/><span class="rvts9">2 &nbsp; &nbsp;6 &nbsp;2.302653892214013D-02 &nbsp; 1.180098521565904D-01 &nbsp; 2.100000000000000D+01 &nbsp;</span><br/><span class="rvts9">3 &nbsp; &nbsp;8 &nbsp;1.496348495303005D-02 &nbsp; 9.611201567691633D-02 &nbsp; 5.257340567840707D-01 &nbsp;</span><br/><span class="rvts9">4 &nbsp; &nbsp;9 &nbsp;7.900460841091139D-03 &nbsp; 1.325041647391314D-02 &nbsp; 1.000000000000000D+00 &nbsp;</span><br/><span class="rvts9">5 &nbsp; 10 &nbsp;7.314495451266917D-03 &nbsp; 1.510670810312237D-02 &nbsp; 1.000000000000000D+00 &nbsp;</span><br/><span class="rvts9">6 &nbsp; 11 &nbsp;6.750147275936680D-03 &nbsp; 1.914964958023047D-02 &nbsp; 1.000000000000000D+00 &nbsp;</span><br/><span class="rvts9">7 &nbsp; 12 &nbsp;5.850716021108205D-03 &nbsp; 1.028089194579363D-02 &nbsp; 1.000000000000000D+00 &nbsp;</span><br/><span class="rvts9">8 &nbsp; 13 &nbsp;5.778664230657791D-03 &nbsp; 3.676866074530332D-04 &nbsp; 1.000000000000000D+00 &nbsp;</span><br/><span class="rvts9">9 &nbsp; 14 &nbsp;5.777818823650782D-03 &nbsp; 3.010740179797255D-04 &nbsp; 1.000000000000000D+00 &nbsp;</span></p>
+<p class="rvps4"><span class="rvts9"> THE MINIMIZATION TERMINATED WITHOUT DETECTING ERRORS.</span><br/><span class="rvts9"> IFLAG = 0</span><br/><span class="rvts9">(%o7) [A = 1.461933911464101, B = 1.601593973254802, </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; C = 2.528933072164854]</span><br/><span class="rvts9">(%i8) plot2d ([F(x), [discrete, X, Y]], [x, -1, 6]), ''estimates;</span><br/><span class="rvts9">(%o8) </span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="FUNCIONES-Y-VARIABLES-PARA-LBFGS"></a>
+<span class="rvts16">Variable:</span><span class="rvts6"> </span><span class="rvts17">lbfgs_nfeval_max</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: 100</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La variable </span><span class="rvts9">lbfgs_nfeval_max</span><span class="rvts6"> almacena el número máximo de evaluaciones de la función objetivo en </span><span class="rvts9">lbfgs</span><span class="rvts6">. Cuando se alcanza el valor </span><span class="rvts9">lbfgs_nfeval_max</span><span class="rvts6">, </span><span class="rvts9">lbfgs</span><span class="rvts6"> devuelve el resultado logrado en la última iteración exitosa.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC216"></a>
+<span class="rvts16">Variable:</span><span class="rvts6"> </span><span class="rvts17">lbfgs_ncorrections</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: 25</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La variable </span><span class="rvts9">lbfgs_ncorrections</span><span class="rvts6"> almacena el número de correcciones aplicadas a la matriz inversa aproximada del hessiano, la cual es gestionada por </span><span class="rvts9">lbfgs</span><span class="rvts6">.</span></p>
+<hr style="height: 6px;"/>
+<div><table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Introduccinalbfgs.html#SEC214"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_57.html#SEC217"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps3"><span class="rvts10">This document was generated by </span><span class="rvts11">Robert Dodier</span><span class="rvts10"> on </span><span class="rvts11">agosto, 25 2007</span><span class="rvts10"> using </span><a class="rvts12" href="http://texi2html.cvshome.org/">texi2html 1.76</a><span class="rvts10">.</span></p>
+<p></p>
+<p class="rvps6"><span class="rvts13">Created with the Personal Edition of HelpNDoc: </span><a class="rvts14" href="http://www.helpndoc.com">Free EBook and documentation generator</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				http://maxima.sourceforge.net</div>
+		</div>
+	</body>
+	
+</html>
+

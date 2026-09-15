@@ -1,0 +1,82 @@
+﻿<html>
+	
+<head>
+	<title>Generar gr&aacute;ficos vectoriales</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 3.9.1.648">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "MATEXE.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("Generargrficosvectoriales");
+			}
+		});
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>Generar gr&aacute;ficos vectoriales</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="AyudaMatexe.html">Ayuda Matexe</a> &rsaquo;&rsaquo; <a href="7Ejemplos.html"> 7. Ejemplos</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="7Ejemplos.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Generargrficosdefunciones.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Incluirimgenesexternas.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<h3 class="rvps10"><a name="NODO6"></a>
+<span class="rvts0"><span class="rvts26">Generar gráficos vectoriales</span></span></h3>
+<p class="rvps1"><span class="rvts26"><br/></span></p>
+<p><span class="rvts22">Puntos y vectores: &lt;HIDE&gt;vn0():=[z0(),z0()]&lt;/HIDE&gt; &lt;HIDE&gt;A:vn0();B:A+[2,n0()+1];C:vn0()&lt;/HIDE&gt; &lt;HIDE&gt;load(draw);inc:[0.5,0.5]&lt;/HIDE&gt;</span></p>
+<p><span class="rvts22"><br/></span></p>
+<p><span class="rvts26"> &lt;PLOT&gt;draw2d(grid=true,xrange = [-5,8], yrange = [-7,8], pic_width=320, pic_height=200, head_length = 0.5, head_type = 'empty, label_alignment=right, points([A,B]), &nbsp;vector(A,B-A), label(append(["A"],A-2*inc)), label(append(["B"],B+inc)), label(append(["AB"],(A+B)/2+inc)), label_alignment=left, points([C]), label(append(["C"],C+inc)) )&lt;/PLOT&gt;</span></p>
+<p><span class="rvts26"> </span></p>
+<p class="rvps1"><span class="rvts26"><br/></span></p>
+<p class="rvps1"><img align="absbottom" width="412" height="415" alt="image" src="lib/image039.jpg"/></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps1"><span class="rvts12"><br/></span></p>
+<p></p>
+<p class="rvps5"><span class="rvts9">Created with the Personal Edition of HelpNDoc: </span><a class="rvts10" href="http://www.helpndoc.com">Free EBook and documentation generator</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Matexe v.2013: http://matexe.sourceforge.net</div>
+		</div>
+	</body>
+	
+</html>
+

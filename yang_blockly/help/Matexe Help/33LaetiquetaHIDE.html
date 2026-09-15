@@ -1,0 +1,92 @@
+﻿<html>
+	
+<head>
+	<title> 3.3. La etiqueta HIDE</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 3.9.1.648">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "MATEXE.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("33LaetiquetaHIDE");
+			}
+		});
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1> 3.3. La etiqueta HIDE</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="AyudaMatexe.html">Ayuda Matexe</a> &rsaquo;&rsaquo; <a href="3EllenguajeMatexe.html"> 3. El lenguaje Matexe</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="3EllenguajeMatexe.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="32LaetiquetaMAT.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="34LaetiquetaPLOT.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<h2 class="rvps8"><a name="HIDE"></a>
+<img align="absbottom" width="24" height="24" alt="image" src="lib/image00910.jpg"/><span class="rvts0"><span class="rvts13">&nbsp;3.3. La etiqueta HIDE</span></span></h2>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps7"><span class="rvts13">Uso:</span></p>
+<p class="rvps7"><span class="rvts21">&lt;HIDE&gt;</span><span class="rvts12"> Expresión(es) en lenguaje Maxima </span><span class="rvts21">&lt;/HIDE&gt;</span></p>
+<p class="rvps7"><span class="rvts21">&lt;HIDE&gt;</span><span class="rvts12"> Variable: Expresión en lenguaje Maxima </span><span class="rvts21">&lt;/HIDE&gt;</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;Esta etiqueta evalúa y simplifica las expresiones incluidas. Se pueden incluir más de una expresión separadas por ; o $</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps7"><span class="rvts13">Ejemplos:</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p><span class="rvts21">&lt;HIDE&gt;</span><span class="rvts12">a:1; b:2; c:a+b</span><span class="rvts21">&lt;/HIDE&gt;</span><span class="rvts12"> no devuelve ningún resultado.</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps1"><img align="absbottom" width="359" height="201" alt="image" src="lib/image013.jpg"/></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps7"><span class="rvts13">Atajo:</span><span class="rvts12"> CONTROL + H</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps7"><span class="rvts13">Información adicional:</span><span class="rvts12"> Cuando en un </span><span class="rvts21">&lt;HIDE&gt;</span><span class="rvts12"> se asigna una expresión a una variable, se evalúa y simplifica previamente, por lo que cualquier alusión posterior a esa variable, mostrará el resultado evaluado y simplificado aunque se utilice la etiqueta </span><span class="rvts21">&lt;MAT&gt;</span><span class="rvts12"> para mostrarla.</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span><span class="rvts21">&lt;HIDE&gt;</span><span class="rvts12"> a: 1 + 1</span><span class="rvts21">&lt;/HIDE&gt;</span><span class="rvts12"> </span><span class="rvts21">&lt;MAT&gt;</span><span class="rvts12"> a </span><span class="rvts21">&lt;/MAT&gt;</span><span class="rvts12"> mostrará el valor 2 y no 1+1 aunque se trate de un </span><span class="rvts21">&lt;MAT&gt;</span><span class="rvts12">.</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p></p>
+<p class="rvps5"><span class="rvts9">Created with the Personal Edition of HelpNDoc: </span><a class="rvts10" href="http://www.helpndoc.com/feature-tour">Easily create Help documents</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Matexe v.2013: http://matexe.sourceforge.net</div>
+		</div>
+	</body>
+	
+</html>
+

@@ -1,0 +1,387 @@
+﻿<html>
+	
+<head>
+	<title>numericalio</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 3.9.1.648">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Maxima.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("numericalio");
+			}
+		});
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>numericalio</h1>
+				
+				</div>
+			<div id="topic_header_nav">
+				<a href="Funcionesyvariablesparamnewton.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Introduccinanumericalio.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<div><a name="NUMERICALIO"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_61.html#SEC227"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="numericalio.html#SEC229"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_61.html#SEC226"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_63.html#SEC233"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h1 class="rvps2"><span class="rvts0"><span class="rvts8">62. numericalio</span></span></h1>
+<div><table border="0" cellpadding="1" cellspacing="0" style="border-width: 0px;">
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="numericalio.html#SEC229">62.1 Introducción a numericalio</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="numericalio.html#SEC232">62.2 Funciones y variables para numericalio</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height: 6px;"/>
+<div><a name="SEC228"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="numericalio.html#SEC228"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="numericalio.html#SEC230"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="numericalio.html#SEC228"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="numericalio.html#SEC228"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_63.html#SEC233"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">62.1 Introducción a numericalio</span></span></h2>
+<p class="rvps3"><span class="rvts6">El paquete </span><span class="rvts9">numericalio</span><span class="rvts6"> define funciones para leer y escribir ficheros de datos y flujos.</span></p>
+<p class="rvps3"><span class="rvts6">Cada elemento a leer o escribir en un fichero debe ser necesariamente un átomo: un número entero, decimal, decimal grande, una cadena o un símbolo; no se admiten fracciones, números complejos o cualquier otra expresión no atómica. Estas funciones pueden llegar a realizar operaciones válidas con expresiones no atómicas, pero estos resultados no se documentan y están sujetos a cambios ulteriores.</span></p>
+<p class="rvps3"><span class="rvts6">Los átomos, tanto en los ficheros de entrada como en los de salida, tienen el mismo formato que en los ficheros por lotes de Maxima o en la consola interactiva. En particular, las cadenas deben encerrarse entre comillas dobles, la barra invertida </span><span class="rvts9">\</span><span class="rvts6"> evita cualquier interpretación especial del carácter siguiente, y el símbolo de interrogación </span><span class="rvts9">?</span><span class="rvts6"> se reconoce como el comienzo de un símbolo de Lisp. No se reconoce ningún carácter de continuación de línea interrumpida.</span></p>
+<p class="rvps3"><span class="rvts6">El argumento opcional </span><span class="rvts18">separator_flag</span><span class="rvts6">, común a todas las funciones de lectura y escritura, indica qué carácter será el utilizado para separar elementos.</span></p>
+<hr style="height: 6px;"/>
+<div><a name="INTRODUCCI_00F3N-A-NUMERICALIO"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="numericalio.html#SEC229"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="numericalio.html#SEC231"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="numericalio.html#SEC228"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="numericalio.html#SEC229"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_63.html#SEC233"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="rvps11"><span class="rvts0"><span class="rvts21">62.1.1 Separadores válidos para lectura</span></span></h3>
+<p class="rvps3"><span class="rvts6">Para la lectura de ficheros se reconocen los siguientes valores de la variable </span><span class="rvts18">separator_flag</span><span class="rvts6">: </span><span class="rvts9">comma</span><span class="rvts6"> para los valores separados por comas, </span><span class="rvts9">pipe</span><span class="rvts6"> para los valores separados por el carácter de la barra vertical </span><span class="rvts9">|</span><span class="rvts6">, </span><span class="rvts9">semicolon</span><span class="rvts6"> para los valores separados por punto y coma </span><span class="rvts9">;</span><span class="rvts6">, y </span><span class="rvts9">space</span><span class="rvts6"> para cuando los valores se separan por espacios o tabulaciones. Si el nombre del fichero tiene extensión </span><span class="rvts9">.csv</span><span class="rvts6"> y no se especifica el argumento </span><span class="rvts18">separator_flag</span><span class="rvts6">, se tomará por defecto </span><span class="rvts9">comma</span><span class="rvts6">. Si el fichero tiene cualquier otra extensión diferente de </span><span class="rvts9">.csv</span><span class="rvts6"> y no se especifica </span><span class="rvts9">separator_flag</span><span class="rvts6">, se usará por defecto </span><span class="rvts9">space</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">En la lectura, varios espacios y tabulaciones sucesivos cuentan como un único separador. Sin embargo, varias comas, barras verticales o punto y comas sucesivos se interpretan que tienen el símbolo </span><span class="rvts9">false</span><span class="rvts6"> entre ellos; por ejemplo, </span><span class="rvts9">1234,,Foo</span><span class="rvts6"> se interpreta lo mismo que si fuese </span><span class="rvts9">1234,false,Foo</span><span class="rvts6">. En la salida, los átomos </span><span class="rvts9">false</span><span class="rvts6"> deben escribirse explícitamente, por lo que la lista </span><span class="rvts9">[1234, false, Foo]</span><span class="rvts6"> debe escribirse </span><span class="rvts9">1234,false,Foo</span><span class="rvts6">.</span></p>
+<hr style="height: 6px;"/>
+<div><a name="SEC229"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="numericalio.html#SEC230"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="numericalio.html#SEC232"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="numericalio.html#SEC228"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="numericalio.html#SEC229"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_63.html#SEC233"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="rvps11"><span class="rvts0"><span class="rvts21">62.1.2 Separadores válidos para escritura</span></span></h3>
+<p class="rvps3"><span class="rvts6">Para la escritura, </span><span class="rvts9">tab</span><span class="rvts6">, para valores separados por tabuladores, se acepta como valor de </span><span class="rvts18">separator_flag</span><span class="rvts6">, así como </span><span class="rvts9">comma</span><span class="rvts6">, </span><span class="rvts9">pipe</span><span class="rvts6">, </span><span class="rvts9">semicolon</span><span class="rvts6"> y </span><span class="rvts9">space</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">En la escritura, el átomo</span><span class="rvts9">false</span><span class="rvts6"> se escribe tal cual y una lista </span><span class="rvts9">[1234, false, Foo]</span><span class="rvts6"> se escribe </span><span class="rvts9">1234,false,Foo</span><span class="rvts6">.</span></p>
+<hr style="height: 6px;"/>
+<div><a name="SEC230"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="numericalio.html#SEC231"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_63.html#SEC233"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="numericalio.html#SEC228"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="numericalio.html#SEC228"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_63.html#SEC233"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">62.2 Funciones y variables para numericalio</span></span></h2>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC231"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">read_matrix</span><span class="rvts18"> (file_name)</span></li>
+<li><a name="FUNCIONES-Y-VARIABLES-PARA-NUMERICALIO"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">read_matrix</span><span class="rvts18"> (file_name, separator_flag)</span></li>
+<li><a name="SEC232"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">read_matrix</span><span class="rvts18"> (S)</span></li>
+<li><a name="IDX1956"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">read_matrix</span><span class="rvts18"> (S, separator_flag)</span></li>
+<li class="rvps3"><span class="rvts6">Lee el fichero </span><span class="rvts18">file_name</span><span class="rvts6"> o el flujo </span><span class="rvts18">S</span><span class="rvts6"> y devuelve su contenido completo en forma de matriz. Si no se especifica </span><span class="rvts18">separator_flag</span><span class="rvts6">, se entiende que los valores están separados por espacios.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">read_matrix</span><span class="rvts6"> obtiene el tamaño de la matriz a partir de los datos de entrada. Cada línea del fichero forma una fila de la matriz. Si hay filas con diferente número de elementos, </span><span class="rvts9">read_matrix</span><span class="rvts6"> emite un mensaje de error.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1957"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">read_lisp_array</span><span class="rvts18"> (file_name, A)</span></li>
+<li><a name="IDX1958"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">read_lisp_array</span><span class="rvts18"> (file_name, A, separator_flag)</span></li>
+<li><a name="IDX1959"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">read_lisp_array</span><span class="rvts18"> (S, A)</span></li>
+<li><a name="IDX1960"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">read_lisp_array</span><span class="rvts18"> (S, A, separator_flag)</span></li>
+<li class="rvps3"><span class="rvts6">La función </span><span class="rvts9">read_lisp_array</span><span class="rvts6"> requiere que el arreglo sea declarado por </span><span class="rvts9">make_array</span><span class="rvts6"> antes de solicitar la lectura del fichero, lo cual evita la necesidad de calcular las dimensiones del arreglo, especialmente en el caso de arreglos multidimensionales.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">read_lisp_array</span><span class="rvts6"> no comprueba si el fichero de entrada es compatible con las dimensiones del arreglo; la entrada se lee como una lista para a continuación completar el arreglo con </span><span class="rvts9">fillarray</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1961"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">read_maxima_array</span><span class="rvts18"> (file_name, A)</span></li>
+<li><a name="IDX1962"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">read_maxima_array</span><span class="rvts18"> (file_name, A, separator_flag)</span></li>
+<li><a name="IDX1963"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">read_maxima_array</span><span class="rvts18"> (S, A)</span></li>
+<li><a name="IDX1964"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">read_maxima_array</span><span class="rvts18"> (S, A, separator_flag)</span></li>
+<li class="rvps3"><span class="rvts6">Lee el fichero </span><span class="rvts18">file_name</span><span class="rvts6"> o el flujo </span><span class="rvts18">S</span><span class="rvts6"> y devuelve su contenido completo en forma de array de Maxima. Si no se especifica </span><span class="rvts18">separator_flag</span><span class="rvts6">, se entiende que los valores están separados por espacios.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">read_maxima_array</span><span class="rvts6"> requiere que el arreglo sea declarado por </span><span class="rvts9">array</span><span class="rvts6"> antes de solicitar la lectura del fichero, lo cual evita la necesidad de calcular las dimensiones del arreglo, especialmente en el caso de arreglos multidimensionales.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">read_maxima_array</span><span class="rvts6"> no comprueba si el fichero de entrada es compatible con las dimensiones del arreglo; la entrada se lee como una lista para a continuación completar el arreglo con </span><span class="rvts9">fillarray</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1965"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">read_hashed_array</span><span class="rvts18"> (file_name, A)</span></li>
+<li><a name="IDX1966"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">read_hashed_array</span><span class="rvts18"> (file_name, A, separator_flag)</span></li>
+<li><a name="IDX1967"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">read_hashed_array</span><span class="rvts18"> (S, A)</span></li>
+<li><a name="IDX1968"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">read_hashed_array</span><span class="rvts18"> (S, A, separator_flag)</span></li>
+<li class="rvps3"><span class="rvts6">Lee el fichero </span><span class="rvts18">file_name</span><span class="rvts6"> o el flujo </span><span class="rvts18">S</span><span class="rvts6"> y devuelve su contenido completo en forma de arreglo </span><span class="rvts18">hash</span><span class="rvts6">. Si no se especifica </span><span class="rvts18">separator_flag</span><span class="rvts6">, se entiende que los valores están separados por espacios.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">read_hashed_array</span><span class="rvts6"> considera el primer término de la línea como un índice, asociando a éste el resto de la línea. Por ejemplo, una fila con el contenido </span><span class="rvts9">567 12 17 32 55</span><span class="rvts6"> equivale a </span><span class="rvts9">A[567]: [12, 17, 32, 55]$</span><span class="rvts6">. Las filas no necesitan tener el mismo número de elementos.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1969"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">read_nested_list</span><span class="rvts18"> (file_name)</span></li>
+<li><a name="IDX1970"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">read_nested_list</span><span class="rvts18"> (file_name, separator_flag)</span></li>
+<li><a name="IDX1971"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">read_nested_list</span><span class="rvts18"> (S)</span></li>
+<li><a name="IDX1972"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">read_nested_list</span><span class="rvts18"> (S, separator_flag)</span></li>
+<li class="rvps3"><span class="rvts6">La función </span><span class="rvts9">read_nested_list</span><span class="rvts6"> devuelve una lista con una sublista por cada fila de entrada. Las filas no necesitan tener el mismo número de elementos. Las filas vacías </span><span class="rvts18">no</span><span class="rvts6"> se ignoran, dando lugar a sublistas vacías.</span></li>
+<li><a name="IDX1973"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">read_list</span><span class="rvts18"> (file_name)</span></li>
+<li><a name="IDX1974"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">read_list</span><span class="rvts18"> (file_name, separator_flag)</span></li>
+<li><a name="IDX1975"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">read_list</span><span class="rvts18"> (S)</span></li>
+<li><a name="IDX1976"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">read_list</span><span class="rvts18"> (S, separator_flag)</span></li>
+<li class="rvps3"><span class="rvts6">La función </span><span class="rvts9">read_list</span><span class="rvts6"> o flujo </span><span class="rvts18">S</span><span class="rvts6"> y lee todo el fichero de entrada como una lista simple. Si no se especifica </span><span class="rvts18">separator_flag</span><span class="rvts6">, se entiende que los valores están separados por espacios.</span></li>
+<li><a name="IDX1977"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">write_data</span><span class="rvts18"> (X, file_name)</span></li>
+<li><a name="IDX1978"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">write_data</span><span class="rvts18"> (object, file_name, separator_flag)</span></li>
+<li><a name="IDX1979"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">write_data</span><span class="rvts18"> (X, S)</span></li>
+<li><a name="IDX1980"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">write_data</span><span class="rvts18"> (object, S, separator_flag)</span></li>
+<li class="rvps3"><span class="rvts6">La función </span><span class="rvts9">write_data</span><span class="rvts6"> escribe el objeto </span><span class="rvts18">X</span><span class="rvts6"> en el fichero </span><span class="rvts18">file_name</span><span class="rvts6"> o flujo </span><span class="rvts18">S</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts9">write_data</span><span class="rvts6"> escribe las matrices fila a fila.</span></p>
+<p class="rvps3"><span class="rvts9">write_data</span><span class="rvts6"> escribe arreglos de Maxima y Lisp fila a fila, con un salto de línea al final de cada tabla. Las tablas multidimensionales se separan con saltos de línea adicionales.</span></p>
+<p class="rvps3"><span class="rvts9">write_data</span><span class="rvts6"> escribe arreglos codificados con un índice seguido de una lista asociativa en cada línea.</span></p>
+<p class="rvps3"><span class="rvts9">write_data</span><span class="rvts6"> escribe una lista anidada con una sublista por línea.</span></p>
+<p class="rvps3"><span class="rvts9">write_data</span><span class="rvts6"> escribe una lista simple en una única línea.</span></p>
+<p class="rvps3"><span class="rvts6">Cuando </span><span class="rvts9">write_data</span><span class="rvts6"> escribe a un fichero, la variable global </span><span class="rvts9">file_output_append</span><span class="rvts6"> controla si los datos se añaden a fichero o si éste es borrado antes de la escritura.</span></p>
+<p class="rvps3"><span class="rvts6">En el caso de flujos, no se toman acciones especiales relacionadas con la sobreescritura. La función </span><span class="rvts9">write_data</span><span class="rvts6"> no cierra el flujo.</span></p>
+<hr style="height: 6px;"/>
+<div><table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="numericalio.html#SEC228"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_63.html#SEC233"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps3"><span class="rvts10">This document was generated by </span><span class="rvts11">Robert Dodier</span><span class="rvts10"> on </span><span class="rvts11">agosto, 25 2007</span><span class="rvts10"> using </span><a class="rvts12" href="http://texi2html.cvshome.org/">texi2html 1.76</a><span class="rvts10">.</span></p>
+<p></p>
+<p class="rvps6"><span class="rvts13">Created with the Personal Edition of HelpNDoc: </span><a class="rvts14" href="http://www.helpndoc.com/feature-tour">Full-featured Help generator</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				http://maxima.sourceforge.net</div>
+		</div>
+	</body>
+	
+</html>
+

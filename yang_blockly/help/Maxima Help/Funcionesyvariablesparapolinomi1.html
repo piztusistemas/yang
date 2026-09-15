@@ -1,0 +1,690 @@
+﻿<html>
+	
+<head>
+	<title>Funciones y variables para polinomios ortogonales</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 3.9.1.648">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Maxima.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("Funcionesyvariablesparapolinomi1");
+			}
+		});
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>Funciones y variables para polinomios ortogonales</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="orthopoly.html">orthopoly</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="orthopoly.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Algoritmos.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="plotdf.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<div><a name="ORTHOPOLY"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_63.html#SEC234"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparapolinomi1.html#SEC236"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_63.html#SEC233"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_65.html#SEC244"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h1 class="rvps2"><span class="rvts0"><span class="rvts8">64. orthopoly</span></span></h1>
+<div><table border="0" cellpadding="1" cellspacing="0" style="border-width: 0px;">
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="Funcionesyvariablesparapolinomi1.html#SEC236">64.1 Introducción a polinomios ortogonales</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="Funcionesyvariablesparapolinomi1.html#SEC243">64.2 Funciones y variables para polinomios ortogonales</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height: 6px;"/>
+<div><a name="SEC235"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparapolinomi1.html#SEC235"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparapolinomi1.html#SEC237"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparapolinomi1.html#SEC235"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparapolinomi1.html#SEC235"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_65.html#SEC244"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">64.1 Introducción a polinomios ortogonales</span></span></h2>
+<p class="rvps3"><span class="rvts6">El paquete </span><span class="rvts9">orthopoly</span><span class="rvts6"> contiene funciones para la evaluación simbólica y numérica de diversos tipos de polinomios ortogonales, como los de Chebyshev, Laguerre, Hermite, Jacobi, Legendre y ultraesféricos (Gegenbauer). Además, </span><span class="rvts9">orthopoly</span><span class="rvts6"> soporta las funciones esféricas de Bessel, Hankel y armónicas.</span></p>
+<p class="rvps3"><span class="rvts6">Referencias:</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Abramowitz y Stegun, </span><span class="rvts18">Handbook of Mathematical Functions</span><span class="rvts6">, (1972, décima reimpresión, capítulo 22)</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Gradshteyn y Ryzhik, </span><span class="rvts18">Table of Integrals, Series y Products</span><span class="rvts6">, (1980, edición corregida y ampliada)</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Eugen Merzbacher, </span><span class="rvts18">Quantum Mechanics</span><span class="rvts6">, (1970, segunda edición)</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">El paquete </span><span class="rvts9">orthopoly</span><span class="rvts6">, junto con su documentación, fue escrito por Barton Willis de la Universidad de Nebraska en Kearney. El paquete se distribuye con la licencia GNU General Public License (GPL).</span></p>
+<hr style="height: 6px;"/>
+<div><a name="INTRODUCCI_00F3N-A-POLINOMIOS-ORTOGONALES"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparapolinomi1.html#SEC236"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparapolinomi1.html#SEC238"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparapolinomi1.html#SEC235"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparapolinomi1.html#SEC236"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_65.html#SEC244"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="rvps11"><span class="rvts0"><span class="rvts21">64.1.1 Iniciándose con orthopoly</span></span></h3>
+<p class="rvps3"><span class="rvts9">load (orthopoly)</span><span class="rvts6"> carga el paquete </span><span class="rvts9">orthopoly</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Para obtener el polinomio de Legendre de tercer orden,</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) legendre_p (3, x);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 5 (1 - x) &nbsp; &nbsp;15 (1 - x)</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp;- ---------- + ----------- - 6 (1 - x) + 1</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span></p>
+<p class="rvps3"><span class="rvts6">Para expresarlo como una suma de potencias de </span><span class="rvts18">x</span><span class="rvts6">, aplíquese </span><span class="rvts18">ratsimp</span><span class="rvts6"> o </span><span class="rvts18">rat</span><span class="rvts6"> al resultado.</span></p>
+<p class="rvps4"><span class="rvts9">(%i2) [ratsimp (%), rat (%)];</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 5 x &nbsp;- 3 x &nbsp;5 x &nbsp;- 3 x</span><br/><span class="rvts9">(%o2)/R/ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[----------, ----------]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span></p>
+<p class="rvps3"><span class="rvts6">De forma alternativa, conviértase el segundo argumento de to </span><span class="rvts9">legendre_p</span><span class="rvts6"> (su variable "principal") a una expresión racional canónica (canonical rational expression, CRE)).</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) legendre_p (3, rat (x));</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 5 x &nbsp;- 3 x</span><br/><span class="rvts9">(%o1)/R/ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ----------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span></p>
+<p class="rvps3"><span class="rvts6">Para la evaluación numérica, </span><span class="rvts9">orthopoly</span><span class="rvts6"> hace uso del análisis de error de ejecución para estimar una cota superior del error. Por ejemplo,</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) jacobi_p (150, 2, 3, 0.2);</span><br/><span class="rvts9">(%o1) interval(- 0.062017037936715, 1.533267919277521E-11)</span></p>
+<p class="rvps3"><span class="rvts6">Los intervalos tienen la forma </span><span class="rvts9">interval (</span><span class="rvts19">c</span><span class="rvts9">, </span><span class="rvts19">r</span><span class="rvts9">)</span><span class="rvts6">, donde </span><span class="rvts18">c</span><span class="rvts6"> es el centro y </span><span class="rvts18">r</span><span class="rvts6"> el radio del intervalo. Puesto que Maxima no soporta aritmética de intervalos, en algunas situaciones, como en los gráficos, puede ser necesario ignorar el error y utilizar el centro del intervalo. Para conseguirlo conviene asignar a la variable </span><span class="rvts9">orthopoly_returns_intervals</span><span class="rvts6"> el valor </span><span class="rvts9">false</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) orthopoly_returns_intervals : false;</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; false</span><br/><span class="rvts9">(%i2) jacobi_p (150, 2, 3, 0.2);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- 0.062017037936715</span></p>
+<p class="rvps3"><span class="rvts6">Véase la sección </span><span class="rvts18">Evaluación numérica</span><span class="rvts6"> para más información.</span></p>
+<p class="rvps3"><span class="rvts6">La mayor parte de las funciones de </span><span class="rvts9">orthopoly</span><span class="rvts6"> tienen una propiedad </span><span class="rvts9">gradef</span><span class="rvts6">; así,</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) diff (hermite (n, x), x);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 n H &nbsp; &nbsp; (x)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n - 1</span><br/><span class="rvts9">(%i2) diff (gen_laguerre (n, a, x), x);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(a) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (a)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n L &nbsp; (x) - (n + a) L &nbsp; &nbsp; (x) unit_step(n)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;n &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n - 1</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp;------------------------------------------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">unit_step</span><span class="rvts6"> del segundo ejemplo evita el error que aparecería al evaluar la expresión con </span><span class="rvts18">n</span><span class="rvts6"> igual a 0.</span></p>
+<p class="rvps4"><span class="rvts9">(%i3) ev (%, n = 0);</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0</span></p>
+<p class="rvps3"><span class="rvts6">La propiedad "gradef" sólo se aplica a la variable principal; derivadas respecto de las otras variables darán lugar normalmente a mensajes de error; por ejemplo,</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) diff (hermite (n, x), x);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 n H &nbsp; &nbsp; (x)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n - 1</span><br/><span class="rvts9">(%i2) diff (hermite (n, x), n);</span><br/><span class="rvts9">Maxima doesn't know the derivative of hermite with </span><br/><span class="rvts9">respect the first argument</span><br/><span class="rvts9"> -- an error. &nbsp;Quitting. &nbsp;To debug this try debugmode(true);</span></p>
+<p class="rvps3"><span class="rvts6">Generalmente, las funciones de </span><span class="rvts9">orthopoly</span><span class="rvts6"> se distribuyen sobre listas y matrices. Al objeto de que la evaluación se realice completamente, las variables opcionales </span><span class="rvts9">doallmxops</span><span class="rvts6"> y </span><span class="rvts9">listarith</span><span class="rvts6"> deben valer ambas </span><span class="rvts9">true</span><span class="rvts6">, que es el valor por defecto. Para ilustrar la distribución sobre matrices sirve el siguiente ejemplo</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) hermite (2, x);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- 2 (1 - 2 x )</span><br/><span class="rvts9">(%i2) m : matrix ([0, x], [y, 0]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp;x ]</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ y &nbsp;0 ]</span><br/><span class="rvts9">(%i3) hermite (2, m);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp;- 2 &nbsp; &nbsp; &nbsp; &nbsp;- 2 (1 - 2 x ) ]</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ - 2 (1 - 2 y ) &nbsp; &nbsp; &nbsp; - 2 &nbsp; &nbsp; &nbsp; ]</span></p>
+<p class="rvps3"><span class="rvts6">En el segundo ejemplo, el elemento </span><span class="rvts9">i, j</span><span class="rvts6">-ésimo es </span><span class="rvts9">hermite (2, m[i,j])</span><span class="rvts6">, que no es lo mismo que calcular </span><span class="rvts9">-2 + 4 m . m</span><span class="rvts6">, según se ve en el siguiente ejemplo.</span></p>
+<p class="rvps4"><span class="rvts9">(%i4) -2 * matrix ([1, 0], [0, 1]) + 4 * m . m;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 4 x y - 2 &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; ]</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp;4 x y - 2 ]</span></p>
+<p class="rvps3"><span class="rvts6">Si se evalúa una función en un punto fuera de su dominio de definición, generalmente </span><span class="rvts9">orthopoly</span><span class="rvts6"> devolverá la función sin evaluar. Por ejemplo,</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) legendre_p (2/3, x);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;P &nbsp; (x)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2/3</span></p>
+<p class="rvps3"><span class="rvts9">orthopoly</span><span class="rvts6"> da soporte a la traducción de expresiones al formato TeX y la representación bidimensional en el terminal.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) spherical_harmonic (l, m, theta, phi);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;m</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Y (theta, phi)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;l</span><br/><span class="rvts9">(%i2) tex (%);</span><br/><span class="rvts9">$$Y_{l}^{m}\left(\vartheta,\varphi\right)$$</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; false</span><br/><span class="rvts9">(%i3) jacobi_p (n, a, a - b, x/2);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(a, a - b) x</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;P &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(-)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;n &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9">(%i4) tex (%);</span><br/><span class="rvts9">$$P_{n}^{\left(a,a-b\right)}\left({{x}\over{2}}\right)$$</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; false</span></p>
+<hr style="height: 6px;"/>
+<div><a name="SEC236"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparapolinomi1.html#SEC237"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparapolinomi1.html#SEC239"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparapolinomi1.html#SEC235"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparapolinomi1.html#SEC236"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_65.html#SEC244"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="rvps11"><span class="rvts0"><span class="rvts21">64.1.2 Limitaciones</span></span></h3>
+<p class="rvps3"><span class="rvts6">Cuando una expresión contenga varios polinomios ortogonales con órdenes simbólicos, es posible que aunque la expresión sea nula, Maxima sea incapaz de simplificarla a cero, por lo que si se divide por esta cantidad, aparecerán problemas. Por ejemplo, la siguiente expressión se anula para enteros </span><span class="rvts18">n</span><span class="rvts6"> mayores que 1, no pudiendo Maxima reducirla a cero.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) (2*n - 1) * legendre_p (n - 1, x) * x - n * legendre_p (n, x)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+ (1 - n) * legendre_p (n - 2, x);</span><br/><span class="rvts9">(%o1) &nbsp;(2 n - 1) P &nbsp; &nbsp; (x) x - n P (x) + (1 - n) P &nbsp; &nbsp; (x)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;n - 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n - 2</span></p>
+<p class="rvps3"><span class="rvts6">Para un valor específico de </span><span class="rvts18">n</span><span class="rvts6"> se puede reducir la expresión a cero.</span></p>
+<p class="rvps4"><span class="rvts9">(%i2) ev (% ,n = 10, ratsimp);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0</span></p>
+<p class="rvps3"><span class="rvts6">Generalmente, la forma polinomial de un polinomio ortogonal no es la más apropiada para su evaluación numérica. Aquí un ejemplo.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) p : jacobi_p (100, 2, 3, x)$</span><br/><span class="rvts9">(%i2) subst (0.2, x, p);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3.4442767023833592E+35</span><br/><span class="rvts9">(%i3) jacobi_p (100, 2, 3, 0.2);</span><br/><span class="rvts9">(%o3) &nbsp;interval(0.18413609135169, 6.8990300925815987E-12)</span><br/><span class="rvts9">(%i4) float(jacobi_p (100, 2, 3, 2/10));</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0.18413609135169</span></p>
+<p class="rvps3"><span class="rvts6">Este resultado se puede mejorar expandiendo el polinomio y evaluando a continuación, lo que da una aproximación mejor.</span></p>
+<p class="rvps4"><span class="rvts9">(%i5) p : expand(p)$</span><br/><span class="rvts9">(%i6) subst (0.2, x, p);</span><br/><span class="rvts9">(%o6) 0.18413609766122982</span></p>
+<p class="rvps3"><span class="rvts6">Sin embargo esto no vale como regla general; la expansión del polinomio no siempre da como resultado una expresión más fácil de evaluar numéricamente. Sin duda, la mejor manera de hacer la evaluación numérica consiste en hacer que uno o más de los argumentos de la función sean decimales en coma flotante; de esta forma se utilizarán algoritmos decimales especializados para hacer la evaluación.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">float</span><span class="rvts6"> de Maxima trabaja de forma indiscriminada; si se aplica </span><span class="rvts9">float</span><span class="rvts6"> a una expresión que contenga un polinomio ortogonal con el grado u orden simbólico, éstos se pueden transformar en decimales y la expresión no ser evaluada de forma completa. Considérese</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) assoc_legendre_p (n, 1, x);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; P (x)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n</span><br/><span class="rvts9">(%i2) float (%);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1.0</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;P &nbsp; (x)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;n</span><br/><span class="rvts9">(%i3) ev (%, n=2, x=0.9);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.0</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; P &nbsp; (0.9)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span></p>
+<p class="rvps3"><span class="rvts6">La expresión en </span><span class="rvts9">(%o3)</span><span class="rvts6"> no da como resultado un decimal en coma flotante; </span><span class="rvts9">orthopoly</span><span class="rvts6"> no reconoce decimales donde espera que haya enteros. De forma semejante, la evaluación numérica de la función </span><span class="rvts9">pochhammer</span><span class="rvts6"> para órdenes que excedan </span><span class="rvts9">pochhammer_max_index</span><span class="rvts6"> puede ser problemática; considérese</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) x : &nbsp;pochhammer (1, 10), pochhammer_max_index : 5;</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (1)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 10</span></p>
+<p class="rvps3"><span class="rvts6">Aplicando </span><span class="rvts9">float</span><span class="rvts6"> no da para </span><span class="rvts18">x</span><span class="rvts6"> un valor decimal</span></p>
+<p class="rvps4"><span class="rvts9">(%i2) float (x);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (1.0)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 10.0</span></p>
+<p class="rvps3"><span class="rvts6">A fin de evaluar </span><span class="rvts18">x</span><span class="rvts6"> como decimal, es necesario asignar a </span><span class="rvts9">pochhammer_max_index</span><span class="rvts6"> en valor 11 o mayor y aplicar </span><span class="rvts9">float</span><span class="rvts6"> a </span><span class="rvts18">x</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts9">(%i3) float (x), pochhammer_max_index : 11;</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3628800.0</span></p>
+<p class="rvps3"><span class="rvts6">El valor por defecto de </span><span class="rvts9">pochhammer_max_index</span><span class="rvts6"> es 100; cámbiese este valor tras cargar el paquete </span><span class="rvts9">orthopoly</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Por último, téngase en cuenta que las referencias bibliográficas no coinciden a la hora de definir los polinomios ortogonales; en </span><span class="rvts9">orthopoly</span><span class="rvts6"> se han utilizado normalmente las convenciones seguidas por Abramowitz y Stegun.</span></p>
+<p class="rvps3"><span class="rvts6">Cuando se sospeche de un fallo en </span><span class="rvts9">orthopoly</span><span class="rvts6">, compruébense algunos casos especiales a fin de determinar si las definiciones de las que el usuario parte coinciden con las utilizadas por el paquete </span><span class="rvts9">orthopoly</span><span class="rvts6">. A veces las definiciones difieren por un factor de normalización; algunos autores utilizan versiones que hacen que las familias sean ortogonales en otros intervalos diferentes de </span><span class="rvts18">(-1, 1)</span><span class="rvts6">. Así por ejemplo, para definir un polinomio de Legendre ortogonal en </span><span class="rvts18">(0, 1)</span><span class="rvts6"> defínase</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) shifted_legendre_p (n, x) := legendre_p (n, 2*x - 1)$</span><br/><span class="rvts9">(%i2) shifted_legendre_p (2, rat (x));</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9">(%o2)/R/ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 6 x &nbsp;- 6 x + 1</span><br/><span class="rvts9">(%i3) legendre_p (2, rat (x));</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3 x &nbsp;- 1</span><br/><span class="rvts9">(%o3)/R/ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;--------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span></p>
+<a name="SEC237"></a>
+<hr style="height: 6px;"/>
+<div><a name="SEC238"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparapolinomi1.html#SEC238"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparapolinomi1.html#SEC240"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparapolinomi1.html#SEC235"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparapolinomi1.html#SEC236"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_65.html#SEC244"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="rvps11"><span class="rvts0"><span class="rvts21">64.1.3 Evaluación numérica</span></span></h3>
+<p class="rvps3"><span class="rvts6">La mayor parte de las funciones de </span><span class="rvts9">orthopoly</span><span class="rvts6"> realizan análisis de errores en tiempo de ejecución para estimar el error en la evaluación decimal, a excepción de las funciones esféricas de Bessel y los polinomios asociados de Legendre de segunda especie. Para la evaluación numérica, las funciones esféricas de Bessel hacen uso de funciones SLATEC. No se lleva a cabo ningún método especial de evaluación numérica para los polinomios asociados de Legendre de segunda especie.</span></p>
+<p class="rvps3"><span class="rvts6">Es posible, aunque improbable, que el error obtenido en las evaluaciones numéricas exceda al error estimado.</span></p>
+<p class="rvps3"><span class="rvts6">Los intervalos tienen la forma </span><span class="rvts9">interval (</span><span class="rvts19">c</span><span class="rvts9">, </span><span class="rvts19">r</span><span class="rvts9">)</span><span class="rvts6">, siendo </span><span class="rvts18">c</span><span class="rvts6"> el centro del intervalo y </span><span class="rvts18">r</span><span class="rvts6"> su radio. El centro del intervalo puede ser un número complejo, pero el radio será siempre un número real positivo.</span></p>
+<p class="rvps3"><span class="rvts6">He aquí un ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) fpprec : 50$</span><br/><span class="rvts9">(%i2) y0 : jacobi_p (100, 2, 3, 0.2);</span><br/><span class="rvts9">(%o2) interval(0.1841360913516871, 6.8990300925815987E-12)</span><br/><span class="rvts9">(%i3) y1 : bfloat (jacobi_p (100, 2, 3, 1/5));</span><br/><span class="rvts9">(%o3) 1.8413609135168563091370224958913493690868904463668b-1</span></p>
+<p class="rvps3"><span class="rvts6">Se comprueba que el error es menor que el estimado</span></p>
+<p class="rvps4"><span class="rvts9">(%i4) is (abs (part (y0, 1) - y1) &lt; part (y0, 2));</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; true</span></p>
+<p class="rvps3"><span class="rvts6">En este ejemplo el error estimado es una cota superior para el error verdadero.</span></p>
+<p class="rvps3"><span class="rvts6">Maxima no da soporte a la aritmética de intervalos.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) legendre_p (7, 0.1) + legendre_p (8, 0.1);</span><br/><span class="rvts9">(%o1) interval(0.18032072148437508, 3.1477135311021797E-15)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp;+ interval(- 0.19949294375000004, 3.3769353084291579E-15)</span></p>
+<p class="rvps3"><span class="rvts6">El usuario puede definir operadores aritméticos para los intervalos. Para definir la suma de intervalos se puede hacer</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) infix ("@+")$</span><br/><span class="rvts9">(%i2) "@+"(x,y) := interval (part (x, 1) + part (y, 1), </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;part (x, 2) + part (y, 2))$</span><br/><span class="rvts9">(%i3) legendre_p (7, 0.1) @+ legendre_p (8, 0.1);</span><br/><span class="rvts9">(%o3) interval(- 0.019172222265624955, 6.5246488395313372E-15)</span></p>
+<p class="rvps3"><span class="rvts6">Las rutinas especiales para cálculo numérico son llamadas cuando los argumentos son complejos. Por ejemplo,</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) legendre_p (10, 2 + 3.0*%i);</span><br/><span class="rvts9">(%o1) interval(- 3.876378825E+7 %i - 6.0787748E+7, </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.2089173052721777E-6)</span></p>
+<p class="rvps3"><span class="rvts6">Compárese con el valor verdadero.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) float (expand (legendre_p (10, 2 + 3*%i)));</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- 3.876378825E+7 %i - 6.0787748E+7</span></p>
+<p class="rvps3"><span class="rvts6">Además, cuando los argumentos son números decimales grandes (</span><span class="rvts18">big floats</span><span class="rvts6">), se realizan llamadas a las rutinas numéricas especiales; sin embargo, los decimales grandes se convierten previamente a doble precisión y de este tipo serán también los resultados.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) ultraspherical (150, 0.5b0, 0.9b0);</span><br/><span class="rvts9">(%o1) interval(- 0.043009481257265, 3.3750051301228864E-14)</span></p>
+<hr style="height: 6px;"/>
+<div><a name="EVALUACI_00F3N-NUM_00E9RICA"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparapolinomi1.html#SEC239"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparapolinomi1.html#SEC241"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparapolinomi1.html#SEC235"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparapolinomi1.html#SEC236"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_65.html#SEC244"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="rvps11"><span class="rvts0"><span class="rvts21">64.1.4 Gráficos y orthopoly</span></span></h3>
+<p class="rvps3"><span class="rvts6">Para representar gráficamente expresiones que contengan polinomios ortogonales se deben hacer dos cosas:</span></p>
+<ol style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Asignar a la variable opcional </span><span class="rvts9">orthopoly_returns_intervals</span><span class="rvts6"> el valor </span><span class="rvts9">false</span><span class="rvts6">,</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Comentar (con apóstrofo) las llamadas a las funciones de </span><span class="rvts9">orthopoly</span><span class="rvts6">.</span></li>
+</ol>
+<p class="rvps3"><span class="rvts6">Si las llamadas a las funciones no se comentan, Maxima las evalúa a polinomios antes de hacer el gráfico, por lo que el código especializado en el cálculo numérico no es llamado. Aquí hay un ejemplo de cómo se debe hacer para representar gráficamente una expresión que contiene un polinomio de Legendre:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) plot2d ('(legendre_p (5, x)), [x, 0, 1]),</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;orthopoly_returns_intervals : false;</span><br/><span class="rvts9">(%o1)</span></p>
+<p class="rvps10"><img align="absbottom" alt="figures/orthopoly1" src="lib/orthopoly19.gif"/></p>
+<p class="rvps3"><span class="rvts6">La expresión </span><span class="rvts9">legendre_p (5, x)</span><span class="rvts6"> se comenta </span><span class="rvts18">completamente</span><span class="rvts6">, que no es lo mismo que comentar el nombre de la función, como en </span><span class="rvts9">'legendre_p (5, </span><span class="rvts19">x</span><span class="rvts9">)</span><span class="rvts6">.</span></p>
+<hr style="height: 6px;"/>
+<div><a name="SEC239"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparapolinomi1.html#SEC240"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparapolinomi1.html#SEC242"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparapolinomi1.html#SEC235"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparapolinomi1.html#SEC236"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_65.html#SEC244"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="rvps11"><span class="rvts0"><span class="rvts21">64.1.5 Miscelánea de funciones</span></span></h3>
+<p class="rvps3"><span class="rvts6">El paquete </span><span class="rvts9">orthopoly</span><span class="rvts6"> define el símbolo de Pochhammer y la función de escalón unidad en sentencias gradef.</span></p>
+<p class="rvps3"><span class="rvts6">Para convertir los símbolos de Pochhammer en cocientes o funciones gamma, hágase uso de </span><span class="rvts9">makegamma</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) makegamma (pochhammer (x, n));</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;gamma(x + n)</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ------------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;gamma(x)</span><br/><span class="rvts9">(%i2) makegamma (pochhammer (1/2, 1/2));</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ---------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;sqrt(%pi)</span></p>
+<p class="rvps3"><span class="rvts6">Las derivadas del símbolo de Pochhammer se dan en términos de la función </span><span class="rvts9">psi</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) diff (pochhammer (x, n), x);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (x) &nbsp;(psi (x + n) - psi (x))</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0</span><br/><span class="rvts9">(%i2) diff (pochhammer (x, n), n);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (x) &nbsp;psi (x + n)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n &nbsp; &nbsp;0</span></p>
+<p class="rvps3"><span class="rvts6">Es necesario tener cuidado con la expresión en </span><span class="rvts9">(%o1)</span><span class="rvts6">, pues la diferencia de las funciones </span><span class="rvts9">psi</span><span class="rvts6"> tiene polos cuando </span><span class="rvts19">x</span><span class="rvts9"> = -1, -2, .., -</span><span class="rvts19">n</span><span class="rvts6">. Estos polos se cancelan con factores de </span><span class="rvts9">pochhammer (</span><span class="rvts19">x</span><span class="rvts9">, </span><span class="rvts19">n</span><span class="rvts9">)</span><span class="rvts6"> haciendo que la derivada sea un polinomio de grado </span><span class="rvts19">n</span><span class="rvts9"> - 1</span><span class="rvts6"> si </span><span class="rvts18">n</span><span class="rvts6"> es entero positivo.</span></p>
+<p class="rvps3"><span class="rvts6">El símbolo de Pochhammer se define para órdenes negativos a través de su representación como cociente de funciones gamma. Considérese</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) q : makegamma (pochhammer (x, n));</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;gamma(x + n)</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ------------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;gamma(x)</span><br/><span class="rvts9">(%i2) sublis ([x=11/3, n= -6], q);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 729</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- ----</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2240</span></p>
+<p class="rvps3"><span class="rvts6">De forma alternativa, es posible llegar a este resultado directamente.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) pochhammer (11/3, -6);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 729</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- ----</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2240</span></p>
+<p class="rvps3"><span class="rvts6">La función de escalón unidad es continua por la izquierda; así,</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) [unit_step (-1/10), unit_step (0), unit_step (1/10)];</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [0, 0, 1]</span></p>
+<p class="rvps3"><span class="rvts6">En caso de ser necesaria una función escalón unidad que no sea continua ni por la izquierda ni por la derecha en el origen, se puede definir haciendo uso de </span><span class="rvts9">signum</span><span class="rvts6">; por ejemplo,</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) xunit_step (x) := (1 + signum (x))/2$</span><br/><span class="rvts9">(%i2) [xunit_step (-1/10), xunit_step (0), xunit_step (1/10)];</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [0, -, 1]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span></p>
+<p class="rvps3"><span class="rvts6">No se debe redefinir la función </span><span class="rvts9">unit_step</span><span class="rvts6">, ya que parte del código de </span><span class="rvts9">orthopoly</span><span class="rvts6"> requiere que la función escalón sea continua por la izquierda.</span></p>
+<hr style="height: 6px;"/>
+<div><a name="SEC240"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparapolinomi1.html#SEC241"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparapolinomi1.html#SEC243"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparapolinomi1.html#SEC235"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparapolinomi1.html#SEC236"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_65.html#SEC244"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="rvps11"><span class="rvts0"><span class="rvts21">64.1.6 Algoritmos</span></span></h3>
+<p class="rvps3"><span class="rvts6">En general, el paquete </span><span class="rvts9">orthopoly</span><span class="rvts6"> gestiona la evaluación simbólica a través de la representación hipergeométrica de los polinomios ortogonales. Las funciones hipergeométricas se evalúan utilizando las funciones (no documentadas) </span><span class="rvts9">hypergeo11</span><span class="rvts6"> y </span><span class="rvts9">hypergeo21</span><span class="rvts6">. Excepciones son las funciones de Bessel de índice semi-entero y las funciones asociadas de Legendre de segunda especie; las funciones de Bessel de índice semi-entero se evalúan utilizando una representación explícita, mientras que la función asociada de Legendre de segunda especie se evalúa recursivamente.</span></p>
+<p class="rvps3"><span class="rvts6">En cuanto a la evaluación numérica, la mayor parte de las funciones se convierten a su forma hipergeométrica, evaluándolas mediante recursión. Además, las excepciones son las funciones de Bessel de índice semi-entero y las funciones asociadas de Legendre de segunda especie. Las funciones de Bessel de índice semi-entero se evalúan numéricamente con código SLATEC.</span></p>
+<hr style="height: 6px;"/>
+<div><a name="SEC241"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparapolinomi1.html#SEC242"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_65.html#SEC244"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparapolinomi1.html#SEC235"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparapolinomi1.html#SEC235"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_65.html#SEC244"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">64.2 Funciones y variables para polinomios ortogonales</span></span></h2>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC242"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">assoc_legendre_p</span><span class="rvts18"> (n, m, x)</span></li>
+<li class="rvps3"><span class="rvts6">Función asociada de Legendre de primera especie.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Referencia: Abramowitz y Stegun, ecuaciones 22.5.37, página 779, 8.6.6 (segunda ecuación), página 334 y 8.2.5, página 333.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="FUNCIONES-Y-VARIABLES-PARA-POLINOMIOS-ORTOGONALES"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">assoc_legendre_q</span><span class="rvts18"> (n, m, x)</span></li>
+<li class="rvps3"><span class="rvts6">Función asociada de Legendre de segunda especie.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Referencia: Abramowitz y Stegun, ecuaciones 8.5.3 y 8.1.8.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC243"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">chebyshev_t</span><span class="rvts18"> (n, x)</span></li>
+<li class="rvps3"><span class="rvts6">Función de Chebyshev de primera especie.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Referencia: Abramowitz y Stegun, ecuación 22.5.47, página 779.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1987"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">chebyshev_u</span><span class="rvts18"> (n, x)</span></li>
+<li class="rvps3"><span class="rvts6">Función de Chebyshev de segunda especie.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Referencia: Abramowitz y Stegun, ecuación 22.5.48, página 779.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1988"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">gen_laguerre</span><span class="rvts18"> (n, a, x)</span></li>
+<li class="rvps3"><span class="rvts6">Polinomio de Laguerre generalizado.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Referencia: Abramowitz y Stegun, ecuación 22.5.54, página 780.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1989"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">hermite</span><span class="rvts18"> (n, x)</span></li>
+<li class="rvps3"><span class="rvts6">Polinomio de Hermite.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Referencia: Abramowitz y Stegun, ecuación 22.5.55, página 780.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1990"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">intervalp</span><span class="rvts18"> (e)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve </span><span class="rvts9">true</span><span class="rvts6"> si la entrada es un intervalo y </span><span class="rvts9">false</span><span class="rvts6"> en caso contrario.</span></li>
+<li><a name="IDX1991"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">jacobi_p</span><span class="rvts18"> (n, a, b, x)</span></li>
+<li class="rvps3"><span class="rvts6">Polinomio de Jacobi.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Los polinomios de Jacobi están definidos para todo </span><span class="rvts18">a</span><span class="rvts6"> y </span><span class="rvts18">b</span><span class="rvts6">; sin embargo, el peso </span><span class="rvts9">(1 - </span><span class="rvts19">x</span><span class="rvts9">)^</span><span class="rvts19">a</span><span class="rvts9"> (1 + </span><span class="rvts19">x</span><span class="rvts9">)^</span><span class="rvts19">b</span><span class="rvts6"> no es integrable para </span><span class="rvts19">a</span><span class="rvts9"> &lt;= -1</span><span class="rvts6"> o </span><span class="rvts19">b</span><span class="rvts9"> &lt;= -1</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Referencia: Abramowitz y Stegun, ecuación 22.5.42, página 779.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1992"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">laguerre</span><span class="rvts18"> (n, x)</span></li>
+<li class="rvps3"><span class="rvts6">Polinomio de Laguerre.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Referencia: Abramowitz y Stegun, ecuaciones 22.5.16 y 22.5.54, página 780.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1993"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">legendre_p</span><span class="rvts18"> (n, x)</span></li>
+<li class="rvps3"><span class="rvts6">Polinomio de Legendre de primera especie.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Referencia: Abramowitz y Stegun, ecuaciones 22.5.50 y 22.5.51, página 779.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1994"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">legendre_q</span><span class="rvts18"> (n, x)</span></li>
+<li class="rvps3"><span class="rvts6">Polinomio de Legendre de segunda especie.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Referencia: Abramowitz y Stegun, ecuaciones 8.5.3 y 8.1.8.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1995"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">orthopoly_recur</span><span class="rvts18"> (f, args)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve una relación recursiva para la familia de funciones ortogonales </span><span class="rvts18">f</span><span class="rvts6"> con argumentos </span><span class="rvts18">args</span><span class="rvts6">. La recursión se hace con respecto al grado del polinomio.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) orthopoly_recur (legendre_p, [n, x]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(2 n - 1) P &nbsp; &nbsp; (x) x + (1 - n) P &nbsp; &nbsp; (x)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n - 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n - 2</span><br/><span class="rvts9">(%o1) &nbsp; P (x) = -----------------------------------------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; n &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;n</span></p>
+<p class="rvps3"><span class="rvts6">El segundo argumento de </span><span class="rvts9">orthopoly_recur</span><span class="rvts6"> debe ser una lista con el número correcto de argumentos para la función </span><span class="rvts18">f</span><span class="rvts6">; si no lo es, Maxima emite un mensaje de error.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) orthopoly_recur (jacobi_p, [n, x]);</span><br/><span class="rvts9">Function jacobi_p needs 4 arguments, instead it received 2</span><br/><span class="rvts9"> -- an error. &nbsp;Quitting. &nbsp;To debug this try debugmode(true);</span></p>
+<p class="rvps3"><span class="rvts6">Además, si </span><span class="rvts18">f</span><span class="rvts6"> no es el nombre de ninguna de las familias de polinomios ortogonales, se emite otro mensaje de error.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) orthopoly_recur (foo, [n, x]);</span><br/><span class="rvts9">A recursion relation for foo isn't known to Maxima</span><br/><span class="rvts9"> -- an error. &nbsp;Quitting. &nbsp;To debug this try debugmode(true);</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1996"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">orthopoly_returns_intervals</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">true</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">orthopoly_returns_intervals</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, los números decimales en coma flotante se retornan con el formato </span><span class="rvts9">interval (</span><span class="rvts19">c</span><span class="rvts9">, </span><span class="rvts19">r</span><span class="rvts9">)</span><span class="rvts6">, donde </span><span class="rvts18">c</span><span class="rvts6"> es el centro del intervalo y </span><span class="rvts18">r</span><span class="rvts6"> su radio. El centro puede ser un número complejo, en cuyo caso el intervalo es un disco en el plano complejo.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1997"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">orthopoly_weight</span><span class="rvts18"> (f, args)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve una lista con tres elementos; el primer elemento es la fórmula del peso para la familia de polinomios ortogonales </span><span class="rvts18">f</span><span class="rvts6"> con los argumentos dados por la lista </span><span class="rvts18">args</span><span class="rvts6">; el segundo y tercer elementos son los extremos inferior y superior del intervalo de ortogonalidad. Por ejemplo,</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) w : orthopoly_weight (hermite, [n, x]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - x</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [%e &nbsp; &nbsp;, - inf, inf]</span><br/><span class="rvts9">(%i2) integrate (w[1] * hermite (3, x) * hermite (2, x), x, w[2], w[3]);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0</span></p>
+<p class="rvps3"><span class="rvts6">La variable principal de </span><span class="rvts18">f</span><span class="rvts6"> debe ser un símbolo, en caso contrario Maxima emite un mensaje de error.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1998"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">pochhammer</span><span class="rvts18"> (n, x)</span></li>
+<li class="rvps3"><span class="rvts6">Símbolo de Pochhammer. Para enteros no negativos </span><span class="rvts18">n</span><span class="rvts6"> con </span><span class="rvts19">n</span><span class="rvts9"> &lt;= pochhammer_max_index</span><span class="rvts6">, la expresión </span><span class="rvts9">pochhammer (</span><span class="rvts19">x</span><span class="rvts9">, </span><span class="rvts19">n</span><span class="rvts9">)</span><span class="rvts6"> se evalúa como el producto </span><span class="rvts19">x</span><span class="rvts9"> (</span><span class="rvts19">x</span><span class="rvts9"> + 1) (</span><span class="rvts19">x</span><span class="rvts9"> + 2) ... (</span><span class="rvts19">x</span><span class="rvts9"> + n - 1)</span><span class="rvts6"> si </span><span class="rvts19">n</span><span class="rvts9"> &gt; 0</span><span class="rvts6"> y como 1 si </span><span class="rvts19">n</span><span class="rvts9"> = 0</span><span class="rvts6">. Para </span><span class="rvts18">n</span><span class="rvts6"> negativo, </span><span class="rvts9">pochhammer (</span><span class="rvts19">x</span><span class="rvts9">, </span><span class="rvts19">n</span><span class="rvts9">)</span><span class="rvts6"> se define como </span><span class="rvts9">(-1)^</span><span class="rvts19">n</span><span class="rvts9"> / pochhammer (1 - </span><span class="rvts19">x</span><span class="rvts9">, -</span><span class="rvts19">n</span><span class="rvts9">)</span><span class="rvts6">. Así por ejemplo,</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) pochhammer (x, 3);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x (x + 1) (x + 2)</span><br/><span class="rvts9">(%i2) pochhammer (x, -3);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - -----------------------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(1 - x) (2 - x) (3 - x)</span></p>
+<p class="rvps3"><span class="rvts6">A fin de convertir el símbolo de Pochhammer en un cociente de funciones gamma (véase Abramowitz y Stegun, ecuación 6.1.22), hágase uso de </span><span class="rvts9">makegamma</span><span class="rvts6">. Por ejemplo,</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) makegamma (pochhammer (x, n));</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;gamma(x + n)</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ------------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;gamma(x)</span></p>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts18">n</span><span class="rvts6"> es mayor que </span><span class="rvts9">pochhammer_max_index</span><span class="rvts6"> o si </span><span class="rvts18">n</span><span class="rvts6"> es simbólico, </span><span class="rvts9">pochhammer</span><span class="rvts6"> devuelve una forma nominal.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) pochhammer (x, n);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (x)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1999"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">pochhammer_max_index</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: 100</span></li>
+</ul>
+<p class="rvps3"><span class="rvts9">pochhammer (</span><span class="rvts19">n</span><span class="rvts9">, </span><span class="rvts19">x</span><span class="rvts9">)</span><span class="rvts6"> se evalúa como un producto si y sólo si </span><span class="rvts19">n</span><span class="rvts9"> &lt;= pochhammer_max_index</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) pochhammer (x, 3), pochhammer_max_index : 3;</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x (x + 1) (x + 2)</span><br/><span class="rvts9">(%i2) pochhammer (x, 4), pochhammer_max_index : 3;</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (x)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4</span></p>
+<p class="rvps3"><span class="rvts6">Referencia: Abramowitz y Stegun, ecuación 6.1.16, página 256.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2000"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">spherical_bessel_j</span><span class="rvts18"> (n, x)</span></li>
+<li class="rvps3"><span class="rvts6">Función de Bessel esférica de primera especie.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Referencia: Abramowitz y Stegun, ecuaciones 10.1.8, página 437 y 10.1.15, página 439.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2001"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">spherical_bessel_y</span><span class="rvts18"> (n, x)</span></li>
+<li class="rvps3"><span class="rvts6">Función de Bessel esférica de segunda especie.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Referencia: Abramowitz y Stegun, ecuaciones 10.1.9, página 437 y 10.1.15, página 439.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2002"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">spherical_hankel1</span><span class="rvts18"> (n, x)</span></li>
+<li class="rvps3"><span class="rvts6">Función esférica de Hankel de primera especie.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Referencia: Abramowitz y Stegun, ecuación 10.1.36, página 439.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2003"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">spherical_hankel2</span><span class="rvts18"> (n, x)</span></li>
+<li class="rvps3"><span class="rvts6">Función esférica de Hankel de segunda especie.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Referencia: Abramowitz y Stegun, ecuación 10.1.17, página 439.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2004"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">spherical_harmonic</span><span class="rvts18"> (n, m, x, y)</span></li>
+<li class="rvps3"><span class="rvts6">Función armónica esférica.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Referencia: Merzbacher 9.64.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2005"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">unit_step</span><span class="rvts18"> (x)</span></li>
+<li class="rvps3"><span class="rvts6">Función de escalón unidad continua por la izquierda, definida de tal forma que </span><span class="rvts9">unit_step (</span><span class="rvts19">x</span><span class="rvts9">)</span><span class="rvts6"> se anula para </span><span class="rvts19">x</span><span class="rvts9"> &lt;= 0</span><span class="rvts6"> y es igual a 1 para </span><span class="rvts19">x</span><span class="rvts9"> &gt; 0</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">En caso de ser necesaria una función escalón unidad que tome el valor 1/2 en el origen, utilícese </span><span class="rvts9">(1 + signum (</span><span class="rvts19">x</span><span class="rvts9">))/2</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2006"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">ultraspherical</span><span class="rvts18"> (n, a, x)</span></li>
+<li class="rvps3"><span class="rvts6">Polinomio ultraesférico o de Gegenbauer.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Referencia: Abramowitz y Stegun, ecuación 22.5.46, página 779.</span></p>
+<hr style="height: 6px;"/>
+<div><table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparapolinomi1.html#SEC235"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_65.html#SEC244"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps3"><span class="rvts10">This document was generated by </span><span class="rvts11">Robert Dodier</span><span class="rvts10"> on </span><span class="rvts11">agosto, 25 2007</span><span class="rvts10"> using </span><a class="rvts12" href="http://texi2html.cvshome.org/">texi2html 1.76</a><span class="rvts10">.</span></p>
+<p></p>
+<p class="rvps6"><span class="rvts13">Created with the Personal Edition of HelpNDoc: </span><a class="rvts14" href="http://www.helpndoc.com/feature-tour">Full-featured Help generator</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				http://maxima.sourceforge.net</div>
+		</div>
+	</body>
+	
+</html>
+

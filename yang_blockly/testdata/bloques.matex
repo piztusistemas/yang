@@ -1,0 +1,6 @@
+<EX>Exercicio 1: calcula <EVAL>f(x):=x^2+1; f(3)</EVAL> e representa a función.
+<PLOT>plot2d(x^2+1,[x,-3,3])</PLOT></EX>
+
+<EX>Exercicio 2: debuxa un triángulo con TikZ.
+<TIKZ>\draw (0,0) -- (2,0) -- (1,1.5) -- cycle;</TIKZ>
+Inclúe tamén unha imaxe: <IMG src="logo.png"></EX>

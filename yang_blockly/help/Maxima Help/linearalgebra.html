@@ -1,0 +1,478 @@
+﻿<html>
+	
+<head>
+	<title>linearalgebra</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 3.9.1.648">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Maxima.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("linearalgebra");
+			}
+		});
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>linearalgebra</h1>
+				
+				</div>
+			<div id="topic_header_nav">
+				<a href="Funcionesyvariablesparalindstedt.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Introduccinalinearalgebra.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<div><a name="LINEARALGEBRA"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_57.html#SEC218"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="linearalgebra.html#SEC220"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_57.html#SEC217"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_59.html#SEC222"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h1 class="rvps2"><span class="rvts0"><span class="rvts8">58. linearalgebra</span></span></h1>
+<div><table border="0" cellpadding="1" cellspacing="0" style="border-width: 0px;">
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="linearalgebra.html#SEC220">58.1 Introducción a linearalgebra</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="linearalgebra.html#SEC221">58.2 Funciones y variables para linearalgebra</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height: 6px;"/>
+<div><a name="SEC219"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="linearalgebra.html#SEC219"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="linearalgebra.html#SEC221"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="linearalgebra.html#SEC219"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="linearalgebra.html#SEC219"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_59.html#SEC222"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">58.1 Introducción a linearalgebra</span></span></h2>
+<p class="rvps3"><span class="rvts6">El paquete </span><span class="rvts9">linearalgebra</span><span class="rvts6"> contiene una batería de funciones para álgebra lineal.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) M : matrix ([1, 2], [1, 2]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 1 &nbsp;2 ]</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 1 &nbsp;2 ]</span><br/><span class="rvts9">(%i2) nullspace (M);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp;1 &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; ]</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; span([ &nbsp; 1 ])</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ - - ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; 2 ]</span><br/><span class="rvts9">(%i3) columnspace (M);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 1 ]</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;span([ &nbsp; ])</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 1 ]</span><br/><span class="rvts9">(%i4) ptriangularize (M - z*ident(2), z);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 1 &nbsp; 2 - z &nbsp; ]</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 0 &nbsp;3 z - z &nbsp;]</span><br/><span class="rvts9">(%i5) M : matrix ([1, 2, 3], [4, 5, 6], [7, 8, 9]) - z*ident(3);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 1 - z &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp;3 &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; 4 &nbsp; &nbsp;5 - z &nbsp; &nbsp;6 &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; 7 &nbsp; &nbsp; &nbsp;8 &nbsp; &nbsp;9 - z ]</span><br/><span class="rvts9">(%i6) MM : ptriangularize (M, z);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 4 &nbsp;5 - z &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;6 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; 66 &nbsp; &nbsp; &nbsp; &nbsp;z &nbsp; &nbsp;102 z &nbsp; 132 &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp; -- &nbsp; &nbsp; &nbsp;- -- + ----- + --- &nbsp; ]</span><br/><span class="rvts9">(%o6) &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; 49 &nbsp; &nbsp; &nbsp; &nbsp;7 &nbsp; &nbsp; 49 &nbsp; &nbsp; 49 &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3 &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 49 z &nbsp; &nbsp;245 z &nbsp; &nbsp;147 z ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp; &nbsp;0 &nbsp; &nbsp;----- - ------ - ----- ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;264 &nbsp; &nbsp; &nbsp;88 &nbsp; &nbsp; &nbsp;44 &nbsp; ]</span><br/><span class="rvts9">(%i7) algebraic : true;</span><br/><span class="rvts9">(%o7) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; true</span><br/><span class="rvts9">(%i8) tellrat (MM [3, 3]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3 &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9">(%o8) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[z &nbsp;- 15 z &nbsp;- 18 z]</span><br/><span class="rvts9">(%i9) MM : ratsimp (MM);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 4 &nbsp;5 - z &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 6 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9">(%o9) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; 66 &nbsp; &nbsp; &nbsp;7 z &nbsp;- 102 z - 132 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 0 &nbsp; -- &nbsp; &nbsp;- ------------------ ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; 49 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;49 &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 0 &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9">(%i10) nullspace (MM);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp;z &nbsp;- 14 z - 16 &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp;-------------- &nbsp;]</span><br/><span class="rvts9">(%o10) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; span([ &nbsp; &nbsp; &nbsp; &nbsp;8 &nbsp; &nbsp; &nbsp; &nbsp; ])</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; z &nbsp;- 18 z - 12 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ - -------------- ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; 12 &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9">(%i11) M : matrix ([1, 2, 3, 4], [5, 6, 7, 8],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [9, 10, 11, 12], [13, 14, 15, 16]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 1 &nbsp; 2 &nbsp; 3 &nbsp; 4 &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 5 &nbsp; 6 &nbsp; 7 &nbsp; 8 &nbsp;]</span><br/><span class="rvts9">(%o11) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 9 &nbsp; 10 &nbsp;11 &nbsp;12 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 13 &nbsp;14 &nbsp;15 &nbsp;16 ]</span><br/><span class="rvts9">(%i12) columnspace (M);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 1 &nbsp;] &nbsp;[ 2 &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp;] &nbsp;[ &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 5 &nbsp;] &nbsp;[ 6 &nbsp;]</span><br/><span class="rvts9">(%o12) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;span([ &nbsp; &nbsp;], [ &nbsp; &nbsp;])</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 9 &nbsp;] &nbsp;[ 10 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp;] &nbsp;[ &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 13 ] &nbsp;[ 14 ]</span><br/><span class="rvts9">(%i13) apply ('orthogonal_complement, args (nullspace (transpose (M))));</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 0 ] &nbsp;[ &nbsp;1 &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; ] &nbsp;[ &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 1 ] &nbsp;[ &nbsp;0 &nbsp;]</span><br/><span class="rvts9">(%o13) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;span([ &nbsp; ], [ &nbsp; &nbsp; ])</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 2 ] &nbsp;[ - 1 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; ] &nbsp;[ &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 3 ] &nbsp;[ - 2 ]</span></p>
+<hr style="height: 6px;"/>
+<div><a name="INTRODUCCI_00F3N-A-LINEARALGEBRA"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="linearalgebra.html#SEC220"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_59.html#SEC222"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="linearalgebra.html#SEC219"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="linearalgebra.html#SEC219"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_59.html#SEC222"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">58.2 Funciones y variables para linearalgebra</span></span></h2>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC220"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">addmatrices</span><span class="rvts18"> (f, M_1, ..., M_n)</span></li>
+<li class="rvps3"><span class="rvts6">Utiliza la función </span><span class="rvts18">f</span><span class="rvts6"> como una función aditiva, devolviendo la suma de las matrices </span><span class="rvts18">M_1</span><span class="rvts6">, ..., </span><span class="rvts18">M_n</span><span class="rvts6">. La función </span><span class="rvts18">f</span><span class="rvts6"> debe ser tal que acepte un número arbitrario de argumentos; en otras palabras, será una función n-aria de Maxima.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) m1 : matrix([1,2],[3,4])$</span><br/><span class="rvts9">(%i2) m2 : matrix([7,8],[9,10])$</span><br/><span class="rvts9">(%i3) addmatrices('max,m1,m2);</span><br/><span class="rvts9">(%o3) matrix([7,8],[9,10])</span><br/><span class="rvts9">(%i4) addmatrices('max,m1,m2,5*m1);</span><br/><span class="rvts9">(%o4) matrix([7,10],[15,20])</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="FUNCIONES-Y-VARIABLES-PARA-LINEARALGEBRA"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">blockmatrixp</span><span class="rvts18"> (M)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve el valor </span><span class="rvts9">true</span><span class="rvts6"> si y solo si </span><span class="rvts18">M</span><span class="rvts6"> es una matriz cuyos elementos son a su vez matrices.</span></li>
+<li><a name="SEC221"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">columnop</span><span class="rvts18"> (M, i, j, theta)</span></li>
+<li class="rvps3"><span class="rvts6">Si </span><span class="rvts18">M</span><span class="rvts6"> es una matriz, devuelve la matriz que resulta de hacer la operación columna </span><span class="rvts9">C_i &lt;- C_i - </span><span class="rvts19">theta</span><span class="rvts9"> * C_j</span><span class="rvts6">. Si </span><span class="rvts18">M</span><span class="rvts6"> carece de cualquiera de las filas </span><span class="rvts18">i</span><span class="rvts6"> o </span><span class="rvts18">j</span><span class="rvts6">, devuelve un mensaje de error.</span></li>
+<li><a name="IDX1890"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">columnswap</span><span class="rvts18"> (M, i, j)</span></li>
+<li class="rvps3"><span class="rvts6">Si </span><span class="rvts18">M</span><span class="rvts6"> es una matriz, intercambia las columnas </span><span class="rvts18">i</span><span class="rvts6"> y </span><span class="rvts18">j</span><span class="rvts6">. Si </span><span class="rvts18">M</span><span class="rvts6"> carece de cualquiera de las filas </span><span class="rvts18">i</span><span class="rvts6"> o </span><span class="rvts18">j</span><span class="rvts6">, devuelve un mensaje de error.</span></li>
+<li><a name="IDX1891"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">columnspace</span><span class="rvts18"> (M)</span></li>
+<li class="rvps3"><span class="rvts6">Si </span><span class="rvts18">M</span><span class="rvts6"> es una matriz, devuelve </span><span class="rvts9">span (v_1, ..., v_n)</span><span class="rvts6">, donde el conjunto </span><span class="rvts9">{v_1, ..., v_n}</span><span class="rvts6"> es la base del espacio generado por las columnas de </span><span class="rvts18">M</span><span class="rvts6">.</span></li>
+<li><a name="IDX1892"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">copy</span><span class="rvts18"> (e)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve una copia de la expresión </span><span class="rvts18">e</span><span class="rvts6"> de Maxima. Aunque </span><span class="rvts18">e</span><span class="rvts6"> puede ser cualquier expresión de Maxima, la función </span><span class="rvts9">copy</span><span class="rvts6"> es especialmente útil cuando </span><span class="rvts18">e</span><span class="rvts6"> es una lista o una matriz. Considérese el siguiente ejemplo:</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) m : [1,[2,3]]$</span><br/><span class="rvts9">(%i2) mm : m$</span><br/><span class="rvts9">(%i3) mm[2][1] : x$</span><br/><span class="rvts9">(%i4) m;</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[1,[x,3]]</span><br/><span class="rvts9">(%i5) mm;</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[1,[x,3]]</span></p>
+<p class="rvps3"><span class="rvts6">Veamos el mismo ejemplo siendo ahora </span><span class="rvts18">mm</span><span class="rvts6"> una copia de </span><span class="rvts18">m</span></p>
+<p class="rvps4"><span class="rvts9">(%i6) m : [1,[2,3]]$</span><br/><span class="rvts9">(%i7) mm : copy(m)$</span><br/><span class="rvts9">(%i8) mm[2][1] : x$</span><br/><span class="rvts9">(%i9) m;</span><br/><span class="rvts9">(%o9) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [1,[2,3]]</span><br/><span class="rvts9">(%i10) mm;</span><br/><span class="rvts9">(%o10) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[1,[x,3]]</span></p>
+<p class="rvps3"><span class="rvts6">En esta ocasión, la asignación a </span><span class="rvts18">mm</span><span class="rvts6"> no cambia el valor de </span><span class="rvts18">m</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1893"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">cholesky</span><span class="rvts18"> (M)</span></li>
+<li><a name="IDX1894"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">cholesky</span><span class="rvts18"> (M, field)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve la factorización de Cholesky de la matriz autoadjunta (o hermítica) </span><span class="rvts18">M</span><span class="rvts6">. El valor por defecto del segundo argumento es </span><span class="rvts18">generalring</span><span class="rvts6">. Para una descripción de los posibles valores para </span><span class="rvts18">field</span><span class="rvts6">, véase </span><span class="rvts9">lu_factor</span><span class="rvts6">.</span></li>
+<li><a name="IDX1895"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">ctranspose</span><span class="rvts18"> (M)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve la transpuesta compleja conjugada de la matriz </span><span class="rvts18">M</span><span class="rvts6">. La función </span><span class="rvts9">ctranspose</span><span class="rvts6"> utiliza </span><span class="rvts9">matrix_element_transpose</span><span class="rvts6"> para transponer cada elemento de la matriz.</span></li>
+<li><a name="IDX1896"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">diag_matrix</span><span class="rvts18"> (d_1, d_2,...,d_n)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve una matriz diagonal con los elementos de la diagonal iguales a </span><span class="rvts18">d_1</span><span class="rvts6">, </span><span class="rvts18">d_2</span><span class="rvts6">,...,</span><span class="rvts18">d_n</span><span class="rvts6">; cuando éstos son matrices, los elementos nulos de la matriz devuelta son matrices nulas de tamaño apropiado. Por ejemplo:</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) diag_matrix(diag_matrix(1,2),diag_matrix(3,4));</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ [ 1 &nbsp;0 ] &nbsp;[ 0 &nbsp;0 ] ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ [ &nbsp; &nbsp; &nbsp;] &nbsp;[ &nbsp; &nbsp; &nbsp;] ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ [ 0 &nbsp;2 ] &nbsp;[ 0 &nbsp;0 ] ]</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ [ 0 &nbsp;0 ] &nbsp;[ 3 &nbsp;0 ] ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ [ &nbsp; &nbsp; &nbsp;] &nbsp;[ &nbsp; &nbsp; &nbsp;] ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ [ 0 &nbsp;0 ] &nbsp;[ 0 &nbsp;4 ] ]</span><br/><span class="rvts9">(%i2) diag_matrix(p,q);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ p &nbsp;0 ]</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 0 &nbsp;q ]</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1897"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">dotproduct</span><span class="rvts18"> (u, v)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve el producto escalar de los vectores </span><span class="rvts18">u</span><span class="rvts6"> y </span><span class="rvts18">v</span><span class="rvts6">. Equivale a </span><span class="rvts9">conjugate (transpose (</span><span class="rvts19">u</span><span class="rvts9">)) . </span><span class="rvts19">v</span><span class="rvts6">. Los argumentos </span><span class="rvts18">u</span><span class="rvts6"> y </span><span class="rvts18">v</span><span class="rvts6"> deben ser vectores columna.</span></li>
+<li><a name="IDX1898"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">eigens_by_jacobi</span><span class="rvts18"> (A)</span></li>
+<li><a name="IDX1899"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">eigens_by_jacobi</span><span class="rvts18"> (A, field_type)</span></li>
+<li class="rvps3"><span class="rvts6">Calcula los valores y vectores propios de </span><span class="rvts18">A</span><span class="rvts6"> por el método de las rotaciones de Jacobi. </span><span class="rvts18">A</span><span class="rvts6"> debe ser una matriz simétrica (aunque no necesariamente definida o semidefinida positiva). El argumento </span><span class="rvts18">field_type</span><span class="rvts6"> indica el tipo numérico sobre el que se realizan los cálculos, que puede ser tanto </span><span class="rvts9">floatfield</span><span class="rvts6"> como </span><span class="rvts9">bigfloatfield</span><span class="rvts6">. En caso de que no se especifique </span><span class="rvts18">field_type</span><span class="rvts6">, su valor por defecto será </span><span class="rvts9">floatfield</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Los elementos de </span><span class="rvts18">A</span><span class="rvts6"> deben ser números o expresiones reducibles a números mediante la ejecución de </span><span class="rvts9">float</span><span class="rvts6"> o </span><span class="rvts9">bfloat</span><span class="rvts6">, según sea el valor de </span><span class="rvts18">field_type</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) S : matrix ([1/sqrt(2), 1/sqrt(2)], [- 1/sqrt(2), 1/sqrt(2)]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp;------- &nbsp; ------- ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp;sqrt(2) &nbsp; sqrt(2) ]</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp;1 &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ - ------- &nbsp;------- ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; sqrt(2) &nbsp;sqrt(2) ]</span><br/><span class="rvts9">(%i2) L : matrix ([sqrt(3), 0], [0, sqrt(5)]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ sqrt(3) &nbsp; &nbsp; 0 &nbsp; &nbsp;]</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp;0 &nbsp; &nbsp; sqrt(5) ]</span><br/><span class="rvts9">(%i3) M : S . L . transpose (S);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ sqrt(5) &nbsp; sqrt(3) &nbsp;sqrt(5) &nbsp; sqrt(3) ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ ------- + ------- &nbsp;------- - ------- ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp;]</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ sqrt(5) &nbsp; sqrt(3) &nbsp;sqrt(5) &nbsp; sqrt(3) ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ ------- - ------- &nbsp;------- + ------- ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp;]</span><br/><span class="rvts9">(%i4) eigens_by_jacobi (M);</span><br/><span class="rvts9">The largest percent change was 0.1454972243679</span><br/><span class="rvts9">The largest percent change was 0.0</span><br/><span class="rvts9">number of sweeps: 2</span><br/><span class="rvts9">number of rotations: 1</span><br/><span class="rvts9">(%o4) [[1.732050807568877, 2.23606797749979], </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp;0.70710678118655 &nbsp; 0.70710678118655 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ - 0.70710678118655 &nbsp;0.70710678118655 ]</span><br/><span class="rvts9">(%i5) float ([[sqrt(3), sqrt(5)], S]);</span><br/><span class="rvts9">(%o5) [[1.732050807568877, 2.23606797749979], </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp;0.70710678118655 &nbsp; 0.70710678118655 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ - 0.70710678118655 &nbsp;0.70710678118655 ]</span><br/><span class="rvts9">(%i6) eigens_by_jacobi (M, bigfloatfield);</span><br/><span class="rvts9">The largest percent change was 1.454972243679028b-1</span><br/><span class="rvts9">The largest percent change was 0.0b0</span><br/><span class="rvts9">number of sweeps: 2</span><br/><span class="rvts9">number of rotations: 1</span><br/><span class="rvts9">(%o6) [[1.732050807568877b0, 2.23606797749979b0], </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp;7.071067811865475b-1 &nbsp; 7.071067811865475b-1 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ - 7.071067811865475b-1 &nbsp;7.071067811865475b-1 ]</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1900"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">get_lu_factors</span><span class="rvts18"> (x)</span></li>
+<li class="rvps3"><span class="rvts6">Cuando </span><span class="rvts19">x</span><span class="rvts9"> = lu_factor (</span><span class="rvts19">A</span><span class="rvts9">)</span><span class="rvts6">, entonces </span><span class="rvts9">get_lu_factors</span><span class="rvts6"> devuelve una lista de la forma </span><span class="rvts9">[P, L, U]</span><span class="rvts6">, donde </span><span class="rvts18">P</span><span class="rvts6"> es una matriz permutación, </span><span class="rvts18">L</span><span class="rvts6"> es triangular inferior con unos en la diagonal y </span><span class="rvts18">U</span><span class="rvts6"> es triangular superior, verificándose que </span><span class="rvts19">A</span><span class="rvts9"> = </span><span class="rvts19">P</span><span class="rvts9"> </span><span class="rvts19">L</span><span class="rvts9"> </span><span class="rvts19">U</span><span class="rvts6">.</span></li>
+<li><a name="IDX1901"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">hankel</span><span class="rvts18"> (col)</span></li>
+<li><a name="IDX1902"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">hankel</span><span class="rvts18"> (col, row)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve la matriz de Hankel </span><span class="rvts18">H</span><span class="rvts6">. La primera columna de </span><span class="rvts18">H</span><span class="rvts6"> coincide con </span><span class="rvts18">col</span><span class="rvts6">, excepto en el primer elemento, la última fila de </span><span class="rvts18">H</span><span class="rvts6"> es </span><span class="rvts18">row</span><span class="rvts6">. El valor por defecto para </span><span class="rvts18">row</span><span class="rvts6"> es el vector nulo con igual número de elementos que </span><span class="rvts18">col</span><span class="rvts6">.</span></li>
+<li><a name="IDX1903"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">hessian</span><span class="rvts18"> (f,vars)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve la matriz hessiana de </span><span class="rvts18">f</span><span class="rvts6"> con respecto de las variables de la lista </span><span class="rvts18">vars</span><span class="rvts6">. El elemento </span><span class="rvts18">i</span><span class="rvts6">,</span><span class="rvts18">j</span><span class="rvts6">-ésimo de la matriz hessiana es </span><span class="rvts18">diff(f vars[i],1,vars[j],1)</span><span class="rvts6">.</span></li>
+<li><a name="IDX1904"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">hilbert_matrix</span><span class="rvts18"> (n)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve la matriz de Hilbert </span><span class="rvts18">n</span><span class="rvts6"> por </span><span class="rvts18">n</span><span class="rvts6">. Si </span><span class="rvts18">n</span><span class="rvts6"> no es un entero positivo, emite un mensaje de error.</span></li>
+<li><a name="IDX1905"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">identfor</span><span class="rvts18"> (M)</span></li>
+<li><a name="IDX1906"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">identfor</span><span class="rvts18"> (M, fld)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve una matriz identidad con la misma forma que la matriz </span><span class="rvts18">M</span><span class="rvts6">. Los elementos de la diagonal de la matriz identidad son la identidad multiplicativa del campo </span><span class="rvts18">fld</span><span class="rvts6">; el valor por defecto para </span><span class="rvts18">fld</span><span class="rvts6"> es </span><span class="rvts18">generalring</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">El primer argumento </span><span class="rvts18">M</span><span class="rvts6"> debe ser una matriz cuadrada o no ser matriz en absoluto. Si </span><span class="rvts18">M</span><span class="rvts6"> es una matriz, sus elementos pueden ser matrices cuadradas. La matriz puede tener bloques a cualquier nivel finito de profundidad.</span></p>
+<p class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">zerofor</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1907"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">invert_by_lu</span><span class="rvts18"> (M, (rng generalring))</span></li>
+<li class="rvps3"><span class="rvts6">Invierte la matriz </span><span class="rvts18">M</span><span class="rvts6"> mediante la factorización LU, la cual se hace utilizando el anillo </span><span class="rvts18">rng</span><span class="rvts6">.</span></li>
+<li><a name="IDX1908"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">kronecker_product</span><span class="rvts18"> (A, B)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve el producto de Kroneckerde las matrices </span><span class="rvts18">A</span><span class="rvts6"> y </span><span class="rvts18">B</span><span class="rvts6">.</span></li>
+<li><a name="IDX1909"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">listp</span><span class="rvts18"> (e, p)</span></li>
+<li><a name="IDX1910"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">listp</span><span class="rvts18"> (e)</span></li>
+<li class="rvps3"><span class="rvts6">Dado el argumento opcional </span><span class="rvts18">p</span><span class="rvts6">, devuelve </span><span class="rvts9">true</span><span class="rvts6"> si </span><span class="rvts18">e</span><span class="rvts6"> es una lista de Maxima y </span><span class="rvts18">p</span><span class="rvts6"> toma el valor </span><span class="rvts9">true</span><span class="rvts6"> al aplicarlo a cada elemento de la lista. Si a </span><span class="rvts9">listp</span><span class="rvts6"> no se le suministra el argumento opcional, devuelve </span><span class="rvts9">true</span><span class="rvts6"> si </span><span class="rvts18">e</span><span class="rvts6"> es una lista de Maxima. En cualquier otro caso, el resultado es </span><span class="rvts9">false</span><span class="rvts6">.</span></li>
+<li><a name="IDX1911"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">locate_matrix_entry</span><span class="rvts18"> (M, r_1, c_1, r_2, c_2, f, rel)</span></li>
+<li class="rvps3"><span class="rvts6">El primer argumento debe ser una matriz, mientras que los argumentos desde </span><span class="rvts18">r_1</span><span class="rvts6"> hasta </span><span class="rvts18">c_2</span><span class="rvts6"> determinan la submatriz de </span><span class="rvts18">M</span><span class="rvts6"> tomando las filas desde </span><span class="rvts18">r_1</span><span class="rvts6"> hasta </span><span class="rvts18">r_2</span><span class="rvts6"> y las columnas desde </span><span class="rvts18">c_1</span><span class="rvts6"> hasta </span><span class="rvts18">c_2</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">locate_matrix_entry</span><span class="rvts6"> busca en la submatriz de </span><span class="rvts18">M</span><span class="rvts6"> un elemento que satisfaga cierta propiedad. hay tres posibilidades:</span></p>
+<p class="rvps3"><span class="rvts6">(1) </span><span class="rvts19">rel</span><span class="rvts9"> = 'bool</span><span class="rvts6"> y </span><span class="rvts18">f</span><span class="rvts6"> es un predicado:</span></p>
+<p class="rvps3"><span class="rvts6">Rastrea la submatriz de izquierda a derecha y de arriba hacia abajo, devolviendo el índice del primer elemento que satisface el predicado </span><span class="rvts18">f</span><span class="rvts6">; si ningún elemento lo satisface, el resultado es </span><span class="rvts9">false</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">(2) </span><span class="rvts19">rel</span><span class="rvts9"> = 'max</span><span class="rvts6"> y </span><span class="rvts18">f</span><span class="rvts6"> una función real:</span></p>
+<p class="rvps3"><span class="rvts6">Rastrea la submatriz buscando el elemento que maximice </span><span class="rvts18">f</span><span class="rvts6">, devolviendo el índice correspondiente.</span></p>
+<p class="rvps3"><span class="rvts6">(3) </span><span class="rvts19">rel</span><span class="rvts9"> = 'min</span><span class="rvts6"> y </span><span class="rvts18">f</span><span class="rvts6"> una función real:</span></p>
+<p class="rvps3"><span class="rvts6">Rastrea la submatriz buscando el elemento que minimice </span><span class="rvts18">f</span><span class="rvts6">, devolviendo el índice correspondiente.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1912"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">lu_backsub</span><span class="rvts18"> (M, b)</span></li>
+<li class="rvps3"><span class="rvts6">Si </span><span class="rvts19">M</span><span class="rvts9"> = lu_factor (</span><span class="rvts19">A</span><span class="rvts9">, </span><span class="rvts19">field</span><span class="rvts9">)</span><span class="rvts6">, entonces </span><span class="rvts9">lu_backsub (</span><span class="rvts19">M</span><span class="rvts9">, </span><span class="rvts19">b</span><span class="rvts9">)</span><span class="rvts6"> resuelve el sistema de ecuaciones lineales </span><span class="rvts19">A</span><span class="rvts9"> </span><span class="rvts19">x</span><span class="rvts9"> = </span><span class="rvts19">b</span><span class="rvts6">.</span></li>
+<li><a name="IDX1913"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">lu_factor</span><span class="rvts18"> (M, field)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve una lista de la forma </span><span class="rvts9">[</span><span class="rvts19">LU</span><span class="rvts9">, </span><span class="rvts19">perm</span><span class="rvts9">, </span><span class="rvts19">fld</span><span class="rvts9">]</span><span class="rvts6">, o </span><span class="rvts9">[</span><span class="rvts19">LU</span><span class="rvts9">, </span><span class="rvts19">perm</span><span class="rvts9">, </span><span class="rvts19">fld</span><span class="rvts9">, </span><span class="rvts19">lower-cnd</span><span class="rvts9"> </span><span class="rvts19">upper-cnd</span><span class="rvts9">]</span><span class="rvts6">, donde</span></li>
+</ul>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">La matriz </span><span class="rvts18">LU</span><span class="rvts6"> contiene la factorización de </span><span class="rvts18">M</span><span class="rvts6"> de forma empaquetada, lo que significa tres cosas. En primer lugar, que las filas de </span><span class="rvts18">LU</span><span class="rvts6"> están permutadas de acuerdo con la lista </span><span class="rvts18">perm</span><span class="rvts6">; por ejemplo, si </span><span class="rvts18">perm</span><span class="rvts6"> es la lista </span><span class="rvts9">[3,2,1]</span><span class="rvts6">, la primera fila de la factorización </span><span class="rvts18">LU</span><span class="rvts6"> es la tercera fila de la matriz </span><span class="rvts18">LU</span><span class="rvts6">. En segundo lugar, el factor triangular inferior de </span><span class="rvts18">M</span><span class="rvts6"> es la parte triangular inferior de </span><span class="rvts18">LU</span><span class="rvts6"> con los elementos de la diagonal sustituidos por unos. Por último, el factor triangular superior de </span><span class="rvts18">M</span><span class="rvts6"> es la parte triangular superior de </span><span class="rvts18">LU</span><span class="rvts6">.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Si el campo es </span><span class="rvts9">floatfield</span><span class="rvts6"> o </span><span class="rvts9">complexfield</span><span class="rvts6">, los números </span><span class="rvts18">lower-cnd</span><span class="rvts6"> y </span><span class="rvts18">upper-cnd</span><span class="rvts6"> son las cotas inferior y superior del número de condición de la norma infinita de </span><span class="rvts18">M</span><span class="rvts6">. El número de condición no se puede estimar para todos los campos, en cuyo caso </span><span class="rvts9">lu_factor</span><span class="rvts6"> devuelve una lista de dos elementos. Tanto la cota inferior como la superior pueden diferir de sus valores verdaderos. Véase también </span><span class="rvts9">mat_cond</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">El argumento </span><span class="rvts18">M</span><span class="rvts6"> debe ser una matriz cuadrada.</span></p>
+<p class="rvps3"><span class="rvts6">El argumento opcional </span><span class="rvts18">fld</span><span class="rvts6"> debe ser un símbolo que determine un anillo o un campo. Los anillos y campos predefinidos son:</span></p>
+<ol style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">generalring</span><span class="rvts6"> - el anillo de las expresiones de Maxima</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">floatfield</span><span class="rvts6"> - el campo de los números decimales en coma flotante de doble precisión</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">complexfield</span><span class="rvts6"> - el campo de los números complejos decimales en coma flotante de doble precisión</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">crering</span><span class="rvts6"> - el anillo de las expresiones canónicas racionales (</span><span class="rvts18">Canonical Rational Expression</span><span class="rvts6"> o CRE) de Maxima</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">rationalfield</span><span class="rvts6"> - el campo de los números racionales</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">runningerror</span><span class="rvts6"> - controla los errores de redondeo de las operaciones en coma flotante</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">noncommutingring</span><span class="rvts6"> - el anillo de las expresiones de Maxima en las que el producto es el operador no conmutativo "."</span></li>
+</ol>
+<p class="rvps3"><span class="rvts6">Si el campo es </span><span class="rvts9">floatfield</span><span class="rvts6">, </span><span class="rvts9">complexfield</span><span class="rvts6"> o </span><span class="rvts9">runningerror</span><span class="rvts6">, el algoritmo utiliza pivoteo parcial; para los demás campos, las filas se cambian cuando se necesita evitar pivotes nulos.</span></p>
+<p class="rvps3"><span class="rvts6">La suma aritmética en coma flotante no es asociativa, por lo que el significado de 'campo' no coincide exactamente con su definición matemática.</span></p>
+<p class="rvps3"><span class="rvts6">Un elemento del campo </span><span class="rvts9">runningerror</span><span class="rvts6"> consiste en una lista de Maxima de la forma </span><span class="rvts9">[x,n]</span><span class="rvts6">, donde </span><span class="rvts18">x</span><span class="rvts6"> es un número decimal en coma flotante y </span><span class="rvts9">n</span><span class="rvts6"> un enetro. La diferencia relativa entre el valor real de </span><span class="rvts9">x</span><span class="rvts6"> y </span><span class="rvts9">x</span><span class="rvts6"> está aproximadamente acotado por el valor epsilon de la máquina multiplicado por </span><span class="rvts9">n</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">No es posible la definición de un nuevo campo por parte del usuario, a menos que éste tenga conocimientos de Common Lisp. Para hacerlo, el usuario debe definir funciones para las operaciones aritméticas y para convertir de la representación del campo a Maxima y al revés. Además, en los campos ordenados, donde se hace uso del pivoteo parcial, el usuario debe definir funciones para el módulo y para comparar números del campo. Después de lo anterior, tan solo queda definir una estructura Common Lisp </span><span class="rvts9">mring</span><span class="rvts6">. El fichero </span><span class="rvts9">mring</span><span class="rvts6"> tiene muchos ejemplos.</span></p>
+<p class="rvps3"><span class="rvts6">Para calcular la factorización, la primera tarea consiste en convertir cada elemento de la matriz a un elemento del campo especificado. Si la conversión no es posible, la factorización se detiene con un mensaje de error. Los elementos del campo no necesitan ser expresiones de Maxima; por ejemplo, los elementos de </span><span class="rvts9">complexfield</span><span class="rvts6"> son números complejos de Common Lisp. Tras la factorización, los elementos de la matriz deben convertirse nuevamente a expresiones de Maxima.</span></p>
+<p class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">get_lu_factors</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) w[i,j] := random (1.0) + %i * random (1.0);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;w &nbsp; &nbsp; := random(1.) + %i random(1.)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;i, j</span><br/><span class="rvts9">(%i2) showtime : true$</span><br/><span class="rvts9">Evaluation took 0.00 seconds (0.00 elapsed)</span><br/><span class="rvts9">(%i3) M : genmatrix (w, 100, 100)$</span><br/><span class="rvts9">Evaluation took 7.40 seconds (8.23 elapsed)</span><br/><span class="rvts9">(%i4) lu_factor (M, complexfield)$</span><br/><span class="rvts9">Evaluation took 28.71 seconds (35.00 elapsed)</span><br/><span class="rvts9">(%i5) lu_factor (M, generalring)$</span><br/><span class="rvts9">Evaluation took 109.24 seconds (152.10 elapsed)</span><br/><span class="rvts9">(%i6) showtime : false$</span><br/><span class="rvts9">(%i7) M : matrix ([1 - z, 3], [3, 8 - z]); </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 1 - z &nbsp; &nbsp;3 &nbsp; ]</span><br/><span class="rvts9">(%o7) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; 3 &nbsp; &nbsp;8 - z ]</span><br/><span class="rvts9">(%i8) lu_factor (M, generalring);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 1 - z &nbsp; &nbsp; &nbsp; &nbsp; 3 &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9">(%o8) &nbsp; &nbsp;[[ &nbsp; 3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;9 &nbsp; &nbsp; &nbsp; ], [1, 2], generalring]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ ----- &nbsp;- z - ----- + 8 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 1 - z &nbsp; &nbsp; &nbsp; &nbsp;1 - z &nbsp; &nbsp; ]</span><br/><span class="rvts9">(%i9) get_lu_factors (%);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; 1 &nbsp; &nbsp;0 ] &nbsp;[ 1 - z &nbsp; &nbsp; &nbsp; &nbsp; 3 &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp;[ 1 &nbsp;0 ] &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;] &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9">(%o9) &nbsp;[[ &nbsp; &nbsp; &nbsp;], [ &nbsp; 3 &nbsp; &nbsp; &nbsp;], [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;9 &nbsp; &nbsp; &nbsp; ]]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp;1 ] &nbsp;[ ----- &nbsp;1 ] &nbsp;[ &nbsp; 0 &nbsp; &nbsp;- z - ----- + 8 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 1 - z &nbsp; &nbsp;] &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1 - z &nbsp; &nbsp; ]</span><br/><span class="rvts9">(%i10) %[1] . %[2] . %[3];</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 1 - z &nbsp; &nbsp;3 &nbsp; ]</span><br/><span class="rvts9">(%o10) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; 3 &nbsp; &nbsp;8 - z ]</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1914"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">mat_cond</span><span class="rvts18"> (M, 1)</span></li>
+<li><a name="IDX1915"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">mat_cond</span><span class="rvts18"> (M, inf)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve el número de condición de la </span><span class="rvts18">p</span><span class="rvts6">-norma de la matriz </span><span class="rvts18">M</span><span class="rvts6">. Los valores admisibles para </span><span class="rvts18">p</span><span class="rvts6"> son 1 y </span><span class="rvts18">inf</span><span class="rvts6">. Esta función utiliza la factorización LU para invertir la matriz </span><span class="rvts18">M</span><span class="rvts6">, por lo que el tiempo de ejecución de </span><span class="rvts9">mat_cond</span><span class="rvts6"> es proporcional al cubo del tamaño de la matriz; </span><span class="rvts9">lu_factor</span><span class="rvts6"> determina las cotas inferior y superior para el número de condición de la norma infinita en un tiempo proporcional al cuadrado del tamaño de la matriz.</span></li>
+<li><a name="IDX1916"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">mat_norm</span><span class="rvts18"> (M, 1)</span></li>
+<li><a name="IDX1917"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">mat_norm</span><span class="rvts18"> (M, inf)</span></li>
+<li><a name="IDX1918"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">mat_norm</span><span class="rvts18"> (M, frobenius)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve la </span><span class="rvts18">p</span><span class="rvts6">-norma de la matriz </span><span class="rvts18">M</span><span class="rvts6">. Los valores admisibles para </span><span class="rvts18">p</span><span class="rvts6"> son 1, </span><span class="rvts9">inf</span><span class="rvts6"> y </span><span class="rvts9">frobenius</span><span class="rvts6"> (la norma matricial de Frobenius). La matriz </span><span class="rvts18">M</span><span class="rvts6"> no debe contener bloques.</span></li>
+<li><a name="IDX1919"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">matrixp</span><span class="rvts18"> (e, p)</span></li>
+<li><a name="IDX1920"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">matrixp</span><span class="rvts18"> (e)</span></li>
+<li class="rvps3"><span class="rvts6">Dado el argumento opcional </span><span class="rvts18">p</span><span class="rvts6">, devuelve </span><span class="rvts9">true</span><span class="rvts6"> si </span><span class="rvts18">e</span><span class="rvts6"> es una matriz y </span><span class="rvts18">p</span><span class="rvts6"> toma el valor </span><span class="rvts9">true</span><span class="rvts6"> al aplicarlo a cada elemento de la matriz. Si a </span><span class="rvts9">matrixp</span><span class="rvts6"> no se le suministra el argumento opcional, devuelve </span><span class="rvts9">true</span><span class="rvts6"> si </span><span class="rvts18">e</span><span class="rvts6"> es una matriz. En cualquier otro caso, el resultado es </span><span class="rvts9">false</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">blockmatrixp</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1921"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">matrix_size</span><span class="rvts18"> (M)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve una lista con el número de filas y columnas de la matriz </span><span class="rvts18">M</span><span class="rvts6">.</span></li>
+<li><a name="IDX1922"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">mat_fullunblocker</span><span class="rvts18"> (M)</span></li>
+<li class="rvps3"><span class="rvts6">Si </span><span class="rvts18">M</span><span class="rvts6"> es una matriz de bloques, transforma la matriz llevando todos los elementos de los bloques al primer nivel. Si </span><span class="rvts18">M</span><span class="rvts6"> es una matriz, devuelve </span><span class="rvts18">M</span><span class="rvts6">; en cualquier otro caso, envía un mensaje de error.</span></li>
+<li><a name="IDX1923"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">mat_trace</span><span class="rvts18"> (M)</span></li>
+<li class="rvps3"><span class="rvts6">Calcula la traza de la matriz </span><span class="rvts18">M</span><span class="rvts6">. Si </span><span class="rvts18">M</span><span class="rvts6"> no es una matriz, devuelve una forma nominal. Si </span><span class="rvts18">M</span><span class="rvts6"> es una matriz de bloques, </span><span class="rvts9">mat_trace(M)</span><span class="rvts6"> calcula el mismo valor que </span><span class="rvts9">mat_trace(mat_unblocker(m))</span><span class="rvts6">.</span></li>
+<li><a name="IDX1924"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">mat_unblocker</span><span class="rvts18"> (M)</span></li>
+<li class="rvps3"><span class="rvts6">Si </span><span class="rvts18">M</span><span class="rvts6"> es una matriz de bloques, deshace los bloques de un nivel. Si </span><span class="rvts18">M</span><span class="rvts6"> es una matriz, </span><span class="rvts9">mat_unblocker (M)</span><span class="rvts6"> devuelve </span><span class="rvts18">M</span><span class="rvts6">; en cualquier otro caso, envía un mensaje de error.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si todos los elementos de </span><span class="rvts18">M</span><span class="rvts6"> son matrices, </span><span class="rvts9">mat_unblocker (M)</span><span class="rvts6"> devuelve una matriz sin bloques, pero si los elementos de </span><span class="rvts18">M</span><span class="rvts6"> son a su vez matrices de bloques, </span><span class="rvts9">mat_unblocker (M)</span><span class="rvts6"> devuelve una matriz con el nivel de bloques disminuido en uno.</span></p>
+<p class="rvps3"><span class="rvts6">En caso de trabajar con matrices de bloques, quizás sea conveniente darle a </span><span class="rvts9">matrix_element_mult</span><span class="rvts6"> el valor </span><span class="rvts9">"."</span><span class="rvts6"> y a </span><span class="rvts9">matrix_element_transpose</span><span class="rvts6"> el valor </span><span class="rvts9">'transpose</span><span class="rvts6">. Véase también </span><span class="rvts9">mat_fullunblocker</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) A : matrix ([1, 2], [3, 4]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 1 &nbsp;2 ]</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 3 &nbsp;4 ]</span><br/><span class="rvts9">(%i2) B : matrix ([7, 8], [9, 10]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 7 &nbsp;8 &nbsp;]</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 9 &nbsp;10 ]</span><br/><span class="rvts9">(%i3) matrix ([A, B]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ [ 1 &nbsp;2 ] &nbsp;[ 7 &nbsp;8 &nbsp;] ]</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ [ &nbsp; &nbsp; &nbsp;] &nbsp;[ &nbsp; &nbsp; &nbsp; ] ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ [ 3 &nbsp;4 ] &nbsp;[ 9 &nbsp;10 ] ]</span><br/><span class="rvts9">(%i4) mat_unblocker (%);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 1 &nbsp;2 &nbsp;7 &nbsp;8 &nbsp;]</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 3 &nbsp;4 &nbsp;9 &nbsp;10 ]</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1925"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">nonnegintegerp</span><span class="rvts18"> (n)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve </span><span class="rvts9">true</span><span class="rvts6"> si y solo si </span><span class="rvts19">n</span><span class="rvts9"> &gt;= 0</span><span class="rvts6">, siendo </span><span class="rvts18">n</span><span class="rvts6"> un entero.</span></li>
+<li><a name="IDX1926"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">nullspace</span><span class="rvts18"> (M)</span></li>
+<li class="rvps3"><span class="rvts6">Si </span><span class="rvts18">M</span><span class="rvts6"> es una matriz, devuelve </span><span class="rvts9">span (v_1, ..., v_n)</span><span class="rvts6">, siendo </span><span class="rvts9">{v_1, ..., v_n}</span><span class="rvts6"> la base del espacio nulo de </span><span class="rvts18">M</span><span class="rvts6">. Si el espacio nulo contiene un único elemento, devuelve </span><span class="rvts9">span ()</span><span class="rvts6">.</span></li>
+<li><a name="IDX1927"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">nullity</span><span class="rvts18"> (M)</span></li>
+<li class="rvps3"><span class="rvts6">Si </span><span class="rvts18">M</span><span class="rvts6"> es una matriz, devuelve la dimensión del espacio nulo de </span><span class="rvts18">M</span><span class="rvts6">.</span></li>
+<li><a name="IDX1928"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">orthogonal_complement</span><span class="rvts18"> (v_1, ..., v_n)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve </span><span class="rvts9">span (u_1, ..., u_m)</span><span class="rvts6">, siendo </span><span class="rvts9">{u_1, ..., u_m}</span><span class="rvts6"> la base del complemento ortogonal del conjunto </span><span class="rvts9">(v_1, ..., v_n)</span><span class="rvts6">, cuyos elementos deben ser vectores columna.</span></li>
+<li><a name="IDX1929"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">polynomialp</span><span class="rvts18"> (p, L, coeffp, exponp)</span></li>
+<li><a name="IDX1930"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">polynomialp</span><span class="rvts18"> (p, L, coeffp)</span></li>
+<li><a name="IDX1931"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">polynomialp</span><span class="rvts18"> (p, L)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve </span><span class="rvts9">true</span><span class="rvts6"> si </span><span class="rvts18">p</span><span class="rvts6"> es un polinomio cuyas variables son las de la lista </span><span class="rvts18">L</span><span class="rvts6">, el predicado </span><span class="rvts18">coeffp</span><span class="rvts6"> toma el valor </span><span class="rvts9">true</span><span class="rvts6"> al aplicarlo a cada coeficiente y el predicado </span><span class="rvts18">exponp</span><span class="rvts6"> también alcanza el valor </span><span class="rvts9">true</span><span class="rvts6"> al ser aplicado a los exponentes de las variables listadas en </span><span class="rvts18">L</span><span class="rvts6">. En caso de necesitar que </span><span class="rvts18">exponp</span><span class="rvts6"> no sea un predicado por defecto, se deberá especificar también el predicado </span><span class="rvts18">coeffp</span><span class="rvts6">, aunque aquí se desee su comportamiento por defecto.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts9">polynomialp (</span><span class="rvts19">p</span><span class="rvts9">, </span><span class="rvts19">L</span><span class="rvts9">, </span><span class="rvts19">coeffp</span><span class="rvts9">)</span><span class="rvts6"> equivale a </span><span class="rvts9">polynomialp (</span><span class="rvts19">p</span><span class="rvts9">, </span><span class="rvts19">L</span><span class="rvts9">, </span><span class="rvts19">coeffp</span><span class="rvts9">, 'nonnegintegerp)</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts9">polynomialp (</span><span class="rvts19">p</span><span class="rvts9">, </span><span class="rvts19">L</span><span class="rvts9">)</span><span class="rvts6"> equivale a </span><span class="rvts9">polynomialp (</span><span class="rvts19">p</span><span class="rvts9">, L</span><span class="rvts19">,</span><span class="rvts9"> 'constantp, 'nonnegintegerp)</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">No es necesario expandir el polinomio:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) polynomialp ((x + 1)*(x + 2), [x]);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; true</span><br/><span class="rvts9">(%i2) polynomialp ((x + 1)*(x + 2)^a, [x]);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; false</span></p>
+<p class="rvps3"><span class="rvts6">Un ejemplo utilizando valores distintos a los utilizados por defecto en </span><span class="rvts18">coeffp</span><span class="rvts6"> y en </span><span class="rvts18">exponp</span><span class="rvts6">:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) polynomialp ((x + 1)*(x + 2)^(3/2), [x],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; numberp, numberp);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; true</span><br/><span class="rvts9">(%i2) polynomialp ((x^(1/2) + 1)*(x + 2)^(3/2), [x],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; numberp, numberp);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; true</span></p>
+<p class="rvps3"><span class="rvts6">Polinomios con dos variables:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) polynomialp (x^2 + 5*x*y + y^2, [x]);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; false</span><br/><span class="rvts9">(%i2) polynomialp (x^2 + 5*x*y + y^2, [x, y]);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; true</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1932"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">polytocompanion</span><span class="rvts18"> (p, x)</span></li>
+<li class="rvps3"><span class="rvts6">Si </span><span class="rvts18">p</span><span class="rvts6"> es un polinomio en </span><span class="rvts18">x</span><span class="rvts6">, devuelve la matriz compañera de </span><span class="rvts18">p</span><span class="rvts6">. Para un polinomio mónico </span><span class="rvts18">p</span><span class="rvts6"> de grado </span><span class="rvts18">n</span><span class="rvts6"> se tiene </span><span class="rvts19">p</span><span class="rvts9"> = (-1)^</span><span class="rvts19">n</span><span class="rvts9"> charpoly (polytocompanion (</span><span class="rvts19">p</span><span class="rvts9">, </span><span class="rvts19">x</span><span class="rvts9">))</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts18">p</span><span class="rvts6"> no es un polinomio en </span><span class="rvts18">x</span><span class="rvts6">, se devuelve un mensaje de error.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1933"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">ptriangularize</span><span class="rvts18"> (M, v)</span></li>
+<li class="rvps3"><span class="rvts6">Si </span><span class="rvts18">M</span><span class="rvts6"> es una matriz en la que sus elementos son polinomios en </span><span class="rvts18">v</span><span class="rvts6">, devuelve una matriz </span><span class="rvts18">M2</span><span class="rvts6"> tal que</span></li>
+</ul>
+<ol style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">M2</span><span class="rvts6"> es triangular superior,</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts19">M2</span><span class="rvts9"> = </span><span class="rvts19">E_n</span><span class="rvts9"> ... </span><span class="rvts19">E_1</span><span class="rvts9"> </span><span class="rvts19">M</span><span class="rvts6">, donde </span><span class="rvts18">E_1</span><span class="rvts6">, ..., </span><span class="rvts18">E_n</span><span class="rvts6"> son matrices elementales cuyos elementos son polinomios en </span><span class="rvts18">v</span><span class="rvts6">,</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">|det (</span><span class="rvts19">M</span><span class="rvts9">)| = |det (</span><span class="rvts19">M2</span><span class="rvts9">)|</span><span class="rvts6">,</span></li>
+</ol>
+<p class="rvps3"><span class="rvts6">Nota: esta función no comprueba si los elementos de la matriz son polinomios en </span><span class="rvts18">v</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1934"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">rowop</span><span class="rvts18"> (M, i, j, theta)</span></li>
+<li class="rvps3"><span class="rvts6">Si </span><span class="rvts18">M</span><span class="rvts6"> es una matriz, devuelve la matriz que resulta de relizar la transformación </span><span class="rvts9">R_i &lt;- R_i - theta * R_j</span><span class="rvts6"> con las filas </span><span class="rvts9">R_i</span><span class="rvts6"> y </span><span class="rvts9">R_j</span><span class="rvts6">. Si </span><span class="rvts18">M</span><span class="rvts6"> no tiene estas filas, devuelve un mensaje de error.</span></li>
+<li><a name="IDX1935"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">rank</span><span class="rvts18"> (M)</span></li>
+<li class="rvps3"><span class="rvts6">Calcula el rango de la matriz </span><span class="rvts18">M</span><span class="rvts6">. El rango es la dimensión del espacio columna. Ejemplo:</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) rank(matrix([1,2],[2,4]));</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1</span><br/><span class="rvts9">(%i2) rank(matrix([1,b],[c,d]));</span><br/><span class="rvts9">Proviso: &nbsp;{d - b c # 0}</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1936"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">rowswap</span><span class="rvts18"> (M, i, j)</span></li>
+<li class="rvps3"><span class="rvts6">Si </span><span class="rvts18">M</span><span class="rvts6"> es una matriz, intercambia las filas </span><span class="rvts18">i</span><span class="rvts6"> y </span><span class="rvts18">j</span><span class="rvts6">. Si </span><span class="rvts18">M</span><span class="rvts6"> carece de estas filas, devuelve un mensaje de error.</span></li>
+<li><a name="IDX1937"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">toeplitz</span><span class="rvts18"> (col)</span></li>
+<li><a name="IDX1938"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">toeplitz</span><span class="rvts18"> (col, row)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve una matriz de Toeplitz </span><span class="rvts18">T</span><span class="rvts6">. La primera columna de </span><span class="rvts18">T</span><span class="rvts6"> es </span><span class="rvts18">col</span><span class="rvts6">, excepto su primer elemento. La primera fila de </span><span class="rvts18">T</span><span class="rvts6"> es </span><span class="rvts18">row</span><span class="rvts6">. El valor por defecto para </span><span class="rvts18">row</span><span class="rvts6"> es el complejo conjugado de </span><span class="rvts18">col</span><span class="rvts6">. Ejemplo:</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) &nbsp;toeplitz([1,2,3],[x,y,z]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 1 &nbsp;y &nbsp;z ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 2 &nbsp;1 &nbsp;y ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 3 &nbsp;2 &nbsp;1 ]</span><br/><span class="rvts9">(%i2) &nbsp;toeplitz([1,1+%i]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; 1 &nbsp; &nbsp; 1 - %I ]</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ %I + 1 &nbsp; &nbsp;1 &nbsp; &nbsp;]</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1939"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">vandermonde_matrix</span><span class="rvts18"> ([x_1, ..., x_n])</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve una matriz </span><span class="rvts18">n</span><span class="rvts6"> por </span><span class="rvts18">n</span><span class="rvts6">, cuya </span><span class="rvts18">i</span><span class="rvts6">-ésima fila es </span><span class="rvts9">[1, </span><span class="rvts19">x_i</span><span class="rvts9">, </span><span class="rvts19">x_i</span><span class="rvts9">^2, ... </span><span class="rvts19">x_i</span><span class="rvts9">^(</span><span class="rvts19">n</span><span class="rvts9">-1)]</span><span class="rvts6">.</span></li>
+<li><a name="IDX1940"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">zerofor</span><span class="rvts18"> (M)</span></li>
+<li><a name="IDX1941"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">zerofor</span><span class="rvts18"> (M, fld)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve la matriz nula con la misma estructura que la matriz </span><span class="rvts18">M</span><span class="rvts6">. Cada elemento de la matriz nula es la identidad aditiva del campo </span><span class="rvts18">fld</span><span class="rvts6">; el valor por defecto de </span><span class="rvts18">fld</span><span class="rvts6"> es </span><span class="rvts18">generalring</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">El primer argumento de </span><span class="rvts18">M</span><span class="rvts6"> debe ser una matriz cuadrada o no ser matriz en absoluto. Si </span><span class="rvts18">M</span><span class="rvts6"> es una matriz, cada uno de sus elementos puede ser una matriz cuadrada, por lo que </span><span class="rvts18">M</span><span class="rvts6"> puede ser una matriz de Maxima definida por bloques.</span></p>
+<p class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">identfor</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1942"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">zeromatrixp</span><span class="rvts18"> (M)</span></li>
+<li class="rvps3"><span class="rvts6">Si </span><span class="rvts18">M</span><span class="rvts6"> no es una matriz definida por bloques, devuelve </span><span class="rvts9">true</span><span class="rvts6"> si </span><span class="rvts9">is (equal (</span><span class="rvts19">e</span><span class="rvts9">, 0))</span><span class="rvts6"> es verdadero para todo elemento </span><span class="rvts18">e</span><span class="rvts6"> de </span><span class="rvts18">M</span><span class="rvts6">. Si </span><span class="rvts18">M</span><span class="rvts6"> es una matriz por bloques, devuelve </span><span class="rvts9">true</span><span class="rvts6"> si </span><span class="rvts9">zeromatrixp</span><span class="rvts6"> devuelve a su vez </span><span class="rvts9">true</span><span class="rvts6"> para cada elemento de </span><span class="rvts18">e</span><span class="rvts6">.</span></li>
+<hr style="height: 6px;"/></li>
+</ul>
+<div><table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="linearalgebra.html#SEC219"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_59.html#SEC222"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps3"><span class="rvts10">This document was generated by </span><span class="rvts11">Robert Dodier</span><span class="rvts10"> on </span><span class="rvts11">agosto, 25 2007</span><span class="rvts10"> using </span><a class="rvts12" href="http://texi2html.cvshome.org/">texi2html 1.76</a><span class="rvts10">.</span></p>
+<p></p>
+<p class="rvps6"><span class="rvts13">Created with the Personal Edition of HelpNDoc: </span><a class="rvts14" href="http://www.helpndoc.com">Free HTML Help documentation generator</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				http://maxima.sourceforge.net</div>
+		</div>
+	</body>
+	
+</html>
+

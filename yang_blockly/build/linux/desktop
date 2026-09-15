@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=My Product
+Comment=A refapp application
+# The Exec line includes %u to pass the URL to the application
+Exec=/usr/local/bin/refapp.exe %u
+Terminal=false
+Type=Application
+Icon=refapp.exe
+Categories=Utility;
+StartupWMClass=refapp.exe
+
+ 

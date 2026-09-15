@@ -1,0 +1,630 @@
+﻿<html>
+	
+<head>
+	<title>Introducci&oacute;n a stats</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 3.9.1.648">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Maxima.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("Introduccinastats");
+			}
+		});
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>Introducci&oacute;n a stats</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="stats.html">stats</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="stats.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="stats.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Funcionesyvariablesparainference.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<div><a name="STATS"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_69.html#SEC264"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Introduccinastats.html#SEC266"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_69.html#SEC262"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_71.html#SEC270"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h1 class="rvps2"><span class="rvts0"><span class="rvts8">70. stats</span></span></h1>
+<div><table border="0" cellpadding="1" cellspacing="0" style="border-width: 0px;">
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="Introduccinastats.html#SEC266">70.1 Introducción a stats</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="Introduccinastats.html#SEC267">70.2 Funciones y variables para inference_result</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="Introduccinastats.html#SEC268">70.3 Funciones y variables para stats</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="Introduccinastats.html#SEC269">70.4 Funciones y variables para distribuciones especiales</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height: 6px;"/>
+<div><a name="SEC265"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Introduccinastats.html#SEC265"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Introduccinastats.html#SEC267"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Introduccinastats.html#SEC265"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Introduccinastats.html#SEC265"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_71.html#SEC270"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">70.1 Introducción a stats</span></span></h2>
+<p class="rvps3"><span class="rvts6">El paquete </span><span class="rvts9">stats</span><span class="rvts6"> contiene procedimientos clásicos sobre inferencia estadística y contraste de hipótesis.</span></p>
+<p class="rvps3"><span class="rvts6">Todas estas funciones devuelven un objeto Maxima de tipo </span><span class="rvts9">inference_result</span><span class="rvts6">, el cual contiene los resultados necesarios para hacer inferencias sobre la población y toma de decisiones.</span></p>
+<p class="rvps3"><span class="rvts6">La variable global </span><span class="rvts9">stats_numer</span><span class="rvts6"> controla si los resultados deben darse en formato decimal o simbólico y racional; su valor por defecto es </span><span class="rvts9">true</span><span class="rvts6">, por lo que el formato de salida es decimal.</span></p>
+<p class="rvps3"><span class="rvts6">El paquete </span><span class="rvts9">descriptive</span><span class="rvts6"> contiene algunas utilidades para manipular estructuras de datos (listas y matrices); por ejemplo para extraer submuestras. También contiene algunos ejemplos sobre cómo utilizar el paquete </span><span class="rvts9">numericalio</span><span class="rvts6"> para leer datos de ficheros en texto plano. Véanse </span><span class="rvts9">descriptive</span><span class="rvts6"> y </span><span class="rvts9">numericalio</span><span class="rvts6"> para más detalles.</span></p>
+<p class="rvps3"><span class="rvts6">El paquete </span><span class="rvts9">stats</span><span class="rvts6"> carga en memoria los paquetes </span><span class="rvts9">descriptive</span><span class="rvts6">, </span><span class="rvts9">distrib</span><span class="rvts6"> y </span><span class="rvts9">inference_result</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Para comentarios, errores o sugerencias, contáctese con el autor en</span></p>
+<p class="rvps3"><span class="rvts18">'mario ARROBA edu PUNTO xunta PUNTO es'</span><span class="rvts6">.</span></p>
+<hr style="height: 6px;"/>
+<div><a name="INTRODUCCI_00F3N-A-STATS"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Introduccinastats.html#SEC266"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Introduccinastats.html#SEC268"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Introduccinastats.html#SEC265"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Introduccinastats.html#SEC265"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_71.html#SEC270"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">70.2 Funciones y variables para inference_result</span></span></h2>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC266"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">inference_result</span><span class="rvts18"> (title, values, numbers)</span></li>
+<li class="rvps3"><span class="rvts6">Construye un objeto </span><span class="rvts9">inference_result</span><span class="rvts6"> del tipo devuelto por las funciones estadísticas. El argumento </span><span class="rvts18">title</span><span class="rvts6"> es una cadena de Maxima con el nombre del procedimiento; </span><span class="rvts18">values</span><span class="rvts6"> es una lista con elementos de la forma </span><span class="rvts9">symbol = value</span><span class="rvts6"> y </span><span class="rvts18">numbers</span><span class="rvts6"> es una lista con enteros positivos desde uno hasta </span><span class="rvts9">length(</span><span class="rvts19">values</span><span class="rvts9">)</span><span class="rvts6">, que indican qué valores serán mostrados por defecto.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps3"><span class="rvts6">Este es un ejemplo que muestra los resultados asociados a un rectángulo. El título de este objeto es la cadena </span><span class="rvts9">"Rectangle"</span><span class="rvts6">, el cual almacena cinco resultados, a saber, </span><span class="rvts9">'base</span><span class="rvts6">, </span><span class="rvts9">'height</span><span class="rvts6">, </span><span class="rvts9">'diagonal</span><span class="rvts6">, </span><span class="rvts9">'area</span><span class="rvts6"> y </span><span class="rvts9">'perimeter</span><span class="rvts6">, pero sólo muestra el primero, segundo, quinto y cuarto. El resultado </span><span class="rvts9">'diagonal</span><span class="rvts6"> también se almacena en este objeto, pero no se muestra por defecto; para tener acceso a este valor, hágase uso de la función </span><span class="rvts9">take_inference</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load(inference_result)$</span><br/><span class="rvts9">(%i2) b: 3$ h: 2$</span><br/><span class="rvts9">(%i3) inference_result("Rectangle",</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;['base=b,</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'height=h,</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'diagonal=sqrt(b^2+h^2),</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'area=b*h,</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'perimeter=2*(b+h)],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[1,2,5,4] );</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; Rectangle</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp;base = 3</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; height = 2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| perimeter = 10</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp;area = 6</span><br/><span class="rvts9">(%i4) take_inference('diagonal,%);</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;sqrt(13)</span></p>
+<p class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">take_inference</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="FUNCIONES-Y-VARIABLES-PARA-INFERENCE_005FRESULT"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">inferencep</span><span class="rvts18"> (obj)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve </span><span class="rvts9">true</span><span class="rvts6"> o </span><span class="rvts9">false</span><span class="rvts6">, dependiendo de que </span><span class="rvts18">obj</span><span class="rvts6"> sea un objeto de tipo </span><span class="rvts9">inference_result</span><span class="rvts6"> o no.</span></li>
+<li><a name="SEC267"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">items_inference</span><span class="rvts18"> (obj)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve una lista con los nombres de los elementos almacenados en </span><span class="rvts18">obj</span><span class="rvts6">, el cual debe ser un objeto de tipo </span><span class="rvts9">inference_result</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps3"><span class="rvts6">El objeto </span><span class="rvts9">inference_result</span><span class="rvts6"> almacena dos valores, cuyos nombres son </span><span class="rvts9">'pi</span><span class="rvts6"> y </span><span class="rvts9">'e</span><span class="rvts6">, pero sólo se muestra el segundo. La función </span><span class="rvts9">items_inference</span><span class="rvts6"> devuelve los nombres de todos los elementos almacenados, independientemente de que sean mostrados o no.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load(inference_result)$</span><br/><span class="rvts9">(%i2) inference_result("Hi", ['pi=%pi,'e=%e],[2]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; Hi</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| e = %e</span><br/><span class="rvts9">(%i3) items_inference(%);</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[pi, e]</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2062"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">take_inference</span><span class="rvts18"> (n, obj)</span></li>
+<li><a name="IDX2063"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">take_inference</span><span class="rvts18"> (name, obj)</span></li>
+<li><a name="IDX2064"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">take_inference</span><span class="rvts18"> (list, obj)</span></li>
+<li class="rvps3"><span class="rvts6">Si </span><span class="rvts18">n</span><span class="rvts6"> es un entero positivo, devuelve el </span><span class="rvts18">n</span><span class="rvts6">-ésimo valor almacenado en </span><span class="rvts18">obj</span><span class="rvts6">; si el símbolo </span><span class="rvts18">name</span><span class="rvts6"> es el nombre de uno de los elementos almacenados, también devuelve su valor. Si el primer elemento es una lista de números y/o símbolos, la función </span><span class="rvts9">take_inference</span><span class="rvts6"> devuelve una lista con los resultados correspondientes.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps3"><span class="rvts6">Dado un objeto </span><span class="rvts9">inference_result</span><span class="rvts6">, la función </span><span class="rvts9">take_inference</span><span class="rvts6"> es invocada para extraer cierta información almacenada en él.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load(inference_result)$</span><br/><span class="rvts9">(%i2) b: 3$ h: 2$</span><br/><span class="rvts9">(%i3) sol: inference_result("Rectangle",</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;['base=b,</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'height=h,</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'diagonal=sqrt(b^2+h^2),</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'area=b*h,</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'perimeter=2*(b+h)],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[1,2,5,4] );</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; Rectangle</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp;base = 3</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; height = 2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| perimeter = 10</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp;area = 6</span><br/><span class="rvts9">(%i4) take_inference('base,sol);</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3</span><br/><span class="rvts9">(%i5) take_inference(5,sol);</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;10</span><br/><span class="rvts9">(%i6) take_inference([1,'diagonal],sol);</span><br/><span class="rvts9">(%o6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [3, sqrt(13)]</span><br/><span class="rvts9">(%i7) take_inference(items_inference(sol),sol);</span><br/><span class="rvts9">(%o7) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[3, 2, sqrt(13), 6, 10]</span></p>
+<p class="rvps3"><span class="rvts6">Véanse también </span><span class="rvts9">inference_result</span><span class="rvts6"> y </span><span class="rvts9">take_inference</span><span class="rvts6">.</span></p>
+<hr style="height: 6px;"/>
+<div><a name="IDX2065"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Introduccinastats.html#SEC267"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Introduccinastats.html#SEC269"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Introduccinastats.html#SEC265"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Introduccinastats.html#SEC265"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_71.html#SEC270"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">70.3 Funciones y variables para stats</span></span></h2>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2066"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">stats_numer</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">true</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Cuando </span><span class="rvts9">stats_numer</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, las funciones de inferencia estadística devuelven sus resultados en formato decimal de coma flotante. Cuando vale </span><span class="rvts9">false</span><span class="rvts6">, los resultados se devuelven en formato simbólico y racional.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2067"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">test_mean</span><span class="rvts18"> (x)</span></li>
+<li><a name="FUNCIONES-Y-VARIABLES-PARA-STATS"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">test_mean</span><span class="rvts18"> (x, option_1, option_2, ...)</span></li>
+<li class="rvps3"><span class="rvts6">Es el test </span><span class="rvts18">t</span><span class="rvts6"> de la media. El argumento </span><span class="rvts18">x</span><span class="rvts6"> es una lista o matriz columna con los datos de una muestra unidimensional. También realiza el test asintótico basado en el </span><span class="rvts18">Teorema Central del límite</span><span class="rvts6"> si se le asigna a la opción </span><span class="rvts9">'asymptotic</span><span class="rvts6"> el valor </span><span class="rvts9">true</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Opciones:</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'mean</span><span class="rvts6">, valor por defecto </span><span class="rvts9">0</span><span class="rvts6">, es el valor de la media a contrastar.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'alternative</span><span class="rvts6">, valor por defecto </span><span class="rvts9">'twosided</span><span class="rvts6">, es la hipótesis alternativa; valores válidos son: </span><span class="rvts9">'twosided</span><span class="rvts6">, </span><span class="rvts9">'greater</span><span class="rvts6"> y </span><span class="rvts9">'less</span><span class="rvts6">.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'dev</span><span class="rvts6">, valor por defecto </span><span class="rvts9">'unknown</span><span class="rvts6">, este es el valor de la desviación típica cuando se conoce; valores válidos son: </span><span class="rvts9">'unknown</span><span class="rvts6"> o una expresión con valor positivo.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'conflevel</span><span class="rvts6">, valor por defecto </span><span class="rvts9">95/100</span><span class="rvts6">, nivel de confianza para el intervalo de confianza; debe ser una expresión que tome un valor en el intervalo (0,1).</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'asymptotic</span><span class="rvts6">, valor por defecto </span><span class="rvts9">false</span><span class="rvts6">, indica si debe realizar el test exacto basado en la </span><span class="rvts18">t</span><span class="rvts6"> de Student, o el asintótico basado en el </span><span class="rvts18">Teorema Central del límite</span><span class="rvts6">; valores válidos son </span><span class="rvts9">true</span><span class="rvts6"> y </span><span class="rvts9">false</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">El resultado devuelto por la función </span><span class="rvts9">test_mean</span><span class="rvts6"> es un objeto </span><span class="rvts9">inference_result</span><span class="rvts6"> con los siguientes resultados:</span></p>
+<ol style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'mean_estimate</span><span class="rvts6">: la media muestral.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'conf_level</span><span class="rvts6">: nivel de confianza seleccionado por el usuario.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'conf_interval</span><span class="rvts6">: intervalo de confianza para la media poblacional.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'method</span><span class="rvts6">: procedimiento de inferencia.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'hypotheses</span><span class="rvts6">: hipótesis nula y alternativa a ser contrastada.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'statistic</span><span class="rvts6">: valor del estadístico de contraste utilizado para probar la hipótesis.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'distribution</span><span class="rvts6">: distribución del estadístico de contraste, junto con su(s) parámetro(s).</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'p_value</span><span class="rvts6">: </span><span class="rvts18">p</span><span class="rvts6">-valor del test.</span></li>
+</ol>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps3"><span class="rvts6">Realiza el contraste exacto </span><span class="rvts18">t</span><span class="rvts6"> con varianza desconocida. La hipótesis nula es </span><span class="rvts18">H_0: mean=50</span><span class="rvts6">, frente a la alternativa unilátera </span><span class="rvts18">H_1: mean&lt;50</span><span class="rvts6">; de acuerdo con los resultados, no hay evidencia para rechazar </span><span class="rvts18">H_0</span><span class="rvts6">, pues el </span><span class="rvts18">p</span><span class="rvts6">-valor es muy grande.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load("stats")$</span><br/><span class="rvts9">(%i2) data: [78,64,35,45,45,75,43,74,42,42]$</span><br/><span class="rvts9">(%i3) test_mean(data,'conflevel=0.9,'alternative='less,'mean=50);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; MEAN TEST</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;mean_estimate = 54.3</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;conf_level = 0.9</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| conf_interval = [minf, 61.51314273502712]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; | &nbsp;method = Exact t-test. Unknown variance.</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| hypotheses = H0: mean = 50 , H1: mean &lt; 50</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; statistic = .8244705235071678</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; distribution = [student_t, 9]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp;p_value = .7845100411786889</span></p>
+<p class="rvps3"><span class="rvts6">En esta ocasión Maxima realiza un test asintótico. La hipótesis nula es </span><span class="rvts18">H_0: equal(mean, 50)</span><span class="rvts6"> frente a la alternativa bilátera </span><span class="rvts18">H_1: not equal(mean, 50)</span><span class="rvts6">; de acuerdo con los resultados, </span><span class="rvts18">H_0</span><span class="rvts6"> debe rechazarse en favor de la alternativa </span><span class="rvts18">H_1</span><span class="rvts6">, pues el </span><span class="rvts18">p</span><span class="rvts6">-valor es muy pequeño. Nótese que, tal como indica la componente </span><span class="rvts9">Method</span><span class="rvts6">, este procedimiento sólo puede aplicarse en muestras grandes.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load("stats")$</span><br/><span class="rvts9">(%i2) test_mean([36,118,52,87,35,256,56,178,57,57,89,34,25,98,35,</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;98,41,45,198,54,79,63,35,45,44,75,42,75,45,45,</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;45,51,123,54,151],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;'asymptotic=true,'mean=50);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; MEAN TEST</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; mean_estimate = 74.88571428571429</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; conf_level = 0.95</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| conf_interval = [57.72848600856194, 92.04294256286663]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; | &nbsp; &nbsp;method = Large sample z-test. Unknown variance.</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; hypotheses = H0: mean = 50 , H1: mean # 50</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; statistic = 2.842831192874313</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; distribution = [normal, 0, 1]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; p_value = .004471474652002261</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC268"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">test_means_difference</span><span class="rvts18"> (x1, x2)</span></li>
+<li><a name="IDX2068"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">test_means_difference</span><span class="rvts18"> (x1, x2, option_1, option_2, ...)</span></li>
+<li class="rvps3"><span class="rvts6">Este es el test </span><span class="rvts18">t</span><span class="rvts6"> para la diferencia de medias con muestras. Los argumentos </span><span class="rvts18">x1</span><span class="rvts6"> y </span><span class="rvts18">x2</span><span class="rvts6"> son listas o matrices columna que contienen dos muestras independientes. En caso de varianzas diferentes y desconocidas (véanse las opciones </span><span class="rvts9">'dev1</span><span class="rvts6">, </span><span class="rvts9">'dev2</span><span class="rvts6"> y </span><span class="rvts9">'varequal</span><span class="rvts6"> más abajo) los grados de libertad se calculan mediante la aproximación de Welch. También realiza el test asintótico basado en el </span><span class="rvts18">Teorema Central del límite</span><span class="rvts6"> si se le asigna a la opción </span><span class="rvts9">'asymptotic</span><span class="rvts6"> el valor </span><span class="rvts9">true</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Opciones:</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'alternative</span><span class="rvts6">, valor por defecto </span><span class="rvts9">'twosided</span><span class="rvts6">, es la hipótesis alternativa; valores válidos son: </span><span class="rvts9">'twosided</span><span class="rvts6">, </span><span class="rvts9">'greater</span><span class="rvts6"> y </span><span class="rvts9">'less</span><span class="rvts6">.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'dev1</span><span class="rvts6">, valor por defecto </span><span class="rvts9">'unknown</span><span class="rvts6">, es el valor de la desviación típica de la muestra </span><span class="rvts18">x1</span><span class="rvts6"> cuando se conoce; valores válidos son: </span><span class="rvts9">'unknown</span><span class="rvts6"> o una expresión positiva.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'dev2</span><span class="rvts6">, valor por defecto </span><span class="rvts9">'unknown</span><span class="rvts6">, es el valor de la desviación típica de la muestra </span><span class="rvts18">x2</span><span class="rvts6"> cuando se conoce; valores válidos son: </span><span class="rvts9">'unknown</span><span class="rvts6"> o una expresión positiva.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'varequal</span><span class="rvts6">, valor por defecto </span><span class="rvts9">false</span><span class="rvts6">, indica si las varianzas deben considerarse iguales o no; esta opción sólo toma efecto cuando </span><span class="rvts9">'dev1</span><span class="rvts6"> y/o </span><span class="rvts9">'dev2</span><span class="rvts6"> tienen el valor </span><span class="rvts9">'unknown</span><span class="rvts6">.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'conflevel</span><span class="rvts6">, valor por defecto </span><span class="rvts9">95/100</span><span class="rvts6">, nivel de confianza para el intervalo de confianza; debe ser una expresión que tome un valor en el intervalo (0,1).</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'asymptotic</span><span class="rvts6">, valor por defecto </span><span class="rvts9">false</span><span class="rvts6">, indica si debe realizar el test exacto basado en la </span><span class="rvts18">t</span><span class="rvts6"> de Student, o el asintótico basado en el </span><span class="rvts18">Teorema Central del límite</span><span class="rvts6">; valores válidos son </span><span class="rvts9">true</span><span class="rvts6"> y </span><span class="rvts9">false</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">El resultado devuelto por la función </span><span class="rvts9">test_means_difference</span><span class="rvts6"> es un objeto </span><span class="rvts9">inference_result</span><span class="rvts6"> con los siguientes resultados:</span></p>
+<ol style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'diff_estimate</span><span class="rvts6">: el estimador de la diferencia de medias.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'conf_level</span><span class="rvts6">: nivel de confianza seleccionado por el usuario.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'conf_interval</span><span class="rvts6">: intervalo de confianza para la diferencia de medias.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'method</span><span class="rvts6">: procedimiento de inferencia.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'hypotheses</span><span class="rvts6">: hipótesis nula y alternativa a ser contrastada.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'statistic</span><span class="rvts6">: valor del estadístico de contraste utilizado para probar la hipótesis.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'distribution</span><span class="rvts6">: distribución del estadístico de contraste, junto con su(s) parámetro(s).</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'p_value</span><span class="rvts6">: </span><span class="rvts18">p</span><span class="rvts6">-valor del test.</span></li>
+</ol>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps3"><span class="rvts6">La igualdad de medias se contrasta con dos pequeñas muestras </span><span class="rvts18">x</span><span class="rvts6"> y </span><span class="rvts18">y</span><span class="rvts6">, contra la alternativa </span><span class="rvts18">H_1: m_1&gt;m_2</span><span class="rvts6">, siendo </span><span class="rvts18">m_1</span><span class="rvts6"> y </span><span class="rvts18">m_2</span><span class="rvts6"> las medias poblacionales; las varianzas son desconocidas y se supone que diferentes.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load("stats")$</span><br/><span class="rvts9">(%i2) x: [20.4,62.5,61.3,44.2,11.1,23.7]$</span><br/><span class="rvts9">(%i3) y: [1.2,6.9,38.7,20.4,17.2]$</span><br/><span class="rvts9">(%i4) test_means_difference(x,y,'alternative='greater);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;DIFFERENCE OF MEANS TEST</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; diff_estimate = 20.31999999999999</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; conf_level = 0.95</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp;conf_interval = [- .04597417812882298, inf]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp;method = Exact t-test. Welch approx.</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| hypotheses = H0: mean1 = mean2 , H1: mean1 &gt; mean2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; statistic = 1.838004300728477</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp;distribution = [student_t, 8.62758740184604]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;p_value = .05032746527991905</span></p>
+<p class="rvps3"><span class="rvts6">El mismo test que antes, pero ahora se suponen las varianzas iguales.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load("stats")$</span><br/><span class="rvts9">(%i2) x: [20.4,62.5,61.3,44.2,11.1,23.7]$</span><br/><span class="rvts9">(%i3) y: matrix([1.2],[6.9],[38.7],[20.4],[17.2])$</span><br/><span class="rvts9">(%i4) test_means_difference(x,y,</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;'alternative='greater,</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;'varequal=true);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;DIFFERENCE OF MEANS TEST</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; diff_estimate = 20.31999999999999</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; conf_level = 0.95</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; conf_interval = [- .7722627696897568, inf]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; | &nbsp; method = Exact t-test. Unknown equal variances</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| hypotheses = H0: mean1 = mean2 , H1: mean1 &gt; mean2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; statistic = 1.765996124515009</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; distribution = [student_t, 9]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;p_value = .05560320992529344</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2069"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">test_variance</span><span class="rvts18"> (x)</span></li>
+<li><a name="IDX2070"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">test_variance</span><span class="rvts18"> (x, option_1, option_2, ...)</span></li>
+<li class="rvps3"><span class="rvts6">Este es el test </span><span class="rvts18">chi^2</span><span class="rvts6"> de la varianza. El argumento </span><span class="rvts18">x</span><span class="rvts6"> es una lista o matriz columna con los datos de una muestra unidimensional extraída de una población normal.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Opciones:</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'mean</span><span class="rvts6">, valor por defecto </span><span class="rvts9">'unknown</span><span class="rvts6">, es la media de la población, si se conoce.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'alternative</span><span class="rvts6">, valor por defecto </span><span class="rvts9">'twosided</span><span class="rvts6">, es la hipótesis alternativa; valores válidos son: </span><span class="rvts9">'twosided</span><span class="rvts6">, </span><span class="rvts9">'greater</span><span class="rvts6"> y </span><span class="rvts9">'less</span><span class="rvts6">.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'variance</span><span class="rvts6">, valor por defecto </span><span class="rvts9">1</span><span class="rvts6">, este es el valor (positivo) de la varianza a contrastar.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'conflevel</span><span class="rvts6">, valor por defecto </span><span class="rvts9">95/100</span><span class="rvts6">, nivel de confianza para el intervalo de confianza; debe ser una expresión que tome un valor en el intervalo (0,1).</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">El resultado devuelto por la función </span><span class="rvts9">test_variance</span><span class="rvts6"> es un objeto </span><span class="rvts9">inference_result</span><span class="rvts6"> con los siguientes resultados:</span></p>
+<ol style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'var_estimate</span><span class="rvts6">: la varianza muestral.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'conf_level</span><span class="rvts6">: nivel de confianza seleccionado por el usuario.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'conf_interval</span><span class="rvts6">: intervalo de confianza para la varianza poblacional.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'method</span><span class="rvts6">: procedimiento de inferencia.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'hypotheses</span><span class="rvts6">: hipótesis nula y alternativa a ser contrastada.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'statistic</span><span class="rvts6">: valor del estadístico de contraste utilizado para probar la hipótesis.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'distribution</span><span class="rvts6">: distribución del estadístico de contraste, junto con su parámetro.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'p_value</span><span class="rvts6">: </span><span class="rvts18">p</span><span class="rvts6">-valor del test.</span></li>
+</ol>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps3"><span class="rvts6">Se contrasta si la varianza de una población de media desconocida es igual o mayor que 200.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load("stats")$</span><br/><span class="rvts9">(%i2) x: [203,229,215,220,223,233,208,228,209]$</span><br/><span class="rvts9">(%i3) test_variance(x,'alternative='greater,'variance=200);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;VARIANCE TEST</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;var_estimate = 110.75</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;conf_level = 0.95</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; conf_interval = [57.13433376937479, inf]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp;| method = Variance Chi-square test. Unknown mean.</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp;hypotheses = H0: var = 200 , H1: var &gt; 200</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; statistic = 4.43</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; distribution = [chi2, 8]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; p_value = .8163948512777689</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2071"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">test_variance_ratio</span><span class="rvts18"> (x1, x2)</span></li>
+<li><a name="IDX2072"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">test_variance_ratio</span><span class="rvts18"> (x1, x2, option_1, option_2, ...)</span></li>
+<li class="rvps3"><span class="rvts6">Este es el test </span><span class="rvts18">F</span><span class="rvts6"> del cociente de las varianzas para dos poblaciones normales. Los argumentos </span><span class="rvts18">x1</span><span class="rvts6"> y </span><span class="rvts18">x2</span><span class="rvts6"> son listas o matrices columna que contienen los datos de dos muestras independientes.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Opciones:</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'alternative</span><span class="rvts6">, valor por defecto </span><span class="rvts9">'twosided</span><span class="rvts6">, es la hipótesis alternativa; valores válidos son: </span><span class="rvts9">'twosided</span><span class="rvts6">, </span><span class="rvts9">'greater</span><span class="rvts6"> y </span><span class="rvts9">'less</span><span class="rvts6">.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'mean1</span><span class="rvts6">, valor por defecto </span><span class="rvts9">'unknown</span><span class="rvts6">, es la media de la población de la que procede </span><span class="rvts18">x1</span><span class="rvts6"> cuando se conoce.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'mean2</span><span class="rvts6">, valor por defecto </span><span class="rvts9">'unknown</span><span class="rvts6">, es la media de la población de la que procede </span><span class="rvts18">x2</span><span class="rvts6"> cuando se conoce.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'conflevel</span><span class="rvts6">, valor por defecto </span><span class="rvts9">95/100</span><span class="rvts6">, nivel de confianza para el intervalo de confianza del cociente; debe ser una expresión que tome un valor en el intervalo (0,1).</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">El resultado devuelto por la función </span><span class="rvts9">test_variance_ratio</span><span class="rvts6"> es un objeto </span><span class="rvts9">inference_result</span><span class="rvts6"> con los siguientes resultados</span></p>
+<ol style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'ratio_estimate</span><span class="rvts6">: el cociente de varianzas muestral.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'conf_level</span><span class="rvts6">: nivel de confianza seleccionado por el usuario.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'conf_interval</span><span class="rvts6">: intervalo de confianza para el cociente de varianzas.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'method</span><span class="rvts6">: procedimiento de inferencia.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'hypotheses</span><span class="rvts6">: hipótesis nula y alternativa a ser contrastada.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'statistic</span><span class="rvts6">: valor del estadístico de contraste utilizado para probar la hipótesis.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'distribution</span><span class="rvts6">: distribución del estadístico de contraste, junto con sus parámetros.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'p_value</span><span class="rvts6">: </span><span class="rvts18">p</span><span class="rvts6">-valor del test.</span></li>
+</ol>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps3"><span class="rvts6">Se contrasta la igualdad de varianzas de dos poblaciones normales frente a la alternativa de que la primera es mayor que la segunda.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load("stats")$</span><br/><span class="rvts9">(%i2) x: [20.4,62.5,61.3,44.2,11.1,23.7]$</span><br/><span class="rvts9">(%i3) y: [1.2,6.9,38.7,20.4,17.2]$</span><br/><span class="rvts9">(%i4) test_variance_ratio(x,y,'alternative='greater);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;VARIANCE RATIO TEST</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; ratio_estimate = 2.316933391522034</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; conf_level = 0.95</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp;conf_interval = [.3703504689507268, inf]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; | method = Variance ratio F-test. Unknown means.</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| hypotheses = H0: var1 = var2 , H1: var1 &gt; var2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; statistic = 2.316933391522034</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;distribution = [f, 5, 4]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;p_value = .2179269692254457</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2073"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">test_sign</span><span class="rvts18"> (x)</span></li>
+<li><a name="IDX2074"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">test_sign</span><span class="rvts18"> (x, option_1, option_2, ...)</span></li>
+<li class="rvps3"><span class="rvts6">Este es el test no paramétrico de los signos para contrastes sobre la mediana de una población continua. El argumento </span><span class="rvts18">x</span><span class="rvts6"> es una lista o matriz columna que contiene los datos de una muestra unidimensional.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Opciones:</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'alternative</span><span class="rvts6">, valor por defecto </span><span class="rvts9">'twosided</span><span class="rvts6">, es la hipótesis alternativa; valores válidos son: </span><span class="rvts9">'twosided</span><span class="rvts6">, </span><span class="rvts9">'greater</span><span class="rvts6"> y </span><span class="rvts9">'less</span><span class="rvts6">.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'median</span><span class="rvts6">, valor por defecto </span><span class="rvts9">0</span><span class="rvts6">, es el valor de la mediana a contrastar.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">El resultado devuelto por la función </span><span class="rvts9">test_sign</span><span class="rvts6"> es un objeto </span><span class="rvts9">inference_result</span><span class="rvts6"> con los siguientes resultados:</span></p>
+<ol style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'med_estimate</span><span class="rvts6">: la mediana muestral.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'method</span><span class="rvts6">: procedimiento de inferencia.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'hypotheses</span><span class="rvts6">: hipótesis nula y alternativa a ser contrastada.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'statistic</span><span class="rvts6">: valor del estadístico de contraste utilizado para probar la hipótesis.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'distribution</span><span class="rvts6">: distribución del estadístico de contraste, junto con sus parámetros.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'p_value</span><span class="rvts6">: </span><span class="rvts18">p</span><span class="rvts6">-valor del test.</span></li>
+</ol>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps3"><span class="rvts6">Contrasta si la mediana de la población de la que se ha extraido la muestra es 6, frente a la alternativa </span><span class="rvts18">H_1: median &gt; 6</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load("stats")$</span><br/><span class="rvts9">(%i2) x: [2,0.1,7,1.8,4,2.3,5.6,7.4,5.1,6.1,6]$</span><br/><span class="rvts9">(%i3) test_sign(x,'median=6,'alternative='greater);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;SIGN TEST</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;med_estimate = 5.1</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp;method = Non parametric sign test.</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| hypotheses = H0: median = 6 , H1: median &gt; 6</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;statistic = 7</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp;distribution = [binomial, 10, 0.5]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; p_value = .05468749999999989</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2075"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">test_signed_rank</span><span class="rvts18"> (x)</span></li>
+<li><a name="IDX2076"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">test_signed_rank</span><span class="rvts18"> (x, option_1, option_2, ...)</span></li>
+<li class="rvps3"><span class="rvts6">Este el test de los rangos signados de Wilcoxon para hacer inferencias sobre la mediana de una población continua. El argumento </span><span class="rvts18">x</span><span class="rvts6"> es una lista o matriz columna que contiene los datos de una muestra unidimensional. Realiza la aproximación normal si el tamaño muestral es mayor que 20, o si en la muestra aparece algún cero o hay empates.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Véanse también </span><span class="rvts9">pdf_rank_test</span><span class="rvts6"> y </span><span class="rvts9">cdf_rank_test</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Opciones:</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'median</span><span class="rvts6">, valor por defecto </span><span class="rvts9">0</span><span class="rvts6">, es el valor de la mediana a ser contrastado.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'alternative</span><span class="rvts6">, valor por defecto </span><span class="rvts9">'twosided</span><span class="rvts6">, es la hipótesis alternativa; valores válidos son: </span><span class="rvts9">'twosided</span><span class="rvts6">, </span><span class="rvts9">'greater</span><span class="rvts6"> y </span><span class="rvts9">'less</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">El resultado devuelto por la función </span><span class="rvts9">test_signed_rank</span><span class="rvts6"> es un objeto </span><span class="rvts9">inference_result</span><span class="rvts6"> con los siguientes resultados:</span></p>
+<ol style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'med_estimate</span><span class="rvts6">: la mediana muestral.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'method</span><span class="rvts6">: procedimiento de inferencia.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'hypotheses</span><span class="rvts6">: hipótesis nula y alternativa a ser contrastada.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'statistic</span><span class="rvts6">: valor del estadístico de contraste utilizado para probar la hipótesis.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'distribution</span><span class="rvts6">: distribución del estadístico de contraste, junto con su(s) parámetro(s).</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'p_value</span><span class="rvts6">: </span><span class="rvts18">p</span><span class="rvts6">-valor del test.</span></li>
+</ol>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps3"><span class="rvts6">Contrasta la hipótesis nula </span><span class="rvts18">H_0: median = 15</span><span class="rvts6"> frente a la alternativa </span><span class="rvts18">H_1: median &gt; 15</span><span class="rvts6">. Este test es exacto, puesto que no hay empates.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load("stats")$</span><br/><span class="rvts9">(%i2) x: [17.1,15.9,13.7,13.4,15.5,17.6]$</span><br/><span class="rvts9">(%i3) test_signed_rank(x,median=15,alternative=greater);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; SIGNED RANK TEST</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; med_estimate = 15.7</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; method = Exact test</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| hypotheses = H0: med = 15 , H1: med &gt; 15</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;statistic = 14</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; distribution = [signed_rank, 6]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;p_value = 0.28125</span></p>
+<p class="rvps3"><span class="rvts6">Contrasta la hipótesis nula </span><span class="rvts18">H_0: equal(median, 2.5)</span><span class="rvts6"> frente a la alternativa </span><span class="rvts18">H_1: not equal(median, 2.5)</span><span class="rvts6">. Este es un test asintótico, debido a la presencia de empates.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load("stats")$</span><br/><span class="rvts9">(%i2) y:[1.9,2.3,2.6,1.9,1.6,3.3,4.2,4,2.4,2.9,1.5,3,2.9,4.2,3.1]$</span><br/><span class="rvts9">(%i3) test_signed_rank(y,median=2.5);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; SIGNED RANK TEST</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;med_estimate = 2.9</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;method = Asymptotic test. Ties</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp;hypotheses = H0: med = 2.5 , H1: med # 2.5</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; statistic = 76.5</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | distribution = [normal, 60.5, 17.58195097251724]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; p_value = .3628097734643669</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2077"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">test_rank_sum</span><span class="rvts18"> (x1, x2)</span></li>
+<li><a name="IDX2078"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">test_rank_sum</span><span class="rvts18"> (x1, x2, option_1)</span></li>
+<li class="rvps3"><span class="rvts6">Este es el test de Wilcoxon-Mann-Whitney para comparar las medianas de dos poblaciones continuas. Los dos primeros argumentos </span><span class="rvts18">x1</span><span class="rvts6"> y </span><span class="rvts18">x2</span><span class="rvts6"> son listas o matrices columna con los datos de dos muestras independientes. Realiza la aproximación normal si alguna de las muestras tiene tamaño mayor que 10, o si hay empates.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Opción:</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'alternative</span><span class="rvts6">, valor por defecto </span><span class="rvts9">'twosided</span><span class="rvts6">, es la hipótesis alternativa; valores válidos son: </span><span class="rvts9">'twosided</span><span class="rvts6">, </span><span class="rvts9">'greater</span><span class="rvts6"> y </span><span class="rvts9">'less</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">El resultado devuelto por la función </span><span class="rvts9">test_rank_sum</span><span class="rvts6"> es un objeto </span><span class="rvts9">inference_result</span><span class="rvts6"> con los siguientes resultados:</span></p>
+<ol style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'method</span><span class="rvts6">: procedimiento de inferencia.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'hypotheses</span><span class="rvts6">: hipótesis nula y alternativa a ser contrastada.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'statistic</span><span class="rvts6">: valor del estadístico de contraste utilizado para probar la hipótesis.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'distribution</span><span class="rvts6">: distribución del estadístico de contraste, junto con sus parámetros.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'p_value</span><span class="rvts6">: </span><span class="rvts18">p</span><span class="rvts6">-valor del test.</span></li>
+</ol>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps3"><span class="rvts6">Contrasta si dos poblaciones tiene medianas similares. Al ser los tamaños muestrales pequeños, se realiza el test exacto.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load("stats")$</span><br/><span class="rvts9">(%i2) x:[12,15,17,38,42,10,23,35,28]$</span><br/><span class="rvts9">(%i3) y:[21,18,25,14,52,65,40,43]$</span><br/><span class="rvts9">(%i4) test_rank_sum(x,y);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; RANK SUM TEST</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;method = Exact test</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| hypotheses = H0: med1 = med2 , H1: med1 # med2</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; |</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; statistic = 22</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp;distribution = [rank_sum, 9, 8]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;p_value = .1995886466474702</span></p>
+<p class="rvps3"><span class="rvts6">Ahora, con muestras mayores y empates, el procedimiento realiza la aproximación normal. La hipótesis alternativa es </span><span class="rvts18">H_1: median1 &lt; median2</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load("stats")$</span><br/><span class="rvts9">(%i2) x: [39,42,35,13,10,23,15,20,17,27]$</span><br/><span class="rvts9">(%i3) y: [20,52,66,19,41,32,44,25,14,39,43,35,19,56,27,15]$</span><br/><span class="rvts9">(%i4) test_rank_sum(x,y,'alternative='less);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;RANK SUM TEST</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;method = Asymptotic test. Ties</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp;hypotheses = H0: med1 = med2 , H1: med1 &lt; med2</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; statistic = 48.5</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | distribution = [normal, 79.5, 18.95419580097078]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; p_value = .05096985666598441</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2079"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">test_normality</span><span class="rvts18"> (x)</span></li>
+<li class="rvps3"><span class="rvts6">Test de Shapiro-Wilk para el contraste de normalidad. El argumento </span><span class="rvts18">x</span><span class="rvts6"> es una lista de números, con tamaño muestral mayor que 2 y menor o igual que 5000; bajo cualesquiera otras condiciones, la función </span><span class="rvts9">test_normality</span><span class="rvts6"> emite un mensaje de error.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Referencia:</span></p>
+<p class="rvps3"><span class="rvts6">[1] Algorithm AS R94, Applied Statistics (1995), vol.44, no.4, 547-551</span></p>
+<p class="rvps3"><span class="rvts6">El resultado devuelto por la función </span><span class="rvts9">test_normality</span><span class="rvts6"> es un objeto </span><span class="rvts9">inference_result</span><span class="rvts6"> con los siguientes resultados:</span></p>
+<ol style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'statistic</span><span class="rvts6">: valor del estadístico </span><span class="rvts18">W</span><span class="rvts6">.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'p_value</span><span class="rvts6">: </span><span class="rvts18">p</span><span class="rvts6">-valor bajo la hipótesis de normalidad.</span></li>
+</ol>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps3"><span class="rvts6">Contrasta la normalidad de una población a partir de una muestra de tamaño 9.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load("stats")$</span><br/><span class="rvts9">(%i2) x:[12,15,17,38,42,10,23,35,28]$</span><br/><span class="rvts9">(%i3) test_normality(x);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp;SHAPIRO - WILK TEST</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| statistic = .9251055695162436</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp;p_value = .4361763918860381</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2080"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">simple_linear_regression</span><span class="rvts18"> (x)</span></li>
+<li><a name="IDX2081"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">simple_linear_regression</span><span class="rvts18"> (x option_1)</span></li>
+<li class="rvps3"><span class="rvts6">Regresión lineal simple, </span><span class="rvts18">y_i=a+b x_i+e_i</span><span class="rvts6">, donde las </span><span class="rvts18">e_i</span><span class="rvts6"> son variables aleatorias independientes de distribución </span><span class="rvts18">N(0,sigma)</span><span class="rvts6">. El argumento </span><span class="rvts18">x</span><span class="rvts6"> debe ser una matriz de dos columnas o una lista de pares de números.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Opciones:</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'conflevel</span><span class="rvts6">, valor por defecto </span><span class="rvts9">95/100</span><span class="rvts6">, nivel de confianza para el intervalo de confianza; debe ser una expresión que tome un valor en el intervalo (0,1).</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'regressor</span><span class="rvts6">, valor por defecto </span><span class="rvts9">'x</span><span class="rvts6">, nombre de la variable independiente.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">El resultado devuelto por la función </span><span class="rvts9">simple_linear_regression</span><span class="rvts6"> es un objeto </span><span class="rvts9">inference_result</span><span class="rvts6"> con los siguientes resultados:</span></p>
+<ol style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'model</span><span class="rvts6">: la ecuación ajustada. Útil para hacer predicciones. Véanse los ejemplos más abajo.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'means</span><span class="rvts6">: media bivariante.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'variances</span><span class="rvts6">: varianzas de ambas variables.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'correlation</span><span class="rvts6">: coeficiente de correlación.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'adc</span><span class="rvts6">: coeficiente de determinación ajustado.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'a_estimation</span><span class="rvts6">: estimador del parámetro </span><span class="rvts18">a</span><span class="rvts6">.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'a_conf_int</span><span class="rvts6">: intervalo de confianza del parámetro </span><span class="rvts18">a</span><span class="rvts6">.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'b_estimation</span><span class="rvts6">: estimador del parámetro </span><span class="rvts18">b</span><span class="rvts6">.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'b_conf_int</span><span class="rvts6">: intervalo de confianza del parámetro </span><span class="rvts18">b</span><span class="rvts6">.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'hypotheses</span><span class="rvts6">: hipótesis nula y altenativa sobre el parámetro </span><span class="rvts18">b</span><span class="rvts6">.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'statistic</span><span class="rvts6">: valor del estadístico de contraste utilizado para probar la hipótesis.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'distribution</span><span class="rvts6">: distribución del estadístico de contraste, junto con su parámetro.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'p_value</span><span class="rvts6">: </span><span class="rvts18">p</span><span class="rvts6">-valor del test sobre </span><span class="rvts18">b</span><span class="rvts6">.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'v_estimation</span><span class="rvts6">: estimador insesgado de la varianza, o varianza residual.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'v_conf_int</span><span class="rvts6">: intervalo de confianza de la varianza.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'cond_mean_conf_int</span><span class="rvts6">: intervalo de confianza para la media condicionada. Véanse los ejemplos más abajo.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'new_pred_conf_int</span><span class="rvts6">: intervalo de confianza para una nueva predicción. Véanse los ejemplos más abajo.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">'residuals</span><span class="rvts6">: lista de pares (predicción, residuo), ordenado respecto de las predicciones. Útil para el análisis de la bondad de ajuste. Véanse los ejemplos más abajo.</span></li>
+</ol>
+<p class="rvps3"><span class="rvts6">Sólo los elementos 1, 4, 14, 9, 10, 11, 12 y 13 de arriba, y en este orden, son mostrados por defecto. El resto permanecen ocultos hasta que el usuario haga uso de las funciones </span><span class="rvts9">items_inference</span><span class="rvts6"> y </span><span class="rvts9">take_inference</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps3"><span class="rvts6">Ajuste de un modelo lineal a una muestra bivariante. La entrada </span><span class="rvts9">%i4</span><span class="rvts6"> representa gráficamente la muestra junto con la recta de regresión; la entrada </span><span class="rvts9">%i5</span><span class="rvts6"> calcula </span><span class="rvts9">y</span><span class="rvts6"> dado </span><span class="rvts9">x=113</span><span class="rvts6">; también se calculan las medias y el intervalo de confianza para una nueva predicción cuando </span><span class="rvts9">x=113</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load("stats")$</span><br/><span class="rvts9">(%i2) s:[[125,140.7],[130,155.1],[135,160.3],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [140,167.2],[145,169.8]]$</span><br/><span class="rvts9">(%i3) z:simple_linear_regression(s,conflevel=0.99);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; SIMPLE LINEAR REGRESSION</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; model = 1.405999999999985 x - 31.18999999999804</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; correlation = .9611685255255155</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; v_estimation = 13.57966666666665</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp;| b_conf_int = [.04469633662525263, 2.767303663374718]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;hypotheses = H0: b = 0 ,H1: b # 0</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;statistic = 6.032686683658114</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;distribution = [student_t, 3]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; p_value = 0.0038059549413203</span><br/><span class="rvts9">(%i4) plot2d([[discrete, s], take_inference(model,z)],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[x,120,150],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[gnuplot_curve_styles, ["with points","with lines"]] )$</span><br/><span class="rvts9">(%i5) take_inference(model,z), x=133;</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 155.808</span><br/><span class="rvts9">(%i6) take_inference(means,z);</span><br/><span class="rvts9">(%o6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [135.0, 158.62]</span><br/><span class="rvts9">(%i7) take_inference(new_pred_conf_int,z), x=133;</span><br/><span class="rvts9">(%o7) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[132.0728595995113, 179.5431404004887]</span></p>
+<hr style="height: 6px;"/>
+<div><a name="IDX2082"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Introduccinastats.html#SEC268"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_71.html#SEC270"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Introduccinastats.html#SEC265"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Introduccinastats.html#SEC265"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_71.html#SEC270"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">70.4 Funciones y variables para distribuciones especiales</span></span></h2>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2083"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">pdf_signed_rank</span><span class="rvts18"> (x, n)</span></li>
+<li class="rvps3"><span class="rvts6">Función de densidad de probabilidad de la distribución exacta del estadístico de contraste del test de los rangos signados. El argumento </span><span class="rvts18">x</span><span class="rvts6"> es un número real y </span><span class="rvts18">n</span><span class="rvts6"> un entero positivo.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">test_signed_rank</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2084"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">cdf_signed_rank</span><span class="rvts18"> (x, n)</span></li>
+<li class="rvps3"><span class="rvts6">Función de probabilidad acumulada de la distribución exacta del estadístico de contraste del test de los rangos signados. El argumento </span><span class="rvts18">x</span><span class="rvts6"> es un número real y </span><span class="rvts18">n</span><span class="rvts6"> un entero positivo.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">test_signed_rank</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2085"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">pdf_rank_sum</span><span class="rvts18"> (x, n, m)</span></li>
+<li class="rvps3"><span class="rvts6">Función de densidad de probabilidad de la distribución exacta del estadístico de contraste de Wilcoxon-Mann-Whitney. El argumento </span><span class="rvts18">x</span><span class="rvts6"> es un número real y </span><span class="rvts18">n</span><span class="rvts6"> y </span><span class="rvts18">m</span><span class="rvts6"> son ambos enteros positivos.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">test_rank_sum</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="FUNCIONES-Y-VARIABLES-PARA-DISTRIBUCIONES-ESPECIALES"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">cdf_rank_sum</span><span class="rvts18"> (x, n, m)</span></li>
+<li class="rvps3"><span class="rvts6">Función de probabilidad acumulada de la distribución exacta del estadístico de contraste de Wilcoxon-Mann-Whitney. El argumento </span><span class="rvts18">x</span><span class="rvts6"> es un número real y </span><span class="rvts18">n</span><span class="rvts6"> y </span><span class="rvts18">m</span><span class="rvts6"> son ambos enteros positivos.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">test_rank_sum</span><span class="rvts6">.</span></p>
+<hr style="height: 6px;"/>
+<div><table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Introduccinastats.html#SEC265"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_71.html#SEC270"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps3"><span class="rvts10">This document was generated by </span><span class="rvts11">Robert Dodier</span><span class="rvts10"> on </span><span class="rvts11">agosto, 25 2007</span><span class="rvts10"> using </span><a class="rvts12" href="http://texi2html.cvshome.org/">texi2html 1.76</a><span class="rvts10">.</span></p>
+<p></p>
+<p class="rvps6"><span class="rvts13">Created with the Personal Edition of HelpNDoc: </span><a class="rvts14" href="http://www.helpndoc.com/feature-tour">Easily create CHM Help documents</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				http://maxima.sourceforge.net</div>
+		</div>
+	</body>
+	
+</html>
+

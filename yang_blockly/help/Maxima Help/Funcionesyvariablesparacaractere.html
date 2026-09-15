@@ -1,0 +1,672 @@
+﻿<html>
+	
+<head>
+	<title>Funciones y variables para caracteres</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 3.9.1.648">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Maxima.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("Funcionesyvariablesparacaractere");
+			}
+		});
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>Funciones y variables para caracteres</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="stringproc.html">stringproc</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="stringproc.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Funcionesyvariablesparaentradays.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Funcionesyvariablesparacadenas.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<div><a name="STRINGPROC"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_71.html#SEC271"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparacaractere.html#SEC273"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_71.html#SEC270"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_73.html#SEC277"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h1 class="rvps2"><span class="rvts0"><span class="rvts8">72. stringproc</span></span></h1>
+<div><table border="0" cellpadding="1" cellspacing="0" style="border-width: 0px;">
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="Funcionesyvariablesparacaractere.html#SEC273">72.1 Introducción al procesamiento de cadenas</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="Funcionesyvariablesparacaractere.html#SEC274">72.2 Funciones y variables para entrada y salida</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="Funcionesyvariablesparacaractere.html#SEC275">72.3 Funciones y variables para caracteres</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="Funcionesyvariablesparacaractere.html#SEC276">72.4 Funciones y variables para cadenas</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height: 6px;"/>
+<div><a name="SEC272"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparacaractere.html#SEC272"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparacaractere.html#SEC274"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparacaractere.html#SEC272"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparacaractere.html#SEC272"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_73.html#SEC277"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">72.1 Introducción al procesamiento de cadenas</span></span></h2>
+<p class="rvps3"><span class="rvts6">El paquete </span><span class="rvts9">stringproc</span><span class="rvts6"> amplía las capacidades de Maxima para manipular cadenas de caracteres, al tiempo que añade algunas funciones útiles para la lectura y escritura de ficheros.</span></p>
+<p class="rvps3"><span class="rvts6">Para dudas y fallos, por favor contáctese con van.nek at arcor.de .</span></p>
+<p class="rvps3"><span class="rvts6">En Maxima, una cadena de caracteres se construye fácilmente escribiéndola entre comillas dobles (</span><span class="rvts9">"</span><span class="rvts6">). Téngase en cuenta que las cadenas de Maxima no son cadenas de Lisp, pudiéndose ejecutar las funciones de chequeo </span><span class="rvts9">stringp</span><span class="rvts6"> y </span><span class="rvts9">lstringp</span><span class="rvts6"> con el fin de dilucidar qué tipo de cadena es su argumento. Si por cualquier motivo el usuario tiene una cadena de Lisp, quizás por haber hecho uso de la función </span><span class="rvts9">sconcat</span><span class="rvts6">, y la quiere convertir a una cadena de Maxima habrá de utilizar la función conversora </span><span class="rvts9">sunlisp</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) m: "text";</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; text</span><br/><span class="rvts9">(%i2) [stringp(m),lstringp(m)];</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [true, false]</span><br/><span class="rvts9">(%i3) l: sconcat("text");</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; text</span><br/><span class="rvts9">(%i4) [stringp(l),lstringp(l)];</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [false, true]</span><br/><span class="rvts9">(%i5) stringp( sunlisp(l) );</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; true</span></p>
+<p class="rvps3"><span class="rvts6">Todas las cadenas devueltas por las funciones de </span><span class="rvts9">stringproc</span><span class="rvts6"> son cadenas de Maxima.</span></p>
+<p class="rvps3"><span class="rvts6">Los caracteres individuales se introducen como cadenas de Maxima de longitud igual a la unidad. Estos caracteres no son caracteres de Lisp y se pueden chequear con las funciones </span><span class="rvts9">charp</span><span class="rvts6"> y </span><span class="rvts9">lcharp</span><span class="rvts6">, pudiéndose convertir los caracteres de Lisp a Maxima mediante </span><span class="rvts9">cunlisp</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) c: "e";</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; e</span><br/><span class="rvts9">(%i2) [charp(c),lcharp(c)];</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [true, false]</span><br/><span class="rvts9">(%i3) supcase(c);</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; E</span><br/><span class="rvts9">(%i4) charp(%);</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; true</span></p>
+<p class="rvps3"><span class="rvts6">Todos los caracteres devueltos por las funciones de </span><span class="rvts9">stringproc</span><span class="rvts6"> son caracteres de Maxima. Puesto que los caracteres introducidos son cadenas de longitud igual a la unidad, se pueden utilizar las funciones de cadenas también para los caracteres, como se ha hecho con </span><span class="rvts9">supcase</span><span class="rvts6"> en el anterior ejemplo.</span></p>
+<p class="rvps3"><span class="rvts6">Es importante tener en cuenta que el primer carácter en una cadena de Maxima ocupa la posición 1. Esto se ha diseñado así para mantener la compatibilidad con las listas de Maxima. Véanse las definiciones de </span><span class="rvts9">charat</span><span class="rvts6"> y </span><span class="rvts9">charlist</span><span class="rvts6"> para ver ejemplos.</span></p>
+<p class="rvps3"><span class="rvts6">Las funciones de cadena se utilizan frecuentemente cuando se trabaja con ficheros. El siguiente ejemplo muestra algunas de estas funciones en acción.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">openw</span><span class="rvts6"> envía un flujo de salida hacia un fichero, entonces </span><span class="rvts9">printf</span><span class="rvts6"> permitirá formatera la escritura en este fichero. Véase </span><span class="rvts9">printf</span><span class="rvts6"> para más detalles.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) s: openw("E:/file.txt");</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;#&lt;output stream E:/file.txt&gt;</span><br/><span class="rvts9">(%i2) for n:0 thru 10 do printf( s, "~d ", fib(n) );</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;done</span><br/><span class="rvts9">(%i3) printf( s, "~%~d ~f ~a ~a ~f ~e ~a~%", </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;42,1.234,sqrt(2),%pi,1.0e-2,1.0e-2,1.0b-2 );</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;false</span><br/><span class="rvts9">(%i4) close(s);</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;true</span></p>
+<p class="rvps3"><span class="rvts6">Una vez cerrado el flujo, se podrá abrir nuevamente. La función </span><span class="rvts9">readline</span><span class="rvts6"> devuelve el renglón entero como una única cadena. El paquete </span><span class="rvts9">stringproc</span><span class="rvts6"> dispone de muchas funciones para manipular cadenas. La separación de palabras se puede hacer con </span><span class="rvts9">split</span><span class="rvts6"> o </span><span class="rvts9">tokens</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts9">(%i5) s: openr("E:/file.txt");</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; #&lt;input stream E:/file.txt&gt;</span><br/><span class="rvts9">(%i6) readline(s);</span><br/><span class="rvts9">(%o6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0 1 1 2 3 5 8 13 21 34 55 </span><br/><span class="rvts9">(%i7) line: readline(s);</span><br/><span class="rvts9">(%o7) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 42 1.234 sqrt(2) %pi 0.01 1.0E-2 1.0b-2</span><br/><span class="rvts9">(%i8) list: tokens(line);</span><br/><span class="rvts9">(%o8) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [42, 1.234, sqrt(2), %pi, 0.01, 1.0E-2, 1.0b-2]</span><br/><span class="rvts9">(%i9) map( parsetoken, list );</span><br/><span class="rvts9">(%o9) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [42, 1.234, false, false, 0.01, 0.01, false]</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">parsetoken</span><span class="rvts6"> sólo analiza sintácticamente números enteros y decimales. El análisis de símbolos y números decimales grandes (</span><span class="rvts18">big floats</span><span class="rvts6">) necesita </span><span class="rvts9">parse_string</span><span class="rvts6">, que se cargar automáticamente desde </span><span class="rvts9">eval_string.lisp</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts9">(%i10) map( parse_string, list );</span><br/><span class="rvts9">(%o10) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [42, 1.234, sqrt(2), %pi, 0.01, 0.01, 1.0b-2]</span><br/><span class="rvts9">(%i11) float(%);</span><br/><span class="rvts9">(%o11) [42.0, 1.234, 1.414213562373095, 3.141592653589793,</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; 0.01, 0.01, 0.01]</span><br/><span class="rvts9">(%i12) readline(s);</span><br/><span class="rvts9">(%o12) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; false</span><br/><span class="rvts9">(%i13) close(s)$</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">readline</span><span class="rvts6"> devuelve </span><span class="rvts9">false</span><span class="rvts6"> cuando se alcanza el final del fichero.</span></p>
+<hr style="height: 6px;"/>
+<div><a name="INTRODUCCI_00F3N-AL-PROCESAMIENTO-DE-CADENAS"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparacaractere.html#SEC273"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparacaractere.html#SEC275"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparacaractere.html#SEC272"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparacaractere.html#SEC272"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_73.html#SEC277"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">72.2 Funciones y variables para entrada y salida</span></span></h2>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) s: openw("E:/file.txt");</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; #&lt;output stream E:/file.txt&gt;</span><br/><span class="rvts9">(%i2) control: </span><br/><span class="rvts9">"~2tAn atom: ~20t~a~%~2tand a list: ~20t~{~r ~}~%~2t\</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; and an integer: ~20t~d~%"$</span><br/><span class="rvts9">(%i3) printf( s,control, 'true,[1,2,3],42 )$</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;false</span><br/><span class="rvts9">(%i4) close(s);</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;true</span><br/><span class="rvts9">(%i5) s: openr("E:/file.txt");</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; #&lt;input stream E:/file.txt&gt;</span><br/><span class="rvts9">(%i6) while stringp( tmp:readline(s) ) do print(tmp)$</span><br/><span class="rvts9"> &nbsp;An atom: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;true </span><br/><span class="rvts9"> &nbsp;and a list: &nbsp; &nbsp; &nbsp; one two three &nbsp;</span><br/><span class="rvts9"> &nbsp;and an integer: &nbsp; 42 </span><br/><span class="rvts9">(%i7) close(s)$</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC273"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">close</span><span class="rvts18"> (stream)</span></li>
+<li class="rvps3"><span class="rvts6">Cierra el flujo de datos </span><span class="rvts18">stream</span><span class="rvts6"> y devuelve </span><span class="rvts9">true</span><span class="rvts6"> si </span><span class="rvts18">stream</span><span class="rvts6"> había sido abierto.</span></li>
+<li><a name="FUNCIONES-Y-VARIABLES-PARA-ENTRADA-Y-SALIDA"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">flength</span><span class="rvts18"> (stream)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve el número de elementos en el flujo de datos </span><span class="rvts18">stream</span><span class="rvts6">.</span></li>
+<li><a name="SEC274"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">fposition</span><span class="rvts18"> (stream)</span></li>
+<li><a name="IDX2091"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">fposition</span><span class="rvts18"> (stream, pos)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve la posición actual en el flujo de datos </span><span class="rvts18">stream</span><span class="rvts6"> si no se utiliza </span><span class="rvts18">pos</span><span class="rvts6">. Si se utiliza </span><span class="rvts18">pos</span><span class="rvts6">, </span><span class="rvts9">fposition</span><span class="rvts6"> ajusta la posición en </span><span class="rvts18">stream</span><span class="rvts6">. El argumento </span><span class="rvts18">pos</span><span class="rvts6"> debe ser un número positivo, ocupando el primer elemento en </span><span class="rvts18">stream</span><span class="rvts6"> la posición 1.</span></li>
+<li><a name="IDX2092"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">freshline</span><span class="rvts18"> ()</span></li>
+<li><a name="IDX2093"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">freshline</span><span class="rvts18"> (stream)</span></li>
+<li class="rvps3"><span class="rvts6">Escribe una nueva línea (en el flujo de datos </span><span class="rvts18">stream</span><span class="rvts6">) si la posición actual no corresponde al inicio de la línea.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">newline</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2094"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">newline</span><span class="rvts18"> ()</span></li>
+<li><a name="IDX2095"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">newline</span><span class="rvts18"> (stream)</span></li>
+<li class="rvps3"><span class="rvts6">Escribe una nueva línea (en el flujo de datos </span><span class="rvts18">stream</span><span class="rvts6">).</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Véase </span><span class="rvts9">sprint</span><span class="rvts6"> para un ejemplo de uso de </span><span class="rvts9">newline()</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Nótese que hay algunos casos en los que </span><span class="rvts9">newline</span><span class="rvts6"> no trabaja según lo esperado.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2096"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">opena</span><span class="rvts18"> (file)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve un flujo de datos al fichero </span><span class="rvts18">file</span><span class="rvts6">. Si se abre un fichero ya existente, </span><span class="rvts9">opena</span><span class="rvts6"> añade elementos al final del fichero.</span></li>
+<li><a name="IDX2097"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">openr</span><span class="rvts18"> (file)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve un flujo de datos de entrada al fichero </span><span class="rvts18">file</span><span class="rvts6">. Si </span><span class="rvts18">file</span><span class="rvts6"> no existe, será creado.</span></li>
+<li><a name="IDX2098"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">openw</span><span class="rvts18"> (file)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve un flujo de datos de salida al fichero </span><span class="rvts18">file</span><span class="rvts6">. Si </span><span class="rvts18">file</span><span class="rvts6"> no existe, será creado. Si se abre un fichero ya existente, </span><span class="rvts9">openw</span><span class="rvts6"> lo modifica borrando el contenido anterior.</span></li>
+<li><a name="IDX2099"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">printf</span><span class="rvts18"> (dest, string)</span></li>
+<li><a name="IDX2100"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">printf</span><span class="rvts18"> (dest, string, expr_1, ..., expr_n)</span></li>
+<li class="rvps3"><span class="rvts6">Pone al alcance de Maxima la función FORMAT de Common Lisp.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Véanse las referencias de Lisp para más información.</span></p>
+<p class="rvps3"><span class="rvts6">La siguiente descripción y los ejemplos pueden dar una idea de cómo usar </span><span class="rvts9">printf</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts9"> &nbsp; ~% &nbsp; &nbsp; &nbsp; nueva línea</span><br/><span class="rvts9"> &nbsp; ~&amp; &nbsp; &nbsp; &nbsp; línea de refresco</span><br/><span class="rvts9"> &nbsp; ~t &nbsp; &nbsp; &nbsp; tabulación</span><br/><span class="rvts9"> &nbsp; ~$ &nbsp; &nbsp; &nbsp; moneda</span><br/><span class="rvts9"> &nbsp; ~d &nbsp; &nbsp; &nbsp; entero en base decimal</span><br/><span class="rvts9"> &nbsp; ~b &nbsp; &nbsp; &nbsp; entero en base binaria</span><br/><span class="rvts9"> &nbsp; ~o &nbsp; &nbsp; &nbsp; entero en base octal</span><br/><span class="rvts9"> &nbsp; ~x &nbsp; &nbsp; &nbsp; entero en base hexadecimal</span><br/><span class="rvts9"> &nbsp; ~br &nbsp; &nbsp; &nbsp;entero en base b</span><br/><span class="rvts9"> &nbsp; ~r &nbsp; &nbsp; &nbsp; deletrea un entero</span><br/><span class="rvts9"> &nbsp; ~p &nbsp; &nbsp; &nbsp; plural</span><br/><span class="rvts9"> &nbsp; ~f &nbsp; &nbsp; &nbsp; decimal en coma flotante</span><br/><span class="rvts9"> &nbsp; ~e &nbsp; &nbsp; &nbsp; notación científica</span><br/><span class="rvts9"> &nbsp; ~g &nbsp; &nbsp; &nbsp; ~f o ~e, dependiendo de la magnitud</span><br/><span class="rvts9"> &nbsp; ~a &nbsp; &nbsp; &nbsp; tal como imprime la función de Maxima print</span><br/><span class="rvts9"> &nbsp; ~s &nbsp; &nbsp; &nbsp; cadenas limitadas por "comillas dobles"</span><br/><span class="rvts9"> &nbsp; ~~ &nbsp; &nbsp; &nbsp; ~</span><br/><span class="rvts9"> &nbsp; ~&lt; &nbsp; &nbsp; &nbsp; justificación, ~&gt; termina</span><br/><span class="rvts9"> &nbsp; ~( &nbsp; &nbsp; &nbsp; conversor mayúscula/minúscula, ~) termina </span><br/><span class="rvts9"> &nbsp; ~[ &nbsp; &nbsp; &nbsp; selección, ~] termina </span><br/><span class="rvts9"> &nbsp; ~{ &nbsp; &nbsp; &nbsp; iteración, ~} termina</span></p>
+<p class="rvps3"><span class="rvts6">Nótese que no hay un formato especificado para números decimales grandes (</span><span class="rvts18">big floats</span><span class="rvts6">). Sin embargo, estos números pueden escribirse utilizando simplemente la directiva </span><span class="rvts9">~a</span><span class="rvts6">. La directiva </span><span class="rvts9">~s</span><span class="rvts6"> imprime cadenas encerradas entre "comillas dobles", lo cual se puede evitar utilizando </span><span class="rvts9">~a</span><span class="rvts6">. Por otro lado, la directiva </span><span class="rvts9">~[</span><span class="rvts6"> está indexada a partir del cero. Por último, indicar que algunas directivas no funcionan en Maxima, como por ejemplo </span><span class="rvts9">~:[</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) printf( false, "~a ~a ~4f ~a ~@r", </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"String",sym,bound,sqrt(12),144), bound = 1.234;</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; String sym 1.23 2*sqrt(3) CXLIV</span><br/><span class="rvts9">(%i2) printf( false,"~{~a ~}",["one",2,"THREE"] );</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;one 2 THREE </span><br/><span class="rvts9">(%i3) printf( true,"~{~{~9,1f ~}~%~}",mat ),</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;mat = args( matrix([1.1,2,3.33],[4,5,6],[7,8.88,9]) )$</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;1.1 &nbsp; &nbsp; &nbsp; 2.0 &nbsp; &nbsp; &nbsp; 3.3 </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;4.0 &nbsp; &nbsp; &nbsp; 5.0 &nbsp; &nbsp; &nbsp; 6.0 </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;7.0 &nbsp; &nbsp; &nbsp; 8.9 &nbsp; &nbsp; &nbsp; 9.0 </span><br/><span class="rvts9">(%i4) control: "~:(~r~) bird~p ~[is~;are~] singing."$</span><br/><span class="rvts9">(%i5) printf( false,control, n,n,if n=1 then 0 else 1 ), n=2;</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Two birds are singing.</span></p>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts18">dest</span><span class="rvts6"> es un flujo de datos o </span><span class="rvts9">true</span><span class="rvts6">, entonces </span><span class="rvts9">printf</span><span class="rvts6"> devuelve </span><span class="rvts9">false</span><span class="rvts6">. En otro caso, </span><span class="rvts9">printf</span><span class="rvts6"> devuelve una cadena con la salida.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2101"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">readline</span><span class="rvts18"> (stream)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve una cadena con los caracteres desde la posición actual en el flujo de datos </span><span class="rvts18">stream</span><span class="rvts6"> hasta el final de la línea, o </span><span class="rvts9">false</span><span class="rvts6"> si está al final del fichero.</span></li>
+<li><a name="IDX2102"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">sprint</span><span class="rvts18"> (expr_1, ..., expr_n)</span></li>
+<li class="rvps3"><span class="rvts6">Evalúa y muestra sus argumentos uno tras otro en un renglón comenzando por su extremo izquierdo.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">newline()</span><span class="rvts6">, que se carga automáticamente desde </span><span class="rvts9">stringproc.lisp</span><span class="rvts6">, puede ser de utilidad si se quiere intercalar un salto de línea.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) for n:0 thru 22 do sprint( fib(n) )$</span><br/><span class="rvts9">0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597 2584 4181 6765 </span><br/><span class="rvts9">(%i2) for n:0 thru 22 do ( </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; sprint(fib(n)), if mod(n,10)=9 then newline() )$</span><br/><span class="rvts9">0 1 1 2 3 5 8 13 21 34 </span><br/><span class="rvts9">55 89 144 233 377 610 987 1597 2584 4181 </span><br/><span class="rvts9">6765 10946 17711 </span></p>
+<hr style="height: 6px;"/>
+<div><a name="IDX2103"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparacaractere.html#SEC274"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparacaractere.html#SEC276"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparacaractere.html#SEC272"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparacaractere.html#SEC272"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_73.html#SEC277"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">72.3 Funciones y variables para caracteres</span></span></h2>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2104"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">alphacharp</span><span class="rvts18"> (char)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve </span><span class="rvts9">true</span><span class="rvts6"> si </span><span class="rvts18">char</span><span class="rvts6"> es una carácter alfabético.</span></li>
+<li><a name="IDX2105"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">alphanumericp</span><span class="rvts18"> (char)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve </span><span class="rvts9">true</span><span class="rvts6"> si </span><span class="rvts18">char</span><span class="rvts6"> es una carácter alfabético o un dígito.</span></li>
+<li><a name="FUNCIONES-Y-VARIABLES-PARA-CARACTERES"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">ascii</span><span class="rvts18"> (int)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve el carácter correspondiente al número ASCII </span><span class="rvts18">int</span><span class="rvts6">, debiendo ser </span><span class="rvts18">-1 &lt; int &lt; 256</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) for n from 0 thru 255 do ( </span><br/><span class="rvts9"> &nbsp;tmp: ascii(n),</span><br/><span class="rvts9"> &nbsp;if alphacharp(tmp) then sprint(tmp), if n=96 then newline() )$</span><br/><span class="rvts9">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z </span><br/><span class="rvts9">a b c d e f g h i j k l m n o p q r s t u v w x y z</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC275"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">cequal</span><span class="rvts18"> (char_1, char_2)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve </span><span class="rvts9">true</span><span class="rvts6"> si </span><span class="rvts18">char_1</span><span class="rvts6"> y </span><span class="rvts18">char_2</span><span class="rvts6"> son el mismo carácter.</span></li>
+<li><a name="IDX2106"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">cequalignore</span><span class="rvts18"> (char_1, char_2)</span></li>
+<li class="rvps3"><span class="rvts6">Como </span><span class="rvts9">cequal</span><span class="rvts6">, pero ignora si las letras están en mayúsculas o minúsculas.</span></li>
+<li><a name="IDX2107"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">cgreaterp</span><span class="rvts18"> (char_1, char_2)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve </span><span class="rvts9">true</span><span class="rvts6"> si el número ASCII de </span><span class="rvts18">char_1</span><span class="rvts6"> es mayor que el de </span><span class="rvts18">char_2</span><span class="rvts6">.</span></li>
+<li><a name="IDX2108"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">cgreaterpignore</span><span class="rvts18"> (char_1, char_2)</span></li>
+<li class="rvps3"><span class="rvts6">Como </span><span class="rvts9">cgreaterp</span><span class="rvts6">, pero ignora si las letras están en mayúsculas o minúsculas.</span></li>
+<li><a name="IDX2109"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">charp</span><span class="rvts18"> (obj)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve </span><span class="rvts9">true</span><span class="rvts6"> si </span><span class="rvts18">obj</span><span class="rvts6"> es un carácter de Maxima.</span></li>
+<li><a name="IDX2110"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">cint</span><span class="rvts18"> (char)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve el número ASCII de </span><span class="rvts18">char</span><span class="rvts6">.</span></li>
+<li><a name="IDX2111"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">clessp</span><span class="rvts18"> (char_1, char_2)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve </span><span class="rvts9">true</span><span class="rvts6"> si el número ASCII de </span><span class="rvts18">char_1</span><span class="rvts6"> es menor que el de </span><span class="rvts18">char_2</span><span class="rvts6">.</span></li>
+<li><a name="IDX2112"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">clesspignore</span><span class="rvts18"> (char_1, char_2)</span></li>
+<li class="rvps3"><span class="rvts6">Como </span><span class="rvts9">clessp</span><span class="rvts6">, pero ignora si las letras están en mayúsculas o minúsculas.</span></li>
+<li><a name="IDX2113"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">constituent</span><span class="rvts18"> (char)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve </span><span class="rvts9">true</span><span class="rvts6"> si </span><span class="rvts18">char</span><span class="rvts6"> es un carácter gráfico y no el carácter espacio. Un carácter gráfico es el que se puede ver y con un espacio añadido; </span><span class="rvts9">constituent</span><span class="rvts6"> está definido por Paul Graham, ANSI Common Lisp, 1996, page 67.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) for n from 0 thru 255 do ( </span><br/><span class="rvts9">tmp: ascii(n), if constituent(tmp) then sprint(tmp) )$</span><br/><span class="rvts9">! " # &nbsp;% &nbsp;' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ? @ A B</span><br/><span class="rvts9">C D E F G H I J K L M N O P Q R S T U V W X Y Z [ \ ] ^ _ ` a b c</span><br/><span class="rvts9">d e f g h i j k l m n o p q r s t u v w x y z { | } ~</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2114"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">cunlisp</span><span class="rvts18"> (lisp_char)</span></li>
+<li class="rvps3"><span class="rvts6">Convierte un carácter Lisp en uno de Maxima. El uso de esta función por parte del usuario no será necesario.</span></li>
+<li><a name="IDX2115"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">digitcharp</span><span class="rvts18"> (char)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve </span><span class="rvts9">true</span><span class="rvts6"> si </span><span class="rvts18">char</span><span class="rvts6"> es un dígito.</span></li>
+<li><a name="IDX2116"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">lcharp</span><span class="rvts18"> (obj)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve </span><span class="rvts9">true</span><span class="rvts6"> si </span><span class="rvts18">obj</span><span class="rvts6"> es un carácter de Lisp. El uso de esta función por parte del usuario no será necesario.</span></li>
+<li><a name="IDX2117"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">lowercasep</span><span class="rvts18"> (char)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve </span><span class="rvts9">true</span><span class="rvts6"> si </span><span class="rvts18">char</span><span class="rvts6"> es un carácter en minúscula.</span></li>
+<li><a name="IDX2118"></a>
+<span class="rvts16">Variable:</span><span class="rvts6"> </span><span class="rvts17">newline</span></li>
+<li class="rvps3"><span class="rvts6">El carácter de nueva línea.</span></li>
+<li><a name="IDX2119"></a>
+<span class="rvts16">Variable:</span><span class="rvts6"> </span><span class="rvts17">space</span></li>
+<li class="rvps3"><span class="rvts6">El carácter de espacio.</span></li>
+<li><a name="IDX2120"></a>
+<span class="rvts16">Variable:</span><span class="rvts6"> </span><span class="rvts17">tab</span></li>
+<li class="rvps3"><span class="rvts6">El carácter de tabulación.</span></li>
+<li><a name="IDX2121"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">uppercasep</span><span class="rvts18"> (char)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve </span><span class="rvts9">true</span><span class="rvts6"> si </span><span class="rvts18">char</span><span class="rvts6"> es un carácter en mayúscula.</span></li>
+<hr style="height: 6px;"/></li>
+</ul>
+<div><a name="IDX2122"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparacaractere.html#SEC275"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_73.html#SEC277"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparacaractere.html#SEC272"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparacaractere.html#SEC272"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_73.html#SEC277"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">72.4 Funciones y variables para cadenas</span></span></h2>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2123"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">sunlisp</span><span class="rvts18"> (lisp_string)</span></li>
+<li class="rvps3"><span class="rvts6">Convierte una cadena Lisp en una de Maxima. El uso de esta función por parte del usuario no será necesario.</span></li>
+<li><a name="IDX2124"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">lstringp</span><span class="rvts18"> (obj)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve </span><span class="rvts9">true</span><span class="rvts6"> si </span><span class="rvts18">obj</span><span class="rvts6"> es una cadena de Lisp. El uso de esta función por parte del usuario no será necesario.</span></li>
+<li><a name="IDX2125"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">stringp</span><span class="rvts18"> (obj)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve </span><span class="rvts9">true</span><span class="rvts6"> si </span><span class="rvts18">obj</span><span class="rvts6"> es una cadena de Maxima. Véase un ejemplo en la introducción.</span></li>
+<li><a name="FUNCIONES-Y-VARIABLES-PARA-CADENAS"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">charat</span><span class="rvts18"> (string, n)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve el </span><span class="rvts18">n</span><span class="rvts6">-ésimo carácter de </span><span class="rvts18">string</span><span class="rvts6">. Al primer carácter de </span><span class="rvts18">string</span><span class="rvts6"> le corresponde </span><span class="rvts18">n</span><span class="rvts6"> = 1.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) charat("Lisp",1);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; L</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC276"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">charlist</span><span class="rvts18"> (string)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve una lista con todos los caracteres de </span><span class="rvts18">string</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) charlist("Lisp");</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [L, i, s, p]</span><br/><span class="rvts9">(%i2) %[1];</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; L</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2126"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">parsetoken</span><span class="rvts18"> (string)</span></li>
+<li class="rvps3"><span class="rvts6">La función </span><span class="rvts9">parsetoken</span><span class="rvts6"> convierte el primer lexema de </span><span class="rvts18">string</span><span class="rvts6"> a su forma numérica, devolviendo </span><span class="rvts9">false</span><span class="rvts6"> si no se puede determinar este número. El conjunto de delimitadores de lexemas es </span><span class="rvts9">{space, comma, semicolon, tab, newline}</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) 2*parsetoken("1.234 5.678");</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2.468</span></p>
+<p class="rvps3"><span class="rvts6">También se puede utilizar la función </span><span class="rvts9">parse_string</span><span class="rvts6"> para el análisis sintáctico.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2127"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">sconc</span><span class="rvts18"> (expr_1, ..., expr_n)</span></li>
+<li class="rvps3"><span class="rvts6">Evalúa sus argumentos y los yuxtapone para formar una cadena. Esta función es similar a </span><span class="rvts9">sconcat</span><span class="rvts6">, pero devuelve una cadena de Maxima.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) sconc("xx[",3,"]:",expand((x+y)^3));</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; xx[3]:y^3+3*x*y^2+3*x^2*y+x^3</span><br/><span class="rvts9">(%i2) stringp(%);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; true</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2128"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">scopy</span><span class="rvts18"> (string)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve una copia nueva de la cadena </span><span class="rvts18">string</span><span class="rvts6">.</span></li>
+<li><a name="IDX2129"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">sdowncase</span><span class="rvts18"> (string)</span></li>
+<li><a name="IDX2130"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">sdowncase</span><span class="rvts18"> (string, start)</span></li>
+<li><a name="IDX2131"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">sdowncase</span><span class="rvts18"> (string, start, end)</span></li>
+<li class="rvps3"><span class="rvts6">Convierte caracteres en minúscula a mayúscula. Véase también </span><span class="rvts9">supcase</span><span class="rvts6">.</span></li>
+<li><a name="IDX2132"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">sequal</span><span class="rvts18"> (string_1, string_2)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve </span><span class="rvts9">true</span><span class="rvts6"> si </span><span class="rvts18">string_1</span><span class="rvts6"> y </span><span class="rvts18">string_2</span><span class="rvts6"> son dos cadenas de caracteres iguales.</span></li>
+<li><a name="IDX2133"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">sequalignore</span><span class="rvts18"> (string_1, string_2)</span></li>
+<li class="rvps3"><span class="rvts6">Igual que </span><span class="rvts9">sequal</span><span class="rvts6"> pero no diferencia entre minúsculas y mayúsculas..</span></li>
+<li><a name="IDX2134"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">sexplode</span><span class="rvts18"> (string)</span></li>
+<li class="rvps3"><span class="rvts6">El nombre </span><span class="rvts9">sexplode</span><span class="rvts6"> es un seudónimo de la función </span><span class="rvts9">charlist</span><span class="rvts6">.</span></li>
+<li><a name="IDX2135"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">simplode</span><span class="rvts18"> (list)</span></li>
+<li><a name="IDX2136"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">simplode</span><span class="rvts18"> (list, delim)</span></li>
+<li class="rvps3"><span class="rvts6">La función </span><span class="rvts9">simplode</span><span class="rvts6"> admite como entrada una lista de expresiones para luego convertirla en una cadena de caracteres. Si no se utiliza la opción </span><span class="rvts18">delim</span><span class="rvts6"> para indicar el delimitador, entonces </span><span class="rvts9">simplode</span><span class="rvts6"> actúa como </span><span class="rvts9">sconc</span><span class="rvts6"> y no hace uso de ninguno. El valor de </span><span class="rvts18">delim</span><span class="rvts6"> puede ser cualquier cadena.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) simplode(["xx[",3,"]:",expand((x+y)^3)]);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; xx[3]:y^3+3*x*y^2+3*x^2*y+x^3</span><br/><span class="rvts9">(%i2) simplode( sexplode("stars")," * " );</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; s * t * a * r * s</span><br/><span class="rvts9">(%i3) simplode( ["One","more","coffee."]," " );</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; One more coffee.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2137"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">sinsert</span><span class="rvts18"> (seq, string, pos)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve la concatenación de las cadenas </span><span class="rvts9">substring (</span><span class="rvts19">string</span><span class="rvts9">, 1, </span><span class="rvts19">pos</span><span class="rvts9"> - 1)</span><span class="rvts6">, </span><span class="rvts18">seq</span><span class="rvts6"> y </span><span class="rvts9">substring (</span><span class="rvts19">string</span><span class="rvts9">, </span><span class="rvts19">pos</span><span class="rvts9">)</span><span class="rvts6">. Nótese que al primer carácter de </span><span class="rvts18">string</span><span class="rvts6"> le corresponde la posición 1.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) s: "A submarine."$</span><br/><span class="rvts9">(%i2) sconc( substring(s,1,3),"yellow ",substring(s,3) );</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;A yellow submarine.</span><br/><span class="rvts9">(%i3) sinsert("hollow ",s,3);</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;A hollow submarine.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2138"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">sinvertcase</span><span class="rvts18"> (string)</span></li>
+<li><a name="IDX2139"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">sinvertcase</span><span class="rvts18"> (string, start)</span></li>
+<li><a name="IDX2140"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">sinvertcase</span><span class="rvts18"> (string, start, end)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve la misma cadena </span><span class="rvts18">string</span><span class="rvts6"> pero con todos sus caracteres desde la posición </span><span class="rvts18">start</span><span class="rvts6"> hasta </span><span class="rvts18">end</span><span class="rvts6"> quedan invertidos, esto es, las mayúsculas se convierten en minúsculas y éstas en mayúsculas. Si no se incluye el argumento </span><span class="rvts18">end</span><span class="rvts6">, se invierten todos los caracteres desde </span><span class="rvts18">start</span><span class="rvts6"> hasta el final de la cadena.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) sinvertcase("sInvertCase");</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;SiNVERTcASE</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2141"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">slength</span><span class="rvts18"> (string)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve el número de caracteres de </span><span class="rvts18">string</span><span class="rvts6">.</span></li>
+<li><a name="IDX2142"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">smake</span><span class="rvts18"> (num, char)</span></li>
+<li class="rvps3"><span class="rvts6">Construye una cadena de longitud </span><span class="rvts18">num</span><span class="rvts6"> con todos sus caracteres iguales a </span><span class="rvts18">char</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) smake(3,"w");</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;www</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2143"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">smismatch</span><span class="rvts18"> (string_1, string_2)</span></li>
+<li><a name="IDX2144"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">smismatch</span><span class="rvts18"> (string_1, string_2, test)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve la posición del primer carácter de </span><span class="rvts18">string_1</span><span class="rvts6"> distinto del correpondiente a </span><span class="rvts18">string_2</span><span class="rvts6">. La respuesta será </span><span class="rvts9">false</span><span class="rvts6"> si no existe tal carácter. Por defecto, la función de comparación es </span><span class="rvts9">sequal</span><span class="rvts6">. Si se quiere ignorar la diferencia entre mayúsculas y minúsculas, hágase uso de </span><span class="rvts9">sequalignore</span><span class="rvts6"> para el argumento </span><span class="rvts18">test</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) smismatch("seven","seventh");</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 6</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2145"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">split</span><span class="rvts18"> (string)</span></li>
+<li><a name="IDX2146"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">split</span><span class="rvts18"> (string, delim)</span></li>
+<li><a name="IDX2147"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">split</span><span class="rvts18"> (string, delim, multiple)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve la lista de todos los lexemas (</span><span class="rvts18">tokens</span><span class="rvts6">) de </span><span class="rvts18">string</span><span class="rvts6">. La función </span><span class="rvts9">split</span><span class="rvts6"> utiliza </span><span class="rvts18">delim</span><span class="rvts6"> como delimitador, y en caso de no ser utilizado este argumento, será utilizado el espacio en blanco como delimitador por defecto. El argumento </span><span class="rvts18">multiple</span><span class="rvts6"> es una variable booleana con valor </span><span class="rvts9">true</span><span class="rvts6"> por defecto. Los delimitadores múltiples se leen como uno solo, lo que resulta de utilidad si las tabulaciones son almacenadas como secuencias de espacios en blanco. Si a </span><span class="rvts18">multiple</span><span class="rvts6"> se le asigna el valor </span><span class="rvts9">false</span><span class="rvts6">, se consirararán todos los delimitadores.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) split("1.2 &nbsp; 2.3 &nbsp; 3.4 &nbsp; 4.5");</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [1.2, 2.3, 3.4, 4.5]</span><br/><span class="rvts9">(%i2) split("first;;third;fourth",";",false);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [first, , third, fourth]</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2148"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">sposition</span><span class="rvts18"> (char, string)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve la posición del primer carácter de </span><span class="rvts18">string</span><span class="rvts6"> que coincide con </span><span class="rvts18">char</span><span class="rvts6">. Al primer carácter de </span><span class="rvts18">string</span><span class="rvts6"> le corresponde la posición 1. Para cuando se quiera ignorar la diferencia entre mayúsculas y minúsculas, véase </span><span class="rvts18">ssearch</span><span class="rvts6">.</span></li>
+<li><a name="IDX2149"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">sremove</span><span class="rvts18"> (seq, string)</span></li>
+<li><a name="IDX2150"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">sremove</span><span class="rvts18"> (seq, string, test)</span></li>
+<li><a name="IDX2151"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">sremove</span><span class="rvts18"> (seq, string, test, start)</span></li>
+<li><a name="IDX2152"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">sremove</span><span class="rvts18"> (seq, string, test, start, end)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve la cadena </span><span class="rvts18">string</span><span class="rvts6"> pero sin las subcadenas que coinciden con </span><span class="rvts18">seq</span><span class="rvts6">. La función de comparación por defecto es </span><span class="rvts9">sequal</span><span class="rvts6">. Si se quiere ignorar la diferencia entre mayúsculas y minúsculas, hágase uso de </span><span class="rvts9">sequalignore</span><span class="rvts6"> para el argumento </span><span class="rvts18">test</span><span class="rvts6">. Utilícense </span><span class="rvts18">start</span><span class="rvts6"> y </span><span class="rvts18">end</span><span class="rvts6"> para acotar la búsqueda. Al primer carácter de </span><span class="rvts18">string</span><span class="rvts6"> le corresponde la posición 1.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) sremove("n't","I don't like coffee.");</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; I do like coffee.</span><br/><span class="rvts9">(%i2) sremove ("DO ",%,'sequalignore);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;I like coffee.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2153"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">sremovefirst</span><span class="rvts18"> (seq, string)</span></li>
+<li><a name="IDX2154"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">sremovefirst</span><span class="rvts18"> (seq, string, test)</span></li>
+<li><a name="IDX2155"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">sremovefirst</span><span class="rvts18"> (seq, string, test, start)</span></li>
+<li><a name="IDX2156"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">sremovefirst</span><span class="rvts18"> (seq, string, test, start, end)</span></li>
+<li class="rvps3"><span class="rvts6">Actúa de forma similar a la función </span><span class="rvts9">sremove</span><span class="rvts6">, pero sólo elimina la primera aparición de la subcadena </span><span class="rvts9">seq</span><span class="rvts6">.</span></li>
+<li><a name="IDX2157"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">sreverse</span><span class="rvts18"> (string)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve una cadena con todos los caracteres de </span><span class="rvts18">string</span><span class="rvts6"> en orden inverso.</span></li>
+<li><a name="IDX2158"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">ssearch</span><span class="rvts18"> (seq, string)</span></li>
+<li><a name="IDX2159"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">ssearch</span><span class="rvts18"> (seq, string, test)</span></li>
+<li><a name="IDX2160"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">ssearch</span><span class="rvts18"> (seq, string, test, start)</span></li>
+<li><a name="IDX2161"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">ssearch</span><span class="rvts18"> (seq, string, test, start, end)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve la posición de la primera subcadena de </span><span class="rvts18">string</span><span class="rvts6"> que coincide con la cadena </span><span class="rvts18">seq</span><span class="rvts6">. La función de comparación por defecto es </span><span class="rvts9">sequal</span><span class="rvts6">. Si se quiere ignorar la diferencia entre mayúsculas y minúsculas, hágase uso de </span><span class="rvts9">sequalignore</span><span class="rvts6"> para el argumento </span><span class="rvts18">test</span><span class="rvts6">. Utilícense </span><span class="rvts18">start</span><span class="rvts6"> y </span><span class="rvts18">end</span><span class="rvts6"> para acotar la búsqueda. Al primer carácter de </span><span class="rvts18">string</span><span class="rvts6"> le corresponde la posición 1.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) ssearch("~s","~{~S ~}~%",'sequalignore);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2162"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">ssort</span><span class="rvts18"> (string)</span></li>
+<li><a name="IDX2163"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">ssort</span><span class="rvts18"> (string, test)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve una cadena con todos los caracteres de </span><span class="rvts18">string</span><span class="rvts6"> en un orden tal que no haya dos caracteres sucesivos </span><span class="rvts18">c</span><span class="rvts6"> y </span><span class="rvts18">d</span><span class="rvts6"> que verifiquen que </span><span class="rvts9">test (</span><span class="rvts19">c</span><span class="rvts9">, </span><span class="rvts19">d</span><span class="rvts9">)</span><span class="rvts6"> sea igual </span><span class="rvts9">false</span><span class="rvts6"> y </span><span class="rvts9">test (</span><span class="rvts19">d</span><span class="rvts9">, </span><span class="rvts19">c</span><span class="rvts9">)</span><span class="rvts6"> igual a </span><span class="rvts9">true</span><span class="rvts6">. La función de comparación </span><span class="rvts18">test</span><span class="rvts6"> por defecto es </span><span class="rvts18">clessp</span><span class="rvts6">, siendo el conjunto de posibles valores para este argumento </span><span class="rvts9">{clessp, clesspignore, cgreaterp, cgreaterpignore, cequal, cequalignore}</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) ssort("I don't like Mondays.");</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;'.IMaddeiklnnoosty</span><br/><span class="rvts9">(%i2) ssort("I don't like Mondays.",'cgreaterpignore);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ytsoonnMlkIiedda.' &nbsp; </span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2164"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">ssubst</span><span class="rvts18"> (new, old, string)</span></li>
+<li><a name="IDX2165"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">ssubst</span><span class="rvts18"> (new, old, string, test)</span></li>
+<li><a name="IDX2166"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">ssubst</span><span class="rvts18"> (new, old, string, test, start)</span></li>
+<li><a name="IDX2167"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">ssubst</span><span class="rvts18"> (new, old, string, test, start, end)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve una cadena similar a </span><span class="rvts18">string</span><span class="rvts6"> pero en la que aquellas subcadenas coincidentes con </span><span class="rvts18">old</span><span class="rvts6"> han sido sustituidas por </span><span class="rvts18">new</span><span class="rvts6">. Las subcadenas </span><span class="rvts18">old</span><span class="rvts6"> y </span><span class="rvts18">new</span><span class="rvts6"> no necesitan ser de la misma longitud. La función de comparación por defecto es </span><span class="rvts9">sequal</span><span class="rvts6">. Si se quiere ignorar la diferencia entre mayúsculas y minúsculas durante la búsqueda de </span><span class="rvts18">old</span><span class="rvts6">, hágase uso de </span><span class="rvts9">sequalignore</span><span class="rvts6"> para el argumento </span><span class="rvts18">test</span><span class="rvts6">. Utilícense </span><span class="rvts18">start</span><span class="rvts6"> y </span><span class="rvts18">end</span><span class="rvts6"> para acotar la búsqueda. Al primer carácter de </span><span class="rvts18">string</span><span class="rvts6"> le corresponde la posición 1.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) ssubst("like","hate","I hate Thai food. I hate green tea.");</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;I like Thai food. I like green tea.</span><br/><span class="rvts9">(%i2) ssubst("Indian","thai",%,'sequalignore,8,12);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; I like Indian food. I like green tea.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2168"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">ssubstfirst</span><span class="rvts18"> (new, old, string)</span></li>
+<li><a name="IDX2169"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">ssubstfirst</span><span class="rvts18"> (new, old, string, test)</span></li>
+<li><a name="IDX2170"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">ssubstfirst</span><span class="rvts18"> (new, old, string, test, start)</span></li>
+<li><a name="IDX2171"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">ssubstfirst</span><span class="rvts18"> (new, old, string, test, start, end)</span></li>
+<li class="rvps3"><span class="rvts6">Actúa de forma similar a la función </span><span class="rvts9">subst</span><span class="rvts6">, pero sólo hace la sustitución en la primera coincidencia con </span><span class="rvts18">old</span><span class="rvts6">.</span></li>
+<li><a name="IDX2172"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">strim</span><span class="rvts18"> (seq,string)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve la cadena </span><span class="rvts18">string</span><span class="rvts6"> pero recortando los caracteres de </span><span class="rvts18">seq</span><span class="rvts6"> que tuviese en sus extremos.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) "/* comment */"$</span><br/><span class="rvts9">(%i2) strim(" /*",%);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;comment</span><br/><span class="rvts9">(%i3) slength(%);</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 7</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2173"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">striml</span><span class="rvts18"> (seq, string)</span></li>
+<li class="rvps3"><span class="rvts6">Actúa de forma similar a </span><span class="rvts9">strim</span><span class="rvts6">, pero sólo recorta en el extremo final de </span><span class="rvts18">string</span><span class="rvts6">.</span></li>
+<li><a name="IDX2174"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">strimr</span><span class="rvts18"> (seq, string)</span></li>
+<li class="rvps3"><span class="rvts6">Actúa de forma similar a </span><span class="rvts9">strim</span><span class="rvts6">, pero sólo recorta en el extremo inicial de </span><span class="rvts18">string</span><span class="rvts6">.</span></li>
+<li><a name="IDX2175"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">substring</span><span class="rvts18"> (string, start)</span></li>
+<li><a name="IDX2176"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">substring</span><span class="rvts18"> (string, start, end)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve la subcadena de </span><span class="rvts18">string</span><span class="rvts6"> que comienza en la posición </span><span class="rvts18">start</span><span class="rvts6"> y termina en la posición </span><span class="rvts18">end</span><span class="rvts6">. El carácter en la posición </span><span class="rvts18">end</span><span class="rvts6"> no se incluye. En caso de no suministrarse el argumento </span><span class="rvts18">end</span><span class="rvts6">, la subcadena se extenderá hasta el final. Al primer carácter de </span><span class="rvts18">string</span><span class="rvts6"> le corresponde la posición 1.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) substring("substring",4);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;string</span><br/><span class="rvts9">(%i2) substring(%,4,6);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;in</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2177"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">supcase</span><span class="rvts18"> (string)</span></li>
+<li><a name="IDX2178"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">supcase</span><span class="rvts18"> (string, start)</span></li>
+<li><a name="IDX2179"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">supcase</span><span class="rvts18"> (string, start, end)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve la cadena </span><span class="rvts18">string</span><span class="rvts6"> con todos sus caracteres entre las posiciones </span><span class="rvts18">start</span><span class="rvts6"> y </span><span class="rvts18">end</span><span class="rvts6"> en minúscula transformados a mayúscula. En caso de no suministrarse el argumento </span><span class="rvts18">end</span><span class="rvts6">, los cambios se extenderán hasta el final.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) supcase("english",1,2);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;English</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2180"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">tokens</span><span class="rvts18"> (string)</span></li>
+<li><a name="IDX2181"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">tokens</span><span class="rvts18"> (string, test)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve la lista de todos los lexemas (</span><span class="rvts18">tokens</span><span class="rvts6">) de </span><span class="rvts18">string</span><span class="rvts6">. Los lexemas son subcadenas cuyos caracteres satisfacen la condición </span><span class="rvts18">test</span><span class="rvts6">. Si no se suministra el argumento </span><span class="rvts18">test</span><span class="rvts6">, se utilizará la condición </span><span class="rvts18">constituent</span><span class="rvts6">, siendo el conjunto de las otras alternativas </span><span class="rvts9">{constituent, alphacharp, digitcharp, lowercasep, uppercasep, charp, characterp, alphanumericp}</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) tokens("24 October 2005");</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[24, October, 2005]</span><br/><span class="rvts9">(%i2) tokens("05-10-24",'digitcharp);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [05, 10, 24]</span><br/><span class="rvts9">(%i3) map(parsetoken,%);</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[5, 10, 24]</span></p>
+<hr style="height: 6px;"/>
+<div><table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparacaractere.html#SEC272"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_73.html#SEC277"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps3"><span class="rvts10">This document was generated by </span><span class="rvts11">Robert Dodier</span><span class="rvts10"> on </span><span class="rvts11">agosto, 25 2007</span><span class="rvts10"> using </span><a class="rvts12" href="http://texi2html.cvshome.org/">texi2html 1.76</a><span class="rvts10">.</span></p>
+<p></p>
+<p class="rvps6"><span class="rvts13">Created with the Personal Edition of HelpNDoc: </span><a class="rvts14" href="http://www.helpndoc.com/feature-tour/iphone-website-generation">Easily create iPhone documentation</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				http://maxima.sourceforge.net</div>
+		</div>
+	</body>
+	
+</html>
+

@@ -1,0 +1,104 @@
+﻿<html>
+	
+<head>
+	<title> 3.4. La etiqueta PLOT</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 3.9.1.648">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "MATEXE.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("34LaetiquetaPLOT");
+			}
+		});
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1> 3.4. La etiqueta PLOT</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="AyudaMatexe.html">Ayuda Matexe</a> &rsaquo;&rsaquo; <a href="3EllenguajeMatexe.html"> 3. El lenguaje Matexe</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="3EllenguajeMatexe.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="33LaetiquetaHIDE.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="35LaetiquetaTEX.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<h2 class="rvps8"><a name="_LA_ETIQUETA_PLOT"></a>
+<img align="absbottom" width="24" height="24" alt="image" src="lib/image00911.jpg"/><span class="rvts0"><span class="rvts13">&nbsp;3.4. La etiqueta PLOT</span></span></h2>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps7"><span class="rvts13">Uso:</span></p>
+<p class="rvps7"><span class="rvts21">&lt;PLOT&gt;</span><span class="rvts12"> Expresión Maxima simple conteniendo una instrucción que genere un archivo de imagen</span><span class="rvts21">&lt;/PLOT&gt;</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;Dicha expresión puede ser por ejemplo plot2d (para representar funciones) o draw2d (para vectores y otros objetos gráficos)</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;La etiqueta PLOT, al ser procesada, produce una etiqueta IMG. Las imágenes generadas son almacenadas dentro del directorio del documento actual con un nombre aleatorio que comienza por </span><span class="rvts22">img</span><span class="rvts12"> y con extensión png.</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps7"><span class="rvts13">Ejemplos:</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;Vectores:</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p><span class="rvts21">&lt;PLOT&gt;</span><span class="rvts12">draw2d(grid=true,xrange = [-5,8], yrange = [-7,8], pic_width=320, pic_height=200, head_length = 0.5, head_type = 'empty, label_alignment=right, points([A,B]),&nbsp; vector(A,B-A), vector([0,0],B-A), label(append(["A"],A-2*inc)), label(append(["B"],B+inc)), label(append(["AB"],(A+B)/2+inc)), label_alignment=left, label(append(["u"],C/2+inc)) )</span><span class="rvts21">&lt;/PLOT&gt;</span></p>
+<p><span class="rvts12">&nbsp;</span></p>
+<p><span class="rvts12">Funciones:</span></p>
+<p><span class="rvts21">&lt;PLOT&gt;</span><span class="rvts12">plot2d( (x-1)^2,[x,-9,9], [ylabel, "altura(m)"], [xlabel, "tempo(s)"], [style,[lines,4,12]])</span><span class="rvts21">&lt;/PLOT&gt;</span></p>
+<p><span class="rvts12">&nbsp;</span></p>
+<p class="rvps1"><img align="absbottom" width="338" height="382" alt="image" src="lib/image014.jpg"/></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps7"><span class="rvts13">Atajo:</span><span class="rvts12"> CONTROL + P</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps7"><span class="rvts13">Información adicional:</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;Consultar utilización del comando Maxima plot2d, plot3d, draw2d, draw3d y parametric_surface.</span></p>
+<p class="rvps7"><span class="rvts12">[5.13.0\doc\chm\es\maxima.chm::/maxima_48.html]</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;Para configurar otras opciones consultar la documentación Maxima (ver set_plot_option).</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps7"><span class="rvts21">&lt;HIDE&gt;</span><span class="rvts12">set_plot_option([gnuplot_preamble, "set size ratio 1;set size 0.3,0.3; set zeroaxis; set xtics ('0' 0); set ytics ('0' 0)"])</span><span class="rvts21">&lt;/HIDE&gt;</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps1"><span class="rvts12"><br/></span></p>
+<p></p>
+<p class="rvps5"><span class="rvts9">Created with the Personal Edition of HelpNDoc: </span><a class="rvts10" href="http://www.helpndoc.com/create-epub-ebooks">Free EPub producer</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Matexe v.2013: http://matexe.sourceforge.net</div>
+		</div>
+	</body>
+	
+</html>
+

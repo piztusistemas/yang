@@ -1,0 +1,51 @@
+# Configuración nfpm para empaquetar Yang (usado por `wails3 tool package`).
+# Doc: https://nfpm.goreleaser.com
+#
+# O binario compílase con `-tags gtk3` (pila WebKit2GTK 4.1 / GTK 3), que é a
+# soportada en Debian 12 (bookworm). Por iso as dependencias son libgtk-3-0 e
+# libwebkit2gtk-4.1-0 (non a pila GTK4 do template por defecto).
+
+name: "yang"
+arch: ${GOARCH}
+platform: "linux"
+version: "v26.9.3"
+section: "science"
+priority: "optional"
+maintainer: "Piztu <martindetecnoloxia@gmail.com>"
+description: |
+  Xerador de exames de matemáticas (Maxima + LaTeX).
+  Yang permite deseñar exercicios con bloques e xerar exames en PDF.
+vendor: "Piztu"
+homepage: "https://omeu.gal/piztu/yang"
+license: "See LICENSE"
+release: "1"
+
+contents:
+  - src: "./build/bin/yang"
+    dst: "/usr/bin/yang"
+    file_info:
+      mode: 0755
+
+  - src: "./build/linux/icon.png"
+    dst: "/usr/share/icons/hicolor/512x512/apps/yang.png"
+
+  - src: "./build/linux/yang.desktop"
+    dst: "/usr/share/applications/yang.desktop"
+
+# Pila WebKit2GTK 4.1 + GTK 3 (Debian 12 / Ubuntu 22.04+)
+depends:
+  - libgtk-3-0
+  - libwebkit2gtk-4.1-0
+
+overrides:
+  rpm:
+    depends:
+      - gtk3
+      - webkit2gtk4.1
+  archlinux:
+    depends:
+      - gtk3
+      - webkit2gtk-4.1
+
+scripts:
+  postinstall: "./build/linux/nfpm/scripts/postinstall.sh"

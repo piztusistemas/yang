@@ -1,0 +1,15 @@
+{
+	"fixed": {
+		"file_version": "26.9.4.0"
+	},
+	"info": {
+		"0000": {
+			"ProductVersion": "26.9.4.0",
+			"CompanyName": "Piztu",
+			"FileDescription": "Yang",
+			"LegalCopyright": "Piztu",
+			"ProductName": "Yang",
+			"Comments": "Xerador de exames Yang"
+		}
+	}
+}

@@ -1,0 +1,473 @@
+﻿<html>
+	
+<head>
+	<title>contrib_ode</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 3.9.1.648">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Maxima.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("contrib_ode");
+			}
+		});
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>contrib_ode</h1>
+				
+				</div>
+			<div id="topic_header_nav">
+				<a href="Funcionesyvariablesparabode.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Introduccinacontrib_ode.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<div><a name="CONTRIB_005FODE"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_43.html#SEC167"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="contrib_ode.html#SEC169"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_43.html#SEC166"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_45.html#SEC174"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h1 class="rvps2"><span class="rvts0"><span class="rvts8">44. contrib_ode</span></span></h1>
+<div><table border="0" cellpadding="1" cellspacing="0" style="border-width: 0px;">
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="contrib_ode.html#SEC169">44.1 Introducción a contrib_ode</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="contrib_ode.html#SEC170">44.2 Funciones y variables para contrib_ode</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="contrib_ode.html#SEC171">44.3 Posibles mejoras a contrib_ode</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="contrib_ode.html#SEC172">44.4 Pruebas realizadas con contrib_ode</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="contrib_ode.html#SEC173">44.5 Referencias para contrib_ode</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height: 6px;"/>
+<div><a name="SEC168"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="contrib_ode.html#SEC168"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="contrib_ode.html#SEC170"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="contrib_ode.html#SEC168"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="contrib_ode.html#SEC168"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_45.html#SEC174"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><a name="INTRODUCCI_00F3N-A-CONTRIB_005FODE"></a>
+<span class="rvts0"><span class="rvts15">44.1 Introducción a contrib_ode</span></span></h2>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">ode2</span><span class="rvts6"> de Maxima resuelve ecuaciones diferenciales ordinarias (EDO) simples de primer y segundo orden. La función </span><span class="rvts9">contrib_ode</span><span class="rvts6"> extiende las posibilidades de </span><span class="rvts9">ode2</span><span class="rvts6"> con métodos adicionales para ODEs lineales y no lineales de primer orden y homogéneas lineales de segundo orden. El código se encuentra en estado de desarrollo y la syntaxis puede cambiar en futuras versiones. Una vez el código se haya estabilizado podrá pasar a integrarse dentro de Maxima.</span></p>
+<p class="rvps3"><span class="rvts6">El paquete debe cargarse con la instrucción </span><span class="rvts9">load('contrib_ode)</span><span class="rvts6"> antes de utilizarlo.</span></p>
+<p class="rvps3"><span class="rvts6">La sintaxis de </span><span class="rvts9">contrib_ode</span><span class="rvts6"> es similar a la de </span><span class="rvts9">ode2</span><span class="rvts6">. Necesita tres argumentos: una EDO (sólo se necesita el miembro izquierdo si el derecho es igual cero), la variable dependiente y la independiente. Si encuentra la solución, devolverá una lista de resultados.</span></p>
+<p class="rvps3"><span class="rvts6">La forma de los resultados devueltos es diferente de la utilizada por </span><span class="rvts9">ode2</span><span class="rvts6">. Puesto que las ecuaciones no lineales pueden tener múltiples soluciones, </span><span class="rvts9">contrib_ode</span><span class="rvts6"> devuelve una lista de soluciones. Las soluciones pueden tener diferentes formatos:</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">una función explícita para la variable dependiente,</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">una función implícita para la variable dependiente,</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">una solución paramétrica en términos de la variable </span><span class="rvts9">%t</span><span class="rvts6"> o</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">una transformación en otra EDO de variable </span><span class="rvts9">%u</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts9">%c</span><span class="rvts6"> hace referencia a la constante de integración en las ecuaciones de primer orden. </span><span class="rvts9">%k1</span><span class="rvts6"> y </span><span class="rvts9">%k2</span><span class="rvts6"> son las constantes para las ecuaciones de segundo orden. Si por cualquier razón contrib_ode no pudiese encontrar una solución, devolverá </span><span class="rvts9">false</span><span class="rvts6">, quizás después de mostrar un mensaje de error.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps3"><span class="rvts6">En ocasiones es necesario devolver una lista de soluciones, pues algunas EDOs pueden tener múltiples soluciones:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load('contrib_ode)$</span><br/><span class="rvts9">(%i2) eqn:x*'diff(y,x)^2-(1+x*y)*'diff(y,x)+y=0;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;dy 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; dy</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x (--) &nbsp;- (x y + 1) -- + y = 0</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;dx &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; dx</span><br/><span class="rvts9">(%i3) contrib_ode(eqn,y,x);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [y = log(x) + %c, y = %c %e ]</span><br/><span class="rvts9">(%i4) method;</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;factor</span></p>
+<p class="rvps3"><span class="rvts6">Las EDOs no lineales pueden tener soluciones singulares sin constantes de integración, como en la segunda solución del ejemplo siguiente:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load('contrib_ode)$</span><br/><span class="rvts9">(%i2) eqn:'diff(y,x)^2+x*'diff(y,x)-y=0;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; dy 2 &nbsp; &nbsp; dy</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (--) &nbsp;+ x -- - y = 0</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; dx &nbsp; &nbsp; &nbsp; dx</span><br/><span class="rvts9">(%i3) contrib_ode(eqn,y,x);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp;x</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[y = %c x + %c , y = - --]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4</span><br/><span class="rvts9">(%i4) method;</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; clairault</span></p>
+<p class="rvps3"><span class="rvts6">La siguiente ODE tiene dos soluciones paramétricas en términos de la variable </span><span class="rvts9">%t</span><span class="rvts6">. En este caso, las soluciones paramétricas se pueden manipular para dar soluciones explícitas.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load('contrib_ode)$</span><br/><span class="rvts9">(%i2) eqn:'diff(y,x)=(x+y)^2;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;dy &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -- = (y + x)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;dx</span><br/><span class="rvts9">(%i3) contrib_ode(eqn,y,x);</span><br/><span class="rvts9">(%o3) [[x = %c - atan(sqrt(%t)), y = - x - sqrt(%t)], </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [x = atan(sqrt(%t)) + %c, y = sqrt(%t) - x]]</span><br/><span class="rvts9">(%i4) method;</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; lagrange</span></p>
+<p class="rvps3"><span class="rvts6">En el siguiente ejemplo (Kamke 1.112) se obtiene una solución implícita.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load('contrib_ode)$</span><br/><span class="rvts9">(%i2) assume(x&gt;0,y&gt;0);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[x &gt; 0, y &gt; 0]</span><br/><span class="rvts9">(%i3) eqn:x*'diff(y,x)-x*sqrt(y^2+x^2)-y;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; dy &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp;2</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x -- - x sqrt(y &nbsp;+ x ) - y</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; dx</span><br/><span class="rvts9">(%i4) contrib_ode(eqn,y,x);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;y</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[x - asinh(-) = %c]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x</span><br/><span class="rvts9">(%i5) method;</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;lie</span></p>
+<p class="rvps3"><span class="rvts6">La siguiente ecuación de Riccati se transforma en una EDO lineal de segundo orden de variable </span><span class="rvts9">%u</span><span class="rvts6">. Maxima es incapaz de resolver la nueva EDO, por lo que la devuelve si resolver:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load('contrib_ode)$</span><br/><span class="rvts9">(%i2) eqn:x^2*'diff(y,x)=a+b*x^n+c*x^2*y^2;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 dy &nbsp; &nbsp; &nbsp;2 &nbsp;2 &nbsp; &nbsp; &nbsp;n</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x &nbsp;-- = c x &nbsp;y &nbsp;+ b x &nbsp;+ a</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;dx</span><br/><span class="rvts9">(%i3) contrib_ode(eqn,y,x);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; d%u</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; dx &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp; n - 2 &nbsp; a &nbsp; &nbsp; d %u</span><br/><span class="rvts9">(%o3) &nbsp;[[y = - ----, %u c &nbsp;(b x &nbsp; &nbsp; &nbsp;+ --) + ---- c = 0]]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; %u c &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x &nbsp; &nbsp; dx</span><br/><span class="rvts9">(%i4) method;</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;riccati</span></p>
+<p class="rvps3"><span class="rvts6">Para EDOs de primer orden, </span><span class="rvts9">contrib_ode</span><span class="rvts6"> llama a </span><span class="rvts9">ode2</span><span class="rvts6">. Entonces trata de aplicar los siguientes métodos: factorización, Clairault, Lagrange, Riccati, Abel y Lie. El método de Lie no se intenta aplicar a las ecuaciones de Abel si el propio método de Abel no obtiene solución, pero sí se utiliza si el método de Riccati devuelve una EDO de segundo orden sin resolver.</span></p>
+<p class="rvps3"><span class="rvts6">Para EDOs de segundo orden, </span><span class="rvts9">contrib_ode</span><span class="rvts6"> llama a </span><span class="rvts9">ode2</span><span class="rvts6"> y luego a </span><span class="rvts9">odelin</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Se mostrarán mensajes de depurado si se ejecuta la sentencia </span><span class="rvts9">put('contrib_ode,true,'verbose)</span><span class="rvts6">.</span></p>
+<hr style="height: 6px;"/>
+<div><a name="SEC169"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="contrib_ode.html#SEC169"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="contrib_ode.html#SEC171"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="contrib_ode.html#SEC168"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="contrib_ode.html#SEC168"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_45.html#SEC174"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">44.2 Funciones y variables para contrib_ode</span></span></h2>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="FUNCIONES-Y-VARIABLES-PARA-CONTRIB_005FODE"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">contrib_ode</span><span class="rvts18"> (eqn, y, x)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve la lista de soluciones de la ecuación diferencia ordinaria (EDO) </span><span class="rvts18">eqn</span><span class="rvts6"> de variable independiente </span><span class="rvts18">x</span><span class="rvts6"> y variable dependiente </span><span class="rvts18">y</span><span class="rvts6">.</span></li>
+<li><a name="SEC170"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">odelin</span><span class="rvts18"> (eqn, y, x)</span></li>
+<li class="rvps3"><span class="rvts6">La función </span><span class="rvts9">odelin</span><span class="rvts6"> resulve EDOs homogéneas lineales de primer y segundo orden con variable independiente </span><span class="rvts18">x</span><span class="rvts6"> y variable dependiente </span><span class="rvts18">y</span><span class="rvts6">. Devuelve un conjunto fundamental de soluciones de la EDO.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Para EDOs de segundo orden, </span><span class="rvts9">odelin</span><span class="rvts6"> utiliza un método desarrollado por Bronstein y Lafaille, que busca las soluciones en términos de funciones especiales dadas.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load('contrib_ode);</span><br/><span class="rvts9">(%i2) odelin(x*(x+1)*'diff(y,x,2)+(x+5)*'diff(y,x,1)+(-4)*y,y,x);</span><br/><span class="rvts9">...trying factor method</span><br/><span class="rvts9">...solving 7 equations in 4 variables</span><br/><span class="rvts9">...trying the Bessel solver</span><br/><span class="rvts9">...solving 1 equations in 2 variables</span><br/><span class="rvts9">...trying the F01 solver</span><br/><span class="rvts9">...solving 1 equations in 3 variables</span><br/><span class="rvts9">...trying the spherodial wave solver</span><br/><span class="rvts9">...solving 1 equations in 4 variables</span><br/><span class="rvts9">...trying the square root Bessel solver</span><br/><span class="rvts9">...solving 1 equations in 2 variables</span><br/><span class="rvts9">...trying the 2F1 solver</span><br/><span class="rvts9">...solving 9 equations in 5 variables</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; gauss_a(- 6, - 2, - 3, - x) &nbsp;gauss_b(- 6, - 2, - 3, - x)</span><br/><span class="rvts9">(%o2) {---------------------------, ---------------------------}</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1386"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">ode_check</span><span class="rvts18"> (eqn, soln)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve el valor de la ecuación diferencia ordinaria (EDO) </span><span class="rvts18">eqn</span><span class="rvts6"> después de sustituir una posible solución </span><span class="rvts18">soln</span><span class="rvts6">. El valor es cero si </span><span class="rvts18">soln</span><span class="rvts6"> es una solución de </span><span class="rvts18">eqn</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) load('contrib_ode)$</span><br/><span class="rvts9">(%i2) eqn:'diff(y,x,2)+(a*x+b)*y;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;d y</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --- + (a x + b) y</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;dx</span><br/><span class="rvts9">(%i3) ans:[y = bessel_y(1/3,2*(a*x+b)^(3/2)/(3*a))*%k2*sqrt(a*x+b)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; +bessel_j(1/3,2*(a*x+b)^(3/2)/(3*a))*%k1*sqrt(a*x+b)];</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3/2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1 &nbsp;2 (a x + b)</span><br/><span class="rvts9">(%o3) [y = bessel_y(-, --------------) %k2 sqrt(a x + b)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3 &nbsp; &nbsp; &nbsp; 3 a</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3/2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1 &nbsp;2 (a x + b)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; + bessel_j(-, --------------) %k1 sqrt(a x + b)]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3 &nbsp; &nbsp; &nbsp; 3 a</span><br/><span class="rvts9">(%i4) ode_check(eqn,ans[1]);</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1387"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts22">method</span></li>
+<li class="rvps3"><span class="rvts6">A la variable </span><span class="rvts9">method</span><span class="rvts6"> se le asigna el método aplicado.</span></li>
+<li><a name="IDX1388"></a>
+<span class="rvts16">Variable:</span><span class="rvts6"> </span><span class="rvts22">%c</span></li>
+<li class="rvps3"><span class="rvts9">%c</span><span class="rvts6"> es la constante de integración para EDOs de primer orden.</span></li>
+<li><a name="IDX1389"></a>
+<span class="rvts16">Variable:</span><span class="rvts6"> </span><span class="rvts22">%k1</span></li>
+<li class="rvps3"><span class="rvts9">%k1</span><span class="rvts6"> es la primera constante de integración para EDOs de segundo orden.</span></li>
+<li><a name="IDX1390"></a>
+<span class="rvts16">Variable:</span><span class="rvts6"> </span><span class="rvts22">%k2</span></li>
+<li class="rvps3"><span class="rvts9">%k2</span><span class="rvts6"> es la segunda constante de integración para EDOs de segundo orden.</span></li>
+<li><a name="IDX1391"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">gauss_a</span><span class="rvts18"> (a, b, c, x)</span></li>
+<li class="rvps3"><span class="rvts9">gauss_a(a,b,c,x)</span><span class="rvts6"> y </span><span class="rvts9">gauss_b(a,b,c,x)</span><span class="rvts6"> son funciones geométricas 2F1 . Representan dos soluciones independientes cualesquiera de la ecuación diferencial hipergeométrica </span><span class="rvts9">x(1-x) diff(y,x,2) + [c-(a+b+1)x diff(y,x) - aby = 0</span><span class="rvts6"> (A&amp;S 15.5.1).</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">El único uso que se hace de estas funciones es en las soluciones de EDOs que devuelven </span><span class="rvts9">odelin</span><span class="rvts6"> y </span><span class="rvts9">contrib_ode</span><span class="rvts6">. La definición y utilización de estas funciones puede cambiar en futuras distribuciones de Maxima.</span></p>
+<p class="rvps3"><span class="rvts6">Véanse también </span><span class="rvts9">gauss_b</span><span class="rvts6">, </span><span class="rvts9">dgauss_a</span><span class="rvts6"> y </span><span class="rvts9">gauss_b</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1392"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">gauss_b</span><span class="rvts18"> (a, b, c, x)</span></li>
+<li class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">gauss_a</span><span class="rvts6">.</span></li>
+<li><a name="IDX1393"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">dgauss_a</span><span class="rvts18"> (a, b, c, x)</span></li>
+<li class="rvps3"><span class="rvts6">The derivative with respect to x of </span><span class="rvts9">gauss_a(a,b,c,x)</span><span class="rvts6">.</span></li>
+<li><a name="IDX1394"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">dgauss_b</span><span class="rvts18"> (a, b, c, x)</span></li>
+<li class="rvps3"><span class="rvts6">Derivada de </span><span class="rvts9">gauss_b(</span><span class="rvts19">a</span><span class="rvts9">,</span><span class="rvts19">b</span><span class="rvts9">,</span><span class="rvts19">c</span><span class="rvts9">,</span><span class="rvts19">x</span><span class="rvts9">)</span><span class="rvts6"> respecto de </span><span class="rvts18">x</span><span class="rvts6">.</span></li>
+<li><a name="IDX1395"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">kummer_m</span><span class="rvts18"> (a, b, x)</span></li>
+<li class="rvps3"><span class="rvts6">Función M de Kummer, tal como la definen Abramowitz y Stegun, </span><span class="rvts18">Handbook of Mathematical Functions</span><span class="rvts6">, Sección 13.1.2.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">El único uso que se hace de esta función es en las soluciones de EDOs que devuelven </span><span class="rvts9">odelin</span><span class="rvts6"> y </span><span class="rvts9">contrib_ode</span><span class="rvts6">. La definición y utilización de estas funciones puede cambiar en futuras distribuciones de Maxima.</span></p>
+<p class="rvps3"><span class="rvts6">Véanse también </span><span class="rvts9">kummer_u</span><span class="rvts6">, </span><span class="rvts9">dkummer_m</span><span class="rvts6"> y </span><span class="rvts9">dkummer_u</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1396"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">kummer_u</span><span class="rvts18"> (a, b, x)</span></li>
+<li class="rvps3"><span class="rvts6">Función U de Kummer, tal como la definen Abramowitz y Stegun, </span><span class="rvts18">Handbook of Mathematical Functions</span><span class="rvts6">, Sección 13.1.3.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">kummer_m</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1397"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">dkummer_m</span><span class="rvts18"> (a, b, x)</span></li>
+<li class="rvps3"><span class="rvts6">Derivada de </span><span class="rvts9">kummer_m(</span><span class="rvts19">a</span><span class="rvts9">,</span><span class="rvts19">b</span><span class="rvts9">,</span><span class="rvts19">x</span><span class="rvts9">)</span><span class="rvts6"> respecto de </span><span class="rvts18">x</span><span class="rvts6">.</span></li>
+<li><a name="IDX1398"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">dkummer_u</span><span class="rvts18"> (a, b, x)</span></li>
+<li class="rvps3"><span class="rvts6">Derivada de </span><span class="rvts9">kummer_u(</span><span class="rvts19">a</span><span class="rvts9">,</span><span class="rvts19">b</span><span class="rvts9">,</span><span class="rvts19">x</span><span class="rvts9">)</span><span class="rvts6"> respecto de </span><span class="rvts18">x</span><span class="rvts6">.</span></li>
+<hr style="height: 6px;"/></li>
+</ul>
+<div><a name="IDX1399"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="contrib_ode.html#SEC170"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="contrib_ode.html#SEC172"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="contrib_ode.html#SEC168"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="contrib_ode.html#SEC168"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_45.html#SEC174"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">44.3 Posibles mejoras a contrib_ode</span></span></h2>
+<p class="rvps3"><span class="rvts6">Este paquete aún se encuentra en fase de desarrollo. Aspectos pendientes:</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Extender el método FACTOR </span><span class="rvts9">ode1_factor</span><span class="rvts6"> para que trabaje con raíces múltiples.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Extender el método FACTOR </span><span class="rvts9">ode1_factor</span><span class="rvts6"> para que intente resolver factores de orden superior. En este momento sólo intenta resolver factores lineales.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Modificar la rutina LAGRANGE </span><span class="rvts9">ode1_lagrange</span><span class="rvts6"> para que prefiera raíces reales a las complejas.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Añadir más métodos para las ecuaciones de RIccati.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Mejorar la identificación de las ecuaciones de Abel de segunda especie. El procedimiento actual no es muy bueno.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Trabajar la rutina del grupo simétrico de Lie </span><span class="rvts9">ode1_lie</span><span class="rvts6">. Existen algunos problemas: algunas partes no están implementadas, algunos ejemplos no terminan de ejecutarse, otros producen errors, otros devuelven respuestas muy complejas.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Hacer más pruebas.</span></li>
+<hr style="height: 6px;"/></li>
+</ul>
+<div><a name="IDX1400"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="contrib_ode.html#SEC171"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="contrib_ode.html#SEC173"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="contrib_ode.html#SEC168"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="contrib_ode.html#SEC168"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_45.html#SEC174"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">44.4 Pruebas realizadas con contrib_ode</span></span></h2>
+<p class="rvps3"><span class="rvts6">Los procedimientos fueron probados con cerca de mil ecuaciones tomadas de Murphy, Kamke, Zwillinger y otros. Éstas se encuentran en el directorio de pruebas.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">La rutina de Clairault </span><span class="rvts9">ode1_clairault</span><span class="rvts6"> encuentra todas las soluciones conocidas, incluídas las singulares, de las ecuaciones de Clairault en Murphy y Kamke.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Las otras rutinas a veces devuelven una sola solución cuando existen más.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Algunas de las soluciones devueltas por </span><span class="rvts9">ode1_lie</span><span class="rvts6"> son demasiado complejas e imposibles de interpretar.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">A veces se producen detenciones imprevistas del procedimiento.</span></li>
+<hr style="height: 6px;"/></li>
+</ul>
+<div><a name="POSIBLES-MEJORAS-A-CONTRIB_005FODE"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="contrib_ode.html#SEC172"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_45.html#SEC174"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="contrib_ode.html#SEC168"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="contrib_ode.html#SEC168"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_45.html#SEC174"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">44.5 Referencias para contrib_ode</span></span></h2>
+<ol style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">E. Kamke, Differentialgleichungen Losungsmethoden und Losungen, Vol 1, Geest &amp; Portig, Leipzig, 1961</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">G. M. Murphy, Ordinary Differential Equations and Their Solutions, Van Nostrand, New York, 1960</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">D. Zwillinger, Handbook of Differential Equations, 3rd edition, Academic Press, 1998</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">F. Schwarz, Symmetry Analysis of Abel's Equation, Studies in Applied Mathematics, 100:269-294 (1998)</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">F. Schwarz, Algorithmic Solution of Abel's Equation, Computing 61, 39-49 (1998)</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">E. S. Cheb-Terrab, A. D. Roche, Symmetries and First Order ODE Patterns, Computer Physics Communications 113 (1998), p 239. (</span><a class="rvts7" href="http://lie.uwaterloo.ca/papers/ode_vii.pdf">http://lie.uwaterloo.ca/papers/ode_vii.pdf</a><span class="rvts6">)</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">E. S. Cheb-Terrab, T. Koloknikov, First Order ODEs, Symmetries and Linear Transformations, European Journal of Applied Mathematics, Vol. 14, No. 2, pp. 231-246 (2003). (</span><a class="rvts7" href="http://arxiv.org/abs/math-ph/0007023">http://arxiv.org/abs/math-ph/0007023</a><span class="rvts6">) (</span><a class="rvts7" href="http://lie.uwaterloo.ca/papers/ode_iv.pdf">http://lie.uwaterloo.ca/papers/ode_iv.pdf</a><span class="rvts6">)</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">G. W. Bluman, S. C. Anco, Symmetry and Integration Methods for Differential Equations, Springer, (2002)</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">M Bronstein, S Lafaille, Solutions of linear ordinary differential equations in terms of special functions, Proceedings of ISSAC 2002, Lille, ACM Press, 23-28. (</span><a class="rvts7" href="http://www-sop.inria.fr/cafe/Manuel.Bronstein/publications/issac2002.pdf">http://www-sop.inria.fr/cafe/Manuel.Bronstein/publications/issac2002.pdf</a><span class="rvts6">)</span></li>
+<hr style="height: 6px;"/></li>
+</ol>
+<div><table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="contrib_ode.html#SEC168"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_45.html#SEC174"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps3"><span class="rvts10">This document was generated by </span><span class="rvts11">Robert Dodier</span><span class="rvts10"> on </span><span class="rvts11">agosto, 25 2007</span><span class="rvts10"> using </span><a class="rvts12" href="http://texi2html.cvshome.org/">texi2html 1.76</a><span class="rvts10">.</span></p>
+<p></p>
+<p class="rvps6"><span class="rvts13">Created with the Personal Edition of HelpNDoc: </span><a class="rvts14" href="http://www.helpndoc.com">Full-featured Documentation generator</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				http://maxima.sourceforge.net</div>
+		</div>
+	</body>
+	
+</html>
+

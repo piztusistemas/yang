@@ -1,0 +1,198 @@
+﻿<html>
+	
+<head>
+	<title>bode</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 3.9.1.648">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Maxima.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("bode");
+			}
+		});
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>bode</h1>
+				
+				</div>
+			<div id="topic_header_nav">
+				<a href="Funcionesyvariablesparaaugmented.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Funcionesyvariablesparabode.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<div><a name="BODE"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_42.html#SEC165"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="bode.html#SEC167"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_42.html#SEC164"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_44.html#SEC168"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h1 class="rvps2"><span class="rvts0"><span class="rvts8">43. bode</span></span></h1>
+<div><table border="0" cellpadding="1" cellspacing="0" style="border-width: 0px;">
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="bode.html#SEC167">43.1 Funciones y variables para bode</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height: 6px;"/>
+<div><a name="SEC166"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="bode.html#SEC166"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_44.html#SEC168"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="bode.html#SEC166"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="bode.html#SEC166"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_44.html#SEC168"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">43.1 Funciones y variables para bode</span></span></h2>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="FUNCIONES-Y-VARIABLES-PARA-BODE"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">bode_gain</span><span class="rvts18"> (H, range, ...plot_opts...)</span></li>
+<li class="rvps3"><span class="rvts6">Función para dibujar el gráfico de ganancia de Bode.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Ejemplos (1 a 7 de</span></p>
+<p class="rvps4"><a class="rvts23" href="http://www.swarthmore.edu/NatSci/echeeve1/Ref/Bode/BodeHow.html">http://www.swarthmore.edu/NatSci/echeeve1/Ref/Bode/BodeHow.html</a><span class="rvts9">,</span></p>
+<p class="rvps3"><span class="rvts6">8 de Ron Crummett):</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load("bode")$</span><br/><span class="rvts9">(%i2) H1 (s) := 100 * (1 + s) / ((s + 10) * (s + 100))$</span><br/><span class="rvts9">(%i3) bode_gain (H1 (s), [w, 1/1000, 1000])$</span><br/><span class="rvts9">(%i4) H2 (s) := 1 / (1 + s/omega0)$</span><br/><span class="rvts9">(%i5) bode_gain (H2 (s), [w, 1/1000, 1000]), omega0 = 10$</span><br/><span class="rvts9">(%i6) H3 (s) := 1 / (1 + s/omega0)^2$</span><br/><span class="rvts9">(%i7) bode_gain (H3 (s), [w, 1/1000, 1000]), omega0 = 10$</span><br/><span class="rvts9">(%i8) H4 (s) := 1 + s/omega0$</span><br/><span class="rvts9">(%i9) bode_gain (H4 (s), [w, 1/1000, 1000]), omega0 = 10$</span><br/><span class="rvts9">(%i10) H5 (s) := 1/s$</span><br/><span class="rvts9">(%i11) bode_gain (H5 (s), [w, 1/1000, 1000])$</span><br/><span class="rvts9">(%i12) H6 (s) := 1/((s/omega0)^2 + 2 * zeta * (s/omega0) + 1)$</span><br/><span class="rvts9">(%i13) bode_gain (H6 (s), [w, 1/1000, 1000]), </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;omega0 = 10, zeta = 1/10$</span><br/><span class="rvts9">(%i14) H7 (s) := (s/omega0)^2 + 2 * zeta * (s/omega0) + 1$</span><br/><span class="rvts9">(%i15) bode_gain (H7 (s), [w, 1/1000, 1000]),</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;omega0 = 10, zeta = 1/10$</span><br/><span class="rvts9">(%i16) H8 (s) := 0.5 / (0.0001 * s^3 + 0.002 * s^2 + 0.01 * s)$</span><br/><span class="rvts9">(%i17) bode_gain (H8 (s), [w, 1/1000, 1000])$</span></p>
+<p class="rvps3"><span class="rvts6">Antes de hacer uso de esta función ejecútese </span><span class="rvts9">load("bode")</span><span class="rvts6">. Véase también </span><span class="rvts9">bode_phase</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC167"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">bode_phase</span><span class="rvts18"> (H, range, ...plot_opts...)</span></li>
+<li class="rvps3"><span class="rvts6">Función para dibujar el gráfico de fase de Bode.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Ejemplos (1 a 7 de</span></p>
+<p class="rvps4"><a class="rvts23" href="http://www.swarthmore.edu/NatSci/echeeve1/Ref/Bode/BodeHow.html">http://www.swarthmore.edu/NatSci/echeeve1/Ref/Bode/BodeHow.html</a><span class="rvts9">,</span></p>
+<p class="rvps3"><span class="rvts6">8 de Ron Crummett):</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load("bode")$</span><br/><span class="rvts9">(%i2) H1 (s) := 100 * (1 + s) / ((s + 10) * (s + 100))$</span><br/><span class="rvts9">(%i3) bode_phase (H1 (s), [w, 1/1000, 1000])$</span><br/><span class="rvts9">(%i4) H2 (s) := 1 / (1 + s/omega0)$</span><br/><span class="rvts9">(%i5) bode_phase (H2 (s), [w, 1/1000, 1000]), omega0 = 10$</span><br/><span class="rvts9">(%i6) H3 (s) := 1 / (1 + s/omega0)^2$</span><br/><span class="rvts9">(%i7) bode_phase (H3 (s), [w, 1/1000, 1000]), omega0 = 10$</span><br/><span class="rvts9">(%i8) H4 (s) := 1 + s/omega0$</span><br/><span class="rvts9">(%i9) bode_phase (H4 (s), [w, 1/1000, 1000]), omega0 = 10$</span><br/><span class="rvts9">(%i10) H5 (s) := 1/s$</span><br/><span class="rvts9">(%i11) bode_phase (H5 (s), [w, 1/1000, 1000])$</span><br/><span class="rvts9">(%i12) H6 (s) := 1/((s/omega0)^2 + 2 * zeta * (s/omega0) + 1)$</span><br/><span class="rvts9">(%i13) bode_phase (H6 (s), [w, 1/1000, 1000]), </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; omega0 = 10, zeta = 1/10$</span><br/><span class="rvts9">(%i14) H7 (s) := (s/omega0)^2 + 2 * zeta * (s/omega0) + 1$</span><br/><span class="rvts9">(%i15) bode_phase (H7 (s), [w, 1/1000, 1000]), </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; omega0 = 10, zeta = 1/10$</span><br/><span class="rvts9">(%i16) H8 (s) := 0.5 / (0.0001 * s^3 + 0.002 * s^2 + 0.01 * s)$</span><br/><span class="rvts9">(%i17) bode_phase (H8 (s), [w, 1/1000, 1000])$</span><br/><span class="rvts9">(%i18) block ([bode_phase_unwrap : false],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;bode_phase (H8 (s), [w, 1/1000, 1000]));</span><br/><span class="rvts9">(%i19) block ([bode_phase_unwrap : true], </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;bode_phase (H8 (s), [w, 1/1000, 1000]));</span></p>
+<p class="rvps3"><span class="rvts6">Antes de hacer uso de esta función ejecútese </span><span class="rvts9">load("bode")</span><span class="rvts6">. Véase también </span><span class="rvts9">bode_gain</span><span class="rvts6">.</span></p>
+<hr style="height: 6px;"/>
+<div><table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="bode.html#SEC166"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_44.html#SEC168"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps3"><span class="rvts10">This document was generated by </span><span class="rvts11">Robert Dodier</span><span class="rvts10"> on </span><span class="rvts11">agosto, 25 2007</span><span class="rvts10"> using </span><a class="rvts12" href="http://texi2html.cvshome.org/">texi2html 1.76</a><span class="rvts10">.</span></p>
+<p></p>
+<p class="rvps6"><span class="rvts13">Created with the Personal Edition of HelpNDoc: </span><a class="rvts14" href="http://www.helpndoc.com">Free EPub and documentation generator</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				http://maxima.sourceforge.net</div>
+		</div>
+	</body>
+	
+</html>
+

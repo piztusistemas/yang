@@ -1,0 +1,924 @@
+﻿<html>
+	
+<head>
+	<title>ctensor</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 3.9.1.648">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Maxima.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("ctensor");
+			}
+		});
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>ctensor</h1>
+				
+				</div>
+			<div id="topic_header_nav">
+				<a href="Palabrasreservadas.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Introduccinactensor.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<div><a name="CTENSOR"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_27.html#SEC103"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC105"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_27.html#SEC89"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_29.html#SEC117"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h1 class="rvps2"><span class="rvts0"><span class="rvts8">28. ctensor</span></span></h1>
+<div><table border="0" cellpadding="1" cellspacing="0" style="border-width: 0px;">
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="ctensor.html#SEC105">28.1 Introducción a ctensor</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="ctensor.html#SEC106">28.2 Funciones y variables para ctensor</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height: 6px;"/>
+<div><a name="SEC104"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC104"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC106"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC104"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC104"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_29.html#SEC117"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">28.1 Introducción a ctensor</span></span></h2>
+<p class="rvps3"><span class="rvts6">El paquete </span><span class="rvts9">ctensor</span><span class="rvts6"> dispone de herramientas para manipular componentes de tensores. Para poder hacer uso de </span><span class="rvts9">ctensor</span><span class="rvts6"> es necesario cargarlo previamente en memoria ejecutando </span><span class="rvts9">load(ctensor)</span><span class="rvts6">. Para comenzar una sesión interactiva con </span><span class="rvts9">ctensor</span><span class="rvts6">, ejecutar la función </span><span class="rvts9">csetup()</span><span class="rvts6">. Primero se le pregunta al usuario la dimensión de la variedad. Si la dimensión es 2, 3 o 4, entonces la lista de coordenadas será por defecto </span><span class="rvts9">[x,y]</span><span class="rvts6">, </span><span class="rvts9">[x,y,z]</span><span class="rvts6"> o </span><span class="rvts9">[x,y,z,t]</span><span class="rvts6">, respectivamente. Estos nombres pueden cambiarse asignando una nueva lista de coordenadas a la variable </span><span class="rvts9">ct_coords</span><span class="rvts6"> (que se describe más abajo), siendo el usuario advertido sobre este particular. Se debe tener cuidado en evitar que los nombres de las coordenadas entren en conflicto con los nombres de otros objetos en Maxima.</span></p>
+<p class="rvps3"><span class="rvts6">A continuación, el usuario introduce la métrica, bien directamente, o desde un fichero especificando su posición ordinal. La métrica se almacena en la matriz </span><span class="rvts9">lg</span><span class="rvts6">. Por último, la métrica inversa se obtiene y almacena en la matriz </span><span class="rvts9">ug</span><span class="rvts6">. También se dispone de la opción de efectuar todos los cálculos en serie de potencias.</span></p>
+<p class="rvps3"><span class="rvts6">Se desarrolla a continuación un ejemplo para la métrica estática, esférica y simétrica, en coordenadas estándar, que se aplicará posteriormente al problema de derivar las ecuaciones de vacío de Einstein (de las que se obtiene la solución de Schwarzschild). Muchas de las funciones de </span><span class="rvts9">ctensor</span><span class="rvts6"> se mostrarán en los ejemplos para la métrica estándar.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load(ctensor);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp;/share/tensor/ctensor.mac</span><br/><span class="rvts9">(%i2) csetup();</span><br/><span class="rvts9">Enter the dimension of the coordinate system: </span><br/><span class="rvts9">4;</span><br/><span class="rvts9">Do you wish to change the coordinate names?</span><br/><span class="rvts9">n;</span><br/><span class="rvts9">Do you want to</span><br/><span class="rvts9">1. Enter a new metric?</span><br/><span class="rvts9">2. Enter a metric from a file?</span><br/><span class="rvts9">3. Approximate a metric with a Taylor series?</span><br/><span class="rvts9">1;</span><br/><span class="rvts9">Is the matrix &nbsp;1. Diagonal &nbsp;2. Symmetric &nbsp;3. Antisymmetric &nbsp;4. General</span><br/><span class="rvts9">Answer 1, 2, 3 or 4</span><br/><span class="rvts9">1;</span><br/><span class="rvts9">Row 1 Column 1:</span><br/><span class="rvts9">a;</span><br/><span class="rvts9">Row 2 Column 2:</span><br/><span class="rvts9">x^2;</span><br/><span class="rvts9">Row 3 Column 3:</span><br/><span class="rvts9">x^2*sin(y)^2;</span><br/><span class="rvts9">Row 4 Column 4:</span><br/><span class="rvts9">-d;</span><br/><span class="rvts9">Matrix entered.</span><br/><span class="rvts9">Enter functional dependencies with the DEPENDS function or 'N' if none </span><br/><span class="rvts9">depends([a,d],x);</span><br/><span class="rvts9">Do you wish to see the metric? </span><br/><span class="rvts9">y;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ a &nbsp;0 &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp;x &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp;0 &nbsp; x &nbsp;sin (y) &nbsp; 0 &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp;0 &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; - d ]</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;done</span><br/><span class="rvts9">(%i3) christof(mcs);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;a</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x</span><br/><span class="rvts9">(%t3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;mcs &nbsp; &nbsp; &nbsp; &nbsp;= ---</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1, 1, 1 &nbsp; 2 a</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</span><br/><span class="rvts9">(%t4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; mcs &nbsp; &nbsp; &nbsp; &nbsp;= -</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1, 2, 2 &nbsp; x</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</span><br/><span class="rvts9">(%t5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; mcs &nbsp; &nbsp; &nbsp; &nbsp;= -</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1, 3, 3 &nbsp; x</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;d</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x</span><br/><span class="rvts9">(%t6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;mcs &nbsp; &nbsp; &nbsp; &nbsp;= ---</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1, 4, 4 &nbsp; 2 d</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x</span><br/><span class="rvts9">(%t7) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;mcs &nbsp; &nbsp; &nbsp; &nbsp;= - -</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2, 2, 1 &nbsp; &nbsp; a</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cos(y)</span><br/><span class="rvts9">(%t8) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; mcs &nbsp; &nbsp; &nbsp; &nbsp;= ------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2, 3, 3 &nbsp; sin(y)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x sin (y)</span><br/><span class="rvts9">(%t9) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;mcs &nbsp; &nbsp; &nbsp; &nbsp;= - ---------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3, 3, 1 &nbsp; &nbsp; &nbsp; &nbsp; a</span><br/><span class="rvts9">(%t10) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; mcs &nbsp; &nbsp; &nbsp; &nbsp;= - cos(y) sin(y)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3, 3, 2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;d</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x</span><br/><span class="rvts9">(%t11) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; mcs &nbsp; &nbsp; &nbsp; &nbsp;= ---</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4, 4, 1 &nbsp; 2 a</span><br/><span class="rvts9">(%o11) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; done</span></p>
+<hr style="height: 6px;"/>
+<div><a name="INTRODUCCI_00F3N-A-CTENSOR"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC105"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC107"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC104"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC104"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_29.html#SEC117"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">28.2 Funciones y variables para ctensor</span></span></h2>
+<hr style="height: 6px;"/>
+<div><a name="SEC105"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC106"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC108"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC104"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC106"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_29.html#SEC117"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="rvps11"><span class="rvts0"><span class="rvts21">28.2.1 Inicialización y preparación</span></span></h3>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="FUNCIONES-Y-VARIABLES-PARA-CTENSOR"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">csetup</span><span class="rvts18"> ()</span></li>
+<li class="rvps3"><span class="rvts6">Es la función del paquete </span><span class="rvts9">ctensor</span><span class="rvts6"> que inicializa el paquete y permite al usuario introducir una métrica de forma interactiva. Véase </span><span class="rvts9">ctensor</span><span class="rvts6"> para más detalles.</span></li>
+<li><a name="SEC106"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">cmetric</span><span class="rvts18"> (dis)</span></li>
+<li><a name="SEC107"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">cmetric</span><span class="rvts18"> ()</span></li>
+<li class="rvps3"><span class="rvts6">Es la función del paquete </span><span class="rvts9">ctensor</span><span class="rvts6"> que calcula la métrica inversa y prepara el paquete para cálculos ulteriores.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">cframe_flag</span><span class="rvts6"> vale </span><span class="rvts9">false</span><span class="rvts6">, la función calcula la métrica inversa </span><span class="rvts9">ug</span><span class="rvts6"> a partir de la matriz </span><span class="rvts9">lg</span><span class="rvts6"> definida por el usuario. Se calcula también la métrica determinante y se almacena en la variable </span><span class="rvts9">gdet</span><span class="rvts6">. Además, el paquete determina si la métrica es diagonal y ajusta el valor de </span><span class="rvts9">diagmetric</span><span class="rvts6"> de la forma apropiada. Si el argumento opcional </span><span class="rvts18">dis</span><span class="rvts6"> está presente y no es igual a </span><span class="rvts9">false</span><span class="rvts6">, el usuario podrá ver la métrica inversa.</span></p>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">cframe_flag</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, la función espera que los valores de </span><span class="rvts9">fri</span><span class="rvts6"> (la matriz del sistema de referencia inverso) y </span><span class="rvts9">lfg</span><span class="rvts6"> (la matriz del sistema de referencia) estén definidos. A partir de ellos, se calculan la matriz del sistema de referencia </span><span class="rvts9">fr</span><span class="rvts6"> y su métrica </span><span class="rvts9">ufg</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX919"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">ct_coordsys</span><span class="rvts18"> (sistema_coordenadas, extra_arg)</span></li>
+<li><a name="IDX920"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">ct_coordsys</span><span class="rvts18"> (sistema_coordenadas)</span></li>
+<li class="rvps3"><span class="rvts6">Prepara un sistema de coordenadas predefinido y una métrica. El argumento </span><span class="rvts18">sistema_coordenadas</span><span class="rvts6"> puede ser cualquiera de los siguientes símbolos:</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9"> &nbsp;Símbolo &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Dim Coordenadas &nbsp; &nbsp; &nbsp; Descripción/comentarios</span><br/><span class="rvts9"> &nbsp;--------------------------------------------------------------------------------</span><br/><span class="rvts9"> &nbsp;cartesian2d &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp;[x,y] &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Sistema de coordenadas cartesianas en 2D</span><br/><span class="rvts9"> &nbsp;polar &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp;[r,phi] &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Sistema de coordenadas polares</span><br/><span class="rvts9"> &nbsp;elliptic &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp;[u,v] &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Sistema de coordenadas elípticas</span><br/><span class="rvts9"> &nbsp;confocalelliptic &nbsp; &nbsp; &nbsp;2 &nbsp;[u,v] &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Coordenadas elípticas confocales</span><br/><span class="rvts9"> &nbsp;bipolar &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp;[u,v] &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Sistema de coordenas bipolares</span><br/><span class="rvts9"> &nbsp;parabolic &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp;[u,v] &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Sistema de coordenadas parabólicas</span><br/><span class="rvts9"> &nbsp;cartesian3d &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3 &nbsp;[x,y,z] &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Sistema de coordenadas cartesianas en 3D</span><br/><span class="rvts9"> &nbsp;polarcylindrical &nbsp; &nbsp; &nbsp;3 &nbsp;[r,theta,z] &nbsp; &nbsp; &nbsp; Polares en 2D con cilíndrica z</span><br/><span class="rvts9"> &nbsp;ellipticcylindrical &nbsp; 3 &nbsp;[u,v,z] &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Elípticas en 2D con cilíndrica z</span><br/><span class="rvts9"> &nbsp;confocalellipsoidal &nbsp; 3 &nbsp;[u,v,w] &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Elipsoidales confocales</span><br/><span class="rvts9"> &nbsp;bipolarcylindrical &nbsp; &nbsp;3 &nbsp;[u,v,z] &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Bipolares en 2D con cilíndrica z</span><br/><span class="rvts9"> &nbsp;paraboliccylindrical &nbsp;3 &nbsp;[u,v,z] &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Parabólicas en 2D con cilíndrica z</span><br/><span class="rvts9"> &nbsp;paraboloidal &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3 &nbsp;[u,v,phi] &nbsp; &nbsp; &nbsp; &nbsp; Coordenadas paraboloidales</span><br/><span class="rvts9"> &nbsp;conical &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3 &nbsp;[u,v,w] &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Coordenadas cónicas</span><br/><span class="rvts9"> &nbsp;toroidal &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3 &nbsp;[u,v,phi] &nbsp; &nbsp; &nbsp; &nbsp; Coordenadas toroidales</span><br/><span class="rvts9"> &nbsp;spherical &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3 &nbsp;[r,theta,phi] &nbsp; &nbsp; Sistema de coordenadas esféricas</span><br/><span class="rvts9"> &nbsp;oblatespheroidal &nbsp; &nbsp; &nbsp;3 &nbsp;[u,v,phi] &nbsp; &nbsp; &nbsp; &nbsp; Coordenadas esferoidales obleadas</span><br/><span class="rvts9"> &nbsp;oblatespheroidalsqrt &nbsp;3 &nbsp;[u,v,phi]</span><br/><span class="rvts9"> &nbsp;prolatespheroidal &nbsp; &nbsp; 3 &nbsp;[u,v,phi] &nbsp; &nbsp; &nbsp; &nbsp; Coordenadas esferoidales prolatas</span><br/><span class="rvts9"> &nbsp;prolatespheroidalsqrt 3 &nbsp;[u,v,phi]</span><br/><span class="rvts9"> &nbsp;ellipsoidal &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3 &nbsp;[r,theta,phi] &nbsp; &nbsp; Coordenadas elipsoidales</span><br/><span class="rvts9"> &nbsp;cartesian4d &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4 &nbsp;[x,y,z,t] &nbsp; &nbsp; &nbsp; &nbsp; Sistema de coordenadas cartesianas en 4D</span><br/><span class="rvts9"> &nbsp;spherical4d &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4 &nbsp;[r,theta,eta,phi] Sistema de coordenadas esféricas en 4D</span><br/><span class="rvts9"> &nbsp;exteriorschwarzschild 4 &nbsp;[t,r,theta,phi] &nbsp; Métrica de Schwarzschild</span><br/><span class="rvts9"> &nbsp;interiorschwarzschild 4 &nbsp;[t,z,u,v] &nbsp; &nbsp; &nbsp; &nbsp; Métrica interior de Schwarzschild</span><br/><span class="rvts9"> &nbsp;kerr_newman &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4 &nbsp;[t,r,theta,phi] &nbsp; Métrica simétrica con carga axial</span></p>
+<p class="rvps3"><span class="rvts6">El argumento </span><span class="rvts9">sistema_coordenadas</span><span class="rvts6"> puede ser también una lista de funciones de transformación, seguida de una lista que contenga los nombres de las coordenadas. Por ejemplo, se puede especificar una métrica esférica como se indica a continuación:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load(ctensor);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; /share/tensor/ctensor.mac</span><br/><span class="rvts9">(%i2) ct_coordsys([r*cos(theta)*cos(phi),r*cos(theta)*sin(phi),</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;r*sin(theta),[r,theta,phi]]);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;done</span><br/><span class="rvts9">(%i3) lg:trigsimp(lg);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 1 &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp;r &nbsp; &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 0 &nbsp;0 &nbsp; r &nbsp;cos (theta) ]</span><br/><span class="rvts9">(%i4) ct_coords;</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [r, theta, phi]</span><br/><span class="rvts9">(%i5) dim;</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3</span></p>
+<p class="rvps3"><span class="rvts6">Las funciones de transformación se pueden utilizar también si </span><span class="rvts9">cframe_flag</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load(ctensor);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; /share/tensor/ctensor.mac</span><br/><span class="rvts9">(%i2) cframe_flag:true;</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;true</span><br/><span class="rvts9">(%i3) ct_coordsys([r*cos(theta)*cos(phi),r*cos(theta)*sin(phi),</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;r*sin(theta),[r,theta,phi]]);</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;done</span><br/><span class="rvts9">(%i4) fri;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ cos(phi) cos(theta) &nbsp;- cos(phi) r sin(theta) &nbsp;- sin(phi) r cos(theta) ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9">(%o4) [ sin(phi) cos(theta) &nbsp;- sin(phi) r sin(theta) &nbsp; cos(phi) r cos(theta) &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; sin(theta) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;r cos(theta) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9">(%i5) cmetric();</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;false</span><br/><span class="rvts9">(%i6) lg:trigsimp(lg);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 1 &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9">(%o6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp;r &nbsp; &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 0 &nbsp;0 &nbsp; r &nbsp;cos (theta) ]</span></p>
+<p class="rvps3"><span class="rvts6">El argumento opcional </span><span class="rvts18">extra_arg</span><span class="rvts6"> puede ser cualquiera de los siguientes:</span></p>
+<p class="rvps3"><span class="rvts9">cylindrical</span><span class="rvts6"> indica a </span><span class="rvts9">ct_coordsys</span><span class="rvts6"> que añada una coordenada cilíndrica más.</span></p>
+<p class="rvps3"><span class="rvts9">minkowski</span><span class="rvts6"> indica a </span><span class="rvts9">ct_coordsys</span><span class="rvts6"> que añada una coordenada más con signatura métrica negativa.</span></p>
+<p class="rvps3"><span class="rvts9">all</span><span class="rvts6"> indica a </span><span class="rvts9">ct_coordsys</span><span class="rvts6"> que llame a </span><span class="rvts9">cmetric</span><span class="rvts6"> y a </span><span class="rvts9">christof(false)</span><span class="rvts6"> tras activar la métrica.</span></p>
+<p class="rvps3"><span class="rvts6">Si la variable global </span><span class="rvts9">verbose</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, </span><span class="rvts9">ct_coordsys</span><span class="rvts6"> muestra los valores de </span><span class="rvts9">dim</span><span class="rvts6">, </span><span class="rvts9">ct_coords</span><span class="rvts6">, junto con </span><span class="rvts9">lg</span><span class="rvts6"> o </span><span class="rvts9">lfg</span><span class="rvts6"> y </span><span class="rvts9">fri</span><span class="rvts6">, dependiendo del valor de </span><span class="rvts9">cframe_flag</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX921"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">init_ctensor</span><span class="rvts18"> ()</span></li>
+<li class="rvps3"><span class="rvts6">Inicializa el paquete </span><span class="rvts9">ctensor</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">init_ctensor</span><span class="rvts6"> reinicializa el paquete </span><span class="rvts9">ctensor</span><span class="rvts6">. Borra todos los arreglos ("arrays") y matrices utilizados por </span><span class="rvts9">ctensor</span><span class="rvts6"> y reinicializa todas las variables, asignando a </span><span class="rvts9">dim</span><span class="rvts6"> el valor 4 y la métrica del sistema de referencia a la de Lorentz.</span></p>
+<hr style="height: 6px;"/>
+<div><a name="IDX922"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC107"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC109"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC104"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC106"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_29.html#SEC117"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="rvps11"><span class="rvts0"><span class="rvts21">28.2.2 Los tensores del espacio curvo</span></span></h3>
+<p class="rvps3"><span class="rvts6">El propósito principal del paquete </span><span class="rvts9">ctensor</span><span class="rvts6"> es calcular los tensores del espacio (-tiempo) curvo, en especial los tensores utilizados en relatividad general.</span></p>
+<p class="rvps3"><span class="rvts6">Cuando se utiliza una métrica, </span><span class="rvts9">ctensor</span><span class="rvts6"> puede calcular los siguientes tensores:</span></p>
+<p class="rvps4"><span class="rvts9"> lg &nbsp;-- ug</span><br/><span class="rvts9"> &nbsp; \ &nbsp; &nbsp; &nbsp;\</span><br/><span class="rvts9"> &nbsp; &nbsp;lcs -- mcs -- ric -- uric </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\ &nbsp; &nbsp; &nbsp;\ &nbsp; &nbsp; &nbsp; \</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; \ &nbsp; &nbsp; &nbsp;tracer - ein -- lein</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; riem -- lriem -- weyl</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; \</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;uriem</span></p>
+<p class="rvps3"><span class="rvts6">El paquete </span><span class="rvts9">ctensor</span><span class="rvts6"> también puede trabajar con sistemas de referencia móviles. Si </span><span class="rvts9">cframe_flag</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, se pueden calcular los siguientes tensores:</span></p>
+<p class="rvps4"><span class="rvts9"> lfg -- ufg</span><br/><span class="rvts9"> &nbsp; &nbsp; \</span><br/><span class="rvts9"> fri -- fr -- lcs -- mcs -- lriem -- ric -- uric</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;\ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp;\ &nbsp; &nbsp; &nbsp;\ &nbsp; &nbsp; &nbsp; \</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; lg -- ug &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; weyl &nbsp; tracer - ein -- lein</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|\</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| riem</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\uriem</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX923"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">christof</span><span class="rvts18"> (dis)</span></li>
+<li class="rvps3"><span class="rvts6">Es una función del paquete </span><span class="rvts9">ctensor</span><span class="rvts6">. Calcula los símbolos de Christoffel de ambos tipos. El argumento </span><span class="rvts18">dis</span><span class="rvts6"> determina qué resultados se mostrarán de forma inmediata. Los símbolos de Christoffel de primer y segundo tipo se almacenan en los arreglos </span><span class="rvts9">lcs[i,j,k]</span><span class="rvts6"> y </span><span class="rvts9">mcs[i,j,k]</span><span class="rvts6">, respectivamente, y se definen simétricos en sus dos primeros índices. Si el argumento de </span><span class="rvts9">christof</span><span class="rvts6"> es </span><span class="rvts9">lcs</span><span class="rvts6"> o </span><span class="rvts9">mcs</span><span class="rvts6"> entonces serán mostrados únicamente los valores no nulos de </span><span class="rvts9">lcs[i,j,k]</span><span class="rvts6"> o </span><span class="rvts9">mcs[i,j,k]</span><span class="rvts6">, respectivamente. Si el argumento es </span><span class="rvts9">all</span><span class="rvts6"> entonces se mostrarán los valores no nulos de </span><span class="rvts9">lcs[i,j,k]</span><span class="rvts6"> y </span><span class="rvts9">mcs[i,j,k]</span><span class="rvts6">. Si el argumento vale </span><span class="rvts9">false</span><span class="rvts6"> entonces no se mostrarán los elementos. El arreglo </span><span class="rvts9">mcs[i,j,k]</span><span class="rvts6"> está definido de tal modo que el último índice es contravariante.</span></li>
+<li><a name="IDX924"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">ricci</span><span class="rvts18"> (dis)</span></li>
+<li class="rvps3"><span class="rvts6">Es una función del paquete </span><span class="rvts9">ctensor</span><span class="rvts6">. La función </span><span class="rvts9">ricci</span><span class="rvts6"> calcula las componentes covariantes (simétricas) </span><span class="rvts9">ric[i,j]</span><span class="rvts6"> del tensor de Ricci. Si el argumento </span><span class="rvts18">dis</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, entonces se muestran las componentes no nulas.</span></li>
+<li><a name="SEC108"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">uricci</span><span class="rvts18"> (dis)</span></li>
+<li class="rvps3"><span class="rvts6">Esta función calcula en primer lugar las componentes covariantes </span><span class="rvts9">ric[i,j]</span><span class="rvts6"> del tensor de Ricci. Después se calcula el tensor de Ricci utilizando la métrica contravariante. Si el valor del argumento </span><span class="rvts18">dis</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, entonces se mostrarán directamente las componentes </span><span class="rvts9">uric[i,j]</span><span class="rvts6"> (el índice </span><span class="rvts18">i</span><span class="rvts6"> es covariante y el </span><span class="rvts18">j</span><span class="rvts6"> contravariante). En otro caso, </span><span class="rvts9">ricci(false)</span><span class="rvts6"> simplemente calculará las entradas del arreglo </span><span class="rvts9">uric[i,j]</span><span class="rvts6"> sin mostrar los resultados.</span></li>
+<li><a name="IDX925"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">scurvature</span><span class="rvts18"> ()</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve la curvatura escalar (obtenida por contracción del tensor de Ricci) de la variedad de Riemannian con la métrica dada.</span></li>
+<li><a name="IDX926"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">einstein</span><span class="rvts18"> (dis)</span></li>
+<li class="rvps3"><span class="rvts6">Es una función del paquete </span><span class="rvts9">ctensor</span><span class="rvts6">. La función </span><span class="rvts9">einstein</span><span class="rvts6"> calcula el tensor de Einstein después de que los símbolos de Christoffel y el tensor de Ricci hayan sido calculados (con las funciones </span><span class="rvts9">christof</span><span class="rvts6"> y </span><span class="rvts9">ricci</span><span class="rvts6">). Si el argumento </span><span class="rvts18">dis</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, entonces se mostrarán los valores no nulos del tensor de Einstein </span><span class="rvts9">ein[i,j]</span><span class="rvts6">, donde </span><span class="rvts9">j</span><span class="rvts6"> es el índice contravariante. La variable </span><span class="rvts9">rateinstein</span><span class="rvts6"> causará la simplificación racional de estas componentes. Si </span><span class="rvts9">ratfac</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6"> entonces las componentes también se factorizarán.</span></li>
+<li><a name="IDX927"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">leinstein</span><span class="rvts18"> (dis)</span></li>
+<li class="rvps3"><span class="rvts6">Es el tensor covariante de Einstein. La función </span><span class="rvts9">leinstein</span><span class="rvts6"> almacena los valores del tensor covariante de Einstein en el arreglo </span><span class="rvts9">lein</span><span class="rvts6">. El tensor covariante de Einstein se calcula a partir del tensor de Einstein </span><span class="rvts9">ein</span><span class="rvts6"> multiplicándolo por el tensor métrico. Si el argumento </span><span class="rvts18">dis</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, entonces se mostrarán los valores no nulos del tensor covariante de Einstein.</span></li>
+<li><a name="IDX928"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">riemann</span><span class="rvts18"> (dis)</span></li>
+<li class="rvps3"><span class="rvts6">Es una función del paquete </span><span class="rvts9">ctensor</span><span class="rvts6">. La función </span><span class="rvts9">riemann</span><span class="rvts6"> calcula el tensor de curvatura de Riemann a partir de la métrica dada y de los símbolos de Christoffel correspondientes. Se utiliza el siguiente convenio sobre los índices:</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;l &nbsp; &nbsp; &nbsp;_l &nbsp; &nbsp; &nbsp; _l &nbsp; &nbsp; &nbsp; _l &nbsp; _m &nbsp; &nbsp;_l &nbsp; _m</span><br/><span class="rvts9"> R[i,j,k,l] = &nbsp;R &nbsp; &nbsp;= | &nbsp; &nbsp; &nbsp;- | &nbsp; &nbsp; &nbsp;+ | &nbsp; &nbsp;| &nbsp; - | &nbsp; &nbsp;|</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ijk &nbsp; &nbsp; ij,k &nbsp; &nbsp; ik,j &nbsp; &nbsp; mk &nbsp; ij &nbsp; &nbsp;mj &nbsp; ik</span></p>
+<p class="rvps3"><span class="rvts6">Esta notación es consistente con la notación utilizada por el paquete </span><span class="rvts9">itensor</span><span class="rvts6"> y su función </span><span class="rvts9">icurvature</span><span class="rvts6">. Si el argumento opcional </span><span class="rvts18">dis</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, se muestran las componentes no nulas de </span><span class="rvts9">riem[i,j,k,l]</span><span class="rvts6">. Como en el caso del tensor de Einstein, ciertas variables permiten controlar al usuario la simplificación de las componentes del tensor de Riemann. Si </span><span class="rvts9">ratriemann</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, entonces se hará la simplificación racional. Si </span><span class="rvts9">ratfac</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, entonces se factorizarán todas las componentes.</span></p>
+<p class="rvps3"><span class="rvts6">Si la variable </span><span class="rvts9">cframe_flag</span><span class="rvts6"> vale </span><span class="rvts9">false</span><span class="rvts6">, el tensor de Riemann se calcula directamente a partir de los símbolos de Christoffel. Si </span><span class="rvts9">cframe_flag</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, el tensor covariante de Riemann se calcula a partir de los coeficientes del campo.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX929"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">lriemann</span><span class="rvts18"> (dis)</span></li>
+<li class="rvps3"><span class="rvts6">Es el tensor covariante de Riemann (</span><span class="rvts9">lriem[]</span><span class="rvts6">).</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Calcula el tensor covariante de Riemann como un arreglo </span><span class="rvts9">lriem</span><span class="rvts6">. Si el argumento </span><span class="rvts18">dis</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, sólo se muestran los valores no nulos.</span></p>
+<p class="rvps3"><span class="rvts6">Si la variable </span><span class="rvts9">cframe_flag</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, el tensor covariante de Riemann se calcula directamente de los coeficientes del campo. En otro caso, el tensor de Riemann (3,1) se calcula en primer lugar.</span></p>
+<p class="rvps3"><span class="rvts6">Para más información sobre la ordenación de los índices, véase </span><span class="rvts9">riemann</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX930"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">uriemann</span><span class="rvts18"> (dis)</span></li>
+<li class="rvps3"><span class="rvts6">Calcula las componentes contravariantes del tensor de curvatura de Riemann como un arreglo </span><span class="rvts9">uriem[i,j,k,l]</span><span class="rvts6">. Éstos se muestran si </span><span class="rvts18">dis</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">.</span></li>
+<li><a name="IDX931"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">rinvariant</span><span class="rvts18"> ()</span></li>
+<li class="rvps3"><span class="rvts6">Calcula la invariante de Kretchmann (</span><span class="rvts9">kinvariant</span><span class="rvts6">) obtenida por contracción de los tensores.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">lriem[i,j,k,l]*uriem[i,j,k,l].</span></p>
+<p class="rvps3"><span class="rvts6">Este objeto no se simplifica automáticamente al ser en ocasiones muy grande.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX932"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">weyl</span><span class="rvts18"> (dis)</span></li>
+<li class="rvps3"><span class="rvts6">Calcula el tensor conforme de Weyl. Si el argumento </span><span class="rvts18">dis</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, se le mostrarán al usuario las componentes no nulas </span><span class="rvts9">weyl[i,j,k,l]</span><span class="rvts6">. En otro caso, estas componentes serán únicamente calculadas y almacenadas. Si la variable </span><span class="rvts9">ratweyl</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, entonces las componentes se simplifican racionalmente; si </span><span class="rvts9">ratfac</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6"> los resultados también se simplificarán.</span></li>
+<hr style="height: 6px;"/></li>
+</ul>
+<div><a name="IDX933"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC108"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC110"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC104"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC106"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_29.html#SEC117"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="rvps11"><span class="rvts0"><span class="rvts21">28.2.3 Desarrollo de Taylor</span></span></h3>
+<p class="rvps3"><span class="rvts6">El paquete </span><span class="rvts9">ctensor</span><span class="rvts6"> puede truncar resultados e interpretarlos como aproximaciones de Taylor. Este comportamiento se controla con lavariable </span><span class="rvts9">ctayswitch</span><span class="rvts6">; cuando vale </span><span class="rvts9">true</span><span class="rvts6">, </span><span class="rvts9">ctensor</span><span class="rvts6"> utiliza internamente la función </span><span class="rvts9">ctaylor</span><span class="rvts6"> cuando simplifica resultados.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">ctaylor</span><span class="rvts6"> es llamada desde las siguientes funciones del paquete </span><span class="rvts9">ctensor</span><span class="rvts6">:</span></p>
+<p class="rvps4"><span class="rvts9"> &nbsp; &nbsp;Función &nbsp; &nbsp; &nbsp;Comentarios</span><br/><span class="rvts9"> &nbsp; &nbsp;---------------------------------</span><br/><span class="rvts9"> &nbsp; &nbsp;christof() &nbsp; Sólo para mcs</span><br/><span class="rvts9"> &nbsp; &nbsp;ricci()</span><br/><span class="rvts9"> &nbsp; &nbsp;uricci()</span><br/><span class="rvts9"> &nbsp; &nbsp;einstein()</span><br/><span class="rvts9"> &nbsp; &nbsp;riemann()</span><br/><span class="rvts9"> &nbsp; &nbsp;weyl()</span><br/><span class="rvts9"> &nbsp; &nbsp;checkdiv()</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX934"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">ctaylor</span><span class="rvts18"> ()</span></li>
+<li class="rvps3"><span class="rvts6">La función </span><span class="rvts9">ctaylor</span><span class="rvts6"> trunca su argumento convirtiéndolo en un desarrollo de Taylor por medio de la función </span><span class="rvts9">taylor</span><span class="rvts6"> e invocando después a </span><span class="rvts9">ratdisrep</span><span class="rvts6">. Esto tiene el efecto de eliminar términos de orden alto en la variable de expansión </span><span class="rvts9">ctayvar</span><span class="rvts6">. El orden de los términos que deben ser eliminados se define </span><span class="rvts9">ctaypov</span><span class="rvts6">; el punto alrededor del cual se desarrolla la serie se especifica en </span><span class="rvts9">ctaypt</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Como ejemplo, considérese una sencilla métrica que es una perturbación de la de Minkowski. Sin añadir restricciones, incluso una métrica diagonal produce expansiones del tensor de Einstein que pueden llegar a ser muy complejas:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load(ctensor);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; /share/tensor/ctensor.mac</span><br/><span class="rvts9">(%i2) ratfac:true;</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;true</span><br/><span class="rvts9">(%i3) derivabbrev:true;</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;true</span><br/><span class="rvts9">(%i4) ct_coords:[t,r,theta,phi];</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [t, r, theta, phi]</span><br/><span class="rvts9">(%i5) lg:matrix([-1,0,0,0],[0,1,0,0],[0,0,r^2,0],[0,0,0,r^2*sin(theta)^2]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ - 1 &nbsp;0 &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp;0 &nbsp; 1 &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp;0 &nbsp; 0 &nbsp;r &nbsp; &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp;0 &nbsp; 0 &nbsp;0 &nbsp; r &nbsp;sin (theta) ]</span><br/><span class="rvts9">(%i6) h:matrix([h11,0,0,0],[0,h22,0,0],[0,0,h33,0],[0,0,0,h44]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ h11 &nbsp; 0 &nbsp; &nbsp;0 &nbsp; &nbsp;0 &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp;0 &nbsp; h22 &nbsp; 0 &nbsp; &nbsp;0 &nbsp;]</span><br/><span class="rvts9">(%o6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp;0 &nbsp; &nbsp;0 &nbsp; h33 &nbsp; 0 &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp;0 &nbsp; &nbsp;0 &nbsp; &nbsp;0 &nbsp; h44 ]</span><br/><span class="rvts9">(%i7) depends(l,r);</span><br/><span class="rvts9">(%o7) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [l(r)]</span><br/><span class="rvts9">(%i8) lg:lg+l*h;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; [ h11 l - 1 &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp;h22 l + 1 &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9">(%o8) &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp;r &nbsp;+ h33 l &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; r &nbsp;sin (theta) + h44 l ]</span><br/><span class="rvts9">(%i9) cmetric(false);</span><br/><span class="rvts9">(%o9) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;done</span><br/><span class="rvts9">(%i10) einstein(false);</span><br/><span class="rvts9">(%o10) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; done</span><br/><span class="rvts9">(%i11) ntermst(ein);</span><br/><span class="rvts9">[[1, 1], 62] </span><br/><span class="rvts9">[[1, 2], 0] </span><br/><span class="rvts9">[[1, 3], 0] </span><br/><span class="rvts9">[[1, 4], 0] </span><br/><span class="rvts9">[[2, 1], 0] </span><br/><span class="rvts9">[[2, 2], 24] </span><br/><span class="rvts9">[[2, 3], 0] </span><br/><span class="rvts9">[[2, 4], 0] </span><br/><span class="rvts9">[[3, 1], 0] </span><br/><span class="rvts9">[[3, 2], 0] </span><br/><span class="rvts9">[[3, 3], 46] </span><br/><span class="rvts9">[[3, 4], 0] </span><br/><span class="rvts9">[[4, 1], 0] </span><br/><span class="rvts9">[[4, 2], 0] </span><br/><span class="rvts9">[[4, 3], 0] </span><br/><span class="rvts9">[[4, 4], 46] </span><br/><span class="rvts9">(%o12) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; done</span></p>
+<p class="rvps3"><span class="rvts6">Sin embargo, si se recalcula este ejemplo como una aproximación lineal en la variable </span><span class="rvts9">l</span><span class="rvts6">, se obtienen expresiones más sencillas:</span></p>
+<p class="rvps4"><span class="rvts9">(%i14) ctayswitch:true;</span><br/><span class="rvts9">(%o14) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; true</span><br/><span class="rvts9">(%i15) ctayvar:l;</span><br/><span class="rvts9">(%o15) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; l</span><br/><span class="rvts9">(%i16) ctaypov:1;</span><br/><span class="rvts9">(%o16) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</span><br/><span class="rvts9">(%i17) ctaypt:0;</span><br/><span class="rvts9">(%o17) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0</span><br/><span class="rvts9">(%i18) christof(false);</span><br/><span class="rvts9">(%o18) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; done</span><br/><span class="rvts9">(%i19) ricci(false);</span><br/><span class="rvts9">(%o19) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; done</span><br/><span class="rvts9">(%i20) einstein(false);</span><br/><span class="rvts9">(%o20) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; done</span><br/><span class="rvts9">(%i21) ntermst(ein);</span><br/><span class="rvts9">[[1, 1], 6] </span><br/><span class="rvts9">[[1, 2], 0] </span><br/><span class="rvts9">[[1, 3], 0] </span><br/><span class="rvts9">[[1, 4], 0] </span><br/><span class="rvts9">[[2, 1], 0] </span><br/><span class="rvts9">[[2, 2], 13] </span><br/><span class="rvts9">[[2, 3], 2] </span><br/><span class="rvts9">[[2, 4], 0] </span><br/><span class="rvts9">[[3, 1], 0] </span><br/><span class="rvts9">[[3, 2], 2] </span><br/><span class="rvts9">[[3, 3], 9] </span><br/><span class="rvts9">[[3, 4], 0] </span><br/><span class="rvts9">[[4, 1], 0] </span><br/><span class="rvts9">[[4, 2], 0] </span><br/><span class="rvts9">[[4, 3], 0] </span><br/><span class="rvts9">[[4, 4], 9] </span><br/><span class="rvts9">(%o21) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; done</span><br/><span class="rvts9">(%i22) ratsimp(ein[1,1]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp;2 &nbsp;4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; 2</span><br/><span class="rvts9">(%o22) - (((h11 h22 - h11 ) (l ) &nbsp;r &nbsp;- 2 h33 l &nbsp; &nbsp;r ) sin (theta)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;r &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; r r</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp;4 &nbsp; &nbsp;2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- 2 h44 l &nbsp; &nbsp;r &nbsp;- h33 h44 (l ) )/(4 r &nbsp;sin (theta))</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; r r &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;r</span></p>
+<p class="rvps3"><span class="rvts6">Esta capacidad del paquete </span><span class="rvts9">ctensor</span><span class="rvts6"> puede ser muy útil; por ejemplo, cuando se trabaja en zonas del campo gravitatorio alejadas del origen de éste.</span></p>
+<hr style="height: 6px;"/>
+<div><a name="IDX935"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC109"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC111"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC104"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC106"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_29.html#SEC117"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="rvps11"><span class="rvts0"><span class="rvts21">28.2.4 Campos del sistema de referencia</span></span></h3>
+<p class="rvps3"><span class="rvts6">Cuando la variable </span><span class="rvts9">cframe_flag</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, el paquete </span><span class="rvts9">ctensor</span><span class="rvts6"> realiza sus cálculos utilizando un sistema de referencia móvil.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC109"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">frame_bracket</span><span class="rvts18"> (fr, fri, diagframe)</span></li>
+<li class="rvps3"><span class="rvts6">Es el sistema de referencia soporte (</span><span class="rvts9">fb[]</span><span class="rvts6">).</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Calcula el soporte del sistema de referencia de acuerdo con la siguiente definición:</span></p>
+<p class="rvps4"><span class="rvts9"> &nbsp; c &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;c &nbsp; &nbsp; &nbsp; &nbsp; c &nbsp; &nbsp; &nbsp; &nbsp;d &nbsp; &nbsp; e</span><br/><span class="rvts9">ifb &nbsp; = ( ifri &nbsp; &nbsp;- ifri &nbsp; &nbsp;) ifr &nbsp; ifr</span><br/><span class="rvts9"> &nbsp; ab &nbsp; &nbsp; &nbsp; &nbsp; d,e &nbsp; &nbsp; &nbsp; e,d &nbsp; &nbsp; &nbsp;a &nbsp; &nbsp; b</span></p>
+<hr style="height: 6px;"/>
+<div><a name="IDX936"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC110"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC112"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC104"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC106"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_29.html#SEC117"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="rvps11"><span class="rvts0"><span class="rvts21">28.2.5 Clasificación algebraica</span></span></h3>
+<p class="rvps3"><span class="rvts6">Una nueva funcionalidad (Noviembre de 2004) de </span><span class="rvts9">ctensor</span><span class="rvts6"> es su capacidad de obtener la clasificación de Petrov de una métrica espaciotemporal de dimensión 4. Para una demostración de esto véase el fichero </span><span class="rvts9">share/tensor/petrov.dem</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC110"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">nptetrad</span><span class="rvts18"> ()</span></li>
+<li class="rvps3"><span class="rvts6">Calcula la cuaterna nula de Newman-Penrose (</span><span class="rvts9">np</span><span class="rvts6">). Véase </span><span class="rvts9">petrov</span><span class="rvts6"> para un ejemplo.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La cuaterna nula se construye bajo la suposición de que se está utilizando una métrica tetradimensional ortonormal con signatura métrica (-,+,+,+). Los componentes de la cuaterna nula se relacionan con la inversa de la matriz del sistema de referencia de la siguiente manera:</span></p>
+<p class="rvps4"><span class="rvts9">np &nbsp;= (fri &nbsp;+ fri ) / sqrt(2)</span><br/><span class="rvts9"> &nbsp;1 &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9">np &nbsp;= (fri &nbsp;- fri ) / sqrt(2)</span><br/><span class="rvts9"> &nbsp;2 &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9">np &nbsp;= (fri &nbsp;+ %i fri ) / sqrt(2)</span><br/><span class="rvts9"> &nbsp;3 &nbsp; &nbsp; &nbsp; 3 &nbsp; &nbsp; &nbsp; &nbsp; 4</span><br/><span class="rvts9">np &nbsp;= (fri &nbsp;- %i fri ) / sqrt(2)</span><br/><span class="rvts9"> &nbsp;4 &nbsp; &nbsp; &nbsp; 3 &nbsp; &nbsp; &nbsp; &nbsp; 4</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX937"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">psi</span><span class="rvts18"> (dis)</span></li>
+<li class="rvps3"><span class="rvts6">Calcula los cinco coeficientes de Newman-Penrose </span><span class="rvts9">psi[0]</span><span class="rvts6">...</span><span class="rvts9">psi[4]</span><span class="rvts6">. Si </span><span class="rvts9">psi</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, se muestran estos coeficientes. Véase </span><span class="rvts9">petrov</span><span class="rvts6"> para un ejemplo.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Estos coeficientes se calculan a partir del tensor de Weyl.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC111"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">petrov</span><span class="rvts18"> ()</span></li>
+<li class="rvps3"><span class="rvts6">Calcula la clasificación de Petrov de la métrica caracterizada por </span><span class="rvts9">psi[0]</span><span class="rvts6">...</span><span class="rvts9">psi[4]</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Por ejemplo, lo que sigue demuestra cómo obtener la clasificación de Petrov para la métrica de Kerr:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load(ctensor);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; /share/tensor/ctensor.mac</span><br/><span class="rvts9">(%i2) (cframe_flag:true,gcd:spmod,ctrgsimp:true,ratfac:true);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;true</span><br/><span class="rvts9">(%i3) ct_coordsys(exteriorschwarzschild,all);</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;done</span><br/><span class="rvts9">(%i4) ug:invert(lg)$</span><br/><span class="rvts9">(%i5) weyl(false);</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;done</span><br/><span class="rvts9">(%i6) nptetrad(true);</span><br/><span class="rvts9">(%t6) np = </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; [ &nbsp;sqrt(r - 2 m) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sqrt(r) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; [ --------------- &nbsp; --------------------- &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; [ sqrt(2) sqrt(r) &nbsp; sqrt(2) sqrt(r - 2 m) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; [ &nbsp;sqrt(r - 2 m) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;sqrt(r) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; [ --------------- &nbsp;- --------------------- &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; [ sqrt(2) sqrt(r) &nbsp; &nbsp;sqrt(2) sqrt(r - 2 m) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;r &nbsp; &nbsp; &nbsp;%i r sin(theta) &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ------- &nbsp; --------------- &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sqrt(2) &nbsp; &nbsp; &nbsp; sqrt(2) &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;r &nbsp; &nbsp; &nbsp; %i r sin(theta) ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ------- &nbsp;- --------------- ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sqrt(2) &nbsp; &nbsp; &nbsp; &nbsp;sqrt(2) &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sqrt(r) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;sqrt(r - 2 m)</span><br/><span class="rvts9">(%t7) npi = matrix([- ---------------------, ---------------, 0, 0], </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;sqrt(2) sqrt(r - 2 m) &nbsp;sqrt(2) sqrt(r)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;sqrt(r) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;sqrt(r - 2 m)</span><br/><span class="rvts9">[- ---------------------, - ---------------, 0, 0], </span><br/><span class="rvts9"> &nbsp; sqrt(2) sqrt(r - 2 m) &nbsp; &nbsp;sqrt(2) sqrt(r)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; %i</span><br/><span class="rvts9">[0, 0, ---------, --------------------], </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; sqrt(2) r &nbsp;sqrt(2) r sin(theta)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; %i</span><br/><span class="rvts9">[0, 0, ---------, - --------------------])</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; sqrt(2) r &nbsp; &nbsp;sqrt(2) r sin(theta)</span><br/><span class="rvts9">(%o7) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;done</span><br/><span class="rvts9">(%i7) psi(true);</span><br/><span class="rvts9">(%t8) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;psi &nbsp;= 0</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0</span><br/><span class="rvts9">(%t9) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;psi &nbsp;= 0</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;m</span><br/><span class="rvts9">(%t10) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; psi &nbsp;= --</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp;3</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;r</span><br/><span class="rvts9">(%t11) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; psi &nbsp;= 0</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3</span><br/><span class="rvts9">(%t12) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; psi &nbsp;= 0</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4</span><br/><span class="rvts9">(%o12) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; done</span><br/><span class="rvts9">(%i12) petrov();</span><br/><span class="rvts9">(%o12) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; D</span></p>
+<p class="rvps3"><span class="rvts6">La función de clasificación de Petrov se basa en el algoritmo publicado en "Classifying geometries in general relativity: III Classification in practice" de Pollney, Skea, and d'Inverno, Class. Quant. Grav. 17 2885-2902 (2000). Excepto para algunos ejemplos sencillos, esta implementación no ha sido exhaustivamente probada, por lo que puede contener errores.</span></p>
+<hr style="height: 6px;"/>
+<div><a name="IDX938"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC111"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC113"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC104"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC106"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_29.html#SEC117"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="rvps11"><span class="rvts0"><span class="rvts21">28.2.6 Torsión y no metricidad</span></span></h3>
+<p class="rvps3"><span class="rvts6">El paquete </span><span class="rvts9">ctensor</span><span class="rvts6"> es capaz de calcular e incluir coeficientes de torsión y no metricidad en los coeficientes de conexión.</span></p>
+<p class="rvps3"><span class="rvts6">Los coeficientes de torsión se calculan a partir de un tensor suministrado por el usuario, </span><span class="rvts9">tr</span><span class="rvts6">, el cual debe ser de rango (2,1). A partir de ahí, los coeficientes de torsión </span><span class="rvts9">kt</span><span class="rvts6"> se calculan de acuerdo con las siguientes fórmulas:</span></p>
+<p class="rvps4"><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;m &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;m &nbsp; &nbsp; &nbsp;m</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; - g &nbsp;tr &nbsp; - g &nbsp; tr &nbsp; - tr &nbsp; g</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;im &nbsp;kj &nbsp; &nbsp;jm &nbsp; ki &nbsp; &nbsp; ij &nbsp;km</span><br/><span class="rvts9">kt &nbsp; = -------------------------------</span><br/><span class="rvts9"> &nbsp;ijk &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9"> &nbsp;k &nbsp; &nbsp; km</span><br/><span class="rvts9">kt &nbsp; = g &nbsp; kt</span><br/><span class="rvts9"> &nbsp;ij &nbsp; &nbsp; &nbsp; &nbsp; ijm</span></p>
+<p class="rvps3"><span class="rvts6">Los coeficientes de no metricidad se calculan a partir de un vector de no metricidad, </span><span class="rvts9">nm</span><span class="rvts6">, suministrado por el usuario. A partir de ahí, los coeficientes de no metricidad, </span><span class="rvts9">nmc</span><span class="rvts6">, se calculan como se indica a continuación:</span></p>
+<p class="rvps4"><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; k &nbsp; &nbsp;k &nbsp; &nbsp; &nbsp; &nbsp;km</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; -nm &nbsp;D &nbsp;- D &nbsp;nm &nbsp;+ g &nbsp; nm &nbsp;g</span><br/><span class="rvts9"> &nbsp; k &nbsp; &nbsp; &nbsp;i &nbsp;j &nbsp; &nbsp;i &nbsp; j &nbsp; &nbsp; &nbsp; &nbsp; m &nbsp;ij</span><br/><span class="rvts9">nmc &nbsp;= ------------------------------</span><br/><span class="rvts9"> &nbsp; ij &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span></p>
+<p class="rvps3"><span class="rvts6">donde D es la delta de Kronecker.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX939"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">contortion</span><span class="rvts18"> (tr)</span></li>
+<li class="rvps3"><span class="rvts6">Calcula los coeficientes (2,1) de contorsión del tensor de torsión </span><span class="rvts18">tr</span><span class="rvts6">.</span></li>
+<li><a name="IDX940"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">nonmetricity</span><span class="rvts18"> (nm)</span></li>
+<li class="rvps3"><span class="rvts6">Calcula los coeficientes (2,1) de no metricidad del vector de no metricidad </span><span class="rvts18">nm</span><span class="rvts6">.</span></li>
+<hr style="height: 6px;"/></li>
+</ul>
+<div><a name="SEC112"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC112"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC114"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC104"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC106"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_29.html#SEC117"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="rvps11"><span class="rvts0"><span class="rvts21">28.2.7 Otras funcionalidades</span></span></h3>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX941"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">ctransform</span><span class="rvts18"> (M)</span></li>
+<li class="rvps3"><span class="rvts6">Es una función del paquete </span><span class="rvts9">ctensor</span><span class="rvts6">. Realiza una transformación de coordenadas a partir de una matriz cuadrada simétrica </span><span class="rvts18">M</span><span class="rvts6"> arbitraria. El usuario debe introducir las funciones que definen la transformación.</span></li>
+<li><a name="IDX942"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">findde</span><span class="rvts18"> (A, n)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve la lista de las ecuaciones diferenciales que corresponden a los elementos del arreglo cuadrado </span><span class="rvts18">n</span><span class="rvts6">-dimensional. El argumento </span><span class="rvts18">n</span><span class="rvts6"> puede ser 2 ó 3; </span><span class="rvts9">deindex</span><span class="rvts6"> es una lista global que contiene los índices de </span><span class="rvts18">A</span><span class="rvts6"> que corresponden a estas ecuaciones diferenciales. Para el tensor de Einstein (</span><span class="rvts9">ein</span><span class="rvts6">), que es un arreglo bidimensional, si se calcula para la métrica del ejemplo de más abajo, </span><span class="rvts9">findde</span><span class="rvts6"> devuelve las siguientes ecuaciones diferenciales independientes:</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) load(ctensor);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; /share/tensor/ctensor.mac</span><br/><span class="rvts9">(%i2) derivabbrev:true;</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;true</span><br/><span class="rvts9">(%i3) dim:4;</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4</span><br/><span class="rvts9">(%i4) lg:matrix([a,0,0,0],[0,x^2,0,0],[0,0,x^2*sin(y)^2,0],[0,0,0,-d]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ a &nbsp;0 &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp;x &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp;]</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp;0 &nbsp; x &nbsp;sin (y) &nbsp; 0 &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp;0 &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; - d ]</span><br/><span class="rvts9">(%i5) depends([a,d],x);</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[a(x), d(x)]</span><br/><span class="rvts9">(%i6) ct_coords:[x,y,z,t];</span><br/><span class="rvts9">(%o6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[x, y, z, t]</span><br/><span class="rvts9">(%i7) cmetric();</span><br/><span class="rvts9">(%o7) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;done</span><br/><span class="rvts9">(%i8) einstein(false);</span><br/><span class="rvts9">(%o8) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;done</span><br/><span class="rvts9">(%i9) findde(ein,2);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9">(%o9) [d &nbsp;x - a d + d, 2 a d d &nbsp; &nbsp;x - a (d ) &nbsp;x - a &nbsp;d d &nbsp;x + 2 a d d</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp;x &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x x &nbsp; &nbsp; &nbsp; &nbsp; x &nbsp; &nbsp; &nbsp; &nbsp;x &nbsp; &nbsp;x &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- 2 a &nbsp;d , a &nbsp;x + a &nbsp;- a]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x &nbsp; &nbsp; &nbsp;x</span><br/><span class="rvts9">(%i10) deindex;</span><br/><span class="rvts9">(%o10) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [[1, 1], [2, 2], [4, 4]]</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC113"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">cograd</span><span class="rvts18"> ()</span></li>
+<li class="rvps3"><span class="rvts6">Calcula el gradiente covariante de una función escalar permitiendo al usuario elegir el nombre del vector correspondiente, como ilustra el ejemplo que acompaña a la definición de la función </span><span class="rvts9">contragrad</span><span class="rvts6">.</span></li>
+<li><a name="IDX943"></a>
+<span class="rvts16">Function:</span><span class="rvts6"> </span><span class="rvts17">contragrad</span><span class="rvts18"> ()</span></li>
+<li class="rvps3"><span class="rvts6">Calcula el gradiente contravariante de una función escalar permitiendo al usuario elegir el nombre del vector correspondiente, tal como muestra el siguiente ejemplo para la métrica de Schwarzschild:</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) load(ctensor);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; /share/tensor/ctensor.mac</span><br/><span class="rvts9">(%i2) derivabbrev:true;</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;true</span><br/><span class="rvts9">(%i3) ct_coordsys(exteriorschwarzschild,all);</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;done</span><br/><span class="rvts9">(%i4) depends(f,r);</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [f(r)]</span><br/><span class="rvts9">(%i5) cograd(f,g1);</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;done</span><br/><span class="rvts9">(%i6) listarray(g1);</span><br/><span class="rvts9">(%o6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[0, f , 0, 0]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;r</span><br/><span class="rvts9">(%i7) contragrad(f,g2);</span><br/><span class="rvts9">(%o7) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;done</span><br/><span class="rvts9">(%i8) listarray(g2);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; f &nbsp;r - 2 f &nbsp;m</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;r &nbsp; &nbsp; &nbsp; &nbsp;r</span><br/><span class="rvts9">(%o8) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[0, -------------, 0, 0]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; r</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX944"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">dscalar</span><span class="rvts18"> ()</span></li>
+<li class="rvps3"><span class="rvts6">Calcula el tensor de d'Alembertian de la función escalar una vez se han declarado las dependencias. Por ejemplo:</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) load(ctensor);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; /share/tensor/ctensor.mac</span><br/><span class="rvts9">(%i2) derivabbrev:true;</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;true</span><br/><span class="rvts9">(%i3) ct_coordsys(exteriorschwarzschild,all);</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;done</span><br/><span class="rvts9">(%i4) depends(p,r);</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [p(r)]</span><br/><span class="rvts9">(%i5) factor(dscalar(p));</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;p &nbsp; &nbsp;r &nbsp;- 2 m p &nbsp; &nbsp;r + 2 p &nbsp;r - 2 m p</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; r r &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; r r &nbsp; &nbsp; &nbsp; &nbsp;r &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;r</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------------------------------------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;r</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX945"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">checkdiv</span><span class="rvts18"> ()</span></li>
+<li class="rvps3"><span class="rvts6">Calcula la divergencia covariante del tensor de segundo rango (mixed second rank tensor), cuyo primer índice debe ser covariante, devolviendo las </span><span class="rvts9">n</span><span class="rvts6"> componentes correspondientes del campo vectorial (la divergencia), siendo </span><span class="rvts9">n = dim</span><span class="rvts6">.</span></li>
+<li><a name="IDX946"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">cgeodesic</span><span class="rvts18"> (dis)</span></li>
+<li class="rvps3"><span class="rvts6">Es una función del paquete </span><span class="rvts9">ctensor</span><span class="rvts6"> que calcula las ecuaciones geodésicas del movimiento para una métrica dada, las cuales se almacenan en el arreglo </span><span class="rvts9">geod[i]</span><span class="rvts6">. Si el argumento </span><span class="rvts18">dis</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6"> entonces se muestran estas ecuaciones.</span></li>
+<li><a name="IDX947"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">bdvac</span><span class="rvts18"> (f)</span></li>
+<li class="rvps3"><span class="rvts6">Genera las componentes covariantes de las ecuaciones del campo vacío de la teoría gravitacional de Brans- Dicke gravitational. El campo escalar se especifica con el argumento </span><span class="rvts18">f</span><span class="rvts6">, el cual debe ser el nombre de una función no evaluada (precedida de apóstrofo) con dependencias funcionales, por ejemplo, </span><span class="rvts9">'p(x)</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Las componentes del tensor covariante (second rank covariant field tensor) se almacenan en el arreglo </span><span class="rvts9">bd</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX948"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">invariant1</span><span class="rvts18"> ()</span></li>
+<li class="rvps3"><span class="rvts6">Genera el tensor de Euler-Lagrange (ecuaciones de campo) para la densidad invariante de R^2. Las ecuaciones de campo son las componentes del arreglo </span><span class="rvts9">inv1</span><span class="rvts6">.</span></li>
+<hr style="height: 6px;"/></li>
+</ul>
+<div><a name="IDX949"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC113"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC115"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC104"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC106"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_29.html#SEC117"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="rvps11"><span class="rvts0"><span class="rvts21">28.2.8 Utilidades</span></span></h3>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX950"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">diagmatrixp</span><span class="rvts18"> (M)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve </span><span class="rvts9">true</span><span class="rvts6"> si </span><span class="rvts18">M</span><span class="rvts6"> es una matriz diagonal o un arreglo bidimensional.</span></li>
+<li><a name="IDX951"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">symmetricp</span><span class="rvts18"> (M)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve </span><span class="rvts9">true</span><span class="rvts6"> si </span><span class="rvts18">M</span><span class="rvts6"> es una matriz simétrica o un arreglo bidimensional.</span></li>
+<li><a name="SEC114"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">ntermst</span><span class="rvts18"> (f)</span></li>
+<li class="rvps3"><span class="rvts6">Permite hacerse una idea del tamaño del tensor </span><span class="rvts18">f</span><span class="rvts6">.</span></li>
+<li><a name="IDX952"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">cdisplay</span><span class="rvts18"> (ten)</span></li>
+<li class="rvps3"><span class="rvts6">Muestra todos los elementos del tensor </span><span class="rvts18">ten</span><span class="rvts6"> como arreglo multidimensional. Tensors de rango 0 y 1, así como otros tipos de variables, se muestran como en </span><span class="rvts9">ldisplay</span><span class="rvts6">. Tensors de rango 2 se muestran como matrices bidimensionales, mientras que tensores de mayor rango se muestran como listas de matrices bidimensionales. Por ejemplo, el tensor de Riemann de la métrica de Schwarzschild se puede ver como:</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) load(ctensor);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; /share/tensor/ctensor.mac</span><br/><span class="rvts9">(%i2) ratfac:true;</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;true</span><br/><span class="rvts9">(%i3) ct_coordsys(exteriorschwarzschild,all);</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;done</span><br/><span class="rvts9">(%i4) riemann(false);</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;done</span><br/><span class="rvts9">(%i5) cdisplay(riem);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp;3 m (r - 2 m) &nbsp; m &nbsp; &nbsp;2 m &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 0 &nbsp;- ------------- + -- - ---- &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3 &nbsp; &nbsp; 4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; r &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;r &nbsp; &nbsp; r &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp;riem &nbsp; &nbsp; = [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; m (r - 2 m) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp;1, 1 &nbsp; [ 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ----------- &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; r &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;m (r - 2 m) ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; ----------- ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4 &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;r &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp;2 m (r - 2 m) &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp;------------- &nbsp;0 &nbsp;0 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; r &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; riem &nbsp; &nbsp; = [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1, 2 &nbsp; [ 0 &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp;0 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp;0 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp;0 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; m (r - 2 m) &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp;0 &nbsp;- ----------- &nbsp;0 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4 &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; r &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; riem &nbsp; &nbsp; = [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1, 3 &nbsp; [ 0 &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp;0 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp;0 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp;0 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;m (r - 2 m) ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp;0 &nbsp;0 &nbsp;- ----------- ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4 &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;r &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; riem &nbsp; &nbsp; = [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1, 4 &nbsp; [ 0 &nbsp;0 &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp;0 &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp;0 &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp; 0 &nbsp;0 &nbsp;0 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; 2 m &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ - ------------ &nbsp;0 &nbsp;0 &nbsp;0 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;riem &nbsp; &nbsp; = [ &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2, 1 &nbsp; [ &nbsp; r &nbsp;(r - 2 m) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp; 0 &nbsp;0 &nbsp;0 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp; 0 &nbsp;0 &nbsp;0 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; 2 m &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ ------------ &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ r &nbsp;(r - 2 m) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp;riem &nbsp; &nbsp; = [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; m &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2, 2 &nbsp; [ &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp;- ------------ &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;r &nbsp;(r - 2 m) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; m &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; - ------------ ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;r &nbsp;(r - 2 m) ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp;0 &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp;0 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;m &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp;0 &nbsp;------------ &nbsp;0 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; riem &nbsp; &nbsp; = [ &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2, 3 &nbsp; [ &nbsp; &nbsp; &nbsp; r &nbsp;(r - 2 m) &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp;0 &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp;0 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp;0 &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp;0 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp;0 &nbsp;0 &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; m &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp;0 &nbsp;0 &nbsp;------------ ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; riem &nbsp; &nbsp; = [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2, 4 &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;r &nbsp;(r - 2 m) ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp;0 &nbsp;0 &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp;0 &nbsp;0 &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp;0 &nbsp;0 &nbsp;0 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp;0 &nbsp;0 &nbsp;0 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; riem &nbsp; &nbsp; = [ m &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3, 1 &nbsp; [ - &nbsp;0 &nbsp;0 &nbsp;0 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ r &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp;0 &nbsp;0 &nbsp;0 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp;0 &nbsp;0 &nbsp;0 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp;0 &nbsp;0 &nbsp;0 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; riem &nbsp; &nbsp; = [ &nbsp; &nbsp;m &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3, 2 &nbsp; [ 0 &nbsp;- &nbsp;0 &nbsp;0 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp;r &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp;0 &nbsp;0 &nbsp;0 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; m &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ - - &nbsp; 0 &nbsp; 0 &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; r &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp;m &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp;0 &nbsp; - - &nbsp;0 &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;riem &nbsp; &nbsp; = [ &nbsp; &nbsp; &nbsp; &nbsp;r &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3, 3 &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp;0 &nbsp; &nbsp;0 &nbsp; 0 &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 m - r &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp;0 &nbsp; &nbsp;0 &nbsp; 0 &nbsp;------- + 1 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; r &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp;0 &nbsp;0 &nbsp; &nbsp;0 &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp;0 &nbsp;0 &nbsp; &nbsp;0 &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; riem &nbsp; &nbsp; = [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 m ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3, 4 &nbsp; [ 0 &nbsp;0 &nbsp;0 &nbsp;- --- ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; r &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp;0 &nbsp;0 &nbsp; &nbsp;0 &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp;0 &nbsp;0 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp;0 &nbsp;0 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; riem &nbsp; &nbsp; = [ &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp;0 &nbsp;0 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4, 1 &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ m sin (theta) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ ------------- &nbsp;0 &nbsp;0 &nbsp;0 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; r &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp;0 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp;0 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; riem &nbsp; &nbsp; = [ 0 &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp;0 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4, 2 &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp;m sin (theta) &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp;------------- &nbsp;0 &nbsp;0 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;r &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; riem &nbsp; &nbsp; = [ 0 &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4, 3 &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; 2 m sin (theta) &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ 0 &nbsp;0 &nbsp;- --------------- &nbsp;0 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;r &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; m sin (theta) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ - ------------- &nbsp; &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; 0 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; r &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;m sin (theta) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;riem &nbsp; &nbsp; = [ &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; - ------------- &nbsp; &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp; 0 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4, 4 &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;r &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 m sin (theta) &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; --------------- &nbsp;0 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;r &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; 0 ]</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;done</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX953"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">deleten</span><span class="rvts18"> (L, n)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve una nueva lista consistente en </span><span class="rvts18">L</span><span class="rvts6"> sin su </span><span class="rvts18">n</span><span class="rvts6">-ésimo elemento.</span></li>
+<hr style="height: 6px;"/></li>
+</ul>
+<div><a name="IDX954"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC114"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC116"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC104"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC106"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_29.html#SEC117"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="rvps11"><span class="rvts0"><span class="rvts21">28.2.9 Variables utilizadas por </span></span><span class="rvts0"><span class="rvts22">ctensor</span></span></h3>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX955"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">dim</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: 4</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Es la dimensión de la variedad, que por defecto será 4. La instrucción </span><span class="rvts9">dim: n</span><span class="rvts6"> establecerá la dimensión a cualquier otro valor </span><span class="rvts9">n</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX956"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">diagmetric</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">false</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">diagmetric</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6"> se utilizarán rutinas especiales para calcular todos los objetos geométricos teniendo en cuenta la diagonalidad de la métrica, lo que redundará en una reducción del tiempo de cálculo. Esta opción se fija automáticamente por </span><span class="rvts9">csetup</span><span class="rvts6"> si se especifica una métrica diagonal.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC115"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">ctrgsimp</span></li>
+<li class="rvps3"><span class="rvts6">Provoca que se realicen simplificaciones trigonométricas cuando se calculan tensores. La variable </span><span class="rvts9">ctrgsimp</span><span class="rvts6"> afecta únicamente a aquellos cálculos que utilicen un sistema de referencia móvil.</span></li>
+<li><a name="IDX957"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">cframe_flag</span></li>
+<li class="rvps3"><span class="rvts6">Provoca que los cálculos se realicen respecto de un sistema de referencia móvil.</span></li>
+<li><a name="IDX958"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">ctorsion_flag</span></li>
+<li class="rvps3"><span class="rvts6">Obliga a que se calcule también el tensor de contorsión junto con los coeficientes de conexión. El propio tensor de contorsión se calcula con la función </span><span class="rvts9">contortion</span><span class="rvts6"> a partir del tensor </span><span class="rvts9">tr</span><span class="rvts6"> suministrado por el usuario.</span></li>
+<li><a name="IDX959"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">cnonmet_flag</span></li>
+<li class="rvps3"><span class="rvts6">Obliga a que se calculen también los coeficientes de no metricidad junto con los coeficientes de conexión. Los coeficientes de no metricidad se calculan con la función </span><span class="rvts9">nonmetricity</span><span class="rvts6"> a partir del vector de no metricidad</span><span class="rvts9">nm</span><span class="rvts6"> suministrado por el usuario.</span></li>
+<li><a name="IDX960"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">ctayswitch</span></li>
+<li class="rvps3"><span class="rvts6">Si vale </span><span class="rvts9">true</span><span class="rvts6">, obliga a que ciertos cálculos de </span><span class="rvts9">ctensor</span><span class="rvts6"> se lleven a cabo utilizando desarrollos de series de Taylor. Estos cálculos hacen referencia a las funciones </span><span class="rvts9">christof</span><span class="rvts6">, </span><span class="rvts9">ricci</span><span class="rvts6">, </span><span class="rvts9">uricci</span><span class="rvts6">, </span><span class="rvts9">einstein</span><span class="rvts6"> y </span><span class="rvts9">weyl</span><span class="rvts6">.</span></li>
+<li><a name="IDX961"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">ctayvar</span></li>
+<li class="rvps3"><span class="rvts6">Variable utilizada para desarrollos de Taylor cuando la variable </span><span class="rvts9">ctayswitch</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">.</span></li>
+<li><a name="IDX962"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">ctaypov</span></li>
+<li class="rvps3"><span class="rvts6">Máximo exponente utilizado en los desarrollos de Taylor cuando </span><span class="rvts9">ctayswitch</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">.</span></li>
+<li><a name="IDX963"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">ctaypt</span></li>
+<li class="rvps3"><span class="rvts6">Punto alrededor del cual se realiza un desarrollo de Taylor cuando </span><span class="rvts9">ctayswitch</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">.</span></li>
+<li><a name="IDX964"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">gdet</span></li>
+<li class="rvps3"><span class="rvts6">Es el determinante del tensor métrico </span><span class="rvts9">lg</span><span class="rvts6">, calculado por </span><span class="rvts9">cmetric</span><span class="rvts6"> cuando </span><span class="rvts9">cframe_flag</span><span class="rvts6"> vale </span><span class="rvts9">false</span><span class="rvts6">.</span></li>
+<li><a name="IDX965"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">ratchristof</span></li>
+<li class="rvps3"><span class="rvts6">Obliga a que la función </span><span class="rvts9">christof</span><span class="rvts6"> aplique la simplificación racional.</span></li>
+<li><a name="IDX966"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">rateinstein</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">true</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si vale </span><span class="rvts9">true</span><span class="rvts6"> entonces se hará la simplificación racional en los componentes no nulos de los tensores de Einstein; si </span><span class="rvts9">ratfac</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6"> entonces las componentes también serán factorizadas.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX967"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">ratriemann</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">true</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Es una de las variables que controlan la simplificación de los tensores de Riemann; si vale </span><span class="rvts9">true</span><span class="rvts6">, entonces se llevará a cabo la simplificación racional; si </span><span class="rvts9">ratfac</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6"> entonces las componentes también serán factorizadas.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX968"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">ratweyl</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">true</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si vale </span><span class="rvts9">true</span><span class="rvts6">, entonces la función </span><span class="rvts9">weyl</span><span class="rvts6"> llevará a cabo la simplificación racional de los valores del tensor de Weyl. si </span><span class="rvts9">ratfac</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6"> entonces las componentes también serán factorizadas.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX969"></a>
+<span class="rvts16">Variable:</span><span class="rvts6"> </span><span class="rvts17">lfg</span></li>
+<li class="rvps3"><span class="rvts6">Es la covariante de la métrica del sistema de referencia. Por defecto, está inicializada al sistema de referencia tetradimensional de Lorentz con signatura (+,+,+,-). Se utiliza cuando </span><span class="rvts9">cframe_flag</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">.</span></li>
+<li><a name="IDX970"></a>
+<span class="rvts16">Variable:</span><span class="rvts6"> </span><span class="rvts17">ufg</span></li>
+<li class="rvps3"><span class="rvts6">Es la métrica del sistema de referencia inverso. La calcula </span><span class="rvts9">lfg</span><span class="rvts6"> cuando </span><span class="rvts9">cmetric</span><span class="rvts6"> es invocada tomando </span><span class="rvts9">cframe_flag</span><span class="rvts6"> el valor </span><span class="rvts9">true</span><span class="rvts6">.</span></li>
+<li><a name="IDX971"></a>
+<span class="rvts16">Variable:</span><span class="rvts6"> </span><span class="rvts17">riem</span></li>
+<li class="rvps3"><span class="rvts6">Es el tensor (3,1) de Riemann. Se calcula cuando se invoca la función </span><span class="rvts9">riemann</span><span class="rvts6">. Para información sobre el indexado, véase la descripción de </span><span class="rvts9">riemann</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">cframe_flag</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, </span><span class="rvts9">riem</span><span class="rvts6"> se calcula a partir del tensor covariante de Riemann </span><span class="rvts9">lriem</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX972"></a>
+<span class="rvts16">Variable:</span><span class="rvts6"> </span><span class="rvts17">lriem</span></li>
+<li class="rvps3"><span class="rvts6">Es el tensor covariante de Riemann. Lo calcula la función </span><span class="rvts9">lriemann</span><span class="rvts6">.</span></li>
+<li><a name="IDX973"></a>
+<span class="rvts16">Variable:</span><span class="rvts6"> </span><span class="rvts17">uriem</span></li>
+<li class="rvps3"><span class="rvts6">Es el tensor contravariante de Riemann. Lo calcula la función </span><span class="rvts9">uriemann</span><span class="rvts6">.</span></li>
+<li><a name="IDX974"></a>
+<span class="rvts16">Variable:</span><span class="rvts6"> </span><span class="rvts17">ric</span></li>
+<li class="rvps3"><span class="rvts6">Es el tensor de Ricci. Lo calcula la función </span><span class="rvts9">ricci</span><span class="rvts6">.</span></li>
+<li><a name="IDX975"></a>
+<span class="rvts16">Variable:</span><span class="rvts6"> </span><span class="rvts17">uric</span></li>
+<li class="rvps3"><span class="rvts6">Es el tensor contravariante de Ricci. Lo calcula la función </span><span class="rvts9">uricci</span><span class="rvts6">.</span></li>
+<li><a name="IDX976"></a>
+<span class="rvts16">Variable:</span><span class="rvts6"> </span><span class="rvts17">lg</span></li>
+<li class="rvps3"><span class="rvts6">Es el tensor métrico. Este tensor se debe especificar (como matriz cuadrada de orden </span><span class="rvts9">dim</span><span class="rvts6">) antes de que se hagan otros cálculos.</span></li>
+<li><a name="IDX977"></a>
+<span class="rvts16">Variable:</span><span class="rvts6"> </span><span class="rvts17">ug</span></li>
+<li class="rvps3"><span class="rvts6">Es la inversa del tensor métrico. Lo calcula la función </span><span class="rvts9">cmetric</span><span class="rvts6">.</span></li>
+<li><a name="IDX978"></a>
+<span class="rvts16">Variable:</span><span class="rvts6"> </span><span class="rvts17">weyl</span></li>
+<li class="rvps3"><span class="rvts6">Es el tensor de Weyl. Lo calcula la función </span><span class="rvts9">weyl</span><span class="rvts6">.</span></li>
+<li><a name="IDX979"></a>
+<span class="rvts16">Variable:</span><span class="rvts6"> </span><span class="rvts17">fb</span></li>
+<li class="rvps3"><span class="rvts6">Son los coeficientes del sistema de referencia soporte, tal como los calcula </span><span class="rvts9">frame_bracket</span><span class="rvts6">.</span></li>
+<li><a name="IDX980"></a>
+<span class="rvts16">Variable:</span><span class="rvts6"> </span><span class="rvts17">kinvariant</span></li>
+<li class="rvps3"><span class="rvts6">Es la invariante de Kretchmann, tal como la calcula la función </span><span class="rvts9">rinvariant</span><span class="rvts6">.</span></li>
+<li><a name="IDX981"></a>
+<span class="rvts16">Variable:</span><span class="rvts6"> </span><span class="rvts17">np</span></li>
+<li class="rvps3"><span class="rvts6">Es la cuaterna nula de Newman-Penrose, tal como la calcula la función </span><span class="rvts9">nptetrad</span><span class="rvts6">.</span></li>
+<li><a name="IDX982"></a>
+<span class="rvts16">Variable:</span><span class="rvts6"> </span><span class="rvts17">npi</span></li>
+<li class="rvps3"><span class="rvts6">Es la cuaterna nula "raised-index Newman-Penrose". Lo calcula la función </span><span class="rvts9">nptetrad</span><span class="rvts6">. Se define como </span><span class="rvts9">ug.np</span><span class="rvts6">. El producto </span><span class="rvts9">np.transpose(npi)</span><span class="rvts6"> es constante:</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i39) trigsimp(np.transpose(npi));</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp;0 &nbsp; - 1 &nbsp;0 &nbsp;0 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ - 1 &nbsp; 0 &nbsp; 0 &nbsp;0 ]</span><br/><span class="rvts9">(%o39) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp;0 &nbsp; &nbsp;0 &nbsp; 0 &nbsp;1 ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[ &nbsp;0 &nbsp; &nbsp;0 &nbsp; 1 &nbsp;0 ]</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX983"></a>
+<span class="rvts16">Variable:</span><span class="rvts6"> </span><span class="rvts17">tr</span></li>
+<li class="rvps3"><span class="rvts6">Tensor de rango 3 suministrado por el usuario y que representa una torsión. Lo utiliza la función </span><span class="rvts9">contortion</span><span class="rvts6">.</span></li>
+<li><a name="IDX984"></a>
+<span class="rvts16">Variable:</span><span class="rvts6"> </span><span class="rvts17">kt</span></li>
+<li class="rvps3"><span class="rvts6">Es el tensor de contorsión, calculado a partir de </span><span class="rvts9">tr</span><span class="rvts6"> por la función </span><span class="rvts9">contortion</span><span class="rvts6">.</span></li>
+<li><a name="IDX985"></a>
+<span class="rvts16">Variable:</span><span class="rvts6"> </span><span class="rvts17">nm</span></li>
+<li class="rvps3"><span class="rvts6">Vector de no metricidad suministrado por el usuario. Lo utiliza la función </span><span class="rvts9">nonmetricity</span><span class="rvts6">.</span></li>
+<li><a name="IDX986"></a>
+<span class="rvts16">Variable:</span><span class="rvts6"> </span><span class="rvts17">nmc</span></li>
+<li class="rvps3"><span class="rvts6">Son los coeficientes de no metricidad, calculados a partir de </span><span class="rvts9">nm</span><span class="rvts6"> por la función </span><span class="rvts9">nonmetricity</span><span class="rvts6">.</span></li>
+<li><a name="IDX987"></a>
+<span class="rvts16">Variable del sistema:</span><span class="rvts6"> </span><span class="rvts17">tensorkill</span></li>
+<li class="rvps3"><span class="rvts6">Variable que indica si el paquete de tensores se ha inicializado. Utilizada por </span><span class="rvts9">csetup</span><span class="rvts6"> y reinicializada por </span><span class="rvts9">init_ctensor</span><span class="rvts6">.</span></li>
+<li><a name="IDX988"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">ct_coords</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">[]</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La variable </span><span class="rvts9">ct_coords</span><span class="rvts6"> contiene una lista de coordenadas. Aunque se define normalmente cuando se llama a la función </span><span class="rvts9">csetup</span><span class="rvts6">, también se pueden redefinir las coordenadas con la asignación </span><span class="rvts9">ct_coords: [j1, j2, ..., jn]</span><span class="rvts6"> donde </span><span class="rvts9">j</span><span class="rvts6"> es el nuevo nombre de las coordenadas. Véase también </span><span class="rvts9">csetup</span><span class="rvts6">.</span></p>
+<hr style="height: 6px;"/>
+<div><a name="IDX989"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC115"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_29.html#SEC117"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC104"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC106"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_29.html#SEC117"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="rvps11"><span class="rvts0"><span class="rvts21">28.2.10 Nombres reservados</span></span></h3>
+<p class="rvps3"><span class="rvts6">Los siguientes nombres se utilizan internamente en el paquete </span><span class="rvts9">ctensor</span><span class="rvts6"> y no deberían redefinirse:</span></p>
+<p class="rvps4"><span class="rvts9"> &nbsp;Nombre &nbsp; &nbsp; &nbsp; Descripción</span><br/><span class="rvts9"> &nbsp;---------------------------------------</span><br/><span class="rvts9"> &nbsp;_lg() &nbsp; &nbsp; &nbsp; &nbsp;Toma el valor lfg si se utiliza métrica del sistema de referencia,</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; lg en otro caso</span><br/><span class="rvts9"> &nbsp;_ug() &nbsp; &nbsp; &nbsp; &nbsp;Toma el valor ufg si se utiliza métrica del sistema de referencia,</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ug en otro caso</span><br/><span class="rvts9"> &nbsp;cleanup() &nbsp; &nbsp;Elimina elementos de la lista deindex</span><br/><span class="rvts9"> &nbsp;contract4() &nbsp;Utilizada por psi()</span><br/><span class="rvts9"> &nbsp;filemet() &nbsp; &nbsp;Utilizada por csetup() cuando se lee la métrica desde un fichero</span><br/><span class="rvts9"> &nbsp;findde1() &nbsp; &nbsp;Utilizada por findde()</span><br/><span class="rvts9"> &nbsp;findde2() &nbsp; &nbsp;Utilizada por findde()</span><br/><span class="rvts9"> &nbsp;findde3() &nbsp; &nbsp;Utilizada por findde()</span><br/><span class="rvts9"> &nbsp;kdelt() &nbsp; &nbsp; &nbsp;Delta de Kronecker (no generalizada)</span><br/><span class="rvts9"> &nbsp;newmet() &nbsp; &nbsp; Utilizada por csetup() para establecer una métrica interactivamente</span><br/><span class="rvts9"> &nbsp;setflags() &nbsp; Utilizada por init_ctensor()</span><br/><span class="rvts9"> &nbsp;readvalue()</span><br/><span class="rvts9"> &nbsp;resimp()</span><br/><span class="rvts9"> &nbsp;sermet() &nbsp; &nbsp; Utilizada por csetup() para definir una métrica como serie de Taylor</span><br/><span class="rvts9"> &nbsp;txyzsum()</span><br/><span class="rvts9"> &nbsp;tmetric() &nbsp; &nbsp;Métrica del sistema de referencia, utilizada por cmetric()</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cuando cframe_flag:true</span><br/><span class="rvts9"> &nbsp;triemann() &nbsp; Tensor de Riemann en la base del sistema de referencia, se utiliza cuando</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cframe_flag:true</span><br/><span class="rvts9"> &nbsp;tricci() &nbsp; &nbsp; Tensor de Ricci en la base del sistema de referencia, se utiliza cuando</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cframe_flag:true</span><br/><span class="rvts9"> &nbsp;trrc() &nbsp; &nbsp; &nbsp; Coeficientes de rotación de Ricci, utilizada por christof()</span><br/><span class="rvts9"> &nbsp;yesp()</span></p>
+<hr style="height: 6px;"/>
+<div><table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="ctensor.html#SEC104"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_29.html#SEC117"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps3"><span class="rvts10">This document was generated by </span><span class="rvts11">Robert Dodier</span><span class="rvts10"> on </span><span class="rvts11">agosto, 25 2007</span><span class="rvts10"> using </span><a class="rvts12" href="http://texi2html.cvshome.org/">texi2html 1.76</a><span class="rvts10">.</span></p>
+<p></p>
+<p class="rvps6"><span class="rvts13">Created with the Personal Edition of HelpNDoc: </span><a class="rvts14" href="http://www.helpndoc.com/feature-tour">Easily create CHM Help documents</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				http://maxima.sourceforge.net</div>
+		</div>
+	</body>
+	
+</html>
+

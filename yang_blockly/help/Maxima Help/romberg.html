@@ -1,0 +1,225 @@
+﻿<html>
+	
+<head>
+	<title>romberg</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 3.9.1.648">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Maxima.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("romberg");
+			}
+		});
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>romberg</h1>
+				
+				</div>
+			<div id="topic_header_nav">
+				<a href="Funcionesyvariablesparaplotdf.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Funcionesyvariablespararomberg.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<div><a name="ROMBERG"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_65.html#SEC246"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="romberg.html#SEC248"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_65.html#SEC244"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_67.html#SEC249"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h1 class="rvps2"><span class="rvts0"><span class="rvts8">66. romberg</span></span></h1>
+<div><table border="0" cellpadding="1" cellspacing="0" style="border-width: 0px;">
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="romberg.html#SEC248">66.1 Funciones y variables para romberg</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height: 6px;"/>
+<div><a name="SEC247"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="romberg.html#SEC247"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_67.html#SEC249"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="romberg.html#SEC247"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="romberg.html#SEC247"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_67.html#SEC249"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">66.1 Funciones y variables para romberg</span></span></h2>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="FUNCIONES-Y-VARIABLES-PARA-ROMBERG"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">romberg</span><span class="rvts18"> (expr, x, a, b)</span></li>
+<li><a name="SEC248"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">romberg</span><span class="rvts18"> (F, a, b)</span></li>
+<li class="rvps3"><span class="rvts6">Integra numéricamente por el método de Romberg.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La llamada </span><span class="rvts9">romberg(</span><span class="rvts19">expr</span><span class="rvts9">, </span><span class="rvts19">x</span><span class="rvts9">, </span><span class="rvts19">a</span><span class="rvts9">, </span><span class="rvts19">b</span><span class="rvts9">)</span><span class="rvts6"> devuelve una estimación de la integral </span><span class="rvts9">integrate(</span><span class="rvts19">expr</span><span class="rvts9">, </span><span class="rvts19">x</span><span class="rvts9">, </span><span class="rvts19">a</span><span class="rvts9">, </span><span class="rvts19">b</span><span class="rvts9">)</span><span class="rvts6">. El argumento </span><span class="rvts18">expr</span><span class="rvts6"> debe ser una expresión reducible a un valor decimal en coma flotante cuando </span><span class="rvts18">x</span><span class="rvts6"> es a su vez un número decimal.</span></p>
+<p class="rvps3"><span class="rvts6">La llamada </span><span class="rvts9">romberg(</span><span class="rvts19">F</span><span class="rvts9">, </span><span class="rvts19">a</span><span class="rvts9">, </span><span class="rvts19">b</span><span class="rvts9">)</span><span class="rvts6"> devuelve una estimación de la integral </span><span class="rvts9">integrate(</span><span class="rvts19">F</span><span class="rvts9">(x), x, </span><span class="rvts19">a</span><span class="rvts9">, </span><span class="rvts19">b</span><span class="rvts9">)</span><span class="rvts6">, siendo </span><span class="rvts9">x</span><span class="rvts6"> el único argumento de </span><span class="rvts18">F</span><span class="rvts6">. El argumento </span><span class="rvts18">F</span><span class="rvts6"> debe ser una función en Lisp o en Maxima que devuelva un valor decimal en coma flotante cuando </span><span class="rvts18">x</span><span class="rvts6"> es a su vez un número decimal; </span><span class="rvts18">F</span><span class="rvts6"> puede ser el nombre de una función de Maxima traducida o compilada.</span></p>
+<p class="rvps3"><span class="rvts6">La exactitud de </span><span class="rvts9">romberg</span><span class="rvts6"> se controla con las variables globales </span><span class="rvts9">rombergabs</span><span class="rvts6"> y </span><span class="rvts9">rombergtol</span><span class="rvts6">. La función </span><span class="rvts9">romberg</span><span class="rvts6"> termina con éxito su cálculo cuando la diferencia absoluta entre sucesivas aproximaciones es menor que </span><span class="rvts9">rombergabs</span><span class="rvts6">, o cuando la diferencia relativa de sucesivas aproximaciones es menor que </span><span class="rvts9">rombergtol</span><span class="rvts6">. Así, cuando </span><span class="rvts9">rombergabs</span><span class="rvts6"> vale 0.0 (su valor por defecto) sólo tiene efecto el test del error relativo basado en </span><span class="rvts9">romberg</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">romberg</span><span class="rvts6"> reduce a mitades sucesivas la amplitud del paso un máximo de </span><span class="rvts9">rombergit</span><span class="rvts6"> veces antes de abandonar el cómputo; el número máximo de evaluaciones del integrando es, por consiguiente, igual a </span><span class="rvts9">2^rombergit</span><span class="rvts6">. De no satisfacerse el criterio de error establecido por </span><span class="rvts9">rombergabs</span><span class="rvts6"> y </span><span class="rvts9">rombergtol</span><span class="rvts6">, </span><span class="rvts9">romberg</span><span class="rvts6"> devuelve un mensaje de error. La función </span><span class="rvts9">romberg</span><span class="rvts6"> hace siempre al menos </span><span class="rvts9">rombergmin</span><span class="rvts6"> iteraciones; se trata de una heurística para evitar la finalización prematura cuando el integrando oscila mucho.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">romberg</span><span class="rvts6"> evalúa el integrando repetidamente tras asignarle a la variable de integración un valor específico. Este criterio permite anidar llamadas a </span><span class="rvts9">romberg</span><span class="rvts6"> para calcular integrales múltiples. Sin embargo, los errores de cálculo no tienen en cuenta los errores de las integraciones anidadas, por lo que tales errores pueden subestimarse. Por otro lado, métodos especialmente desarrollados para integraciones múltiples pueden dar la misma exactitud con menos evaluaciones del integrando.</span></p>
+<p class="rvps3"><span class="rvts6">Para hacer uso de esta función ejecútese primero </span><span class="rvts9">load(romberg)</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">QUADPACK</span><span class="rvts6">, un conjunto de funciones para integración numérica.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps3"><span class="rvts6">Una integración unidimensional.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (romberg);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp;/usr/share/maxima/5.11.0/share/numeric/romberg.lisp</span><br/><span class="rvts9">(%i2) f(x) := 1/((x - 1)^2 + 1/100) + 1/((x - 2)^2 + 1/1000)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+ 1/((x - 3)^2 + 1/200);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1</span><br/><span class="rvts9">(%o2) f(x) := -------------- + --------------- + --------------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp;1</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(x - 1) &nbsp;+ --- &nbsp; (x - 2) &nbsp;+ ---- &nbsp; (x - 3) &nbsp;+ ---</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 100 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;200</span><br/><span class="rvts9">(%i3) rombergtol : 1e-6;</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 9.9999999999999995E-7</span><br/><span class="rvts9">(%i4) rombergit : 15;</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;15</span><br/><span class="rvts9">(%i5) estimate : romberg (f(x), x, -5, 5);</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 173.6730736617464</span><br/><span class="rvts9">(%i6) exact : integrate (f(x), x, -5, 5);</span><br/><span class="rvts9">(%o6) 10 sqrt(10) atan(70 sqrt(10))</span><br/><span class="rvts9"> + 10 sqrt(10) atan(30 sqrt(10)) + 10 sqrt(2) atan(80 sqrt(2))</span><br/><span class="rvts9"> + 10 sqrt(2) atan(20 sqrt(2)) + 10 atan(60) + 10 atan(40)</span><br/><span class="rvts9">(%i7) abs (estimate - exact) / exact, numer;</span><br/><span class="rvts9">(%o7) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;7.5527060865060088E-11</span></p>
+<p class="rvps3"><span class="rvts6">Una integración bidimensional, implementada mediante llamadas anidadas a </span><span class="rvts9">romberg</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (romberg);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp;/usr/share/maxima/5.11.0/share/numeric/romberg.lisp</span><br/><span class="rvts9">(%i2) g(x, y) := x*y / (x + y);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x y</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; g(x, y) := -----</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x + y</span><br/><span class="rvts9">(%i3) rombergtol : 1e-6;</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 9.9999999999999995E-7</span><br/><span class="rvts9">(%i4) estimate : romberg (romberg (g(x, y), y, 0, x/2), x, 1, 3);</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0.81930239628356</span><br/><span class="rvts9">(%i5) assume (x &gt; 0);</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[x &gt; 0]</span><br/><span class="rvts9">(%i6) integrate (integrate (g(x, y), y, 0, x/2), x, 1, 3);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 log(-) - 1</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;9 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp;9</span><br/><span class="rvts9">(%o6) &nbsp; &nbsp; &nbsp; - 9 log(-) + 9 log(3) + ------------ + -</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;6 &nbsp; &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9">(%i7) exact : radcan (%);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;26 log(3) - 26 log(2) - 13</span><br/><span class="rvts9">(%o7) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - --------------------------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3</span><br/><span class="rvts9">(%i8) abs (estimate - exact) / exact, numer;</span><br/><span class="rvts9">(%o8) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1.3711979871851024E-10</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2012"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">rombergabs</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: 0.0</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La exactitud de </span><span class="rvts9">romberg</span><span class="rvts6"> se controla con las variables globales </span><span class="rvts9">rombergabs</span><span class="rvts6"> y </span><span class="rvts9">rombergtol</span><span class="rvts6">. La función </span><span class="rvts9">romberg</span><span class="rvts6"> termina con éxito su cálculo cuando la diferencia absoluta entre sucesivas aproximaciones es menor que </span><span class="rvts9">rombergabs</span><span class="rvts6">, o cuando la diferencia relativa de sucesivas aproximaciones es menor que </span><span class="rvts9">rombergtol</span><span class="rvts6">. Así, cuando </span><span class="rvts9">rombergabs</span><span class="rvts6"> vale 0.0 (su valor por defecto) sólo tiene efecto el test del error relativo basado en </span><span class="rvts9">romberg</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Véanse también </span><span class="rvts9">rombergit</span><span class="rvts6"> y </span><span class="rvts9">rombergmin</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2013"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">rombergit</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: 11</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">romberg</span><span class="rvts6"> reduce a mitades sucesivas la amplitud del paso un máximo de </span><span class="rvts9">rombergit</span><span class="rvts6"> veces antes de abandonar el cómputo; el número máximo de evaluaciones del integrando es, por consiguiente, igual a </span><span class="rvts9">2^rombergit</span><span class="rvts6">. La función </span><span class="rvts9">romberg</span><span class="rvts6"> hace siempre al menos </span><span class="rvts9">rombergmin</span><span class="rvts6"> iteraciones; se trata de una heurística para evitar la finalización prematura cuando el integrando oscila mucho.</span></p>
+<p class="rvps3"><span class="rvts6">Véanse también </span><span class="rvts9">rombergabs</span><span class="rvts6"> y </span><span class="rvts9">rombergtol</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2014"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">rombergmin</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: 0</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">romberg</span><span class="rvts6"> hace siempre al menos </span><span class="rvts9">rombergmin</span><span class="rvts6"> iteraciones; se trata de una heurística para evitar la finalización prematura cuando el integrando oscila mucho.</span></p>
+<p class="rvps3"><span class="rvts6">Véanse también </span><span class="rvts9">rombergit</span><span class="rvts6">, </span><span class="rvts9">rombergabs</span><span class="rvts6"> y </span><span class="rvts9">rombergtol</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2015"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">rombergtol</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: 1e-4</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La exactitud de </span><span class="rvts9">romberg</span><span class="rvts6"> se controla con las variables globales </span><span class="rvts9">rombergabs</span><span class="rvts6"> y </span><span class="rvts9">rombergtol</span><span class="rvts6">. La función </span><span class="rvts9">romberg</span><span class="rvts6"> termina con éxito su cálculo cuando la diferencia absoluta entre sucesivas aproximaciones es menor que </span><span class="rvts9">rombergabs</span><span class="rvts6">, o cuando la diferencia relativa de sucesivas aproximaciones es menor que </span><span class="rvts9">rombergtol</span><span class="rvts6">. Así, cuando </span><span class="rvts9">rombergabs</span><span class="rvts6"> vale 0.0 (su valor por defecto) sólo tiene efecto el test del error relativo basado en </span><span class="rvts9">romberg</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Véanse también </span><span class="rvts9">rombergit</span><span class="rvts6"> y </span><span class="rvts9">rombergmin</span><span class="rvts6">.</span></p>
+<hr style="height: 6px;"/>
+<div><table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="romberg.html#SEC247"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_67.html#SEC249"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps3"><span class="rvts10">This document was generated by </span><span class="rvts11">Robert Dodier</span><span class="rvts10"> on </span><span class="rvts11">agosto, 25 2007</span><span class="rvts10"> using </span><a class="rvts12" href="http://texi2html.cvshome.org/">texi2html 1.76</a><span class="rvts10">.</span></p>
+<p></p>
+<p class="rvps6"><span class="rvts13">Created with the Personal Edition of HelpNDoc: </span><a class="rvts14" href="http://www.helpndoc.com/feature-tour">Easily create HTML Help documents</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				http://maxima.sourceforge.net</div>
+		</div>
+	</body>
+	
+</html>
+

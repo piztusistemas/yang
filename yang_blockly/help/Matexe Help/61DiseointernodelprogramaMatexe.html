@@ -1,0 +1,87 @@
+﻿<html>
+	
+<head>
+	<title> 6.1. Dise&ntilde;o interno del programa Matexe</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 3.9.1.648">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "MATEXE.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("61DiseointernodelprogramaMatexe");
+			}
+		});
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1> 6.1. Dise&ntilde;o interno del programa Matexe</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="AyudaMatexe.html">Ayuda Matexe</a> &rsaquo;&rsaquo; <a href="6ComponentesdeMatexe.html"> 6. Componentes de Matexe</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="6ComponentesdeMatexe.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="6ComponentesdeMatexe.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="62Maxima.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<h2 class="rvps8"><a name="_6.1._DISEO_INTERNO"></a>
+<img align="absbottom" width="24" height="24" alt="image" src="lib/image00920.jpg"/><span class="rvts0"><span class="rvts13">&nbsp;6.1. Diseño interno del programa Matexe</span></span></h2>
+<p><span class="rvts12"><br/></span></p>
+<p class="rvps7"><span class="rvts12">Como se puede observar en el diagrama de clases del siguiente apartado, el acceso al sistema CAS es encapsulado mediante la clase Maxima, descendiente de la clase CAS. Gracias a este diseño, es relativamente sencillo desarrollar nuevas subclases que encapsulen mecanismos de acceso a otro tipo de software CAS distinto al seleccionado (Maple, Mathematica, etc).</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps1"><img align="absbottom" width="319" height="153" alt="image" src="lib/image029.jpg"/></p>
+<p class="rvps1"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;Evidentemente, los documentos desarrollados para un CAS concreto no podrán ser reutilizados directamente en otro, entre otras cosas, porque los lenguajes son diferentes. Sin embargo, la disponibilidad de otros sistemas de computación algebraica permitirá extender su utilización con usuarios que ya dominen dicho sistema.</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps1"><img align="absbottom" width="567" height="187" alt="image" src="lib/image030.jpg"/></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;En un futuro se prevé la posibilidad de extender el motor de cálculo simbólico (CAS) a otros paquetes de software como Maple o Axiom.</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps1"><span class="rvts12"><br/></span></p>
+<p></p>
+<p class="rvps5"><span class="rvts9">Created with the Personal Edition of HelpNDoc: </span><a class="rvts10" href="http://www.helpndoc.com/help-authoring-tool">Easy to use tool to create HTML Help files and Help web sites</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Matexe v.2013: http://matexe.sourceforge.net</div>
+		</div>
+	</body>
+	
+</html>
+

@@ -1,0 +1,507 @@
+﻿<html>
+	
+<head>
+	<title>Funciones y variables para los m&eacute;todos num&eacute;ricos</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 3.9.1.648">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Maxima.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("Funcionesyvariablesparalosmtodos");
+			}
+		});
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>Funciones y variables para los m&eacute;todos num&eacute;ricos</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Mtodosnumricos.html">M&eacute;todos num&eacute;ricos</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Mtodosnumricos.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="SeriesdeFourier.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Funcionesyvariablesparalasseries.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<div><a name="M_00E9TODOS-NUM_00E9RICOS"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_22.html#SEC73"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparalosmtodos.html#SEC75"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_22.html#SEC71"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_24.html#SEC79"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h1 class="rvps2"><span class="rvts0"><span class="rvts8">23. Métodos numéricos</span></span></h1>
+<div><table border="0" cellpadding="1" cellspacing="0" style="border-width: 0px;">
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="Funcionesyvariablesparalosmtodos.html#SEC75">23.1 Introducción a los métodos numéricos</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="Funcionesyvariablesparalosmtodos.html#SEC76">23.2 Series de Fourier</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="Funcionesyvariablesparalosmtodos.html#SEC77">23.3 Funciones y variables para los métodos numéricos</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="Funcionesyvariablesparalosmtodos.html#SEC78">23.4 Funciones y variables para las series de Fourier</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height: 6px;"/>
+<div><a name="SEC74"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparalosmtodos.html#SEC74"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparalosmtodos.html#SEC76"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparalosmtodos.html#SEC74"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparalosmtodos.html#SEC74"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_24.html#SEC79"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">23.1 Introducción a los métodos numéricos</span></span></h2>
+<hr style="height: 6px;"/>
+<div><a name="INTRODUCCI_00F3N-A-LOS-M_00E9TODOS-NUM_00E9RICOS"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparalosmtodos.html#SEC75"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparalosmtodos.html#SEC77"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparalosmtodos.html#SEC74"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparalosmtodos.html#SEC74"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_24.html#SEC79"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">23.2 Series de Fourier</span></span></h2>
+<p class="rvps3"><span class="rvts6">El paquete </span><span class="rvts9">fft</span><span class="rvts6"> contiene funciones para el cálculo numérico (no simbólico) de la transformada rápida de Fourier. La instrucción </span><span class="rvts9">load ("fft")</span><span class="rvts6"> carga el paquete. Véase </span><span class="rvts9">fft</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">El paquete </span><span class="rvts9">fourie</span><span class="rvts6"> contiene funciones para el cálculo simbólico de series de Fourier. La instrucción </span><span class="rvts9">load ("fourie")</span><span class="rvts6"> carga el paquete. Hay funciones en el paquete </span><span class="rvts9">fourie</span><span class="rvts6"> para calcular los coeficientes de Fourier y para la transformación de expresiones. Véase </span><span class="rvts9">Funciones y variables para las series de Fourier</span><span class="rvts6">.</span></p>
+<hr style="height: 6px;"/>
+<div><a name="SEC75"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparalosmtodos.html#SEC76"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparalosmtodos.html#SEC78"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparalosmtodos.html#SEC74"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparalosmtodos.html#SEC74"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_24.html#SEC79"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">23.3 Funciones y variables para los métodos numéricos</span></span></h2>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SERIES-DE-FOURIER"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">polartorect</span><span class="rvts18"> (magnitude_array, phase_array)</span></li>
+<li class="rvps3"><span class="rvts6">Transforma valores complejos de la forma </span><span class="rvts9">r %e^(%i t)</span><span class="rvts6"> a la forma </span><span class="rvts9">a + b %i</span><span class="rvts6">. La instrucción </span><span class="rvts9">load ("fft")</span><span class="rvts6"> carga esta función en Maxima. Véase también </span><span class="rvts9">fft</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">El módulo y la fase, </span><span class="rvts9">r</span><span class="rvts6"> y </span><span class="rvts9">t</span><span class="rvts6">, se toman de </span><span class="rvts18">magnitude_array</span><span class="rvts6"> y </span><span class="rvts18">phase_array</span><span class="rvts6">, respectivamente. Los valores originales de los arreglos de entrada se reemplazan por las partes real e imaginaria, </span><span class="rvts9">a</span><span class="rvts6"> y </span><span class="rvts9">b</span><span class="rvts6">. Los resultados se calculan como</span></p>
+<p class="rvps4"><span class="rvts9">a: r cos (t)</span><br/><span class="rvts9">b: r sin (t)</span></p>
+<p class="rvps3"><span class="rvts6">Los arreglos de entrada deben ser de igual tamaño y de dimensión 1. El tamaño del arreglo no necesita ser potencia de 2.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">polartorect</span><span class="rvts6"> es la inversa de </span><span class="rvts9">recttopolar</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC76"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">recttopolar</span><span class="rvts18"> (real_array, imaginary_array)</span></li>
+<li class="rvps3"><span class="rvts6">Transforma valores complejos de la forma </span><span class="rvts9">a + b %i</span><span class="rvts6"> a la forma </span><span class="rvts9">r %e^(%i t)</span><span class="rvts6">. La instrucción </span><span class="rvts9">load ("fft")</span><span class="rvts6"> carga esta función en Maxima. Véase también </span><span class="rvts9">fft</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Las partes real e imaginaria, </span><span class="rvts9">a</span><span class="rvts6"> y </span><span class="rvts9">b</span><span class="rvts6">, se toman de </span><span class="rvts18">real_array</span><span class="rvts6"> y </span><span class="rvts18">imaginary_array</span><span class="rvts6">, respectivamente. Los valores originales de los arreglos de entrada se reemplazan por el módulo y el argumento, </span><span class="rvts9">r</span><span class="rvts6"> y </span><span class="rvts9">t</span><span class="rvts6">. Los resultados se calculan como</span></p>
+<p class="rvps4"><span class="rvts9">r: sqrt (a^2 + b^2)</span><br/><span class="rvts9">t: atan2 (b, a)</span></p>
+<p class="rvps3"><span class="rvts6">El ángulo calculado está en el rango entre </span><span class="rvts9">-%pi</span><span class="rvts6"> y </span><span class="rvts9">%pi</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Los arreglos de entrada deben ser de igual tamaño y de dimensión 1. El tamaño del arreglo no necesita ser potencia de 2.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">recttopolar</span><span class="rvts6"> es la inversa de </span><span class="rvts9">polartorect</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="FUNCIONES-Y-VARIABLES-PARA-LOS-M_00E9TODOS-NUM_00E9RICOS"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">ift</span><span class="rvts18"> (real_array, imaginary_array)</span></li>
+<li class="rvps3"><span class="rvts6">Tranformada discreta inversa de Fourier. La instrucción </span><span class="rvts9">load ("fft")</span><span class="rvts6"> carga esta función en Maxima.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">ift</span><span class="rvts6"> calcula la transformada rápida inversa compleja de Fourier de arreglos unidimensionales de números decimales en coma flotante. La transformada inversa se define como</span></p>
+<p class="rvps4"><span class="rvts9">x[j]: sum (y[j] exp (+2 %i %pi j k / n), k, 0, n-1)</span></p>
+<p class="rvps3"><span class="rvts6">Véase </span><span class="rvts9">fft</span><span class="rvts6"> para más detalles.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC77"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">fft</span><span class="rvts18"> (real_array, imaginary_array)</span></li>
+<li><a name="IDX690"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">ift</span><span class="rvts18"> (real_array, imaginary_array)</span></li>
+<li><a name="IDX691"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">recttopolar</span><span class="rvts18"> (real_array, imaginary_array)</span></li>
+<li><a name="IDX692"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">polartorect</span><span class="rvts18"> (magnitude_array, phase_array)</span></li>
+<li class="rvps3"><span class="rvts6">Transformada rápida de Fourier y funciones asociadas. La instrucción </span><span class="rvts9">load ("fft")</span><span class="rvts6"> carga estas funciones en Maxima.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Las funciones </span><span class="rvts9">fft</span><span class="rvts6"> y </span><span class="rvts9">ift</span><span class="rvts6"> calculan la transformada rápida compleja de Fourier y su inversa de arreglos unidimensionales de números decimales en coma flotante. El tamaño de </span><span class="rvts18">imaginary_array</span><span class="rvts6"> debe ser igual al de </span><span class="rvts18">real_array</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Los resultados devueltos por las funciones </span><span class="rvts9">fft</span><span class="rvts6"> y </span><span class="rvts9">ift</span><span class="rvts6"> sustituyen al contenido original de los arreglos de entrada. La función </span><span class="rvts9">fillarray</span><span class="rvts6"> puede hacer una copia de un array en caso de ser necesario.</span></p>
+<p class="rvps3"><span class="rvts6">La transformada discreta de Fourier y la transformada inversa se definen como sigue. Sea </span><span class="rvts9">x</span><span class="rvts6"> el arreglo con los datos originales, con</span></p>
+<p class="rvps4"><span class="rvts9">x[i]: real_array[i] + %i imaginary_array[i]</span></p>
+<p class="rvps3"><span class="rvts6">Sea </span><span class="rvts9">y</span><span class="rvts6"> el arreglo con los datos transformados. Las transformadas directa e inversa son</span></p>
+<p class="rvps4"><span class="rvts9">y[k]: (1/n) sum (x[j] exp (-2 %i %pi j k / n), j, 0, n-1)</span><br/><span class="rvts9">x[j]: &nbsp; &nbsp; &nbsp; sum (y[j] exp (+2 %i %pi j k / n), k, 0, n-1)</span></p>
+<p class="rvps3"><span class="rvts6">Arreglos apropiados se pueden preparar con la función </span><span class="rvts9">array</span><span class="rvts6">. Por ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">array (my_array, float, n-1)$</span></p>
+<p class="rvps3"><span class="rvts6">declara un arreglo unidimensional con </span><span class="rvts9">n</span><span class="rvts6"> elementos, indexado de 0 a n-1, ambos inclusive. El número de elementos, </span><span class="rvts9">n</span><span class="rvts6">, debe ser par.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">fft</span><span class="rvts6"> se puede aplicar a datos reales (con partes imaginarias nulas) para obtener coeficientes seno y coseno. Después de llamar a la función </span><span class="rvts9">fft</span><span class="rvts6">, los coeficientes del seno y coseno, llamémosles </span><span class="rvts9">a</span><span class="rvts6"> y </span><span class="rvts9">b</span><span class="rvts6">, se pueden calcular como</span></p>
+<p class="rvps4"><span class="rvts9">a[0]: real_array[0]</span><br/><span class="rvts9">b[0]: 0</span></p>
+<p class="rvps3"><span class="rvts6">y</span></p>
+<p class="rvps4"><span class="rvts9">a[j]: real_array[j] + real_array[n-j]</span><br/><span class="rvts9">b[j]: imaginary_array[j] - imaginary_array[n-j]</span></p>
+<p class="rvps3"><span class="rvts6">para j tomando valores de 1 a n/2-1, y</span></p>
+<p class="rvps4"><span class="rvts9">a[n/2]: real_array[n/2]</span><br/><span class="rvts9">b[n/2]: 0</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">recttopolar</span><span class="rvts6"> transforma valores complejos de la forma </span><span class="rvts9">a + b %i</span><span class="rvts6"> a la forma </span><span class="rvts9">r %e^(%i t)</span><span class="rvts6">. Véase </span><span class="rvts9">recttopolar</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">polartorect</span><span class="rvts6"> transforma valores complejos de la forma </span><span class="rvts9">r %e^(%i t)</span><span class="rvts6"> a la forma </span><span class="rvts9">a + b %i</span><span class="rvts6">. Véase </span><span class="rvts9">polartorect</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">La instrucción </span><span class="rvts9">demo ("fft")</span><span class="rvts6"> presenta una demostarción del paquete </span><span class="rvts9">fft</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX693"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">fortindent</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: 0</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La variable </span><span class="rvts9">fortindent</span><span class="rvts6"> controla el margen izquierdo de las expresiones que escribe la instrucción </span><span class="rvts9">fortran</span><span class="rvts6">. El valor 0 escribe con un margen normal de 6 espacios; valores positivos harán que las expresiones se escriban más a la derecha.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX694"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">fortran</span><span class="rvts18"> (expr)</span></li>
+<li class="rvps3"><span class="rvts6">Escribe </span><span class="rvts18">expr</span><span class="rvts6"> en código Fortran. La salida se escribe con márgenes, y si ésta es demasiado larga </span><span class="rvts9">fortran</span><span class="rvts6"> sigue escribiendo en líneas sucesivas. La función </span><span class="rvts9">fortran</span><span class="rvts6"> escribe el operador de exponenciación </span><span class="rvts9">^</span><span class="rvts6"> como </span><span class="rvts9">**</span><span class="rvts6">, e imprime un número complejo </span><span class="rvts9">a + b %i</span><span class="rvts6"> como </span><span class="rvts9">(a,b)</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">El argumento </span><span class="rvts18">expr</span><span class="rvts6"> puede ser una ecuación. En tal caso, </span><span class="rvts9">fortran</span><span class="rvts6"> escribe una sentencia de asignación, dándole el valor del miembro derecho de la expresión al miembro izquierdo. En particular, si el miembro derecho de </span><span class="rvts18">expr</span><span class="rvts6"> es el nombre de una matriz, entonces </span><span class="rvts9">fortran</span><span class="rvts6"> escribe una sentencia de asignación para cada elemento de la matriz.</span></p>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts18">expr</span><span class="rvts6"> no es reconozida por </span><span class="rvts9">fortran</span><span class="rvts6">, la expresión se escribe en formato </span><span class="rvts9">grind</span><span class="rvts6"> sin avisos. La función </span><span class="rvts9">fortran</span><span class="rvts6"> no reconoce listas, arreglos ni funciones.</span></p>
+<p class="rvps3"><span class="rvts6">La variable </span><span class="rvts9">fortindent</span><span class="rvts6"> controla el margen izquierdo de las expresiones que escribe la instrucción </span><span class="rvts9">fortran</span><span class="rvts6">. El valor 0 escribe con un margen normal de 6 espacios; valores positivos harán que las expresiones se escriban más a la derecha.</span></p>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">fortspaces</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, </span><span class="rvts9">fortran</span><span class="rvts6"> rellena las líneas con espacios de 80 columnas.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">fortran</span><span class="rvts6"> evalúa sus argumentos; un argumento precedido de apóstrofo previene de la evaluación. La función </span><span class="rvts9">fortran</span><span class="rvts6"> siempre devuelve </span><span class="rvts9">done</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p><span class="rvts9">(%i1) expr: (a + b)^12$</span><br/><span class="rvts9">(%i2) fortran (expr);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;(b+a)**12 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; done</span><br/><span class="rvts9">(%i3) fortran ('x=expr);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;x = (b+a)**12 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; done</span><br/><span class="rvts9">(%i4) fortran ('x=expand (expr));</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;x = b**12+12*a*b**11+66*a**2*b**10+220*a**3*b**9+495*a**4*b**8+792 &nbsp; &nbsp; &nbsp; &nbsp;</span><br/><span class="rvts9"> &nbsp; &nbsp; 1 &nbsp; *a**5*b**7+924*a**6*b**6+792*a**7*b**5+495*a**8*b**4+220*a**9*b &nbsp; &nbsp; &nbsp; &nbsp;</span><br/><span class="rvts9"> &nbsp; &nbsp; 2 &nbsp; **3+66*a**10*b**2+12*a**11*b+a**12 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; done</span><br/><span class="rvts9">(%i5) fortran ('x=7+5*%i);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;x = (7,5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; done</span><br/><span class="rvts9">(%i6) fortran ('x=[1,2,3,4]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;x = [1,2,3,4] &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><br/><span class="rvts9">(%o6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; done</span><br/><span class="rvts9">(%i7) f(x) := x^2$</span><br/><span class="rvts9">(%i8) fortran (f);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp;f &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><br/><span class="rvts9">(%o8) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; done</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX695"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">fortspaces</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">false</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">fortspaces</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, </span><span class="rvts9">fortran</span><span class="rvts6"> rellena las líneas con espacios de 80 columnas.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX696"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">horner</span><span class="rvts18"> (expr, x)</span></li>
+<li><a name="IDX697"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">horner</span><span class="rvts18"> (expr)</span></li>
+<li class="rvps3"><span class="rvts6">Cambia el formato de </span><span class="rvts18">expr</span><span class="rvts6"> según la regla de Horner utilizando </span><span class="rvts18">x</span><span class="rvts6"> como variable principal, si ésta se especifica. El argumento </span><span class="rvts9">x</span><span class="rvts6"> se puede omitir, en cuyo caso se considerará como variable principal la de </span><span class="rvts18">expr</span><span class="rvts6"> en su formato racional canónico (CRE).</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">horner</span><span class="rvts6"> puede mejorar las estabilidad si </span><span class="rvts9">expr</span><span class="rvts6"> va a ser numéricamente evaluada. También es útil si Maxima se utiliza para generar programas que serán ejecutados en Fortran. Véase también </span><span class="rvts9">stringout</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) expr: 1e-155*x^2 - 5.5*x + 5.2e155;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1.0E-155 x &nbsp;- 5.5 x + 5.2E+155</span><br/><span class="rvts9">(%i2) expr2: horner (%, x), keepfloat: true;</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(1.0E-155 x - 5.5) x + 5.2E+155</span><br/><span class="rvts9">(%i3) ev (expr, x=1e155);</span><br/><span class="rvts9">Maxima encountered a Lisp error:</span><br/><span class="rvts9"> floating point overflow</span><br/><span class="rvts9">Automatically continuing.</span><br/><span class="rvts9">To reenable the Lisp debugger set *debugger-hook* to nil.</span><br/><span class="rvts9">(%i4) ev (expr2, x=1e155);</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 7.0E+154</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX698"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">find_root</span><span class="rvts18"> (expr, x, a, b)</span></li>
+<li><a name="IDX699"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">find_root</span><span class="rvts18"> (f, a, b)</span></li>
+<li><a name="IDX700"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">find_root_error</span></li>
+<li><a name="IDX701"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">find_root_abs</span></li>
+<li><a name="IDX702"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">find_root_rel</span></li>
+<li class="rvps3"><span class="rvts6">Calcula una raíz de la expresión </span><span class="rvts18">expr</span><span class="rvts6"> o de la función </span><span class="rvts18">f</span><span class="rvts6"> en el intervalo cerrado </span><span class="rvts18">[a, b]</span><span class="rvts6">. La expresión </span><span class="rvts18">expr</span><span class="rvts6"> puede ser una ecuación, en cuyo caso </span><span class="rvts9">find_root</span><span class="rvts6"> busca una raíz de </span><span class="rvts9">lhs(</span><span class="rvts19">expr</span><span class="rvts9">) - rhs(</span><span class="rvts19">expr</span><span class="rvts9">)</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Dado que Maxima puede evaluar </span><span class="rvts18">expr</span><span class="rvts6"> o </span><span class="rvts18">f</span><span class="rvts6"> en </span><span class="rvts18">[a, b]</span><span class="rvts6">, entonces, si </span><span class="rvts18">expr</span><span class="rvts6"> o </span><span class="rvts18">f</span><span class="rvts6"> es continua, </span><span class="rvts9">find_root</span><span class="rvts6"> encuentrará la raíz buscada; o raíces en caso de existir varias.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">find_root</span><span class="rvts6"> aplica al principio la búsqueda binaria. Si la expresión es lo suficientemente suave, entonces </span><span class="rvts9">find_root</span><span class="rvts6"> aplicará el método de interpolación lineal.</span></p>
+<p class="rvps3"><span class="rvts6">La precisión del resultado se controla con </span><span class="rvts9">find_root_abs</span><span class="rvts6"> y </span><span class="rvts9">find_root_rel</span><span class="rvts6">. La búsqueda se detiene cuando la función alcanza valores menores o iguales a </span><span class="rvts9">find_root_abs</span><span class="rvts6">, o cuando dos soluciones sucesivas </span><span class="rvts18">x_0</span><span class="rvts6"> y </span><span class="rvts18">x_1</span><span class="rvts6"> se diferencian en una cantidad menor o igual a </span><span class="rvts9">find_root_rel * max(abs(x_0), abs(x_1))</span><span class="rvts6">. Los valores por defecto de </span><span class="rvts9">find_root_abs</span><span class="rvts6"> y </span><span class="rvts9">find_root_rel</span><span class="rvts6"> son ambos cero.</span></p>
+<p class="rvps3"><span class="rvts9">find_root</span><span class="rvts6"> espera que la función en cuestión tenga signos diferentes en los extremos del intervalo. Si esto no se verifica, el comportamiento de </span><span class="rvts9">find_root</span><span class="rvts6"> se controla con </span><span class="rvts9">find_root_error</span><span class="rvts6">. Cuando </span><span class="rvts9">find_root_error</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, </span><span class="rvts9">find_root</span><span class="rvts6"> devuelve un mensaje de error; en caso contrario, </span><span class="rvts9">find_root</span><span class="rvts6"> devuelve el valor de </span><span class="rvts9">find_root_error</span><span class="rvts6">. El valor por defecto de </span><span class="rvts9">find_root_error</span><span class="rvts6"> es </span><span class="rvts9">true</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Si en algún momento del proceso de búsqueda </span><span class="rvts18">f</span><span class="rvts6"> alcanza un valor no numérico, </span><span class="rvts9">find_root</span><span class="rvts6"> devuelve una expresión parcialmente evaluada.</span></p>
+<p class="rvps3"><span class="rvts6">Se ignora el orden de </span><span class="rvts18">a</span><span class="rvts6"> y </span><span class="rvts18">b</span><span class="rvts6">; la región de búsqueda es </span><span class="rvts18">[min(a, b), max(a, b)]</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) f(x) := sin(x) - x/2;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;f(x) := sin(x) - -</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9">(%i2) find_root (sin(x) - x/2, x, 0.1, %pi);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.895494267033981</span><br/><span class="rvts9">(%i3) find_root (sin(x) = x/2, x, 0.1, %pi);</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.895494267033981</span><br/><span class="rvts9">(%i4) find_root (f(x), x, 0.1, %pi);</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.895494267033981</span><br/><span class="rvts9">(%i5) find_root (f, 0.1, %pi);</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.895494267033981</span><br/><span class="rvts9">(%i6) find_root (exp(x) = y, x, 0, 100);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x</span><br/><span class="rvts9">(%o6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; find_root(%e &nbsp;= y, x, 0.0, 100.0)</span><br/><span class="rvts9">(%i7) find_root (exp(x) = y, x, 0, 100), y = 10;</span><br/><span class="rvts9">(%o7) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2.302585092994046</span><br/><span class="rvts9">(%i8) log (10.0);</span><br/><span class="rvts9">(%o8) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2.302585092994046</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX703"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">newton</span><span class="rvts18"> (expr, x, x_0, eps)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve una solución aproximada de </span><span class="rvts19">expr</span><span class="rvts9"> = 0</span><span class="rvts6"> obtenida por el método de Newton, considerando </span><span class="rvts18">expr</span><span class="rvts6"> como una función de una variable, </span><span class="rvts18">x</span><span class="rvts6">. La búsqueda comienza con </span><span class="rvts19">x</span><span class="rvts9"> = </span><span class="rvts19">x_0</span><span class="rvts6"> y continúa hasta que se verifique </span><span class="rvts9">abs(</span><span class="rvts19">expr</span><span class="rvts9">) &lt; </span><span class="rvts19">eps</span><span class="rvts6">, donde </span><span class="rvts18">expr</span><span class="rvts6"> se evalúa con el valor actual de </span><span class="rvts18">x</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">newton</span><span class="rvts6"> permite que en </span><span class="rvts18">expr</span><span class="rvts6"> haya variables no definidas, siempre y cuando la condición de terminación </span><span class="rvts9">abs(</span><span class="rvts19">expr</span><span class="rvts9">) &lt; </span><span class="rvts19">eps</span><span class="rvts6"> pueda reducirse a un valor lógico </span><span class="rvts9">true</span><span class="rvts6"> o </span><span class="rvts9">false</span><span class="rvts6">; de este modo, no es necesario que </span><span class="rvts18">expr</span><span class="rvts6"> tome un valor numérico.</span></p>
+<p class="rvps3"><span class="rvts6">Ejecútese </span><span class="rvts9">load(newton1)</span><span class="rvts6"> para cargar esta función.</span></p>
+<p class="rvps3"><span class="rvts6">Véanse también </span><span class="rvts9">realroots</span><span class="rvts6">, </span><span class="rvts9">allroots</span><span class="rvts6">, </span><span class="rvts9">find_root</span><span class="rvts6"> y </span><span class="rvts9">mnewton</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (newton1);</span><br/><span class="rvts9">(%o1) /usr/share/maxima/5.10.0cvs/share/numeric/newton1.mac</span><br/><span class="rvts9">(%i2) newton (cos (u), u, 1, 1/100);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.570675277161251</span><br/><span class="rvts9">(%i3) ev (cos (u), u = %);</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.2104963335033528E-4</span><br/><span class="rvts9">(%i4) assume (a &gt; 0);</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[a &gt; 0]</span><br/><span class="rvts9">(%i5) newton (x^2 - a^2, x, a/2, a^2/100);</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1.00030487804878 a</span><br/><span class="rvts9">(%i6) ev (x^2 - a^2, x = %);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9">(%o6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;6.098490481853958E-4 a</span></p>
+<hr style="height: 6px;"/>
+<div><a name="IDX704"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparalosmtodos.html#SEC77"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_24.html#SEC79"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparalosmtodos.html#SEC74"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparalosmtodos.html#SEC74"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_24.html#SEC79"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">23.4 Funciones y variables para las series de Fourier</span></span></h2>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX705"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">equalp</span><span class="rvts18"> (x, y)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve </span><span class="rvts9">true</span><span class="rvts6"> si </span><span class="rvts9">equal (</span><span class="rvts19">x</span><span class="rvts9">, </span><span class="rvts19">y</span><span class="rvts9">)</span><span class="rvts6">, en otro caso devuelve </span><span class="rvts9">false</span><span class="rvts6">. No devuelve el mensaje de error que se obtiene de </span><span class="rvts9">equal (x, y)</span><span class="rvts6"> en un caso como éste.</span></li>
+<li><a name="IDX706"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">remfun</span><span class="rvts18"> (f, expr)</span></li>
+<li><a name="IDX707"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">remfun</span><span class="rvts18"> (f, expr, x)</span></li>
+<li class="rvps3"><span class="rvts6">La llamada </span><span class="rvts9">remfun (</span><span class="rvts19">f</span><span class="rvts9">, </span><span class="rvts19">expr</span><span class="rvts9">)</span><span class="rvts6"> reemplaza todas las subexpresiones </span><span class="rvts19">f</span><span class="rvts9"> (</span><span class="rvts19">arg</span><span class="rvts9">)</span><span class="rvts6"> por </span><span class="rvts18">arg</span><span class="rvts6"> en </span><span class="rvts18">expr</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La llamada </span><span class="rvts9">remfun (</span><span class="rvts19">f</span><span class="rvts9">, </span><span class="rvts19">expr</span><span class="rvts9">, </span><span class="rvts19">x</span><span class="rvts9">)</span><span class="rvts6"> reemplaza todas las subexpresiones </span><span class="rvts19">f</span><span class="rvts9"> (</span><span class="rvts19">arg</span><span class="rvts9">)</span><span class="rvts6"> por </span><span class="rvts18">arg</span><span class="rvts6"> en </span><span class="rvts18">expr</span><span class="rvts6"> sólo si </span><span class="rvts18">arg</span><span class="rvts6"> contiene a la variable </span><span class="rvts18">x</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="FUNCIONES-Y-VARIABLES-PARA-LAS-SERIES-DE-FOURIER"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">funp</span><span class="rvts18"> (f, expr)</span></li>
+<li><a name="SEC78"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">funp</span><span class="rvts18"> (f, expr, x)</span></li>
+<li class="rvps3"><span class="rvts6">La llamada </span><span class="rvts9">funp (</span><span class="rvts19">f</span><span class="rvts9">, </span><span class="rvts19">expr</span><span class="rvts9">)</span><span class="rvts6"> devuelve </span><span class="rvts9">true</span><span class="rvts6"> si </span><span class="rvts18">expr</span><span class="rvts6"> contiene la función </span><span class="rvts18">f</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La llamada </span><span class="rvts9">funp (</span><span class="rvts19">f</span><span class="rvts9">, </span><span class="rvts19">expr</span><span class="rvts9">, </span><span class="rvts19">x</span><span class="rvts9">)</span><span class="rvts6"> devuelve </span><span class="rvts9">true</span><span class="rvts6"> si </span><span class="rvts18">expr</span><span class="rvts6"> contiene la función </span><span class="rvts18">f</span><span class="rvts6"> y la variable </span><span class="rvts18">x</span><span class="rvts6"> está presente en el argumento de alguna de las presencias de </span><span class="rvts18">f</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX708"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">absint</span><span class="rvts18"> (f, x, halfplane)</span></li>
+<li><a name="IDX709"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">absint</span><span class="rvts18"> (f, x)</span></li>
+<li><a name="IDX710"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">absint</span><span class="rvts18"> (f, x, a, b)</span></li>
+<li class="rvps3"><span class="rvts6">La llamada </span><span class="rvts9">absint (</span><span class="rvts19">f</span><span class="rvts9">, </span><span class="rvts19">x</span><span class="rvts9">, </span><span class="rvts19">halfplane</span><span class="rvts9">)</span><span class="rvts6"> devuelve la integral indefinida de </span><span class="rvts18">f</span><span class="rvts6"> con respecto a </span><span class="rvts18">x</span><span class="rvts6"> en el semiplano dado (</span><span class="rvts9">pos</span><span class="rvts6">, </span><span class="rvts9">neg</span><span class="rvts6"> o </span><span class="rvts9">both</span><span class="rvts6">). La función </span><span class="rvts18">f</span><span class="rvts6"> puede contener expresiones de la forma </span><span class="rvts9">abs (x)</span><span class="rvts6">, </span><span class="rvts9">abs (sin (x))</span><span class="rvts6">, </span><span class="rvts9">abs (a) * exp (-abs (b) * abs (x))</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La llamada </span><span class="rvts9">absint (</span><span class="rvts19">f</span><span class="rvts9">, </span><span class="rvts19">x</span><span class="rvts9">)</span><span class="rvts6"> equivale a </span><span class="rvts9">absint (</span><span class="rvts19">f</span><span class="rvts9">, </span><span class="rvts19">x</span><span class="rvts9">, pos)</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">La llamada </span><span class="rvts9">absint (</span><span class="rvts19">f</span><span class="rvts9">, </span><span class="rvts19">x</span><span class="rvts9">, </span><span class="rvts19">a</span><span class="rvts9">, </span><span class="rvts19">b</span><span class="rvts9">)</span><span class="rvts6"> devuelve la integral definida de </span><span class="rvts18">f</span><span class="rvts6"> con respecto a </span><span class="rvts18">x</span><span class="rvts6"> de </span><span class="rvts18">a</span><span class="rvts6"> a </span><span class="rvts18">b</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX711"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">fourier</span><span class="rvts18"> (f, x, p)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve una lista con los coeficientes de Fourier de </span><span class="rvts19">f</span><span class="rvts9">(</span><span class="rvts19">x</span><span class="rvts9">)</span><span class="rvts6"> definida en el intervalo </span><span class="rvts9">[-p, p]</span><span class="rvts6">.</span></li>
+<li><a name="IDX712"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">foursimp</span><span class="rvts18"> (l)</span></li>
+<li class="rvps3"><span class="rvts6">Simplifica </span><span class="rvts9">sin (n %pi)</span><span class="rvts6"> a 0 si </span><span class="rvts9">sinnpiflag</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6"> y </span><span class="rvts9">cos (n %pi)</span><span class="rvts6"> a </span><span class="rvts9">(-1)^n</span><span class="rvts6"> si </span><span class="rvts9">cosnpiflag</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">.</span></li>
+<li><a name="IDX713"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">sinnpiflag</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">true</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Véase </span><span class="rvts9">foursimp</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX714"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">cosnpiflag</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">true</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Véase </span><span class="rvts9">foursimp</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX715"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">fourexpand</span><span class="rvts18"> (l, x, p, limit)</span></li>
+<li class="rvps3"><span class="rvts6">Calcula y devuelve la serie de Fourier a partir de la lista de los coeficientes de Fourier </span><span class="rvts18">l</span><span class="rvts6"> hasta el término </span><span class="rvts18">limit</span><span class="rvts6"> (</span><span class="rvts18">limit</span><span class="rvts6"> puede ser </span><span class="rvts9">inf</span><span class="rvts6">). Los argumentos </span><span class="rvts18">x</span><span class="rvts6"> y </span><span class="rvts18">p</span><span class="rvts6"> tienen el mismo significado que en </span><span class="rvts9">fourier</span><span class="rvts6">.</span></li>
+<li><a name="IDX716"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">fourcos</span><span class="rvts18"> (f, x, p)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve los coeficientes de los cosenos de Fourier de </span><span class="rvts19">f</span><span class="rvts9">(</span><span class="rvts19">x</span><span class="rvts9">)</span><span class="rvts6"> definida en </span><span class="rvts9">[0, </span><span class="rvts19">p</span><span class="rvts9">]</span><span class="rvts6">.</span></li>
+<li><a name="IDX717"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">foursin</span><span class="rvts18"> (f, x, p)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve los coeficientes de los senos de Fourier de </span><span class="rvts19">f</span><span class="rvts9">(</span><span class="rvts19">x</span><span class="rvts9">)</span><span class="rvts6"> definida en </span><span class="rvts9">[0, </span><span class="rvts19">p</span><span class="rvts9">]</span><span class="rvts6">.</span></li>
+<li><a name="IDX718"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">totalfourier</span><span class="rvts18"> (f, x, p)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve </span><span class="rvts9">fourexpand (foursimp (fourier (</span><span class="rvts19">f</span><span class="rvts9">, </span><span class="rvts19">x</span><span class="rvts9">, </span><span class="rvts19">p</span><span class="rvts9">)), </span><span class="rvts19">x</span><span class="rvts9">, </span><span class="rvts19">p</span><span class="rvts9">, 'inf)</span><span class="rvts6">.</span></li>
+<li><a name="IDX719"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">fourint</span><span class="rvts18"> (f, x)</span></li>
+<li class="rvps3"><span class="rvts6">Calcula y devuelve la lista de los coeficientes integrales de Fourier de </span><span class="rvts19">f</span><span class="rvts9">(</span><span class="rvts19">x</span><span class="rvts9">)</span><span class="rvts6"> definida en </span><span class="rvts9">[minf, inf]</span><span class="rvts6">.</span></li>
+<li><a name="IDX720"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">fourintcos</span><span class="rvts18"> (f, x)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve los coeficientes integrales de los cosenos </span><span class="rvts19">f</span><span class="rvts9">(</span><span class="rvts19">x</span><span class="rvts9">)</span><span class="rvts6"> en </span><span class="rvts9">[0, inf]</span><span class="rvts6">.</span></li>
+<li><a name="IDX721"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">fourintsin</span><span class="rvts18"> (f, x)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve los coeficientes integrales de los senos </span><span class="rvts19">f</span><span class="rvts9">(</span><span class="rvts19">x</span><span class="rvts9">)</span><span class="rvts6"> en </span><span class="rvts9">[0, inf]</span><span class="rvts6">.</span></li>
+<hr style="height: 6px;"/></li>
+</ul>
+<div><table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparalosmtodos.html#SEC74"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_24.html#SEC79"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps3"><span class="rvts10">This document was generated by </span><span class="rvts11">Robert Dodier</span><span class="rvts10"> on </span><span class="rvts11">agosto, 25 2007</span><span class="rvts10"> using </span><a class="rvts12" href="http://texi2html.cvshome.org/">texi2html 1.76</a><span class="rvts10">.</span></p>
+<p></p>
+<p class="rvps6"><span class="rvts13">Created with the Personal Edition of HelpNDoc: </span><a class="rvts14" href="http://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Full-featured Kindle eBooks generator</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				http://maxima.sourceforge.net</div>
+		</div>
+	</body>
+	
+</html>
+

@@ -1,0 +1,93 @@
+﻿<html>
+	
+<head>
+	<title> 3.6. La etiqueta FILE</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 3.9.1.648">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "MATEXE.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("36LaetiquetaFILE");
+			}
+		});
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1> 3.6. La etiqueta FILE</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="AyudaMatexe.html">Ayuda Matexe</a> &rsaquo;&rsaquo; <a href="3EllenguajeMatexe.html"> 3. El lenguaje Matexe</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="3EllenguajeMatexe.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="35LaetiquetaTEX.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="4Diseodedocumentos.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<h2 class="rvps8"><a name="_LA_ETIQUETA_FILE"></a>
+<img align="absbottom" width="24" height="24" alt="image" src="lib/image00913.jpg"/><span class="rvts0"><span class="rvts13">&nbsp;3.6. La etiqueta FILE</span></span></h2>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps7"><span class="rvts12">Uso:</span></p>
+<p class="rvps7"><span class="rvts21">&lt;FILE&gt;</span><span class="rvts12"> nombre_archivo_incluir.matex </span><span class="rvts21">&lt;/FILE&gt;</span></p>
+<p class="rvps7"><span class="rvts21">&lt;FILE&gt;</span><span class="rvts12"> global, nombre_archivo_incluir.matex </span><span class="rvts21">&lt;/FILE&gt;</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;Permite incluir y procesar otro documento .matex en el documento actual. El resultado de procesar el nuevo archivo se añade al codigo generado por el documento actual.</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;Si se incluye la palabra clave global antes del nombre del archivo, este se procesará en una nueva sesión máxima independiente de la actual, por lo que las variables definidas en el documento inicial no serán visibles desde el nuevo documento.</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps7"><span class="rvts12">Ejemplos:</span></p>
+<p class="rvps7"><span class="rvts21">&lt;FILE&gt;</span><span class="rvts12"> otroarchivo.matex </span><span class="rvts21">&lt;/FILE&gt;</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps1"><img align="absbottom" width="393" height="445" alt="image" src="lib/image016.jpg"/></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps7"><span class="rvts12">Atajo: CONTROL + F</span></p>
+<p class="rvps7"><span class="rvts12">Información adicional:</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;Debe tenerse cuidado con la utilización recursiva de esta etiqueta. Si dos documentos incluyen cada uno al otro, se producirá un bucle infinito.</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps1"><span class="rvts12"><br/></span></p>
+<p></p>
+<p class="rvps5"><span class="rvts9">Created with the Personal Edition of HelpNDoc: </span><a class="rvts10" href="http://www.helpndoc.com/feature-tour/iphone-website-generation">iPhone web sites made easy</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Matexe v.2013: http://matexe.sourceforge.net</div>
+		</div>
+	</body>
+	
+</html>
+

@@ -1,0 +1,268 @@
+﻿<html>
+	
+<head>
+	<title>Introducci&oacute;n a simplex</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 3.9.1.648">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Maxima.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("Introduccinasimplex");
+			}
+		});
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>Introducci&oacute;n a simplex</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="simplex.html">simplex</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="simplex.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="simplex.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Funcionesyvariablesparasimplex.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<div><a name="SIMPLEX"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_66.html#SEC248"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Introduccinasimplex.html#SEC250"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_66.html#SEC247"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_68.html#SEC252"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h1 class="rvps2"><span class="rvts0"><span class="rvts8">67. simplex</span></span></h1>
+<div><table border="0" cellpadding="1" cellspacing="0" style="border-width: 0px;">
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="Introduccinasimplex.html#SEC250">67.1 Introducción a simplex</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="Introduccinasimplex.html#SEC251">67.2 Funciones y variables para simplex</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height: 6px;"/>
+<div><a name="SEC249"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Introduccinasimplex.html#SEC249"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Introduccinasimplex.html#SEC251"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Introduccinasimplex.html#SEC249"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Introduccinasimplex.html#SEC249"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_68.html#SEC252"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">67.1 Introducción a simplex</span></span></h2>
+<p class="rvps3"><span class="rvts6">El paquete </span><span class="rvts9">simplex</span><span class="rvts6"> utiliza el algoritmo simplex para programación lineal.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load("simplex")$</span><br/><span class="rvts9">(%i2) minimize_lp(x+y, [3*x+2*y&gt;2, x+4*y&gt;3]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 9 &nbsp; &nbsp; &nbsp; &nbsp;7 &nbsp; &nbsp; &nbsp; 1</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [--, [y = --, x = -]]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 10 &nbsp; &nbsp; &nbsp; 10 &nbsp; &nbsp; &nbsp;5</span></p>
+<hr style="height: 6px;"/>
+<div><a name="INTRODUCCI_00F3N-A-SIMPLEX"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Introduccinasimplex.html#SEC250"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_68.html#SEC252"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Introduccinasimplex.html#SEC249"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Introduccinasimplex.html#SEC249"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_68.html#SEC252"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">67.2 Funciones y variables para simplex</span></span></h2>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC250"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">epsilon_lp</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">10^-8</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Error epsilon utilizado en los cálculos numéricos de </span><span class="rvts9">linear_program</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">linear_program</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="FUNCIONES-Y-VARIABLES-PARA-SIMPLEX"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">linear_program</span><span class="rvts18"> (A, b, c)</span></li>
+<li class="rvps3"><span class="rvts6">La función </span><span class="rvts9">linear_program</span><span class="rvts6"> es una implementación del algoritmo simplex. La instrucción </span><span class="rvts9">linear_program(A, b, c)</span><span class="rvts6"> calcula un vector </span><span class="rvts18">x</span><span class="rvts6"> tal que minimiza </span><span class="rvts9">c.x</span><span class="rvts6"> bajo las restricciones </span><span class="rvts9">A.x = b</span><span class="rvts6"> y </span><span class="rvts9">x &gt;= 0</span><span class="rvts6">. El argumento </span><span class="rvts18">A</span><span class="rvts6"> es una matriz y los argumentos </span><span class="rvts18">b</span><span class="rvts6"> y </span><span class="rvts18">c</span><span class="rvts6"> son listas.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">linear_program</span><span class="rvts6"> devuelve una lista que contiene el vector solución </span><span class="rvts18">x</span><span class="rvts6"> y el valor mínimo de </span><span class="rvts9">c.x</span><span class="rvts6">. Si el problema no está acotado, devuelve el mensaje "Problem not bounded!" y si el problema no es factible, devuelve el mensaje "Problem not feasible!".</span></p>
+<p class="rvps3"><span class="rvts6">Para usar esta función, cárguese primero el paquete con la instrucción </span><span class="rvts9">load(simplex);</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) A: matrix([1,1,-1,0], [2,-3,0,-1], [4,-5,0,0])$</span><br/><span class="rvts9">(%i2) b: [1,1,6]$</span><br/><span class="rvts9">(%i3) c: [1,-2,0,0]$</span><br/><span class="rvts9">(%i4) linear_program(A, b, c);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 1 &nbsp; 1 &nbsp; - 1 &nbsp; 0 &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9">(%o4) linear_program([ 2 &nbsp;- 3 &nbsp; 0 &nbsp; - 1 ], [1, 1, 6], </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 4 &nbsp;- 5 &nbsp; 0 &nbsp; &nbsp;0 &nbsp;]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[1, - 2, 0, 0])</span></p>
+<p class="rvps3"><span class="rvts6">Véanse también </span><span class="rvts9">minimize_lp</span><span class="rvts6">, </span><span class="rvts9">scale_lp</span><span class="rvts6"> y </span><span class="rvts9">epsilon_lp</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC251"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">maximize_lp</span><span class="rvts18"> (obj, cond, [pos])</span></li>
+<li class="rvps3"><span class="rvts6">Maximiza la función objetivo lineal </span><span class="rvts18">obj</span><span class="rvts6"> sujeta a ciertas restricciones lineales </span><span class="rvts18">cond</span><span class="rvts6">. Véase </span><span class="rvts9">minimize_lp</span><span class="rvts6"> para una descripción detallada de los argumentos y de la respuesta dada por esta función.</span></li>
+<li><a name="IDX2018"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">minimize_lp</span><span class="rvts18"> (obj, cond, [pos])</span></li>
+<li class="rvps3"><span class="rvts6">Minimiza la función objetivo lineal </span><span class="rvts18">obj</span><span class="rvts6"> sujeta a ciertas restricciones lineales </span><span class="rvts18">cond</span><span class="rvts6">, siendo ésta una lista de ecuaciones o inecuaciones lineales. En las inecuaciones estrictas se reemplaza </span><span class="rvts9">&gt;</span><span class="rvts6"> por </span><span class="rvts9">&gt;=</span><span class="rvts6"> y </span><span class="rvts9">&lt;</span><span class="rvts6"> por </span><span class="rvts9">&lt;=</span><span class="rvts6">. El argumento opcional </span><span class="rvts18">pos</span><span class="rvts6"> es una lista de variables de decisión que se suponen positivas.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si el mínimo existe, </span><span class="rvts9">minimize_lp</span><span class="rvts6"> devuelve una lista que contiene el valor mínimo de la función objetivo y una lista de valores para las variables de decisión con los que se alcanza el mínimo. Si el problema no está acotado, devuelve el mensaje "Problem not bounded!" y si el problema no es factible, devuelve el mensaje "Problem not feasible!".</span></p>
+<p class="rvps3"><span class="rvts6">Las variables de decisión no se suponen no negativas. Si todas las variables de decisión son no negativas, asígnese el valor </span><span class="rvts9">true</span><span class="rvts6"> a la variable </span><span class="rvts9">nonegative_lp</span><span class="rvts6">. Si sólo algunas de las variables de decisión son positivas, lístense en el argumento opcional </span><span class="rvts18">pos</span><span class="rvts6">, lo cual es más eficiente que añadir restricciones.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">minimize_lp</span><span class="rvts6"> utiliza el algoritmo simplex implementado en la función </span><span class="rvts9">linear_program</span><span class="rvts6"> de Maxima.</span></p>
+<p class="rvps3"><span class="rvts6">Para usar esta función, cárguese primero el paquete con la instrucción </span><span class="rvts9">load(simplex);</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) minimize_lp(x+y, [3*x+y=0, x+2*y&gt;2]);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp;minimize_lp(y + x, [y + 3 x = 0, 2 y + x &gt; 2])</span><br/><span class="rvts9">(%i2) minimize_lp(x+y, [3*x+y&gt;0, x+2*y&gt;2]), nonegative_lp=true;</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp;minimize_lp(y + x, [y + 3 x &gt; 0, 2 y + x &gt; 2])</span><br/><span class="rvts9">(%i3) minimize_lp(x+y, [3*x+y=0, x+2*y&gt;2]), nonegative_lp=true;</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp;minimize_lp(y + x, [y + 3 x = 0, 2 y + x &gt; 2])</span><br/><span class="rvts9">(%i4) minimize_lp(x+y, [3*x+y&gt;0]);</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; minimize_lp(y + x, [y + 3 x &gt; 0])</span></p>
+<p class="rvps3"><span class="rvts6">Véanse también </span><span class="rvts9">maximize_lp</span><span class="rvts6">, </span><span class="rvts9">nonegative_lp</span><span class="rvts6"> y </span><span class="rvts9">epsilon_lp</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2019"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">nonegative_lp</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">false</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">nonegative_lp</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6"> todas las variables de decisión pasadas a </span><span class="rvts9">minimize_lp</span><span class="rvts6"> y a </span><span class="rvts9">maximize_lp</span><span class="rvts6"> se suponen positivas.</span></p>
+<p class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">minimize_lp</span><span class="rvts6">.</span></p>
+<hr style="height: 6px;"/>
+<div><table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Introduccinasimplex.html#SEC249"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_68.html#SEC252"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps3"><span class="rvts10">This document was generated by </span><span class="rvts11">Robert Dodier</span><span class="rvts10"> on </span><span class="rvts11">agosto, 25 2007</span><span class="rvts10"> using </span><a class="rvts12" href="http://texi2html.cvshome.org/">texi2html 1.76</a><span class="rvts10">.</span></p>
+<p></p>
+<p class="rvps6"><span class="rvts13">Created with the Personal Edition of HelpNDoc: </span><a class="rvts14" href="http://www.helpndoc.com">Free Web Help generator</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				http://maxima.sourceforge.net</div>
+		</div>
+	</body>
+	
+</html>
+

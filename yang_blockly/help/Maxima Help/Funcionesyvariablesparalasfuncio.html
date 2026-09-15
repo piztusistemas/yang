@@ -1,0 +1,435 @@
+﻿<html>
+	
+<head>
+	<title>Funciones y variables para las funciones especiales</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 3.9.1.648">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Maxima.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("Funcionesyvariablesparalasfuncio");
+			}
+		});
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>Funciones y variables para las funciones especiales</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="FuncionesEspeciales.html">Funciones Especiales</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="FuncionesEspeciales.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Introduccinalasfuncionesespecial.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Funcioneselpticas.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<div><a name="FUNCIONES-ESPECIALES"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_15.html#SEC51"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparalasfuncio.html#SEC53"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_15.html#SEC49"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_17.html#SEC55"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h1 class="rvps2"><span class="rvts0"><span class="rvts8">16. Funciones Especiales</span></span></h1>
+<div><table border="0" cellpadding="1" cellspacing="0" style="border-width: 0px;">
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="Funcionesyvariablesparalasfuncio.html#SEC53">16.1 Introducción a las funciones especiales</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="Funcionesyvariablesparalasfuncio.html#SEC54">16.2 Funciones y variables para las funciones especiales</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height: 6px;"/>
+<div><a name="SEC52"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparalasfuncio.html#SEC52"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparalasfuncio.html#SEC54"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparalasfuncio.html#SEC52"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparalasfuncio.html#SEC52"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_17.html#SEC55"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">16.1 Introducción a las funciones especiales</span></span></h2>
+<p class="rvps3"><span class="rvts6">A continuación se especifican las notaciones correspondientes a las funciones especiales:</span></p>
+<p class="rvps4"><span class="rvts9">bessel_j (index, expr) &nbsp; &nbsp;Función de Bessel de primera especie</span><br/><span class="rvts9">bessel_y (index, expr) &nbsp; &nbsp;Función de Bessel de segunda especie</span><br/><span class="rvts9">bessel_i (index, expr) &nbsp; &nbsp;Función de Bessel modificada de primera especie</span><br/><span class="rvts9">bessel_k (index, expr) &nbsp; &nbsp;Función de Bessel modificada de segunda especie</span><br/><span class="rvts9">%he[n] (z) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Polinomio de Hermite (Ojo: he, no h.</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Ver A&amp;S 22.5.18)</span><br/><span class="rvts9">%p[u,v] (z) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Función de Legendre de primera especie</span><br/><span class="rvts9">%q[u,v] (z) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Función de Legendre de segunda especie</span><br/><span class="rvts9">hstruve[n] (z) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Función H de Struve</span><br/><span class="rvts9">lstruve[n] (z) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Función L de Struve</span><br/><span class="rvts9">%f[p,q] ([], [], expr) &nbsp; &nbsp;Función hipergeométrica generalizada</span><br/><span class="rvts9">gamma() &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Función Gamma</span><br/><span class="rvts9">gammagreek(a,z) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Función Gamma incompleta</span><br/><span class="rvts9">gammaincomplete(a,z) &nbsp; &nbsp; &nbsp;Extremo de la función Gamma incompleta</span><br/><span class="rvts9">slommel</span><br/><span class="rvts9">%m[u,k] (z) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Función de Whittaker de primera especie</span><br/><span class="rvts9">%w[u,k] (z) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Función de Whittaker de segunda especie</span><br/><span class="rvts9">erfc (z) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Complemento de la función de error, erf</span><br/><span class="rvts9">ei (z) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Integral exponencial (?)</span><br/><span class="rvts9">kelliptic (z) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Integral elíptica completa</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;de primera especie (K)</span><br/><span class="rvts9">%d [n] (z) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Función cilíndrica parabólica</span></p>
+<hr style="height: 6px;"/>
+<div><a name="INTRODUCCI_00F3N-A-LAS-FUNCIONES-ESPECIALES"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparalasfuncio.html#SEC53"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_17.html#SEC55"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparalasfuncio.html#SEC52"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparalasfuncio.html#SEC52"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_17.html#SEC55"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">16.2 Funciones y variables para las funciones especiales</span></span></h2>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC53"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">airy_ai</span><span class="rvts18"> (x)</span></li>
+<li class="rvps3"><span class="rvts6">Función Ai de Airy, tal como la definen Abramowitz y Stegun, </span><span class="rvts18">Handbook of Mathematical Functions</span><span class="rvts6">, Sección 10.4.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La ecuación de Airy </span><span class="rvts9">diff (y(x), x, 2) - x y(x) = 0</span><span class="rvts6"> tiene dos soluciones linealmente independientes, </span><span class="rvts9">y = Ai(x)</span><span class="rvts6"> y </span><span class="rvts9">y = Bi(x)</span><span class="rvts6">. La derivada </span><span class="rvts9">diff (airy_ai(x), x)</span><span class="rvts6"> es </span><span class="rvts9">airy_dai(x)</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Si el argumento </span><span class="rvts9">x</span><span class="rvts6"> es un número decimal real o complejo, se devolverá el valor numérico de </span><span class="rvts9">airy_ai</span><span class="rvts6"> siempre que sea posible.</span></p>
+<p class="rvps3"><span class="rvts6">Véanse </span><span class="rvts9">airy_bi</span><span class="rvts6">, </span><span class="rvts9">airy_dai</span><span class="rvts6"> y </span><span class="rvts9">airy_dbi</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="FUNCIONES-Y-VARIABLES-PARA-LAS-FUNCIONES-ESPECIALES"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">airy_dai</span><span class="rvts18"> (x)</span></li>
+<li class="rvps3"><span class="rvts6">Es la derivada de la función Ai de Airy, </span><span class="rvts9">airy_ai(x)</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Véase </span><span class="rvts9">airy_ai</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC54"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">airy_bi</span><span class="rvts18"> (x)</span></li>
+<li class="rvps3"><span class="rvts6">Es la función Bi de Airy, tal como la definen Abramowitz y Stegun, </span><span class="rvts18">Handbook of Mathematical Functions</span><span class="rvts6">, Sección 10.4. Se trata de la segunda solución de la ecuación de Airy </span><span class="rvts9">diff (y(x), x, 2) - x y(x) = 0</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si el argumento </span><span class="rvts9">x</span><span class="rvts6"> es un número decimal real o complejo, se devolverá el valor numérico de </span><span class="rvts9">airy_bi</span><span class="rvts6"> siempre que sea posible. En los otros casos, se devuelve la expresión sin evaluar.</span></p>
+<p class="rvps3"><span class="rvts6">La derivada </span><span class="rvts9">diff (airy_bi(x), x)</span><span class="rvts6"> es </span><span class="rvts9">airy_dbi(x)</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Véanse </span><span class="rvts9">airy_ai</span><span class="rvts6"> y </span><span class="rvts9">airy_dbi</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX515"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">airy_dbi</span><span class="rvts18"> (x)</span></li>
+<li class="rvps3"><span class="rvts6">Es la derivada de la función Bi de Airy, </span><span class="rvts9">airy_bi(x)</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Véanse </span><span class="rvts9">airy_ai</span><span class="rvts6"> y </span><span class="rvts9">airy_bi</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX516"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">asympa</span></li>
+<li class="rvps3"><span class="rvts6">El paquete </span><span class="rvts9">asympa</span><span class="rvts6"> contiene funciones de simplificación para realizar análisis asintótico, incluyendo las funciones "big O" y "little o", de uso frecuente en el análisis complejo y numérico.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La instrucción </span><span class="rvts9">load ("asympa")</span><span class="rvts6"> carga este paquete.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX517"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">bessel</span><span class="rvts18"> (z, a)</span></li>
+<li class="rvps3"><span class="rvts6">Función de Bessel de primera especie.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Ya no se recomienda su uso. Utilícese </span><span class="rvts9">bessel_j (</span><span class="rvts19">z</span><span class="rvts9">, </span><span class="rvts19">a</span><span class="rvts9">)</span><span class="rvts6"> en su lugar.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX518"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">bessel_j</span><span class="rvts18"> (v, z)</span></li>
+<li class="rvps3"><span class="rvts6">Función de Bessel de primera especie de orden </span><span class="rvts18">v</span><span class="rvts6"> y argumento </span><span class="rvts18">z</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">bessel_j</span><span class="rvts6"> calcula el arreglo </span><span class="rvts9">besselarray</span><span class="rvts6"> tal que </span><span class="rvts9">besselarray [i] = bessel_j [i + v - int(v)] (z)</span><span class="rvts6"> para </span><span class="rvts9">i</span><span class="rvts6"> desde cero hasta </span><span class="rvts9">int(v)</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">bessel_j</span><span class="rvts6"> se define como</span></p>
+<p class="rvps4"><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;inf</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;==== &nbsp; &nbsp; &nbsp; k &nbsp;- v - 2 k &nbsp;v + 2 k</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\ &nbsp; &nbsp; (- 1) &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;z</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &gt; &nbsp; &nbsp;--------------------------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/ &nbsp; &nbsp; &nbsp; &nbsp;k! gamma(v + k + 1)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;====</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;k = 0</span></p>
+<p class="rvps3"><span class="rvts6">aunque la serie infinita no se utiliza en los cálculos.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX519"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">bessel_y</span><span class="rvts18"> (v, z)</span></li>
+<li class="rvps3"><span class="rvts6">Función de Bessel de segunda especie de orden </span><span class="rvts18">v</span><span class="rvts6"> y argumento </span><span class="rvts18">z</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">bessel_y</span><span class="rvts6"> calcula el arreglo </span><span class="rvts9">besselarray</span><span class="rvts6"> tal que </span><span class="rvts9">besselarray [i] = bessel_y [i + v - int(v)] (z)</span><span class="rvts6"> para </span><span class="rvts9">i</span><span class="rvts6"> desde cero hasta </span><span class="rvts9">int(v)</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">bessel_y</span><span class="rvts6"> se define como</span></p>
+<p class="rvps4"><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;cos(%pi v) bessel_j(v, z) - bessel_j(-v, z)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-------------------------------------------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sin(%pi v)</span></p>
+<p class="rvps3"><span class="rvts6">si </span><span class="rvts18">v</span><span class="rvts6"> no es un entero. En caso de que </span><span class="rvts18">v</span><span class="rvts6"> sea un entero </span><span class="rvts18">n</span><span class="rvts6">, se calcula el límite cuando </span><span class="rvts18">v</span><span class="rvts6"> se aproxima a </span><span class="rvts18">n</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX520"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">bessel_i</span><span class="rvts18"> (v, z)</span></li>
+<li class="rvps3"><span class="rvts6">Función modificada de Bessel de primera especie de orden </span><span class="rvts18">v</span><span class="rvts6"> y argumento </span><span class="rvts18">z</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">bessel_i</span><span class="rvts6"> calcula el arreglo </span><span class="rvts9">besselarray</span><span class="rvts6"> tal que </span><span class="rvts9">besselarray [i] = bessel_i [i + v - int(v)] (z)</span><span class="rvts6"> para </span><span class="rvts9">i</span><span class="rvts6"> desde cero hasta </span><span class="rvts9">int(v)</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">bessel_i</span><span class="rvts6"> se define como</span></p>
+<p class="rvps4"><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;inf</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;==== &nbsp; - v - 2 k &nbsp;v + 2 k</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\ &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;z</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &gt; &nbsp; &nbsp;-------------------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/ &nbsp; &nbsp; k! gamma(v + k + 1)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;====</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;k = 0</span></p>
+<p class="rvps3"><span class="rvts6">aunque la serie infinita no se utiliza en los cálculos.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX521"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">bessel_k</span><span class="rvts18"> (v, z)</span></li>
+<li class="rvps3"><span class="rvts6">Función modificada de Bessel de segunda especie de orden </span><span class="rvts18">v</span><span class="rvts6"> y argumento </span><span class="rvts18">z</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">bessel_k</span><span class="rvts6"> calcula el arreglo </span><span class="rvts9">besselarray</span><span class="rvts6"> tal que </span><span class="rvts9">besselarray [i] = bessel_k [i + v - int(v)] (z)</span><span class="rvts6"> para </span><span class="rvts9">i</span><span class="rvts6"> desde cero hasta </span><span class="rvts9">int(v)</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">bessel_k</span><span class="rvts6"> se define como</span></p>
+<p class="rvps4"><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; %pi csc(%pi v) (bessel_i(-v, z) - bessel_i(v, z))</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -------------------------------------------------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span></p>
+<p class="rvps3"><span class="rvts6">si </span><span class="rvts18">v</span><span class="rvts6"> no es un entero. Si </span><span class="rvts18">v</span><span class="rvts6"> es igual al entero </span><span class="rvts18">n</span><span class="rvts6">, entonces se calcula el límite cuando </span><span class="rvts18">v</span><span class="rvts6"> tiende a </span><span class="rvts18">n</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX522"></a>
+<span class="rvts16">Variable optativa:</span><span class="rvts6"> </span><span class="rvts17">besselexpand</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">false</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Controla la expansión de las funciones de Bessel cuando el orden es la mitad de un entero impar. En tal caso, las funciones de Bessel se pueden expandir en términos de otras funciones elementales. Si </span><span class="rvts9">besselexpand</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, se expande la función de Bessel.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) besselexpand: false$</span><br/><span class="rvts9">(%i2) bessel_j (3/2, z);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;bessel_j(-, z)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9">(%i3) besselexpand: true$</span><br/><span class="rvts9">(%i4) bessel_j (3/2, z);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 z &nbsp; sin(z) &nbsp; cos(z)</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;sqrt(---) (------ - ------)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;%pi &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; z</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;z</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX523"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">scaled_bessel_i</span><span class="rvts18"> (v, z)</span></li>
+<li class="rvps3"><span class="rvts6">Es la función de Bessel modificada de primera especie de orden </span><span class="rvts18">v</span><span class="rvts6"> y argumento </span><span class="rvts18">z</span><span class="rvts6">, es decir </span><span class="rvts18">scaled_bessel_i(v,z) = exp(-abs(z))*bessel_i(v, z)</span><span class="rvts6">. Esta función es especialmente útil para calcular </span><span class="rvts18">bessel_i</span><span class="rvts6"> cuando </span><span class="rvts18">z</span><span class="rvts6"> es grande. Sin embargo, Maxima no sabe mucho más sobre esta función. En cálculos simbólicos, quizás sea preferible trabajar directamente con la expresión </span><span class="rvts9">exp(-abs(z))*bessel_i(v, z)</span><span class="rvts6">.</span></li>
+<li><a name="IDX524"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">scaled_bessel_i0</span><span class="rvts18"> (z)</span></li>
+<li class="rvps3"><span class="rvts6">Idéntica a </span><span class="rvts9">scaled_bessel_i(0,z)</span><span class="rvts6">.</span></li>
+<li><a name="IDX525"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">scaled_bessel_i1</span><span class="rvts18"> (z)</span></li>
+<li class="rvps3"><span class="rvts6">Idéntica a </span><span class="rvts9">scaled_bessel_i(1,z)</span><span class="rvts6">.</span></li>
+<li><a name="IDX526"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">beta</span><span class="rvts18"> (x, y)</span></li>
+<li class="rvps3"><span class="rvts6">Función beta, definida como </span><span class="rvts9">gamma(x) gamma(y)/gamma(x + y)</span><span class="rvts6">.</span></li>
+<li><a name="IDX527"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">gamma</span><span class="rvts18"> (x)</span></li>
+<li class="rvps3"><span class="rvts6">Función gamma.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">makegamma</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">La variable </span><span class="rvts9">gammalim</span><span class="rvts6"> controla la simplificación de la función gamma.</span></p>
+<p class="rvps3"><span class="rvts6">La constante de Euler-Mascheroni es </span><span class="rvts9">%gamma</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX528"></a>
+<span class="rvts16">Variable optativa:</span><span class="rvts6"> </span><span class="rvts17">gammalim</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: 1000000</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La variable </span><span class="rvts9">gammalim</span><span class="rvts6"> controla la simplificación de la función gamma con argumentos enteros o racionales. Si el valor absoluto del argumento no es mayor que </span><span class="rvts9">gammalim</span><span class="rvts6">, entonces se realizará la simplificación. Nótese que la variable </span><span class="rvts9">factlim</span><span class="rvts6"> también controla la simplificación del resultado de </span><span class="rvts9">gamma</span><span class="rvts6"> con argumento entero.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX529"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">intopois</span><span class="rvts18"> (a)</span></li>
+<li class="rvps3"><span class="rvts6">Convierte </span><span class="rvts18">a</span><span class="rvts6"> en un codificado Poisson.</span></li>
+<li><a name="IDX530"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">makefact</span><span class="rvts18"> (expr)</span></li>
+<li class="rvps3"><span class="rvts6">Transforma las funciones </span><span class="rvts9">binomial</span><span class="rvts6">, </span><span class="rvts9">gamma</span><span class="rvts6"> y </span><span class="rvts9">beta</span><span class="rvts6"> que aparecen en </span><span class="rvts18">expr</span><span class="rvts6"> en su notación factorial.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">makegamma</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX531"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">makegamma</span><span class="rvts18"> (expr)</span></li>
+<li class="rvps3"><span class="rvts6">Transforma las funciones </span><span class="rvts9">binomial</span><span class="rvts6">, </span><span class="rvts9">factorial</span><span class="rvts6"> y </span><span class="rvts9">beta</span><span class="rvts6"> que aparecen en </span><span class="rvts18">expr</span><span class="rvts6"> en funciones </span><span class="rvts9">gamma</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">makefact</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX532"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">numfactor</span><span class="rvts18"> (expr)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve el factor numérico que multiplica a la expresión </span><span class="rvts18">expr</span><span class="rvts6">, la cual debe tener un único término.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) gamma (7/2);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;15 sqrt(%pi)</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ------------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 8</span><br/><span class="rvts9">(%i2) numfactor (%);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 15</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;--</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 8</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX533"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">outofpois</span><span class="rvts18"> (a)</span></li>
+<li class="rvps3"><span class="rvts6">Convierte </span><span class="rvts18">a</span><span class="rvts6"> desde codificado de Poisson a una representación general. Si </span><span class="rvts18">a</span><span class="rvts6"> no está en forma de Poisson, </span><span class="rvts9">outofpois</span><span class="rvts6"> hace la conversión, siendo entonces el valor retornado </span><span class="rvts9">outofpois (intopois (</span><span class="rvts19">a</span><span class="rvts9">))</span><span class="rvts6">. Esta función es un simplificador canónico para sumas de potencias de senos y cosenos.</span></li>
+<li><a name="IDX534"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">poisdiff</span><span class="rvts18"> (a, b)</span></li>
+<li class="rvps3"><span class="rvts6">Deriva </span><span class="rvts18">a</span><span class="rvts6"> con respecto a </span><span class="rvts18">b</span><span class="rvts6">. El argumento </span><span class="rvts18">b</span><span class="rvts6"> debe aparecer sólo en los argumentos trigonométricos o sólo en los coeficientes.</span></li>
+<li><a name="IDX535"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">poisexpt</span><span class="rvts18"> (a, b)</span></li>
+<li class="rvps3"><span class="rvts6">Idéntico a </span><span class="rvts9">intopois (</span><span class="rvts19">a</span><span class="rvts9">^</span><span class="rvts19">b</span><span class="rvts9">)</span><span class="rvts6">. El argumento </span><span class="rvts18">b</span><span class="rvts6"> debe ser un entero positivo.</span></li>
+<li><a name="IDX536"></a>
+<span class="rvts16">Variable optativa:</span><span class="rvts6"> </span><span class="rvts17">poislim</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: 5</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La variable </span><span class="rvts9">poislim</span><span class="rvts6"> determina el dominio de los coeficientes en los argumentos de las funciones trigonométricas. El valor por defecto 5 corresponde al intervalo [-2^(5-1)+1,2^(5-1)], o [-15,16], pero puede reasignarse para [-2^(n-1)+1, 2^(n-1)].</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX537"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">poisplus</span><span class="rvts18"> (a, b)</span></li>
+<li class="rvps3"><span class="rvts6">Idéntico a </span><span class="rvts9">intopois (a + b)</span><span class="rvts6">.</span></li>
+<li><a name="IDX538"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">poissimp</span><span class="rvts18"> (a)</span></li>
+<li class="rvps3"><span class="rvts6">Convierte </span><span class="rvts18">a</span><span class="rvts6"> en una serie de Poisson para </span><span class="rvts18">a</span><span class="rvts6"> en su representación general.</span></li>
+<li><a name="IDX539"></a>
+<span class="rvts16">Símbolo especial:</span><span class="rvts6"> </span><span class="rvts17">poisson</span></li>
+<li class="rvps3"><span class="rvts6">El símbolo </span><span class="rvts9">/P/</span><span class="rvts6"> sigue a la etiqueta de las líneas que contienen expresiones que son series de Poisson.</span></li>
+<li><a name="IDX540"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">poissubst</span><span class="rvts18"> (a, b, c)</span></li>
+<li class="rvps3"><span class="rvts6">Sustituye </span><span class="rvts18">b</span><span class="rvts6"> por </span><span class="rvts18">a</span><span class="rvts6"> en </span><span class="rvts18">c</span><span class="rvts6">, donde </span><span class="rvts18">c</span><span class="rvts6"> es una serie de Poisson.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">(1) Si </span><span class="rvts18">b</span><span class="rvts6"> es una de las variables </span><span class="rvts18">u</span><span class="rvts6">, </span><span class="rvts18">v</span><span class="rvts6">, </span><span class="rvts18">w</span><span class="rvts6">, </span><span class="rvts18">x</span><span class="rvts6">, </span><span class="rvts18">y</span><span class="rvts6"> o </span><span class="rvts18">z</span><span class="rvts6">, entonces </span><span class="rvts18">a</span><span class="rvts6"> debe ser una expresión lineal en esas variables (por ejemplo, </span><span class="rvts9">6*u + 4*v</span><span class="rvts6">).</span></p>
+<p class="rvps3"><span class="rvts6">(2) Si </span><span class="rvts18">b</span><span class="rvts6"> no es ninguna de esas variables, entonces </span><span class="rvts18">a</span><span class="rvts6"> no puede contener tampoco a ninguna de ellas, ni senos, ni cosenos.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX541"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">poistimes</span><span class="rvts18"> (a, b)</span></li>
+<li class="rvps3"><span class="rvts6">Idéntico a </span><span class="rvts9">intopois (</span><span class="rvts19">a</span><span class="rvts9">*</span><span class="rvts19">b</span><span class="rvts9">)</span><span class="rvts6">.</span></li>
+<li><a name="IDX542"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">printpois</span><span class="rvts18"> (a)</span></li>
+<li class="rvps3"><span class="rvts6">Presenta una serie de Poisson en un formato legible. Conjuntamente con </span><span class="rvts9">outofpois</span><span class="rvts6">, si es necesario convertirá </span><span class="rvts18">a</span><span class="rvts6"> primero en una codificación de Poisson.</span></li>
+<li><a name="IDX543"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">psi</span><span class="rvts18"> [n](x)</span></li>
+<li class="rvps3"><span class="rvts6">Es la derivada de </span><span class="rvts9">log (gamma (</span><span class="rvts19">x</span><span class="rvts9">))</span><span class="rvts6"> de orden </span><span class="rvts19">n</span><span class="rvts9">+1</span><span class="rvts6">, de tal manera que </span><span class="rvts9">psi[0](</span><span class="rvts19">x</span><span class="rvts9">)</span><span class="rvts6"> es la primera derivada, </span><span class="rvts9">psi[1](</span><span class="rvts19">x</span><span class="rvts9">)</span><span class="rvts6"> la segunda derivada y así sucesivamente.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">En general, Maxima no sabe cómo calcular valores numéricos de </span><span class="rvts9">psi</span><span class="rvts6">, pero sí conoce el valor exacto para algunos argumentos racionales. Existen algunas variables globales para controlar en qué rangos racionales debe devolver </span><span class="rvts9">psi</span><span class="rvts6"> resultados exactos, si ello es posible. Véanse las descripciones de </span><span class="rvts9">maxpsiposint</span><span class="rvts6">, </span><span class="rvts9">maxpsinegint</span><span class="rvts6">, </span><span class="rvts9">maxpsifracnum</span><span class="rvts6"> y </span><span class="rvts9">maxpsifracnum</span><span class="rvts6">. En resumen, </span><span class="rvts18">x</span><span class="rvts6"> debe alcanzar un valor entre </span><span class="rvts9">maxpsinegint</span><span class="rvts6"> y </span><span class="rvts9">maxpsiposint</span><span class="rvts6">. Si el valor absoluto de la parte fraccional de </span><span class="rvts18">x</span><span class="rvts6"> es racional y tiene un numerador menor que </span><span class="rvts9">maxpsifracnum</span><span class="rvts6"> y un denominador menor que </span><span class="rvts9">maxpsifracdenom</span><span class="rvts6">, la función </span><span class="rvts9">psi</span><span class="rvts6"> devolverá un valor exacto.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">bfpsi</span><span class="rvts6"> del paquete </span><span class="rvts9">bffac</span><span class="rvts6"> puede calcular valores numéricos.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX544"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">maxpsiposint</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: 20</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La variable </span><span class="rvts9">maxpsiposint</span><span class="rvts6"> guarda el mayor valor positivo para el que </span><span class="rvts9">psi[n](x)</span><span class="rvts6"> intentará calcular un valor exacto.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX545"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">maxpsinegint</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: -10</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La variable </span><span class="rvts9">maxpsinegint</span><span class="rvts6"> guarda el menor valor negativo para el que </span><span class="rvts9">psi[n](x)</span><span class="rvts6"> intentará calcular un valor exacto. Si </span><span class="rvts18">x</span><span class="rvts6"> es menor que </span><span class="rvts9">maxnegint</span><span class="rvts6">, </span><span class="rvts9">psi[n](</span><span class="rvts19">x</span><span class="rvts9">)</span><span class="rvts6"> no devolverá una respuesta simplificada, aunque supiese cómo hacerlo.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX546"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">maxpsifracnum</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: 6</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Sea </span><span class="rvts18">x</span><span class="rvts6"> un número racional menor que la unidad de la forma </span><span class="rvts9">p/q</span><span class="rvts6">. Si </span><span class="rvts9">p</span><span class="rvts6"> es mayor que </span><span class="rvts9">maxpsifracnum</span><span class="rvts6">, entonces </span><span class="rvts9">psi[</span><span class="rvts19">n</span><span class="rvts9">](</span><span class="rvts19">x</span><span class="rvts9">)</span><span class="rvts6"> no devolverá una respuesta simplificada.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX547"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">maxpsifracdenom</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: 6</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Sea </span><span class="rvts18">x</span><span class="rvts6"> un número racional menor que la unidad de la forma </span><span class="rvts9">p/q</span><span class="rvts6">. Si </span><span class="rvts9">q</span><span class="rvts6"> es mayor que </span><span class="rvts9">maxpsifracnum</span><span class="rvts6">, entonces </span><span class="rvts9">psi[</span><span class="rvts19">n</span><span class="rvts9">](</span><span class="rvts19">x</span><span class="rvts9">)</span><span class="rvts6"> no devolverá una respuesta simplificada.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX548"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">specint</span><span class="rvts18"> (exp(- s*t) * expr, t)</span></li>
+<li class="rvps3"><span class="rvts6">Calcula la transformada de Laplace de </span><span class="rvts18">expr</span><span class="rvts6"> respecto de la variable </span><span class="rvts18">t</span><span class="rvts6">. El integrando </span><span class="rvts18">expr</span><span class="rvts6"> puede contener funciones especiales.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">specint</span><span class="rvts6"> no puede calcular la integral, le valor devuelto puede contener símbolos de Lisp, incluyendo </span><span class="rvts9">other-defint-to-follow-negtest</span><span class="rvts6">, </span><span class="rvts9">other-lt-exponential-to-follow</span><span class="rvts6">, </span><span class="rvts9">product-of-y-with-nofract-indices</span><span class="rvts6">, etc.; se trata de un fallo pendiente de corrección.</span></p>
+<p class="rvps3"><span class="rvts6">La ejecución de </span><span class="rvts9">demo(hypgeo)</span><span class="rvts6"> muestra algunso ejemplos de transformadas de Laplace calculadas con </span><span class="rvts9">specint</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Examples:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) assume (p &gt; 0, a &gt; 0);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[p &gt; 0, a &gt; 0]</span><br/><span class="rvts9">(%i2) specint (t^(1/2) * exp(-a*t/4) * exp(-p*t), t);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sqrt(%pi)</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ------------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a 3/2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 (p + -)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4</span><br/><span class="rvts9">(%i3) specint (t^(1/2) * bessel_j(1, 2 * a^(1/2) * t^(1/2))</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;* exp(-p*t), t);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - a/p</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sqrt(a) %e</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;---------------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; p</span></p>
+<hr style="height: 6px;"/>
+<div><table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparalasfuncio.html#SEC52"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_17.html#SEC55"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps3"><span class="rvts10">This document was generated by </span><span class="rvts11">Robert Dodier</span><span class="rvts10"> on </span><span class="rvts11">agosto, 25 2007</span><span class="rvts10"> using </span><a class="rvts12" href="http://texi2html.cvshome.org/">texi2html 1.76</a><span class="rvts10">.</span></p>
+<p></p>
+<p class="rvps6"><span class="rvts13">Created with the Personal Edition of HelpNDoc: </span><a class="rvts14" href="http://www.helpndoc.com/feature-tour">Easily create HTML Help documents</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				http://maxima.sourceforge.net</div>
+		</div>
+	</body>
+	
+</html>
+

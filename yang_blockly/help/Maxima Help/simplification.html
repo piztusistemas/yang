@@ -1,0 +1,708 @@
+﻿<html>
+	
+<head>
+	<title>simplification</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 3.9.1.648">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Maxima.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("simplification");
+			}
+		});
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>simplification</h1>
+				
+				</div>
+			<div id="topic_header_nav">
+				<a href="Funcionesyvariablesparasimplex.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Introduccinasimplification.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<div><a name="SIMPLIFICATION"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_67.html#SEC251"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="simplification.html#SEC253"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_67.html#SEC249"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_69.html#SEC262"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h1 class="rvps2"><span class="rvts0"><span class="rvts8">68. simplification</span></span></h1>
+<div><table border="0" cellpadding="1" cellspacing="0" style="border-width: 0px;">
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="simplification.html#SEC253">68.1 Introducción a simplification</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="simplification.html#SEC254">68.2 Funciones y variables para simplification</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height: 6px;"/>
+<div><a name="SEC252"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="simplification.html#SEC252"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="simplification.html#SEC254"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="simplification.html#SEC252"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="simplification.html#SEC252"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_69.html#SEC262"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">68.1 Introducción a simplification</span></span></h2>
+<p class="rvps3"><span class="rvts6">El directorio </span><span class="rvts9">maxima/share/simplification</span><span class="rvts6"> contiene programas que implementan algunas reglas y funciones para simplificar expresiones, así como ciertas funciones no relacionadas con la simplificación.</span></p>
+<hr style="height: 6px;"/>
+<div><a name="INTRODUCCI_00F3N-A-SIMPLIFICATION"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="simplification.html#SEC253"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="simplification.html#SEC255"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="simplification.html#SEC252"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="simplification.html#SEC252"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_69.html#SEC262"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">68.2 Funciones y variables para simplification</span></span></h2>
+<hr style="height: 6px;"/>
+<div><a name="SEC253"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="simplification.html#SEC254"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="simplification.html#SEC256"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="simplification.html#SEC252"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="simplification.html#SEC254"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_69.html#SEC262"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="rvps11"><span class="rvts0"><span class="rvts21">68.2.1 Paquete absimp</span></span></h3>
+<p class="rvps3"><span class="rvts6">El paquete </span><span class="rvts9">absimp</span><span class="rvts6"> contiene reglas para aplicar patrones que extienden el sistema de reglas nativo de Maxima para las funciones </span><span class="rvts9">abs</span><span class="rvts6"> y </span><span class="rvts9">signum</span><span class="rvts6">, respetando las relaciones establecidas con la función </span><span class="rvts9">assume</span><span class="rvts6"> o con declaraciones tales como </span><span class="rvts9">modedeclare (m, even, n, odd)</span><span class="rvts6"> para enteros pares o impares.</span></p>
+<p class="rvps3"><span class="rvts6">En el paquete </span><span class="rvts9">absimp</span><span class="rvts6"> se definen las funciones </span><span class="rvts9">unitramp</span><span class="rvts6"> y </span><span class="rvts9">unitstep</span><span class="rvts6"> en términos de </span><span class="rvts9">abs</span><span class="rvts6"> y </span><span class="rvts9">signum</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">La instrucción </span><span class="rvts9">load (absimp)</span><span class="rvts6"> carga este paquete y </span><span class="rvts9">demo (absimp)</span><span class="rvts6"> desarrolla una demostración sobre el uso del mismo.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (absimp)$</span><br/><span class="rvts9">(%i2) (abs (x))^2;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x</span><br/><span class="rvts9">(%i3) diff (abs (x), x);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;abs(x)</span><br/><span class="rvts9">(%i4) cosh (abs (x));</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cosh(x)</span></p>
+<hr style="height: 6px;"/>
+<div><a name="FUNCIONES-Y-VARIABLES-PARA-SIMPLIFICATION"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="simplification.html#SEC255"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="simplification.html#SEC257"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="simplification.html#SEC252"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="simplification.html#SEC254"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_69.html#SEC262"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="rvps11"><span class="rvts0"><span class="rvts21">68.2.2 Paquete facexp</span></span></h3>
+<p class="rvps3"><span class="rvts6">El paquete </span><span class="rvts9">facexp</span><span class="rvts6"> contiene varias funciones que le aportan al usuario la posibilidad de estructurar expresiones controlando su expansión. Esta capacidad es especialmente útil cuando la expresión contiene variables con significado físico, ya que se suele dar el caso de que la forma más sencilla para estas expresiones se obtiene cuando se expanden respecto de estas variables y luego se factoriza respecto de sus coeficientes. Si bien es cierto que este procedimiento no es difícil de llevar a cabo con las funciones estándar de Maxima, pueden ser necesarios algunos retoques adicionales que sí pueden ser más difíciles de hacer.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">facsum</span><span class="rvts6"> y sus formas relacionadas proporcionan un método para controlar la estructura de expresiones. La función </span><span class="rvts9">collectterms</span><span class="rvts6"> puede usarse para añadir dos o más expresiones que ya hayan sido simplificadas de la forma indicada, sin necesidad de volver a simplificar la expresión completa. Esta función puede ser útil cuando las expresiones sean largas.</span></p>
+<p class="rvps3"><span class="rvts6">La instrucción </span><span class="rvts9">load (facexp)</span><span class="rvts6"> carga este paquete y </span><span class="rvts9">demo (facexp)</span><span class="rvts6"> hace una demostración sobre su uso.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC254"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">facsum</span><span class="rvts18"> (expr, arg_1, ..., arg_n)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve una expresión equivalente a </span><span class="rvts18">expr</span><span class="rvts6">, la cual depende de los argumentos </span><span class="rvts18">arg_1</span><span class="rvts6">, ..., </span><span class="rvts18">arg_n</span><span class="rvts6">, y éstos pueden ser de cualquiera de las formas aceptables para </span><span class="rvts9">ratvars</span><span class="rvts6">, o listas de estas formas. Si los argumentos no son listas, la forma devuelta se expande completamente con respecto de los argumentos, siendo los coeficientes de tales argumentos factorizados. Estos coeficientes no contienen a ninguno de los argumentos, excepto quizás de una forma no racional.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">En caso de que cualquiera de los argumentos sea una lista, entonces todos ellos se combinan en una única lista, y en lugar de llamar a </span><span class="rvts9">factor</span><span class="rvts6"> para los coeficientes de los argumentos, </span><span class="rvts9">facsum</span><span class="rvts6"> se llama a sí misma utilizando esta nueva lista única como lista de argumentos.</span></p>
+<p class="rvps3"><span class="rvts6">Es posible que se quiera utilizar </span><span class="rvts9">facsum</span><span class="rvts6"> con respecto a expresiones más complicadas, tales como </span><span class="rvts9">log (x + y)</span><span class="rvts6">. Estos argumentos son también admisibles. Si no se especifican variables, como en </span><span class="rvts9">facsum (</span><span class="rvts19">expr</span><span class="rvts9">)</span><span class="rvts6">, el resultado devuelto es el mismo que el conseguido mediante </span><span class="rvts9">ratsimp (</span><span class="rvts19">expr</span><span class="rvts9">)</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">En ocasiones puede ser necesario obtener cualquiera de las formas anteriores especificadas por sus operadores principales. Por ejemplo, se puede querer aplicar </span><span class="rvts9">facsum</span><span class="rvts6"> con respecto a todos los </span><span class="rvts9">log</span><span class="rvts6">; en este caso, se puede incluir entre los argumentos bien los </span><span class="rvts9">log</span><span class="rvts6"> específicos que se quieran tratar de esta manera, bien la expresión </span><span class="rvts9">operator (log)</span><span class="rvts6"> o </span><span class="rvts9">'operator (log)</span><span class="rvts6">. Si se quiere aplicar </span><span class="rvts9">facsum</span><span class="rvts6"> a </span><span class="rvts18">expr</span><span class="rvts6"> con respecto a los operadores </span><span class="rvts18">op_1</span><span class="rvts6">, ..., </span><span class="rvts18">op_n</span><span class="rvts6">, se debe evaluar </span><span class="rvts9">facsum (</span><span class="rvts19">expr</span><span class="rvts9">, operator (</span><span class="rvts19">op_1</span><span class="rvts9">, ..., </span><span class="rvts19">op_n</span><span class="rvts9">))</span><span class="rvts6">. La forma </span><span class="rvts9">operator</span><span class="rvts6"> puede aparecer también dentro de las listas de argumentos.</span></p>
+<p class="rvps3"><span class="rvts6">Además, dándole valores a las variables opcionales </span><span class="rvts9">facsum_combine</span><span class="rvts6"> y </span><span class="rvts9">nextlayerfactor</span><span class="rvts6"> se puede controlar el resultado de </span><span class="rvts9">facsum</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC255"></a>
+<span class="rvts16">Variable global:</span><span class="rvts6"> </span><span class="rvts17">nextlayerfactor</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">false</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">nextlayerfactor</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, las llamadas recursivas de </span><span class="rvts9">facsum</span><span class="rvts6"> se aplican a los factores de la forma factorizada de los coeficientes de los argumentos.</span></p>
+<p class="rvps3"><span class="rvts6">Si vale </span><span class="rvts9">false</span><span class="rvts6">, </span><span class="rvts9">facsum</span><span class="rvts6"> se aplica a cada coeficiente como un todo cada vez que se efectúen llamadas recursivas a </span><span class="rvts9">facsum</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">La inclusión del átomo </span><span class="rvts9">nextlayerfactor</span><span class="rvts6"> en la lista de argumentos de </span><span class="rvts9">facsum</span><span class="rvts6"> tiene el mismo efecto que </span><span class="rvts9">nextlayerfactor: true</span><span class="rvts6">, pero </span><span class="rvts18">solamente</span><span class="rvts6"> para el siguiente nivel de la expresión. Puesto que </span><span class="rvts9">nextlayerfactor</span><span class="rvts6"> toma siempre uno de los valores </span><span class="rvts9">true</span><span class="rvts6"> o </span><span class="rvts9">false</span><span class="rvts6">, debe aparecer comentado (comilla simple) cada vez que aparezca en la lista de argumentos de </span><span class="rvts9">facsum</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC256"></a>
+<span class="rvts16">Variable global:</span><span class="rvts6"> </span><span class="rvts17">facsum_combine</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">true</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La variable </span><span class="rvts9">facsum_combine</span><span class="rvts6"> controla la forma del resultado final devuelto por </span><span class="rvts9">facsum</span><span class="rvts6"> si su argumento es un cociente de polinomios. Si </span><span class="rvts9">facsum_combine</span><span class="rvts6"> vale </span><span class="rvts9">false</span><span class="rvts6">, el resultado será una suma completamente expandida, pero si vale </span><span class="rvts9">true</span><span class="rvts6">, la expresión devuelta es un cociente de polinomios.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2023"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">factorfacsum</span><span class="rvts18"> (expr, arg_1, ... arg_n)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve una expresión equivalente a </span><span class="rvts18">expr</span><span class="rvts6"> obtenida aplicando </span><span class="rvts9">facsum</span><span class="rvts6"> a los factores de </span><span class="rvts18">expr</span><span class="rvts6">, de argumentos </span><span class="rvts18">arg_1</span><span class="rvts6">, ... </span><span class="rvts18">arg_n</span><span class="rvts6">. Si alguno de los factores de </span><span class="rvts18">expr</span><span class="rvts6"> se eleva a una potencia, tanto el factor como el exponente se procesarán de esta manera.</span></li>
+<li><a name="IDX2024"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">collectterms</span><span class="rvts18"> (arg_1, ..., arg_n)</span></li>
+<li class="rvps3"><span class="rvts6">Si algunas expresiones fueron ya simplificadas con </span><span class="rvts9">facsum</span><span class="rvts6">, </span><span class="rvts9">factorfacsum</span><span class="rvts6">, </span><span class="rvts9">factenexpand</span><span class="rvts6">, </span><span class="rvts9">facexpten</span><span class="rvts6"> o </span><span class="rvts9">factorfacexpten</span><span class="rvts6">, debiendo ser luego sumadas, puede ser conveniente combinarlas utilizando la función </span><span class="rvts9">collecterms</span><span class="rvts6">, la cual admite como argumentos todos aquéllos que se puedan pasar a las anteriormente citadas funciones, con la excepción de </span><span class="rvts9">nextlayerfactor</span><span class="rvts6">, que no tiene efecto alguno sobre </span><span class="rvts9">collectterms</span><span class="rvts6">. La ventaja de </span><span class="rvts9">collectterms</span><span class="rvts6"> es que devuelve una forma similar a la de </span><span class="rvts9">facsum</span><span class="rvts6">, pero debido a que suma expresiones que ya han sido previamente procesadas, no necesita repetir esta operación, lo cual resulta ser especialmente útil cuando las expresiones a sumar son muy grandes.</span></li>
+<hr style="height: 6px;"/></li>
+</ul>
+<div><a name="IDX2025"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="simplification.html#SEC256"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="simplification.html#SEC258"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="simplification.html#SEC252"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="simplification.html#SEC254"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_69.html#SEC262"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="rvps11"><span class="rvts0"><span class="rvts21">68.2.3 Paquete functs</span></span></h3>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2026"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">rempart</span><span class="rvts18"> (expr, n)</span></li>
+<li class="rvps3"><span class="rvts6">Elimina la parte </span><span class="rvts18">n</span><span class="rvts6"> de la expresión </span><span class="rvts18">expr</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts18">n</span><span class="rvts6"> es una lista de la forma </span><span class="rvts9">[</span><span class="rvts19">l</span><span class="rvts9">, </span><span class="rvts19">m</span><span class="rvts9">]</span><span class="rvts6">, entonces las partes desde </span><span class="rvts18">l</span><span class="rvts6"> a </span><span class="rvts18">m</span><span class="rvts6"> serán eliminadas.</span></p>
+<p class="rvps3"><span class="rvts6">Para hacer uso de esta función ejecutar </span><span class="rvts9">load(functs)</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2027"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">wronskian</span><span class="rvts18"> ([f_1, ..., f_n], x)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve la matriz wronskiana de las funciones </span><span class="rvts18">f_1</span><span class="rvts6">, ..., </span><span class="rvts18">f_n</span><span class="rvts6"> dependeientes de la variable </span><span class="rvts18">x</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Los argumentos </span><span class="rvts18">f_1</span><span class="rvts6">, ..., </span><span class="rvts18">f_n</span><span class="rvts6"> pueden ser nombres de funciones definidas por el usuario, o expresiones de variable </span><span class="rvts18">x</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">El determinante de la matriz wronskiana es el determinante wronskiano del conjunto de funciones. Las funciones serán linealmente dependientes si este determinante es nulo.</span></p>
+<p class="rvps3"><span class="rvts6">Para hacer uso de esta función ejecutar </span><span class="rvts9">load(functs)</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC257"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">tracematrix</span><span class="rvts18"> (M)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve la traza (suma de los elementos de la diagonal) de la matriz </span><span class="rvts18">M</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Para hacer uso de esta función ejecutar </span><span class="rvts9">load(functs)</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2028"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">rational</span><span class="rvts18"> (z)</span></li>
+<li class="rvps3"><span class="rvts6">Multiplica el numerador y denominador de </span><span class="rvts18">z</span><span class="rvts6"> por el complejo conjugado del denominador, racionalizando así el denominador. Devuelve la expresión canónica racional (canonical rational expression, CRE) si el argumento </span><span class="rvts18">z</span><span class="rvts6"> es de esta forma, en caso contrario devuelve una expresión en formato común.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Para hacer uso de esta función ejecutar </span><span class="rvts9">load(functs)</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2029"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">logand</span><span class="rvts18"> (x,y)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve el "y" lógico binario de los argumentos </span><span class="rvts18">x</span><span class="rvts6"> e </span><span class="rvts18">y</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Para hacer uso de esta función ejecutar </span><span class="rvts9">load(functs)</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2030"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">logor</span><span class="rvts18"> (x,y)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve el "o" lógico binario de los argumentos </span><span class="rvts18">x</span><span class="rvts6"> e </span><span class="rvts18">y</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Para hacer uso de esta función ejecutar </span><span class="rvts9">load(functs)</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2031"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">logxor</span><span class="rvts18"> (x,y)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve el "o-excusivo" lógico binario de los argumentos </span><span class="rvts18">x</span><span class="rvts6"> e </span><span class="rvts18">y</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Para hacer uso de esta función ejecutar </span><span class="rvts9">load(functs)</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2032"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">nonzeroandfreeof</span><span class="rvts18"> (x, expr)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve </span><span class="rvts9">true</span><span class="rvts6"> si </span><span class="rvts18">expr</span><span class="rvts6"> es diferente de cero y </span><span class="rvts9">freeof (</span><span class="rvts19">x</span><span class="rvts9">, </span><span class="rvts19">expr</span><span class="rvts9">)</span><span class="rvts6"> devuelve </span><span class="rvts9">true</span><span class="rvts6">. En caso contrario devuelve </span><span class="rvts9">false</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Para hacer uso de esta función ejecutar </span><span class="rvts9">load(functs)</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2033"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">linear</span><span class="rvts18"> (expr, x)</span></li>
+<li class="rvps3"><span class="rvts6">Si </span><span class="rvts18">expr</span><span class="rvts6"> es una expresión lineal respecto de la variable </span><span class="rvts18">x</span><span class="rvts6">, </span><span class="rvts9">linear</span><span class="rvts6"> devuelve </span><span class="rvts19">a</span><span class="rvts9">*</span><span class="rvts19">x</span><span class="rvts9"> + </span><span class="rvts19">b</span><span class="rvts6">, siendo </span><span class="rvts18">a</span><span class="rvts6"> no nula y, junto con </span><span class="rvts18">b</span><span class="rvts6">, no incluye a </span><span class="rvts18">x</span><span class="rvts6">. En otro caso, </span><span class="rvts9">linear</span><span class="rvts6"> devuelve </span><span class="rvts18">expr</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Para hacer uso de esta función ejecutar </span><span class="rvts9">load(functs)</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2034"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">gcdivide</span><span class="rvts18"> (p, q)</span></li>
+<li class="rvps3"><span class="rvts6">Si </span><span class="rvts9">takegcd</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, </span><span class="rvts9">gcdivide</span><span class="rvts6"> divide los polinomios </span><span class="rvts18">p</span><span class="rvts6"> y </span><span class="rvts18">q</span><span class="rvts6"> por su máximo común divisor y devuelve el cociente de los resultados.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">takegcd</span><span class="rvts6"> vale </span><span class="rvts9">false</span><span class="rvts6">, </span><span class="rvts9">gcdivide</span><span class="rvts6"> devuelve el cociente </span><span class="rvts19">p</span><span class="rvts9">/</span><span class="rvts19">q</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Para hacer uso de esta función ejecutar </span><span class="rvts9">load(functs)</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2035"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">arithmetic</span><span class="rvts18"> (a, d, n)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve el </span><span class="rvts18">n</span><span class="rvts6">-ésimo término de la progresión aritmética </span><span class="rvts19">a</span><span class="rvts9">, </span><span class="rvts19">a</span><span class="rvts9"> + </span><span class="rvts19">d</span><span class="rvts9">, </span><span class="rvts19">a</span><span class="rvts9"> + 2*</span><span class="rvts19">d</span><span class="rvts9">, ..., </span><span class="rvts19">a</span><span class="rvts9"> + (</span><span class="rvts19">n</span><span class="rvts9"> - 1)*</span><span class="rvts19">d</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Para hacer uso de esta función ejecutar </span><span class="rvts9">load(functs)</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2036"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">geometric</span><span class="rvts18"> (a, r, n)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve el </span><span class="rvts18">n</span><span class="rvts6">-ésimo término de la progresión geométrica </span><span class="rvts19">a</span><span class="rvts9">, </span><span class="rvts19">a</span><span class="rvts9">*</span><span class="rvts19">r</span><span class="rvts9">, </span><span class="rvts19">a</span><span class="rvts9">*</span><span class="rvts19">r</span><span class="rvts9">^2, ..., </span><span class="rvts19">a</span><span class="rvts9">*</span><span class="rvts19">r</span><span class="rvts9">^(</span><span class="rvts19">n</span><span class="rvts9"> - 1)</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Para hacer uso de esta función ejecutar </span><span class="rvts9">load(functs)</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2037"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">harmonic</span><span class="rvts18"> (a, b, c, n)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve el </span><span class="rvts18">n</span><span class="rvts6">-ésimo término de la progresión armónica </span><span class="rvts19">a</span><span class="rvts9">/</span><span class="rvts19">b</span><span class="rvts9">, </span><span class="rvts19">a</span><span class="rvts9">/(</span><span class="rvts19">b</span><span class="rvts9"> + </span><span class="rvts19">c</span><span class="rvts9">), </span><span class="rvts19">a</span><span class="rvts9">/(</span><span class="rvts19">b</span><span class="rvts9"> + 2*</span><span class="rvts19">c</span><span class="rvts9">), ..., </span><span class="rvts19">a</span><span class="rvts9">/(</span><span class="rvts19">b</span><span class="rvts9"> + (</span><span class="rvts19">n</span><span class="rvts9"> - 1)*</span><span class="rvts19">c</span><span class="rvts9">)</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Para hacer uso de esta función ejecutar </span><span class="rvts9">load(functs)</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2038"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">arithsum</span><span class="rvts18"> (a, d, n)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve la suma de la progresión aritmética desde hasta el </span><span class="rvts18">n</span><span class="rvts6">-ésimo término.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Para hacer uso de esta función ejecutar </span><span class="rvts9">load(functs)</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2039"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">geosum</span><span class="rvts18"> (a, r, n)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve la suma de la sucesión geométrica hasta el </span><span class="rvts18">n</span><span class="rvts6">-ésimo término. Si </span><span class="rvts18">n</span><span class="rvts6"> es infinito (</span><span class="rvts9">inf</span><span class="rvts6">) la suma será finita sólo si el valor absoluto de </span><span class="rvts18">r</span><span class="rvts6"> es menor que 1.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Para hacer uso de esta función ejecutar </span><span class="rvts9">load(functs)</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2040"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">gaussprob</span><span class="rvts18"> (x)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve la función de densidad de probabilidad, normal </span><span class="rvts9">%e^(-</span><span class="rvts19">x</span><span class="rvts9">^2/2) / sqrt(2*%pi)</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Para hacer uso de esta función ejecutar </span><span class="rvts9">load(functs)</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2041"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">gd</span><span class="rvts18"> (x)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve la función de Gudermann, </span><span class="rvts9">2 * atan(%e^</span><span class="rvts19">x</span><span class="rvts9"> - %pi/2)</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Para hacer uso de esta función ejecutar </span><span class="rvts9">load(functs)</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2042"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">agd</span><span class="rvts18"> (x)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve la inversa de la función de Gudermann, </span><span class="rvts9">log (tan (%pi/4 + x/2)))</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Para hacer uso de esta función ejecutar </span><span class="rvts9">load(functs)</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2043"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">vers</span><span class="rvts18"> (x)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve </span><span class="rvts9">1 - cos (x)</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Para hacer uso de esta función ejecutar </span><span class="rvts9">load(functs)</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2044"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">covers</span><span class="rvts18"> (x)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve </span><span class="rvts9">1 - sin (</span><span class="rvts19">x</span><span class="rvts9">)</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Para hacer uso de esta función ejecutar </span><span class="rvts9">load(functs)</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2045"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">exsec</span><span class="rvts18"> (x)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve </span><span class="rvts9">sec (</span><span class="rvts19">x</span><span class="rvts9">) - 1</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Para hacer uso de esta función ejecutar </span><span class="rvts9">load(functs)</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2046"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">hav</span><span class="rvts18"> (x)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve </span><span class="rvts9">(1 - cos(x))/2</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Para hacer uso de esta función ejecutar </span><span class="rvts9">load(functs)</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2047"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">combination</span><span class="rvts18"> (n, r)</span></li>
+<li class="rvps3"><span class="rvts6">Calcula el número de combinaciones de </span><span class="rvts18">n</span><span class="rvts6"> objetos tomados de </span><span class="rvts18">r</span><span class="rvts6"> en </span><span class="rvts18">r</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Para hacer uso de esta función ejecutar </span><span class="rvts9">load(functs)</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2048"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">permutation</span><span class="rvts18"> (n, r)</span></li>
+<li class="rvps3"><span class="rvts6">Calcula el número de permutaciones de </span><span class="rvts18">r</span><span class="rvts6">, seleccionados de un conjunto de </span><span class="rvts18">n</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Para hacer uso de esta función ejecutar </span><span class="rvts9">load(functs)</span><span class="rvts6">.</span></p>
+<hr style="height: 6px;"/>
+<div><a name="IDX2049"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="simplification.html#SEC257"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="simplification.html#SEC259"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="simplification.html#SEC252"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="simplification.html#SEC254"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_69.html#SEC262"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="rvps11"><span class="rvts0"><span class="rvts21">68.2.4 Paquete ineq</span></span></h3>
+<p class="rvps3"><span class="rvts6">El paquete </span><span class="rvts9">ineq</span><span class="rvts6"> contiene reglas de simplificación para desigualdades</span></p>
+<p class="rvps3"><span class="rvts6">Una sesión de ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load(ineq)$</span><br/><span class="rvts9">Warning: Putting rules on '+' or '*' is inefficient, and may not work.</span><br/><span class="rvts9">Warning: Putting rules on '+' or '*' is inefficient, and may not work.</span><br/><span class="rvts9">Warning: Putting rules on '+' or '*' is inefficient, and may not work.</span><br/><span class="rvts9">Warning: Putting rules on '+' or '*' is inefficient, and may not work.</span><br/><span class="rvts9">Warning: Putting rules on '+' or '*' is inefficient, and may not work.</span><br/><span class="rvts9">Warning: Putting rules on '+' or '*' is inefficient, and may not work.</span><br/><span class="rvts9">Warning: Putting rules on '+' or '*' is inefficient, and may not work.</span><br/><span class="rvts9">Warning: Putting rules on '+' or '*' is inefficient, and may not work.</span><br/><span class="rvts9">(%i2) a&gt;=4; &nbsp;/* a sample inequality */</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a &gt;= 4</span><br/><span class="rvts9">(%i3) (b&gt;c)+%; /* add a second, strict inequality */</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;b + a &gt; c + 4</span><br/><span class="rvts9">(%i4) 7*(x&lt;y); /* multiply by a positive number */</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;7 x &lt; 7 y</span><br/><span class="rvts9">(%i5) -2*(x&gt;=3*z); /* multiply by a negative number */</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 2 x &lt;= - 6 z</span><br/><span class="rvts9">(%i6) (1+a^2)*(1/(1+a^2)&lt;=1); /* Maxima knows that 1+a^2 &gt; 0 */</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9">(%o6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1 &lt;= a &nbsp;+ 1</span><br/><span class="rvts9">(%i7) assume(x&gt;0)$ x*(2&lt;3); /* assuming x&gt;0 */</span><br/><span class="rvts9">(%o7) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 x &lt; 3 x</span><br/><span class="rvts9">(%i8) a&gt;=b; /* another inequality */</span><br/><span class="rvts9">(%o8) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a &gt;= b</span><br/><span class="rvts9">(%i9) 3+%; /* add something */</span><br/><span class="rvts9">(%o9) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a + 3 &gt;= b + 3</span><br/><span class="rvts9">(%i10) %-3; /* subtract it out */</span><br/><span class="rvts9">(%o10) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;a &gt;= b</span><br/><span class="rvts9">(%i11) a&gt;=c-b; /* yet another inequality */</span><br/><span class="rvts9">(%o11) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;a &gt;= c - b</span><br/><span class="rvts9">(%i12) b+%; /* add b to both sides */</span><br/><span class="rvts9">(%o12) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;b + a &gt;= c</span><br/><span class="rvts9">(%i13) %-c; /* subtract c from both sides */</span><br/><span class="rvts9">(%o13) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - c + b + a &gt;= 0</span><br/><span class="rvts9">(%i14) -%; &nbsp;/* multiply by -1 */</span><br/><span class="rvts9">(%o14) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;c - b - a &lt;= 0</span><br/><span class="rvts9">(%i15) (z-1)^2&gt;-2*z; /* determining truth of assertion */</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9">(%o15) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (z - 1) &nbsp;&gt; - 2 z</span><br/><span class="rvts9">(%i16) expand(%)+2*z; /* expand this and add 2*z to both sides */</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9">(%o16) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;z &nbsp;+ 1 &gt; 0</span><br/><span class="rvts9">(%i17) %,pred;</span><br/><span class="rvts9">(%o17) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; true</span></p>
+<p class="rvps3"><span class="rvts6">Debe tenerse cuidado con el uso de paréntesis que incluyan desigualdades; si se escribe </span><span class="rvts9">(A &gt; B) + (C = 5)</span><span class="rvts6"> el resultado es </span><span class="rvts9">A + C &gt; B + 5</span><span class="rvts6">, pero </span><span class="rvts9">A &gt; B + C = 5</span><span class="rvts6"> es un error sintáctico y </span><span class="rvts9">(A &gt; B + C) = 5</span><span class="rvts6"> es una cosa completamente diferente.</span></p>
+<p class="rvps3"><span class="rvts6">Ejecútese </span><span class="rvts9">disprule (all)</span><span class="rvts6"> para ver la lista completa de las reglas definidas.</span></p>
+<p class="rvps3"><span class="rvts6">Maxima preguntará al usuario cuando desconozca el signo de una cantidad que multiplica a una desigualdad.</span></p>
+<p class="rvps3"><span class="rvts6">Los fallos más comunes son:</span></p>
+<p class="rvps4"><span class="rvts9">eq: a &gt; b;</span><br/><span class="rvts9">2*eq;</span><br/><span class="rvts9">% - eq;</span></p>
+<p class="rvps3"><span class="rvts6">Otro problema es el producto de una desigualdad por cero. Si se escribe </span><span class="rvts9">x*</span><span class="rvts19">some_inequality</span><span class="rvts6"> y Maxima pregunta por el signo de </span><span class="rvts9">x</span><span class="rvts6"> y se responde que vale </span><span class="rvts9">zero</span><span class="rvts6"> (o </span><span class="rvts9">z</span><span class="rvts6">), el programa devuelve </span><span class="rvts9">x*</span><span class="rvts19">some_inequality</span><span class="rvts6"> sin hacer uso de la información de que </span><span class="rvts9">x</span><span class="rvts6"> es 0. En tal caso se debería escribir </span><span class="rvts9">ev (%, x: 0)</span><span class="rvts6">, ya que la base de datos sólo será utilizada para fines comparativos y no para evaluar </span><span class="rvts9">x</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">El usuario puede apreciar que las respuestas son más lentas al cargarse este paquete, ya que el simplificador deberá examinar más reglas que cuando no se hace uso del paquete, por lo que puede ser conveniente borrar estas reglas cuando ya no se haga uso de ellas. Ejecútese </span><span class="rvts9">kill (rules)</span><span class="rvts6"> para eliminar todas las reglas (incluidas las definidas por el usuario); también es posible eliminar parte de ellas o utilizar </span><span class="rvts9">remrule</span><span class="rvts6"> sobre una reglas específica.</span></p>
+<p class="rvps3"><span class="rvts6">Nótese que si se carga este paquete después de haber definido otras reglas de igual nombre,se borrarán las antiguas. Las reglas de este paquete son: </span><span class="rvts9">*rule1</span><span class="rvts6">, ..., </span><span class="rvts9">*rule8</span><span class="rvts6">, </span><span class="rvts9">+rule1</span><span class="rvts6">, ..., </span><span class="rvts9">+rule18</span><span class="rvts6">, debiéndose encerrar entre comillas el nombre de la reglas para referenciarse a ellas, como en </span><span class="rvts9">remrule ("+", "+rule1")</span><span class="rvts6"> para eliminar la primera regla sobre </span><span class="rvts9">"+"</span><span class="rvts6">, o </span><span class="rvts9">disprule ("*rule2")</span><span class="rvts6"> para mostrar la definición de la segunda regla multiplicativa.</span></p>
+<hr style="height: 6px;"/>
+<div><a name="IDX2050"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="simplification.html#SEC258"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="simplification.html#SEC260"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="simplification.html#SEC252"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="simplification.html#SEC254"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_69.html#SEC262"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="rvps11"><span class="rvts0"><span class="rvts21">68.2.5 Paquete rducon</span></span></h3>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX2051"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">reduce_consts</span><span class="rvts18"> (expr)</span></li>
+<li class="rvps3"><span class="rvts6">Sustituye subexpresiones constantes de </span><span class="rvts18">expr</span><span class="rvts6"> por átomos, guardando la definición de todos ellos en la lista de ecuaciones </span><span class="rvts9">const_eqns</span><span class="rvts6"> y devolviendo el expresión </span><span class="rvts18">expr</span><span class="rvts6"> ya modificada. Se consideran partes constantes de </span><span class="rvts18">expr</span><span class="rvts6"> aquellas que devuelven </span><span class="rvts9">true</span><span class="rvts6"> cuando se les aplica la función </span><span class="rvts9">constantp</span><span class="rvts6">, por lo que antes de llamar a </span><span class="rvts9">reduce_consts</span><span class="rvts6"> se debe ejecutar</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">declare ([</span><span class="rvts19">objetos a los que se quiera dar la propiedad de ser constantes</span><span class="rvts9">], constant)$</span></p>
+<p class="rvps3"><span class="rvts6">para crear la base de datos de las cantidades constantes presentes en la expresión.</span></p>
+<p class="rvps3"><span class="rvts6">Si se pretende generar código Fortran después de estos cálculos simbólicos, una de las primeras secciones del código debe ser el cálculo de las constantes. Para generar este segmento de código hacer</span></p>
+<p class="rvps4"><span class="rvts9">map ('fortran, const_eqns)$</span></p>
+<p class="rvps3"><span class="rvts6">Junto a </span><span class="rvts9">const_eqns</span><span class="rvts6">, otras variables que afectan a </span><span class="rvts9">reduce_consts</span><span class="rvts6"> son:</span></p>
+<p class="rvps3"><span class="rvts9">const_prefix</span><span class="rvts6"> (Valor por defecto: </span><span class="rvts9">xx</span><span class="rvts6">) es la cadena de caracteres utilizada como prefijo para todos los símbolos generados por </span><span class="rvts9">reduce_consts</span><span class="rvts6"> para representar subexpresiones constantes.</span></p>
+<p class="rvps3"><span class="rvts9">const_counter</span><span class="rvts6"> (Valor por defecto: 1) es el índice entero utilizado para generar los símbolos que representen a las subexpresiones constantes encontradas por </span><span class="rvts9">reduce_consts</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">La instrucción </span><span class="rvts9">load (rducon)</span><span class="rvts6"> carga esta función y </span><span class="rvts9">demo (rducon)</span><span class="rvts6"> hace una demostración sobre su uso.</span></p>
+<hr style="height: 6px;"/>
+<div><a name="SEC258"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="simplification.html#SEC259"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="simplification.html#SEC261"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="simplification.html#SEC252"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="simplification.html#SEC254"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_69.html#SEC262"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="rvps11"><span class="rvts0"><span class="rvts21">68.2.6 Paquete scifac</span></span></h3>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC259"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">gcfac</span><span class="rvts18"> (expr)</span></li>
+<li class="rvps3"><span class="rvts6">Es una función de factorización que intenta aplicar la misma heurística que los humanos cuando tratan de hacer las expresiones más simples, limitándose a la factorización de monomios. En caso de sumas, </span><span class="rvts9">gcfac</span><span class="rvts6"> hace lo siguiente:</span></li>
+</ul>
+<ol style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Factoriza los enteros.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Factoriza las potencias mayores de los términos que aparecen como coeficientes, independientemente de su complejidad.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Utiliza (1) y (2) en la factorización de pares de términos adyacentes.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Aplica estas técnicas repetida y recursivamente hasta que la expresión deje de sufrir cambios.</span></li>
+</ol>
+<p class="rvps3"><span class="rvts6">En general, el apartado (3) no hace una factorización óptima debido a la naturaleza combinatoria y compleja de encontrar cuál de todas las ordenaciones posibles de los pares da lugar a la expresión más compacta.</span></p>
+<p class="rvps3"><span class="rvts6">La instrucción </span><span class="rvts9">load (scifac)</span><span class="rvts6"> carga esta función y </span><span class="rvts9">demo (scifac)</span><span class="rvts6"> hace una demostración sobre su uso.</span></p>
+<hr style="height: 6px;"/>
+<div><a name="IDX2052"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="simplification.html#SEC260"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_69.html#SEC262"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="simplification.html#SEC252"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="simplification.html#SEC254"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_69.html#SEC262"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="rvps11"><span class="rvts0"><span class="rvts21">68.2.7 Paquete sqdnst</span></span></h3>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC260"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">sqrtdenest</span><span class="rvts18"> (expr)</span></li>
+<li class="rvps3"><span class="rvts6">Reduce expresiones en las que se encuentren raíces cuadradas anidadas, siempre que sea posible</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) load (sqdnst)$</span><br/><span class="rvts9">(%i2) sqrt(sqrt(3)/2+1)/sqrt(11*sqrt(2)-12);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;sqrt(3)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sqrt(------- + 1)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;---------------------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sqrt(11 sqrt(2) - 12)</span><br/><span class="rvts9">(%i3) sqrtdenest(%);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;sqrt(3) &nbsp; 1</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;------- + -</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-------------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1/4 &nbsp; &nbsp;3/4</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3 2 &nbsp; &nbsp;- 2</span></p>
+<p class="rvps3"><span class="rvts6">A veces conviene aplicar </span><span class="rvts9">sqrtdenest</span><span class="rvts6"> más de una vez, como en el caso </span><span class="rvts9">(19601-13860 sqrt(2))^(7/4)</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">La sentencia </span><span class="rvts9">load (sqdnst)</span><span class="rvts6"> carga esta función.</span></p>
+<hr style="height: 6px;"/>
+<div><table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="simplification.html#SEC252"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_69.html#SEC262"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps3"><span class="rvts10">This document was generated by </span><span class="rvts11">Robert Dodier</span><span class="rvts10"> on </span><span class="rvts11">agosto, 25 2007</span><span class="rvts10"> using </span><a class="rvts12" href="http://texi2html.cvshome.org/">texi2html 1.76</a><span class="rvts10">.</span></p>
+<p></p>
+<p class="rvps6"><span class="rvts13">Created with the Personal Edition of HelpNDoc: </span><a class="rvts14" href="http://www.helpndoc.com/feature-tour">Easily create PDF Help documents</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				http://maxima.sourceforge.net</div>
+		</div>
+	</body>
+	
+</html>
+

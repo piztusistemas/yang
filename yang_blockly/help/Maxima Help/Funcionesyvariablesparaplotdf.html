@@ -1,0 +1,298 @@
+﻿<html>
+	
+<head>
+	<title>Funciones y variables para plotdf</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 3.9.1.648">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Maxima.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("Funcionesyvariablesparaplotdf");
+			}
+		});
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>Funciones y variables para plotdf</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="plotdf.html">plotdf</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="plotdf.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Introduccinaplotdf.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="romberg.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<div><a name="PLOTDF"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_64.html#SEC243"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparaplotdf.html#SEC245"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_64.html#SEC235"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_66.html#SEC247"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h1 class="rvps2"><span class="rvts0"><span class="rvts8">65. plotdf</span></span></h1>
+<div><table border="0" cellpadding="1" cellspacing="0" style="border-width: 0px;">
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="Funcionesyvariablesparaplotdf.html#SEC245">65.1 Introducción a plotdf</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="Funcionesyvariablesparaplotdf.html#SEC246">65.2 Funciones y variables para plotdf</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height: 6px;"/>
+<div><a name="SEC244"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparaplotdf.html#SEC244"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparaplotdf.html#SEC246"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparaplotdf.html#SEC244"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparaplotdf.html#SEC244"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_66.html#SEC247"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">65.1 Introducción a plotdf</span></span></h2>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">plotdf</span><span class="rvts6"> crea un gráfico del campo de direcciones para una Ecuación Diferencial Ordinaria (EDO) de primer orden, o para un sistema de dos EDO's autónomas, de primer orden.</span></p>
+<p class="rvps3"><span class="rvts6">Como se trata de un paquete adicional, para poder usarlo debe cargarlo primero con el comando </span><span class="rvts9">load("plotdf")</span><span class="rvts6">. También es necesario que Xmaxima esté instalado, a pesar de que ejecute Maxima desde otra interface diferente.</span></p>
+<p class="rvps3"><span class="rvts6">Para dibujar el campo de direcciones de una única EDO, esa ecuación deberá escribirse en la forma siguiente:</span></p>
+<p class="rvps4"><span class="rvts9"> &nbsp; &nbsp; &nbsp; dy</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; -- = F(x,y)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; dx</span></p>
+<p class="rvps3"><span class="rvts6">y la función </span><span class="rvts18">F</span><span class="rvts6"> será dada como argumento para el comando </span><span class="rvts9">plotdf</span><span class="rvts6">. La variable independiente tiene que ser siempre </span><span class="rvts18">x</span><span class="rvts6"> y la variable dependiente </span><span class="rvts18">y</span><span class="rvts6">. A esas dos variables no podrá estar asociado ningún valor numérico.</span></p>
+<p class="rvps3"><span class="rvts6">Para dibujar el campo de direcciones de un sistema autónomo de dos EDO's, Las dos ecuaciones deben ser escritas en la forma siguiente</span></p>
+<p class="rvps4"><span class="rvts9"> &nbsp; &nbsp; &nbsp; dx &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; dy</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; -- = G(x,y) &nbsp; &nbsp;-- = F(x,y) </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; dt &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; dt</span></p>
+<p class="rvps3"><span class="rvts6">y el argumento para el comando </span><span class="rvts9">plotdf</span><span class="rvts6"> será una lista con dos expresiones para las funciones </span><span class="rvts18">F</span><span class="rvts6"> y </span><span class="rvts18">G</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Cuando se trabaja con una única ecuación, </span><span class="rvts9">plotdf</span><span class="rvts6"> asume implícitamente que </span><span class="rvts9">x=t</span><span class="rvts6"> y </span><span class="rvts9">G(x,y)=1</span><span class="rvts6">, transformando la ecuación en un sistema autónomo con dos ecuaciones.</span></p>
+<hr style="height: 6px;"/>
+<div><a name="INTRODUCCI_00F3N-A-PLOTDF"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparaplotdf.html#SEC245"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_66.html#SEC247"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparaplotdf.html#SEC244"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparaplotdf.html#SEC244"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_66.html#SEC247"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">65.2 Funciones y variables para plotdf</span></span></h2>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC245"></a>
+<span class="rvts16">Function:</span><span class="rvts6"> </span><span class="rvts17">plotdf</span><span class="rvts18"> (dydx,...opciones...)</span></li>
+<li><a name="FUNCIONES-Y-VARIABLES-PARA-PLOTDF"></a>
+<span class="rvts16">Function:</span><span class="rvts6"> </span><span class="rvts17">plotdf</span><span class="rvts18"> (</span><span class="rvts19">[</span><span class="rvts18">dxdt,dydt</span><span class="rvts19">]</span><span class="rvts18">,...opciones...)</span></li>
+<li class="rvps3"><span class="rvts6">Dibuja un campo de direcciones en dos dimensiones </span><span class="rvts18">x</span><span class="rvts6"> y </span><span class="rvts18">y</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts18">dydx</span><span class="rvts6">, </span><span class="rvts18">dxdt</span><span class="rvts6"> y </span><span class="rvts18">dydt</span><span class="rvts6"> son expresiones que dependen de </span><span class="rvts18">x</span><span class="rvts6"> y </span><span class="rvts18">y</span><span class="rvts6">. Además de esas dos variables, las dos expresiones pueden depender de un conjunto de parámetros, con valores numéricos que son dados por medio de la opción </span><span class="rvts9">parameters</span><span class="rvts6"> (la sintaxis de esa opción se explica mas al frente), o con un rango de posibles valores definidos con la opción </span><span class="rvts18">sliders</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Varias otras opciones se pueden incluir dentro del comando, o seleccionadas en el menú. Haciendo click en un punto del gráfico se puede hacer que sea dibujada la curva integral que pasa por ese punto; lo mismo puede ser hecho dando las coordenadas del punto con la opción </span><span class="rvts9">trajectory_at</span><span class="rvts6"> dentro del comando plotdf. La dirección de integración se puede controlar con la opción </span><span class="rvts9">direction</span><span class="rvts6">, que acepta valores de </span><span class="rvts18">forward</span><span class="rvts6">, </span><span class="rvts18">backward</span><span class="rvts6"> ou </span><span class="rvts18">both</span><span class="rvts6">. El número de pasos realizado en la integración numérica se controla con la opción </span><span class="rvts9">nsteps</span><span class="rvts6"> y el incremento del tiempo en cada paso con la opción </span><span class="rvts9">tstep</span><span class="rvts6">. Se usa el método de Adams Moulton para hacer la integración numérica; también es posible cambiar para el método de Runge-Kutta de cuarto orden con ajuste de pasos.</span></p>
+<p class="rvps3"><span class="rvts17">Menú de la ventana del gráfico:</span></p>
+<p class="rvps3"><span class="rvts6">El menú de la ventana gráfica dispone de las siguientes opciones: </span><span class="rvts18">Zoom</span><span class="rvts6">, que permite cambiar el comportamiento del ratón, de manera que hará posible el hacer zoom en la región del gráfico haciendo clic con el botón izquierdo. Cada clic agranda la imagen manteniendo como centro de la misma el punto sobre el cual se ha hecho clic. Manteniendo pulsada la tecla </span><span class="rvts9">Shift</span><span class="rvts6"> mientras se hace clic, retrocede al tamaño anterior. Para reanudar el cálculo de las trayectorias cuando se hace clic, seleccine la opción </span><span class="rvts18">Integrate</span><span class="rvts6"> del menú.</span></p>
+<p class="rvps3"><span class="rvts6">La opción </span><span class="rvts18">Config</span><span class="rvts6"> del menú se puede utilizar para cambiar la(s) EDO(S) y algunos otros ajustes. Después de hacer los cambios, se debe utilizar la opción </span><span class="rvts18">Replot</span><span class="rvts6"> para activar los nuevos ajustes. Si en el campo </span><span class="rvts18">Trajectory at</span><span class="rvts6"> del menú de diálogo de </span><span class="rvts18">Config</span><span class="rvts6"> se introducen un par de coordenadas y luego se pulsa la tecla </span><span class="rvts9">retorno</span><span class="rvts6">, se mostrará una nueva curva integral, además de las ya dibujadas. Si se selecciona la opción </span><span class="rvts18">Replot</span><span class="rvts6">, sólo se mostrará la última curva integral seleccionada.</span></p>
+<p class="rvps3"><span class="rvts6">Manteniendo pulsado el botón derecho del ratón mientras se mueve el cursor, se puede arrastrar el gráfico horizontal y verticalmente. Otros parámetros, como pueden ser el número de pasos, el valor inicial de </span><span class="rvts18">t</span><span class="rvts6">, las coordenadas del centro y el radio, pueden cambiarse en el submenú de la opción </span><span class="rvts18">Config</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Con la opción </span><span class="rvts18">Save</span><span class="rvts6">, se puede obtener una copia del gráfico en una impresora Postscript o guardarlo en un fichero Postscript. Para optar entre la impresión o guardar en fichero, se debe seleccionar </span><span class="rvts18">Print Options</span><span class="rvts6"> en la ventana de diálogo de </span><span class="rvts18">Config</span><span class="rvts6">. Una vez cubiertos los campos de la ventana de diálogo de </span><span class="rvts18">Save</span><span class="rvts6">, será necesario seleccionar la opción </span><span class="rvts18">Save</span><span class="rvts6"> del primer menú para crear el fichero o imprimir el gráfico.</span></p>
+<p class="rvps3"><span class="rvts17">Opciones gráficas:</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">plotdf</span><span class="rvts6"> admite varias opciones, cada una de las cuales es una lista de dos o más elementos. El primer elemento es el nombre de la opción, y el resto está formado por el valor o valores asignados a dicha opción.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">plotdf</span><span class="rvts6"> reconoce las siguientes opciones:</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">tstep</span><span class="rvts6"> establece la amplitud de los incrementos en la variable independiente </span><span class="rvts18">t</span><span class="rvts6">, utilizados para calcular la curva integral. Si se aporta sólo una expresión </span><span class="rvts18">dydx</span><span class="rvts6">, la variable </span><span class="rvts18">x</span><span class="rvts6"> será directamente proporcional a </span><span class="rvts18">t</span><span class="rvts6">. El valor por defecto es 0.1.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">nsteps</span><span class="rvts6"> establece el número de pasos de longitud </span><span class="rvts9">tstep</span><span class="rvts6"> que se utilizarán en la variable independiente para calcular la curva integral. El valor por defecto es 100.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">direction</span><span class="rvts6"> establece la dirección de la variable independiente que será seguida para calcular una curva integral. Valores posibles son: </span><span class="rvts9">forward</span><span class="rvts6">, para hacer que la variable independiente aumente </span><span class="rvts9">nsteps</span><span class="rvts6"> veces, con incrementos </span><span class="rvts9">tstep</span><span class="rvts6">; </span><span class="rvts9">backward</span><span class="rvts6">, para hacer que la variable independiente disminuya; </span><span class="rvts9">both</span><span class="rvts6">, para extender la curva integral </span><span class="rvts9">nsteps</span><span class="rvts6"> pasos hacia adelante y </span><span class="rvts9">nsteps</span><span class="rvts6"> pasos hacia atrás. Las palabras </span><span class="rvts9">right</span><span class="rvts6"> y </span><span class="rvts9">left</span><span class="rvts6"> se pueden utilizar como sinónimos de </span><span class="rvts9">forward</span><span class="rvts6"> y </span><span class="rvts9">backward</span><span class="rvts6">. El valor por defecto es </span><span class="rvts9">both</span><span class="rvts6">.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">tinitial</span><span class="rvts6"> establece el valor inicial de la variable </span><span class="rvts18">t</span><span class="rvts6"> utilizado para calcular curvas integrales. Puesto que las ecuaciones diferenciales son autónomas, esta opción sólo aparecerá en los gráficos de las curvas como funciones de </span><span class="rvts18">t</span><span class="rvts6">. El valor por defecto es 0.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">versus_t</span><span class="rvts6"> se utiliza para crear una segunda ventana gráfica, con el gráfico de una curva integral, como dos funciones </span><span class="rvts18">x</span><span class="rvts6">, </span><span class="rvts18">y</span><span class="rvts6">, de variable independiente </span><span class="rvts18">t</span><span class="rvts6">. Si se le da a </span><span class="rvts9">versus_t</span><span class="rvts6"> cualquier valor diferente de 0, se mostrará la segunda ventana gráfica, la cual incluye otro menú, similar al de la ventana principal. El valor por defecto es 0.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">trajectory_at</span><span class="rvts6"> establece las coordenadas </span><span class="rvts18">xinitial</span><span class="rvts6"> y </span><span class="rvts18">yinitial</span><span class="rvts6"> para el extremo inicial de la curva integral. No tiene asignado valor por defecto.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">parameters</span><span class="rvts6"> establece una lista de parámetros, junto con sus valores numéricos, que son utilizados en la definición de la ecuación diferencial. Los nombres de los parámetros y sus valores deben escribirse en formato de cadena de caracteres como una secuencia de pares </span><span class="rvts9">nombre=valor</span><span class="rvts6"> separados por comas.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">sliders</span><span class="rvts6"> establece una lista de parámetros que se cambiarán interactivamente utilizando barras de deslizamiento, así como los rangos de variación de dichos parámetros. Los nombres de los parámetros y sus rangos deben escribirse en formato de cadena de caracteres como una secuencia de pares </span><span class="rvts9">nombre=min:max</span><span class="rvts6"> separados por comas.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">xfun</span><span class="rvts6"> establece una cadena de caracteres con funciones de </span><span class="rvts18">x</span><span class="rvts6"> separadas por puntos y comas para ser representadas por encima del campo de direcciones. Estas funciones serán interpretadas por Tcl, no por Maxima.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">xradius</span><span class="rvts6"> es la mitad de la longitud del rango de valores a representar en la dirección x. El valor por defecto es 10.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">yradius</span><span class="rvts6"> es la mitad de la longitud del rango de valores a representar en la dirección y. El valor por defecto es 10.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">xcenter</span><span class="rvts6"> es la coordenada x del punto situado en el centro del gráfico. El valor por defecto es 0.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">ycenter</span><span class="rvts6"> es la coordenada y del punto situado en el centro del gráfico. El valor por defecto es 0.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">width</span><span class="rvts6"> establece el ancho de la ventana gráfica en píxeles. El valor por defecto es 500.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts18">height</span><span class="rvts6"> establece la altura de la ventana gráfica en píxeles. El valor por defecto es 500.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts17">Ejemplos:</span></p>
+<p class="rvps3"><span class="rvts6">NOTA: Dependiendo de la interface que se use para Maxima, las funciones que usan </span><span class="rvts9">openmath</span><span class="rvts6">, incluida </span><span class="rvts9">plotdf</span><span class="rvts6">, pueden desencadenar un fallo si terminan en punto y coma, en vez del símbolo de dólar. Para evitar problemas, se usará el símbolo de dólar en todos ejemplos.</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Para mostrar el campo de direcciones de la ecuación diferencial </span><span class="rvts18">y' = exp(-x) + y</span><span class="rvts6"> y la solución que pasa por </span><span class="rvts18">(2, -0.1)</span><span class="rvts6">:</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) load("plotdf")$</span><br/><span class="rvts9">(%i2) plotdf(exp(-x)+y,[trajectory_at,2,-0.1]);</span></p>
+<p class="rvps10"><img align="absbottom" alt="figures/plotdf1" src="lib/plotdf13.gif"/></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Para mostrar el campo de direcciones de la ecuación </span><span class="rvts18">diff(y,x) = x - y^2</span><span class="rvts6"> y la solución de condición inicial </span><span class="rvts18">y(-1) = 3</span><span class="rvts6">, se puede utilizar la sentencia:</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i3) plotdf(x-y^2,[xfun,"sqrt(x);-sqrt(x)"],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[trajectory_at,-1,3], [direction,forward],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[yradius,5],[xcenter,6]);</span></p>
+<p class="rvps3"><span class="rvts6">El gráfico también muestra la función </span><span class="rvts18">y = sqrt(x)</span><span class="rvts6">.</span></p>
+<p class="rvps10"><img align="absbottom" alt="figures/plotdf2" src="lib/plotdf24.gif"/></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">El siguiente ejemplo muestra el campo de direcciones de un oscilador armónico, definido por las ecuaciones </span><span class="rvts18">dx/dt = y</span><span class="rvts6"> y </span><span class="rvts18">dy/dt = -k*x/m</span><span class="rvts6">, y la curva integral que pasa por </span><span class="rvts18">(x,y) = (6,0)</span><span class="rvts6">, con una barra de deslizamiento que permitirá cambiar el valor de </span><span class="rvts18">m</span><span class="rvts6"> interactivamente (</span><span class="rvts18">k</span><span class="rvts6"> permanece fijo a 2):</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i4) plotdf([y,-k*x/m],[parameters,"m=2,k=2"],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[sliders,"m=1:5"], [trajectory_at,6,0]);</span></p>
+<p class="rvps10"><img align="absbottom" alt="figures/plotdf3" src="lib/plotdf35.gif"/></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Para representar el campo de direcciones de la ecuación de Duffing, </span><span class="rvts18">m*x"+c*x'+k*x+b*x^3 = 0</span><span class="rvts6">, se introduce la variable </span><span class="rvts18">y=x'</span><span class="rvts6"> y se hace:</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i5) plotdf([y,-(k*x + c*y + b*x^3)/m],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[parameters,"k=-1,m=1.0,c=0,b=1"],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[sliders,"k=-2:2,m=-1:1"],[tstep,0.1]);</span></p>
+<p class="rvps10"><img align="absbottom" alt="figures/plotdf4" src="lib/plotdf46.gif"/></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">El campo de direcciones de un péndulo amortiguado, incluyendo la solución para condiciones iniciales dadas, con una barra de deslizamiento que se puede utilizar para cambiar el valor de la masa, </span><span class="rvts18">m</span><span class="rvts6">, y con el gráfico de las dos variables de estado como funciones del tiempo:</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i6) plotdf([y,-g*sin(x)/l - b*y/m/l],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; [parameters,"g=9.8,l=0.5,m=0.3,b=0.05"],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; [trajectory_at,1.05,-9],[tstep,0.01],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; [xradius,6],[yradius,14],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; [xcenter,-4],[direction,forward],[nsteps,300],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; [sliders,"m=0.1:1"], [versus_t,1]);</span></p>
+<p class="rvps10"><img align="absbottom" alt="figures/plotdf5" src="lib/plotdf57.gif"/></p>
+<p class="rvps10"><img align="absbottom" alt="figures/plotdf6" src="lib/plotdf68.gif"/></p>
+<hr style="height: 6px;"/>
+<div><table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="Funcionesyvariablesparaplotdf.html#SEC244"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_66.html#SEC247"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps3"><span class="rvts10">This document was generated by </span><span class="rvts11">Robert Dodier</span><span class="rvts10"> on </span><span class="rvts11">agosto, 25 2007</span><span class="rvts10"> using </span><a class="rvts12" href="http://texi2html.cvshome.org/">texi2html 1.76</a><span class="rvts10">.</span></p>
+<p></p>
+<p class="rvps6"><span class="rvts13">Created with the Personal Edition of HelpNDoc: </span><a class="rvts14" href="http://www.helpndoc.com/help-authoring-tool">Single source CHM, PDF, DOC and HTML Help creation</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				http://maxima.sourceforge.net</div>
+		</div>
+	</body>
+	
+</html>
+

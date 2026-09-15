@@ -1,0 +1,897 @@
+﻿<html>
+	
+<head>
+	<title>Definici&oacute;n de Funciones</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 3.9.1.648">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Maxima.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("DefinicindeFunciones");
+			}
+		});
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>Definici&oacute;n de Funciones</h1>
+				
+				</div>
+			<div id="topic_header_nav">
+				<a href="Funcionesyvariablesparalosconjun.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Introduccinaladefinicindefuncion.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<div><a name="DEFINICI_00F3N-DE-FUNCIONES"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_38.html#SEC149"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="DefinicindeFunciones.html#SEC151"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_38.html#SEC143"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_40.html#SEC157"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h1 class="rvps2"><span class="rvts0"><span class="rvts8">39. Definición de Funciones</span></span></h1>
+<div><table border="0" cellpadding="1" cellspacing="0" style="border-width: 0px;">
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="DefinicindeFunciones.html#SEC151">39.1 Introducción a la definición de funciones</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="DefinicindeFunciones.html#SEC152">39.2 Funciones</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="DefinicindeFunciones.html#SEC155">39.3 Macros</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top"><p><a class="rvts7" href="DefinicindeFunciones.html#SEC156">39.4 Funciones y variables para la definición de funciones</a></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;&nbsp;</span></p>
+</td>
+<td valign="top"><br/>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height: 6px;"/>
+<div><a name="SEC150"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="DefinicindeFunciones.html#SEC150"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="DefinicindeFunciones.html#SEC152"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="DefinicindeFunciones.html#SEC150"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="DefinicindeFunciones.html#SEC150"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_40.html#SEC157"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">39.1 Introducción a la definición de funciones</span></span></h2>
+<hr style="height: 6px;"/>
+<div><a name="INTRODUCCI_00F3N-A-LA-DEFINICI_00F3N-DE-FUNCIONES"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="DefinicindeFunciones.html#SEC151"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="DefinicindeFunciones.html#SEC153"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="DefinicindeFunciones.html#SEC150"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="DefinicindeFunciones.html#SEC150"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_40.html#SEC157"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><a name="SEC151"></a>
+<span class="rvts0"><span class="rvts15">39.2 Funciones</span></span></h2>
+<hr style="height: 6px;"/>
+<div><a name="FUNCIONES"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="DefinicindeFunciones.html#SEC152"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="DefinicindeFunciones.html#SEC154"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="DefinicindeFunciones.html#SEC150"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="DefinicindeFunciones.html#SEC152"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_40.html#SEC157"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="rvps11"><span class="rvts0"><span class="rvts21">39.2.1 Funciones ordinarias</span></span></h3>
+<p class="rvps3"><span class="rvts6">Para definir una función en Maxima es necesario utilizar el operador ':='.</span></p>
+<p class="rvps3"><span class="rvts6">Por ejemplo,</span></p>
+<p class="rvps4"><span class="rvts9">f(x) := sin(x)</span></p>
+<p class="rvps3"><span class="rvts6">define una función </span><span class="rvts9">f</span><span class="rvts6">. También se pueden definir funciones anónimas utilizando </span><span class="rvts9">lambda</span><span class="rvts6">; por ejemplo,</span></p>
+<p class="rvps4"><span class="rvts9">lambda ([i, j], ...)</span></p>
+<p class="rvps3"><span class="rvts6">puede utilizarse en lugar de </span><span class="rvts9">f</span><span class="rvts6"> donde</span></p>
+<p class="rvps4"><span class="rvts9">f(i,j) := block ([], ...);</span><br/><span class="rvts9">map (lambda ([i], i+1), l)</span></p>
+<p class="rvps3"><span class="rvts6">devolvería una lista con todos sus elementos aumentados en una unidad.</span></p>
+<p class="rvps3"><span class="rvts6">También se puede definir una función con un número variable de argumentos, sin más que añadir un argumento final al que se le asigna una lista con todos los argumentos adicionales.:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) f ([u]) := u;</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;f([u]) := u</span><br/><span class="rvts9">(%i2) f (1, 2, 3, 4);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [1, 2, 3, 4]</span><br/><span class="rvts9">(%i3) f (a, b, [u]) := [a, b, u];</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; f(a, b, [u]) := [a, b, u]</span><br/><span class="rvts9">(%i4) f (1, 2, 3, 4, 5, 6);</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [1, 2, [3, 4, 5, 6]]</span></p>
+<p class="rvps3"><span class="rvts6">El miembro derecho de una función debe ser una expresión. Así, si se quiere una secuencia de expresiones, se debe hacer</span></p>
+<p class="rvps4"><span class="rvts9">f(x) := (expr1, expr2, ...., exprn);</span></p>
+<p class="rvps3"><span class="rvts6">siendo el valor que alcance exprn el devuelto por la función.</span></p>
+<p class="rvps3"><span class="rvts6">Si se quiere hacer un </span><span class="rvts9">return</span><span class="rvts6"> desde alguna de las expresiones de la función, se debe utilizar la estructura </span><span class="rvts9">block</span><span class="rvts6"> junto con </span><span class="rvts9">return</span><span class="rvts6">. Por ejemplo,</span></p>
+<p class="rvps4"><span class="rvts9">block ([], expr1, ..., if (a &gt; 10) then return(a), ..., exprn)</span></p>
+<p class="rvps3"><span class="rvts6">es una expresión de pleno derecho, por lo que puede ocupar el lado derecho de la definición de una función. Aquí puede ocurrir que el retorno se produzca antes que se alcance la última expresión.</span></p>
+<p class="rvps3"><span class="rvts6">Los primeros corchetes del bloque (</span><span class="rvts9">[]</span><span class="rvts6">) pueden contener una lista de variables junto con posibles asignaciones, tal como </span><span class="rvts9">[a: 3, b, c: []]</span><span class="rvts6">, lo que provocará que las tres variables </span><span class="rvts9">a</span><span class="rvts6">,</span><span class="rvts9">b</span><span class="rvts6"> y </span><span class="rvts9">c</span><span class="rvts6"> se consideren locales y sean independientes de otras globales con el mismo nombre; las variables locales sólo estarán activas mientras se ejecute el código que está dentro de la estructura </span><span class="rvts9">block</span><span class="rvts6">, o dentro de funciones que son llamadas desde dentro de </span><span class="rvts9">block</span><span class="rvts6">. A esto se le llama asignación dinámica, pues las variables sobreviven desde el inicio del bloque hasta que éste deje de estar operativo. Una vez se salga del bloque los valores originales de las variables, si es que los había, quedan restaurados. Es recomendable proteger las variables de esta forma. Se tendrá en cuenta que las asignaciones a las variables del bloque se hacen en paralelo, lo que significa que si como en el ejemplo anterior se hace </span><span class="rvts9">c: a</span><span class="rvts6"> en el momento de entrar en el bloque, el valor de </span><span class="rvts9">c</span><span class="rvts6"> será el que tenía </span><span class="rvts9">a</span><span class="rvts6"> antes de entrar en el bloque, es decir, antes de la asignación </span><span class="rvts9">a: 3</span><span class="rvts6">. Así, haciendo lo siguiente</span></p>
+<p class="rvps4"><span class="rvts9">block ([a: a], expr1, ... a: a+3, ..., exprn)</span></p>
+<p class="rvps3"><span class="rvts6">se prevendría de que el valor externo de </span><span class="rvts9">a</span><span class="rvts6"> fuese alterado, pero permitiría acceder a él desde dentro del bloque. La parte derecha de las asignaciones se evalúa dentro de su contexto antes de hacer efectiva la asignación. Utilizando únicamente </span><span class="rvts9">block([x],..</span><span class="rvts6"> haría que </span><span class="rvts9">x</span><span class="rvts6"> se tuviese a sí misma como valor, justo como si se acabase de iniciar una nueva sesión de Maxima.</span></p>
+<p class="rvps3"><span class="rvts6">Los valores de los argumentos de una funcón se tratan exactamente de la misma forma que las variables de un bloque. Así, con</span></p>
+<p class="rvps4"><span class="rvts9">f(x) := (expr1, ..., exprn);</span></p>
+<p class="rvps3"><span class="rvts6">y</span></p>
+<p class="rvps4"><span class="rvts9">f(1);</span></p>
+<p class="rvps3"><span class="rvts6">se estaría en un contexto similar para la evaluación de las expresiones como si se hubiera hecho</span></p>
+<p class="rvps4"><span class="rvts9">block ([x: 1], expr1, ..., exprn)</span></p>
+<p class="rvps3"><span class="rvts6">Dentro de las funciones, cuando el lado derecho de la definición deba ser evaluado será útil hacer uso de </span><span class="rvts9">define</span><span class="rvts6"> y posiblemente de </span><span class="rvts9">buildq</span><span class="rvts6">.</span></p>
+<hr style="height: 6px;"/>
+<div><a name="SEC152"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="DefinicindeFunciones.html#SEC153"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="DefinicindeFunciones.html#SEC155"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="DefinicindeFunciones.html#SEC150"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="DefinicindeFunciones.html#SEC152"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_40.html#SEC157"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="rvps11"><span class="rvts0"><span class="rvts21">39.2.2 Funciones array</span></span></h3>
+<p class="rvps3"><span class="rvts6">Una función array almacena el valor de la función la primera vez que es invocada con un argumento dado, devolviendo el valor almacenado sin recalcularlo cuando es llamada con ese mismo argumento. Estas funciones reciben también el nombre de </span><span class="rvts18">funciones memorizadoras</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Los nombres de las funciones array son añadidos a la lista global </span><span class="rvts9">arrays</span><span class="rvts6">, no a la lista global </span><span class="rvts9">functions</span><span class="rvts6">. La función </span><span class="rvts9">arrayinfo</span><span class="rvts6"> devuelve la lista de argumentos para los que hay valores almacenados y </span><span class="rvts9">listarray</span><span class="rvts6"> devuelve precisamente estos valores almacenados. Las funciones </span><span class="rvts9">dispfun</span><span class="rvts6"> y </span><span class="rvts9">fundef</span><span class="rvts6"> devuelven la definición de la función array.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">arraymake</span><span class="rvts6"> construye una llamada a una función array, de forma similar a como lo hace </span><span class="rvts9">funmake</span><span class="rvts6"> para las funciones ordinarias. Por otro lado, </span><span class="rvts9">arrayapply</span><span class="rvts6"> aplica una función array a sus argumentos, tal como lo hace </span><span class="rvts9">apply</span><span class="rvts6"> con las funciones ordinarias. No existe para las funciones array nada similar a </span><span class="rvts9">map</span><span class="rvts6">, aunque </span><span class="rvts9">map(lambda([</span><span class="rvts19">x</span><span class="rvts9">], </span><span class="rvts19">a</span><span class="rvts9">[</span><span class="rvts19">x</span><span class="rvts9">]), </span><span class="rvts19">L</span><span class="rvts9">)</span><span class="rvts6"> o </span><span class="rvts9">makelist(</span><span class="rvts19">a</span><span class="rvts9">[</span><span class="rvts19">x</span><span class="rvts9">], </span><span class="rvts19">x</span><span class="rvts9">, </span><span class="rvts19">L</span><span class="rvts9">)</span><span class="rvts6">, siendo </span><span class="rvts18">L</span><span class="rvts6"> una lista, podrían suplantar esta carencia.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">remarray</span><span class="rvts6"> borra la definición de una función array, así como cualesquiera valores almacenados que tenga asociados, tal como </span><span class="rvts9">remfunction</span><span class="rvts6"> lo hace con las funciones ordinarias.</span></p>
+<p class="rvps3"><span class="rvts6">La llamada </span><span class="rvts9">kill(</span><span class="rvts19">a</span><span class="rvts9">[</span><span class="rvts19">x</span><span class="rvts9">])</span><span class="rvts6"> borra el valor de la función array </span><span class="rvts18">a</span><span class="rvts6"> almacenado para el argumento </span><span class="rvts18">x</span><span class="rvts6">; la próxima vez que se llame a </span><span class="rvts18">a</span><span class="rvts6"> con el argumento </span><span class="rvts18">x</span><span class="rvts6">, se recalculará el valor correspondiente. Sin embargo, no hay forma de borrar todos los valores almacenados de una sola vez, excepto mediante </span><span class="rvts9">kill(</span><span class="rvts19">a</span><span class="rvts9">)</span><span class="rvts6"> o </span><span class="rvts9">remarray(</span><span class="rvts19">a</span><span class="rvts9">)</span><span class="rvts6">, con lo que se borra también la definición de la propia función.</span></p>
+<hr style="height: 6px;"/>
+<div><a name="SEC153"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="DefinicindeFunciones.html#SEC154"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="DefinicindeFunciones.html#SEC156"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="DefinicindeFunciones.html#SEC150"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="DefinicindeFunciones.html#SEC150"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_40.html#SEC157"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">39.3 Macros</span></span></h2>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC154"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">buildq</span><span class="rvts18"> (L, expr)</span></li>
+<li class="rvps3"><span class="rvts6">Sustituye en paralelo las variables nombradas en la lista </span><span class="rvts18">L</span><span class="rvts6"> en la expresión </span><span class="rvts18">expr</span><span class="rvts6">, sin evaluar ésta. La expresión resultante se simplifica pero no se evalúa hasta que </span><span class="rvts9">buildq</span><span class="rvts6"> termine de hacer las sustituciones.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Los elementos de </span><span class="rvts18">L</span><span class="rvts6"> son símbolos o expresiones de asignación del tipo </span><span class="rvts19">symbol</span><span class="rvts9">: </span><span class="rvts19">value</span><span class="rvts6">, evaluadas en paralelo. Esto es, el valor de una variable en la parte derecha de una asignación es el valor que toma dicha variable en el contexto desde el que se invoca a </span><span class="rvts9">buildq</span><span class="rvts6">. En caso de que a una variable de </span><span class="rvts18">L</span><span class="rvts6"> no se le haga una signación explícita, su valor en </span><span class="rvts9">buildq</span><span class="rvts6"> es el mismo que tiene en el contexto desde el que se llama a </span><span class="rvts9">buildq</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Las variables referenciadas en </span><span class="rvts18">L</span><span class="rvts6"> se sustituyen en </span><span class="rvts18">expr</span><span class="rvts6"> en paralelo. Esto es, la sustitución para cada variable se determina antes de que se hagan las sustituciones, de forma que la sustitución de una variable no tiene efecto alguno sobre las otras.</span></p>
+<p class="rvps3"><span class="rvts6">Si alguna variable </span><span class="rvts18">x</span><span class="rvts6"> aparece como </span><span class="rvts9">splice (</span><span class="rvts19">x</span><span class="rvts9">)</span><span class="rvts6"> en </span><span class="rvts18">expr</span><span class="rvts6">, entonces a </span><span class="rvts18">x</span><span class="rvts6"> se le debe asignar una lista, la cual será interpolada en </span><span class="rvts18">expr</span><span class="rvts6"> en lugar de hacer una simple sustitución; ver ejemplo más abajo.</span></p>
+<p class="rvps3"><span class="rvts6">Cualesquiera otras variables de </span><span class="rvts18">expr</span><span class="rvts6"> que no aparezcan en </span><span class="rvts18">L</span><span class="rvts6"> se traspasan al resultado tal cual, incluso cuando tienen asignados valores en el contexto desde el que se llama a </span><span class="rvts9">buildq</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps3"><span class="rvts9">a</span><span class="rvts6"> queda asociada explícitamente a </span><span class="rvts9">x</span><span class="rvts6">, mientras que </span><span class="rvts9">b</span><span class="rvts6"> tiene la misma asociación (29) que en el contexto de llamada y </span><span class="rvts9">c</span><span class="rvts6"> es traspasado al resultado sin ser sustituido. La expresión resultante no se evalúa hasta que no se le obligue a ello mediante la evaluación explícita </span><span class="rvts9">''%</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) (a: 17, b: 29, c: 1729)$</span><br/><span class="rvts9">(%i2) buildq ([a: x, b], a + b + c);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x + c + 29</span><br/><span class="rvts9">(%i3) ''%;</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x + 1758</span></p>
+<p class="rvps3"><span class="rvts6">En este ejemplo, </span><span class="rvts9">e</span><span class="rvts6"> se asocia a una lista, la cual aparece como tal en los argumentos de </span><span class="rvts9">foo</span><span class="rvts6"> e interpolada en los argumentos de </span><span class="rvts9">bar</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) buildq ([e: [a, b, c]], foo (x, e, y));</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; foo(x, [a, b, c], y)</span><br/><span class="rvts9">(%i2) buildq ([e: [a, b, c]], bar (x, splice (e), y));</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;bar(x, a, b, c, y)</span></p>
+<p class="rvps3"><span class="rvts6">Como se ve a continuación, el resultado se simplifica tras las sustituciones. Si la simplificación se realizase antes que las sustituciones, ambos resultados serían iguales.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) buildq ([e: [a, b, c]], splice (e) + splice (e));</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 c + 2 b + 2 a</span><br/><span class="rvts9">(%i2) buildq ([e: [a, b, c]], 2 * splice (e));</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 a b c</span></p>
+<p class="rvps3"><span class="rvts6">Las variables de </span><span class="rvts18">L</span><span class="rvts6"> se asocian en paralelo; si se hiciese secuencialmente, el primer resultado sería </span><span class="rvts9">foo (b, b)</span><span class="rvts6">. Las sustituciones se llevan a cabo en paralelo. Compárese el segundo resultado con el resultado de </span><span class="rvts9">subst</span><span class="rvts6">, que hace las sustituciones de forma secuencial.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) buildq ([a: b, b: a], foo (a, b));</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; foo(b, a)</span><br/><span class="rvts9">(%i2) buildq ([u: v, v: w, w: x, x: y, y: z, z: u],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;bar (u, v, w, x, y, z));</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; bar(v, w, x, y, z, u)</span><br/><span class="rvts9">(%i3) subst ([u=v, v=w, w=x, x=y, y=z, z=u],</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; bar (u, v, w, x, y, z));</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; bar(u, u, u, u, u, u)</span></p>
+<p class="rvps3"><span class="rvts6">Se construye a continuación un sistema de ecuaciones con algunas variables o expresiones en el lado izquierdo y sus valores en el derecho; </span><span class="rvts9">macroexpand</span><span class="rvts6"> muestra la expresión devuelta por </span><span class="rvts9">show_values</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) show_values ([L]) ::= buildq ([L], map ("=", 'L, L));</span><br/><span class="rvts9">(%o1) &nbsp; show_values([L]) ::= buildq([L], map("=", 'L, L))</span><br/><span class="rvts9">(%i2) (a: 17, b: 29, c: 1729)$</span><br/><span class="rvts9">(%i3) show_values (a, b, c - a - b);</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[a = 17, b = 29, c - b - a = 1683]</span><br/><span class="rvts9">(%i4) macroexpand (show_values (a, b, c - a - b));</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp;map(=, '([a, b, c - b - a]), [a, b, c - b - a])</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="MACROS"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">macroexpand</span><span class="rvts18"> (expr)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve la macroexpansión de </span><span class="rvts18">expr</span><span class="rvts6">, sin evaluarla, cuando </span><span class="rvts9">expr</span><span class="rvts6"> es una llamada a una función macro; en caso contrario, </span><span class="rvts9">macroexpand</span><span class="rvts6"> devuelve </span><span class="rvts18">expr</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si la expansión de </span><span class="rvts18">expr</span><span class="rvts6"> devuelve otra llamada a una función macro, esta llamada también se expande.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">macroexpand</span><span class="rvts6"> no evalúa su argumento. Sin embargo, si la expansión de una llamada a función macro tiene efectos laterales, éstos se ejecutan.</span></p>
+<p class="rvps3"><span class="rvts6">Véanse también </span><span class="rvts9">::=</span><span class="rvts6">, </span><span class="rvts9">macros</span><span class="rvts6"> y </span><span class="rvts9">macroexpand1</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) g (x) ::= x / 99;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;g(x) ::= --</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;99</span><br/><span class="rvts9">(%i2) h (x) ::= buildq ([x], g (x - a));</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;h(x) ::= buildq([x], g(x - a))</span><br/><span class="rvts9">(%i3) a: 1234;</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1234</span><br/><span class="rvts9">(%i4) macroexpand (h (y));</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;y - a</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -----</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 99</span><br/><span class="rvts9">(%i5) h (y);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;y - 1234</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 99</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC155"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">macroexpand1</span><span class="rvts18"> (expr)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve la macroexpansión de </span><span class="rvts18">expr</span><span class="rvts6">, sin evaluarla, cuando </span><span class="rvts9">expr</span><span class="rvts6"> es una llamada a una función macro; en caso contrario, </span><span class="rvts9">macroexpand1</span><span class="rvts6"> devuelve </span><span class="rvts18">expr</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">macroexpand1</span><span class="rvts6"> no evalúa su argumento. Sin embargo, si la expansión de una llamada a función macro tiene efectos laterales, éstos se ejecutan.</span></p>
+<p class="rvps3"><span class="rvts6">Si la expansión de </span><span class="rvts18">expr</span><span class="rvts6"> devuelve otra llamada a una función macro, esta llamada no se expande.</span></p>
+<p class="rvps3"><span class="rvts6">Véanse también </span><span class="rvts9">::=</span><span class="rvts6">, </span><span class="rvts9">macros</span><span class="rvts6"> y </span><span class="rvts9">macroexpand</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) g (x) ::= x / 99;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;g(x) ::= --</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;99</span><br/><span class="rvts9">(%i2) h (x) ::= buildq ([x], g (x - a));</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;h(x) ::= buildq([x], g(x - a))</span><br/><span class="rvts9">(%i3) a: 1234;</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1234</span><br/><span class="rvts9">(%i4) macroexpand1 (h (y));</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; g(y - a)</span><br/><span class="rvts9">(%i5) h (y);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;y - 1234</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 99</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1277"></a>
+<span class="rvts16">Variable global:</span><span class="rvts6"> </span><span class="rvts17">macros</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">[]</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La variable </span><span class="rvts9">macros</span><span class="rvts6"> es la lista de las funciones macro definidas por el usuario. El operador de definición de funciones macro </span><span class="rvts9">::=</span><span class="rvts6"> coloca la nueva función macro en esta lista, mientras que </span><span class="rvts9">kill</span><span class="rvts6">, </span><span class="rvts9">remove</span><span class="rvts6"> y </span><span class="rvts9">remfunction</span><span class="rvts6"> eliminan las funciones macro de la lista.</span></p>
+<p class="rvps3"><span class="rvts6">Véase también </span><span class="rvts9">infolists</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1278"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">splice</span><span class="rvts18"> (a)</span></li>
+<li class="rvps3"><span class="rvts6">Interpola la lista nombrada por el átomo </span><span class="rvts18">a</span><span class="rvts6"> dentro de una expresión, pero sólo si </span><span class="rvts9">splice</span><span class="rvts6"> aparece dentro de </span><span class="rvts9">buildq</span><span class="rvts6">; en otro caso, </span><span class="rvts9">splice</span><span class="rvts6"> se considera una función no definida. Si </span><span class="rvts18">a</span><span class="rvts6"> aparece dentro de </span><span class="rvts9">buildq</span><span class="rvts6"> sin </span><span class="rvts9">splice</span><span class="rvts6">, entonces queda sustituida por una lista dentro del resultado. El argumento de </span><span class="rvts9">splice</span><span class="rvts6"> debe ser un átomo, no pudiendo ser una lista literal ni una expresión que devuelva una lista.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Normalmente </span><span class="rvts9">splice</span><span class="rvts6"> suministra los argumentos para una función u operador. Para una función </span><span class="rvts9">f</span><span class="rvts6">, la expresión </span><span class="rvts9">f (splice (</span><span class="rvts19">a</span><span class="rvts9">))</span><span class="rvts6"> dentro de </span><span class="rvts9">buildq</span><span class="rvts6"> se convierte en </span><span class="rvts9">f (</span><span class="rvts19">a</span><span class="rvts9">[1], </span><span class="rvts19">a</span><span class="rvts9">[2], </span><span class="rvts19">a</span><span class="rvts9">[3], ...)</span><span class="rvts6">. Dado un operador </span><span class="rvts9">o</span><span class="rvts6">, la expresión </span><span class="rvts9">"o" (splice (</span><span class="rvts19">a</span><span class="rvts9">)</span><span class="rvts6"> dentro de </span><span class="rvts9">buildq</span><span class="rvts6"> se convierte en </span><span class="rvts9">"o" (</span><span class="rvts19">a</span><span class="rvts9">[1], </span><span class="rvts19">a</span><span class="rvts9">[2], </span><span class="rvts19">a</span><span class="rvts9">[3], ...)</span><span class="rvts6">, donde </span><span class="rvts9">o</span><span class="rvts6"> puede ser cualquier tipo de operador, normalmente uno que admita varios argumentos. Nótese que el operador debe ir encerrado entre comillas dobles </span><span class="rvts9">"</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) buildq ([x: [1, %pi, z - y]], foo (splice (x)) / length (x));</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; foo(1, %pi, z - y)</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-----------------------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; length([1, %pi, z - y])</span><br/><span class="rvts9">(%i2) buildq ([x: [1, %pi]], "/" (splice (x)));</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;---</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; %pi</span><br/><span class="rvts9">(%i3) matchfix ("&lt;&gt;", "&lt;&gt;");</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;&gt;</span><br/><span class="rvts9">(%i4) buildq ([x: [1, %pi, z - y]], "&lt;&gt;" (splice (x)));</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;&gt;1, %pi, z - y&lt;&gt;</span></p>
+<hr style="height: 6px;"/>
+<div><a name="IDX1279"></a>
+<table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="DefinicindeFunciones.html#SEC155"> &lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_40.html#SEC157"> &gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="DefinicindeFunciones.html#SEC150"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="DefinicindeFunciones.html#SEC150"> Up </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_40.html#SEC157"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts15">39.4 Funciones y variables para la definición de funciones</span></span></h2>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1280"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">apply</span><span class="rvts18"> (F, [x_1, ..., x_n])</span></li>
+<li class="rvps3"><span class="rvts6">Construye y evalúa la expresión </span><span class="rvts19">F</span><span class="rvts9">(</span><span class="rvts19">arg_1</span><span class="rvts9">, ..., </span><span class="rvts19">arg_n</span><span class="rvts9">)</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">apply</span><span class="rvts6"> no hace distinciones entre funciones array y funciones ordinarias; cuando </span><span class="rvts18">F</span><span class="rvts6"> es el nombre de una función array, </span><span class="rvts9">apply</span><span class="rvts6"> evalúa </span><span class="rvts19">F</span><span class="rvts9">(...)</span><span class="rvts6">, esto es, hace una llamada con paréntesis en lugar de corchetes. La función </span><span class="rvts9">arrayapply</span><span class="rvts6"> evalúa una llamada a función con corchetes para estos casos.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">apply</span><span class="rvts6"> evalúa sus argumentos. En este ejemplo, </span><span class="rvts9">min</span><span class="rvts6"> se aplica al valor de </span><span class="rvts9">L</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) L : [1, 5, -10.2, 4, 3];</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [1, 5, - 10.2, 4, 3]</span><br/><span class="rvts9">(%i2) apply (min, L);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- 10.2</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">apply</span><span class="rvts6"> evalúa sus argumentos, incluso cuando la función </span><span class="rvts18">F</span><span class="rvts6"> no lo hace.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) F (x) := x / 1729;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; F(x) := ----</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1729</span><br/><span class="rvts9">(%i2) fname : F;</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; F</span><br/><span class="rvts9">(%i3) dispfun (F);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x</span><br/><span class="rvts9">(%t3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; F(x) := ----</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1729</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [%t3]</span><br/><span class="rvts9">(%i4) dispfun (fname);</span><br/><span class="rvts9">fname is not the name of a user function.</span><br/><span class="rvts9"> -- an error. &nbsp;Quitting. &nbsp;To debug this try debugmode(true);</span><br/><span class="rvts9">(%i5) apply (dispfun, [fname]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x</span><br/><span class="rvts9">(%t5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; F(x) := ----</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1729</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [%t5]</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">apply</span><span class="rvts6"> evalúa el nombre de función </span><span class="rvts18">F</span><span class="rvts6">. La comilla simple </span><span class="rvts9">'</span><span class="rvts6"> evita la evaluación. El nombre </span><span class="rvts9">demoivre</span><span class="rvts6"> corresponde a una variable global y también a una función.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) demoivre;</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; false</span><br/><span class="rvts9">(%i2) demoivre (exp (%i * x));</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;%i sin(x) + cos(x)</span><br/><span class="rvts9">(%i3) apply (demoivre, [exp (%i * x)]);</span><br/><span class="rvts9">demoivre evaluates to false</span><br/><span class="rvts9">Improper name or value in functional position.</span><br/><span class="rvts9"> -- an error. &nbsp;Quitting. &nbsp;To debug this try debugmode(true);</span><br/><span class="rvts9">(%i4) apply ('demoivre, [exp (%i * x)]);</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;%i sin(x) + cos(x)</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1281"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">block</span><span class="rvts18"> ([v_1, ..., v_m], expr_1, ..., expr_n)</span></li>
+<li><a name="FUNCIONES-Y-VARIABLES-PARA-LA-DEFINICI_00F3N-DE-FUNCIONES"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">block</span><span class="rvts18"> (expr_1, ..., expr_n)</span></li>
+<li class="rvps3"><span class="rvts6">La función </span><span class="rvts9">block</span><span class="rvts6"> evalúa </span><span class="rvts18">expr_1</span><span class="rvts6">, ..., </span><span class="rvts18">expr_n</span><span class="rvts6"> secuencialmente y devuelve el valor de la última expresión evaluada. La secuencia puede alterarse con las funciones </span><span class="rvts9">go</span><span class="rvts6">, </span><span class="rvts9">throw</span><span class="rvts6"> y </span><span class="rvts9">return</span><span class="rvts6">. La última expresión es </span><span class="rvts18">expr_n</span><span class="rvts6"> a menos que </span><span class="rvts9">return</span><span class="rvts6"> o una expresión que contenga un </span><span class="rvts9">throw</span><span class="rvts6"> sea evaluada. Las variables </span><span class="rvts18">v_1</span><span class="rvts6">, ..., </span><span class="rvts18">v_m</span><span class="rvts6"> son locales en el bloque; éstas se distiguen de las globales que tengan el mismo nombre. Si no se declaran variables locales entonces se puede omitir la lista. Dentro del bloque, cualquier otra variable distinta de </span><span class="rvts18">v_1</span><span class="rvts6">, ..., </span><span class="rvts18">v_m</span><span class="rvts6"> se considera global.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">block</span><span class="rvts6"> guarda los valores actuales de las variables </span><span class="rvts18">v_1</span><span class="rvts6">, ..., </span><span class="rvts18">v_m</span><span class="rvts6">, si los tienen, a la entrada del bloque y luego las evalúa a sí mismas, es decir les saca el valor temporalmente. A las variables locales se les puede asignar cualquier valor dentro del bloque, pero al salir de éste, los valores inicialmente almacenados quedan restaurados, al tiempo que los asignados dentro del bloque se pierden.</span></p>
+<p class="rvps3"><span class="rvts6">Un </span><span class="rvts9">block</span><span class="rvts6"> puede aparecer dentro de otro </span><span class="rvts9">block</span><span class="rvts6">. Las variables locales se inicializan cada vez que se entra dentro de un nuevo bloque. Las variables locales de un bloque se consideran globales dentro de otro anidado dentro del primero. Si una variable es no local dentro de un bloque, su valor es el que le corresponde en el bloque superior. Este criterio se conoce con el nombre de "alcance dinámico".</span></p>
+<p class="rvps3"><span class="rvts6">Si se quieren guardar y restaurar otras propiedades locales además del </span><span class="rvts9">valor</span><span class="rvts6"> de las variables, por ejemplo </span><span class="rvts9">arreglo</span><span class="rvts6"> (excepto arreglos completos), </span><span class="rvts9">function</span><span class="rvts6">, </span><span class="rvts9">dependencies</span><span class="rvts6">, </span><span class="rvts9">atvalue</span><span class="rvts6">, </span><span class="rvts9">matchdeclare</span><span class="rvts6">, </span><span class="rvts9">atomgrad</span><span class="rvts6">, </span><span class="rvts9">constant</span><span class="rvts6"> y </span><span class="rvts9">nonscalar</span><span class="rvts6"> entonces debería usarse la función </span><span class="rvts9">local</span><span class="rvts6"> dentro del bloque, siendo sus argumentos los nombres de las variables.</span></p>
+<p class="rvps3"><span class="rvts6">El valor del bloque es el de la última sentencia o el argumento de la función </span><span class="rvts9">return</span><span class="rvts6">, que puede utilizarse para salir del bloque. La función </span><span class="rvts9">go</span><span class="rvts6"> puede usarse para transferir el control a la sentencia del bloque que esté etiquetada con el argumento de </span><span class="rvts9">go</span><span class="rvts6">. Para etiquetar una sentencia basta que vaya precedida de un argumento atómico como cualquier otra sentencia dentro del bloque. Por ejemplo, </span><span class="rvts9">block ([x], x:1, tururu, x: x+1, ..., go(tururu), ...)</span><span class="rvts6">. El argumento de </span><span class="rvts9">go</span><span class="rvts6"> debe ser el nombre de una etiqueta colocada dentro del bloque. No se puede utilzar </span><span class="rvts9">go</span><span class="rvts6"> para trasladarse a una etiqueta de un bloque que no sea el que contenga a </span><span class="rvts9">go</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Normalmente los bloques aparecerán al lado derecho de las definiciones de funciones, pero también pueden utilizarse en otros contextos.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="SEC156"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">break</span><span class="rvts18"> (expr_1, ..., expr_n)</span></li>
+<li class="rvps3"><span class="rvts6">Calcula e imprime </span><span class="rvts18">expr_1</span><span class="rvts6">, ..., </span><span class="rvts18">expr_n</span><span class="rvts6"> para luego provocar la detención de Maxima, de modo que el usuario pueda examinar y cambiar el entorno de ejecución. Pulsando posteriormente </span><span class="rvts9">exit;</span><span class="rvts6"> el cálculo se reanuda.</span></li>
+<li><a name="IDX1282"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">catch</span><span class="rvts18"> (expr_1, ..., expr_n)</span></li>
+<li class="rvps3"><span class="rvts6">Evalúa </span><span class="rvts18">expr_1</span><span class="rvts6">, ..., </span><span class="rvts18">expr_n</span><span class="rvts6"> una a una; si alguna de ellas conlleva la evaluación de una expresión de la forma </span><span class="rvts9">throw (arg)</span><span class="rvts6">, entonces el valor de </span><span class="rvts9">catch</span><span class="rvts6"> es el de </span><span class="rvts9">throw (arg)</span><span class="rvts6"> y ya no se evalúan más expresiones. Esta respuesta pasa todos los niveles de anidamiento hasta el </span><span class="rvts9">catch</span><span class="rvts6"> más próximo. Si no hay ningún </span><span class="rvts9">catch</span><span class="rvts6"> que contenga un </span><span class="rvts9">throw</span><span class="rvts6"> se emite un mensaje de error.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si la evaluación de los argumentos no conlleva la evaluación de ningún </span><span class="rvts9">throw</span><span class="rvts6">, entonces el valor de </span><span class="rvts9">catch</span><span class="rvts6"> es el devuelto por </span><span class="rvts18">expr_n</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) lambda ([x], if x &lt; 0 then throw(x) else f(x))$</span><br/><span class="rvts9">(%i2) g(l) := catch (map (''%, l))$</span><br/><span class="rvts9">(%i3) g ([1, 2, 3, 7]);</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [f(1), f(2), f(3), f(7)]</span><br/><span class="rvts9">(%i4) g ([1, 2, -3, 7]);</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- 3</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">g</span><span class="rvts6"> devuelve las imágenes por </span><span class="rvts9">f</span><span class="rvts6"> de todos los elementos de la lista </span><span class="rvts9">l</span><span class="rvts6"> si ésta contiene únicamente números no negativos; si no es este el caso, entonces </span><span class="rvts9">g</span><span class="rvts6"> captura el primer negativo que encuentra y lo devuelve por medio del </span><span class="rvts9">throw</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1283"></a>
+<span class="rvts16">Function:</span><span class="rvts6"> </span><span class="rvts17">compfile</span><span class="rvts18"> (filename, f_1, ..., f_n)</span></li>
+<li><a name="IDX1284"></a>
+<span class="rvts16">Function:</span><span class="rvts6"> </span><span class="rvts17">compfile</span><span class="rvts18"> (filename, functions)</span></li>
+<li><a name="IDX1285"></a>
+<span class="rvts16">Function:</span><span class="rvts6"> </span><span class="rvts17">compfile</span><span class="rvts18"> (filename, all)</span></li>
+<li class="rvps3"><span class="rvts6">Traduce funciones de Maxima a código Lisp, guardándolo luego en el fichero </span><span class="rvts18">filename</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Con la llamada </span><span class="rvts9">compfile(</span><span class="rvts19">filename</span><span class="rvts9">, </span><span class="rvts19">f_1</span><span class="rvts9">, ..., </span><span class="rvts19">f_n</span><span class="rvts9">)</span><span class="rvts6"> se traducen las funciones especificadas, mientras que </span><span class="rvts9">compfile(</span><span class="rvts19">filename</span><span class="rvts9">, functions)</span><span class="rvts6"> y </span><span class="rvts9">compfile(</span><span class="rvts19">filename</span><span class="rvts9">, all)</span><span class="rvts6"> traducen las funciones definidas por el usuario.</span></p>
+<p class="rvps3"><span class="rvts6">El código Lisp traducido no se evalúa, ni el fichero de salida es procesado por el compilador de Lisp. La función </span><span class="rvts9">translate</span><span class="rvts6"> crea y evalúa las traducciones Lisp, mientras que </span><span class="rvts9">compile_file</span><span class="rvts6"> traduce primero de Maxima a Lisp y luego ejecuta el compilador Lisp.</span></p>
+<p class="rvps3"><span class="rvts6">Véanse también </span><span class="rvts9">translate</span><span class="rvts6">, </span><span class="rvts9">translate_file</span><span class="rvts6"> y </span><span class="rvts9">compile_file</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1286"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">compile</span><span class="rvts18"> (f_1, ..., f_n)</span></li>
+<li><a name="IDX1287"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">compile</span><span class="rvts18"> (functions)</span></li>
+<li><a name="IDX1288"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">compile</span><span class="rvts18"> (all)</span></li>
+<li class="rvps3"><span class="rvts6">Traduce las funciones de Maxima </span><span class="rvts18">f_1</span><span class="rvts6">, ..., </span><span class="rvts18">f_n</span><span class="rvts6"> a Lisp, evaluando el código resultante, y llama a la función Lisp </span><span class="rvts9">COMPILE</span><span class="rvts6"> para cada función traducida. La función </span><span class="rvts9">compile</span><span class="rvts6"> devuelve una lista con los nombres de las funciones compiladas.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Las llamadas </span><span class="rvts9">compile (all)</span><span class="rvts6"> o </span><span class="rvts9">compile (functions)</span><span class="rvts6"> compilan todas las funciones definidas por el usuario.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">compile</span><span class="rvts6"> no evalúa sus argumentos, pero con el operador comilla-comilla (</span><span class="rvts9">''</span><span class="rvts6">) sí lo hace.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1289"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">define</span><span class="rvts18"> (f(x_1, ..., x_n), expr)</span></li>
+<li><a name="IDX1290"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">define</span><span class="rvts18"> (f[x_1, ..., x_n], expr)</span></li>
+<li><a name="IDX1291"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">define</span><span class="rvts18"> (funmake (f, [x_1, ..., x_n]), expr)</span></li>
+<li><a name="IDX1292"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">define</span><span class="rvts18"> (arraymake (f, [x_1, ..., x_n]), expr)</span></li>
+<li><a name="IDX1293"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">define</span><span class="rvts18"> (ev (expr_1), expr_2)</span></li>
+<li class="rvps3"><span class="rvts6">Define una función de nombre </span><span class="rvts18">f</span><span class="rvts6"> con argumentos </span><span class="rvts18">x_1</span><span class="rvts6">, ..., </span><span class="rvts18">x_n</span><span class="rvts6"> y cuerpo </span><span class="rvts18">expr</span><span class="rvts6">. </span><span class="rvts9">define</span><span class="rvts6"> evalúa siempre su segundo argumento, a menos que se indique lo contrario con el operador de comilla simple. La función así definida puede ser una función ordinaria de Maxima (con sus argumentos encerrados entre paréntesis) o una función array (con sus argumentos encerrados entre corchetes).</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Cuando el último o único argumento </span><span class="rvts18">x_n</span><span class="rvts6"> es una lista de un solo elemento, la función definida por </span><span class="rvts9">define</span><span class="rvts6"> acepta un número variable de argumentos. Los valores de los argumentos se van asignando uno a uno a </span><span class="rvts18">x_1</span><span class="rvts6">, ..., </span><span class="rvts18">x_(n - 1)</span><span class="rvts6">, y los que queden, si los hay, se asignan a </span><span class="rvts18">x_n</span><span class="rvts6"> en forma de lista.</span></p>
+<p class="rvps3"><span class="rvts6">Cuando el primer argumento de </span><span class="rvts9">define</span><span class="rvts6"> es una expresión de la forma </span><span class="rvts19">f</span><span class="rvts9">(</span><span class="rvts19">x_1</span><span class="rvts9">, ..., </span><span class="rvts19">x_n</span><span class="rvts9">)</span><span class="rvts6"> o </span><span class="rvts19">f</span><span class="rvts9">[</span><span class="rvts19">x_1</span><span class="rvts9">, ..., </span><span class="rvts19">x_n</span><span class="rvts9">]</span><span class="rvts6">, se evalúan los argumentos de la función, pero no </span><span class="rvts18">f</span><span class="rvts6">, incluso cuando se trate de una función o variable ya existente con ese nombre.</span></p>
+<p class="rvps3"><span class="rvts6">Cuando el primer argumento es una expresión con operador </span><span class="rvts9">funmake</span><span class="rvts6">, </span><span class="rvts9">arraymake</span><span class="rvts6"> o </span><span class="rvts9">ev</span><span class="rvts6">, se evalúa este primer argumento, lo que permite calcular la función.</span></p>
+<p class="rvps3"><span class="rvts6">Todas las definiciones de funciones aparecen en el mismo espacio de nombres; definiendo una función </span><span class="rvts9">f</span><span class="rvts6"> dentro de otra función </span><span class="rvts9">g</span><span class="rvts6"> no limita el alcance de </span><span class="rvts9">f</span><span class="rvts6"> a </span><span class="rvts9">g</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Si un argumento formal </span><span class="rvts18">x_k</span><span class="rvts6"> es un símbolo afectado por el operador comilla simple (expresión nominal), la función definida por </span><span class="rvts9">define</span><span class="rvts6"> no evalúa el correspondiente valor de argumento. En cualquier otro caso, los argumentos que se pasan son evaluados.</span></p>
+<p class="rvps3"><span class="rvts6">Véanse también </span><span class="rvts9">:=</span><span class="rvts6"> y </span><span class="rvts9">::=</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps3"><span class="rvts9">define</span><span class="rvts6"> evalúa siempre su segundo argumento, a menos que se indique lo contrario con el operador de comilla simple.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) expr : cos(y) - sin(x);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;cos(y) - sin(x)</span><br/><span class="rvts9">(%i2) define (F1 (x, y), expr);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;F1(x, y) := cos(y) - sin(x)</span><br/><span class="rvts9">(%i3) F1 (a, b);</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;cos(b) - sin(a)</span><br/><span class="rvts9">(%i4) F2 (x, y) := expr;</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; F2(x, y) := expr</span><br/><span class="rvts9">(%i5) F2 (a, b);</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;cos(y) - sin(x)</span></p>
+<p class="rvps3"><span class="rvts6">La función así definida puede ser una función ordinaria de Maxima o una función array.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) define (G1 (x, y), x.y - y.x);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; G1(x, y) := x . y - y . x</span><br/><span class="rvts9">(%i2) define (G2 [x, y], x.y - y.x);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;G2 &nbsp; &nbsp; := x . y - y . x</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x, y</span></p>
+<p class="rvps3"><span class="rvts6">Cuando el último o único argumento </span><span class="rvts18">x_n</span><span class="rvts6"> es una lista de un solo elemento, la función definida por </span><span class="rvts9">define</span><span class="rvts6"> acepta un número variable de argumentos.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) define (H ([L]), '(apply ("+", L)));</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;H([L]) := apply("+", L)</span><br/><span class="rvts9">(%i2) H (a, b, c);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; c + b + a</span></p>
+<p class="rvps3"><span class="rvts6">Cuando el primer argumento es una expresión con operador </span><span class="rvts9">funmake</span><span class="rvts6">, </span><span class="rvts9">arraymake</span><span class="rvts6"> o </span><span class="rvts9">ev</span><span class="rvts6">, se evalúa este primer argumento.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) [F : I, u : x];</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[I, x]</span><br/><span class="rvts9">(%i2) funmake (F, [u]);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; I(x)</span><br/><span class="rvts9">(%i3) define (funmake (F, [u]), cos(u) + 1);</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;I(x) := cos(x) + 1</span><br/><span class="rvts9">(%i4) define (arraymake (F, [u]), cos(u) + 1);</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; I &nbsp;:= cos(x) + 1</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x</span><br/><span class="rvts9">(%i5) define (foo (x, y), bar (y, x));</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;foo(x, y) := bar(y, x)</span><br/><span class="rvts9">(%i6) define (ev (foo (x, y)), sin(x) - cos(y));</span><br/><span class="rvts9">(%o6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; bar(y, x) := sin(x) - cos(y)</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1294"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">define_variable</span><span class="rvts18"> (name, default_value, mode)</span></li>
+<li class="rvps3"><span class="rvts6">Introduce una variable global en el entorno de Maxima. La función </span><span class="rvts9">define_variable</span><span class="rvts6"> puede ser útil en los paquetes escritos por los usuarios que vayan a ser compilados o traducidos con frecuencia.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">define_variable</span><span class="rvts6"> ejecuta los siguientes pasos:</span></p>
+<ol style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">mode_declare (</span><span class="rvts19">name</span><span class="rvts9">, </span><span class="rvts19">mode</span><span class="rvts9">)</span><span class="rvts6"> declara el modo de </span><span class="rvts18">name</span><span class="rvts6"> al traductor. Véase </span><span class="rvts9">mode_declare</span><span class="rvts6"> para ver la lista de modos aceptables.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Si aún no tiene asignación, se le da a la variable </span><span class="rvts18">default_value</span><span class="rvts6"> el valor </span><span class="rvts18">name</span><span class="rvts6">.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts9">declare (</span><span class="rvts19">name</span><span class="rvts9">, special)</span><span class="rvts6"> la declara como especial.</span></li>
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Asocia </span><span class="rvts18">name</span><span class="rvts6"> a una función de comprobación para asegurar que a </span><span class="rvts18">name</span><span class="rvts6"> sólo se le asignan valores del modo declarado.</span></li>
+</ol>
+<p class="rvps3"><span class="rvts6">La propiedad </span><span class="rvts9">value_check</span><span class="rvts6"> se puede asociar a cualquier variable que haya sido definida mediante </span><span class="rvts9">define_variable</span><span class="rvts6"> en cualquiera de los modos diferentes a </span><span class="rvts9">any</span><span class="rvts6">. La propiedad </span><span class="rvts9">value_check</span><span class="rvts6"> puede ser una expresión lambda o una función de una variable, que será invocada al intentar asignar un valor a la variable; el argumento pasado a la función </span><span class="rvts9">value_check</span><span class="rvts6"> es el valor que se le quiere asignar a la variable.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">define_variable</span><span class="rvts6"> evalúa </span><span class="rvts9">default_value</span><span class="rvts6"> pero no </span><span class="rvts9">name</span><span class="rvts6"> ni </span><span class="rvts9">mode</span><span class="rvts6">; el valor que devuelve es el valor actual de </span><span class="rvts9">name</span><span class="rvts6">, el cual es </span><span class="rvts9">default_value</span><span class="rvts6"> si a </span><span class="rvts9">name</span><span class="rvts6"> no se le ha aplicado ninguna asignación, o el valor de dicha asignación en caso contrario.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps3"><span class="rvts9">foo</span><span class="rvts6"> es una variable booleana con valor inicial </span><span class="rvts9">true</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) define_variable (foo, true, boolean);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; true</span><br/><span class="rvts9">(%i2) foo;</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; true</span><br/><span class="rvts9">(%i3) foo: false;</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; false</span><br/><span class="rvts9">(%i4) foo: %pi;</span><br/><span class="rvts9">Error: foo was declared mode boolean, has value: %pi</span><br/><span class="rvts9"> -- an error. &nbsp;Quitting. &nbsp;To debug this try debugmode(true);</span><br/><span class="rvts9">(%i5) foo;</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; false</span></p>
+<p class="rvps3"><span class="rvts9">bar</span><span class="rvts6"> es una variable entera, cuyo valor habrá de ser primo.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) define_variable (bar, 2, integer);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9">(%i2) qput (bar, prime_test, value_check);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;prime_test</span><br/><span class="rvts9">(%i3) prime_test (y) := if not primep(y) then</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; error (y, "is not prime.");</span><br/><span class="rvts9">(%o3) prime_test(y) := </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; if not primep(y) then error(y, "is not prime.")</span><br/><span class="rvts9">(%i4) bar: 1439;</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1439</span><br/><span class="rvts9">(%i5) bar: 1440;</span><br/><span class="rvts9">1440 is not prime.</span><br/><span class="rvts9">#0: prime_test(y=1440)</span><br/><span class="rvts9"> -- an error. &nbsp;Quitting. &nbsp;To debug this try debugmode(true);</span><br/><span class="rvts9">(%i6) bar;</span><br/><span class="rvts9">(%o6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1439</span></p>
+<p class="rvps3"><span class="rvts9">baz_quux</span><span class="rvts6"> es una variable a la que no se le podrá asignar valor alguno. El modo </span><span class="rvts9">any_check</span><span class="rvts6"> es como </span><span class="rvts9">any</span><span class="rvts6">, pero </span><span class="rvts9">any_check</span><span class="rvts6"> activa el mecanismo </span><span class="rvts9">value_check</span><span class="rvts6">, cosa que </span><span class="rvts9">any</span><span class="rvts6"> no hace.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) define_variable (baz_quux, 'baz_quux, any_check);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; baz_quux</span><br/><span class="rvts9">(%i2) F: lambda ([y], if y # 'baz_quux then</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; error ("Cannot assign to `baz_quux'."));</span><br/><span class="rvts9">(%o2) lambda([y], if y # 'baz_quux</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; then error(Cannot assign to `baz_quux'.))</span><br/><span class="rvts9">(%i3) qput (baz_quux, ''F, value_check);</span><br/><span class="rvts9">(%o3) lambda([y], if y # 'baz_quux</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; then error(Cannot assign to `baz_quux'.))</span><br/><span class="rvts9">(%i4) baz_quux: 'baz_quux;</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; baz_quux</span><br/><span class="rvts9">(%i5) baz_quux: sqrt(2);</span><br/><span class="rvts9">Cannot assign to `baz_quux'.</span><br/><span class="rvts9">#0: lambda([y],if y # 'baz_quux then</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; error("Cannot assign to `baz_quux'."))(y=sqrt(2))</span><br/><span class="rvts9"> -- an error. &nbsp;Quitting. &nbsp;To debug this try debugmode(true);</span><br/><span class="rvts9">(%i6) baz_quux;</span><br/><span class="rvts9">(%o6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; baz_quux</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1295"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">dispfun</span><span class="rvts18"> (f_1, ..., f_n)</span></li>
+<li><a name="IDX1296"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">dispfun</span><span class="rvts18"> (all)</span></li>
+<li class="rvps3"><span class="rvts6">Muestra la deficnión de las funciones de usuario </span><span class="rvts18">f_1</span><span class="rvts6">, ..., </span><span class="rvts18">f_n</span><span class="rvts6">. Cada argumento puede ser el nombre de una macro (definida mediante </span><span class="rvts9">::=</span><span class="rvts6">), una función ordinaria (definida mediante </span><span class="rvts9">:=</span><span class="rvts6"> o </span><span class="rvts9">define</span><span class="rvts6">), una función arreglo (definida mediante </span><span class="rvts9">:=</span><span class="rvts6"> o </span><span class="rvts9">define</span><span class="rvts6">, pero encerrando los argumentos dentro de corchetes </span><span class="rvts9">[ ]</span><span class="rvts6">), una función de subíndice (definida mediante </span><span class="rvts9">:=</span><span class="rvts6"> o </span><span class="rvts9">define</span><span class="rvts6">, pero encerrando algunos argumentos entre corchetes y otros entre paréntesis </span><span class="rvts9">( )</span><span class="rvts6">), una función de subíndice seleccionada por un subíndice variable, o una función de subíndice definida con un subíndice constante.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La llamada </span><span class="rvts9">dispfun (all)</span><span class="rvts6"> muestra todas las funciones de usuario tal como las dan las listas </span><span class="rvts9">functions</span><span class="rvts6">, </span><span class="rvts9">arrays</span><span class="rvts6"> y </span><span class="rvts9">macros</span><span class="rvts6">, omitiendo las funciones con subíndices definidas con subíndices constantes.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">dispfun</span><span class="rvts6"> crea una etiqueta (</span><span class="rvts9">%t1</span><span class="rvts6">, </span><span class="rvts9">%t2</span><span class="rvts6">, etc.) para cada función mostrada, y asigna la definición de la función a la etiqueta. En contraste, </span><span class="rvts9">fundef</span><span class="rvts6"> devuelve las definiciones de las funciones.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">dispfun</span><span class="rvts6"> no evalúa sus argumentos; el operador de comilla-comilla </span><span class="rvts9">''</span><span class="rvts6"> permite la evaluación.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">dispfun</span><span class="rvts6"> devuelve la lista de etiquetas de expresiones intermedias correspondientes a las funciones mostradas.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) m(x, y) ::= x^(-y);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - y</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; m(x, y) ::= x</span><br/><span class="rvts9">(%i2) f(x, y) := &nbsp;x^(-y);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - y</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;f(x, y) := x</span><br/><span class="rvts9">(%i3) g[x, y] := &nbsp;x^(-y);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- y</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; g &nbsp; &nbsp; := x</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x, y</span><br/><span class="rvts9">(%i4) h[x](y) := &nbsp;x^(-y);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- y</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; h (y) := x</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x</span><br/><span class="rvts9">(%i5) i[8](y) := &nbsp;8^(-y);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- y</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; i (y) := 8</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 8</span><br/><span class="rvts9">(%i6) dispfun (m, f, g, h, h[5], h[10], i[8]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - y</span><br/><span class="rvts9">(%t6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; m(x, y) ::= x</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - y</span><br/><span class="rvts9">(%t7) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;f(x, y) := x</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- y</span><br/><span class="rvts9">(%t8) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; g &nbsp; &nbsp; := x</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x, y</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- y</span><br/><span class="rvts9">(%t9) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; h (y) := x</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1</span><br/><span class="rvts9">(%t10) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; h (y) := --</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;5 &nbsp; &nbsp; &nbsp; &nbsp;y</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;5</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</span><br/><span class="rvts9">(%t11) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;h &nbsp;(y) := ---</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 10 &nbsp; &nbsp; &nbsp; &nbsp; y</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;10</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- y</span><br/><span class="rvts9">(%t12) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;i (y) := 8</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 8</span><br/><span class="rvts9">(%o12) &nbsp; &nbsp; &nbsp; [%t6, %t7, %t8, %t9, %t10, %t11, %t12]</span><br/><span class="rvts9">(%i12) ''%;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - y &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- y &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- y</span><br/><span class="rvts9">(%o12) [m(x, y) ::= x &nbsp; , f(x, y) := x &nbsp; , g &nbsp; &nbsp; := x &nbsp; , </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x, y</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- y &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - y</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp;h (y) := x &nbsp; , h (y) := --, h &nbsp;(y) := ---, i (y) := 8 &nbsp; ]</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; x &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;5 &nbsp; &nbsp; &nbsp; &nbsp;y &nbsp; 10 &nbsp; &nbsp; &nbsp; &nbsp; y &nbsp; 8</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;5 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 10</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1297"></a>
+<span class="rvts16">Variable del sistema:</span><span class="rvts6"> </span><span class="rvts17">functions</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">[]</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La variable </span><span class="rvts9">functions</span><span class="rvts6"> es una lista que contiene los nombres de las funciones ordinarias de Maxima. Una función ordinaria es aquella que ha sido construida mediante cualquiera de los métodos </span><span class="rvts9">define</span><span class="rvts6"> o </span><span class="rvts9">:=</span><span class="rvts6"> y que es invocada utilizando paréntesis. Una función puede definirse durante una sesión de Maxima o en un fichero que posteriormente será cargado en memoria por </span><span class="rvts9">load</span><span class="rvts6"> o </span><span class="rvts9">batch</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Las funciones array, que son invocadas con corchetes (</span><span class="rvts9">F[x]</span><span class="rvts6">), y las funciones subindicadas, que son las invocadas con corchetes y paréntesis (</span><span class="rvts9">F[x](y)</span><span class="rvts6">) se registran en la variable global </span><span class="rvts9">arrays</span><span class="rvts6">, no en </span><span class="rvts9">functions</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Las funciones Lisp no se registran en ninguna lista.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) F_1 (x) := x - 100;</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; F_1(x) := x - 100</span><br/><span class="rvts9">(%i2) F_2 (x, y) := x / y;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;F_2(x, y) := -</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;y</span><br/><span class="rvts9">(%i3) define (F_3 (x), sqrt (x));</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; F_3(x) := sqrt(x)</span><br/><span class="rvts9">(%i4) G_1 [x] := x - 100;</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;G_1 &nbsp;:= x - 100</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x</span><br/><span class="rvts9">(%i5) G_2 [x, y] := x / y;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; G_2 &nbsp; &nbsp; := -</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x, y &nbsp; &nbsp;y</span><br/><span class="rvts9">(%i6) define (G_3 [x], sqrt (x));</span><br/><span class="rvts9">(%o6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;G_3 &nbsp;:= sqrt(x)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x</span><br/><span class="rvts9">(%i7) H_1 [x] (y) := x^y;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;y</span><br/><span class="rvts9">(%o7) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; H_1 (y) := x</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x</span><br/><span class="rvts9">(%i8) functions;</span><br/><span class="rvts9">(%o8) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[F_1(x), F_2(x, y), F_3(x)]</span><br/><span class="rvts9">(%i9) arrays;</span><br/><span class="rvts9">(%o9) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [G_1, G_2, G_3, H_1]</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1298"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">fundef</span><span class="rvts18"> (f)</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve la definición de la función </span><span class="rvts18">f</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Cada argumento puede ser el nombre de una macro (definida mediante </span><span class="rvts9">::=</span><span class="rvts6">), una función ordinaria (definida mediante </span><span class="rvts9">:=</span><span class="rvts6"> o </span><span class="rvts9">define</span><span class="rvts6">), una función arreglo (definida mediante </span><span class="rvts9">:=</span><span class="rvts6"> o </span><span class="rvts9">define</span><span class="rvts6">, pero encerrando los argumentos dentro de corchetes </span><span class="rvts9">[ ]</span><span class="rvts6">), una función de subíndice (definida mediante </span><span class="rvts9">:=</span><span class="rvts6"> o </span><span class="rvts9">define</span><span class="rvts6">, pero encerrando algunos argumentos entre corchetes y otros entre paréntesis </span><span class="rvts9">( )</span><span class="rvts6">), una función de subíndice seleccionada por un subíndice variable, o una función de subíndice definida con un subíndice constante.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">fundef</span><span class="rvts6"> no evalúa sus argumentos; el operador comilla-comilla </span><span class="rvts9">''</span><span class="rvts6"> permite la evaluación.</span></p>
+<p class="rvps3"><span class="rvts6">La llamada de función </span><span class="rvts9">fundef (</span><span class="rvts19">f</span><span class="rvts9">)</span><span class="rvts6"> devuelve la definición de </span><span class="rvts18">f</span><span class="rvts6">. Por el contrario, </span><span class="rvts9">dispfun (</span><span class="rvts19">f</span><span class="rvts9">)</span><span class="rvts6"> crea una etiqueta intermedia y le asigna la definición a la etiqueta.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1299"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">funmake</span><span class="rvts18"> (F, [arg_1, ..., arg_n])</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve una expresión </span><span class="rvts19">F</span><span class="rvts9">(</span><span class="rvts19">arg_1</span><span class="rvts9">, ..., </span><span class="rvts19">arg_n</span><span class="rvts9">)</span><span class="rvts6">. El valor así retornado es simplificado pero no evaluado, de forma que la función </span><span class="rvts18">F</span><span class="rvts6"> no es invocada, incluso cuando exista.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">funmake</span><span class="rvts6"> no hace distinciones entre funciones array y funciones ordinarias; cuando </span><span class="rvts18">F</span><span class="rvts6"> es el nombre de una función array, </span><span class="rvts9">funmake</span><span class="rvts6"> devuelve </span><span class="rvts19">F</span><span class="rvts9">(...)</span><span class="rvts6">, esto es, una llamada a función con paréntesis en lugar de corchetes. La función </span><span class="rvts9">arraymake</span><span class="rvts6"> devuelve una llamada a función con corchetes para estos casos.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">funmake</span><span class="rvts6"> evalúa sus argumentos.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">funmake</span><span class="rvts6"> aplicada a una función ordinaria de Maxima.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) F (x, y) := y^2 - x^2;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp;2</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;F(x, y) := y &nbsp;- x</span><br/><span class="rvts9">(%i2) funmake (F, [a + 1, b + 1]);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;F(a + 1, b + 1)</span><br/><span class="rvts9">(%i3) ''%;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(b + 1) &nbsp;- (a + 1)</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">funmake</span><span class="rvts6"> aplicada a una macro.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) G (x) ::= (x - 1)/2;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x - 1</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;G(x) ::= -----</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9">(%i2) funmake (G, [u]);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; G(u)</span><br/><span class="rvts9">(%i3) ''%;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;u - 1</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -----</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">funmake</span><span class="rvts6"> aplicada a una función subindicada.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) H [a] (x) := (x - 1)^a;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;a</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; H (x) := (x - 1)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a</span><br/><span class="rvts9">(%i2) funmake (H [n], [%e]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; lambda([x], (x - 1) )(%e)</span><br/><span class="rvts9">(%i3) ''%;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;n</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (%e - 1)</span><br/><span class="rvts9">(%i4) funmake ('(H [n]), [%e]);</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;H (%e)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;n</span><br/><span class="rvts9">(%i5) ''%;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;n</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (%e - 1)</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">funmake</span><span class="rvts6"> aplicada a un símbolo que no está asociado a función alguna.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) funmake (A, [u]);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; A(u)</span><br/><span class="rvts9">(%i2) ''%;</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; A(u)</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">funmake</span><span class="rvts6"> evalúa sus argumentos, pero no el valor retornado.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) det(a,b,c) := b^2 -4*a*c;</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;det(a, b, c) := b &nbsp;- 4 a c</span><br/><span class="rvts9">(%i2) (x : 8, y : 10, z : 12);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;12</span><br/><span class="rvts9">(%i3) f : det;</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;det</span><br/><span class="rvts9">(%i4) funmake (f, [x, y, z]);</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;det(8, 10, 12)</span><br/><span class="rvts9">(%i5) ''%;</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 284</span></p>
+<p class="rvps3"><span class="rvts6">Maxima simplifica el valor retornado de </span><span class="rvts9">funmake</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) funmake (sin, [%pi / 2]);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1300"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">lambda</span><span class="rvts18"> ([x_1, ..., x_m], expr_1, ..., expr_n)</span></li>
+<li><a name="IDX1301"></a>
+<span class="rvts16">Function:</span><span class="rvts6"> </span><span class="rvts17">lambda</span><span class="rvts18"> ([[L]], expr_1, ..., expr_n)</span></li>
+<li><a name="IDX1302"></a>
+<span class="rvts16">Function:</span><span class="rvts6"> </span><span class="rvts17">lambda</span><span class="rvts18"> ([x_1, ..., x_m, [L]], expr_1, ..., expr_n)</span></li>
+<li class="rvps3"><span class="rvts6">Define y devuelve una expresión lambda (es decir, una función anónima). La función puede tener argumentos </span><span class="rvts18">x_1</span><span class="rvts6">, ..., </span><span class="rvts18">x_m</span><span class="rvts6"> y/o argumentos opcionales </span><span class="rvts18">L</span><span class="rvts6">, que aparecerán dentro del cuerpo de la función como una lista. El valor que devuelve la función es </span><span class="rvts18">expr_n</span><span class="rvts6">. Una expresión lambda puede asignarse a una variable y ser evaluada como si fuese una función ordinaria. Además, puede aparecer en algunos contextos en los que sea necesario un nombre de función.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Cuando se evalúa la función, se crean las variables </span><span class="rvts18">x_1</span><span class="rvts6">, ..., </span><span class="rvts18">x_m</span><span class="rvts6"> sin asignación de valores. Una función </span><span class="rvts9">lambda</span><span class="rvts6"> puede aparecer dentro de un </span><span class="rvts9">block</span><span class="rvts6"> o de otra </span><span class="rvts9">lambda</span><span class="rvts6">. Las variables locales se inicializan cada vez que se entra dentro de un nuevo bloque o de otra función </span><span class="rvts9">lambda</span><span class="rvts6">. Las variables locales se consideran globales dentro de un bloque o función </span><span class="rvts9">lambda</span><span class="rvts6"> anidado dentro del primero. Si una variable es no local dentro de un bloque o función </span><span class="rvts9">lambda</span><span class="rvts6">, su valor es el que le corresponde en el bloque o función </span><span class="rvts9">lambda</span><span class="rvts6"> superior. Este criterio se conoce con el nombre de "alcance dinámico".</span></p>
+<p class="rvps3"><span class="rvts6">Una vez establecidas las variables locales </span><span class="rvts18">expr_1</span><span class="rvts6"> a </span><span class="rvts18">expr_n</span><span class="rvts6"> son secuencialmente evaluadas. La variable especial </span><span class="rvts9">%%</span><span class="rvts6"> representa el valor de la expresión inmediata anterior. Las sentencias </span><span class="rvts9">throw</span><span class="rvts6"> y </span><span class="rvts9">catch</span><span class="rvts6"> pueden aparecer también en la lista de expresiones.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">return</span><span class="rvts6"> no puede aparecer en una expresión </span><span class="rvts9">lambda</span><span class="rvts6"> a menos que se encuentre acotada dentro de un bloque (</span><span class="rvts9">block</span><span class="rvts6">), en cuyo caso </span><span class="rvts9">return</span><span class="rvts6"> establece el valor de retorno del bloque, pero no de la expresión </span><span class="rvts9">lambda</span><span class="rvts6">, a menos que el bloque resulte ser precisamente </span><span class="rvts18">expr_n</span><span class="rvts6">. De igual manera, </span><span class="rvts9">go</span><span class="rvts6"> no puede aparecer en una expresión </span><span class="rvts9">lambda</span><span class="rvts6"> si no es dentro de un </span><span class="rvts9">block</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Las funciones </span><span class="rvts9">lambda</span><span class="rvts6"> no evalúan sus argumentos; el operador comilla-comilla </span><span class="rvts9">''</span><span class="rvts6"> permite su evaluación.</span></p>
+<p class="rvps3"><span class="rvts6">Ejemplo:</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Una función lambda puede asignarse a una variable y ser evaluada como si fuese una función ordinaria.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) f: lambda ([x], x^2);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;lambda([x], x )</span><br/><span class="rvts9">(%i2) f(a);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;a</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Una expresión lambda puede aparecer en algunos contextos en los que sea necesario un nombre de función.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i3) lambda ([x], x^2) (a);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;a</span><br/><span class="rvts9">(%i4) apply (lambda ([x], x^2), [a]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;a</span><br/><span class="rvts9">(%i5) map (lambda ([x], x^2), [a, b, c, d, e]);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; 2 &nbsp; 2 &nbsp; 2 &nbsp; 2</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [a , b , c , d , e ]</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Los argumentos son variables locales. Otras variables se consideran globales. Las variables globales son evaluadas en el momento que lo es la expresión, a menos que la evaluación de las mismas sea forzada, como cuando se hace uso de </span><span class="rvts9">''</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i6) a: %pi$</span><br/><span class="rvts9">(%i7) b: %e$</span><br/><span class="rvts9">(%i8) g: lambda ([a], a*b);</span><br/><span class="rvts9">(%o8) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; lambda([a], a b)</span><br/><span class="rvts9">(%i9) b: %gamma$</span><br/><span class="rvts9">(%i10) g(1/2);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; %gamma</span><br/><span class="rvts9">(%o10) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9">(%i11) g2: lambda ([a], a*''b);</span><br/><span class="rvts9">(%o11) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;lambda([a], a %gamma)</span><br/><span class="rvts9">(%i12) b: %e$</span><br/><span class="rvts9">(%i13) g2(1/2);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; %gamma</span><br/><span class="rvts9">(%o13) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Las expresiones lambda pueden anidarse. Las variables locales de expresiones lambda exteriores se consideran globales en expresiones internas, a menos que se enmascaren con variables locales de igual nombre.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i14) h: lambda ([a, b], h2: lambda ([a], a*b), h2(1/2));</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</span><br/><span class="rvts9">(%o14) &nbsp; &nbsp;lambda([a, b], h2 : lambda([a], a b), h2(-))</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9">(%i15) h(%pi, %gamma);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; %gamma</span><br/><span class="rvts9">(%o15) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Puesto que </span><span class="rvts9">lambda</span><span class="rvts6"> no evalúa sus argumentos, la expresión lambda </span><span class="rvts9">i</span><span class="rvts6"> de más abajo no define una función del tipo "multiplicar por </span><span class="rvts9">a</span><span class="rvts6">". Tal tipo de función se puede definir a través de </span><span class="rvts9">buildq</span><span class="rvts6">, como en la expresión lambda </span><span class="rvts9">i2</span><span class="rvts6"> de más abajo.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i16) i: lambda ([a], lambda ([x], a*x));</span><br/><span class="rvts9">(%o16) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;lambda([a], lambda([x], a x))</span><br/><span class="rvts9">(%i17) i(1/2);</span><br/><span class="rvts9">(%o17) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;lambda([x], a x)</span><br/><span class="rvts9">(%i18) i2: lambda([a], buildq([a: a], lambda([x], a*x)));</span><br/><span class="rvts9">(%o18) &nbsp; &nbsp;lambda([a], buildq([a : a], lambda([x], a x)))</span><br/><span class="rvts9">(%i19) i2(1/2);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x</span><br/><span class="rvts9">(%o19) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; lambda([x], -)</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span><br/><span class="rvts9">(%i20) i2(1/2)(%pi);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; %pi</span><br/><span class="rvts9">(%o20) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ---</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li class="rvps8" style="margin-left: 0"><span class="rvts6">Una expresión lambda puede tener un número variable de argumentos, los cuales se indican mediante </span><span class="rvts9">[</span><span class="rvts19">L</span><span class="rvts9">]</span><span class="rvts6">, bien sea solo o como un último argumento. Estos argumentos aparecerán dentro del cuerpo de la función en forma de lista.</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">(%i1) f : lambda ([aa, bb, [cc]], aa * cc + bb);</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;lambda([aa, bb, [cc]], aa cc + bb)</span><br/><span class="rvts9">(%i2) f (foo, %i, 17, 29, 256);</span><br/><span class="rvts9">(%o2) &nbsp; &nbsp; &nbsp; [17 foo + %i, 29 foo + %i, 256 foo + %i]</span><br/><span class="rvts9">(%i3) g : lambda ([[aa]], apply ("+", aa));</span><br/><span class="rvts9">(%o3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; lambda([[aa]], apply(+, aa))</span><br/><span class="rvts9">(%i4) g (17, 29, x, y, z, %e);</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;z + y + x + %e + 46</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1303"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">local</span><span class="rvts18"> (v_1, ..., v_n)</span></li>
+<li class="rvps3"><span class="rvts6">Declara las variables </span><span class="rvts18">v_1</span><span class="rvts6">, ..., </span><span class="rvts18">v_n</span><span class="rvts6"> locales respecto de todas las propiedades en la sentencia en la que aparece esta función.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">local</span><span class="rvts6"> no evalúa sus argumentos y devuelve </span><span class="rvts9">done</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">local</span><span class="rvts6"> sólo puede usarse dentro de un </span><span class="rvts9">block</span><span class="rvts6">, en el cuerpo de definición de funciones o de expresiones </span><span class="rvts9">lambda</span><span class="rvts6"> o en la función </span><span class="rvts9">ev</span><span class="rvts6">, siéndole permitido aparecer una sóla vez en cada una de ellas.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">local</span><span class="rvts6"> es independiente de </span><span class="rvts9">context</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1304"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">macroexpansion</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">false</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La variable </span><span class="rvts9">macroexpansion</span><span class="rvts6"> controla si la expansión (esto es, el valor de retorno) de una función macro se sustituye por la llamada a la función macro. Una sustitución puede acelerar futuras evaluaciones de la expresión, bajo el coste que implica tener que almacenar la expansión.</span></p>
+<ul style="text-indent: 0px; margin-left: 40px; list-style-position: outside;">
+<li><span class="rvts9">false</span></li>
+<li class="rvps3"><span class="rvts6">La expansión de una función macro no se sustituye por la llamada a la función macro.</span></li>
+<li><span class="rvts9">expand</span></li>
+<li class="rvps3"><span class="rvts6">La primera vez que se evalúa una llamada a función macro se almacena la expansión. De esta manera la expansión no se recalcula en llamadas posteriores; cualesquiera efectos laterales (como </span><span class="rvts9">print</span><span class="rvts6"> o asignaciones a variables globales) tan solo tienen lugar la primera vez que la función macro es evaluada. La expansión en una expresión no afecta a otras expresiones que llamen a la misma función macro.</span></li>
+<li><span class="rvts9">displace</span></li>
+<li class="rvps3"><span class="rvts6">La primera vez que se evalúa una llamada a una función macro, la expansión se sustituye por la llamada, modificando así la expresión desde la que se hizo la llamada a la función macro. La expansión no se recalcula en llamadas posteriores; cualesquiera efectos laterales tan solo tienen lugar la primera vez que la función macro es evaluada. La expansión en una expresión no afecta a otras expresiones que llamen a la misma función macro.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Ejemplos:</span></p>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">macroexpansion</span><span class="rvts6"> vale </span><span class="rvts9">false</span><span class="rvts6">, una función macro es llamada cada vez que la expresión de llamada es evaluada.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) f (x) := h (x) / g (x);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;h(x)</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; f(x) := ----</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;g(x)</span><br/><span class="rvts9">(%i2) g (x) ::= block (print ("x + 99 is equal to", x),</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return (x + 99));</span><br/><span class="rvts9">(%o2) g(x) ::= block(print("x + 99 is equal to", x), </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return(x + 99))</span><br/><span class="rvts9">(%i3) h (x) ::= block (print ("x - 99 is equal to", x),</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return (x - 99));</span><br/><span class="rvts9">(%o3) h(x) ::= block(print("x - 99 is equal to", x), </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return(x - 99))</span><br/><span class="rvts9">(%i4) macroexpansion: false;</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; false</span><br/><span class="rvts9">(%i5) f (a * b);</span><br/><span class="rvts9">x - 99 is equal to x </span><br/><span class="rvts9">x + 99 is equal to x </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;a b - 99</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;a b + 99</span><br/><span class="rvts9">(%i6) dispfun (f);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;h(x)</span><br/><span class="rvts9">(%t6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; f(x) := ----</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;g(x)</span><br/><span class="rvts9">(%o6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; done</span><br/><span class="rvts9">(%i7) f (a * b);</span><br/><span class="rvts9">x - 99 is equal to x </span><br/><span class="rvts9">x + 99 is equal to x </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;a b - 99</span><br/><span class="rvts9">(%o7) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;a b + 99</span></p>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">macroexpansion</span><span class="rvts6"> vale </span><span class="rvts9">expand</span><span class="rvts6">, una función macro tan solo es llamada una vez.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) f (x) := h (x) / g (x);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;h(x)</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; f(x) := ----</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;g(x)</span><br/><span class="rvts9">(%i2) g (x) ::= block (print ("x + 99 is equal to", x),</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return (x + 99));</span><br/><span class="rvts9">(%o2) g(x) ::= block(print("x + 99 is equal to", x), </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return(x + 99))</span><br/><span class="rvts9">(%i3) h (x) ::= block (print ("x - 99 is equal to", x),</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return (x - 99));</span><br/><span class="rvts9">(%o3) h(x) ::= block(print("x - 99 is equal to", x), </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return(x - 99))</span><br/><span class="rvts9">(%i4) macroexpansion: expand;</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;expand</span><br/><span class="rvts9">(%i5) f (a * b);</span><br/><span class="rvts9">x - 99 is equal to x </span><br/><span class="rvts9">x + 99 is equal to x </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;a b - 99</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;a b + 99</span><br/><span class="rvts9">(%i6) dispfun (f);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;h(x)</span><br/><span class="rvts9">(%t6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; f(x) := ----</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;g(x)</span><br/><span class="rvts9">(%o6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; done</span><br/><span class="rvts9">(%i7) f (a * b);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;a b - 99</span><br/><span class="rvts9">(%o7) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;a b + 99</span></p>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">macroexpansion</span><span class="rvts6"> vale </span><span class="rvts9">expand</span><span class="rvts6">, una función macro es llamada una vez y la expresión de llamada se modifica.</span></p>
+<p class="rvps4"><span class="rvts9">(%i1) f (x) := h (x) / g (x);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;h(x)</span><br/><span class="rvts9">(%o1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; f(x) := ----</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;g(x)</span><br/><span class="rvts9">(%i2) g (x) ::= block (print ("x + 99 is equal to", x), return (x + 99));</span><br/><span class="rvts9">(%o2) g(x) ::= block(print("x + 99 is equal to", x), </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return(x + 99))</span><br/><span class="rvts9">(%i3) h (x) ::= block (print ("x - 99 is equal to", x), return (x - 99));</span><br/><span class="rvts9">(%o3) h(x) ::= block(print("x - 99 is equal to", x), </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return(x - 99))</span><br/><span class="rvts9">(%i4) macroexpansion: displace;</span><br/><span class="rvts9">(%o4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; displace</span><br/><span class="rvts9">(%i5) f (a * b);</span><br/><span class="rvts9">x - 99 is equal to x </span><br/><span class="rvts9">x + 99 is equal to x </span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;a b - 99</span><br/><span class="rvts9">(%o5) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;a b + 99</span><br/><span class="rvts9">(%i6) dispfun (f);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x - 99</span><br/><span class="rvts9">(%t6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;f(x) := ------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x + 99</span><br/><span class="rvts9">(%o6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; done</span><br/><span class="rvts9">(%i7) f (a * b);</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;a b - 99</span><br/><span class="rvts9">(%o7) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------</span><br/><span class="rvts9"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;a b + 99</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1305"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">mode_checkp</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">true</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Cuando </span><span class="rvts9">mode_checkp</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, </span><span class="rvts9">mode_declare</span><span class="rvts6"> chequea los modos de las variables con valores asignados.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1306"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">mode_check_errorp</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">false</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Cuando </span><span class="rvts9">mode_check_errorp</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, </span><span class="rvts9">mode_declare</span><span class="rvts6"> llama a error.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1307"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">mode_check_warnp</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">true</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Cuando </span><span class="rvts9">mode_check_warnp</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, se detallan los errores de modo.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1308"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">mode_declare</span><span class="rvts18"> (y_1, modo_1, ..., y_n, modo_n)</span></li>
+<li class="rvps3"><span class="rvts6">La función </span><span class="rvts9">mode_declare</span><span class="rvts6"> se utiliza para declarar los modos de variables y funciones para la ulterior traducción a Lisp o compilación de funciones. Se coloca habitualmente al comienzo de la definición de una función, de un script en Maxima o se ejecuta en tiempo real.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Los argumentos de </span><span class="rvts9">mode_declare</span><span class="rvts6"> son pares formados por una variable y un modo, el cual debe ser </span><span class="rvts9">boolean</span><span class="rvts6">, </span><span class="rvts9">fixnum</span><span class="rvts6">, </span><span class="rvts9">number</span><span class="rvts6">, </span><span class="rvts9">rational</span><span class="rvts6"> o </span><span class="rvts9">float</span><span class="rvts6">. Cada variable puede ser sustituida por una lista de variables, en cuyo caso todas ellas tendrán el mismo modo.</span></p>
+<p class="rvps3"><span class="rvts6">Código numérico que utilice arreglos puede ejecutarse más rápido declarando el tamaño que va a ocupar el arreglo, como en:</span></p>
+<p class="rvps4"><span class="rvts9">mode_declare (array (a [10, 10]), float)</span></p>
+<p class="rvps3"><span class="rvts6">para un arreglo de números en coma flotante de dimensiones 10 x 10.</span></p>
+<p class="rvps3"><span class="rvts6">Se puede declarar el modo del resultado de una función poniendo </span><span class="rvts9">function (f_1, f_2, ...)</span><span class="rvts6"> como argumento; aquí </span><span class="rvts9">f_1</span><span class="rvts6">, </span><span class="rvts9">f_2</span><span class="rvts6">, ... son los nombres de las funciones. Por ejemplo, la expresión</span></p>
+<p class="rvps4"><span class="rvts9">mode_declare ([function (f_1, f_2, ...)], fixnum)</span></p>
+<p class="rvps3"><span class="rvts6">declara que el valor a devolver por </span><span class="rvts9">f_1</span><span class="rvts6">, </span><span class="rvts9">f_2</span><span class="rvts6">, ... son enteros de modo "single-word".</span></p>
+<p class="rvps3"><span class="rvts6">El nombre </span><span class="rvts9">modedeclare</span><span class="rvts6"> es sinónimo de </span><span class="rvts9">mode_declare</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1309"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">mode_identity</span><span class="rvts18"> (arg_1, arg_2)</span></li>
+<li class="rvps3"><span class="rvts6">Es una forma especial usada con </span><span class="rvts9">mode_declare</span><span class="rvts6"> y </span><span class="rvts9">macros</span><span class="rvts6"> para declarar, por ejemplo, una lista de listas de números.</span></li>
+<li><a name="IDX1310"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">transcompile</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">true</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">transcompile</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, </span><span class="rvts9">translate</span><span class="rvts6"> y </span><span class="rvts9">translate_file</span><span class="rvts6"> generan declaraciones para hacer el código traducido más apto para la compilación.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">compfile</span><span class="rvts6"> hace la asignación </span><span class="rvts9">transcompile: true</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1311"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">translate</span><span class="rvts18"> (f_1, ..., f_n)</span></li>
+<li><a name="IDX1312"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">translate</span><span class="rvts18"> (functions)</span></li>
+<li><a name="IDX1313"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">translate</span><span class="rvts18"> (all)</span></li>
+<li class="rvps3"><span class="rvts6">Traduce las funciones definidas por el usuario </span><span class="rvts18">f_1</span><span class="rvts6">, ..., </span><span class="rvts18">f_n</span><span class="rvts6"> del lenguaje de Maxima a Lisp y evalúa las traducciones Lisp. Normalmente las funciones traducidas se ejecutan más rapidamente que las originales.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Las llamadas </span><span class="rvts9">translate (all)</span><span class="rvts6"> o </span><span class="rvts9">translate (functions)</span><span class="rvts6"> traducen todas las funciones de usuario.</span></p>
+<p class="rvps3"><span class="rvts6">Las funciones a ser traducidas deberían incluir una llamada a </span><span class="rvts9">mode_declare</span><span class="rvts6"> al comienzo siempre que sea posible, a fin de producir código más eficiente. Por ejemplo:</span></p>
+<p class="rvps4"><span class="rvts9">f (x_1, x_2, ...) := block ([v_1, v_2, ...],</span><br/><span class="rvts9"> &nbsp; &nbsp;mode_declare (v_1, modo_1, v_2, modo_2, ...), ...)</span></p>
+<p class="rvps3"><span class="rvts6">donde </span><span class="rvts18">x_1</span><span class="rvts6">, </span><span class="rvts18">x_2</span><span class="rvts6">, ... son los parámetros que se pasan a la función y </span><span class="rvts18">v_1</span><span class="rvts6">, </span><span class="rvts18">v_2</span><span class="rvts6">, ... son las variables locales.</span></p>
+<p class="rvps3"><span class="rvts6">Los nombres de las funciones traducidas son eliminados de la lista </span><span class="rvts9">functions</span><span class="rvts6"> si </span><span class="rvts9">savedef</span><span class="rvts6"> vale </span><span class="rvts9">false</span><span class="rvts6"> (ver más abajo) y son añadidos a las listas </span><span class="rvts9">props</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Las funciones no deberían ser traducidas hasta no estar completamente depuradas.</span></p>
+<p class="rvps3"><span class="rvts6">Se supone que las expresiones están simplificadas; en caso de no estarlo, se generará código correcto pero ineficiente. Así, el usuario no debería asignar a </span><span class="rvts9">simp</span><span class="rvts6"> el valor </span><span class="rvts9">false</span><span class="rvts6">, el cual inhibe la simplificación de la expresión a ser traducida.</span></p>
+<p class="rvps3"><span class="rvts6">Cuando la variable </span><span class="rvts9">translate</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, se traducen automáticamente las funciones de usuario a Lisp.</span></p>
+<p class="rvps3"><span class="rvts6">Nótese que las funciones traducidas puede que no se ejecuten exactamente igual a como lo hacían antes de la traducción, debido a posibles incompatibilidades entre las versiones de Maxima y Lisp. En general, la función </span><span class="rvts9">rat</span><span class="rvts6"> con más de un argumento y la función </span><span class="rvts9">ratvars</span><span class="rvts6"> no deberían utilizarse si algunas de las variables son declaradas como expresiones racionales canónicas (CRE) mediante </span><span class="rvts9">mode_declare</span><span class="rvts6">. Además, la asignación </span><span class="rvts9">prederror: false</span><span class="rvts6"> no traducirá.</span></p>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">savedef</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, entonces la versión de Maxima de una función de usuario permanecerá cuando la función sea traducida por </span><span class="rvts9">translate</span><span class="rvts6">. Con esto se hace posible que se muestre la definición llamando a </span><span class="rvts9">dispfun</span><span class="rvts6"> y que la función sea editada.</span></p>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">transrun</span><span class="rvts6"> vale </span><span class="rvts9">false</span><span class="rvts6"> entonces las versiones interpretadas de todas las funciones serán ejecutadas en lugar de las versiones traducidas.</span></p>
+<p class="rvps3"><span class="rvts6">El resultado devuelto por </span><span class="rvts9">translate</span><span class="rvts6"> es una lista con los nombres de las funciones traducidas.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1314"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">translate_file</span><span class="rvts18"> (nombre_fichero_maxima)</span></li>
+<li><a name="IDX1315"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">translate_file</span><span class="rvts18"> (nombre_fichero_maxima, nombre_fichero_lisp)</span></li>
+<li class="rvps3"><span class="rvts6">Traduce un fichero en código Maxima a un fichero en código Lisp. La función </span><span class="rvts9">translate_file</span><span class="rvts6"> devuelve una lista con los nombres de tres ficheros: el nombre del ficheero en Maxima, el nombre del fichero en Lisp y el nombre del fichero que contiene información adicional sobre la traducción. La función </span><span class="rvts9">translate_file</span><span class="rvts6"> evalúa sus argumentos.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La llamada </span><span class="rvts9">translate_file ("foo.mac"); load("foo.LISP")</span><span class="rvts6"> es lo mismo que </span><span class="rvts9">batch ("foo.mac")</span><span class="rvts6">, excepto por la presencia de ciertas restricciones, como el uso de </span><span class="rvts9">''</span><span class="rvts6"> y </span><span class="rvts9">%</span><span class="rvts6">, por ejemplo.</span></p>
+<p class="rvps3"><span class="rvts6">La llamada </span><span class="rvts9">translate_file (</span><span class="rvts19">nombre_fichero_maxima</span><span class="rvts9">)</span><span class="rvts6"> traduce un fichero en Maxima, </span><span class="rvts18">nombre_fichero_maxima</span><span class="rvts6">, a otro en Lisp de nombre similar. Por ejemplo, </span><span class="rvts9">foo.mac</span><span class="rvts6"> se traduce en </span><span class="rvts9">foo.LISP</span><span class="rvts6">. El nombre del fichero en Maxima puede incluir el nombre de un directorio, en cuyo caso el fichero de salida Lisp se guardará en el mismo directorio desde el que se leyó la fuente Maxima.</span></p>
+<p class="rvps3"><span class="rvts6">La llamada </span><span class="rvts9">translate_file (</span><span class="rvts19">nombre_fichero_maxima</span><span class="rvts9">, </span><span class="rvts19">nombre_fichero_lisp</span><span class="rvts9">)</span><span class="rvts6"> traduce el fichero Maxima </span><span class="rvts18">nombre_fichero_maxima</span><span class="rvts6"> en el fichero Lisp </span><span class="rvts18">nombre_fichero_lisp</span><span class="rvts6">. La función </span><span class="rvts9">translate_file</span><span class="rvts6"> ignora la extensión del fichero, en caso de que exista, de </span><span class="rvts9">nombre_fichero_lisp</span><span class="rvts6">; la extensión del fichero de salida Lisp será invariablemente </span><span class="rvts9">LISP</span><span class="rvts6">. El nombre del fichero Lisp puede incluir la ruta del directorio, en cuyo caso se almacenará en el directorio especificado.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">translate_file</span><span class="rvts6"> también escribe un fichero de mensajes de avisos del traductor con diversos niveles de gravedad. La extensión de este fichero es </span><span class="rvts9">UNLISP</span><span class="rvts6">. Este fichero puede contener información valiosa, aunque de difícil interpretación, para detectar fallos en el código traducido. El fichero </span><span class="rvts9">UNLISP</span><span class="rvts6"> se guarda siempre en el mismo directorio desde el que se leyó la fuente de Maxima.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">translate_file</span><span class="rvts6"> emite código Lisp que incluye algunas declaraciones y definiciones que entran en efecto tan pronto como el código Lisp es compilado. Véase </span><span class="rvts9">compile_file</span><span class="rvts6"> para más información sobre este particular.</span></p>
+<p class="rvps3"><span class="rvts6">Véanse también </span><span class="rvts9">tr_array_as_ref</span><span class="rvts6">, </span><span class="rvts9">tr_bound_function_applyp</span><span class="rvts6">, </span><span class="rvts9">tr_exponent</span><span class="rvts6">, </span><span class="rvts9">tr_file_tty_messagesp</span><span class="rvts6">, </span><span class="rvts9">tr_float_can_branch_complex</span><span class="rvts6">, </span><span class="rvts9">tr_function_call_default</span><span class="rvts6">, </span><span class="rvts9">tr_numer</span><span class="rvts6">, </span><span class="rvts9">tr_optimize_max_loop</span><span class="rvts6">, </span><span class="rvts9">tr_semicompile</span><span class="rvts6">, </span><span class="rvts9">tr_state_vars</span><span class="rvts6">, </span><span class="rvts9">tr_warnings_get</span><span class="rvts6">, </span><span class="rvts9">tr_warn_bad_function_calls</span><span class="rvts6">, </span><span class="rvts9">tr_warn_fexpr</span><span class="rvts6">, </span><span class="rvts9">tr_warn_meval</span><span class="rvts6">, </span><span class="rvts9">tr_warn_mode</span><span class="rvts6">, </span><span class="rvts9">tr_warn_undeclared</span><span class="rvts6">, </span><span class="rvts9">tr_warn_undefined_variable</span><span class="rvts6">, y </span><span class="rvts9">tr_windy</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1316"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">transrun</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">true</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">transrun</span><span class="rvts6"> vale </span><span class="rvts9">false</span><span class="rvts6"> entonces se ejecutarán las versiones interpretadas de todas las funciones, en lugar de las versiones traducidas.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1317"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">tr_array_as_ref</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">true</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">translate_fast_arrays</span><span class="rvts6"> vale </span><span class="rvts9">false</span><span class="rvts6">, referencias de arreglos en el código Lisp creadas por </span><span class="rvts9">translate_file</span><span class="rvts6"> se ven afectadas por </span><span class="rvts9">tr_array_as_ref</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">El valor de la variable </span><span class="rvts9">tr_array_as_ref</span><span class="rvts6"> no tiene ningún efecto cuando </span><span class="rvts9">translate_fast_arrays</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1318"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">tr_bound_function_applyp</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">true</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">tr_bound_function_applyp</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, Maxima envía un aviso si encuentra una variable con valor asignado que está siendo utilizada como una función. </span><span class="rvts9">tr_bound_function_applyp</span><span class="rvts6"> no influye en el código generado bajo estas circunstancias.</span></p>
+<p class="rvps3"><span class="rvts6">Por ejemplo, una expresión como </span><span class="rvts9">g (f, x) := f (x+1)</span><span class="rvts6"> provocará un mensaje de esta naturaleza.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1319"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">tr_file_tty_messagesp</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">false</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">tr_file_tty_messagesp</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, los mensajes generados por </span><span class="rvts9">translate_file</span><span class="rvts6"> durante la traducción de un fichero se muestran en la consola y se insertan en el fichero UNLISP. Si vale </span><span class="rvts9">false</span><span class="rvts6">, los mensajes sobre la traducción del fichero sólo se incorporan al fichero UNLISP.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1320"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">tr_float_can_branch_complex</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">true</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Le dice al traductor de Maxima a Lisp que las funciones </span><span class="rvts9">acos</span><span class="rvts6">, </span><span class="rvts9">asin</span><span class="rvts6">, </span><span class="rvts9">asec</span><span class="rvts6"> y </span><span class="rvts9">acsc</span><span class="rvts6"> pueden devolver valores complejos.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1321"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">tr_function_call_default</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">general</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">El valor </span><span class="rvts9">false</span><span class="rvts6"> significa llama a </span><span class="rvts9">meval</span><span class="rvts6">, </span><span class="rvts9">expr</span><span class="rvts6"> significa que Lisp asignó los argumentos de la función, </span><span class="rvts9">general</span><span class="rvts6">, el valor por defecto, devuelve código apropiado para </span><span class="rvts9">mexprs</span><span class="rvts6"> y </span><span class="rvts9">mlexprs</span><span class="rvts6"> pero no para </span><span class="rvts9">macros</span><span class="rvts6">. La opción </span><span class="rvts9">general</span><span class="rvts6"> asegura que las asignaciones de las variables son correctas en el código compilado. En modo </span><span class="rvts9">general</span><span class="rvts6">, cuando se traduce F(X), si F es una variable con valor, entonces se entiende que se quiere calcular </span><span class="rvts9">apply (f, [x])</span><span class="rvts6">, y como tal se traduce, con el apropiado aviso. No es necesario desactivar esto. Con los valores por defecto la falta de mensajes de aviso implica compatibilidad completa entre el código traducido y compilado con el interpretado por Maxima.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1322"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">tr_numer</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">false</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">tr_numer</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6"> se utilizan las propiedades numéricas en aquellos átomos que las posean, como en </span><span class="rvts9">%pi</span><span class="rvts6">.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1323"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">tr_optimize_max_loop</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: 100</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">El valor de </span><span class="rvts9">tr_optimize_max_loop</span><span class="rvts6"> es el número máximo de veces que el traductor repetirá la macro-expansión y la optimización en el tratamiento de una expresión.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1324"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">tr_semicompile</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">false</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Si </span><span class="rvts9">tr_semicompile</span><span class="rvts6"> vale </span><span class="rvts9">true</span><span class="rvts6">, las salidas de </span><span class="rvts9">translate_file</span><span class="rvts6"> y </span><span class="rvts9">compfile</span><span class="rvts6"> serán macro-expandidas pero no compiladas a código máquina por el compilador de Lisp.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1325"></a>
+<span class="rvts16">Variable del sistema:</span><span class="rvts6"> </span><span class="rvts17">tr_state_vars</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto:</span></li>
+</ul>
+<p class="rvps4"><span class="rvts9">[transcompile, tr_semicompile, tr_warn_undeclared, tr_warn_meval,</span><br/><span class="rvts9">tr_warn_fexpr, tr_warn_mode, tr_warn_undefined_variable,</span><br/><span class="rvts9">tr_function_call_default, tr_array_as_ref,tr_numer]</span></p>
+<p class="rvps3"><span class="rvts6">Es la lista de variables que afectan la forma en que se obtiene la salida del código traducido. Esta información es útil para desarrolladores que pretendan corregir posibles fallos del traductor. Comparando el código traducido con el que se debería obtener bajo unas ciertas condiciones, es posible hacer el seguimiento de los fallos.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1326"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">tr_warnings_get</span><span class="rvts18"> ()</span></li>
+<li class="rvps3"><span class="rvts6">Devuelve una lista con los avisos dados por el traductor.</span></li>
+<li><a name="IDX1327"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">tr_warn_bad_function_calls</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">true</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Devuelve un aviso cuando se hacen llamadas a funciones que quizás no sean correctas debido a declaraciones inapropiadas realizadas durante la traducción.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1328"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">tr_warn_fexpr</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">compfile</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Devuelve un aviso si se encuentra con alguna FEXPR. Las FEXPR no deberían aparecer en el código traducido.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1329"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">tr_warn_meval</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">compfile</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Devuelve un aviso si la función </span><span class="rvts9">meval</span><span class="rvts6"> es llamada. Si </span><span class="rvts9">meval</span><span class="rvts6"> es invocada, es señal de la presencia de problemas en la traducción.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1330"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">tr_warn_mode</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">all</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Devuelve un aviso cuando a las variables se les asignan valores incompatibles con su modo.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1331"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">tr_warn_undeclared</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">compile</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Determina cuando enviar mensajes sobre variables no declaradas.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1332"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">tr_warn_undefined_variable</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">all</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Devuelve un aviso cuando se detectan variables globales no definidas.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1333"></a>
+<span class="rvts16">Variable opcional:</span><span class="rvts6"> </span><span class="rvts17">tr_windy</span></li>
+<li class="rvps3"><span class="rvts6">Valor por defecto: </span><span class="rvts9">true</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">Genera comentarios de ayuda y consejos sobre programación.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1334"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">compile_file</span><span class="rvts18"> (nombre_fich)</span></li>
+<li><a name="IDX1335"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">compile_file</span><span class="rvts18"> (nombre_fich, nombre_fich_compilado)</span></li>
+<li><a name="IDX1336"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">compile_file</span><span class="rvts18"> (nombre_fich, nombre_fich_compilado, nombre_fich_lisp)</span></li>
+<li class="rvps3"><span class="rvts6">Traduce el fichero Maxima </span><span class="rvts18">nombre_fich</span><span class="rvts6"> a Lisp, ejecuta el compilador de Lisp y, en caso de ser exitosa la compilación, carga el código compilado en Maxima.</span></li>
+</ul>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">compile_file</span><span class="rvts6"> devuelve una lista con los nombres de tres ficheros: el fichero original en Maxima, la traducción Lisp, notas sobre la traducción y el código compilado. Si la compilación falla, el cuarto elemento es </span><span class="rvts9">false</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Algunas declaraciones y definiciones entran en efecto tan pronto como el código Lisp es compilado (sin cargar el código compilado). Éstas incluyen funciones definidas con el operador </span><span class="rvts9">:=</span><span class="rvts6">, macros definidas con el operador </span><span class="rvts9">::=</span><span class="rvts6">, </span><span class="rvts9">alias</span><span class="rvts6">, </span><span class="rvts9">declare</span><span class="rvts6">, </span><span class="rvts9">define_variable</span><span class="rvts6">, </span><span class="rvts9">mode_declare</span><span class="rvts6"> y </span><span class="rvts9">infix</span><span class="rvts6">, </span><span class="rvts9">matchfix</span><span class="rvts6">, </span><span class="rvts9">nofix</span><span class="rvts6">, </span><span class="rvts9">postfix</span><span class="rvts6">, </span><span class="rvts9">prefix</span><span class="rvts6"> y </span><span class="rvts9">compfile</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">Asignaciones y llamadas a funciones no se evalúan hasta que el código compilado es cargado. En particular, dentro del fichero Maxima, asignaciones a los controles ("flags") de traducción (</span><span class="rvts9">tr_numer</span><span class="rvts6">, etc.) no tienen efecto durante la traducción.</span></p>
+<p class="rvps3"><span class="rvts6">El </span><span class="rvts18">nombre_fich</span><span class="rvts6"> no puede contener sentencias del tipo </span><span class="rvts9">:lisp</span><span class="rvts6">.</span></p>
+<p class="rvps3"><span class="rvts6">La función </span><span class="rvts9">compile_file</span><span class="rvts6"> evalúa sus argumentos.</span></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside;">
+<li><a name="IDX1337"></a>
+<span class="rvts16">Función:</span><span class="rvts6"> </span><span class="rvts17">declare_translated</span><span class="rvts18"> (f_1, f_2, ...)</span></li>
+<li class="rvps3"><span class="rvts6">Cuando se traduce un fichero de código Maxima a Lisp, es importante para el traductor saber qué funciones de las que están en el fichero van a ser llamadas como traducidas o compiladas, y cuáles son simplemente funciones Maxima o que no están definidas. Se genera el código </span><span class="rvts9">(MFUNCTION-CALL fn arg1 arg2 ...)</span><span class="rvts6"> cuando el traductor no sabe si </span><span class="rvts9">fn</span><span class="rvts6"> va a ser una función lisp.</span></li>
+<hr style="height: 6px;"/></li>
+</ul>
+<div><table border="0" cellpadding="1" cellspacing="1" style="border-width: 0px;">
+<tr valign="top">
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="DefinicindeFunciones.html#SEC150"> &lt;&lt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_40.html#SEC157"> &gt;&gt; </a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">&nbsp;</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima.html#SEC_Top">Top</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_toc.html#SEC_Contents">Contents</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_76.html#SEC287">Index</a><span class="rvts6">]</span></p>
+</td>
+<td valign="middle"><p><span class="rvts6">[</span><a class="rvts7" href="maxima_abt.html#SEC_About"> ? </a><span class="rvts6">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps3"><span class="rvts10">This document was generated by </span><span class="rvts11">Robert Dodier</span><span class="rvts10"> on </span><span class="rvts11">agosto, 25 2007</span><span class="rvts10"> using </span><a class="rvts12" href="http://texi2html.cvshome.org/">texi2html 1.76</a><span class="rvts10">.</span></p>
+<p></p>
+<p class="rvps6"><span class="rvts13">Created with the Personal Edition of HelpNDoc: </span><a class="rvts14" href="http://www.helpndoc.com/feature-tour">Easily create Help documents</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				http://maxima.sourceforge.net</div>
+		</div>
+	</body>
+	
+</html>
+

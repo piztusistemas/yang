@@ -1,0 +1,1211 @@
+
+<!-- saved from url=(0064)http://www-com.physik.hu-berlin.de/~bunk/kurs/maxima/maxima.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Maxima Overview</title>
+<style type="text/css">@media print { #feedlyMiniIcon { display: none; } }</style></head>
+
+<body>
+<center>
+<h1>Maxima Overview</h1>
+Burkhard Bunk
+<br>
+19.3.2013
+<br>
+Maxima version: 5.21.1
+<br>
+wxMaxima version: 0.8.5
+</center>
+
+
+<h2>Documentation</h2>
+
+<pre>/usr/share/doc/maxima-doc/html/intromax.html    introduction
+/usr/share/doc/maxima-doc/html/maxima_toc.html  full help
+</pre>
+
+
+<h2>Invocation, Help</h2>
+
+<pre>Text mode:
+      unix&gt; maxima
+      interrupt a maxima calculation with
+            &lt;CTRL&gt;-G
+      terminate maxima with
+            quit();
+
+GUI:
+      unix&gt; xmaxima
+      unix&gt; wxmaxima
+
+Help:
+      GUI -&gt;Help
+      descripe(string);
+      ? string;               /* note the <b>space</b> after "?" */
+</pre>
+A perfect way to <b>restart maxima</b> does not exist (see
+<a href="http://www.math.utexas.edu/pipermail/maxima/2007/005316.html">
+      mailing list</a>), use
+<pre>      reset();
+      kill(all);
+</pre>
+
+
+<h2>Commands and Expressions</h2>
+
+<pre>Terminate commands with ";" or "$" (quiet mode).
+
+command prompts:  (%i1)  (%i2)  ..
+output labels:    (%o1)  (%o2)  ..
+
+Previous result:              %
+Former output, e.g. (%o5):    %o5
+Redo command, e.g. (%i5) :    ''%i5;
+
+Operators:              + - * / ^ **  ( )  ! !!
+Comparison:             = # &gt; &lt; &gt;= &lt;=           /* "#" is "not equal" */
+Logical:                and or not
+
+Text strings are written as "text".
+</pre>
+
+
+<h2>Names</h2>
+
+Names consist of letters, digits, % (percent) and _ (underscore). 
+Letters are case sensitive, but predefined names are mapped to
+upper case. Special characters (other than "%" and "_") are allowed
+after declaring them alphabetic as in
+<pre>      declare("$", alphabetic);
+</pre>
+Pre-defined constants:
+<pre>      %i %pi %e true false
+      %gamma      Euler's constant
+      %phi        (1 + sqrt(5))/2
+      inf         real infinity
+      minf        real (-infinity)
+      infinity    complex infinity
+</pre>
+Pre-defined functions:
+<pre>      sqrt  log  exp
+      sin ..  asin ..
+      sinh ..  asinh ..
+      gamma
+      zeta
+      binomial
+      mod  floor
+      ..
+</pre>
+Reserved names:
+<pre>      integrate   next        from        diff            
+      in          at          limit       sum             
+      for         and         elseif      then            
+      else        do          or          if
+      unless      product     while       thru            
+      step                                                                     
+</pre>
+Manage user-defined variables:
+<pre>      values                  list of all user defined variables
+      remvalue(var);          delete the value of var
+      remvalue(all);          delete the values of all variables
+</pre>
+
+
+<h2>Assignment</h2>
+
+<pre>Assignment: :     (without "="!)
+            ::    ??
+            :=    defines a function
+            ::=   defines a macro
+
+Unassign names:
+      kill(name1, name2, ..);
+      kill(all);
+
+      xmaxima:    -&gt;File -&gt;Restart
+      wxMaxima:   -&gt;Maxima -&gt;Restart maxima
+</pre>
+
+
+<h2>Lists</h2>
+
+<pre>      lst: [el1, el2, ...];         contruct list explicitly
+      lst[2];                       reference to element by index
+                                          (starting from 1)
+
+      cons(expr, alist);            prepend expr to alist
+      endcons(expr, alist);         append expr to alist
+      append(list1, list2, ..);     merge lists
+      makelist(expr, i, i1, i2);    create list with control variable i
+      makelist(expr, x, xlist);     create list with x from another list     
+
+      length(alist);                returns #elements
+
+      map(fct, list);               evaluate a function of one argument
+      map(fct, list1, list2);       evaluate a function of two arguments
+</pre>
+
+
+<h2>Evaluation</h2>
+
+
+<h3>- automatic</h3>
+
+Many expressions are evaluated automatically: before the are processed,
+substitutions and obvious simplifications are preformed.
+
+
+<h3>- explicit</h3>
+
+Sometimes, this should be prevented (e.g. when defining a differential equation),
+in other cases, an extra evaluation is required (e.g. after changing an item
+in an expression):
+<pre>      'expr              don't evalute
+      ''expr             do evaluate
+e.g.
+      a: b+c;
+            c + b
+      b:5$
+      a;
+            c + b
+      ''a;
+            c + 5
+      'b + c;
+            c + b
+</pre>
+Evalutate variables, based on equations:
+<pre>      at(expr, var=ex);
+      at(expr, [var1=ex1, var2=ex2, ..]);
+
+e.g.  at(diff(sin(x), x), x=%pi);
+            -1      
+</pre>
+Evaluate with additional settings/flags:
+<pre>      ev(expr, arg1, arg2...);
+      expr, arg1, arg2, ...;        same in short
+            args: numer
+                  float
+                  bfloat
+                  simpsum
+                  eval
+                  ...
+</pre>
+Many of the evalutation switches (e.g. numer, simpsum)  are actually flags,
+which are <tt>false</tt> by default, but can be enabled for subsequent use.
+
+
+<h3>- numerical</h3>
+
+Numerical evaluation is triggered by decimal numbers in expressions, but
+note that a dot alone doesn't make it: <tt>sqrt(2.)</tt> is <b>not</b>
+evaluated, but <tt>sqrt(2.0)</tt> is.
+<pre>      float(expr);                  evaluate to floating point number
+      expr, numer;                  return numerical result
+      numer: true;                  numerical evaluation on (default: false)
+
+      fpprec: digits;               precision of big floats (default: 16)
+      fpprintprec: digits;          no. of printed digits
+      bfloat(expr);                 evaluate to big float
+
+example:
+      fpprec: 30;
+      sin(%pi);                     =&gt; 0
+      sin(float(%pi));              =&gt; 1.2246063538223773E-16
+      sin(bfloat(%pi));             =&gt; 1.69568553207377992879174029388B-31
+</pre>
+Note: WxMaxima, with output format set to <i>xml</i>, diplays long numbers
+with a <b>shortcut</b> - compare the output of
+<pre>      bfloat(%pi), fpprec:1000;
+</pre>
+
+
+<h2>Substitution</h2>
+
+Functions which perform substitution, with increasing level of sophistication:
+<pre>      subst(..)         syntactic, symbols and complete sub-expressions only
+      ratsubst(..)      similar, but employs some algebra
+      at(..)            evaluation, based on equations
+      ev(..)            evaluation, with equations, flags etc.
+</pre>
+<tt>subst(..)</tt> and <tt>ratsubst(..)</tt> in more detail:
+<pre>      subst(ex, var, expr);         substitute ex for var in expr
+      subst(var=ex, expr);          same
+      subst([var1=ex1, var2=ex2,..], expr);     multiple substitutions
+
+      ratsubst(ex, var, expr);      substitute ex for var in expr
+
+      subst(s, a+b, a+b+c);
+            c + b + a
+      ratsubst(s, a+b, a+b+c);
+            s + c
+      subst(1-cos(x)^2, sin(x)^2, sin(x)^4 - 5*sin(x)^2);  
+               4                2
+            sin (x) - 5 (1 - cos (x))
+      ratsubst(1-cos(x)^2, sin(x)^2, sin(x)^4 - 5*sin(x)^2);  
+               4           2
+            cos (x) + 3 cos (x) - 4
+</pre>
+
+
+<h2>Functions</h2>
+
+Function definition, general form:
+<pre>      define(f(x), expr);
+      define(f(x,y), expr);         /* etc */
+</pre>
+simple form: e.g.
+<pre>      func(x) := sin(x)/x;
+      radius(x,y) := sqrt(x^2 + y^2);
+</pre>
+More complicated function definitions can be formulated with the
+<tt>block(..)</tt> construct.
+
+
+<h2>Simplification</h2>
+
+
+<h3>Polynomials</h3>
+
+<pre>      factor(expr);           factorise polynomials (over integers only)
+      expand(expr);           expand polynomials
+      ratexpand(expr);        same (more efficient algorithm)
+
+      expandwrt(expr, x, ..); expand w.r.t. specified variables
+      coeff(expr, x, n);      coefficient of x^n in expr
+      ratcoef(expr, x, n);    same, but simplifies expr first
+
+      divide(pol1, pol2);     polynomial devision (with remainder)
+      quotient(pol1, pol2);   quotient of polynomial devision
+      remainder(pol1, pol2);  remainder of polynomial division
+
+      realroots(pol, tol);    numerical approx. to all real roots
+      realroots(pol);         tol = rootsepsilon (default: 1e-7)
+      allroots(pol);          numerical approx. to all complex roots
+</pre>
+
+
+<h3>Rational functions</h3>
+
+<pre>      ratsimp(expr);          put on common denominator,
+                                    cancel factors,
+                                    expand numerator and denominator
+      fullratsimp(expr);      repeated application of `ratsimp'
+
+      factor(expr);           same as `ratsimp', but returns numerator and
+                                    denominator in factored form         
+
+      expand(expr);           expand numerator and denominator, split numerator
+                                    (no common denominator)
+      ratexpand(expr);        put on common denominator,
+                                    cancel factors,
+                                    expand numerator and denominator,
+                                    split numerator
+      ratdenomdivide: false;  don't split numerator (same as ratsimp?)
+
+      facsum(expr, var, ..)   expand w.r.t. specified variables
+      facsum_combine: false;  split numerator
+
+      partfrac(expr, var);    partial fraction decomposition
+
+examples:
+      ratsimp(a/b + c/d);
+            a d + b c
+            ---------
+               b d
+
+      (x-1)/(x+1)^2 - 1/(x-1);
+             x - 1       1
+            -------- - -----
+                   2   x - 1
+            (x + 1)
+      ratexpand(%);
+                    4 x
+            - ---------------
+               3    2
+              x  + x  - x - 1
+      factor(%);
+                    4 x
+            - ----------------
+                             2
+              (x - 1) (x + 1)
+
+
+      r: (u+v)^2*u/((u^2-v^2)*v);
+                           2
+                  u (v + u)
+                  -----------
+                      2    2
+                  v (u  - v )
+
+      ratsimp(r);
+                    u v + u
+                  - --------
+                     2
+                    v  - u v
+
+      factor(r);
+                    u (v + u)
+                  - ---------
+                    v (v - u)
+
+      ratexpand(r);
+                        2
+                       u         u
+                  - -------- - -----
+                     2         v - u
+                    v  - u v
+
+      s: a*b/(c*d+c*e) + f*b/(c*d+c*e);
+                     b f         a b
+                  --------- + ---------
+                  c e + c d   c e + c d
+      factor(s);
+                  b (f + a)
+                  ---------
+                  c (e + d)
+      ratsimp(s);
+                  b f + a b
+                  ---------
+                  c e + c d
+</pre>
+
+Notes:
+<br>the following appear to be equivalent:
+<pre>      ratsimp(expr);          <i>and</i>   ratexpand(expr), ratdenomdivide: false;
+      ratsimp(expr), factor;  <i>and</i>   factor(expr);
+</pre>
+but <tt>factor(expr)</tt> does not understand <tt>algebraic</tt>!
+<p>
+Summary: simplify rational functions with <tt>ratsimp(expr)</tt>, possibly
+combined with <tt>factor</tt> and/or <tt>algebraic</tt>.
+Use <tt>ratexpand(expr)</tt>, possibly with <tt>algebraic</tt>, if you prefer
+to split the numerator.
+
+
+</p><h3>Roots</h3>
+
+<pre>      rootscontract(expr);                products of roots -&gt; roots of products
+      ratsimp(expr), algebraic;           rationalise denominators
+
+      radcan(expr);                       canonical form, involving roots, logs,
+      radcan(expr), algebraic;                   and exponentials
+</pre>
+examples:
+<pre>      ex: 1/(sqrt(a)+sqrt(b));
+                    1
+            -----------------
+            sqrt(b) + sqrt(a)
+      ratsimp(ex), algebraic;
+            sqrt(b) - sqrt(a)
+            -----------------
+                  b - a
+
+      sqrt(x^2);
+            abs(x)
+      sqrt(x^2), radexpand:all;
+            x
+      
+</pre>
+In some cases, <tt>sqrtdenest</tt> can disentangle nested square roots:
+<pre>      load(sqdnst);
+      sqrtdenest(expr);
+e.g.
+      sqrt(sqrt(7)+ 4);
+            sqrt(sqrt(7) + 4)
+      sqrtdenest(%);
+            sqrt(7)      1
+            ------- + -------
+            sqrt(2)   sqrt(2)
+      factor(%);
+            sqrt(7) + 1
+            -----------
+              sqrt(2)
+</pre>
+
+
+<h3>Logarithms</h3>
+
+<pre>      logexpand:all;                enables automatic expansion of products
+
+      logcontract(expr);            contracts sums of logs to logs of products
+                                          and _integer_ multiples of logs to
+                                          logs of powers
+
+      radcan(expr);                 canonical form, involving roots, logs,
+      radcan(expr), algebraic;             and exponentials
+</pre>
+examples:
+<pre>      log(a^b);
+            log(a) b
+
+      log(a*b), logexpand:all;
+            log(b) + log(a)
+
+      logcontract(2*log(a) + 3*log(b));
+                 2  3
+            log(a  b )
+</pre>
+
+
+<h3>Trigonometric functions</h3>
+<pre>      trigsimp(expr);         use sin(x)^2 + cos(x)^2 = 1 etc
+      trigexpand(expr);       use addition theorems etc
+      trigreduce(expr);       powers -&gt; multiple arguments
+                              products -&gt; sums
+      trigrat(expr);          simplify rational expressions of trigonometric
+                                    functions as well as linear arguments
+                                    involving %pi/n
+      halfangles:true;        replace half angles by roots
+
+      exponentialize(expr);   trig/hyperb -&gt; exponentials
+      demoivre(expr);         complex exponentials -&gt; trig (not hyperb)
+
+      logarc(expr);           arc trig/hyperb -&gt; logarithms
+</pre>
+<tt>trigexpand</tt> is a flag as well (and an evflag), but the other
+<tt>trigX</tt> aren't!
+<p>
+<tt>trigsimp(..)</tt> in combination with roots is tricky:
+</p><pre>      trigsimp(sqrt(sinh(x)^2 + 1));
+            cosh(x)
+      trigsimp(sqrt(cosh(x)^2 - 1));
+            sqrt(cosh(x) - 1) sqrt(cosh(x) + 1)
+</pre>
+instead of the expected <tt>abs(sinh(x))</tt>. It does not work for
+<tt>sin()</tt> and <tt>cos(x)</tt> either. Is this caused by <tt>abs(..)</tt>?
+<br>?HOW TO
+<p>
+There is no command to convert <i>real</i> exponentials to hyperbolic
+functions - use <tt>ratsubst(..)</tt> instead.
+</p><p>
+Examples:
+</p><pre>      sin(x/2), halfangles;
+            sqrt(1 - cos(x))
+            ----------------
+                sqrt(2)
+</pre>
+?HOW TO:
+<pre>      sin(x) + cos(x) = sqrt(2) * sin(x + %pi/4)
+      try exponentialize(...)
+</pre>
+?HOW TO
+<pre>      ex1: cos(x) + cos(y);
+      ex2: 2 * cos((x+y)/2) * cos((x-y)/2);
+ex2 -&gt; ex1:
+      trigreduce(ex2), ratsimp;
+or    trigrat(ex2);
+ex1 -&gt; ex2 ??
+</pre>
+<tt>logarc</tt> examples:
+<pre>      asinh(x), logarc;
+                      2
+            log(sqrt(x  + 1) + x)
+      
+      acosh(x), logarc;
+                  sqrt(x + 1)   sqrt(x - 1)
+            2 log(----------- + -----------)
+                    sqrt(2)       sqrt(2)
+      %, logcontract, expand, rootscontract;
+                      2
+            log(sqrt(x  - 1) + x)
+</pre>
+
+
+<h2>Number Theory</h2>
+
+Compute the prime factorisation of a number:
+<pre>      factor(n)               basic method
+      ifactors(n)             more efficient algorithm
+      ifactor_verbose: true   show details
+</pre>
+
+
+<h2>Limit</h2>
+
+<pre>      limit(f(x), x, a);
+      limit(f(x), x, a, dir);       direction dir = plus, minus
+</pre>
+
+
+<h2>Differentiation</h2>
+
+<pre>      diff(expr, x);
+      diff(expr, x, n);       /* n-th derivative */
+      diff(expr, x, y);       /* mixed partial derivative */
+</pre>
+Convert the derivative to a <i>function</i> with <tt>define(..)</tt>:
+<pre>      f(x) := sin(x);               /* works */
+      diff(f(x), x);
+            cos(x)                  /* ok */
+      g(x) := diff(f(x), x);        /* doesn't work */
+      define(g(x), diff(f(x), x));
+            g(x) := cos(x)          /* works */
+</pre>
+Compute the derivative at a <i>specific value</i> with <tt>at(..)</tt>:
+<pre>      at(diff((x-a)^2, x, 2), x=a);
+            2
+</pre>
+
+
+<h2>Integration</h2>
+
+<pre>      integrate(f(x), x);           indefinite integral
+      integrate(f(x), x, a, b);     definite integral
+      defint(f(x), x, a, b);        same
+      ldefint(f(x), x, a, b);       same, but taking limits at the boundaries
+</pre>
+Examples:
+<pre>      assume(a&gt;0)$
+      declare(a, noninteger)$
+      facts(a);
+            [a &gt; 0, kind(a, noninteger)]
+      integrate(x^a * exp(-x), x, 0, inf);
+            gamma(a + 1)
+      kill(all)$
+      facts();
+            []
+</pre>
+<pre>      integrate(1/(a - cos(x)), x, 0, %pi);
+
+      Is  (a - 1) (a + 1)  positive, negative, or zero? pos;
+                2
+      Is  sqrt(a  - 1) - a  positive or negative? neg;
+                2
+      Is  sqrt(a  - 1) - a + 1  positive, negative, or zero? pos;
+          !      2         !
+      Is  !sqrt(a  - 1) + a! - 1  positive, negative, or zero? pos;
+
+                          2
+              2 %pi sqrt(a  - 1) - 2 %pi a
+            - ----------------------------
+                         2         2
+              2 (a sqrt(a  - 1) - a  + 1)
+
+      ratsimp(%), algebraic;
+
+                %pi
+            ------------
+                  2
+            sqrt(a  - 1)
+</pre>
+
+
+<h2>Summation</h2>
+
+Sums are <b>defined</b> with <tt>sum(..)</tt> and <b>evaluated</b>
+(symbolically) with <tt>simpsum</tt>:
+<pre>      sum(expr, n, n1, n2);
+      ev(sum(...), simpsum);        sum and simplify
+      sum(...), simpsum;            same in short
+      simpsum: true;                enable summations
+</pre>
+Example:
+<pre>      sum(k^2, k, 1, n);
+                                     n
+                                    ====
+                                    \      2
+                                     &gt;    k
+                                    /
+                                    ====
+                                    k = 1
+      %, simpsum;
+                                   3      2
+                                2 n  + 3 n  + n
+                                ---------------
+                                       6
+</pre>
+The same is achieved with
+<pre>      sum(k^2, k, 1, n), simpsum;
+or
+      simpsum: true;
+      sum(k^2, k, 1, n);
+</pre>
+
+
+<h2>Series expansion</h2>
+
+<pre>      powerseries(expr, var, point);      symbolic, possibly infinite
+      taylor(expr, var, point, order);    truncated at given order
+
+      niceindices(expr);                  rewrite symbolic sums
+</pre>
+
+
+<h2>Equations</h2>
+
+Equations (single or systems) are solved by <b><tt>solve</tt></b>.
+<pre>      solve(eqn, var);
+      solve([eqn1, eqn2, ..], [var1, var2, ..]);
+</pre>
+It returns a <b>list</b> of solutions resp. solution vectors.
+<br>
+Examples:
+<pre>      sol: solve(x^2 + p*x + q, x);
+                   sqrt(p  - 4 q) + p      sqrt(p  - 4 q) - p
+            [x = - ------------------, x = ------------------]
+                           2                       2
+      x1: x, sol[1];
+              sqrt(p  - 4 q) + p
+            - ------------------
+                      2
+      x2: x, sol[2];
+              sqrt(p  - 4 q) - p
+            - ------------------
+                      2
+
+      eqn1: x + y = 4;
+            y + x = 4
+      eqn2: x - y = 2;
+            x - y = 2
+      sol: solve([eqn1, eqn2], [x,y]);
+            [[x = 3, y = 1]]
+      x, sol;
+            3
+      y, sol;
+            1
+Check:
+      map(is, ev([eqn1, eqn2], sol));
+            [true, true]
+</pre>
+Maybe <tt>ev(..)</tt> needs more flags (e.g. <tt>ratexpand</tt>).
+<p>
+<b>Check</b> multiple solutions (equation is formulated as <tt>f(x) = 0</tt>):
+</p><pre>      f(x):= x^2 + 2*b*x + c;
+                     2
+            f(x) := x  + 2 b x + c
+      sol: solve(f(x), x);
+                         2                     2
+            [x = - sqrt(b  - c) - b, x = sqrt(b  - c) - b]
+      map(f, map(rhs, sol)), expand;
+            [0, 0]
+</pre>
+?HOW TO:
+<pre>      solve(sin(x) + cos(x) = 1/2, x);
+
+      eqn: sin(x) + cos(x) = 1/2;
+      solve(eqn, x);                no success
+
+      eqnx: exponentialize(eqn);
+      sol: solve(eqnx, x);          solution in terms of complex logs
+
+      ratsimp(sol);
+      %, numer;
+
+      rectform(sol);                imaginary parts are obsolete
+      ratsimp(%);                   nicer formula
+      %, numer;
+</pre>
+?HOW TO:
+<pre>      solve(s + sqrt(1-s^2) = 1/2, s);
+
+      solveradcan: true;            doesn't help here
+                                    (solve calls radcan)
+
+      eq1: s + r = 1/2;             aux variable r = sqrt(1 - s^2) &gt; 0
+      eq2: r^2 = 1 - s^2;
+      solve([eq1, eq2], [s, r]);
+                    sqrt(7) - 1      sqrt(7) + 1
+            [[s = - -----------, r = -----------], 
+                         4                4
+                  sqrt(7) + 1        sqrt(7) - 1
+             [s = -----------, r = - -----------]]
+                       4                  4
+</pre>
+Solution is <tt>s = (1 - sqrt(7))/4</tt> .
+<p>
+?HOW TO:
+</p><pre>      solve([sqrt(x) + y = 0, sqrt(x) = 1], [x, y]);
+            []
+      eliminate([sqrt(x) + y = 0, sqrt(x) = 1], [x]);
+            [1]                     ??? BUG ???
+      eliminate([sqrt(x) + y = 0, sqrt(x) = 1], [y]);
+            [ sqrt(x) - 1 ]         ok
+</pre>
+Note that <tt>eliminate()</tt> uses <tt>resultant()</tt>, which is
+supposed to work with <b>polynomials</b>.
+<br>
+Eliminate variables from a set of (polynomial?) equations:
+<pre>      eliminate([eqn1, eqn2, ..], [var1, var2, ..]);
+</pre>
+Note: there is a new solver package ("topoly" or "to_poly"),
+see appendix.
+
+
+<h3>Numerical solution</h3>
+
+<pre>      find_root(expr, x, a, b)
+</pre>
+For polynomials: see <tt>realroots(pol), allroots(pol)</tt>.
+
+
+<h2>Ordinary Differential Equations</h2>
+
+<h3><tt>ode2</tt></h3>
+
+Try to solve <b>general</b> ODEs of <b>first</b> or <b>second order</b>
+with <tt>ode2</tt>:
+<pre>      ode2(eqn, y, x);
+
+E.g. eqn of 2nd order:
+      eqn: 'diff(x,t,2) + r*'diff(x,t)^2 = 0;
+general solution, with constants of integration <tt>%k1, %k2</tt>:
+      sol: ode2(eqn, x, t);
+                      log(r t + %k1 r)
+                  x = ---------------- + %k2
+                             r
+impose initial conditions:
+      ic2(sol, t=0, x=x0, 'diff(x,t)=v0), logcontract, ratexpand;
+                           log(r t v0 + 1)
+                  x = x0 + ---------------
+                                  r
+convert solution equation to a function:
+      define(x(t), rhs(%));
+</pre>
+[TO DO: for the same deqn with exponent 2 -&gt; 3, ic2() fails to solve
+for the initial conditions. This looks like a problem with solve...]
+<br>
+Boundary conditions are imposed with <tt>bc2(..)</tt>.
+<br>
+For an equation of first order, the initial conditions are specified
+with <tt>ic1(..)</tt>.
+
+<h3><tt>desolve</tt></h3>
+
+Solve a <b>linear</b> ODE with <tt>desolve</tt> (using
+Laplace transformation):
+<pre>      eqn: 'diff(f(x), x) = 2*f(x);       /* linear ODE of 1st order */
+      sol: desolve(eqn, f(x));
+                          2 x
+            f(x) = f(0) %e      
+</pre>
+[Note the different format of derivatives in the equation.]
+<br>
+Initial values at <tt>x = 0</tt> can be imposed with <tt>atvalue</tt>
+<i>before</i> calling <tt>desolve</tt>:
+<pre>      eqn: 'diff(f(x), x) = 2*f(x);
+      atvalue(f(x), x=0, k);              /* initial value at x=0 */
+      sol: desolve(eqn, f(x));            /* solution as an equation */
+                       2 x
+            f(x) = k %e
+      define(f(x), rhs(%));               /* solution function */
+                        2 x
+            f(x) := k %e
+</pre>
+An example of second order:
+<pre>      eqn: 'diff(f(t), t, 2) + r*'diff(f(t), t) + f(t) = sin(omega*t);
+      atvalue(f(t), t=0, 1);
+      atvalue('diff(f(t), t), t=0, 0);
+
+      desolve(eqn, f(t));     /* omega nonzero, -2 &lt; r &lt; 2 */
+
+      define(f(t), rhs(%));
+      plot2d(ev(f(t), omega=1.1, r=0.1), [t, 0, 100]);
+</pre>
+A <b>linear system</b> is solved with <b><tt>desolve</tt></b> as follows:
+<pre>      eqn1: 'diff(f(x), x) = c*f(x) - g(x);
+      eqn2: 'diff(g(x), x) = c*g(x) + f(x);
+      atvalue(f(x), x=0, 1);
+      atvalue(g(x), x=0, 0);
+
+      sol: desolve([eqn1, eqn2], [f(x), g(x)]);
+
+      define(f(x), rhs(sol[1]));
+      define(g(x), rhs(sol[2]));
+      c: 0.1;
+      plot2d([parametric, f(t), g(t)], [t, 0, 10], [nticks, 100]);
+</pre>
+<p>
+<tt>desolve</tt> requires that the inverse Laplace transform (<tt>ilt</tt>)
+is applied to a rational function with a denominator of first or second order.
+
+
+</p><h2>Vectors and Matrices</h2>
+
+<pre>      A: matrix([a, b, c], [d, e, f], [g, h, i]);     /* (3x3) matrix */
+      u: matrix([x, y, z]);                           /* row vector */
+      v: transpose(matrix([r, s, t]));                /* column vector */
+</pre>
+Reference to elements etc:
+<pre>      u[1,2];                 /* second element of u */
+      v[2,1];                 /* second element of v */
+      A[2,3];   or  A[2][3];  /* (2,3) element */
+      A[2];                         /* second row of A */
+      transpose(transpose(A)[2]);   /* second column of A */
+</pre>
+Element by element operations:
+<pre>      A + B;      A - B;
+      A * B;      A / B;
+      A ^ s;      s ^ A;
+</pre>
+Matrix operations:
+<pre>      A . B;                  /* matrix multiplication */
+      A ^^ s;                 /* matrix exponentiation (including inverse) */
+      transpose(A);
+      determinant(A);
+      invert(A);
+</pre>
+
+
+<h2>Properties</h2>
+
+<pre>      assume(pred);           predicate `pred' e.g. a &gt; 0, equal(b,3), notequal(c,0)
+      is(expr);               check whether expr is true, based on assumptions
+      forget(pred);           remove `pred' from assume database
+
+      features                list of mathematical properties
+      declare(var, prop);
+      remove(var, prop);
+
+      facts(item);            list properties associated with item
+      facts();                list all properties
+
+      domain:real             default
+      domain:complex
+</pre>
+Examples:
+<pre>      facts(a);               list of properties involving a
+      forget(facts());        remove all properties (but not the features?)
+      forget(facts(a));       remove all properties (not features?) involving a
+</pre>
+<tt>kill(all)</tt> clears the <tt>facts</tt> database (among other things).
+
+
+<h2>Graphics</h2>
+
+<pre>      plot2d(expr, range);                /* one curve */
+      plot2d([expr1, expr2], range);      /* two curves */
+      plot2d([parametric, expr1, expr2], range);      /* parametric */
+examples:
+      plot2d(sin(x), [x, 0, 10]);
+      plot2d(tan(x), [x, 0, 10], [y, -2, 2]);   /* truncate vertically */
+      plot2d([8*sin(x), exp(x)], [x, -2, 2]);
+      plot2d([parametric, t*cos(t), t*sin(t)], [t, 0, 10], [nticks, 100]);
+
+      plot2d(sin(x), [x, 0, 10],  [gnuplot_term, ps],
+            [gnuplot_out_file, "filename"]);    /* write PS file */
+
+      plot3d(expr, range1, range2);       /* 3D mesh plot */
+example:
+      plot3d(sin(x)^2 * sin(y)^2, [x, -2, 2], [y, -2, 2]);
+</pre>
+It appears that in a parametric plot, the parameter has to be named "t".
+
+
+<h2>I/O</h2>
+
+Console interaction:
+<pre>      print("text");
+      print(expr1, expr2, ..);
+      disp(expr1, expr2, ..);
+      display(expr1, expr2, ..);
+
+      z: read("what is z?");              /* terminate reply with ; */
+</pre>
+Read/write data (in matrix or list form) from/to a file (space-separated numbers):
+<pre>      load("numericalio");
+
+      read_matrix("filename");
+      write_data(matrix, "filename");
+
+      read_nested_list("filename");
+      write_data(list, "filename");
+</pre>
+File search and display:
+<pre>      file_search("filename");      check for the existence of a file, using
+                                    file_search_maxima etc as search paths
+      file_search("filename",["path/"]);  use specified path
+                                          (relative or absolute path)
+      file_search_maxima            search path list, for load etc
+      file_search_usage             search path list, e.g. for printfile
+      printfile("filename");        display contents of file
+
+e.g. prepend a directory as follows:
+
+      file_search_maxima: cons("/home/me/work/", file_search_maxima);
+</pre>
+Notes:
+<br>o terminate path elements with /
+<br>o It appears that the current working directory (where maxima was started) is
+always searched first.
+<p>
+Running scripts:
+</p><pre>      batch("filename");            run maxima commands from file
+      batchload("filename");        same, in quiet mode
+      load("filename");             run maxima and lisp code from file
+</pre>
+
+
+<h2>Command display and session log</h2>
+
+Disable 2D display, use 1-line output:
+<pre>      display2d:false
+</pre>
+Convert expression to TeX format:
+<pre>      tex(expr);
+</pre>
+Save command output and input to file:
+<pre>      with_stdout("filename", commands);  writes output of commands to file
+            file_output_append: true;     switch to append mode
+
+      stringout("filename", expr1, ..);   write expressions in a form
+                                                suitable for maxima input
+</pre>
+Session transcript:
+<pre>      writefile("filename");        session transcript in console output format
+      appendfile("filename");       same, but append to file
+      closefile();                  terminate session transcript
+</pre>
+
+
+<h2>Control Structures</h2>
+
+<pre>      for <i>var</i>: <i>first</i> step <i>incr</i> thru <i>limit</i> do <i>body</i>
+      for <i>var</i>: <i>first</i> step <i>incr</i> while <i>cond</i> do <i>body</i>
+      for <i>var</i>: <i>first</i> step <i>incr</i> unless <i>cond</i> do <i>body</i>
+
+      if <i>cond</i> then <i>body</i>
+      if <i>cond</i> then <i>body1</i> else <i>body2</i>
+
+      return(<i>expr</i>);         /* abnormal termination of the "for" loop */
+</pre>
+<tt>step 1</tt> can be omitted.
+<br>
+<tt><i>body</i></tt> is a single command or a comma separated list of commands.
+<br>
+<tt>for</tt> returns <tt>done</tt> upon normal termination.
+<br>
+<tt>if</tt> returns the last result of the executed commands or <tt>false</tt>.
+<br>
+The following example computes <tt>sqrt(10)</tt> to floating point precision:
+<pre>      x: 1.;
+      for n: 1 thru 10 do
+            (x0: x, x: .5*(x + 10./x), if x = x0 then return(x));
+</pre>
+In this example, the control variable is obsolete and can be omitted:
+<pre>      x: 1.;
+      do (x0: x, x: .5*(x + 10./x), if x = x0 then return(x));
+</pre>
+
+
+<h2>Scripts</h2>
+
+<pre>      batch("filename");            run Maxima script 
+      /* .. */                      comments in script
+
+      unix&gt; maxima -b filename      run in terminal (from the command line)
+</pre>
+
+
+<h2>Startup scripts</h2>
+
+<pre>      $HOME/.maxima/maximarc
+
+      maxima_userdir                directory for startup file `maxima-init.mac'
+                                    (Unix default: $HOME/.maxima)      
+</pre>
+
+
+<h2>Checking the installation</h2>
+
+<pre>      build_info();
+      run_testsuite();
+      run_testsuite(true);          show bugs only
+</pre>
+
+
+<h2>wxMaxima</h2>
+
+<pre>      -&gt;Edit -&gt;Configure
+         -&gt;Options
+            Language: (select)
+         -&gt;Style
+            [x] Use greek font
+</pre>
+displays variables starting with <tt>%</tt> as (small or capital) greek letters,
+e.g. <tt>%omega</tt> and <tt>%Omega</tt>.
+<br>
+Beware: <tt>%pi</tt> and <tt>%phi</tt> are predefined.
+<p>
+Math display modes:
+</p><pre>      set_display('xml);      nice format (default)
+      set_display('ascii);    multi-line mode, like maxima with display2d:true
+      set_display('none);     one-line mode, like maxima with display2d:false
+</pre>
+May be set via -&gt;Maxima -&gt;Change 2d display.
+<br>
+In <i>xml</i> mode, long numbers are displayed with a shortcut.
+<p>
+wxMaxima-0.8.x notes:
+</p><p>
+In 0.8.0/0.8.1
+</p><ul>
+<li>the input line was removed,
+</li><li>commands are terminated with &lt;SHIFT&gt;-&lt;ENTER&gt;, a la Mathematica.
+</li></ul>
+The latter is made configurable in 0.8.2:
+<p>
+&nbsp;&nbsp;[x] Enter evaluates cells
+</p><p>
+In wxMaxima-0.8.5, <tt>%alpha</tt> etc are represented as greek letters by default
+(no need to configure).
+
+
+</p><h2>Documentation</h2>
+
+
+<h3>Tutorials</h3>
+
+<a href="http://math-blog.com/2007/06/04/a-10-minute-tutorial-for-solving-math-problems-with-maxima/">
+      Antonio Cangiano, A 10 minute tutorial for solving Math problems
+                        with Maxima</a>
+<br>
+<a href="http://maxima.sourceforge.net/docs/tutorial/en/gaertner-tutorial-revision/Contents.htm">
+      Boris Gaertner, The Computer Algebra Program Maxima - a Tutorial</a>
+<br>
+<a href="http://www.math.psu.edu/glasner/Max_doc/maxima-primer.html">
+      Moses Glasner, The Maxima Primer</a>
+<br>
+<a href="http://www.math.psu.edu/glasner/Max_doc/intromax.html">
+      Richard H. Rand, Introduction to MACSYMA</a>
+<br>
+<a href="http://wxmaxima.sourceforge.net/wiki/index.php/Tutorials">
+      wxMaxima tutorials</a> &nbsp;[in *.wxm.zip format]
+
+
+<h3>Advanced</h3>
+
+<a href="http://beshenov.ru/maxima/faq.html">
+      Maxima Beginner's FAQ</a> [with many tips for advanced usage, in fact]
+<br>
+<a href="http://maxima.sourceforge.net/docs/maximabook/maximabook-19-Sept-2004.pdf">
+      Paulo Ney de Souza et al., The Maxima Book (19-Sept-2004)</a>
+<br>
+<a href="http://www.math.psu.edu/glasner/Max_doc/maxima_sg.pdf">
+      Moses Glasner, A Maxima Guide for Calculus Students</a>
+<br>
+<a href="http://maxima.sourceforge.net/docs/tutorial/en/minimal-maxima.pdf">
+      Robert Dodier, Minimal Maxima</a>
+<br>
+<a href="http://www.csulb.edu/~woollett/">
+      Edwin L. Woollett, Maxima by Example</a>
+<br>
+<a href="http://arachnoid.com/maxima/index.html">
+      P. Lutus, Symbolic Mathematics Using Maxima</a>
+<br>
+<a href="http://beige.ucs.indiana.edu/P573/node35.html">
+      Maxima, Maple, and Mathematica: the Summary</a>
+<br>
+<a href="http://www.neng.usu.edu/cee/faculty/gurro/Maxima.html">
+      Gilberto E. Urroz, Maxima Book</a>
+
+
+<h3>Plotting</h3>
+
+<a href="http://maxima.sourceforge.net/maxima-gnuplot.html">
+      Examples of the Maxima Gnuplot interface</a>
+<br>
+<a href="http://www.telefonica.net/web2/biomates/maxima/gpdraw/">
+      A Maxima-Gnuplot interface</a>
+
+
+<h3>Manuals</h3>
+
+<a href="http://maxima.sourceforge.net/docs/manual/en/maxima.html">
+      Maxima Manual</a> &nbsp;[5.28.0]
+<br>
+<a href="http://www.math.psu.edu/glasner/Max_doc/macref.pdf">
+      Michael Clarkson, DOE-Maxima Reference Manual</a>
+      &nbsp;[Maxima manual v5.9 reformatted]
+
+
+<h3>Help</h3>
+
+<a href="http://www.math.utexas.edu/mailman/listinfo/maxima">
+      Maxima mailing list and archives</a>
+<br>
+<a href="http://maxima.sourceforge.net/ui-tips.html">
+      Maxima user interface tips</a>
+
+
+<h3>In German</h3>
+
+<a href="http://maxima.weilharter.info/">
+      Johann Weilharter, Mathematik mit Computerunterstützung: CAS Maxima</a>
+      &nbsp;[Sammlung von Unterrichtsmaterial]
+<br>
+<a href="http://www.austromath.at/daten/maxima/index.htm">
+      Walter Wegscheider, Maxima 5.xx unter der Oberfläche wxMaxima</a>
+<br>
+<a href="http://dkicomp.dki.tu-darmstadt.de/~robert/maxima-einfuehrung.html">
+      Robert Glöckner, Einführung in Maxima</a>
+<br>
+<a href="http://www.informatik.uni-leipzig.de/~graebe/skripte/esr05.pdf">
+      H.-G. Gräbe, Skript zu "Einführung in das symbolische Rechnen"</a>
+      &nbsp;[not using Maxima]
+
+
+<h3>More links</h3>
+
+see <a href="http://maxima.sourceforge.net/documentation.html">
+      maxima.sourceforge.net</a>
+
+
+<h2>Appendices</h2>
+
+
+<h3>Experimental solver <tt>to_poly_solve()</tt></h3>
+
+by Barton Willis, 2006ff
+<p>
+provided e.g. with Maxima-5.15.0 + 5.17.1:
+<br>
+files:
+<br><tt>topoly.lisp</tt> (engine)
+<br><tt>topoly_solver.mac</tt> (wrapper).
+</p><p>They also work with Maxima-5.10.
+</p><pre>      load(topoly_solver);
+            /home/b/maxima/5.15.0/topoly_solver.mac
+      to_poly_solve(s + sqrt(1-s^2) = 1/2, s);
+                    sqrt(7) - 1
+            [[s = - -----------]]
+                         4
+      to_poly_solve([sqrt(x) + y = 0, sqrt(x) = 1], [x, y]);
+            [[x = 1, y = - 1]]
+      to_poly_solve(sin(x) + cos(x) = 1/2, x);
+            Nonalgebraic argument given to 'topoly'
+</pre>
+In Maxima-5.18.1, there is a new version (which does not work with
+Maxima-5.10?) - it solves the last example as well:
+<pre>      load(to_poly_solver);
+      to_poly_solve(sin(x) + cos(x) = 1/2, x);
+            %union{TO DO}
+</pre>
+In Maxima-5.21.1, the <tt>to_poly_solver</tt> package is auto-loaded as needed.
+
+
+<h3>More special functions</h3>
+
+There is work in progress to implement the <b>Exponential Integral</b>
+and the <b>Incomplete Gamma Function</b>, see
+<a href="http://www.math.utexas.edu/pipermail/maxima/2008/014166.html">
+mailing list</a>.
+
+
+<h3>GCL</h3>
+
+GCL (GNU Common Lisp) prompt and commands:
+<pre>      MAXIMA&gt;&gt;(help)          show GCL help
+      MAXIMA&gt;&gt;(run)           restart Maxima session
+      MAXIMA&gt;&gt;(bye)           exit
+      MAXIMA&gt;&gt;(by)            exit
+</pre>
+
+
+<h2>TO DO</h2>
+
+<tt>%union(..)</tt>
+<br>
+wxMaxima cells
+
+
+
+<img id="feedlyMiniIcon" title="feedly mini" width="36" height="36" src="data:image/png;base64,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" style="position: fixed; bottom: 20px; right: 20px; cursor: pointer; border: 0px; -webkit-transition: opacity 0.5s ease; transition: opacity 0.5s ease; visibility: visible; width: 36px; height: 36px; max-height: 36px; max-width: 36px; overflow: hidden; display: block; padding: 0px; opacity: 0.15;"></body></html>

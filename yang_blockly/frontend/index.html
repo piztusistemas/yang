@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="gl">
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Yang</title>
+    <link rel="icon" type="image/png" href="./src/assets/images/logo.png"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="./src/style.css"/>
+    <link rel="stylesheet" href="./src/blocks.css"/>
+    <link rel="stylesheet" href="./src/table.css"/>
+</head>
+<body>
+<div id="app">
+    <div id="maximaWarning" class="banner hidden">
+        <span data-i18n="banner.maxima.text">⚠ Non se atopou Maxima neste equipo. É necesario para xerar exames.</span>
+        <button id="btnInstallMaxima" data-i18n="banner.maxima.install">⇩ Instalar automaticamente</button>
+        <button id="btnMaximaManual" data-i18n="banner.maxima.manual">Instrucións manuais</button>
+        <button id="btnMaximaDismiss" class="ghost" data-i18n="banner.maxima.dismiss">Agora non</button>
+    </div>
+    <div id="latexWarning" class="banner hidden">
+        <span id="latexWarningText" data-i18n="banner.latex.text">⚠ Falta LaTeX neste equipo.</span>
+        <button id="btnInstallLatex" data-i18n="banner.latex.install">⇩ Instalar automaticamente</button>
+        <button id="btnLatexManual" data-i18n="banner.latex.manual">Instrucións manuais</button>
+        <button id="btnLatexDismiss" class="ghost" data-i18n="banner.latex.dismiss">Agora non</button>
+    </div>
+    <div id="pandocWarning" class="banner hidden">
+        <span data-i18n="banner.pandoc.text">⚠ Non se atopou Pandoc neste equipo. É necesario para exportar Word/OpenDocument.</span>
+        <button id="btnInstallPandoc" data-i18n="banner.pandoc.install">⇩ Instalar automaticamente</button>
+        <button id="btnPandocManual" data-i18n="banner.pandoc.manual">Instrucións manuais</button>
+        <button id="btnPandocDismiss" class="ghost" data-i18n="banner.pandoc.dismiss">Agora non</button>
+    </div>
+    <div id="toolbar">
+        <div id="brand">
+            <img id="brandLogo" src="./src/assets/images/logo.png" alt="Yang"/>
+            <span id="brandName">Yang</span>
+        </div>
+        <span class="sep"></span>
+        <div class="toolbar-group">
+            <button id="btnToggleExplorer" aria-pressed="false" data-i18n-title="toolbar.explorer.title" title="Explorador de cartafoles (Ctrl+Maiús+E)">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 5.5a1 1 0 0 1 1-1h4l1.5 2h7a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-12.5a1 1 0 0 1-1-1z"/></svg>
+                <span class="sr-only" data-i18n="toolbar.explorer.label">Explorador</span>
+            </button>
+            <button id="btnEditorMode" data-i18n-title="toolbar.editorMode.title" title="Cambiar entre a interface de táboa e a de bloques">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="14" height="12" rx="1.4"/><path d="M3 8.5h14M8 8.5V16"/></svg>
+                <span id="btnEditorModeLabel" data-i18n="toolbar.editorMode.toTable">Táboa</span>
+            </button>
+        </div>
+        <span class="sep"></span>
+        <div class="toolbar-group">
+            <button id="btnNew" data-i18n-title="toolbar.new.title" title="Novo exame/práctica (Ctrl+N)">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 2.5h6l3.5 3.5v11a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-14a.5.5 0 0 1 .5-.5z"/><path d="M11 2.5v3.5h3.5"/><path d="M10 10v5M7.5 12.5h5"/></svg>
+                <span data-i18n="toolbar.new.label">Novo</span>
+            </button>
+            <button id="btnOpen" data-i18n-title="toolbar.open.title" title="Abrir .matex (Ctrl+O)">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 5.5a1 1 0 0 1 1-1h4l1.5 2h7a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-12.5a1 1 0 0 1-1-1z"/></svg>
+                <span data-i18n="toolbar.open.label">Abrir</span>
+            </button>
+            <button id="btnSave" data-i18n-title="toolbar.save.title" title="Gardar (Ctrl+S)">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 3.5h9l3 3v10a.5.5 0 0 1-.5.5h-11.5a.5.5 0 0 1-.5-.5v-12.5a.5.5 0 0 1 .5-.5z"/><path d="M6.5 3.5v4h6v-4"/><path d="M6 13h8"/></svg>
+                <span data-i18n="toolbar.save.label">Gardar</span>
+            </button>
+            <button id="btnSaveAs" data-i18n-title="toolbar.saveAs.title" title="Gardar como... escoller nome/lugar (Ctrl+Maiús+S)">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 3.5h9l3 3v10a.5.5 0 0 1-.5.5h-11.5a.5.5 0 0 1-.5-.5v-12.5a.5.5 0 0 1 .5-.5z"/><path d="M6.5 3.5v4h6v-4"/><circle cx="10" cy="12" r="1.6"/></svg>
+                <span data-i18n="toolbar.saveAs.label">Gardar como</span>
+            </button>
+        </div>
+        <span class="sep"></span>
+        <div class="toolbar-group">
+            <button id="btnUndo" data-i18n-title="toolbar.undo.title" title="Desfacer (Ctrl+Z)">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 5 3 8.5l3.5 3.5"/><path d="M3 8.5h8a4.5 4.5 0 0 1 0 9H8"/></svg>
+                <span class="sr-only" data-i18n="toolbar.undo.label">Desfacer</span>
+            </button>
+            <button id="btnRedo" data-i18n-title="toolbar.redo.title" title="Refacer (Ctrl+Maiús+Z)">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13.5 5 17 8.5l-3.5 3.5"/><path d="M17 8.5H9a4.5 4.5 0 0 0 0 9h2"/></svg>
+                <span class="sr-only" data-i18n="toolbar.redo.label">Refacer</span>
+            </button>
+        </div>
+        <span class="sep"></span>
+        <div class="toolbar-group toolbar-group-run">
+            <label><span data-i18n="toolbar.seed.label">Semente</span> <input id="seed" type="number" min="0"></label>
+            <label data-i18n-title="toolbar.iterations.title" title="Con máis dunha copia, cada unha leva unha semente distinta: calquera <MAT>/<EVAL>/<HIDE> que chame a n1()/random(...) dá un valor distinto en cada copia (boletíns individualizados). O enunciado e o resultado usan sempre o mesmo valor sorteado dentro da MESMA copia - só cambia dunha copia a outra."><span data-i18n="toolbar.iterations.label">Iteracións</span> <input id="iterations" type="number" value="1" min="1" max="50"></label>
+            <button id="btnRun" class="btn-primary" data-i18n-title="toolbar.run.title" title="Xerar (Ctrl+Enter ou Ctrl+X)">
+                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M6 4.2v11.6a.8.8 0 0 0 1.22.68l9.3-5.8a.8.8 0 0 0 0-1.36l-9.3-5.8A.8.8 0 0 0 6 4.2z"/></svg>
+                <span data-i18n="toolbar.run.label">Xerar</span>
+            </button>
+        </div>
+        <span class="sep"></span>
+        <div class="toolbar-group">
+            <button id="btnOptions" data-i18n-title="toolbar.options.title" title="Opcións">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="2.4"/><path d="M10 3v1.6M10 15.4V17M17 10h-1.6M4.6 10H3M14.9 5.1l-1.13 1.13M6.23 13.67 5.1 14.9M14.9 14.9l-1.13-1.13M6.23 6.23 5.1 5.1"/></svg>
+                <span data-i18n="toolbar.options.label">Opcións</span>
+            </button>
+            <button id="btnAbout" data-i18n-title="toolbar.about.title" title="Sobre Yang">ℹ</button>
+        </div>
+        <span id="status"></span>
+        <button id="btnAbrirGardado" type="button" hidden data-i18n="status.openFile.label">Abrir</button>
+    </div>
+    <div id="panes">
+        <div id="explorerSidebar" class="hidden"></div>
+        <div class="pane pane-editor">
+            <div id="matexeTagBar" class="matexe-tag-bar" role="toolbar" data-i18n-aria-label="tagbar.aria" aria-label="Inserir etiqueta Matexe">
+                <button type="button" id="btnAssistantCode" class="matexe-tag-btn matexe-tag-btn--assistant" data-i18n-title="tagbar.assistant.title" title="Asistente de IA: pregunta ou pide cambios sobre a selección (ou o documento enteiro se non hai nada seleccionado)">
+                    <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 2.5l1.6 4.4L16 8.5l-4.4 1.6L10 14.5l-1.6-4.4L4 8.5l4.4-1.6z"/></svg>
+                    Asistente
+                </button>
+                <button type="button" class="matexe-tag-btn" data-tag="MAT" data-i18n-title="tagbar.mat.title" title="Mostra a expresión SEN avaliar (Ctrl+M)">
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M5 14c1.5 0 1.5-8 3-8s1.5 8 3 8 1.5-8 3-8"/></svg>
+                    MAT
+                </button>
+                <button type="button" class="matexe-tag-btn" data-tag="EVAL" data-i18n-title="tagbar.eval.title" title="Avalía e mostra o resultado (Ctrl+E)">
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4.5 7.5h11M4.5 12.5h11"/></svg>
+                    EVAL
+                </button>
+                <button type="button" class="matexe-tag-btn" data-tag="HIDE" data-i18n-title="tagbar.hide.title" title="Executa en silencio, sen amosar nada (Ctrl+H)">
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10s2.8-4.5 7-4.5S17 10 17 10s-2.8 4.5-7 4.5S3 10 3 10z"/><circle cx="10" cy="10" r="1.8"/><path d="M4 4l12 12"/></svg>
+                    HIDE
+                </button>
+                <button type="button" class="matexe-tag-btn" data-tag="PLOT" data-i18n-title="tagbar.plot.title" title="Gráfico Maxima (Ctrl+P)">
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15h14M3 15V5"/><path d="M4.5 13 8 8l2.6 2.4L16 5"/></svg>
+                    PLOT
+                </button>
+                <button type="button" class="matexe-tag-btn" data-tag="TEX" data-i18n-title="tagbar.tex.title" title="LaTeX literal (Ctrl+T)">
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5h9l3 3v8a.5.5 0 0 1-.5.5h-11.5a.5.5 0 0 1-.5-.5z"/><path d="M6.5 10.5h7M6.5 13h4.5"/></svg>
+                    TEX
+                </button>
+                <button type="button" class="matexe-tag-btn" data-tag="TIKZ" data-i18n-title="tagbar.tikz.title" title="Debuxo TikZ">
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16 14.5 5.5a1.4 1.4 0 0 1 2 2L6 18l-3 1z"/></svg>
+                    TIKZ
+                </button>
+                <button type="button" class="matexe-tag-btn" data-tag="SISTEMA" data-i18n-title="tagbar.sistema.title" title="Sistema de ecuacións (unha por liña, sen etiquetas MAT dentro) - amosa unha chave compartida">
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 3.5c-2 0-2 3-2 6.5s0 6.5 2 6.5M8 3.5c2 0 2 3 2 6.5s0 6.5-2 6.5"/></svg>
+                    SISTEMA
+                </button>
+            </div>
+            <div id="editor"></div>
+            <div id="blocksEditor" class="hidden"></div>
+            <div id="tableEditor" class="hidden"></div>
+        </div>
+        <div id="paneSplitter" role="separator" aria-orientation="vertical" data-i18n-aria-label="panes.splitter.aria" aria-label="Redimensionar código/resultado"></div>
+        <div class="pane pane-preview">
+            <div class="pane-header pane-header-preview">
+                <label id="plantillaWrap" data-i18n-title="toolbar.plantilla.title" title="Plantilla de documento: a maqueta (cabeceira do centro, membrete...) que se aplica ao xerar e ao exportar. Yang lembra a que usa cada documento."><span data-i18n="toolbar.plantilla.label">Plantilla</span> <select id="plantillaSelect"></select></label>
+                <button id="btnPlantillas" data-i18n-title="toolbar.plantillas.title" title="Biblioteca de plantillas: crear, editar ou eliminar maquetas de documento">
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 3.5h12a.5.5 0 0 1 .5.5v12a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5v-12a.5.5 0 0 1 .5-.5z"/><path d="M3.5 7.5h13"/><path d="M7 16V7.5"/></svg>
+                    <span class="sr-only" data-i18n="toolbar.plantillas.label">Plantillas</span>
+                </button>
+                <button id="btnAxustesTexto" data-i18n-title="axustesTexto.title" title="Axustes do texto: tamaño da fonte, interliñado e familia tipográfica">
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6V4.5h12V6"/><path d="M10 4.5V16"/><path d="M7.5 16h5"/></svg>
+                    <span class="sr-only" data-i18n="axustesTexto.label">Axustes do texto</span>
+                </button>
+                <button id="btnPrint" data-i18n-title="preview.print.title" title="Imprimir a previsualización">
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 7V3.5h9V7"/><rect x="3" y="7" width="14" height="6.5" rx="1"/><path d="M5.5 12.5h9V17h-9z"/></svg>
+                    <span data-i18n="preview.print.label">Imprimir</span>
+                </button>
+                <button id="btnPDF" data-i18n-title="preview.pdf.title" title="Recompilar e gardar como PDF">
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2.5h5.5L15 6v11a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-14a.5.5 0 0 1 .5-.5z"/><path d="M11.5 2.5V6H15"/><path d="M7.5 10.5h5M7.5 13h5"/></svg>
+                    <span>PDF</span>
+                </button>
+                <button id="btnExportTex" data-i18n-title="preview.exportTex.title" title="Gardar o código LaTeX xerado (sen recompilar)">
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2.5h5.5L15 6v11a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-14a.5.5 0 0 1 .5-.5z"/><path d="M11.5 2.5V6H15"/><path d="M7 11.5h6M7 13.5h4"/></svg>
+                    <span>TeX</span>
+                </button>
+                <button id="btnExportMarkdown" data-i18n-title="preview.exportMd.title" title="Xerar e exportar como Markdown (.md)">
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2.5h5.5L15 6v11a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-14a.5.5 0 0 1 .5-.5z"/><path d="M11.5 2.5V6H15"/><path d="M6.5 14.5V11l1.5 1.8L9.5 11v3.5M11 11v3.5l1.6-1.6"/></svg>
+                    <span>MD</span>
+                </button>
+                <button id="btnExportDocx" data-i18n-title="preview.exportDocx.title" title="Xerar e exportar como Word (.docx)">
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2.5h5.5L15 6v11a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-14a.5.5 0 0 1 .5-.5z"/><path d="M11.5 2.5V6H15"/><path d="M6.3 11.5 7.3 15l1.2-3.5L9.7 15l1-3.5"/></svg>
+                    <span>DOCX</span>
+                </button>
+                <button id="btnExportOdt" data-i18n-title="preview.exportOdt.title" title="Xerar e exportar como OpenDocument (.odt)">
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2.5h5.5L15 6v11a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-14a.5.5 0 0 1 .5-.5z"/><path d="M11.5 2.5V6H15"/><path d="M6.5 15v-3.5h1.2a1.2 1.2 0 0 1 0 2.4H6.5M11 15v-3.5h1.6M11 13.2h1.4"/></svg>
+                    <span>ODT</span>
+                </button>
+                <!-- Non hai botón "Acoplar" na xanela de resultado a propósito:
+                     pechar esta xanela (X do xestor de xanelas) xa dispara
+                     WindowClosing -> yang:resultado-pechado (ver
+                     xanelaresultado.go/saírModoDobreEditor en main.js) e volve
+                     amosar o panel na xanela principal - abondaba con iso, sen
+                     precisar un segundo botón redundante. -->
+                <!-- Só amosado na xanela EDITOR -
+                     abre a xanela de resultado á parte (AbrirXanelaResultado,
+                     xanelaresultado.go) e agocha o panel aquí, ver
+                     btnDesacoplarResultado en main.js. -->
+                <button id="btnDesacoplarResultado" class="hidden btn-icon-only btn-align-right" data-i18n-title="preview.remoto.desacoplar" title="Desacoplar nunha xanela á parte">
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6.5" width="9.5" height="8" rx="1"/><path d="M9 3.5H16.5V11"/><path d="M16.5 3.5 9.5 10"/></svg>
+                    <span class="sr-only" data-i18n="preview.remoto.desacoplarLabel">Desacoplar</span>
+                </button>
+            </div>
+            <iframe id="preview" data-i18n-title="preview.iframe.title" title="Previsualización (Ctrl+clic nun resultado resalta a etiqueta que o xerou, co panel de código visible)"></iframe>
+        </div>
+        <!-- Só se amosa co resultado desacoplado (botón "Desacoplar" enriba),
+             no canto de .pane-preview - ver activarModoDobreEditor en
+             main.js. O resultado real vive na outra xanela. En modo bloques,
+             mostrarCodigoDeFondo (main.js) substitúe .placeholder-aviso polo
+             propio #editor (movido aquí, totalmente editable), así que este
+             div só é UN dos posibles contidos do panel, non o panel enteiro. -->
+        <div class="pane pane-preview-placeholder hidden">
+            <div class="placeholder-aviso">
+                <span data-i18n="preview.remoto.aviso">🖥 O resultado móstrase noutra xanela</span>
+                <button id="btnReabrirResultado" class="btn-ghost" data-i18n="preview.remoto.reabrir">Reabrir xanela de resultado</button>
+            </div>
+        </div>
+    </div>
+    <div id="warnings"></div>
+    <!-- Panel de rexistro: mesmo deseño ca #log-panel de Piztu (ver
+         DESIGN.md), pero MINIMIZADO por defecto (class="collapsed") - en
+         Yang é só unha axuda para depurar a xeración de documentos, non o
+         centro de atención da app coma en Piztu. -->
+    <div id="log-panel" class="collapsed">
+        <div class="log-header">
+            <span>▸ <span id="log-titulo" data-i18n="log.title">Rexistro</span></span>
+            <div class="log-header-actions">
+                <!-- Baleira #log-output, ver btnClearLog en main.js. Non
+                     toca o estado despregado/colapsado (só btn-toggle-log
+                     fai iso). -->
+                <button id="btn-clear-log" data-i18n-title="log.clear.title" title="Limpar o rexistro">
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 5.5h11"/><path d="M8 5.5V4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v1.5"/><path d="M5.5 5.5 6.2 16a1 1 0 0 0 1 .9h5.6a1 1 0 0 0 1-.9l.7-10.5"/><path d="M8.3 8.5v5M11.7 8.5v5"/></svg>
+                </button>
+                <button id="btn-toggle-log" data-i18n-title="log.toggle.title" title="Minimizar/ampliar">+</button>
+            </div>
+        </div>
+        <div id="log-output"></div>
+    </div>
+</div>
+
+<div id="optionsOverlay" class="overlay hidden">
+    <div class="modal modal--options">
+        <h2 data-i18n="options.title">Opcións</h2>
+        <div class="options-grid">
+            <div class="options-block options-block--editor">
+                <h3 data-i18n="options.section.editor">Editor e interface</h3>
+                <label class="modal-label">
+                    <span data-i18n="options.editorMode.label">Interface de edición (parte esquerda)</span>
+                    <select id="optEditorMode">
+                        <option value="tabla" data-i18n="options.editorMode.tabla">Táboa (recomendada)</option>
+                        <option value="blockly" data-i18n="options.editorMode.blockly">Bloques (Blockly)</option>
+                    </select>
+                    <p class="modal-hint" data-i18n="options.editorMode.hint">A táboa é máis rápida para personalizar enunciados e variables; os bloques son máis visuais. Podes cambiar en calquera momento co botón da barra de ferramentas.</p>
+                </label>
+                <label class="modal-label">
+                    <span data-i18n="options.language.label">Idioma</span>
+                    <select id="optIdioma">
+                        <option value="gl">Galego</option>
+                        <option value="es">Castellano</option>
+                        <option value="en">English</option>
+                        <option value="pt">Português</option>
+                    </select>
+                    <p class="modal-hint" data-i18n="options.language.hint">Cambia ao gardar. Se falta algunha tradución, amósase en galego.</p>
+                </label>
+                <label class="modal-label modal-label-checkbox">
+                    <input id="optXerarAoGardar" type="checkbox">
+                    <span data-i18n="options.xerarAoGardar.label">Xerar automaticamente ao gardar (Ctrl+S)</span>
+                </label>
+            </div>
+
+            <div class="options-block options-block--maxima">
+                <h3 data-i18n="options.section.maxima">Maxima e cálculo</h3>
+                <label class="modal-label">
+                    <span data-i18n="options.maximaPath.label">Ruta a Maxima</span>
+                    <div class="row">
+                        <input id="optMaximaPath" type="text" data-i18n-placeholder="options.maximaPath.placeholder" placeholder="/usr/bin/maxima">
+                        <button id="btnDetect" data-i18n="options.detect.label">Detectar</button>
+                    </div>
+                </label>
+                <label class="modal-label">
+                    <span data-i18n="options.killMaxima.label">Sesión de Maxima</span>
+                    <div class="row">
+                        <button id="btnKillMaxima" type="button" data-i18n="options.killMaxima.button">Reiniciar Maxima</button>
+                        <span id="killMaximaStatus" class="modal-hint" aria-live="polite"></span>
+                    </div>
+                    <p class="modal-hint" data-i18n="options.killMaxima.hint">Se Maxima queda atascado e «Xerar» non responde, isto mata o proceso para poder tentalo de novo.</p>
+                </label>
+                <label class="modal-label">
+                    <span data-i18n="options.latexEngine.label">Compilador LaTeX</span>
+                    <select id="optLatexEngine">
+                        <option value="" data-i18n="options.latexEngine.default">pdflatex (predeterminado)</option>
+                        <option value="xelatex" data-i18n="options.latexEngine.xelatex">xelatex (mellor Unicode/fontes do sistema)</option>
+                        <option value="lualatex" data-i18n="options.latexEngine.lualatex">lualatex (Unicode/fontes do sistema)</option>
+                    </select>
+                </label>
+                <label class="modal-label">
+                    <span data-i18n="options.decimais.label">Número de decimais nos resultados</span>
+                    <input id="optDecimais" type="number" min="0" max="10" step="1" placeholder="2">
+                </label>
+                <p class="modal-hint" data-i18n-html="options.decimais.hint">Só se redondean os resultados que xa saian en coma flotante: unha fracción exacta (ex. 23/20) queda tal cal, para non estragar exercicios de "simplificar fraccións". Se nun exercicio concreto queres forzar decimal, usa <code>matexe_decimal(...)</code> dentro do &lt;MAT&gt;/&lt;EVAL&gt;, ex.: <code>matexe_decimal(230*5/1000)</code> → 1.15.</p>
+                <label class="modal-label modal-label-checkbox">
+                    <input id="optDecimal" type="checkbox">
+                    <span data-i18n="options.decimal.label">Amosar sempre en decimal, non en fracción exacta (recomendado para física/química)</span>
+                </label>
+                <p class="modal-hint" data-i18n-html="options.decimal.hint">Cambia o comportamento por defecto de TODOS os &lt;MAT&gt;/&lt;EVAL&gt; do documento (equivale a envolvelos en <code>matexe_decimal(...)</code> un a un). Nun exercicio concreto podes facer o contrario do que esta opción diga: <code>matexe_decimal(...)</code> forza decimal aínda con isto desactivado, <code>matexe_fraccion(...)</code> mantén a fracción exacta aínda con isto activado.</p>
+                <label class="modal-label">
+                    <span data-i18n="options.codeIni.label">Código inicial (codeini) - baleiro = usar o predeterminado</span>
+                    <textarea id="optCodeIni" rows="5" spellcheck="false"></textarea>
+                </label>
+            </div>
+
+            <div class="options-block options-block--robustez">
+                <h3 data-i18n="options.section.robustez">Robustez e execución</h3>
+                <label class="modal-label">
+                    <span data-i18n="options.timeout.label">Tempo máximo de espera por Maxima (segundos) - se non responde neste tempo, reiníciase automaticamente</span>
+                    <input id="optTimeout" type="number" min="5" max="300" step="5" placeholder="30">
+                </label>
+                <label class="modal-label">
+                    <span data-i18n="options.reorgSeeds.label">Reorganizar práctica: sementes de validación por exercicio</span>
+                    <input id="optReorgSementes" type="number" min="1" max="200" step="1" placeholder="25">
+                </label>
+                <label class="modal-label">
+                    <span data-i18n="options.reorgRounds.label">Reorganizar práctica: roldas de arranxo automático</span>
+                    <input id="optReorgRoldas" type="number" min="1" max="6" step="1" placeholder="3">
+                </label>
+                <p class="modal-hint" data-i18n="options.reorg.hint">Ao premer «⟳ Reorganizar práctica» no Asistente, cada exercicio reconstrúese coas fórmulas e valídase nese número de sementes buscando infinitos, indeterminacións e erros; se aparece algún, os fallos devólvense á IA ata ese número de roldas. A opción «adaptar ao exercicio» sobe as sementes en exercicios con raíces, denominadores con variable, etc.</p>
+                <label class="modal-label modal-label-checkbox">
+                    <input id="optAutoreparar" type="checkbox">
+                    <span data-i18n="options.autoreparar.label">Autoreparar os exercicios que non compilen ao xerar un exame coa IA</span>
+                </label>
+                <label class="modal-label">
+                    <span data-i18n="options.maxRechamadasIA.label">Máximo de rechamadas á IA por exercicio que non compila</span>
+                    <input id="optMaxRechamadasIA" type="number" min="1" max="6" step="1" placeholder="2">
+                </label>
+                <p class="modal-hint" data-i18n="options.autoreparar.hint">Cando un exame xerado coa IA non compila, Yang illa que exercicio(s) fallan e pídelle á IA que os rexenere (só eses), pasándolle o erro, ata ese número de veces. Os que sigan sen compilar déixanse cunha caixa de aviso e o resto do exame sae igual.</p>
+            </div>
+
+            <div class="options-block options-block--export">
+                <h3 data-i18n="options.exportadores.title">Formatos de exportación</h3>
+                <p class="modal-hint" data-i18n="options.exportadores.hint">Os formatos desactivados desaparecen da barra de ferramentas da previsualización.</p>
+                <label class="modal-label modal-label-checkbox">
+                    <input id="optExportPDF" type="checkbox">
+                    <span data-i18n="options.exportadores.pdf.label">PDF</span>
+                </label>
+                <label class="modal-label modal-label-checkbox">
+                    <input id="optExportTex" type="checkbox">
+                    <span data-i18n="options.exportadores.tex.label">Código LaTeX (.tex)</span>
+                </label>
+                <label class="modal-label modal-label-checkbox">
+                    <input id="optExportMarkdown" type="checkbox">
+                    <span data-i18n="options.exportadores.markdown.label">Markdown (.md)</span>
+                </label>
+                <label class="modal-label modal-label-checkbox">
+                    <input id="optExportDocx" type="checkbox">
+                    <span data-i18n="options.exportadores.docx.label">Word (.docx) - precisa Pandoc</span>
+                </label>
+                <label class="modal-label modal-label-checkbox">
+                    <input id="optExportOdt" type="checkbox">
+                    <span data-i18n="options.exportadores.odt.label">OpenDocument (.odt) - precisa Pandoc</span>
+                </label>
+            </div>
+
+            <div class="options-block options-block--ia">
+                <h3 data-i18n="options.ia.title">Asistente de IA (opcional)</h3>
+                <label class="modal-label">
+                    <span data-i18n="options.iaProvider.label">Provedor de IA</span>
+                    <select id="optIAPreset">
+                        <option value="gemini" data-i18n="options.iaProvider.gemini">Google Gemini</option>
+                        <option value="openai" data-i18n="options.iaProvider.openai">OpenAI (ChatGPT)</option>
+                        <option value="anthropic" data-i18n="options.iaProvider.anthropic">Anthropic (Claude)</option>
+                        <option value="qwen" data-i18n="options.iaProvider.qwen">Qwen (Alibaba)</option>
+                        <option value="perplexity" data-i18n="options.iaProvider.perplexity">Perplexity</option>
+                        <option value="outro" data-i18n="options.iaProvider.outro">Outro (compatible con OpenAI)</option>
+                    </select>
+                </label>
+                <label class="modal-label">
+                    <span data-i18n="options.iaApiKey.label">Clave da API - baleira = asistente desactivado</span>
+                    <input id="optIAApiKey" type="password" data-i18n-placeholder="options.iaApiKey.placeholder" placeholder="a clave que che dea o provedor" autocomplete="off">
+                </label>
+                <label class="modal-label">
+                    <span data-i18n="options.iaModel.label">Modelo</span>
+                    <input id="optIAModel" type="text" placeholder="gemini-2.0-flash">
+                </label>
+                <label class="modal-label hidden" id="optIABaseURLRow">
+                    <span data-i18n="options.iaBaseUrl.label">Enderezo do servidor</span>
+                    <input id="optIABaseURL" type="text" data-i18n-placeholder="options.iaBaseUrl.placeholder" placeholder="https://.../v1">
+                </label>
+                <label class="modal-label">
+                    <span data-i18n="options.iaMaxTokens.label">Máximo de tokens por resposta (0 = o que dea o modelo)</span>
+                    <input id="optIAMaxTokens" type="number" min="0" step="256">
+                </label>
+                <p class="modal-hint" data-i18n="options.iaMaxTokens.hint">Canto pode chegar a escribir a IA nunha soa resposta. Súbeo se un exame longo (ou "Indefinido") volve co erro de resposta cortada; o modelo escollido ten que admitir ese valor.</p>
+                <label class="modal-label">
+                    <span data-i18n="options.iaTimeout.label">Tempo máximo de espera pola IA (segundos)</span>
+                    <input id="optIATimeout" type="number" min="30" step="30" placeholder="240">
+                </label>
+                <p class="modal-hint" data-i18n="options.iaTimeout.hint">Aplícase en cada chamada. Por defecto 240 s. Súbeo a 600 s ou máis con modelos de razoamento lentos ou peticións longas (un exame enteiro).</p>
+            </div>
+        </div>
+        <div class="modal-actions">
+            <button id="btnOptionsCancel" data-i18n="options.cancel">Cancelar</button>
+            <button id="btnOptionsSave" class="primary" data-i18n="options.save">Gardar</button>
+        </div>
+    </div>
+</div>
+
+<div id="sobreOverlay" class="overlay hidden">
+    <div class="modal">
+        <h2 data-i18n="about.title">Sobre Yang</h2>
+        <div class="sobre-corpo">
+            <img src="./src/assets/images/logo.png" alt="Yang" class="sobre-logo">
+            <p id="sobreVersion" class="modal-hint"></p>
+            <p id="sobreActualizacion" class="modal-hint actualizacion-aviso hidden"></p>
+            <button id="btnActualizarYang" class="primary actualizacion-btn hidden"></button>
+            <p data-i18n="about.author">Autor: Martín Pardiñas</p>
+            <p><a href="https://piztu.org" target="_blank">piztu.org</a></p>
+            <p data-i18n="about.contact">Contacto: piztu@omeu.gal</p>
+            <p data-i18n-html="about.basedOn.html">Baseado en Matexe: <a href="https://sourceforge.net/projects/matexe/" target="_blank">sourceforge.net/projects/matexe</a></p>
+            <p class="sobre-licenza" data-i18n="about.license">Licenza GNU Affero General Public License v3 (AGPLv3)</p>
+            <p class="modal-hint" data-i18n="about.licenseText">Software libre: pódese usar, estudar, modificar e
+                redistribuír libremente. Calquera traballo derivado que se redistribúa
+                ten que publicarse tamén baixo AGPLv3, co código fonte dispoñible,
+                incluíndo se se ofrece como servizo en rede (copyleft). Texto completo
+                no ficheiro LICENSE.</p>
+        </div>
+        <div class="modal-actions">
+            <button id="btnAboutClose" class="primary" data-i18n="about.close">Pechar</button>
+        </div>
+    </div>
+</div>
+
+<div id="maximaManualOverlay" class="overlay hidden">
+    <div class="modal">
+        <h2 data-i18n="maximaManual.title">Instalar Maxima manualmente</h2>
+        <p data-i18n="maximaManual.debian">Debian / Ubuntu:</p>
+        <pre>sudo apt install maxima maxima-share gnuplot</pre>
+        <p data-i18n="maximaManual.fedora">Fedora:</p>
+        <pre>sudo dnf install maxima gnuplot</pre>
+        <p data-i18n="maximaManual.arch">Arch:</p>
+        <pre>sudo pacman -S maxima gnuplot</pre>
+        <p data-i18n-html="maximaManual.other.html">Windows / macOS: descarga dende <a href="https://maxima.sourceforge.io" target="_blank">maxima.sourceforge.io</a></p>
+        <p data-i18n="maximaManual.afterInstall">Despois de instalar, abre Opcións → "Detectar" para que a app o atope.</p>
+        <div class="modal-actions">
+            <button id="btnMaximaManualClose" class="primary" data-i18n="maximaManual.close">Pechar</button>
+        </div>
+    </div>
+</div>
+
+<div id="latexManualOverlay" class="overlay hidden">
+    <div class="modal">
+        <h2 data-i18n="latexManual.title">Instalar LaTeX manualmente</h2>
+        <p data-i18n="latexManual.debian">Debian / Ubuntu:</p>
+        <pre>sudo apt install texlive-latex-base texlive-latex-recommended texlive-pictures texlive-latex-extra texlive-xetex texlive-luatex poppler-utils</pre>
+        <p data-i18n="latexManual.fedora">Fedora:</p>
+        <pre>sudo dnf install texlive-latex texlive-collection-pictures texlive-xetex texlive-luatex poppler-utils</pre>
+        <p data-i18n="latexManual.arch">Arch:</p>
+        <pre>sudo pacman -S texlive-core texlive-pictures poppler</pre>
+        <p data-i18n-html="latexManual.other.html">Windows: <a href="https://miktex.org" target="_blank">MiKTeX</a> · macOS: <a href="https://www.tug.org/mactex/" target="_blank">MacTeX</a></p>
+        <p data-i18n="latexManual.afterInstall">Despois de instalar, peche e volva abrir Yang para que o aviso desapareza.</p>
+        <div class="modal-actions">
+            <button id="btnLatexManualClose" class="primary" data-i18n="latexManual.close">Pechar</button>
+        </div>
+    </div>
+</div>
+
+<div id="pandocManualOverlay" class="overlay hidden">
+    <div class="modal">
+        <h2 data-i18n="pandocManual.title">Instalar Pandoc manualmente</h2>
+        <p data-i18n="pandocManual.debian">Debian / Ubuntu:</p>
+        <pre>sudo apt install pandoc</pre>
+        <p data-i18n="pandocManual.fedora">Fedora:</p>
+        <pre>sudo dnf install pandoc</pre>
+        <p data-i18n="pandocManual.arch">Arch:</p>
+        <pre>sudo pacman -S pandoc</pre>
+        <p data-i18n-html="pandocManual.other.html">Windows / macOS: descarga dende <a href="https://pandoc.org/installing.html" target="_blank">pandoc.org/installing.html</a></p>
+        <p data-i18n="pandocManual.afterInstall">Despois de instalar, peche e volva abrir Yang para que o aviso desapareza.</p>
+        <div class="modal-actions">
+            <button id="btnPandocManualClose" class="primary" data-i18n="pandocManual.close">Pechar</button>
+        </div>
+    </div>
+</div>
+
+<!-- Reparto individualizado (docs/api-tao.md §11.5/§11.6): só se crea/amosa cando
+     TaoContextoActivo() e TaoAlumnos() teñen contido - ver inicializarReparto en
+     main.js. Cada fila é un alumno da materia; ▲▼ reordena, a caixa exclúe. A
+     variante i-ésima (semente base + i) vai para o alumno na posición i da lista
+     tal cal queda despois de reordenar/excluír. -->
+<div id="repartoOverlay" class="overlay hidden">
+    <div class="modal">
+        <h2 data-i18n="reparto.title">Repartir ao alumnado</h2>
+        <p class="modal-hint" data-i18n="reparto.explicacion">Cada alumno seleccionado recibe a súa propia variante (semente distinta) como tarefa individual, en vez da explicación xeral. Reordena con ▲▼; desmarca quen non deba recibir variante propia.</p>
+        <div id="repartoLista" class="reparto-lista"></div>
+        <p id="repartoAviso" class="modal-hint reparto-aviso hidden"></p>
+        <div class="modal-actions">
+            <button id="btnRepartirCancelar" data-i18n="reparto.cancelar">Cancelar</button>
+            <button id="btnRepartirEnviar" class="primary" data-i18n="reparto.enviar">Repartir</button>
+        </div>
+    </div>
+</div>
+
+<!-- Axustes do texto: panel flotante (SEN fondo escuro) e arrastrable, para
+     poder apartalo e ver a previsualización mentres se afinan os valores. -->
+<div id="axustesTextoPanel" class="floating-panel hidden">
+    <div class="floating-panel__head" id="axustesTextoHead">
+        <span data-i18n="axustesTexto.title">Axustes do texto</span>
+        <button id="btnAxustesTextoClose" class="floating-panel__close" data-i18n-aria-label="axustesTexto.close" aria-label="Pechar">✕</button>
+    </div>
+    <div class="floating-panel__body">
+        <label class="modal-label">
+            <span data-i18n="axustesTexto.size">Tamaño da fonte (pt)</span>
+            <input id="optTextoSize" type="number" min="6" max="30" step="0.5" placeholder="12">
+        </label>
+        <label class="modal-label">
+            <span data-i18n="axustesTexto.leading">Interliñado</span>
+            <select id="optTextoLeading">
+                <option value="0" data-i18n="axustesTexto.leading.default">Sinxelo (por defecto)</option>
+                <option value="1.15">1,15</option>
+                <option value="1.5" data-i18n="axustesTexto.leading.onehalf">1,5</option>
+                <option value="2" data-i18n="axustesTexto.leading.double">Dobre</option>
+            </select>
+        </label>
+        <label class="modal-label">
+            <span data-i18n="axustesTexto.font">Familia tipográfica</span>
+            <select id="optTextoFont">
+                <option value="" data-i18n="axustesTexto.font.default">Predeterminada (Latin Modern)</option>
+                <optgroup id="optTextoFontRecom" data-i18n-label="axustesTexto.font.recom" label="Recomendadas">
+                    <option value="serif" data-i18n="axustesTexto.font.serif">Serif clásica (Times)</option>
+                    <option value="sans" data-i18n="axustesTexto.font.sans">Sans (Helvética / Arial)</option>
+                    <option value="palatino" data-i18n="axustesTexto.font.palatino">Palatino</option>
+                </optgroup>
+                <optgroup id="optTextoFontSistema" data-i18n-label="axustesTexto.font.sistema" label="Do sistema (xelatex)"></optgroup>
+            </select>
+        </label>
+        <p class="modal-hint" data-i18n="axustesTexto.hint">Aplícase á previsualización e ao PDF. As fontes «do sistema» compílanse con xelatex. Se a plantilla ten deseño propio, mantén a súa fonte (só cambia o tamaño e o interliñado).</p>
+        <div class="modal-actions">
+            <button id="btnTextoReset" data-i18n="axustesTexto.reset">Restablecer</button>
+            <button id="btnTextoXerar" class="primary" data-i18n="axustesTexto.generate">Xerar</button>
+        </div>
+    </div>
+</div>
+
+<script src="./src/main.js" type="module"></script>
+</body>
+</html>

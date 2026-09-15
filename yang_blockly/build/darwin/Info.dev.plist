@@ -1,0 +1,49 @@
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Variante de desenvolvemento do Info.plist: úsaa a tarefa "run" de
+  build/darwin/Taskfile.yml, que monta un Yang.dev.app á parte para poder
+  executar Yang sen tocar o bundle de produción.
+
+  Mesma nota ca en Info.plist (ver alí): isto estaba sen renderizar e o .app
+  de desenvolvemento tampouco abriría. A única diferenza real fronte ao de
+  produción é NSAppTransportSecurity → NSAllowsLocalNetworking, que fai falla
+  para que a webview poida falar co servidor de Vite en localhost durante o
+  `task dev`.
+-->
+<plist version="1.0">
+    <dict>
+        <key>CFBundlePackageType</key>
+        <string>APPL</string>
+        <key>CFBundleName</key>
+        <string>Yang</string>
+        <key>CFBundleExecutable</key>
+        <string>yang</string>
+        <!-- Identificador distinto do de produción a propósito: así macOS
+             trata o Yang.dev.app coma unha aplicación á parte e non lle
+             mestura as entradas de Launch Services nin os permisos co Yang
+             instalado en /Applications. -->
+        <key>CFBundleIdentifier</key>
+        <string>gal.omeu.piztu.yang.dev</string>
+        <key>CFBundleVersion</key>
+        <string>26.9.1</string>
+        <key>CFBundleShortVersionString</key>
+        <string>26.9.1</string>
+        <key>CFBundleGetInfoString</key>
+        <string>Xerador de exames Yang (desenvolvemento)</string>
+        <key>CFBundleIconFile</key>
+        <string>icons</string>
+        <key>LSMinimumSystemVersion</key>
+        <string>12.0</string>
+        <key>NSHighResolutionCapable</key>
+        <string>true</string>
+        <key>LSApplicationCategoryType</key>
+        <string>public.app-category.education</string>
+        <key>NSHumanReadableCopyright</key>
+        <string>Copyright © Piztu</string>
+        <key>NSAppTransportSecurity</key>
+        <dict>
+            <key>NSAllowsLocalNetworking</key>
+            <true/>
+        </dict>
+    </dict>
+</plist>

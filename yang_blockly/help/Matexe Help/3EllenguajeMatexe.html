@@ -1,0 +1,97 @@
+﻿<html>
+	
+<head>
+	<title> 3. El lenguaje Matexe</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 3.9.1.648">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "MATEXE.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("3EllenguajeMatexe");
+			}
+		});
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1> 3. El lenguaje Matexe</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="AyudaMatexe.html">Ayuda Matexe</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="AyudaMatexe.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="ProblemasconlainstalacindeMatexe.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="31LaetiquetaEVAL.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<h1 class="rvps3"><a name="_3._EL_LENGUAJE"></a>
+<img align="absbottom" width="24" height="24" alt="image" src="lib/image0013.jpg"/><span class="rvts0"><span class="rvts13">&nbsp;3. El lenguaje Matexe</span></span></h1>
+<p><span class="rvts12"><br/></span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;El lenguaje Matexe es una extensión de </span><a class="rvts14" href="4Diseodedocumentos.html">HTML</a><span class="rvts12"> que permite insertar comandos de </span><a class="rvts19" href="19_6.2.Maxima.htm#_Maxima">Maxima</a><span class="rvts12">.</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;Para incluir código del lenguaje del CAS Maxima en los enunciados de las preguntas están disponibles las siguientes etiquetas:</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps7"><a class="rvts18" href="6_3.1.LaetiquetaEVAL.htm#_La_etiqueta_EVAL">&lt;EVAL&gt;</a><a class="rvts14" href="31LaetiquetaEVAL.html"> expresion Maxima </a><a class="rvts18" href="6_3.1.LaetiquetaEVAL.htm#_La_etiqueta_EVAL">&lt;/EVAL&gt;</a></p>
+<p class="rvps7"><span class="rvts12">Evalúa y simplifica completamente la expresión incluida en la etiqueta. El resultado aparecerá representado en el documento final como una expresión matemática en formato TeX.</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps7"><a class="rvts18" href="7_3.2.LaetiquetaMAT.htm#_La_etiqueta_MAT">&lt;MAT&gt;</a><a class="rvts14" href="32LaetiquetaMAT.html"> expresion Maxima </a><a class="rvts18" href="7_3.2.LaetiquetaMAT.htm#_La_etiqueta_MAT">&lt;/MAT&gt;</a></p>
+<p class="rvps7"><span class="rvts12">&nbsp;No evalúa ni simplifica la expresión. Sólo se sustituyen los símbolos que tienen valor previamente asignado. El resultado también estará en formato TeX.</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps7"><a class="rvts18" href="7_3.2.LaetiquetaMAT.htm#_La_etiqueta_HIDE">&lt;HIDE&gt;</a><a class="rvts14" href="33LaetiquetaHIDE.html"> expresion Maxima </a><a class="rvts18" href="7_3.2.LaetiquetaMAT.htm#_La_etiqueta_HIDE">&lt;/HIDE&gt;</a></p>
+<p class="rvps7"><span class="rvts12">&nbsp;Ejecuta un conjunto de sentencias sin ningún resultado visible.</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps7"><a class="rvts18" href="9_3.4.LaetiquetaPLOT.htm#_La_etiqueta_PLOT">&lt;PLOT&gt;</a><a class="rvts14" href="34LaetiquetaPLOT.html"> función gráfica Maxima </a><a class="rvts18" href="9_3.4.LaetiquetaPLOT.htm#_La_etiqueta_PLOT">&lt;/PLOT&gt;</a></p>
+<p class="rvps7"><span class="rvts12">&nbsp;Genera un gráfico. Esto produce un archivo en formato .png que será incluido en el documento HTML de salida</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps7"><a class="rvts18" href="10_3.5.LaetiquetaTEX.htm#_La_etiqueta_TEX">&lt;TEX&gt;</a><a class="rvts19" href="10_3.5.LaetiquetaTEX.htm#_La_etiqueta_TEX"> expresion TeX </a><a class="rvts14" href="35LaetiquetaTEX.html">&lt;/TEX&gt;</a></p>
+<p class="rvps7"><span class="rvts12">&nbsp;Incluye directamente una expresión TeX en el documento de salida.</span></p>
+<p class="rvps7"><span class="rvts12">&nbsp;</span></p>
+<p class="rvps7"><a class="rvts18" href="11_3.6.LaetiquetaFILE.htm#_La_etiqueta_FILE">&lt;FILE&gt;</a><a class="rvts14" href="36LaetiquetaFILE.html"> global, archivo.matex</a><a class="rvts18" href="11_3.6.LaetiquetaFILE.htm#_La_etiqueta_FILE">&lt;/FILE&gt;</a></p>
+<p class="rvps7"><span class="rvts12">&nbsp;Incluye otro documento .matex en el documento actual y lo procesa.</span></p>
+<p class="rvps1"><span class="rvts12"><br/></span></p>
+<p></p>
+<p class="rvps5"><span class="rvts9">Created with the Personal Edition of HelpNDoc: </span><a class="rvts10" href="http://www.helpndoc.com/feature-tour">Easily create HTML Help documents</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Matexe v.2013: http://matexe.sourceforge.net</div>
+		</div>
+	</body>
+	
+</html>
+

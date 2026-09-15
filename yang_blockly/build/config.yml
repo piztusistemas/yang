@@ -1,0 +1,41 @@
+# Configuración de build de Yang para o CLI wails3/Taskfile (ver Taskfile.yml,
+# build/Taskfile.yml, build/windows/Taskfile.yml). Cando cambies `info`, executa
+# `wails3 task common:update:build-assets` para propagalo a build/windows/info.json etc.
+version: '3'
+
+info:
+  companyName: "Piztu"
+  productName: "Yang"
+  productIdentifier: "gal.omeu.piztu.yang"
+  description: "Xerador de exames de matemáticas (Maxima + LaTeX)"
+  copyright: "Copyright © Piztu"
+  comments: "Xerador de exames Yang"
+  version: "26.9.1"
+
+dev_mode:
+  root_path: .
+  log_level: warn
+  debounce: 1000
+  ignore:
+    dir:
+      - .git
+      - node_modules
+      - frontend
+      - build
+    file:
+      - .DS_Store
+      - .gitignore
+      - .gitkeep
+      - "*_test.go"
+    watched_extension:
+      - "*.go"
+      - "*.js"
+      - "*.ts"
+    git_ignore: true
+  executes:
+    - cmd: wails3 build DEV=true
+      type: blocking
+    - cmd: wails3 task common:dev:frontend
+      type: background
+    - cmd: wails3 task run
+      type: primary

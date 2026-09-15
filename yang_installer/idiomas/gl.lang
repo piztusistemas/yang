@@ -1,0 +1,93 @@
+# Ficheiro de idioma do instalador de Yang — GALEGO
+# Formato: clave = valor   (usa \n para salto de liña; # para comentarios)
+# Os %s e %d substitúense por valores no programa (rutas...)
+
+# ── Xanela e permisos ──────────────────────────────────────────────
+win.title = Yang — Instalador
+permiso.title = Yang — Permiso necesario
+permiso.texto = O instalador require permisos de administrador.\n\nExecútao no terminal con:\n\n    sudo ./build/bin/yang-installer
+permiso.pechar = Pechar
+
+# ── Navegación ─────────────────────────────────────────────────────
+nav.anterior = ← Anterior
+nav.seguinte = Seguinte →
+nav.pechar = Pechar
+dialogo.cancelar = Cancelar
+nav.finalizar = Finalizar
+nav.idioma = Idioma
+nav.progreso = Paso %d de %d
+
+# ── Nomes dos pasos (barra lateral) ────────────────────────────────
+paso.benvida = 🏠  Benvida
+paso.instalacion = 1  Instalación
+paso.completado = ✅  Completado
+paso.desinstalar = 🗑️  Desinstalar
+
+app.info = Yang v26.9.6\nMódulo de Piztu\npiztu@omeu.gal\npiztu.org\nLicenza: AGPLv3
+app.licenza = Licenza AGPLv3
+
+# ── Paso 0: Benvida ────────────────────────────────────────────────
+benvida.titulo = Benvido ao instalador de Yang
+benvida.desc = Este asistente guiarate na instalación de Yang, o xerador de exames de matemáticas de Piztu (bloques tipo Snap!, cálculo simbólico con Maxima e exportación a PDF con LaTeX). Podes pechar e continuar máis tarde.
+benvida.que.titulo = 🧮  Que é Yang?
+benvida.que.sub = Exames con cálculo real, non copiados e pegados
+benvida.que.corpo = Yang é un editor de prácticas para as Matemáticas, Física e Química e Tecnoloxía, a través de bloques de edición, con código ou empregando a IA: cada versión calcula os seus propios números e resultados con Maxima, e o PDF final compílase con LaTeX. Cada alumno pode ter un exame lixeiramente distinto.
+benvida.deps.titulo = 📦  Dependencias que vai instalar
+benvida.deps.sub = Maxima e a cadea LaTeX (non texlive-full)
+benvida.deps.corpo = • Maxima + gnuplot (cálculo simbólico e gráficas)\n• pdflatex, xelatex e lualatex (compiladores LaTeX)\n• TikZ (debuxos vectoriais) e poppler-utils (vista previa)\n\nSon varios centos de MB, non varios GB: escóllense só os paquetes que Yang usa realmente.
+benvida.modulo.titulo = 🧩  Intégrase con Piztu
+benvida.modulo.sub = Aparece en ⚙ Aula → Módulos
+benvida.modulo.corpo = Se Piztu xa está instalado neste equipo, Yang engánchase automaticamente ao seu selector de módulos. Se non o está, Yang funciona igualmente coma aplicación independente.
+benvida.aviso = ⚠️  Para instalar en /opt/piztu/modulos e crear accesos directos, executa o instalador con sudo.
+
+# ── Paso 1: Instalación ─────────────────────────────────────────────
+inst.card = Paso 1 — Instalación
+inst.desc = Este paso:\n• Copia os ficheiros de Yang a %s (o cartafol de módulos de Piztu, para que xa apareza no seu selector)\n• Instala Maxima e a cadea LaTeX (pdflatex/xelatex/lualatex, TikZ, poppler-utils)\n• Deixa Yang preconfigurado no idioma desta instalación
+inst.out.inicial = Preme o botón para comezar a instalación...
+inst.btn = 🚀 Instalar Yang
+inst.iniciando = Iniciando instalación...\n
+inst.erro = \n❌ Erro: %s
+inst.ok = \n✅ Instalación completada! Continúa ao seguinte paso.
+inst.log.extraendo = 📁 Extraendo ficheiros a %s…
+inst.log.extraidos = ✅ Ficheiros extraídos\n
+inst.log.deps = 📦 Instalando Maxima e LaTeX (pode tardar varios minutos)…
+inst.log.depsok = ✅ Maxima e LaTeX instalados\n
+inst.log.depsfail = ⚠️  Non se puideron instalar todas as dependencias: %s\n    Podes reintentalo despois desde Yang → Opcións.
+
+# ── Paso 2: Completado ─────────────────────────────────────────────
+fin.card = ✅  Yang instalado correctamente!
+fin.desc = Yang instalouse en %s.\n\nSe tes Piztu (piztu) instalado, abrino e busca Yang en ⚙ Aula → Módulos.\n\nCrea os accesos directos para acceder a Yang dende o escritorio:
+fin.btn = 🖥️  Crear accesos directos
+fin.erro = ❌ Erro: %s
+fin.creados = ✅ Accesos directos creados:\n• Menú de aplicacións (Educación → Yang)\n• Escritorio (Yang)
+
+# ── Zona de perigo: desinstalación ───────────────────────────────────
+desinst.titulo = ⚠️  Zona de perigo
+desinst.intro = Esta acción desfai a instalación e non se pode desfacer.
+desinst.card = 🗑️  Desinstalar Yang
+desinst.desc = Elimina /opt/piztu/modulos/yang (incluída a configuración persoal e as claves de IA gardadas), os accesos directos e a icona.
+desinst.deps.label = Desinstalar tamén Maxima e LaTeX (paquetes de sistema; outros programas poderían usalos)
+desinst.palabra = DESINSTALAR
+desinst.confirmar.label = Escribe %s para confirmar
+desinst.btn = 🗑️  Desinstalar Yang
+desinst.confirm = Isto vai eliminar Yang por completo deste equipo, incluída a configuración persoal. Non se pode desfacer. Continuar?
+desinst.erro = \n❌ Erro: %s
+desinst.ok = \n✅ Yang desinstalado completamente.
+
+# ── Variantes para macOS ───────────────────────────────────────────
+# As claves rematadas en ".darwin" substitúen á clave base cando o
+# instalador corre nun Mac (ver aplicarVariantesSO, i18n.go). Alí Yang
+# instálase coma /Applications/Yang.app, sen sudo e sen accesos directos
+# que crear (o propio .app xa o é), e as dependencias veñen de Homebrew.
+benvida.aviso.darwin = ⚠️  Non se pode escribir no cartafol Aplicacións. Inicia sesión cunha conta de administrador (non uses sudo: Homebrew négase a funcionar coma root).
+benvida.deps.sub.darwin = Instálanse con Homebrew
+benvida.deps.corpo.darwin = • Homebrew (o xestor de paquetes de macOS; instálase se non o tes)\n• Maxima + gnuplot (cálculo simbólico e gráficas)\n• MacTeX (pdflatex, xelatex, lualatex e TikZ)\n• poppler (vista previa) e pandoc (exportar a Word/ODT)\n\nMacTeX son varios GB e tarda bastante. Pediráseche o contrasinal de administrador só para ese paso.
+benvida.modulo.titulo.darwin = 🍎  Aplicación nativa de macOS
+benvida.modulo.sub.darwin = Instálase en Aplicacións
+benvida.modulo.corpo.darwin = Yang instálase coma /Applications/Yang.app, así que aparece no Launchpad e no Spotlight coma calquera outra aplicación. Piztu é un sistema para centros baseado en Linux e non existe en macOS, así que aquí Yang funciona sempre coma aplicación independente.
+inst.desc.darwin = Este paso:\n• Instala Yang en %s\n• Instala Homebrew (se fai falla), Maxima e MacTeX\n• Deixa Yang preconfigurado no idioma desta instalación
+fin.desc.darwin = Yang instalouse en %s.\n\nXa podes abrilo dende o Launchpad ou o Spotlight. Preme o botón para rexistralo no sistema e que apareza decontado:
+fin.btn.darwin = 🍎  Rexistrar Yang no sistema
+fin.creados.darwin = ✅ Yang rexistrado:\n• Launchpad e Spotlight\n• Cartafol Aplicacións
+desinst.desc.darwin = Elimina /Applications/Yang.app (incluída a configuración persoal e as claves de IA gardadas) e quítao do rexistro do sistema.
+desinst.deps.label.darwin = Desinstalar tamén Maxima e MacTeX de Homebrew (outros programas poderían usalos)
