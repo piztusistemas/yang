@@ -1,6 +1,6 @@
 # Piztu Yang
 
-Xerador de exames de matemáticas (Maxima + LaTeX), con editor de exercicios por bloques (Blockly) e asistencia por IA.
+Xerador de exames de tecnoloxía, matemáticas e física e química (Maxima + LaTeX), con editor de exercicios por bloques e asistencia, se se desexa, por IA.
 
 ## Módulos
 
